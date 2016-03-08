@@ -252,7 +252,7 @@ static size_t generateCodecs(NSString *file, NSString *vendor, NSString *path, N
 				auto layouts = generateLayouts(file, codecDict, baseDirStr);
 				auto patches = generatePatches(file, codecDict, kextIndexes);
 			
-				[codecModSection appendFormat:@"\t{ \"%@\", 0x%X, %@, %@, %@, %@ }\n",
+				[codecModSection appendFormat:@"\t{ \"%@\", 0x%X, %@, %@, %@, %@ },\n",
 				 [codecDict objectForKey:@"CodecName"],
 				 [[codecDict objectForKey:@"CodecID"] unsignedShortValue],
 				 revs, platforms, layouts, patches
