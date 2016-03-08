@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>Rodion</string>
+	<key>CodecID</key>
+	<integer>6539</integer>
+	<key>CodecName</key>
+	<string>AD1988B</string>
+	<key>Files</key>
+	<dict>
+		<key>Layouts</key>
+		<array>
+			<dict>
+				<key>Id</key>
+				<integer>12</integer>
+				<key>Path</key>
+				<string>layout12.хml.zlib</string>
+			</dict>
+		</array>
+		<key>Platforms</key>
+		<array>
+			<dict>
+				<key>Path</key>
+				<string>Platforms.хml.zlib</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Patches</key>
+	<array/>
+	<key>Vendor</key>
+	<string>AnalogDevices</string>
+</dict>
+</plist>

@@ -430,6 +430,20 @@ CodecModInfo codecModRealtek[] {
 CodecModInfo codecModIntel[] {
 };
 
+// AnalogDevices CodecMod section
+
+static const CodecModInfo::Platform platforms1[] {
+	{ nullptr, 0, KernelPatcher::KernelAny, KernelPatcher::KernelAny },
+};
+static const CodecModInfo::Layout layouts1[] {
+	{ 12, nullptr, 0, KernelPatcher::KernelAny, KernelPatcher::KernelAny },
+};
+static const CodecModInfo::KextPatch patches1[] {
+};
+CodecModInfo codecModAnalogDevices[] {
+	{ "AD1988B", 0x198B, nullptr, 0, platforms1, 1, layouts1, 1, patches1, 0 }
+};
+
 // Vendor section
 
 VendorModInfo vendorMod[] {
@@ -437,6 +451,7 @@ VendorModInfo vendorMod[] {
 	{ "AMD", 0x1002, codecModAMD, 0 },
 	{ "Realtek", 0x10EC, codecModRealtek, 1 },
 	{ "Intel", 0x8086, codecModIntel, 0 },
+	{ "AnalogDevices", 0x11D4, codecModAnalogDevices, 1 },
 };
 
-const size_t vendorModSize {4};
+const size_t vendorModSize {5};

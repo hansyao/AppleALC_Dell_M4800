@@ -2,10 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Realtek/Intel</key>
+	<key>Realtek/Intel/AnalogDevices</key>
 	<dict>
-		<key>layoutNum</key>
-		<integer>1</integer>
 		<key>Tree</key>
 		<array>
 			<string>AppleACPIPCI</string>
@@ -13,6 +11,8 @@
 			<string>AppleHDAController</string>
 			<string>IOHDACodecDevice</string>
 		</array>
+		<key>layoutNum</key>
+		<integer>1</integer>
 	</dict>
 </dict>
 </plist>
