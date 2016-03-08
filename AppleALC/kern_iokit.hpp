@@ -14,13 +14,6 @@
 namespace IOUtil {
 
 	/**
-	 *  Retrieve boot arguments object
-	 *
-	 *  @return boot arguments object (must be released) or nullptr
-	 */
-	OSSerialize *retrieveBootArguments();
-	
-	/**
 	 *  Retrieve property object
 	 *
 	 *  @param entry    IORegistry entry

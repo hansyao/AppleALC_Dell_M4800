@@ -14,19 +14,7 @@
 #include <IOKit/IODeviceTreeSupport.h>
 
 namespace IOUtil {
-	OSSerialize *retrieveBootArguments() {
-		// Maybe use PE_parse_boot_arg interface?
-		auto entry = IORegistryEntry::fromPath("/options", gIODTPlane);
-		if (entry) {
-			auto s = getProperty(entry, "boot-args");
-			entry->release();
-			// Ignore empty boot-args
-			return s ? s : OSSerialize::withCapacity(PAGE_SIZE);
-		}
-		DBGLOG("ioutil @ failed to get options entry");
-		return nullptr;
-	}
-	
+
 	OSSerialize *getProperty(IORegistryEntry *entry, const char *property) {
 		auto value = entry->getProperty(property);
 		if (value) {
@@ -38,7 +26,7 @@ namespace IOUtil {
 				s->release();
 			}
 		} else {
-			DBGLOG("ioutil @ failed to get %s property", property);
+			SYSLOG("ioutil @ failed to get %s property", property);
 		}
 		return nullptr;
 	}
