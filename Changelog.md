@@ -4,7 +4,9 @@ AppleALC Changelog
 #### v1.0.1
 - boot-args presence is now optional
 - Added AD1988B codec support (by Rodion)
-- Added PinConfs plugin, injecting pin configurations
+- Added ALC888 codec support (by Vandroiy)
+- Added ALC269VC (Lenovo Z580) codec support (by John)
+- Added PinConfs plugin injecting pin configurations
 
 #### v1.0.0
 - Initial release

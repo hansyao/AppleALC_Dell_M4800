@@ -38,7 +38,7 @@ namespace IOUtil {
 				s->release();
 			}
 		} else {
-			SYSLOG("ioutil @ failed to get %s property", property);
+			DBGLOG("ioutil @ failed to get %s property", property);
 		}
 		return nullptr;
 	}
