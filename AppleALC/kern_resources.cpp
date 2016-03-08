@@ -422,7 +422,7 @@ static const CodecModInfo::KextPatch patches0[] {
 	{ { &kextList[0], patchBuf2, patchBuf3, 4, 2 }, 15, KernelPatcher::KernelAny },
 };
 CodecModInfo codecModRealtek[] {
-	{ "ALC1150", 0x900, revisions0, 1, platforms0, 1, layouts0, 2, patches0, 2 }
+	{ "ALC1150", 0x900, revisions0, 1, platforms0, 1, layouts0, 2, patches0, 2 },
 };
 
 // Intel CodecMod section
@@ -441,7 +441,7 @@ static const CodecModInfo::Layout layouts1[] {
 static const CodecModInfo::KextPatch patches1[] {
 };
 CodecModInfo codecModAnalogDevices[] {
-	{ "AD1988B", 0x198B, nullptr, 0, platforms1, 1, layouts1, 1, patches1, 0 }
+	{ "AD1988B", 0x198B, nullptr, 0, platforms1, 1, layouts1, 1, patches1, 0 },
 };
 
 // Vendor section

@@ -47,6 +47,7 @@
 		1C3E7B2A1C84B65400A6448A /* X86ATTInstPrinter.c in Sources */ = {isa = PBXBuildFile; fileRef = 1C3E7B151C84B65400A6448A /* X86ATTInstPrinter.c */; };
 		1C3E7B2D1C84B73400A6448A /* kern_disasm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C3E7B2B1C84B73400A6448A /* kern_disasm.cpp */; };
 		1C3E7B2E1C84B73400A6448A /* kern_disasm.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1C3E7B2C1C84B73400A6448A /* kern_disasm.hpp */; };
+		1C642F561C8F1BD8006B4C51 /* PinConfigs.kext in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1C642F551C8F1BD8006B4C51 /* PinConfigs.kext */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1C748C2B1C21952C0024EED2 /* kern_start.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1C748C2A1C21952C0024EED2 /* kern_start.hpp */; };
 		1C748C2D1C21952C0024EED2 /* kern_start.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C748C2C1C21952C0024EED2 /* kern_start.cpp */; };
 		1C88DDEC1C89EE540003E1BF /* kern_resources.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C88DDEA1C89EE540003E1BF /* kern_resources.cpp */; };
@@ -75,6 +76,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1C642F521C8F157A006B4C51 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1C642F561C8F1BD8006B4C51 /* PinConfigs.kext in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1CD5B2BA1C89CF2D00E45373 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -136,6 +147,8 @@
 		1C3E7B151C84B65400A6448A /* X86ATTInstPrinter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = X86ATTInstPrinter.c; path = capstone/arch/X86/X86ATTInstPrinter.c; sourceTree = "<group>"; };
 		1C3E7B2B1C84B73400A6448A /* kern_disasm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kern_disasm.cpp; sourceTree = "<group>"; };
 		1C3E7B2C1C84B73400A6448A /* kern_disasm.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = kern_disasm.hpp; sourceTree = "<group>"; };
+		1C642F551C8F1BD8006B4C51 /* PinConfigs.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; name = PinConfigs.kext; path = Resources/PinConfigs.kext; sourceTree = "<group>"; };
+		1C642F571C8F1BEE006B4C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/PinConfigs.kext/Contents/Info.plist; sourceTree = "<group>"; };
 		1C748C271C21952C0024EED2 /* AppleALC.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleALC.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C748C2A1C21952C0024EED2 /* kern_start.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kern_start.hpp; sourceTree = "<group>"; };
 		1C748C2C1C21952C0024EED2 /* kern_start.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kern_start.cpp; sourceTree = "<group>"; };
@@ -258,10 +271,20 @@
 			name = X86;
 			sourceTree = "<group>";
 		};
+		1C642F581C8F1BF2006B4C51 /* PinConfigs */ = {
+			isa = PBXGroup;
+			children = (
+				1C642F551C8F1BD8006B4C51 /* PinConfigs.kext */,
+				1C642F571C8F1BEE006B4C51 /* Info.plist */,
+			);
+			name = PinConfigs;
+			sourceTree = "<group>";
+		};
 		1C748C1D1C21952C0024EED2 = {
 			isa = PBXGroup;
 			children = (
 				1CF01C911C8CF982002DCEA3 /* Docs */,
+				1C642F581C8F1BF2006B4C51 /* PinConfigs */,
 				1CD5B2B71C89BEB000E45373 /* Resources */,
 				1C3E7AC91C84B5E500A6448A /* capstone */,
 				1C748C291C21952C0024EED2 /* AppleALC */,
@@ -378,6 +401,7 @@
 				1C748C231C21952C0024EED2 /* Frameworks */,
 				1C748C241C21952C0024EED2 /* Headers */,
 				1C748C251C21952C0024EED2 /* Resources */,
+				1C642F521C8F157A006B4C51 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -611,7 +635,7 @@
 				INFOPLIST_FILE = AppleALC/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MODULE_NAME = as.vit9696.AppleALC;
-				MODULE_VERSION = 1.0.0;
+				MODULE_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = as.vit9696.AppleALC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
@@ -634,7 +658,7 @@
 				INFOPLIST_FILE = AppleALC/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MODULE_NAME = as.vit9696.AppleALC;
-				MODULE_VERSION = 1.0.0;
+				MODULE_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = as.vit9696.AppleALC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
