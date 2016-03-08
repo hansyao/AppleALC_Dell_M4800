@@ -20,7 +20,7 @@
 		<array>
 			<dict>
 				<key>Path</key>
-				<string>Platforms.yml.zlib</string>
+				<string>Platforms.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Layouts</key>
@@ -29,13 +29,13 @@
 				<key>Id</key>
 				<integer>1</integer>
 				<key>Path</key>
-				<string>layout1.yml.zlib</string>
+				<string>layout1.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Id</key>
 				<integer>2</integer>
 				<key>Path</key>
-				<string>layout2.yml.zlib</string>
+				<string>layout2.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>

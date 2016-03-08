@@ -20,7 +20,8 @@ namespace IOUtil {
 		if (entry) {
 			auto s = getProperty(entry, "boot-args");
 			entry->release();
-			return s;
+			// Ignore empty boot-args
+			return s ? s : OSSerialize::withCapacity(PAGE_SIZE);
 		}
 		DBGLOG("ioutil @ failed to get options entry");
 		return nullptr;
