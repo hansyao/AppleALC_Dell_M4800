@@ -187,21 +187,14 @@ void AlcEnabler::updateResource(Resource type, const void * &resourceData, uint3
 			continue;
 		}
 		
-		if (type == Resource::Platform && info->platforms) {
-			for (size_t p = 0; p < info->platformNum; p++) {
-				if (patcher.compatibleKernel(info->platforms[p].minKernel, info->platforms[p].maxKernel)) {
-					DBGLOG("Found platform at %zu index", p);
-					resourceData = info->platforms[p].data;
-					resourceDataLength = info->platforms[p].dataLength;
-				}
-			}
-		} else if (type == Resource::Layout && info->layouts) {
-			for (size_t l = 0; l < info->layoutNum; l++) {
-				if (codecs[i]->layout == info->layouts[l].idx &&
-					patcher.compatibleKernel(info->layouts[l].minKernel, info->layouts[l].maxKernel)) {
-					DBGLOG("Found layout at %zu index", l);
-					resourceData = info->layouts[l].data;
-					resourceDataLength = info->layouts[l].dataLength;
+		if ((type == Resource::Platform && info->platforms) || (type == Resource::Layout && info->layouts)) {
+			size_t num = type == Resource::Platform ? info->platformNum : info->layoutNum;
+			for (size_t f = 0; f < num; f++) {
+				auto &fi = (type == Resource::Platform ? info->platforms : info->layouts)[f];
+				if (codecs[i]->layout == fi.idx && patcher.compatibleKernel(fi.minKernel, fi.maxKernel)) {
+					DBGLOG("Found %s at %zu index", type == Resource::Platform ? "platform" : "layout", f);
+					resourceData = fi.data;
+					resourceDataLength = fi.dataLength;
 				}
 			}
 		}

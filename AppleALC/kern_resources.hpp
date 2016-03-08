@@ -28,14 +28,8 @@ struct CodecLookupInfo {
  *  Corresponds to Info.plist resource file of each codec
  */
 struct CodecModInfo {
-	struct Layout {
+	struct File {
 		size_t idx {0};
-		const uint8_t *data {nullptr};
-		uint32_t dataLength {0};
-		uint32_t minKernel {KernelPatcher::KernelAny};
-		uint32_t maxKernel {KernelPatcher::KernelAny};
-	};
-	struct Platform {
 		const uint8_t *data {nullptr};
 		uint32_t dataLength {0};
 		uint32_t minKernel {KernelPatcher::KernelAny};
@@ -52,9 +46,9 @@ struct CodecModInfo {
 	const uint32_t *revisions {nullptr};
 	size_t revisionNum {0};
 	
-	const Platform *platforms {nullptr};
+	const File *platforms {nullptr};
 	size_t platformNum {0};
-	const Layout *layouts {nullptr};
+	const File *layouts {nullptr};
 	size_t layoutNum {0};
 	const KextPatch *patches {nullptr};
 	size_t patchNum {0};

@@ -5,45 +5,54 @@
 	<key>Vendor</key>
 	<string>Realtek</string>
 	<key>CodecID</key>
-	<integer>2304</integer>
+	<integer>283902569</integer>
 	<key>CodecName</key>
-	<string>ALC1150</string>
+	<string>ALC269</string>
 	<key>Revisions</key>
 	<array>
-		<integer>1048577</integer>
+		<integer>1049090</integer>
+		<integer>256</integer>
 	</array>
 	<key>Author</key>
-	<string>toleda</string>
+	<string>Multiple</string>
 	<key>Files</key>
 	<dict>
 		<key>Platforms</key>
 		<array>
 			<dict>
 				<key>Id</key>
-				<integer>1</integer>
+				<integer>27</integer>
+				<key>Comment</key>
+				<string>ALC269 Acer Aspire, Andrey1970</string>
 				<key>Path</key>
-				<string>Platforms.xml.zlib</string>
+				<string>Platforms27.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Id</key>
-				<integer>2</integer>
+				<integer>28</integer>
+				<key>Comment</key>
+				<string>ALC269VC Lenovo Z580, John</string>
 				<key>Path</key>
-				<string>Platforms.xml.zlib</string>
+				<string>Platforms28.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Layouts</key>
 		<array>
 			<dict>
 				<key>Id</key>
-				<integer>1</integer>
+				<integer>27</integer>
+				<key>Comment</key>
+				<string>ALC269 Acer Aspire</string>
 				<key>Path</key>
-				<string>layout1.xml.zlib</string>
+				<string>layout27.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Id</key>
-				<integer>2</integer>
+				<integer>28</integer>
+				<key>Comment</key>
+				<string>ALC269VC Lenovo Z580</string>
 				<key>Path</key>
-				<string>layout2.xml.zlib</string>
+				<string>layout28.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -53,13 +62,25 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>ixnUEQ==</data>
+			<data>hBnUEQ==</data>
 			<key>MinKernel</key>
 			<string>13</string>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>AAnsEA==</data>
+			<data>aQLsEA==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>hQjsEA==</data>
+			<key>MinKernel</key>
+			<string>13</string>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>AAAAAA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>

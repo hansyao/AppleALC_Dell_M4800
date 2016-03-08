@@ -22,6 +22,8 @@
 		<key>Platforms</key>
 		<array>
 			<dict>
+				<key>Id</key>
+				<integer>1</integer>
 				<key>Path</key>
 				<string>Platforms.xml.zlib</string>
 			</dict>
@@ -33,33 +35,25 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			ixnUEQ==
-			</data>
+			<data>ixnUEQ==</data>
 			<key>MinKernel</key>
 			<string>13</string>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			iAjsEA==
-			</data>
+			<data>iAjsEA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			gxnUEQ==
-			</data>
+			<data>gxnUEQ==</data>
 			<key>MinKernel</key>
 			<string>15</string>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			AAAAAA==
-			</data>
+			<data>AAAAAA==</data>
 		</dict>
 	</array>
 	<key>Vendor</key>

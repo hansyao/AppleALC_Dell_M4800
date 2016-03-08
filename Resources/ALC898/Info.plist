@@ -2,34 +2,30 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Vendor</key>
-	<string>Realtek</string>
-	<key>CodecID</key>
-	<integer>283902569</integer>
-	<key>CodecName</key>
-	<string>ALC269VC</string>
-	<key>Revisions</key>
-	<array>
-		<integer>1049090</integer>
-	</array>
 	<key>Author</key>
-	<string>John</string>
+	<string>Ukr55</string>
+	<key>CodecID</key>
+	<integer>2185</integer>
+	<key>CodecName</key>
+	<string>ALC898</string>
 	<key>Files</key>
 	<dict>
-		<key>Platforms</key>
-		<array>
-			<dict>
-				<key>Path</key>
-				<string>Platforms.yml.zlib</string>
-			</dict>
-		</array>
 		<key>Layouts</key>
 		<array>
 			<dict>
 				<key>Id</key>
-				<integer>28</integer>
+				<integer>1</integer>
 				<key>Path</key>
-				<string>layout28.yml.zlib</string>
+				<string>layout1.zml.zlib</string>
+			</dict>
+		</array>
+		<key>Platforms</key>
+		<array>
+			<dict>
+				<key>Id</key>
+				<integer>1</integer>
+				<key>Path</key>
+				<string>Platforms.zml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -39,25 +35,13 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>hBnUEQ==</data>
+			<data>ixnUEQ==</data>
 			<key>MinKernel</key>
 			<string>13</string>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>aQLsEA==</data>
-		</dict>
-		<dict>
-			<key>Count</key>
-			<integer>2</integer>
-			<key>Find</key>
-			<data>hQjsEA==</data>
-			<key>MinKernel</key>
-			<string>13</string>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>AAAAAA==</data>
+			<data>iQjsEA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>
@@ -72,5 +56,7 @@
 			<data>AAAAAA==</data>
 		</dict>
 	</array>
+	<key>Vendor</key>
+	<string>Realtek</string>
 </dict>
 </plist>

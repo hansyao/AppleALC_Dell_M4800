@@ -138,9 +138,10 @@ static NSString *generatePlatforms(NSString *file, NSDictionary *codecDict, NSSt
 	NSArray *plats = [[codecDict objectForKey:@"Files"] objectForKey:@"Platforms"];
 	
 	if (plats) {
-		auto pStr = [[NSMutableString alloc] initWithFormat:@"static const CodecModInfo::Platform platforms%zu[] {\n", platformIndex];
+		auto pStr = [[NSMutableString alloc] initWithFormat:@"static const CodecModInfo::File platforms%zu[] {\n", platformIndex];
 		for (NSDictionary *p in plats) {
-			[pStr appendFormat:@"\t{ %@, %@, %@ },\n", generateFile(file, path, [p objectForKey:@"Path"]),
+			[pStr appendFormat:@"\t{ %@, %@, %@, %@ },\n", [p objectForKey:@"Id"],
+			 generateFile(file, path, [p objectForKey:@"Path"]),
 			 [p objectForKey:@"MinKernel"] ?: @"KernelPatcher::KernelAny",
 			 [p objectForKey:@"MaxKernel"] ?: @"KernelPatcher::KernelAny"
 			];
@@ -161,7 +162,7 @@ static NSString *generateLayouts(NSString *file, NSDictionary *codecDict, NSStri
 	NSArray *lts = [[codecDict objectForKey:@"Files"] objectForKey:@"Layouts"];
 	
 	if (lts) {
-		auto pStr = [[NSMutableString alloc] initWithFormat:@"static const CodecModInfo::Layout layouts%zu[] {\n", layoutIndex];
+		auto pStr = [[NSMutableString alloc] initWithFormat:@"static const CodecModInfo::File layouts%zu[] {\n", layoutIndex];
 		for (NSDictionary *p in lts) {
 			[pStr appendFormat:@"\t{ %@, %@, %@, %@ },\n", [p objectForKey:@"Id"],
 			 generateFile(file, path, [p objectForKey:@"Path"]),

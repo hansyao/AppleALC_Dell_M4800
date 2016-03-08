@@ -22,6 +22,8 @@
 		<key>Platforms</key>
 		<array>
 			<dict>
+				<key>Id</key>
+				<integer>12</integer>
 				<key>Path</key>
 				<string>Platforms.xml.zlib</string>
 			</dict>
