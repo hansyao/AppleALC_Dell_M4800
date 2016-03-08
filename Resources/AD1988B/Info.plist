@@ -16,14 +16,14 @@
 				<key>Id</key>
 				<integer>12</integer>
 				<key>Path</key>
-				<string>layout12.хml.zlib</string>
+				<string>layout12.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
 			<dict>
 				<key>Path</key>
-				<string>Platforms.хml.zlib</string>
+				<string>Platforms.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
