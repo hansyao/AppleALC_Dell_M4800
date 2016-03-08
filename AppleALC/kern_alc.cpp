@@ -72,7 +72,7 @@ bool AlcEnabler::loadHDAKext() {
 	auto handler = KernelPatcher::KextHandler::create(kextAppleHDA->id, kextAppleHDA->loadIndex,
 	[](KernelPatcher::KextHandler *h) {
 		if (h) {
-			that->processKext(h->index, h->address);
+			that->processKext(h->index, h->address, h->size);
 		} else {
 			SYSLOG("alc @ notification callback arrived at nowhere");
 		}
@@ -96,7 +96,7 @@ bool AlcEnabler::loadHDAKext() {
 	return true;
 }
 
-void AlcEnabler::processKext(size_t index, mach_vm_address_t address) {
+void AlcEnabler::processKext(size_t index, mach_vm_address_t address, size_t size) {
 	// We could have done some of this earlier by requiring com.apple.iokit.IOHDAFamily to load first
 	// However, IOHDAFamily has insane version compatibilities over the OS X versions, I am lazy to use
 	// TrustedBSD apis, and we might want to patch other kexts one day, so better to be ready asap and
@@ -106,7 +106,7 @@ void AlcEnabler::processKext(size_t index, mach_vm_address_t address) {
 		return;
 	}
 	
-	patcher.updateRunningInfo(index, address);
+	patcher.updateRunningInfo(index, address, size);
 	
 	bool routeCallbacks {false};
 	
@@ -139,7 +139,7 @@ void AlcEnabler::processKext(size_t index, mach_vm_address_t address) {
 					auto handler = KernelPatcher::KextHandler::create(patch.patch.kext->id, patch.patch.kext->loadIndex,
 						[](KernelPatcher::KextHandler *h) {
 						if (h) {
-							that->processKext(h->index, h->address);
+							that->processKext(h->index, h->address, h->size);
 						} else {
 							SYSLOG("alc @ extra notification callback arrived at nowhere");
 						}

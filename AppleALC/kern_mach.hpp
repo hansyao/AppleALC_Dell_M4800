@@ -31,6 +31,7 @@ class MachInfo {
 	mach_header_64 *running_mh {nullptr};    // pointer to mach-o header of running kernel item
 	uint8_t *read_mh {nullptr};              // pointer to read mach-o header of HeaderSize
 	size_t read_size {0};                    // local file size
+	size_t memory_size {HeaderSize};         // memory size
 	
 	/**
 	 *  16 byte IDT descriptor, used for 32 and 64 bits kernels (64 bit capable cpus!)
@@ -153,10 +154,11 @@ public:
 	 *  retrieve the mach header and __TEXT addresses
 	 *
 	 *  @param slide load slide if calculating for kexts
+	 *  @param memory size
 	 *
 	 *  @return KERN_SUCCESS on success
 	 */
-	kern_return_t getRunningAddresses(mach_vm_address_t slide=0);
+	kern_return_t getRunningAddresses(mach_vm_address_t slide=0, size_t size=0);
 
 	/**
 	 *  retrieve running mach positions

@@ -286,8 +286,11 @@ void MachInfo::processMachHeader(void *header) {
 }
 
 //FIXME: Guard pointer access by HeaderSize
-kern_return_t MachInfo::getRunningAddresses(mach_vm_address_t slide) {
+kern_return_t MachInfo::getRunningAddresses(mach_vm_address_t slide, size_t size) {
 	if (kaslr_slide) return KERN_SUCCESS;
+	
+	if (size > 0)
+		memory_size = size;
 	
 	// We are meant to know the base address of kexts
 	mach_vm_address_t base = slide ? slide : findKernelBase();
@@ -331,7 +334,8 @@ kern_return_t MachInfo::getRunningAddresses(mach_vm_address_t slide) {
 
 void MachInfo::getRunningPosition(uint8_t * &header, size_t &size) {
 	header = reinterpret_cast<uint8_t *>(running_mh);
-	size = read_size;
+	size = read_size > memory_size ? memory_size : read_size;
+	DBGLOG("mach @ getRunningPosition %p of read %zu / memory %zu sizes", header, read_size, memory_size);
 }
 
 //FIXME: Guard pointer access by HeaderSize

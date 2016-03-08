@@ -31,8 +31,9 @@ private:
 	 *
 	 *  @param index   kinfo handle
 	 *  @param address kinfo load address
+	 *  @param size    kinfo memory size
 	 */
-	void processKext(size_t index, mach_vm_address_t address);
+	void processKext(size_t index, mach_vm_address_t address, size_t size);
 	
 	/**
 	 *  ResourceLoad callback type

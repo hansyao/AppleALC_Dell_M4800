@@ -106,13 +106,13 @@ size_t KernelPatcher::loadKinfo(KernelPatcher::KextInfo *info) {
 	return idx;
 }
 
-void KernelPatcher::updateRunningInfo(size_t id, mach_vm_address_t slide) {
+void KernelPatcher::updateRunningInfo(size_t id, mach_vm_address_t slide, size_t size) {
 	if (id >= kinfos.size()) {
 		SYSLOG("patcher @ invalid kinfo id %zu for running info update", id);
 		return;
 	}
 	
-	if (kinfos[id]->getRunningAddresses(slide) != KERN_SUCCESS) {
+	if (kinfos[id]->getRunningAddresses(slide, size) != KERN_SUCCESS) {
 		SYSLOG("patcher @ failed to retrieve running info");
 		code = Error::KernRunningInitFailure;
 	}
@@ -349,6 +349,7 @@ void KernelPatcher::onKextSummariesUpdated() {
 				if (!strncmp(that->khandlers[i]->id, last.name, KMOD_MAX_NAME)) {
 					DBGLOG("patcher @ caught the right kext at %llX, invoking handler", last.address);
 					that->khandlers[i]->address = last.address;
+					that->khandlers[i]->size = last.size;
 					that->khandlers[i]->handler(that->khandlers[i]);
 					// Remove the item
 					that->khandlers.erase(i);

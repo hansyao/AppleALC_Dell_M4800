@@ -9,7 +9,7 @@ ret=0
 
 rm -f "${PROJECT_DIR}/AppleALC/kern_resources.cpp"
 
-"${PROJECT_DIR}/DerivedData/${PROJECT}/Build/Products/${CONFIGURATION}/ResourceConverter" \
+"${TARGET_BUILD_DIR}/ResourceConverter" \
 	"${PROJECT_DIR}/Resources" \
 	"${PROJECT_DIR}/AppleALC/kern_resources.cpp" || ret=1
 

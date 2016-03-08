@@ -101,8 +101,9 @@ public:
 	 *
 	 *  @param id    loaded kinfo id
 	 *  @param slide loaded slide
+	 *  @param size  loaded memory size
 	 */
-	void updateRunningInfo(size_t id, mach_vm_address_t slide=0);
+	void updateRunningInfo(size_t id, mach_vm_address_t slide=0, size_t size=0);
 	
 	/**
 	 *  Any kernel
@@ -153,6 +154,7 @@ public:
 		const char * const id {nullptr};
 		size_t index {0};
 		mach_vm_address_t address {0};
+		size_t size {0};
 		t_handler handler {nullptr};
 	};
 	
