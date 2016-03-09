@@ -16,8 +16,8 @@ class AppleALC : public IOService {
 	/**
 	 *  Possible boot arguments
 	 */
-	static constexpr const char *booatargOff {"alc_off"};     // Disable the kext
-	static constexpr const char *booatargDebug {"alc_dbg"};   // Enable debug logging
+	static constexpr const char *booatargOff {"-alcoff"};     // Disable the kext
+	static constexpr const char *booatargDebug {"-alcdbg"};   // Enable debug logging
 	
 	/**
 	 *  Retrieve boot arguments
@@ -27,7 +27,7 @@ class AppleALC : public IOService {
 	/**
 	 *  Disable the extension by default
 	 */
-	bool isEnabled {false};
+	bool isDisabled {true};
 public:
 	bool start(IOService *provider) override;
 	void stop(IOService *provider) override;

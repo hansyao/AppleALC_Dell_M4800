@@ -16,7 +16,7 @@
 				<key>Id</key>
 				<integer>1</integer>
 				<key>Path</key>
-				<string>layout1.zml.zlib</string>
+				<string>layout1.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
@@ -25,7 +25,7 @@
 				<key>Id</key>
 				<integer>1</integer>
 				<key>Path</key>
-				<string>Platforms.zml.zlib</string>
+				<string>Platforms.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
