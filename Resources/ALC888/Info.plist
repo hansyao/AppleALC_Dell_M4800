@@ -8,6 +8,10 @@
 	<integer>2184</integer>
 	<key>CodecName</key>
 	<string>ALC888</string>
+	<key>Revisions</key>
+	<array>
+		<integer>1048833</integer>
+	</array>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>

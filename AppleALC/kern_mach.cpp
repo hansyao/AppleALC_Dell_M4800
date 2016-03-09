@@ -21,8 +21,17 @@
 
 kern_return_t MachInfo::init(const char * const paths[], size_t num) {
 	kern_return_t error = KERN_FAILURE;
-	// lookup vnode for /mach_kernel
 	
+	// Check if we have a proper credential, prevents a race-condition panic on 10.11.4 Beta
+	// When calling kauth_cred_get() for the current_thread.
+	// This probably wants a better solution...
+	vfs_context_t kctxt = vfs_context_current();
+	if (!kctxt || !vfs_context_ucred(kctxt)) {
+		SYSLOG("mach @ current context has no credential, it's too early");
+		return error;
+	}
+	
+	// lookup vnode for /mach_kernel
 	read_mh = Buffer::create<uint8_t>(HeaderSize);
 	if (!read_mh) {
 		SYSLOG("mach @ can't allocate header memory.");
@@ -35,7 +44,7 @@ kern_return_t MachInfo::init(const char * const paths[], size_t num) {
 
 	for(size_t i = 0; i < num; i++) {
 		vnode = NULLVP;
-		ctxt = vfs_context_create(NULL);
+		ctxt = vfs_context_create(nullptr);
 		
 		errno_t err = vnode_lookup(paths[i], 0, &vnode, ctxt);
 		if(!err) {
