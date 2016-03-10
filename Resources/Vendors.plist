@@ -12,5 +12,7 @@
 	<integer>4318</integer>
 	<key>Realtek</key>
 	<integer>4332</integer>
+	<key>Conexant</key>
+	<integer>5361</integer>
 </dict>
 </plist>
