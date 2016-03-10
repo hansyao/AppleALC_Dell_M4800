@@ -125,7 +125,8 @@ void AlcEnabler::processKext(size_t index, mach_vm_address_t address, size_t siz
 		for (size_t p = 0; p < info->patchNum; p++) {
 			auto &patch = info->patches[p];
 			if (patch.patch.kext->loadIndex == index) {
-				if (patcher.compatibleKernel(patch.minKernel, patch.maxKernel)) {
+				if (patcher.compatibleKernel(patch.minKernel, patch.maxKernel) &&
+					(patch.device == CodecModInfo::DeviceAny || codecs[i]->device == patch.device)) {
 					patcher.applyLookupPatch(&patch.patch);
 					// Do not really care for the errors for now
 					patcher.clearError();
@@ -191,7 +192,8 @@ void AlcEnabler::updateResource(Resource type, const void * &resourceData, uint3
 			size_t num = type == Resource::Platform ? info->platformNum : info->layoutNum;
 			for (size_t f = 0; f < num; f++) {
 				auto &fi = (type == Resource::Platform ? info->platforms : info->layouts)[f];
-				if (codecs[i]->layout == fi.idx && patcher.compatibleKernel(fi.minKernel, fi.maxKernel)) {
+				if (codecs[i]->layout == fi.layout && patcher.compatibleKernel(fi.minKernel, fi.maxKernel) &&
+					(fi.device == CodecModInfo::DeviceAny || codecs[i]->device == fi.device)) {
 					DBGLOG("Found %s at %zu index", type == Resource::Platform ? "platform" : "layout", f);
 					resourceData = fi.data;
 					resourceDataLength = fi.dataLength;
@@ -207,9 +209,12 @@ bool AlcEnabler::grabCodecs() {
 		return false;
 	}
 	
+	const uint32_t Invalid {0xFFFFFFFF};
+	
 	for (size_t lookup = 0; lookup < codecLookupSize; lookup++) {
 		
-		that->tmpLayout = -1;
+		that->tmpLayout = Invalid;
+		that->tmpDevice = CodecModInfo::DeviceAny;
 	
 		// Not using recursive lookup due to multiple possible entries
 		auto sect = IOUtil::findEntryByPrefix("/AppleACPIPlatformExpert", "PCI", gIOServicePlane);
@@ -219,8 +224,8 @@ bool AlcEnabler::grabCodecs() {
 		while (sect && i < codecLookup[lookup].treeSize) {
 			sect = IOUtil::findEntryByPrefix(sect, codecLookup[lookup].tree[i], gIOServicePlane,
 											 i+1 == codecLookup[lookup].treeSize ? [](IORegistryEntry *e) {
-				if (that->tmpLayout < 0) {
-					SYSLOG("alc @ invalid layout-id was previously found %d", that->tmpLayout);
+				if (that->tmpLayout == Invalid) {
+					SYSLOG("alc @ layout-id was not set previously");
 					return;
 				}
 				
@@ -240,7 +245,7 @@ bool AlcEnabler::grabCodecs() {
 					return;
 				}
 				
-				auto ci = AlcEnabler::CodecInfo::create(venNum->unsigned64BitValue(), revNum->unsigned32BitValue(), that->tmpLayout);
+				auto ci = AlcEnabler::CodecInfo::create(venNum->unsigned64BitValue(), revNum->unsigned32BitValue(), that->tmpLayout, that->tmpDevice);
 				if (ci) {
 					if (!that->codecs.push_back(ci)) {
 						SYSLOG("alc @ failed to store codec info for %X %X", ci->vendor, ci->codec);
@@ -252,23 +257,9 @@ bool AlcEnabler::grabCodecs() {
 					
 			} : nullptr);
 			
-			if (i == codecLookup[lookup].layoutNum) {
-				if (sect) {
-					auto lid = sect->getProperty("layout-id");
-					if (lid) {
-						auto lidNum = OSDynamicCast(OSData, lid);
-						if (lidNum && lidNum->getLength() > 0) {
-							tmpLayout = static_cast<const uint8_t *>(lidNum->getBytesNoCopy())[0];
-							DBGLOG("alc @ found layout-id %d in %s", tmpLayout, codecLookup[lookup].tree[i]);
-							i++;
-							continue;
-						} else {
-							SYSLOG("alc @ %s contains invalid layout-id", codecLookup[lookup].tree[i]);
-						}
-					}
-				}
-				SYSLOG("alc @ no layout found in %s, aborting", codecLookup[lookup].tree[i]);
-				break;
+			if (i == codecLookup[lookup].layoutNum && sect) {
+				IOUtil::getOSDataValue(sect, "layout-id", tmpLayout);
+				IOUtil::getOSDataValue(sect, "device-id", tmpDevice);
 			}
 			
 			i++;

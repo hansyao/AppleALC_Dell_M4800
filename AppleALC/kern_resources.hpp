@@ -28,15 +28,19 @@ struct CodecLookupInfo {
  *  Corresponds to Info.plist resource file of each codec
  */
 struct CodecModInfo {
+	static constexpr uint32_t DeviceAny {0};
+
 	struct File {
-		size_t idx {0};
 		const uint8_t *data {nullptr};
 		uint32_t dataLength {0};
+		uint32_t layout {0};
+		uint32_t device {DeviceAny};
 		uint32_t minKernel {KernelPatcher::KernelAny};
 		uint32_t maxKernel {KernelPatcher::KernelAny};
 	};
 	struct KextPatch {
 		KernelPatcher::LookupPatch patch;
+		uint32_t device {DeviceAny};
 		uint32_t minKernel {KernelPatcher::KernelAny};
 		uint32_t maxKernel {KernelPatcher::KernelAny};
 	};

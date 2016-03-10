@@ -152,7 +152,7 @@ mach_vm_address_t MachInfo::solveSymbol(const char *symbol) {
 		return 0;
 	}
 	
-	if (!kaslr_slide) {
+	if (!kaslr_slide_set) {
 		SYSLOG("mach @ no slide is present");
 		return 0;
 	}
@@ -296,7 +296,7 @@ void MachInfo::processMachHeader(void *header) {
 
 //FIXME: Guard pointer access by HeaderSize
 kern_return_t MachInfo::getRunningAddresses(mach_vm_address_t slide, size_t size) {
-	if (kaslr_slide) return KERN_SUCCESS;
+	if (kaslr_slide_set) return KERN_SUCCESS;
 	
 	if (size > 0)
 		memory_size = size;
@@ -331,6 +331,7 @@ kern_return_t MachInfo::getRunningAddresses(mach_vm_address_t slide, size_t size
 		} else {
 			kaslr_slide = slide;
 		}
+		kaslr_slide_set = true;
 		
 		DBGLOG("mach @ aslr/load slide is 0x%llx", kaslr_slide);
 	} else {

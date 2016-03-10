@@ -32,6 +32,7 @@ class MachInfo {
 	uint8_t *read_mh {nullptr};              // pointer to read mach-o header of HeaderSize
 	size_t read_size {0};                    // local file size
 	size_t memory_size {HeaderSize};         // memory size
+	bool kaslr_slide_set {false};            // kaslr can be null, used for disambiguation
 	
 	/**
 	 *  16 byte IDT descriptor, used for 32 and 64 bits kernels (64 bit capable cpus!)

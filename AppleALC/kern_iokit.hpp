@@ -8,10 +8,39 @@
 #ifndef kern_iokit_hpp
 #define kern_iokit_hpp
 
+#include "kern_util.hpp"
+
 #include <libkern/c++/OSSerialize.h>
 #include <IOKit/IORegistryEntry.h>
 
 namespace IOUtil {
+
+	/**
+	 *  Read OSData
+	 *
+	 *  @param sect   IORegistryEntry section
+	 *  @param value  read value
+	 *  @param name   propert name
+	 *
+	 *  @return true on success
+	 */
+	template <typename T>
+	bool getOSDataValue(IORegistryEntry *sect, const char *name, T &value) {
+		auto obj = sect->getProperty(name);
+		if (obj) {
+			auto data = OSDynamicCast(OSData, obj);
+			if (data && data->getLength() == sizeof(T)) {
+				value = *static_cast<const T *>(data->getBytesNoCopy());
+				DBGLOG("util @ getOSData %s has %llX value", name, static_cast<uint64_t>(value));
+				return true;
+			} else {
+				SYSLOG("util @ getOSData %s has unexpected format", name);
+			}
+		} else {
+			SYSLOG("util @ getOSData %s was not found", name);
+		}
+		return false;;
+	}
 
 	/**
 	 *  Retrieve property object

@@ -53,10 +53,11 @@ private:
 	t_callback orgPlatformLoadCallback {nullptr};
 	
 	/**
-	 *  current detected layout used in grabCodecs
-	 *  Ideally this is not here
+	 *  current detected layout-id/device-id used in grabCodecs
+	 *  Ideally they are not here
 	 */
-	int16_t tmpLayout;
+	uint32_t tmpLayout;
+	uint32_t tmpDevice;
 	
 	/**
 	 *  Detects audio codecs
@@ -93,20 +94,23 @@ private:
 	 *  Codec identification and modification info
 	 */
 	class CodecInfo {
-		CodecInfo(uint64_t ven, uint32_t rev, uint8_t lid) :
-		revision(rev), layout(lid) {
+		CodecInfo(uint64_t ven, uint32_t rev, uint32_t lid, uint32_t did) :
+		revision(rev), layout(lid), device(did) {
 			vendor = (ven & 0xFFFF0000) >> 16;
 			codec = ven & 0xFFFF;
 		}
 	public:
-		static CodecInfo *create(uint64_t ven, uint32_t rev, uint8_t lid) { return new CodecInfo(ven, rev, lid); }
+		static CodecInfo *create(uint64_t ven, uint32_t rev, uint32_t lid, uint32_t did) {
+			return new CodecInfo(ven, rev, lid, did);
+		}
 		static void deleter(CodecInfo *info) { delete info; }
 		
 		const CodecModInfo *info {nullptr};
 		uint32_t revision;
 		uint16_t vendor;
 		uint16_t codec;
-		uint8_t layout;
+		uint32_t layout;
+		uint32_t device;
 	};
 	
 	/**
