@@ -21,8 +21,17 @@
 
 kern_return_t MachInfo::init(const char * const paths[], size_t num) {
 	kern_return_t error = KERN_FAILURE;
-	// lookup vnode for /mach_kernel
 	
+	// Check if we have a proper credential, prevents a race-condition panic on 10.11.4 Beta
+	// When calling kauth_cred_get() for the current_thread.
+	// This probably wants a better solution...
+	vfs_context_t kctxt = vfs_context_current();
+	if (!kctxt || !vfs_context_ucred(kctxt)) {
+		SYSLOG("mach @ current context has no credential, it's too early");
+		return error;
+	}
+	
+	// lookup vnode for /mach_kernel
 	read_mh = Buffer::create<uint8_t>(HeaderSize);
 	if (!read_mh) {
 		SYSLOG("mach @ can't allocate header memory.");
@@ -35,7 +44,7 @@ kern_return_t MachInfo::init(const char * const paths[], size_t num) {
 
 	for(size_t i = 0; i < num; i++) {
 		vnode = NULLVP;
-		ctxt = vfs_context_create(NULL);
+		ctxt = vfs_context_create(nullptr);
 		
 		errno_t err = vnode_lookup(paths[i], 0, &vnode, ctxt);
 		if(!err) {
@@ -143,7 +152,7 @@ mach_vm_address_t MachInfo::solveSymbol(const char *symbol) {
 		return 0;
 	}
 	
-	if (!kaslr_slide) {
+	if (!kaslr_slide_set) {
 		SYSLOG("mach @ no slide is present");
 		return 0;
 	}
@@ -287,7 +296,7 @@ void MachInfo::processMachHeader(void *header) {
 
 //FIXME: Guard pointer access by HeaderSize
 kern_return_t MachInfo::getRunningAddresses(mach_vm_address_t slide, size_t size) {
-	if (kaslr_slide) return KERN_SUCCESS;
+	if (kaslr_slide_set) return KERN_SUCCESS;
 	
 	if (size > 0)
 		memory_size = size;
@@ -322,6 +331,7 @@ kern_return_t MachInfo::getRunningAddresses(mach_vm_address_t slide, size_t size
 		} else {
 			kaslr_slide = slide;
 		}
+		kaslr_slide_set = true;
 		
 		DBGLOG("mach @ aslr/load slide is 0x%llx", kaslr_slide);
 	} else {

@@ -338,6 +338,20 @@
 					<key>Comment</key>
 					<string>ALC283, Toleda</string>
 				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AQAAAA==</data>
+					<key>CodecID</key>
+					<integer>351359086</integer>
+					<key>ConfigData</key>
+					<data>AZccMAGXHUABlx4rAZcfDgH3HCAB9x0BAfceEAH3H5ACNxwQAjcdAQI3HqACNx+QAaccQAGnHRABpx6BAacfAQG3HPABtx0AAbceAAG3H0ABxxzwAccdAAHHHgABxx9AAdcc8AHXHQAB1x4AAdcfQAHnHPAB5x0AAeceAAHnH0ACBxzwAgcdAAIHHgACBx9AAicc8AInHQACJx4AAicfQA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
+					<key>Comment</key>
+					<string>CX20590 for Lenovo Yoga 13, usr-sse2</string>
+				</dict>
 			</array>
 			<key>IOClass</key>
 			<string>AppleHDAHardwareConfigDriver</string>

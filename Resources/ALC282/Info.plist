@@ -39,49 +39,37 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			PYQZ1BE=
-			</data>
+			<data>PYQZ1BE=</data>
 			<key>MinKernel</key>
 			<string>13</string>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			PYIC7BA=
-			</data>
+			<data>PYIC7BA=</data>
 		</dict>
 		<dict>
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			PYUI7BA=
-			</data>
+			<data>PYUI7BA=</data>
 			<key>MinKernel</key>
 			<string>13</string>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			PQAAAAA=
-			</data>
+			<data>PQAAAAA=</data>
 		</dict>
 		<dict>
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			PYMZ1BE=
-			</data>
+			<data>PYMZ1BE=</data>
 			<key>MinKernel</key>
 			<string>15</string>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			PQAAAAA=
-			</data>
+			<data>PQAAAAA=</data>
 		</dict>
 	</array>
 	<key>Vendor</key>

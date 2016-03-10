@@ -140,8 +140,10 @@ static NSString *generatePlatforms(NSString *file, NSDictionary *codecDict, NSSt
 	if (plats) {
 		auto pStr = [[NSMutableString alloc] initWithFormat:@"static const CodecModInfo::File platforms%zu[] {\n", platformIndex];
 		for (NSDictionary *p in plats) {
-			[pStr appendFormat:@"\t{ %@, %@, %@, %@ },\n", [p objectForKey:@"Id"],
+			[pStr appendFormat:@"\t{ %@, %@, %@, %@, %@ },\n",
 			 generateFile(file, path, [p objectForKey:@"Path"]),
+			 [p objectForKey:@"Id"],
+			 [p objectForKey:@"Device"] ?: @"CodecModInfo::DeviceAny",
 			 [p objectForKey:@"MinKernel"] ?: @"KernelPatcher::KernelAny",
 			 [p objectForKey:@"MaxKernel"] ?: @"KernelPatcher::KernelAny"
 			];
@@ -164,8 +166,10 @@ static NSString *generateLayouts(NSString *file, NSDictionary *codecDict, NSStri
 	if (lts) {
 		auto pStr = [[NSMutableString alloc] initWithFormat:@"static const CodecModInfo::File layouts%zu[] {\n", layoutIndex];
 		for (NSDictionary *p in lts) {
-			[pStr appendFormat:@"\t{ %@, %@, %@, %@ },\n", [p objectForKey:@"Id"],
+			[pStr appendFormat:@"\t{ %@, %@, %@, %@, %@ },\n",
 			 generateFile(file, path, [p objectForKey:@"Path"]),
+			 [p objectForKey:@"Id"],
+			 [p objectForKey:@"Device"] ?: @"CodecModInfo::DeviceAny",
 			 [p objectForKey:@"MinKernel"] ?: @"KernelPatcher::KernelAny",
 			 [p objectForKey:@"MaxKernel"] ?: @"KernelPatcher::KernelAny"
 			 ];
@@ -210,12 +214,13 @@ static NSString *generatePatches(NSString *file, NSDictionary *codecDict, NSDict
 				patchBufIndex++;
 			}
 			
-			[pStr appendFormat:@"\t{ { &kextList[%@], patchBuf%zu, patchBuf%zu, %zu, %@ }, %@, %@ },\n",
+			[pStr appendFormat:@"\t{ { &kextList[%@], patchBuf%zu, patchBuf%zu, %zu, %@ }, %@, %@, %@ },\n",
 			 [kextIndexes objectForKey:[p objectForKey:@"Name"]],
 			 patchBufIndex-2,
 			 patchBufIndex-1,
 			 [f length],
 			 [p objectForKey:@"Count"] ?: @"1",
+			 [p objectForKey:@"Device"] ?: @"CodecModInfo::DeviceAny",
 			 [p objectForKey:@"MinKernel"] ?: @"KernelPatcher::KernelAny",
 			 [p objectForKey:@"MaxKernel"] ?: @"KernelPatcher::KernelAny"
 			];

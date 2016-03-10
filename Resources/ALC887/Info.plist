@@ -3,15 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>Vandroiy</string>
+	<string>x-tropic</string>
 	<key>CodecID</key>
-	<integer>2184</integer>
+	<integer>2183</integer>
 	<key>CodecName</key>
-	<string>ALC888</string>
-	<key>Revisions</key>
-	<array>
-		<integer>1048833</integer>
-	</array>
+	<string>ALC887</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
@@ -37,53 +33,15 @@
 	<array>
 		<dict>
 			<key>Count</key>
-			<integer>1</integer>
-			<key>Find</key>
-			<data>QcYGAEmLvCQ=</data>
-			<key>MaxKernel</key>
-			<integer>13</integer>
-			<key>MinKernel</key>
-			<integer>13</integer>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>QcYGAUmLvCQ=</data>
-		</dict>
-		<dict>
-			<key>Count</key>
-			<integer>1</integer>
-			<key>Find</key>
-			<data>QcYGAEiLu2g=</data>
-			<key>MinKernel</key>
-			<integer>14</integer>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>QcYGAUiLu2g=</data>
-		</dict>
-		<dict>
-			<key>Count</key>
-			<integer>1</integer>
-			<key>Find</key>
-			<data>QcaGQwEAAAA=</data>
-			<key>MinKernel</key>
-			<integer>13</integer>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>QcaGQwEAAAE=</data>
-		</dict>
-		<dict>
-			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
 			<data>ixnUEQ==</data>
 			<key>MinKernel</key>
-			<string>13</string>
+			<integer>13</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>iAjsEA==</data>
+			<data>hwjsEA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>
@@ -91,12 +49,16 @@
 			<key>Find</key>
 			<data>gxnUEQ==</data>
 			<key>MinKernel</key>
-			<string>15</string>
+			<integer>13</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
 			<data>AAAAAA==</data>
 		</dict>
+	</array>
+	<key>Revisions</key>
+	<array>
+		<integer>1049346</integer>
 	</array>
 	<key>Vendor</key>
 	<string>Realtek</string>

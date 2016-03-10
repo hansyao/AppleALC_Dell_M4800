@@ -28,8 +28,8 @@ bool AppleALC::start(IOService *provider) {
 	
 	getBootArguments();
 	
-	if (!isEnabled) {
-		DBGLOG("init @ found a disabling argument, exiting");
+	if (isDisabled) {
+		SYSLOG("init @ found a disabling argument or no arguments, exiting");
 		return false;
 	}
 
@@ -46,14 +46,14 @@ void AppleALC::stop(IOService *provider) {
 }
 
 void AppleALC::getBootArguments() {
-	bool disabled {false};
+	isDisabled = false;
 	char buf[16];
-	disabled |= PE_parse_boot_argn(booatargOff, buf, sizeof(buf));
-	disabled |= PE_parse_boot_argn("-s", buf, sizeof(buf));
-	disabled |= PE_parse_boot_argn("-x", buf, sizeof(buf));
-	isEnabled = !disabled;
+
+	isDisabled |= PE_parse_boot_argn(booatargOff, buf, sizeof(buf));
+	isDisabled |= PE_parse_boot_argn("-s", buf, sizeof(buf));
+	isDisabled |= PE_parse_boot_argn("-x", buf, sizeof(buf));
 	
 	debugEnabled = PE_parse_boot_argn(booatargDebug, buf, sizeof(buf));
 		
-	DBGLOG("init @ boot arguments enabled %d, debug %d", isEnabled, debugEnabled);
+	DBGLOG("init @ boot arguments disabled %d, debug %d", isDisabled, debugEnabled);
 }
