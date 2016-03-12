@@ -16,8 +16,8 @@
 static const char * tree0[] { "AppleACPIPCI", "HDAU", };
 static const char * tree1[] { "AppleACPIPCI", "HDEF", "AppleHDAController", "IOHDACodecDevice", };
 CodecLookupInfo codecLookup[] {
-	{ tree0, 2, 1, true },
-	{ tree1, 4, 1, false },
+	{ tree0, 2, 1, false },
+	{ tree1, 4, 1, true },
 };
 const size_t codecLookupSize {2};
 
@@ -6260,7 +6260,7 @@ static const KextPatch patches12[] {
 static const uint8_t patchBuf76[] { 0x3D, 0x0C, 0x0A, 0x00, 0x00, };
 static const uint8_t patchBuf77[] { 0x3D, 0x0C, 0x0C, 0x00, 0x00, };
 static const KextPatch patches13[] {
-	{ { &kextList[0], patchBuf76, patchBuf77, 5, 5 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[0], patchBuf76, patchBuf77, 5, 5 }, 15, KernelPatcher::KernelAny },
 };
 ControllerModInfo controllerMod[] {
 	{ "Incompatible X99 HDEF controller", 0x8086, 0x8D20, nullptr, 0, patches12, 1 },

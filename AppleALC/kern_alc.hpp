@@ -161,6 +161,7 @@ private:
 	 */
 	struct ProcessingState {
 		enum {
+			NotReady = 0,
 			ControllersLoaded = 1,
 			CodecsLoaded = 2,
 			CallbacksWantRouting = 4,

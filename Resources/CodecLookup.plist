@@ -4,8 +4,6 @@
 <dict>
 	<key>Intel</key>
 	<dict>
-		<key>Detect</key>
-		<true/>
 		<key>Tree</key>
 		<array>
 			<string>AppleACPIPCI</string>
@@ -16,6 +14,8 @@
 	</dict>
 	<key>All</key>
 	<dict>
+		<key>Detect</key>
+		<true/>
 		<key>Tree</key>
 		<array>
 			<string>AppleACPIPCI</string>

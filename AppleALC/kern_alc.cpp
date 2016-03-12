@@ -17,6 +17,8 @@
 static AlcEnabler *that {nullptr};
 
 bool AlcEnabler::init() {
+	progressState = ProcessingState::NotReady;
+
 	patcher.init();
 	
 	if (patcher.getError() != KernelPatcher::Error::NoError) {
@@ -217,7 +219,7 @@ void AlcEnabler::grabControllers() {
 					break;
 				}
 				
-				if (!codecLookup[lookup].detect && !IOUtil::getOSDataValue(sect, "layout-id", lid)) {
+				if (codecLookup[lookup].detect && !IOUtil::getOSDataValue(sect, "layout-id", lid)) {
 					SYSLOG("alc @ layout-id was not provided by controller at %s", codecLookup[lookup].tree[i]);
 					break;
 				}
@@ -256,7 +258,7 @@ bool AlcEnabler::grabCodecs() {
 		auto ctlr = controllers[currentController];
 		
 		// Digital controllers normally have no detectible codecs
-		if (ctlr->detect)
+		if (!ctlr->detect)
 			continue;
 
 		auto sect = IOUtil::findEntryByPrefix("/AppleACPIPlatformExpert", "PCI", gIOServicePlane);
@@ -373,6 +375,7 @@ bool AlcEnabler::validateCodecs() {
 }
 
 void AlcEnabler::applyPatches(size_t index, const KextPatch *patches, size_t patchNum) {
+	DBGLOG("alc @ applying patches for %zu kext", index);
 	for (size_t p = 0; p < patchNum; p++) {
 		auto &patch = patches[p];
 		if (patch.patch.kext->loadIndex == index) {
