@@ -113,8 +113,7 @@ void AlcEnabler::processKext(size_t index, mach_vm_address_t address, size_t siz
 			if (grabCodecs()) {
 				progressState |= ProcessingState::CodecsLoaded;
 			} else {
-				// Make this DBGLOG? It may be called if we patch other kexts
-				SYSLOG("alc @ failed to find a suitable codec, we have nothing to do");
+				DBGLOG("alc @ failed to find a suitable codec, we have nothing to do");
 			}
 		}
 	
