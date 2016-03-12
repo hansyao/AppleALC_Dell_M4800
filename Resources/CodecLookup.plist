@@ -4,7 +4,18 @@
 <array>
 	<dict>
 		<key>Comment</key>
-		<string>Intel/NVIDIA HDMi</string>
+		<string>Intel HDMI (Framebuffers)</string>
+		<key>Tree</key>
+		<array>
+			<string>AppleACPIPCI</string>
+			<string>IGPU</string>
+		</array>
+		<key>controllerNum</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>Comment</key>
+		<string>Intel/NVIDIA HDMI</string>
 		<key>Tree</key>
 		<array>
 			<string>AppleACPIPCI</string>
