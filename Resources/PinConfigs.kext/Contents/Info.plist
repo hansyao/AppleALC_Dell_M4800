@@ -33,6 +33,27 @@
 					<data>
 					AwAAAA==
 					</data>
+					<key>CodecID</key>
+					<integer>283903592</integer>
+					<key>Comment</key>
+					<string>ALC668 for Asus N750Jk, alex1960</string>
+					<key>ConfigData</key>
+					<data>
+					ABJxwQAScdAAEnHqABJx+QAUccIAFHHQABRx
+					4XAUcfkAFXHDABVx0QAVceIQFXHwEBZxxAAW
+					cdAAFnHgABZx9AAbccUAG3HRABtx6BAbcfAg
+					HXHGAB1x0AAdcewAHXH0ABRwwA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
 					<key>Codec</key>
 					<string>ALC269</string>
 					<key>CodecID</key>
