@@ -100,8 +100,10 @@ size_t KernelPatcher::loadKinfo(KernelPatcher::KextInfo *info) {
 	}
 	
 	auto idx = loadKinfo(info->id, info->paths, info->pathNum);
-	if (getError() == Error::NoError)
+	if (getError() == Error::NoError) {
 		info->loadIndex = idx;
+		DBGLOG("patcher @ loaded kinfo %s at %zu index", info->id, idx);
+	}
 	
 	return idx;
 }

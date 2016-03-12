@@ -3,27 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>Andrey1970</string>
+	<string>alex1960</string>
 	<key>CodecID</key>
-	<integer>2201</integer>
+	<integer>1640</integer>
 	<key>CodecName</key>
-	<string>ALC898</string>
+	<string>0x10ec0668 Rev:0x100003</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
 		<array>
-			<dict>
-				<key>Id</key>
-				<integer>1</integer>
-				<key>Path</key>
-				<string>layout1.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Id</key>
-				<integer>2</integer>
-				<key>Path</key>
-				<string>layout2.xml.zlib</string>
-			</dict>
 			<dict>
 				<key>Id</key>
 				<integer>3</integer>
@@ -35,21 +23,9 @@
 		<array>
 			<dict>
 				<key>Id</key>
-				<integer>1</integer>
-				<key>Path</key>
-				<string>Platforms.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Id</key>
-				<integer>2</integer>
-				<key>Path</key>
-				<string>Platforms.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Id</key>
 				<integer>3</integer>
 				<key>Path</key>
-				<string>Platforms.xml.zlib</string>
+				<string>Platforms3.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -110,6 +86,38 @@
 			<integer>2</integer>
 			<key>Find</key>
 			<data>
+			hQjsEA==
+			</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>
+			AAAAAA==
+			</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>
+			hAjsEA==
+			</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>
+			AAAAAA==
+			</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>
 			ixnUEQ==
 			</data>
 			<key>MinKernel</key>
@@ -118,7 +126,7 @@
 			<string>AppleHDA</string>
 			<key>Replace</key>
 			<data>
-			mQjsEA==
+			aAbsEA==
 			</data>
 		</dict>
 		<dict>

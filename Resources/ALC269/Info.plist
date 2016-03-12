@@ -35,6 +35,14 @@
 				<key>Path</key>
 				<string>Platforms28.xml.zlib</string>
 			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>3</integer>
+				<key>Comment</key>
+				<string>ALC269 Asus K53SJ, alex1960</string>
+				<key>Path</key>
+				<string>Platforms3.xml.zlib</string>
+			</dict>
 		</array>
 		<key>Layouts</key>
 		<array>
@@ -53,6 +61,14 @@
 				<string>ALC269VC Lenovo Z580</string>
 				<key>Path</key>
 				<string>layout28.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>3</integer>
+				<key>Comment</key>
+				<string>ALC269 Asus K53SJ</string>
+				<key>Path</key>
+				<string>layout3.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -89,6 +105,20 @@
 			<data>gxnUEQ==</data>
 			<key>MinKernel</key>
 			<string>15</string>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>AAAAAA==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>hAjsEA==</data>
+			<key>MinKernel</key>
+			<string>13</string>
+			<key>MaxKernel</key>
+			<string>14</string>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
