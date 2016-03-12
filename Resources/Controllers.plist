@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>Name</key>
-		<string>Incompatible X99 HDEF controller</string>
+		<string>X99 HDEF controller</string>
 		<key>Vendor</key>
 		<string>Intel</string>
 		<key>Device</key>
@@ -27,13 +27,69 @@
 	</dict>
 	<dict>
 		<key>Name</key>
-		<string>Incompatible HD4600 controller</string>
+		<string>HD4600 controller</string>
 		<key>Vendor</key>
 		<string>Intel</string>
 		<key>Device</key>
 		<integer>3084</integer>
 		<key>Patches</key>
 		<array>
+			<dict>
+				<key>Count</key>
+				<integer>4</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Find</key>
+				<data>DAoAAA==</data>
+				<key>MinKernel</key>
+				<string>13</string>
+				<key>MaxKernel</key>
+				<string>13</string>
+				<key>Replace</key>
+				<data>DAwAAA==</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>2</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Find</key>
+				<data>CwwAAA==</data>
+				<key>MinKernel</key>
+				<string>13</string>
+				<key>MaxKernel</key>
+				<string>13</string>
+				<key>Replace</key>
+				<data>DAwAAA==</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>3</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Find</key>
+				<data>PQwKAAA=</data>
+				<key>MinKernel</key>
+				<string>14</string>
+				<key>MaxKernel</key>
+				<string>14</string>
+				<key>Replace</key>
+				<data>PQwMAAA=</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Find</key>
+				<data>PQsMAAA=</data>
+				<key>MinKernel</key>
+				<string>14</string>
+				<key>MaxKernel</key>
+				<string>14</string>
+				<key>Replace</key>
+				<data>PQwMAAA=</data>
+			</dict>
 			<dict>
 				<key>Count</key>
 				<integer>5</integer>

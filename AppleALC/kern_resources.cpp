@@ -6257,14 +6257,26 @@ static const uint8_t patchBuf75[] { 0x20, 0x8D, };
 static const KextPatch patches12[] {
 	{ { &kextList[0], patchBuf74, patchBuf75, 2, 4 }, 13, KernelPatcher::KernelAny },
 };
-static const uint8_t patchBuf76[] { 0x3D, 0x0C, 0x0A, 0x00, 0x00, };
-static const uint8_t patchBuf77[] { 0x3D, 0x0C, 0x0C, 0x00, 0x00, };
+static const uint8_t patchBuf76[] { 0x0C, 0x0A, 0x00, 0x00, };
+static const uint8_t patchBuf77[] { 0x0C, 0x0C, 0x00, 0x00, };
+static const uint8_t patchBuf78[] { 0x0B, 0x0C, 0x00, 0x00, };
+static const uint8_t patchBuf79[] { 0x0C, 0x0C, 0x00, 0x00, };
+static const uint8_t patchBuf80[] { 0x3D, 0x0C, 0x0A, 0x00, 0x00, };
+static const uint8_t patchBuf81[] { 0x3D, 0x0C, 0x0C, 0x00, 0x00, };
+static const uint8_t patchBuf82[] { 0x3D, 0x0B, 0x0C, 0x00, 0x00, };
+static const uint8_t patchBuf83[] { 0x3D, 0x0C, 0x0C, 0x00, 0x00, };
+static const uint8_t patchBuf84[] { 0x3D, 0x0C, 0x0A, 0x00, 0x00, };
+static const uint8_t patchBuf85[] { 0x3D, 0x0C, 0x0C, 0x00, 0x00, };
 static const KextPatch patches13[] {
-	{ { &kextList[0], patchBuf76, patchBuf77, 5, 5 }, 15, KernelPatcher::KernelAny },
+	{ { &kextList[0], patchBuf76, patchBuf77, 4, 4 }, 13, 13 },
+	{ { &kextList[0], patchBuf78, patchBuf79, 4, 2 }, 13, 13 },
+	{ { &kextList[0], patchBuf80, patchBuf81, 5, 3 }, 14, 14 },
+	{ { &kextList[0], patchBuf82, patchBuf83, 5, 1 }, 14, 14 },
+	{ { &kextList[0], patchBuf84, patchBuf85, 5, 5 }, 15, KernelPatcher::KernelAny },
 };
 ControllerModInfo controllerMod[] {
-	{ "Incompatible X99 HDEF controller", 0x8086, 0x8D20, nullptr, 0, patches12, 1 },
-	{ "Incompatible HD4600 controller", 0x8086, 0xC0C, nullptr, 0, patches13, 1 },
+	{ "X99 HDEF controller", 0x8086, 0x8D20, nullptr, 0, patches12, 1 },
+	{ "HD4600 controller", 0x8086, 0xC0C, nullptr, 0, patches13, 5 },
 };
 
 const size_t controllerModSize {2};

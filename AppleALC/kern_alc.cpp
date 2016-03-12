@@ -173,6 +173,8 @@ void AlcEnabler::processKext(size_t index, mach_vm_address_t address, size_t siz
 }
 
 void AlcEnabler::updateResource(Resource type, const void * &resourceData, uint32_t &resourceDataLength) {
+	DBGLOG("alc @ resource-request arrived %s", type == Resource::Platform ? "paltform" : "layout");
+	
 	for (size_t i = 0, s = codecs.size(); i < s; i++) {
 		auto info = codecs[i]->info;
 		if (!info) {
@@ -214,7 +216,7 @@ void AlcEnabler::grabControllers() {
 				
 				if (!IOUtil::getOSDataValue(sect, "vendor-id", ven) ||
 					!IOUtil::getOSDataValue(sect, "device-id", dev) ||
-					!IOUtil::getOSDataValue(sect, "revision-id", dev)) {
+					!IOUtil::getOSDataValue(sect, "revision-id", rev)) {
 					SYSLOG("alc @ found an incorrect controller at %s", codecLookup[lookup].tree[i]);
 					break;
 				}
@@ -226,24 +228,22 @@ void AlcEnabler::grabControllers() {
 				
 				auto controller = ControllerInfo::create(ven, dev, rev, lid, codecLookup[lookup].detect);
 				if (controller) {
-					if (!controllers.push_back(controller)) {
+					if (controllers.push_back(controller)) {
+						controller->lookup = &codecLookup[lookup];
+						found = true;
+					} else {
 						SYSLOG("alc @ failed to store controller info for %X:%X:%X", ven, dev, rev);
 						ControllerInfo::deleter(controller);
-						break;
 					}
 				} else {
 					SYSLOG("alc @ failed to create controller info for %X:%X:%X", ven, dev, rev);
-					break;
 				}
-				
-				controller->lookup = &codecLookup[lookup];
-				found = true;
 			}
 		}
 	}
 	
 	if (found) {
-		DBGLOG("alc @ found some audio controllers");
+		DBGLOG("alc @ found %zu audio controllers", controllers.size());
 		validateControllers();
 	}
 }
@@ -303,7 +303,9 @@ bool AlcEnabler::grabCodecs() {
 
 void AlcEnabler::validateControllers() {
 	for (size_t i = 0, num = controllers.size(); i < num; i++) {
+		DBGLOG("alc @ validating %zu controller %X:%X:%X", i, controllers[i]->vendor, controllers[i]->device, controllers[i]->revision);
 		for (size_t mod = 0; mod < controllerModSize; mod++) {
+			DBGLOG("alc @ comparing to %zu mod %X:%X", mod, controllerMod[mod].vendor, controllerMod[mod].device);
 			if (controllers[i]->vendor == controllerMod[mod].vendor &&
 				controllers[i]->device == controllerMod[mod].device) {
 				
@@ -315,6 +317,7 @@ void AlcEnabler::validateControllers() {
 				
 				if (rev != controllerMod[mod].revisionNum ||
 					controllerMod[mod].revisionNum == 0) {
+					DBGLOG("alc @ found mod for %zu controller", i);
 					controllers[i]->info = &controllerMod[mod];
 					break;
 				}
@@ -380,6 +383,7 @@ void AlcEnabler::applyPatches(size_t index, const KextPatch *patches, size_t pat
 		auto &patch = patches[p];
 		if (patch.patch.kext->loadIndex == index) {
 			if (patcher.compatibleKernel(patch.minKernel, patch.maxKernel)) {
+				DBGLOG("alc @ applying %zu patch for %zu kext", p, index);
 				patcher.applyLookupPatch(&patch.patch);
 				// Do not really care for the errors for now
 				patcher.clearError();
