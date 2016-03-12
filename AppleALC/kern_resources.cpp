@@ -5727,7 +5727,7 @@ CodecModInfo codecModRealtek[] {
 	{ "ALC269", 0x269, revisions1, 2, platforms1, 3, layouts1, 3, patches1, 4 },
 	{ "ALC270", 0x270, revisions2, 1, platforms2, 1, layouts2, 1, patches2, 4 },
 	{ "ALC282", 0x282, nullptr, 0, platforms3, 1, layouts3, 1, patches3, 3 },
-	{ "0x10ec0668 Rev:0x100003", 0x668, revisions3, 1, platforms4, 1, layouts4, 1, patches4, 7 },
+	{ "ALC668", 0x668, revisions3, 1, platforms4, 1, layouts4, 1, patches4, 7 },
 	{ "ALC887", 0x887, revisions4, 1, platforms5, 1, layouts5, 1, patches5, 2 },
 	{ "ALC888", 0x888, revisions5, 1, platforms6, 1, layouts6, 1, patches6, 5 },
 	{ "ALC889", 0x889, nullptr, 0, platforms7, 1, layouts7, 1, patches7, 2 },

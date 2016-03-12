@@ -176,6 +176,8 @@ void AlcEnabler::updateResource(Resource type, const void * &resourceData, uint3
 	DBGLOG("alc @ resource-request arrived %s", type == Resource::Platform ? "paltform" : "layout");
 	
 	for (size_t i = 0, s = codecs.size(); i < s; i++) {
+		DBGLOG("alc @ checking codec %X:%X:%X", codecs[i]->vendor, codecs[i]->codec, codecs[i]->revision);
+		
 		auto info = codecs[i]->info;
 		if (!info) {
 			SYSLOG("alc @ missing CodecModInfo for %zu codec at resource updating", i);
@@ -184,8 +186,10 @@ void AlcEnabler::updateResource(Resource type, const void * &resourceData, uint3
 		
 		if ((type == Resource::Platform && info->platforms) || (type == Resource::Layout && info->layouts)) {
 			size_t num = type == Resource::Platform ? info->platformNum : info->layoutNum;
+			DBGLOG("alc @ selecting from %zu files", num);
 			for (size_t f = 0; f < num; f++) {
 				auto &fi = (type == Resource::Platform ? info->platforms : info->layouts)[f];
+				DBGLOG("alc @ comparing %zu layout %X/%X", f, fi.layout, controllers[codecs[i]->controller]->layout);
 				if (controllers[codecs[i]->controller]->layout == fi.layout && patcher.compatibleKernel(fi.minKernel, fi.maxKernel)) {
 					DBGLOG("Found %s at %zu index", type == Resource::Platform ? "platform" : "layout", f);
 					resourceData = fi.data;
@@ -212,7 +216,7 @@ void AlcEnabler::grabControllers() {
 			
 			if (sect && i == codecLookup[lookup].controllerNum) {
 				// Nice, we found some controller, add it
-				uint32_t ven, dev, rev, lid;
+				uint32_t ven {0}, dev {0}, rev {0}, lid {0};
 				
 				if (!IOUtil::getOSDataValue(sect, "vendor-id", ven) ||
 					!IOUtil::getOSDataValue(sect, "device-id", dev) ||
@@ -254,7 +258,7 @@ bool AlcEnabler::grabCodecs() {
 		return false;
 	}
 	
-	for (size_t currentController = 0, num = controllers.size(); currentController < num; currentController++) {
+	for (currentController = 0; currentController < controllers.size(); currentController++) {
 		auto ctlr = controllers[currentController];
 		
 		// Digital controllers normally have no detectible codecs
