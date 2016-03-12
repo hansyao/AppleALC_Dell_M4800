@@ -21,28 +21,40 @@
 struct CodecLookupInfo {
 	const char **tree;
 	size_t treeSize;
-	size_t layoutNum;
+	size_t controllerNum;
+	bool detect {false};
+};
+
+struct KextPatch {
+	KernelPatcher::LookupPatch patch;
+	uint32_t minKernel {KernelPatcher::KernelAny};
+	uint32_t maxKernel {KernelPatcher::KernelAny};
+};
+
+/**
+ *  Corresponds to a Controllers.plist entry
+ */
+struct ControllerModInfo {
+	const char *name {nullptr};
+	uint32_t vendor {0};
+	uint32_t device {0};
+	const uint32_t *revisions {nullptr};
+	size_t revisionNum {0};
+	
+	const KextPatch *patches {nullptr};
+	size_t patchNum {0};
 };
 
 /**
  *  Corresponds to Info.plist resource file of each codec
  */
 struct CodecModInfo {
-	static constexpr uint32_t DeviceAny {0};
-
 	struct File {
 		const uint8_t *data {nullptr};
 		uint32_t dataLength {0};
+		uint32_t minKernel {KernelPatcher::KernelAny};
+		uint32_t maxKernel {KernelPatcher::KernelAny};
 		uint32_t layout {0};
-		uint32_t device {DeviceAny};
-		uint32_t minKernel {KernelPatcher::KernelAny};
-		uint32_t maxKernel {KernelPatcher::KernelAny};
-	};
-	struct KextPatch {
-		KernelPatcher::LookupPatch patch;
-		uint32_t device {DeviceAny};
-		uint32_t minKernel {KernelPatcher::KernelAny};
-		uint32_t maxKernel {KernelPatcher::KernelAny};
 	};
 
 	const char *name {nullptr};
@@ -77,7 +89,9 @@ extern const size_t codecLookupSize;
 
 extern KernelPatcher::KextInfo kextList[];
 extern const size_t kextListSize;
-extern KernelPatcher::KextInfo *kextAppleHDA;
+
+extern ControllerModInfo controllerMod[];
+extern const size_t controllerModSize;
 
 extern VendorModInfo vendorMod[];
 extern const size_t vendorModSize;

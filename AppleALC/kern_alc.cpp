@@ -25,11 +25,12 @@ bool AlcEnabler::init() {
 		return false;
 	}
 	
-	return loadHDAKext();
+	return loadKexts();
 }
 
 void AlcEnabler::deinit() {
 	patcher.deinit();
+	controllers.deinit();
 	codecs.deinit();
 }
 
@@ -51,45 +52,48 @@ void AlcEnabler::platformLoadCallback(uint32_t requestTag, kern_return_t result,
 	}
 }
 
-bool AlcEnabler::loadHDAKext() {
+bool AlcEnabler::loadKexts() {
 	if (that) return true;
 	
-	patcher.loadKinfo(kextAppleHDA);
-	if (patcher.getError() != KernelPatcher::Error::NoError) {
-		SYSLOG("alc @ failed to load AppleHDA kext file");
-		patcher.clearError();
-		return false;
-	}
-	
-	patcher.setupKextListening();
-	
-	if (patcher.getError() != KernelPatcher::Error::NoError) {
-		SYSLOG("alc @ failed to setup kext hooking");
-		patcher.clearError();
-		return false;
-	}
-	
-	auto handler = KernelPatcher::KextHandler::create(kextAppleHDA->id, kextAppleHDA->loadIndex,
-	[](KernelPatcher::KextHandler *h) {
-		if (h) {
-			that->processKext(h->index, h->address, h->size);
-		} else {
-			SYSLOG("alc @ notification callback arrived at nowhere");
+	for (size_t i = 0; i < kextListSize; i++) {
+		patcher.loadKinfo(&kextList[i]);
+		if (patcher.getError() != KernelPatcher::Error::NoError) {
+			SYSLOG("alc @ failed to load %s kext file", kextList[i].id);
+			patcher.clearError();
+			return false;
 		}
-	});
+		
+		patcher.setupKextListening();
+		
+		if (patcher.getError() != KernelPatcher::Error::NoError) {
+			SYSLOG("alc @ failed to setup kext hooking");
+			patcher.clearError();
+			return false;
+		}
+		
+		auto handler = KernelPatcher::KextHandler::create(kextList[i].id, kextList[i].loadIndex,
+		[](KernelPatcher::KextHandler *h) {
+			if (h && that) {
+				that->processKext(h->index, h->address, h->size);
+			} else {
+				SYSLOG("alc @ notification callback arrived at nowhere");
+			}
+		});
+		
+		if (!handler) {
+			SYSLOG("alc @ failed to allocate KextHandler");
+			return false;
+		}
+		
+		patcher.waitOnKext(handler);
+		
+		if (patcher.getError() != KernelPatcher::Error::NoError) {
+			SYSLOG("alc @ failed to wait on kext");
+			patcher.clearError();
+			KernelPatcher::KextHandler::deleter(handler);
+			return false;
+		}
 	
-	if (!handler) {
-		SYSLOG("alc @ failed to allocate KextHandler");
-		return false;
-	}
-	
-	patcher.waitOnKext(handler);
-	
-	if (patcher.getError() != KernelPatcher::Error::NoError) {
-		SYSLOG("alc @ failed to wait on kext");
-		patcher.clearError();
-		KernelPatcher::KextHandler::deleter(handler);
-		return false;
 	}
 	
 	that = this;
@@ -97,87 +101,73 @@ bool AlcEnabler::loadHDAKext() {
 }
 
 void AlcEnabler::processKext(size_t index, mach_vm_address_t address, size_t size) {
-	// We could have done some of this earlier by requiring com.apple.iokit.IOHDAFamily to load first
-	// However, IOHDAFamily has insane version compatibilities over the OS X versions, I am lazy to use
-	// TrustedBSD apis, and we might want to patch other kexts one day, so better to be ready asap and
-	// keep this in one place...
-	if (index == kextAppleHDA->loadIndex && !grabCodecs()) {
-		SYSLOG("alc @ failed to find a suitable codec, we have nothing to do");
-		return;
-	}
-	
 	patcher.updateRunningInfo(index, address, size);
 	
-	bool routeCallbacks {false};
-	
-	for (size_t i = 0, num = codecs.size(); i < num; i++) {
-		auto &info = codecs[i]->info;
-		if (!info) {
-			SYSLOG("alc @ missing CodecModInfo for %zu codec", i);
-			continue;
-		}
-		
-		if (index == kextAppleHDA->loadIndex && info->platforms > 0 && info->layoutNum > 0) {
-			DBGLOG("alc @ will route callbacks resource loading callbacks");
-			routeCallbacks = true;
-		}
-		
-		for (size_t p = 0; p < info->patchNum; p++) {
-			auto &patch = info->patches[p];
-			if (patch.patch.kext->loadIndex == index) {
-				if (patcher.compatibleKernel(patch.minKernel, patch.maxKernel) &&
-					(patch.device == CodecModInfo::DeviceAny || codecs[i]->device == patch.device)) {
-					patcher.applyLookupPatch(&patch.patch);
-					// Do not really care for the errors for now
-					patcher.clearError();
-				}
-			} else if (patch.patch.kext->loadIndex == KernelPatcher::KextInfo::Unloaded) {
-				auto loadIndex = patcher.loadKinfo(patch.patch.kext);
-				if (patcher.getError() != KernelPatcher::Error::NoError) {
-					patch.patch.kext->loadIndex = loadIndex;
-					
-					// A future recursion here
-					auto handler = KernelPatcher::KextHandler::create(patch.patch.kext->id, patch.patch.kext->loadIndex,
-						[](KernelPatcher::KextHandler *h) {
-						if (h) {
-							that->processKext(h->index, h->address, h->size);
-						} else {
-							SYSLOG("alc @ extra notification callback arrived at nowhere");
-						}
-					});
-					
-					if (handler) {
-						patcher.waitOnKext(handler);
-					} else {
-						SYSLOG("alc @ failed to allocate an extra KextHandler");
-					}
-				}
-				// Do not really care for the errors for now
-				patcher.clearError();
+	if (patcher.getError() == KernelPatcher::Error::NoError) {
+		if (!(progressState & ProcessingState::ControllersLoaded)) {
+			grabControllers();
+			progressState |= ProcessingState::ControllersLoaded;
+		} else if (!(progressState & ProcessingState::CodecsLoaded)) {
+			if (grabCodecs()) {
+				progressState |= ProcessingState::CodecsLoaded;
+			} else {
+				// Make this DBGLOG? It may be called if we patch other kexts
+				SYSLOG("alc @ failed to find a suitable codec, we have nothing to do");
 			}
 		}
+	
+		if (progressState & ProcessingState::ControllersLoaded) {
+			for (size_t i = 0, num = controllers.size(); i < num; i++) {
+				auto &info = controllers[i]->info;
+				if (!info) {
+					DBGLOG("alc @ missing ControllerModInfo for %zu controller", i);
+					continue;
+				}
+				
+				applyPatches(index, info->patches, info->patchNum);
+			}
+		}
+		
+		if (progressState & ProcessingState::CodecsLoaded) {
+			for (size_t i = 0, num = codecs.size(); i < num; i++) {
+				auto &info = codecs[i]->info;
+				if (!info) {
+					SYSLOG("alc @ missing CodecModInfo for %zu codec", i);
+					continue;
+				}
+				
+				if (info->platforms > 0 && info->layoutNum > 0) {
+					DBGLOG("alc @ will route callbacks resource loading callbacks");
+					progressState |= ProcessingState::CallbacksWantRouting;
+				}
+				
+				applyPatches(index, info->patches, info->patchNum);
+			}
+		}
+		
+		if ((progressState & ProcessingState::CallbacksWantRouting) && !(progressState & ProcessingState::CallbacksRouted)) {
+			auto layout = patcher.solveSymbol(index, "__ZN14AppleHDADriver18layoutLoadCallbackEjiPKvjPv");
+			auto platform = patcher.solveSymbol(index, "__ZN14AppleHDADriver20platformLoadCallbackEjiPKvjPv");
+
+			if (!layout || !platform) {
+				SYSLOG("alc @ failed to find AppleHDA layout or platform callback symbols (%llX, %llX)", layout, platform);
+			} else if (orgLayoutLoadCallback = reinterpret_cast<t_callback>(patcher.routeFunction(layout, reinterpret_cast<mach_vm_address_t>(layoutLoadCallback), true)),
+					   patcher.getError() != KernelPatcher::Error::NoError) {
+				SYSLOG("alc @ failed to hook layout callback");
+			} else if (orgPlatformLoadCallback = reinterpret_cast<t_callback>(patcher.routeFunction(platform, reinterpret_cast<mach_vm_address_t>(platformLoadCallback), true)),
+					   patcher.getError() != KernelPatcher::Error::NoError) {
+				SYSLOG("alc @ failed to hook platform callback");
+			} else {
+				progressState |= ProcessingState::CallbacksRouted;
+			}
+		}
+	} else {
+		SYSLOG("alc @ failed to update kext running info");
 	}
 	
-	if (routeCallbacks) {
-		auto layout = patcher.solveSymbol(index, "__ZN14AppleHDADriver18layoutLoadCallbackEjiPKvjPv");
-		auto platform = patcher.solveSymbol(index, "__ZN14AppleHDADriver20platformLoadCallbackEjiPKvjPv");
-		if (!layout || !platform) {
-			SYSLOG("alc @ failed to find AppleHDA layout or platform callback symbols (%llX, %llX)", layout, platform);
-			return;
-		}
-		
-		orgLayoutLoadCallback = reinterpret_cast<t_callback>(patcher.routeFunction(layout, reinterpret_cast<mach_vm_address_t>(layoutLoadCallback), true));
-		if (patcher.getError() != KernelPatcher::Error::NoError) {
-			SYSLOG("alc @ failed to hook layout callback");
-			return;
-		}
-		
-		orgPlatformLoadCallback = reinterpret_cast<t_callback>(patcher.routeFunction(platform, reinterpret_cast<mach_vm_address_t>(platformLoadCallback), true));
-		if (patcher.getError() != KernelPatcher::Error::NoError) {
-			SYSLOG("alc @ failed to hook platform callback");
-			return;
-		}
-	}
+	// Ignore all the errors for other processors
+	patcher.clearError();
+	
 }
 
 void AlcEnabler::updateResource(Resource type, const void * &resourceData, uint32_t &resourceDataLength) {
@@ -192,8 +182,7 @@ void AlcEnabler::updateResource(Resource type, const void * &resourceData, uint3
 			size_t num = type == Resource::Platform ? info->platformNum : info->layoutNum;
 			for (size_t f = 0; f < num; f++) {
 				auto &fi = (type == Resource::Platform ? info->platforms : info->layouts)[f];
-				if (codecs[i]->layout == fi.layout && patcher.compatibleKernel(fi.minKernel, fi.maxKernel) &&
-					(fi.device == CodecModInfo::DeviceAny || codecs[i]->device == fi.device)) {
+				if (controllers[codecs[i]->controller]->layout == fi.layout && patcher.compatibleKernel(fi.minKernel, fi.maxKernel)) {
 					DBGLOG("Found %s at %zu index", type == Resource::Platform ? "platform" : "layout", f);
 					resourceData = fi.data;
 					resourceDataLength = fi.dataLength;
@@ -203,31 +192,78 @@ void AlcEnabler::updateResource(Resource type, const void * &resourceData, uint3
 	}
 }
 
+void AlcEnabler::grabControllers() {
+	if (!that) {
+		SYSLOG("alc @ you should call grabCodecs right before AppleHDAController loading");
+		return;
+	}
+	
+	bool found {false};
+	
+	for (size_t lookup = 0; lookup < codecLookupSize; lookup++) {
+		auto sect = IOUtil::findEntryByPrefix("/AppleACPIPlatformExpert", "PCI", gIOServicePlane);
+		
+		for (size_t i = 0; sect && i <= codecLookup[lookup].controllerNum; i++) {
+			sect = IOUtil::findEntryByPrefix(sect, codecLookup[lookup].tree[i], gIOServicePlane);
+			
+			if (sect && i == codecLookup[lookup].controllerNum) {
+				// Nice, we found some controller, add it
+				uint32_t ven, dev, rev, lid;
+				
+				if (!IOUtil::getOSDataValue(sect, "vendor-id", ven) ||
+					!IOUtil::getOSDataValue(sect, "device-id", dev) ||
+					!IOUtil::getOSDataValue(sect, "revision-id", dev)) {
+					SYSLOG("alc @ found an incorrect controller at %s", codecLookup[lookup].tree[i]);
+					break;
+				}
+				
+				if (!codecLookup[lookup].detect && !IOUtil::getOSDataValue(sect, "layout-id", lid)) {
+					SYSLOG("alc @ layout-id was not provided by controller at %s", codecLookup[lookup].tree[i]);
+					break;
+				}
+				
+				auto controller = ControllerInfo::create(ven, dev, rev, lid, codecLookup[lookup].detect);
+				if (controller) {
+					if (!controllers.push_back(controller)) {
+						SYSLOG("alc @ failed to store controller info for %X:%X:%X", ven, dev, rev);
+						ControllerInfo::deleter(controller);
+						break;
+					}
+				} else {
+					SYSLOG("alc @ failed to create controller info for %X:%X:%X", ven, dev, rev);
+					break;
+				}
+				
+				controller->lookup = &codecLookup[lookup];
+				found = true;
+			}
+		}
+	}
+	
+	if (found) {
+		DBGLOG("alc @ found some audio controllers");
+		validateControllers();
+	}
+}
+
 bool AlcEnabler::grabCodecs() {
 	if (!that) {
 		SYSLOG("alc @ you should call grabCodecs right before AppleHDA loading");
 		return false;
 	}
 	
-	const uint32_t Invalid {0xFFFFFFFF};
-	
-	for (size_t lookup = 0; lookup < codecLookupSize; lookup++) {
+	for (size_t currentController = 0, num = controllers.size(); currentController < num; currentController++) {
+		auto ctlr = controllers[currentController];
 		
-		that->tmpLayout = Invalid;
-		that->tmpDevice = CodecModInfo::DeviceAny;
-	
-		// Not using recursive lookup due to multiple possible entries
+		// Digital controllers normally have no detectible codecs
+		if (ctlr->detect)
+			continue;
+
 		auto sect = IOUtil::findEntryByPrefix("/AppleACPIPlatformExpert", "PCI", gIOServicePlane);
 
-		size_t i {0};
-		
-		while (sect && i < codecLookup[lookup].treeSize) {
-			sect = IOUtil::findEntryByPrefix(sect, codecLookup[lookup].tree[i], gIOServicePlane,
-											 i+1 == codecLookup[lookup].treeSize ? [](IORegistryEntry *e) {
-				if (that->tmpLayout == Invalid) {
-					SYSLOG("alc @ layout-id was not set previously");
-					return;
-				}
+		for (size_t i = 0; sect && i < ctlr->lookup->treeSize; i++) {
+			sect = IOUtil::findEntryByPrefix(sect, ctlr->lookup->tree[i], gIOServicePlane,
+											 i+1 == ctlr->lookup->treeSize ? [](IORegistryEntry *e) {
 				
 				auto ven = e->getProperty("IOHDACodecVendorID");
 				auto rev = e->getProperty("IOHDACodecRevisionID");
@@ -245,28 +281,44 @@ bool AlcEnabler::grabCodecs() {
 					return;
 				}
 				
-				auto ci = AlcEnabler::CodecInfo::create(venNum->unsigned64BitValue(), revNum->unsigned32BitValue(), that->tmpLayout, that->tmpDevice);
+				auto ci = AlcEnabler::CodecInfo::create(that->currentController, venNum->unsigned64BitValue(),
+														revNum->unsigned32BitValue());
 				if (ci) {
 					if (!that->codecs.push_back(ci)) {
-						SYSLOG("alc @ failed to store codec info for %X %X", ci->vendor, ci->codec);
+						SYSLOG("alc @ failed to store codec info for %X:%X:%X", ci->vendor, ci->codec, ci->revision);
 						AlcEnabler::CodecInfo::deleter(ci);
 					}
 				} else {
-					SYSLOG("alc @ failed to create codec info for %X %X", ci->vendor, ci->codec);
+					SYSLOG("alc @ failed to create codec info for %X %X:%X", ci->vendor, ci->codec, ci->revision);
 				}
 					
 			} : nullptr);
-			
-			if (i == codecLookup[lookup].layoutNum && sect) {
-				IOUtil::getOSDataValue(sect, "layout-id", tmpLayout);
-				IOUtil::getOSDataValue(sect, "device-id", tmpDevice);
-			}
-			
-			i++;
 		}
 	}
 
 	return validateCodecs();
+}
+
+void AlcEnabler::validateControllers() {
+	for (size_t i = 0, num = controllers.size(); i < num; i++) {
+		for (size_t mod = 0; mod < controllerModSize; mod++) {
+			if (controllers[i]->vendor == controllerMod[mod].vendor &&
+				controllers[i]->device == controllerMod[mod].device) {
+				
+				// Check revision if present
+				size_t rev {0};
+				while (rev < controllerMod[mod].revisionNum &&
+					   controllerMod[mod].revisions[rev] != controllers[i]->revision)
+					rev++;
+				
+				if (rev != controllerMod[mod].revisionNum ||
+					controllerMod[mod].revisionNum == 0) {
+					controllers[i]->info = &controllerMod[mod];
+					break;
+				}
+			}
+		}
+	}
 }
 
 bool AlcEnabler::validateCodecs() {
@@ -318,4 +370,17 @@ bool AlcEnabler::validateCodecs() {
 	}
 
 	return codecs.size() > 0;
+}
+
+void AlcEnabler::applyPatches(size_t index, const KextPatch *patches, size_t patchNum) {
+	for (size_t p = 0; p < patchNum; p++) {
+		auto &patch = patches[p];
+		if (patch.patch.kext->loadIndex == index) {
+			if (patcher.compatibleKernel(patch.minKernel, patch.maxKernel)) {
+				patcher.applyLookupPatch(&patch.patch);
+				// Do not really care for the errors for now
+				patcher.clearError();
+			}
+		}
+	}
 }

@@ -20,11 +20,11 @@ private:
 	KernelPatcher patcher;
 	
 	/**
-	 *  Load AppleHDA and prepare callbacks for processing
+	 *  Load kext files and prepare callbacks for processing
 	 *
 	 *  @return true on success
 	 */
-	bool loadHDAKext();
+	bool loadKexts();
 	
 	/**
 	 *  Patch AppleHDA or another kext if needed and prepare other patches
@@ -53,11 +53,9 @@ private:
 	t_callback orgPlatformLoadCallback {nullptr};
 	
 	/**
-	 *  current detected layout-id/device-id used in grabCodecs
-	 *  Ideally they are not here
+	 *  Detects audio controllers
 	 */
-	uint32_t tmpLayout;
-	uint32_t tmpDevice;
+	void grabControllers();
 	
 	/**
 	 *  Detects audio codecs
@@ -67,11 +65,27 @@ private:
 	bool grabCodecs();
 	
 	/**
-	 *  Validates found codecs
+	 *  Compare found controllers with built-in mod lists
+	 *  Unlike validateCodecs() does not remove anything from
+	 *  controllers but only sets their infos.
+	 */
+	void validateControllers();
+	
+	/**
+	 *  Compare found codecs with built-in mod lists
 	 *
 	 *  @return true if anything suitable found
 	 */
 	bool validateCodecs();
+
+	/**
+	 *  Apply kext patches for loaded kext index
+	 *
+	 *  @param index      kinfo index
+	 *  @param patches    patch list
+	 *  @param patchesNum patch number
+	 */
+	void applyPatches(size_t index, const KextPatch *patches, size_t patchesNum);
 
 	/**
 	 *  Supported resource types
@@ -91,32 +105,69 @@ private:
 	void updateResource(Resource type, const void * &resourceData, uint32_t &resourceDataLength);
 
 	/**
+	 *  Controller identification and modification info
+	 */
+	class ControllerInfo {
+		ControllerInfo(uint32_t ven, uint32_t dev, uint32_t rev, uint32_t lid, bool d) :
+		vendor(ven), device(dev), revision(rev), layout(lid), detect(d) {}
+	public:
+		static ControllerInfo *create(uint32_t ven, uint32_t dev, uint32_t rev, uint32_t lid, bool d) {
+			return new ControllerInfo(ven, dev, rev, lid, d);
+		}
+		static void deleter(ControllerInfo *info) { delete info; }
+		const ControllerModInfo *info {nullptr};
+		const CodecLookupInfo *lookup {nullptr};
+		uint32_t const vendor;
+		uint32_t const device;
+		uint32_t const revision;
+		uint32_t const layout;
+		bool const detect;
+	};
+	
+	/**
+	 *  Detected controllers
+	 */
+	evector<ControllerInfo *, ControllerInfo::deleter> controllers;
+	size_t currentController {0};
+
+	/**
 	 *  Codec identification and modification info
 	 */
 	class CodecInfo {
-		CodecInfo(uint64_t ven, uint32_t rev, uint32_t lid, uint32_t did) :
-		revision(rev), layout(lid), device(did) {
+		CodecInfo(size_t ctrl, uint64_t ven, uint32_t rev) :
+		controller(ctrl), revision(rev) {
 			vendor = (ven & 0xFFFF0000) >> 16;
 			codec = ven & 0xFFFF;
 		}
 	public:
-		static CodecInfo *create(uint64_t ven, uint32_t rev, uint32_t lid, uint32_t did) {
-			return new CodecInfo(ven, rev, lid, did);
+		static CodecInfo *create(size_t ctrl, uint64_t ven, uint32_t rev) {
+			return new CodecInfo(ctrl, ven, rev);
 		}
 		static void deleter(CodecInfo *info) { delete info; }
-		
 		const CodecModInfo *info {nullptr};
-		uint32_t revision;
+		size_t controller;
 		uint16_t vendor;
 		uint16_t codec;
-		uint32_t layout;
-		uint32_t device;
+		uint32_t revision;
 	};
 	
 	/**
 	 *  Detected and validated codec infos
 	 */
 	evector<CodecInfo *, CodecInfo::deleter> codecs;
+	
+	/**
+	 *  Current progress mask
+	 */
+	struct ProcessingState {
+		enum {
+			ControllersLoaded = 1,
+			CodecsLoaded = 2,
+			CallbacksWantRouting = 4,
+			CallbacksRouted = 8,
+		};
+	};
+	int progressState;
 };
 
 #endif /* kern_alc_hpp */

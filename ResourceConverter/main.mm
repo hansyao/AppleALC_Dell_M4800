@@ -60,13 +60,8 @@ static NSDictionary * generateKexts(NSString *file, NSDictionary *kexts) {
 	[kextSection appendString:@"KernelPatcher::KextInfo kextList[] {\n"];
 	
 	size_t kextIndex {0};
-	size_t kextAppleHDAIndex {0};
 	
 	for (NSString *kextName in kexts) {
-		if ([kextName isEqualToString:@"AppleHDA"]) {
-			kextAppleHDAIndex = kextIndex;
-		}
-		
 		NSDictionary *kextInfo = [kexts objectForKey:kextName];
 		NSString *kextID = [kextInfo objectForKey:@"Id"];
 		NSArray *kextPaths = [kextInfo objectForKey:@"Paths"];
@@ -82,10 +77,10 @@ static NSDictionary * generateKexts(NSString *file, NSDictionary *kexts) {
 	}
 	
 	[kextSection appendString:@"};\n"];
+	[kextSection appendFormat:@"\nconst size_t kextListSize {%lu};\n", [kexts count]];
 
 	appendFile(file, kextPathsSection);
 	appendFile(file, kextSection);
-	appendFile(file, [[NSString alloc] initWithFormat:@"KernelPatcher::KextInfo *kextAppleHDA = &kextList[%zu];\n", kextAppleHDAIndex]);
 
 	return kextNums;
 }
@@ -140,12 +135,11 @@ static NSString *generatePlatforms(NSString *file, NSDictionary *codecDict, NSSt
 	if (plats) {
 		auto pStr = [[NSMutableString alloc] initWithFormat:@"static const CodecModInfo::File platforms%zu[] {\n", platformIndex];
 		for (NSDictionary *p in plats) {
-			[pStr appendFormat:@"\t{ %@, %@, %@, %@, %@ },\n",
+			[pStr appendFormat:@"\t{ %@, %@, %@, %@},\n",
 			 generateFile(file, path, [p objectForKey:@"Path"]),
-			 [p objectForKey:@"Id"],
-			 [p objectForKey:@"Device"] ?: @"CodecModInfo::DeviceAny",
 			 [p objectForKey:@"MinKernel"] ?: @"KernelPatcher::KernelAny",
-			 [p objectForKey:@"MaxKernel"] ?: @"KernelPatcher::KernelAny"
+			 [p objectForKey:@"MaxKernel"] ?: @"KernelPatcher::KernelAny",
+			 [p objectForKey:@"Id"]
 			];
 		}
 		[pStr appendString:@"};\n"];
@@ -166,12 +160,11 @@ static NSString *generateLayouts(NSString *file, NSDictionary *codecDict, NSStri
 	if (lts) {
 		auto pStr = [[NSMutableString alloc] initWithFormat:@"static const CodecModInfo::File layouts%zu[] {\n", layoutIndex];
 		for (NSDictionary *p in lts) {
-			[pStr appendFormat:@"\t{ %@, %@, %@, %@, %@ },\n",
+			[pStr appendFormat:@"\t{ %@, %@, %@, %@ },\n",
 			 generateFile(file, path, [p objectForKey:@"Path"]),
-			 [p objectForKey:@"Id"],
-			 [p objectForKey:@"Device"] ?: @"CodecModInfo::DeviceAny",
 			 [p objectForKey:@"MinKernel"] ?: @"KernelPatcher::KernelAny",
-			 [p objectForKey:@"MaxKernel"] ?: @"KernelPatcher::KernelAny"
+			 [p objectForKey:@"MaxKernel"] ?: @"KernelPatcher::KernelAny",
+			 [p objectForKey:@"Id"]
 			 ];
 		}
 		[pStr appendString:@"};\n"];
@@ -191,14 +184,14 @@ static NSString *generatePatches(NSString *file, NSDictionary *codecDict, NSDict
 	NSArray *patches = [codecDict objectForKey:@"Patches"];
 
 	if (patches) {
-		auto pStr = [[NSMutableString alloc] initWithFormat:@"static const CodecModInfo::KextPatch patches%zu[] {\n", patchIndex];
+		auto pStr = [[NSMutableString alloc] initWithFormat:@"static const KextPatch patches%zu[] {\n", patchIndex];
 		auto pbStr = [[NSMutableString alloc] init];
 		for (NSDictionary *p in patches) {
 			NSData *f = [p objectForKey:@"Find"];
 			NSData *r = [p objectForKey:@"Replace"];
 			
 			if ([f length] != [r length]) {
-				[pStr appendString:@"#error not matching patch lengths"];
+				[pStr appendString:@"#error not matching patch lengths\n"];
 				continue;
 			}
 			
@@ -214,13 +207,12 @@ static NSString *generatePatches(NSString *file, NSDictionary *codecDict, NSDict
 				patchBufIndex++;
 			}
 			
-			[pStr appendFormat:@"\t{ { &kextList[%@], patchBuf%zu, patchBuf%zu, %zu, %@ }, %@, %@, %@ },\n",
+			[pStr appendFormat:@"\t{ { &kextList[%@], patchBuf%zu, patchBuf%zu, %zu, %@ }, %@, %@ },\n",
 			 [kextIndexes objectForKey:[p objectForKey:@"Name"]],
 			 patchBufIndex-2,
 			 patchBufIndex-1,
 			 [f length],
 			 [p objectForKey:@"Count"] ?: @"1",
-			 [p objectForKey:@"Device"] ?: @"CodecModInfo::DeviceAny",
 			 [p objectForKey:@"MinKernel"] ?: @"KernelPatcher::KernelAny",
 			 [p objectForKey:@"MaxKernel"] ?: @"KernelPatcher::KernelAny"
 			];
@@ -274,6 +266,28 @@ static size_t generateCodecs(NSString *file, NSString *vendor, NSString *path, N
 	return codecs;
 }
 
+static void generateControllers(NSString *file, NSArray *ctrls, NSDictionary *vendors, NSDictionary *kextIndexes) {
+	appendFile(file, @"\n// ControllerMod section\n\n");
+	
+	auto ctrlModSection = [[NSMutableString alloc] initWithString:@"ControllerModInfo controllerMod[] {\n"];
+
+	for (NSDictionary *entry in ctrls) {
+		auto revs = generateRevisions(file, entry);
+		auto patches = generatePatches(file, entry, kextIndexes);
+				
+		[ctrlModSection appendFormat:@"\t{ \"%@\", 0x%X, 0x%X, %@, %@ },\n",
+		 [entry objectForKey:@"Name"],
+		 [[vendors objectForKey:[entry objectForKey:@"Vendor"]] unsignedShortValue],
+		 [[entry objectForKey:@"Device"] unsignedShortValue],
+		 revs, patches
+		];
+	}
+	
+	[ctrlModSection appendString:@"};\n"];
+	[ctrlModSection appendFormat:@"\nconst size_t controllerModSize {%lu};\n", [ctrls count]];
+	appendFile(file, ctrlModSection);
+}
+
 static void generateVendors(NSString *file, NSDictionary *vendors, NSString *path, NSDictionary *kextIndexes) {
 	auto vendorSection = [[NSMutableString alloc] initWithUTF8String:"\n// Vendor section\n\n"];
 	
@@ -304,8 +318,10 @@ static void generateLookup(NSString *file, NSDictionary *lookup) {
 		[trees appendString:makeStringList(@"tree", treeIndex, treeArr)];
 		
 		// Build lookup
-		[lookups appendFormat:@"\t{ tree%zu, %lu, %@ },\n",
-			treeIndex, [treeArr count], [[lookup objectForKey:dictKey] objectForKey:@"layoutNum"]];
+		[lookups appendFormat:@"\t{ tree%zu, %lu, %@, %@ },\n",
+			treeIndex, [treeArr count],
+			[[lookup objectForKey:dictKey] objectForKey:@"controllerNum"],
+			[[lookup objectForKey:dictKey] objectForKey:@"Detect"] ? @"true" : @"false"];
 		
 		treeIndex++;
 	}
@@ -324,14 +340,16 @@ int main(int argc, const char * argv[]) {
 	auto lookupCfg = [[NSString alloc] initWithFormat:@"%@/CodecLookup.plist", basePath];
 	auto vendorsCfg = [[NSString alloc] initWithFormat:@"%@/Vendors.plist", basePath];
 	auto kextsCfg = [[NSString alloc] initWithFormat:@"%@/Kexts.plist",basePath];
+	auto ctrlsCfg = [[NSString alloc] initWithFormat:@"%@/Controllers.plist",basePath];
 	auto outputCpp = [[NSString alloc] initWithUTF8String:argv[2]];
 	
 	auto lookup = [NSDictionary dictionaryWithContentsOfFile:lookupCfg];
 	auto vendors = [NSDictionary dictionaryWithContentsOfFile:vendorsCfg];
 	auto kexts = [NSDictionary dictionaryWithContentsOfFile:kextsCfg];
+	auto ctrls = [NSArray arrayWithContentsOfFile:ctrlsCfg];
 	
-	if (!lookup || !vendors || !kexts)
-		ERROR("Missing resource data (lookup:%p, vendors:%p, kexts:%p)", lookup, vendors, kexts);
+	if (!lookup || !vendors || !kexts || !ctrls)
+		ERROR("Missing resource data (lookup:%p, vendors:%p, kexts:%p, ctrls:%p)", lookup, vendors, kexts, ctrls);
 	
 	// Create a file
 	[[NSFileManager defaultManager] createFileAtPath:outputCpp contents:nil attributes:nil];
@@ -340,4 +358,5 @@ int main(int argc, const char * argv[]) {
 	generateLookup(outputCpp, lookup);
 	auto kextIndexes = generateKexts(outputCpp, kexts);
 	generateVendors(outputCpp, vendors, basePath, kextIndexes);
+	generateControllers(outputCpp, ctrls, vendors, kextIndexes);
 }
