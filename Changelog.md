@@ -9,6 +9,7 @@ AppleALC Changelog
 - Added ALC269 for Asus K53SJ (by Alex1960)
 - Added ALC270 codec support (by m-dudarev)
 - Added ALC668 for Asus N750Jk (by Alex1960)
+- Added NVIDIA GT240 HDMI patches (by Vandroiy)
 
 #### v1.0.1
 - boot-args presence is now optional

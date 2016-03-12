@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>Intel</key>
+<array>
 	<dict>
+		<key>Comment</key>
+		<string>Intel/NVIDIA HDMi</string>
 		<key>Tree</key>
 		<array>
 			<string>AppleACPIPCI</string>
@@ -12,8 +13,9 @@
 		<key>controllerNum</key>
 		<integer>1</integer>
 	</dict>
-	<key>All</key>
 	<dict>
+		<key>Comment</key>
+		<string>All analog audio</string>
 		<key>Detect</key>
 		<true/>
 		<key>Tree</key>
@@ -26,5 +28,5 @@
 		<key>controllerNum</key>
 		<integer>1</integer>
 	</dict>
-</dict>
+</array>
 </plist>

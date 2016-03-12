@@ -6274,9 +6274,15 @@ static const KextPatch patches13[] {
 	{ { &kextList[0], patchBuf82, patchBuf83, 5, 1 }, 14, 14 },
 	{ { &kextList[0], patchBuf84, patchBuf85, 5, 5 }, 15, KernelPatcher::KernelAny },
 };
+static const uint8_t patchBuf86[] { 0x0A, 0x00, 0xDE, 0x10, };
+static const uint8_t patchBuf87[] { 0x0D, 0x00, 0xDE, 0x10, };
+static const KextPatch patches14[] {
+	{ { &kextList[1], patchBuf86, patchBuf87, 4, 2 }, 10, KernelPatcher::KernelAny },
+};
 ControllerModInfo controllerMod[] {
 	{ "X99 HDEF controller", 0x8086, 0x8D20, nullptr, 0, patches12, 1 },
 	{ "HD4600 controller", 0x8086, 0xC0C, nullptr, 0, patches13, 5 },
+	{ "Nvidia GT240 HDMI", 0x0, 0xBE4, nullptr, 0, patches14, 1 },
 };
 
-const size_t controllerModSize {2};
+const size_t controllerModSize {3};

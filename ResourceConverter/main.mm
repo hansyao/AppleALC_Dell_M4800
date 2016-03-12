@@ -305,23 +305,23 @@ static void generateVendors(NSString *file, NSDictionary *vendors, NSString *pat
 	appendFile(file, vendorSection);
 }
 
-static void generateLookup(NSString *file, NSDictionary *lookup) {
+static void generateLookup(NSString *file, NSArray *lookup) {
 	appendFile(file, @"\n// Lookup section\n\n");
 
 	auto trees = [[NSMutableString alloc] init];
 	auto lookups = [[NSMutableString alloc] init];
 	size_t treeIndex {0};
 	
-	for (NSString *dictKey in lookup) {
+	for (NSDictionary *set in lookup) {
 		// Build tree
-		NSArray *treeArr = [[lookup objectForKey:dictKey] objectForKey:@"Tree"];
+		NSArray *treeArr = [set objectForKey:@"Tree"];
 		[trees appendString:makeStringList(@"tree", treeIndex, treeArr)];
 		
 		// Build lookup
 		[lookups appendFormat:@"\t{ tree%zu, %lu, %@, %@ },\n",
 			treeIndex, [treeArr count],
-			[[lookup objectForKey:dictKey] objectForKey:@"controllerNum"],
-			[[lookup objectForKey:dictKey] objectForKey:@"Detect"] ? @"true" : @"false"];
+			[set objectForKey:@"controllerNum"],
+			[set objectForKey:@"Detect"] ? @"true" : @"false"];
 		
 		treeIndex++;
 	}
@@ -343,7 +343,7 @@ int main(int argc, const char * argv[]) {
 	auto ctrlsCfg = [[NSString alloc] initWithFormat:@"%@/Controllers.plist",basePath];
 	auto outputCpp = [[NSString alloc] initWithUTF8String:argv[2]];
 	
-	auto lookup = [NSDictionary dictionaryWithContentsOfFile:lookupCfg];
+	auto lookup = [NSArray arrayWithContentsOfFile:lookupCfg];
 	auto vendors = [NSDictionary dictionaryWithContentsOfFile:vendorsCfg];
 	auto kexts = [NSDictionary dictionaryWithContentsOfFile:kextsCfg];
 	auto ctrls = [NSArray arrayWithContentsOfFile:ctrlsCfg];
