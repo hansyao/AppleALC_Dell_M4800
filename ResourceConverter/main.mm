@@ -274,11 +274,11 @@ static void generateControllers(NSString *file, NSArray *ctrls, NSDictionary *ve
 		auto revs = generateRevisions(file, entry);
 		auto patches = generatePatches(file, entry, kextIndexes);
 				
-		[ctrlModSection appendFormat:@"\t{ \"%@\", 0x%X, 0x%X, %@, %@ },\n",
+		[ctrlModSection appendFormat:@"\t{ \"%@\", 0x%X, 0x%X, %@, %@, %@ },\n",
 		 [entry objectForKey:@"Name"],
 		 [[vendors objectForKey:[entry objectForKey:@"Vendor"]] unsignedShortValue],
 		 [[entry objectForKey:@"Device"] unsignedShortValue],
-		 revs, patches
+		 revs, [vendors objectForKey:@"Platform"] ?: @"ControllerModInfo::PlatformAny", patches
 		];
 	}
 	

@@ -215,7 +215,7 @@ void AlcEnabler::grabControllers() {
 			
 			if (sect && i == codecLookup[lookup].controllerNum) {
 				// Nice, we found some controller, add it
-				uint32_t ven {0}, dev {0}, rev {0}, lid {0};
+				uint32_t ven {0}, dev {0}, rev {0}, platform {ControllerModInfo::PlatformAny}, lid {0};
 				
 				if (!IOUtil::getOSDataValue(sect, "vendor-id", ven) ||
 					!IOUtil::getOSDataValue(sect, "device-id", dev) ||
@@ -229,7 +229,11 @@ void AlcEnabler::grabControllers() {
 					break;
 				}
 				
-				auto controller = ControllerInfo::create(ven, dev, rev, lid, codecLookup[lookup].detect);
+				if (IOUtil::getOSDataValue(sect, "ig-platform-id", platform)) {
+					DBGLOG("alc @ ig-platform-id %X was found in controller at %s", platform, codecLookup[lookup].tree[i]);
+				}
+				
+				auto controller = ControllerInfo::create(ven, dev, rev, platform, lid, codecLookup[lookup].detect);
 				if (controller) {
 					if (controllers.push_back(controller)) {
 						controller->lookup = &codecLookup[lookup];
@@ -318,6 +322,13 @@ void AlcEnabler::validateControllers() {
 					   controllerMod[mod].revisions[rev] != controllers[i]->revision)
 					rev++;
 				
+				// Check ig-platform-id if present
+				if (controllerMod[mod].platform != ControllerModInfo::PlatformAny &&
+					controllerMod[mod].platform != controllers[i]->platform) {
+					DBGLOG("alc @ not matching platform was found %X vs %X", controllerMod[mod].platform, controllers[i]->platform);
+					continue;
+				}
+			
 				if (rev != controllerMod[mod].revisionNum ||
 					controllerMod[mod].revisionNum == 0) {
 					DBGLOG("alc @ found mod for %zu controller", i);
