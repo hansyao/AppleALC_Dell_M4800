@@ -5,6 +5,7 @@ An open source kernel extension enabling native OS X HD audio for not officially
 
 #### Features
 - Audio support starting from the OS installation
+- Recovery HD/OS X Installer audio support
 - Automated codec detection
 - Unsupported audio controller enabling
 - Arbitrary kext patching
@@ -15,7 +16,8 @@ An open source kernel extension enabling native OS X HD audio for not officially
 - [Apple](https://www.apple.com) for OS X  
 - [Onyx The Black Cat](https://github.com/gdbinit/onyx-the-black-cat) by [fG!](https://reverse.put.as) for the base of the kernel patcher  
 - [capstone](https://github.com/aquynh/capstone) by [Nguyen Anh Quynh](https://github.com/aquynh) for the disassembler module  
-- [toleda](https://github.com/toleda) for audio patches and layouts  
+- [toleda](https://github.com/toleda) for audio patches and layouts
+- [Pike R. Alpha](https://github.com/Piker-Alpha) for [lzvn](https://github.com/Piker-Alpha/LZVN) decompression  
 - [07151129](https://github.com/07151129) for some code parts and suggestions  
 - [vit9696](https://github.com/vit9696) for writing the software and maintaining it
 

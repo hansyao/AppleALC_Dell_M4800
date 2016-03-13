@@ -8,12 +8,14 @@
 //
 
 #include "kern_mach.hpp"
+#include "kern_compression.hpp"
 #include "kern_util.hpp"
 
 #include <sys/malloc.h>
 #include <sys/types.h>
 #include <sys/vnode.h>
 #include <sys/disk.h>
+#include <mach-o/fat.h>
 #include <mach-o/loader.h>
 #include <mach-o/nlist.h>
 #include <mach/vm_param.h>
@@ -32,8 +34,8 @@ kern_return_t MachInfo::init(const char * const paths[], size_t num) {
 	}
 	
 	// lookup vnode for /mach_kernel
-	read_mh = Buffer::create<uint8_t>(HeaderSize);
-	if (!read_mh) {
+	auto machHeader = Buffer::create<uint8_t>(HeaderSize);
+	if (!machHeader) {
 		SYSLOG("mach @ can't allocate header memory.");
 		return error;
 	}
@@ -48,9 +50,9 @@ kern_return_t MachInfo::init(const char * const paths[], size_t num) {
 		
 		errno_t err = vnode_lookup(paths[i], 0, &vnode, ctxt);
 		if(!err) {
-			kern_return_t readError = readMachHeader(read_mh, vnode, ctxt);
+			kern_return_t readError = readMachHeader(machHeader, vnode, ctxt);
 			if(readError == KERN_SUCCESS) {
-				if(isKernel && !isCurrentKernel(read_mh)) {
+				if(isKernel && !isCurrentKernel(machHeader)) {
 					vnode_put(vnode);
 				} else {
 					DBGLOG("mach @ Found executable at path: %s", paths[i]);
@@ -65,10 +67,11 @@ kern_return_t MachInfo::init(const char * const paths[], size_t num) {
 	
 	if(!found) {
 		DBGLOG("mach @ couldn't find a suitable executable");
+		Buffer::deleter(machHeader);
 		return error;
 	}
 	
-	processMachHeader(read_mh);
+	processMachHeader(machHeader);
 	if (linkedit_fileoff && symboltable_fileoff) {
 		// read linkedit from filesystem
 		error = readLinkedit(vnode, ctxt);
@@ -79,18 +82,19 @@ kern_return_t MachInfo::init(const char * const paths[], size_t num) {
 		SYSLOG("mach @ couldn't find the necessary mach segments or sections (linkedit %llX, sym %X)",
 			   linkedit_fileoff, symboltable_fileoff);
 	}
-	
-	read_size = readFileSize(vnode, ctxt);
-	if (read_size == 0) {
-		error = KERN_FAILURE;
-		SYSLOG("mach @ failed to determine kinfo size");
-	}
-	DBGLOG("mach @ read file size is %zu", read_size);
 
 	vfs_context_rele(ctxt);
 	// drop the iocount due to vnode_lookup()
 	// we must do this or the machine gets stuck on shutdown/reboot
 	vnode_put(vnode);
+	
+	// We do not need the whole file buffer anymore
+	if (file_buf) {
+		Buffer::deleter(file_buf);
+		file_buf = nullptr;
+	}
+	
+	Buffer::deleter(machHeader);
 	
 	return error;
 }
@@ -99,11 +103,6 @@ void MachInfo::deinit() {
 	if (linkedit_buf) {
 		Buffer::deleter(linkedit_buf);
 		linkedit_buf = nullptr;
-	}
-	
-	if (read_mh) {
-		Buffer::deleter(read_mh);
-		read_mh = nullptr;
 	}
 }
 
@@ -221,21 +220,62 @@ size_t MachInfo::readFileSize(vnode_t vnode, vfs_context_t ctxt) {
 	return vnode_getattr(vnode, &va, ctxt) ? 0 : va.va_data_size;
 }
 
-kern_return_t MachInfo::readMachHeader(void *buffer, vnode_t vnode, vfs_context_t ctxt) {
-	int error = readFileData(buffer, 0, HeaderSize, vnode, ctxt);
+kern_return_t MachInfo::readMachHeader(uint8_t *buffer, vnode_t vnode, vfs_context_t ctxt, off_t off) {
+	int error = readFileData(buffer, off, HeaderSize, vnode, ctxt);
 	if (error) {
 		SYSLOG("mach @ mach header read failed with %d error", error);
 		return KERN_FAILURE;
 	}
 	
-	// verify the header
-	uint32_t magic = *(uint32_t*)buffer;
-	if (magic != MH_MAGIC_64) {
-		SYSLOG("mach @ read mach is not 64-bit and has %X magic", magic);
-		return KERN_FAILURE;
+	while (1) {
+		auto magic = *reinterpret_cast<uint32_t *>(buffer);
+		switch (magic) {
+			case MH_MAGIC_64:
+				fat_offset = off;
+				return KERN_SUCCESS;
+			case FAT_MAGIC: {
+				uint32_t num = _OSSwapInt32(reinterpret_cast<fat_header *>(buffer)->nfat_arch);
+				for (uint32_t i = 0; i < num; i++) {
+					auto arch = reinterpret_cast<fat_arch *>(buffer + i*sizeof(fat_arch) + sizeof(fat_header));
+					if (_OSSwapInt32(arch->cputype) == CPU_TYPE_X86_64)
+						return readMachHeader(buffer, vnode, ctxt, _OSSwapInt32(arch->offset));
+				}
+				SYSLOG("mach @ failed to find a x86_64 mach");
+				return KERN_FAILURE;
+			}
+			case CompressedMagic: { // comp
+				auto header = reinterpret_cast<CompressedHeader *>(buffer);
+				auto compressedBuf = Buffer::create<uint8_t>(_OSSwapInt32(header->compressed));
+				if (!compressedBuf) {
+					SYSLOG("mach @ failed to allocate memory for reading mach binary");
+				} else if (readFileData(compressedBuf, off+sizeof(CompressedHeader), _OSSwapInt32(header->compressed),
+										vnode, ctxt) != KERN_SUCCESS) {
+					SYSLOG("mach @ failed to read compressed binary");
+				} else {
+					DBGLOG("mach @ decompressing %d bytes (estimated %d bytes) with %X compression mode",
+						   _OSSwapInt32(header->compressed), _OSSwapInt32(header->decompressed), header->compression);
+					file_buf = decompressData(header->compression, _OSSwapInt32(header->decompressed),
+											  compressedBuf, _OSSwapInt32(header->compressed));
+					
+					// Try again
+					if (file_buf) {
+						memcpy(buffer, file_buf, HeaderSize);
+						Buffer::deleter(compressedBuf);
+						continue;
+					}
+				}
+				
+				Buffer::deleter(compressedBuf);
+				return KERN_FAILURE;
+			}
+			
+			default:
+				SYSLOG("mach @ read mach has unsupported %X magic", magic);
+				return KERN_FAILURE;
+		}
 	}
 	
-	return KERN_SUCCESS;
+	return KERN_FAILURE;
 }
 
 kern_return_t MachInfo::readLinkedit(vnode_t vnode, vfs_context_t ctxt) {
@@ -248,11 +288,15 @@ kern_return_t MachInfo::readLinkedit(vnode_t vnode, vfs_context_t ctxt) {
 		SYSLOG("mach @ Could not allocate enough memory (%lld) for __LINKEDIT segment", linkedit_size);
 		return KERN_FAILURE;
 	}
-
-	int error = readFileData(linkedit_buf, linkedit_fileoff, linkedit_size, vnode, ctxt);
-	if (error) {
-		SYSLOG("mach @ linkedit read failed with %d error", error);
-		return KERN_FAILURE;
+	
+	if (!file_buf) {
+		int error = readFileData(linkedit_buf, fat_offset+linkedit_fileoff, linkedit_size, vnode, ctxt);
+		if (error) {
+			SYSLOG("mach @ linkedit read failed with %d error", error);
+			return KERN_FAILURE;
+		}
+	} else {
+		memcpy(linkedit_buf, file_buf+linkedit_fileoff, linkedit_size);
 	}
 
 	return KERN_SUCCESS;
@@ -288,7 +332,6 @@ void MachInfo::processMachHeader(void *header) {
 			symboltable_fileoff    = symtab_cmd->symoff;
 			symboltable_nr_symbols = symtab_cmd->nsyms;
 			stringtable_fileoff    = symtab_cmd->stroff;
-			stringtable_size       = symtab_cmd->strsize;
 		}
 		addr += loadCmd->cmdsize;
 	}
@@ -344,8 +387,8 @@ kern_return_t MachInfo::getRunningAddresses(mach_vm_address_t slide, size_t size
 
 void MachInfo::getRunningPosition(uint8_t * &header, size_t &size) {
 	header = reinterpret_cast<uint8_t *>(running_mh);
-	size = read_size > memory_size ? memory_size : read_size;
-	DBGLOG("mach @ getRunningPosition %p of read %zu / memory %zu sizes", header, read_size, memory_size);
+	size = memory_size > 0 ? memory_size : HeaderSize;
+	DBGLOG("mach @ getRunningPosition %p of memory %zu size", header, size);
 }
 
 //FIXME: Guard pointer access by HeaderSize

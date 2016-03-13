@@ -16,8 +16,9 @@ class AppleALC : public IOService {
 	/**
 	 *  Possible boot arguments
 	 */
-	static constexpr const char *booatargOff {"-alcoff"};     // Disable the kext
-	static constexpr const char *booatargDebug {"-alcdbg"};   // Enable debug logging
+	static constexpr const char *booatargOff {"-alcoff"};       // Disable the kext
+	static constexpr const char *booatargDebug {"-alcdbg"};     // Enable debug logging
+	static constexpr const char *bootargLowMem {"-alclowmem"};  // Disable memory consuming operations
 	
 	/**
 	 *  Retrieve boot arguments

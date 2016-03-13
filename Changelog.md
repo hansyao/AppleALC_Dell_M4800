@@ -5,12 +5,14 @@ AppleALC Changelog
 - Added Controller.plist with controller-specific patches
 - Added Intel X99 and Intel HD4600 controller patches
 - Reverted device-id comparison code, it was redundant
+- Added prelinkedkernel reading (used exclusively in OS X Installer/Recovery HD)
 - Added AppleIntelFramebufferAzul patches to fix HD4600 audio
 - Added ALC269 10.9.x/10.10.x patches (by Andrey1970)
-- Added ALC269 for Asus K53SJ (by Alex1960)
+- Added ALC269 for Asus K53SJ (by alex1960)
 - Added ALC270 codec support (by m-dudarev)
 - Added ALC270 for Asus K56CB (by m-dudarev)
-- Added ALC668 for Asus N750Jk (by Alex1960)
+- Added ALC668 for Asus N750Jk (by alex1960)
+- Added ALC885 (by alex1960)
 - Added NVIDIA GT240 HDMI patches (by Vandroiy)
 
 #### v1.0.1

@@ -257,12 +257,15 @@ private:
 	/**
 	 *  Possible kernel paths
 	 */
-	static constexpr size_t kernelPathsNum {4};
+	static constexpr size_t kernelPathsNum {6};
 	const char *kernelPaths[kernelPathsNum] {
 		"/mach_kernel",
 		"/System/Library/Kernels/kernel",	//since 10.10
 		"/System/Library/Kernels/kernel.debug",
-		"/System/Library/Kernels/kernel.development"
+		"/System/Library/Kernels/kernel.development",
+		"/System/Library/Caches/com.apple.kext.caches/Startup/kernelcache", //compressed one
+		"/System/Library/PrelinkedKernels/prelinkedkernel" //compressed one
+		
 	};
 };
 

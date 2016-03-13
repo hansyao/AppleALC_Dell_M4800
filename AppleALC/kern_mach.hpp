@@ -21,16 +21,15 @@ class MachInfo {
 	mach_vm_address_t running_text_addr {0}; // the address of running __TEXT segment
 	mach_vm_address_t disk_text_addr {0};    // the same address at from a file
 	mach_vm_address_t kaslr_slide {0};       // the kernel aslr slide, computed as the difference between above's addresses
+	uint8_t *file_buf {nullptr};             // read file data if decompression was used
 	uint8_t *linkedit_buf {nullptr};         // pointer to __LINKEDIT buffer containing symbols to solve
 	uint64_t linkedit_fileoff {0};           // __LINKEDIT file offset so we can read
 	uint64_t linkedit_size {0};
 	uint32_t symboltable_fileoff {0};        // file offset to symbol table - used to position inside the __LINKEDIT buffer
 	uint32_t symboltable_nr_symbols {0};
 	uint32_t stringtable_fileoff {0};        // file offset to string table
-	uint32_t stringtable_size {0};
 	mach_header_64 *running_mh {nullptr};    // pointer to mach-o header of running kernel item
-	uint8_t *read_mh {nullptr};              // pointer to read mach-o header of HeaderSize
-	size_t read_size {0};                    // local file size
+	off_t fat_offset {0};                    // additional fat offset
 	size_t memory_size {HeaderSize};         // memory size
 	bool kaslr_slide_set {false};            // kaslr can be null, used for disambiguation
 	
@@ -86,10 +85,11 @@ class MachInfo {
 	 *  @param buffer allocated buffer sized no less than HeaderSize
 	 *  @param vnode  file node
 	 *  @param ctxt   filesystem context
+	 *  @param off    fat offset or 0
 	 *
 	 *  @return KERN_SUCCESS if the read data contains 64-bit mach header
 	 */
-	kern_return_t readMachHeader(void *buffer, vnode_t vnode, vfs_context_t ctxt);
+	kern_return_t readMachHeader(uint8_t *buffer, vnode_t vnode, vfs_context_t ctxt, off_t off=0);
 
 	/**
 	 *  retrieve the whole linkedit segment into target buffer from kernel binary at disk

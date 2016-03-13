@@ -52,6 +52,9 @@
 		1C748C2D1C21952C0024EED2 /* kern_start.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C748C2C1C21952C0024EED2 /* kern_start.cpp */; };
 		1C88DDEC1C89EE540003E1BF /* kern_resources.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C88DDEA1C89EE540003E1BF /* kern_resources.cpp */; };
 		1C88DDED1C89EE540003E1BF /* kern_resources.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1C88DDEB1C89EE540003E1BF /* kern_resources.hpp */; };
+		1C8B67B01C96103B00C1ACC4 /* lzvn_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 1C8B67AF1C96103B00C1ACC4 /* lzvn_decode.c */; };
+		1C97B45E1C95F34800465077 /* kern_compression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C97B45C1C95F34800465077 /* kern_compression.cpp */; };
+		1C97B45F1C95F34800465077 /* kern_compression.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1C97B45D1C95F34800465077 /* kern_compression.hpp */; };
 		1C9CB7AC1C789A5E00231E41 /* kern_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C9CB7AA1C789A5E00231E41 /* kern_util.cpp */; };
 		1C9CB7AD1C789A5E00231E41 /* kern_util.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1C9CB7AB1C789A5E00231E41 /* kern_util.hpp */; };
 		1C9CB7B01C789FF500231E41 /* kern_alc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C9CB7AE1C789FF500231E41 /* kern_alc.cpp */; };
@@ -156,6 +159,10 @@
 		1C88DDEA1C89EE540003E1BF /* kern_resources.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kern_resources.cpp; sourceTree = "<group>"; };
 		1C88DDEB1C89EE540003E1BF /* kern_resources.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = kern_resources.hpp; sourceTree = "<group>"; };
 		1C88DDEF1C8A00C60003E1BF /* generate.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate.sh; sourceTree = "<group>"; };
+		1C8B67AF1C96103B00C1ACC4 /* lzvn_decode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lzvn_decode.c; sourceTree = "<group>"; };
+		1C97B45C1C95F34800465077 /* kern_compression.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kern_compression.cpp; sourceTree = "<group>"; };
+		1C97B45D1C95F34800465077 /* kern_compression.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = kern_compression.hpp; sourceTree = "<group>"; };
+		1C97B4611C95F69100465077 /* FastCompression.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FastCompression.hpp; sourceTree = "<group>"; };
 		1C9CB7AA1C789A5E00231E41 /* kern_util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kern_util.cpp; sourceTree = "<group>"; };
 		1C9CB7AB1C789A5E00231E41 /* kern_util.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = kern_util.hpp; sourceTree = "<group>"; };
 		1C9CB7AE1C789FF500231E41 /* kern_alc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kern_alc.cpp; sourceTree = "<group>"; };
@@ -287,6 +294,7 @@
 				1C642F581C8F1BF2006B4C51 /* PinConfigs */,
 				1CD5B2B71C89BEB000E45373 /* Resources */,
 				1C3E7AC91C84B5E500A6448A /* capstone */,
+				1C97B4601C95F69100465077 /* FastCompression */,
 				1C748C291C21952C0024EED2 /* AppleALC */,
 				1CD5B2BD1C89CF2D00E45373 /* ResourceConverter */,
 				1C748C281C21952C0024EED2 /* Products */,
@@ -307,6 +315,8 @@
 			children = (
 				1C748C2C1C21952C0024EED2 /* kern_start.cpp */,
 				1C748C2A1C21952C0024EED2 /* kern_start.hpp */,
+				1C97B45C1C95F34800465077 /* kern_compression.cpp */,
+				1C97B45D1C95F34800465077 /* kern_compression.hpp */,
 				1CD5B2B21C88B83500E45373 /* kern_iokit.cpp */,
 				1CD5B2B31C88B83500E45373 /* kern_iokit.hpp */,
 				1C9CB7AE1C789FF500231E41 /* kern_alc.cpp */,
@@ -325,6 +335,15 @@
 				1C748C2E1C21952C0024EED2 /* Info.plist */,
 			);
 			path = AppleALC;
+			sourceTree = "<group>";
+		};
+		1C97B4601C95F69100465077 /* FastCompression */ = {
+			isa = PBXGroup;
+			children = (
+				1C8B67AF1C96103B00C1ACC4 /* lzvn_decode.c */,
+				1C97B4611C95F69100465077 /* FastCompression.hpp */,
+			);
+			path = FastCompression;
 			sourceTree = "<group>";
 		};
 		1CD5B2BD1C89CF2D00E45373 /* ResourceConverter */ = {
@@ -378,6 +397,7 @@
 				1C3E7B2E1C84B73400A6448A /* kern_disasm.hpp in Headers */,
 				1C3E7AF71C84B63000A6448A /* systemz.h in Headers */,
 				1C3E7B241C84B65400A6448A /* X86DisassemblerDecoderCommon.h in Headers */,
+				1C97B45F1C95F34800465077 /* kern_compression.hpp in Headers */,
 				1C3E7ADA1C84B61700A6448A /* cs_priv.h in Headers */,
 				1C3E7AF61C84B63000A6448A /* x86.h in Headers */,
 				1C9CB7B11C789FF500231E41 /* kern_alc.hpp in Headers */,
@@ -513,7 +533,9 @@
 				1C3E7ADB1C84B61700A6448A /* cs.c in Sources */,
 				1C88DDEC1C89EE540003E1BF /* kern_resources.cpp in Sources */,
 				1C3E7AE21C84B61700A6448A /* MCInstrDesc.c in Sources */,
+				1C8B67B01C96103B00C1ACC4 /* lzvn_decode.c in Sources */,
 				1C3E7AE61C84B61700A6448A /* SStream.c in Sources */,
+				1C97B45E1C95F34800465077 /* kern_compression.cpp in Sources */,
 				1C9CB7AC1C789A5E00231E41 /* kern_util.cpp in Sources */,
 				1C9CB7B41C78A12C00231E41 /* kern_patcher.cpp in Sources */,
 				1C3E7B181C84B65400A6448A /* X86Mapping.c in Sources */,
@@ -631,8 +653,15 @@
 					"CAPSTONE_HAS_OSXKERNEL=1",
 					"$(inherited)",
 				);
-				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/capstone/include";
+				HEADER_SEARCH_PATHS = (
+					"${PROJECT_DIR}/capstone/include",
+					"${PROJECT_DIR}/FastCompression",
+				);
 				INFOPLIST_FILE = AppleALC/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FastCompression",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MODULE_NAME = as.vit9696.AppleALC;
 				MODULE_VERSION = 1.0.2;
@@ -654,8 +683,15 @@
 					"CAPSTONE_HAS_OSXKERNEL=1",
 					"CAPSTONE_DIET=1",
 				);
-				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/capstone/include";
+				HEADER_SEARCH_PATHS = (
+					"${PROJECT_DIR}/capstone/include",
+					"${PROJECT_DIR}/FastCompression",
+				);
 				INFOPLIST_FILE = AppleALC/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FastCompression",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MODULE_NAME = as.vit9696.AppleALC;
 				MODULE_VERSION = 1.0.2;

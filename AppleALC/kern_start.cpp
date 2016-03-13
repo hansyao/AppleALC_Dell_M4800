@@ -54,6 +54,8 @@ void AppleALC::getBootArguments() {
 	isDisabled |= PE_parse_boot_argn("-x", buf, sizeof(buf));
 	
 	debugEnabled = PE_parse_boot_argn(booatargDebug, buf, sizeof(buf));
+	
+	lowMemory = PE_parse_boot_argn(bootargLowMem, buf, sizeof(buf));
 		
 	DBGLOG("init @ boot arguments disabled %d, debug %d", isDisabled, debugEnabled);
 }
