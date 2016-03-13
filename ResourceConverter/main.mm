@@ -187,15 +187,14 @@ static NSString *generatePatches(NSString *file, NSDictionary *codecDict, NSDict
 		auto pStr = [[NSMutableString alloc] initWithFormat:@"static const KextPatch patches%zu[] {\n", patchIndex];
 		auto pbStr = [[NSMutableString alloc] init];
 		for (NSDictionary *p in patches) {
-			NSData *f = [p objectForKey:@"Find"];
-			NSData *r = [p objectForKey:@"Replace"];
+            NSData *f[] = {[p objectForKey:@"Find"], [p objectForKey:@"Replace"]};
 			
-			if ([f length] != [r length]) {
+			if ([f[0] length] != [f[1] length]) {
 				[pStr appendString:@"#error not matching patch lengths\n"];
 				continue;
 			}
 			
-			for (auto d : {f, r}) {
+			for (auto d : f) {
 				[pbStr appendString:[[NSString alloc] initWithFormat:@"static const uint8_t patchBuf%zu[] { ", patchBufIndex]];
 				
 				for (size_t b = 0; b < [d length]; b++) {
@@ -211,7 +210,7 @@ static NSString *generatePatches(NSString *file, NSDictionary *codecDict, NSDict
 			 [kextIndexes objectForKey:[p objectForKey:@"Name"]],
 			 patchBufIndex-2,
 			 patchBufIndex-1,
-			 [f length],
+			 [f[0] length],
 			 [p objectForKey:@"Count"] ?: @"1",
 			 [p objectForKey:@"MinKernel"] ?: @"KernelPatcher::KernelAny",
 			 [p objectForKey:@"MaxKernel"] ?: @"KernelPatcher::KernelAny"
