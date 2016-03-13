@@ -14,6 +14,7 @@ AppleALC Changelog
 - Added ALC668 for Asus N750Jk (by alex1960)
 - Added ALC885 (by alex1960)
 - Added NVIDIA GT240 HDMI patches (by Vandroiy)
+- Added Intel HD4000 patches (by Andrey1970)
 
 #### v1.0.1
 - boot-args presence is now optional
