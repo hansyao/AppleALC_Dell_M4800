@@ -370,21 +370,23 @@
 					<key>CodecID</key>
 					<integer>283904137</integer>
 					<key>Comment</key>
-					<string>ALC889, Toleda</string>
+					<string>alc889, Sergey_Galan</string>
 					<key>ConfigData</key>
 					<data>
-					IUccECFHHUAhRx4RIUcfkCFXHPAhVx0AIVce
-					ACFXH0AhZxzwIWcdACFnHgAhZx9AIXcc8CF3
-					HQAhdx4AIXcfQCGHHEAhhx1gIYceASGHHwEh
-					lxxgIZcdkCGXHqAhlx+QIaccUCGnHRAhpx4B
-					IacfASG3HHAhtx1AIbceISG3HwIh5xyQIecd
-					YSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEX
-					HPAhFx0AIRceACEXH0A=
+					IRcc8CEXHQAhFx4AIRcfQCEnHPAhJx0AISce
+					ACEnH0AhRxwwIUcdQSFHHhEhRx8BIVcc8CFX
+					HQAhVx4AIVcfQCFnHPAhZx0AIWceACFnH0Ah
+					dxzwIXcdACF3HgAhdx9AIYccECGHHZEhhx6g
+					IYcfkCGXHCAhlx2QIZcegSGXHwEhpxzwIacd
+					ACGnHgAhpx9AIbccgCG3HUAhtx4hIbcfASHH
+					HPAhxx0AIcceACHHH0Ah1xzwIdcdACHXHgAh
+					1x9AIecckCHnHSEh5x5LIecfASH3HPAh9x0A
+					IfceACH3H0A=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
-					<integer>2</integer>
+					<integer>12</integer>
 				</dict>
 				<dict>
 					<key>CodecID</key>
