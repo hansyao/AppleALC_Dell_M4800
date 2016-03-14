@@ -168,7 +168,6 @@ void AlcEnabler::processKext(size_t index, mach_vm_address_t address, size_t siz
 	
 	// Ignore all the errors for other processors
 	patcher.clearError();
-	
 }
 
 void AlcEnabler::updateResource(Resource type, const void * &resourceData, uint32_t &resourceDataLength) {

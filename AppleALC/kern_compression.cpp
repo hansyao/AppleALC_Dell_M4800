@@ -56,7 +56,7 @@ static size_t decompress_lzss(uint8_t *dst, uint32_t dstlen, uint8_t *src, uint3
 		}
 	}
 	
-	return static_cast<int>(dst - dststart);
+	return dst - dststart;
 }
 
 uint8_t *decompressData(uint32_t compression, uint32_t dstlen, uint8_t *src, uint32_t srclen) {

@@ -3,6 +3,9 @@ AppleALC Changelog
 
 #### v1.0.3
 - Fixed AAPL,ig-platform-id naming
+- Added preliminary start modes support
+- Added TrustedBSD start via -alcpolicy flag (not good atm)
+- Added ALC889, layout-id 12 codec support (by Sergey_Galan)
 
 #### v1.0.2
 - Added Controller.plist with controller-specific patches
