@@ -29,6 +29,10 @@
 			<key>HDAConfigDefault</key>
 			<array>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
 					<key>Codec</key>
 					<string>ALC270</string>
 					<key>CodecID</key>
@@ -37,8 +41,13 @@
 					<string>ALC270 for Asus K56CB</string>
 					<key>ConfigData</key>
 					<data>
-					AZccMAGXHQkBlx6gAZcfkAGHHCABhx0QAYce
-					gQGHHwQ=
+					AScc8AEnHQABJx4AAScfQAFHHBABRx0BAUce
+					FwFHH5ABdxzwAXcdAAF3HgABdx9AAYccIAGH
+					HRABhx6BAYcfBAGXHDABlx0BAZceoAGXH5AB
+					pxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4A
+					AbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecd
+					AAHnHgAB5x9AAhccIAIXHRACFx4hAhcfBAFH
+					DAI=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
