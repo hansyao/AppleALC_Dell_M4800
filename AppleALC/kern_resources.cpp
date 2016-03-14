@@ -6692,9 +6692,9 @@ static const KextPatch patches18[] {
 ControllerModInfo controllerMod[] {
 	{ "HD4600 controller", 0x8086, 0xC0C, nullptr, 0, ControllerModInfo::PlatformAny, patches13, 5 },
 	{ "X99 HDEF controller", 0x8086, 0x8D20, nullptr, 0, ControllerModInfo::PlatformAny, patches14, 1 },
-	{ "Intel HDMI (ig-platform-id 0x0d220003)", 0x8086, 0x412, nullptr, 0, ControllerModInfo::PlatformAny, patches15, 3 },
-	{ "Intel HD4000 HDMI (ig-platform-id 0x01660003)", 0x8086, 0x166, nullptr, 0, ControllerModInfo::PlatformAny, patches16, 3 },
-	{ "Intel HD4000 HDMI (ig-platform-id 0x01660009)", 0x8086, 0x166, nullptr, 0, ControllerModInfo::PlatformAny, patches17, 2 },
+	{ "Intel HDMI (ig-platform-id 0x0d220003)", 0x8086, 0x412, nullptr, 0, 220332035, patches15, 3 },
+	{ "Intel HD4000 HDMI (ig-platform-id 0x01660003)", 0x8086, 0x166, nullptr, 0, 23461891, patches16, 3 },
+	{ "Intel HD4000 HDMI (ig-platform-id 0x01660009)", 0x8086, 0x166, nullptr, 0, 23461897, patches17, 2 },
 	{ "Nvidia GT240 HDMI", 0x0, 0xBE4, nullptr, 0, ControllerModInfo::PlatformAny, patches18, 1 },
 };
 

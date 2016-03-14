@@ -278,7 +278,7 @@ static void generateControllers(NSString *file, NSArray *ctrls, NSDictionary *ve
 		 [entry objectForKey:@"Name"],
 		 [[vendors objectForKey:[entry objectForKey:@"Vendor"]] unsignedShortValue],
 		 [[entry objectForKey:@"Device"] unsignedShortValue],
-		 revs, [vendors objectForKey:@"Platform"] ?: @"ControllerModInfo::PlatformAny", patches
+		 revs, [entry objectForKey:@"Platform"] ?: @"ControllerModInfo::PlatformAny", patches
 		];
 	}
 	
