@@ -108,7 +108,7 @@
 		<key>Device</key>
 		<integer>1042</integer>
 		<key>Name</key>
-		<string>Intel HDMI (ig-platform-id 0x0d220003)</string>
+		<string>Intel HD4600 HDMI (ig-platform-id 0x0d220003)</string>
 		<key>Patches</key>
 		<array>
 			<dict>

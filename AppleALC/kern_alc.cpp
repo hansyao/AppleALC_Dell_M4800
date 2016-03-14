@@ -229,8 +229,8 @@ void AlcEnabler::grabControllers() {
 					break;
 				}
 				
-				if (IOUtil::getOSDataValue(sect, "ig-platform-id", platform)) {
-					DBGLOG("alc @ ig-platform-id %X was found in controller at %s", platform, codecLookup[lookup].tree[i]);
+				if (IOUtil::getOSDataValue(sect, "AAPL,ig-platform-id", platform)) {
+					DBGLOG("alc @ AAPL,ig-platform-id %X was found in controller at %s", platform, codecLookup[lookup].tree[i]);
 				}
 				
 				auto controller = ControllerInfo::create(ven, dev, rev, platform, lid, codecLookup[lookup].detect);
@@ -322,7 +322,7 @@ void AlcEnabler::validateControllers() {
 					   controllerMod[mod].revisions[rev] != controllers[i]->revision)
 					rev++;
 				
-				// Check ig-platform-id if present
+				// Check AAPL,ig-platform-id if present
 				if (controllerMod[mod].platform != ControllerModInfo::PlatformAny &&
 					controllerMod[mod].platform != controllers[i]->platform) {
 					DBGLOG("alc @ not matching platform was found %X vs %X", controllerMod[mod].platform, controllers[i]->platform);

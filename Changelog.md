@@ -1,6 +1,9 @@
 AppleALC Changelog
 ==================
 
+#### v1.0.3
+- Fixed AAPL,ig-platform-id naming
+
 #### v1.0.2
 - Added Controller.plist with controller-specific patches
 - Added Intel X99 and Intel HD4600 controller patches
