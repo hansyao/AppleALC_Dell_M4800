@@ -69,17 +69,14 @@ class AppleALC : public IOService {
 	static void policyInitBSD(mac_policy_conf *conf);
 	
 	/**
-	 *  TrustedBSD policy to check vnode access permissions
+	 *  TrustedBSD policy called after mounting
 	 *  We use it to start AlcEnabler
 	 *
 	 *  @param cred     auth credential
-	 *  @param vp       vnode
-	 *  @param label    node label
-	 *  @param acc_mode access mode
-	 *
-	 *  @return always 0
+	 *  @param mp       mount point
+	 *  @param label    mount point label
 	 */
-	static int policyCheckAccess(kauth_cred_t cred, vnode *vp, label *label, int acc_mode);
+	static void policyLabelAssociate(kauth_cred_t cred, mount *mp, label *mntlabel);
 	
 	/**
 	 *  TrustedBSD policy options

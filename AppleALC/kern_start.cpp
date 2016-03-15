@@ -18,27 +18,21 @@ OSDefineMetaClassAndStructors(AppleALC, IOService)
 AlcEnabler AppleALC::enabler;
 mac_policy_ops AppleALC::policyOps  {
 	.mpo_policy_initbsd					= policyInitBSD,
-	.mpo_vnode_check_access				= policyCheckAccess
+	.mpo_mount_label_associate			= policyLabelAssociate
 };
 
 void AppleALC::policyInitBSD(mac_policy_conf *conf) {
 	// Do nothing for now
 }
 
-int AppleALC::policyCheckAccess(kauth_cred_t cred, vnode *vp, label *label, int acc_mode) {
+void AppleALC::policyLabelAssociate(kauth_cred_t cred, struct mount *mp, struct label *mntlabel) {
 	static bool tried {false};
 
-	if (vnode_isvroot(vp)) {
-		if (!tried) {
-			DBGLOG("init @ initialising enabler");
-			if (!enabler.init()) enabler.deinit();
-			tried = true;
-		}
-	} else {
-		//DBGLOG("init @ found non-root vp");
+	if (!tried) {
+		DBGLOG("init @ initialising enabler");
+		if (!enabler.init()) enabler.deinit();
+		tried = true;
 	}
-	
-	return 0;
 }
 
 bool AppleALC::init(OSDictionary *dict) {
