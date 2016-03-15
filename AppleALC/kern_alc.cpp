@@ -192,6 +192,7 @@ void AlcEnabler::updateResource(Resource type, const void * &resourceData, uint3
 					DBGLOG("Found %s at %zu index", type == Resource::Platform ? "platform" : "layout", f);
 					resourceData = fi.data;
 					resourceDataLength = fi.dataLength;
+					break;
 				}
 			}
 		}
@@ -375,7 +376,8 @@ bool AlcEnabler::validateCodecs() {
 					   suitable ? "supported" : "unsupported", vendorMod[vIdx].name,
 					   vendorMod[vIdx].codecs[cIdx].name, codecs[i]->revision);
 			} else {
-				DBGLOG("alc @ found unsupported %s codec 0x%X", vendorMod[vIdx].name, codecs[i]->codec);
+				DBGLOG("alc @ found unsupported %s codec 0x%X revision 0x%X", vendorMod[vIdx].name,
+					   codecs[i]->codec, codecs[i]->revision);
 			}
 		} else {
 			DBGLOG("alc @ found unsupported codec vendor 0x%X", codecs[i]->vendor);
