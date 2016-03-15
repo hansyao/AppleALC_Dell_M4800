@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>x-tropic</string>
+	<string>multiple</string>
 	<key>CodecID</key>
 	<integer>2183</integer>
 	<key>CodecName</key>
@@ -13,19 +13,39 @@
 		<key>Layouts</key>
 		<array>
 			<dict>
+				<key>Comment</key>
+				<string>x-tropic</string>
 				<key>Id</key>
 				<integer>1</integer>
 				<key>Path</key>
 				<string>layout1.xml.zlib</string>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Constanta</string>
+				<key>Id</key>
+				<integer>99</integer>
+				<key>Path</key>
+				<string>layout99.xml.zlib</string>
+			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
 			<dict>
+				<key>Comment</key>
+				<string>x-tropic</string>
 				<key>Id</key>
 				<integer>1</integer>
 				<key>Path</key>
-				<string>Platforms.xml.zlib</string>
+				<string>Platforms1.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Constanta</string>
+				<key>Id</key>
+				<integer>99</integer>
+				<key>Path</key>
+				<string>Platforms99.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -33,27 +53,85 @@
 	<array>
 		<dict>
 			<key>Count</key>
-			<integer>2</integer>
+			<integer>1</integer>
 			<key>Find</key>
-			<data>ixnUEQ==</data>
+			<data>
+			QcYGAEmLvCQ=
+			</data>
+			<key>MaxKernel</key>
+			<integer>13</integer>
 			<key>MinKernel</key>
 			<integer>13</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>hwjsEA==</data>
+			<data>
+			QcYGAUmLvCQ=
+			</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>1</integer>
+			<key>Find</key>
+			<data>
+			QcYGAEiLu2g=
+			</data>
+			<key>MinKernel</key>
+			<integer>14</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>
+			QcYGAUiLu2g=
+			</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>1</integer>
+			<key>Find</key>
+			<data>
+			QcaGQwEAAAA=
+			</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>
+			QcaGQwEAAAE=
+			</data>
 		</dict>
 		<dict>
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>gxnUEQ==</data>
+			<data>
+			ixnUEQ==
+			</data>
 			<key>MinKernel</key>
 			<integer>13</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>AAAAAA==</data>
+			<data>
+			hwjsEA==
+			</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>
+			gxnUEQ==
+			</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>
+			AAAAAA==
+			</data>
 		</dict>
 	</array>
 	<key>Revisions</key>

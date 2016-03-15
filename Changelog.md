@@ -7,6 +7,7 @@ AppleALC Changelog
 - Added TrustedBSD start via -alcpolicy flag (not good atm)
 - Added ALC889, layout-id 12 codec support (by Sergey_Galan)
 - Fixed ALC270 regressions
+- Added ALC887-VD, layout 99 codec support (by Constanta)
 
 #### v1.0.2
 - Added Controller.plist with controller-specific patches
