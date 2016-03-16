@@ -18,14 +18,14 @@ OSDefineMetaClassAndStructors(AppleALC, IOService)
 AlcEnabler AppleALC::enabler;
 mac_policy_ops AppleALC::policyOps  {
 	.mpo_policy_initbsd					= policyInitBSD,
-	.mpo_mount_label_associate			= policyLabelAssociate
+	.mpo_mount_check_remount			= policyCheckRemount
 };
 
 void AppleALC::policyInitBSD(mac_policy_conf *conf) {
 	// Do nothing for now
 }
 
-void AppleALC::policyLabelAssociate(kauth_cred_t cred, struct mount *mp, struct label *mntlabel) {
+int AppleALC::policyCheckRemount(kauth_cred_t cred, mount *mp, label *mlabel) {
 	static bool tried {false};
 
 	if (!tried) {
@@ -33,6 +33,8 @@ void AppleALC::policyLabelAssociate(kauth_cred_t cred, struct mount *mp, struct 
 		if (!enabler.init()) enabler.deinit();
 		tried = true;
 	}
+	
+	return 0;
 }
 
 bool AppleALC::init(OSDictionary *dict) {

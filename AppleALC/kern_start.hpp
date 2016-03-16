@@ -54,7 +54,7 @@ class AppleALC : public IOService {
 	/**
 	 *  Enabler start mode
 	 */
-	StartMode mode {StartMode::IOKit};
+	StartMode mode {StartMode::Policy};
 	
 	/**
 	 *  TrustedBSD Policy handle
@@ -69,14 +69,14 @@ class AppleALC : public IOService {
 	static void policyInitBSD(mac_policy_conf *conf);
 	
 	/**
-	 *  TrustedBSD policy called after mounting
-	 *  We use it to start AlcEnabler
+	 *  TrustedBSD policy called before remounting
+	 *  We use it to start AlcEnabler (at devfs remount)
 	 *
 	 *  @param cred     auth credential
 	 *  @param mp       mount point
-	 *  @param label    mount point label
+	 *  @param mlabel    mount point label
 	 */
-	static void policyLabelAssociate(kauth_cred_t cred, mount *mp, label *mntlabel);
+	static int policyCheckRemount(kauth_cred_t cred, mount *mp, label *mlabel);
 	
 	/**
 	 *  TrustedBSD policy options
