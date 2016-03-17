@@ -211,7 +211,7 @@ static NSString *generatePatches(NSString *file, NSDictionary *codecDict, NSDict
 			 patchBufIndex-2,
 			 patchBufIndex-1,
 			 [f[0] length],
-			 [p objectForKey:@"Count"] ?: @"1",
+			 [p objectForKey:@"Count"] ?: @"0",
 			 [p objectForKey:@"MinKernel"] ?: @"KernelPatcher::KernelAny",
 			 [p objectForKey:@"MaxKernel"] ?: @"KernelPatcher::KernelAny"
 			];
