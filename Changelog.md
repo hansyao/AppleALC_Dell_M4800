@@ -10,6 +10,7 @@ AppleALC Changelog
 - Fixed ALC270 regressions
 - Added ALC889, layout-id 12 codec support (by Sergey_Galan)
 - Added ALC887-VD, layout 99 codec support (by Constanta)
+- Removed unnecessary NVIDIA GT240 HDMI patches
 
 #### v1.0.2
 - Added Controller.plist with controller-specific patches
