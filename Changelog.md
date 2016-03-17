@@ -5,7 +5,6 @@ AppleALC Changelog
 - Fixed AAPL,ig-platform-id naming
 - Added preliminary start modes support
 - Added TrustedBSD start via -alcpolicy and IOService::start via -alciokit arguments
-- Switched to TrustedBSD start by default
 - Allowed kext patches with 0 count replacing all entries (use this with a reason)
 - Fixed ALC270 regressions
 - Added ALC889, layout-id 12 codec support (by Sergey_Galan)

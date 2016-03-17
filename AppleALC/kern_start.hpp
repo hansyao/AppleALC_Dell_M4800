@@ -54,7 +54,7 @@ class AppleALC : public IOService {
 	/**
 	 *  Enabler start mode
 	 */
-	StartMode mode {StartMode::Policy};
+	StartMode mode {StartMode::IOKit};
 	
 	/**
 	 *  TrustedBSD Policy handle
