@@ -108,11 +108,11 @@ private:
 	 *  Controller identification and modification info
 	 */
 	class ControllerInfo {
-		ControllerInfo(uint32_t ven, uint32_t dev, uint32_t rev, uint32_t lid, bool d) :
-		vendor(ven), device(dev), revision(rev), layout(lid), detect(d) {}
+		ControllerInfo(uint32_t ven, uint32_t dev, uint32_t rev, uint32_t p, uint32_t lid, bool d) :
+		vendor(ven), device(dev), revision(rev), platform(p), layout(lid), detect(d) {}
 	public:
-		static ControllerInfo *create(uint32_t ven, uint32_t dev, uint32_t rev, uint32_t lid, bool d) {
-			return new ControllerInfo(ven, dev, rev, lid, d);
+		static ControllerInfo *create(uint32_t ven, uint32_t dev, uint32_t rev, uint32_t p, uint32_t lid, bool d) {
+			return new ControllerInfo(ven, dev, rev, p, lid, d);
 		}
 		static void deleter(ControllerInfo *info) { delete info; }
 		const ControllerModInfo *info {nullptr};
@@ -120,6 +120,7 @@ private:
 		uint32_t const vendor;
 		uint32_t const device;
 		uint32_t const revision;
+		uint32_t const platform {ControllerModInfo::PlatformAny};
 		uint32_t const layout;
 		bool const detect;
 	};

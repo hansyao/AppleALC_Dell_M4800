@@ -191,7 +191,7 @@ void KernelPatcher::applyLookupPatch(const LookupPatch *patch) {
 	curr = off;
 	off += size - patch->size;
 	size_t changes {0};
-	for (size_t i = 0; i < patch->count; i++) {
+	for (size_t i = 0; curr < off && (i < patch->count || patch->count == 0); i++) {
 		while (curr < off && memcmp(curr, patch->find, patch->size))
 			curr++;
 		

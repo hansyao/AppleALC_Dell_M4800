@@ -12,6 +12,7 @@
 #include <mach/vm_prot.h>
 
 extern bool debugEnabled;
+extern bool lowMemory;
 
 #ifndef SYSLOG
 #define SYSLOG(str, ...) printf("AppleALC: " str "\n", ## __VA_ARGS__)

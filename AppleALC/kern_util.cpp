@@ -12,6 +12,7 @@
 #include <mach/vm_map.h>
 
 bool debugEnabled = false;
+bool lowMemory = false;
 extern vm_map_t kernel_map;
 
 const char *strstr(const char *stack, const char *needle, size_t len) {

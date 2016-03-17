@@ -37,7 +37,7 @@ namespace IOUtil {
 				SYSLOG("util @ getOSData %s has unexpected format", name);
 			}
 		} else {
-			SYSLOG("util @ getOSData %s was not found", name);
+			DBGLOG("util @ getOSData %s was not found", name);
 		}
 		return false;;
 	}

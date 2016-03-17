@@ -113,8 +113,7 @@ void AlcEnabler::processKext(size_t index, mach_vm_address_t address, size_t siz
 			if (grabCodecs()) {
 				progressState |= ProcessingState::CodecsLoaded;
 			} else {
-				// Make this DBGLOG? It may be called if we patch other kexts
-				SYSLOG("alc @ failed to find a suitable codec, we have nothing to do");
+				DBGLOG("alc @ failed to find a suitable codec, we have nothing to do");
 			}
 		}
 	
@@ -169,11 +168,14 @@ void AlcEnabler::processKext(size_t index, mach_vm_address_t address, size_t siz
 	
 	// Ignore all the errors for other processors
 	patcher.clearError();
-	
 }
 
 void AlcEnabler::updateResource(Resource type, const void * &resourceData, uint32_t &resourceDataLength) {
+	DBGLOG("alc @ resource-request arrived %s", type == Resource::Platform ? "paltform" : "layout");
+	
 	for (size_t i = 0, s = codecs.size(); i < s; i++) {
+		DBGLOG("alc @ checking codec %X:%X:%X", codecs[i]->vendor, codecs[i]->codec, codecs[i]->revision);
+		
 		auto info = codecs[i]->info;
 		if (!info) {
 			SYSLOG("alc @ missing CodecModInfo for %zu codec at resource updating", i);
@@ -182,12 +184,15 @@ void AlcEnabler::updateResource(Resource type, const void * &resourceData, uint3
 		
 		if ((type == Resource::Platform && info->platforms) || (type == Resource::Layout && info->layouts)) {
 			size_t num = type == Resource::Platform ? info->platformNum : info->layoutNum;
+			DBGLOG("alc @ selecting from %zu files", num);
 			for (size_t f = 0; f < num; f++) {
 				auto &fi = (type == Resource::Platform ? info->platforms : info->layouts)[f];
+				DBGLOG("alc @ comparing %zu layout %X/%X", f, fi.layout, controllers[codecs[i]->controller]->layout);
 				if (controllers[codecs[i]->controller]->layout == fi.layout && patcher.compatibleKernel(fi.minKernel, fi.maxKernel)) {
 					DBGLOG("Found %s at %zu index", type == Resource::Platform ? "platform" : "layout", f);
 					resourceData = fi.data;
 					resourceDataLength = fi.dataLength;
+					break;
 				}
 			}
 		}
@@ -210,11 +215,11 @@ void AlcEnabler::grabControllers() {
 			
 			if (sect && i == codecLookup[lookup].controllerNum) {
 				// Nice, we found some controller, add it
-				uint32_t ven, dev, rev, lid;
+				uint32_t ven {0}, dev {0}, rev {0}, platform {ControllerModInfo::PlatformAny}, lid {0};
 				
 				if (!IOUtil::getOSDataValue(sect, "vendor-id", ven) ||
 					!IOUtil::getOSDataValue(sect, "device-id", dev) ||
-					!IOUtil::getOSDataValue(sect, "revision-id", dev)) {
+					!IOUtil::getOSDataValue(sect, "revision-id", rev)) {
 					SYSLOG("alc @ found an incorrect controller at %s", codecLookup[lookup].tree[i]);
 					break;
 				}
@@ -224,26 +229,28 @@ void AlcEnabler::grabControllers() {
 					break;
 				}
 				
-				auto controller = ControllerInfo::create(ven, dev, rev, lid, codecLookup[lookup].detect);
+				if (IOUtil::getOSDataValue(sect, "AAPL,ig-platform-id", platform)) {
+					DBGLOG("alc @ AAPL,ig-platform-id %X was found in controller at %s", platform, codecLookup[lookup].tree[i]);
+				}
+				
+				auto controller = ControllerInfo::create(ven, dev, rev, platform, lid, codecLookup[lookup].detect);
 				if (controller) {
-					if (!controllers.push_back(controller)) {
+					if (controllers.push_back(controller)) {
+						controller->lookup = &codecLookup[lookup];
+						found = true;
+					} else {
 						SYSLOG("alc @ failed to store controller info for %X:%X:%X", ven, dev, rev);
 						ControllerInfo::deleter(controller);
-						break;
 					}
 				} else {
 					SYSLOG("alc @ failed to create controller info for %X:%X:%X", ven, dev, rev);
-					break;
 				}
-				
-				controller->lookup = &codecLookup[lookup];
-				found = true;
 			}
 		}
 	}
 	
 	if (found) {
-		DBGLOG("alc @ found some audio controllers");
+		DBGLOG("alc @ found %zu audio controllers", controllers.size());
 		validateControllers();
 	}
 }
@@ -254,7 +261,7 @@ bool AlcEnabler::grabCodecs() {
 		return false;
 	}
 	
-	for (size_t currentController = 0, num = controllers.size(); currentController < num; currentController++) {
+	for (currentController = 0; currentController < controllers.size(); currentController++) {
 		auto ctlr = controllers[currentController];
 		
 		// Digital controllers normally have no detectible codecs
@@ -303,7 +310,9 @@ bool AlcEnabler::grabCodecs() {
 
 void AlcEnabler::validateControllers() {
 	for (size_t i = 0, num = controllers.size(); i < num; i++) {
+		DBGLOG("alc @ validating %zu controller %X:%X:%X", i, controllers[i]->vendor, controllers[i]->device, controllers[i]->revision);
 		for (size_t mod = 0; mod < controllerModSize; mod++) {
+			DBGLOG("alc @ comparing to %zu mod %X:%X", mod, controllerMod[mod].vendor, controllerMod[mod].device);
 			if (controllers[i]->vendor == controllerMod[mod].vendor &&
 				controllers[i]->device == controllerMod[mod].device) {
 				
@@ -313,8 +322,16 @@ void AlcEnabler::validateControllers() {
 					   controllerMod[mod].revisions[rev] != controllers[i]->revision)
 					rev++;
 				
+				// Check AAPL,ig-platform-id if present
+				if (controllerMod[mod].platform != ControllerModInfo::PlatformAny &&
+					controllerMod[mod].platform != controllers[i]->platform) {
+					DBGLOG("alc @ not matching platform was found %X vs %X", controllerMod[mod].platform, controllers[i]->platform);
+					continue;
+				}
+			
 				if (rev != controllerMod[mod].revisionNum ||
 					controllerMod[mod].revisionNum == 0) {
+					DBGLOG("alc @ found mod for %zu controller", i);
 					controllers[i]->info = &controllerMod[mod];
 					break;
 				}
@@ -359,7 +376,8 @@ bool AlcEnabler::validateCodecs() {
 					   suitable ? "supported" : "unsupported", vendorMod[vIdx].name,
 					   vendorMod[vIdx].codecs[cIdx].name, codecs[i]->revision);
 			} else {
-				DBGLOG("alc @ found unsupported %s codec 0x%X", vendorMod[vIdx].name, codecs[i]->codec);
+				DBGLOG("alc @ found unsupported %s codec 0x%X revision 0x%X", vendorMod[vIdx].name,
+					   codecs[i]->codec, codecs[i]->revision);
 			}
 		} else {
 			DBGLOG("alc @ found unsupported codec vendor 0x%X", codecs[i]->vendor);
@@ -380,6 +398,7 @@ void AlcEnabler::applyPatches(size_t index, const KextPatch *patches, size_t pat
 		auto &patch = patches[p];
 		if (patch.patch.kext->loadIndex == index) {
 			if (patcher.compatibleKernel(patch.minKernel, patch.maxKernel)) {
+				DBGLOG("alc @ applying %zu patch for %zu kext", p, index);
 				patcher.applyLookupPatch(&patch.patch);
 				// Do not really care for the errors for now
 				patcher.clearError();
