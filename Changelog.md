@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.0.4
+- Added ALC663, layout-id 28 codec support (by m-dudarev)
+
 
 #### v1.0.3
 - Fixed AAPL,ig-platform-id naming
