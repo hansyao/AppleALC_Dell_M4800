@@ -32,6 +32,22 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>0x10ec0663</string>
+					<key>CodecID</key>
+					<integer>283903587</integer>
+					<key>Comment</key>
+					<string>ALC663 for Asus N56/76</string>
+					<key>ConfigData</key>
+					<data>AZccEAGXHQABlx6gAZcfkAGHHCABhx0QAYcegQGHHwIBRxwwAUcdAAFHHhABRx+QAUcMAgIXHEACFx0QAhceIQIXHwIBFxzwARcdAAEXHgABFx9AAecc8AHnHQAB5x4AAecfQA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Realtek ALC887-VD</string>
 					<key>CodecID</key>
 					<integer>283904135</integer>

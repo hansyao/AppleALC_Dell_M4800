@@ -5,9 +5,9 @@
 	<key>Author</key>
 	<string>m-dudarev</string>
 	<key>CodecID</key>
-	<integer>624</integer>
+	<integer>1635</integer>
 	<key>CodecName</key>
-	<string>0x10ec0270 Rev:0x100100</string>
+	<string>0x10ec0663 Rev:0x100002</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
@@ -25,7 +25,7 @@
 				<key>Id</key>
 				<integer>28</integer>
 				<key>Path</key>
-				<string>Platforms28.xml.zlib</string>
+				<string>Platforms.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -103,7 +103,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>cALsEA==</data>
+			<data>YwbsEA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>
@@ -111,7 +111,7 @@
 			<key>Find</key>
 			<data>gxnUEQ==</data>
 			<key>MinKernel</key>
-			<integer>13</integer>
+			<integer>15</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
@@ -120,7 +120,7 @@
 	</array>
 	<key>Revisions</key>
 	<array>
-		<integer>1048832</integer>
+		<integer>1048578</integer>
 	</array>
 	<key>Vendor</key>
 	<string>Realtek</string>
