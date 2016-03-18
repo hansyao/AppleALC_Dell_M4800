@@ -7,7 +7,7 @@
 	<key>CodecID</key>
 	<integer>624</integer>
 	<key>CodecName</key>
-	<string>0x10ec0270 Rev:0x100100</string>
+	<string>ALC270</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
