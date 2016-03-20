@@ -4,6 +4,29 @@
 <array>
 	<dict>
 		<key>Device</key>
+		<integer>26640</integer>
+		<key>Name</key>
+		<string>AMD Radeon R7 370</string>
+		<key>Patches</key>
+		<array>
+			<dict>
+				<key>Count</key>
+				<integer>4</integer>
+				<key>Find</key>
+				<data>IIw=</data>
+				<key>MinKernel</key>
+				<string>13</string>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>oIw=</data>
+			</dict>
+		</array>
+		<key>Vendor</key>
+		<string>AMD</string>
+	</dict>
+	<dict>
+		<key>Device</key>
 		<integer>3084</integer>
 		<key>Name</key>
 		<string>HD4600 controller</string>
