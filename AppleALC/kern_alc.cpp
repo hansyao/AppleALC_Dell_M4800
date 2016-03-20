@@ -116,7 +116,7 @@ void AlcEnabler::processKext(size_t index, mach_vm_address_t address, size_t siz
 						progressState |= ProcessingState::CodecsLoaded;
 						break;
 					}
-					SYSLOG("alc @ failed to find a suitable codec, we have nothing to do");
+					DBGLOG("alc @ failed to find a suitable codec, we have nothing to do");
 					return;
 				}
 			}

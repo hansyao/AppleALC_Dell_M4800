@@ -77,7 +77,7 @@ namespace IOUtil {
 		} while (brute && bruteCount < bruteMax && !found);
 		
 		if (!found)
-			SYSLOG("ioutil @ failed to find %s", prefix);
+			DBGLOG("ioutil @ failed to find %s", prefix);
 		return proc ? nullptr : res;
 	}
 }
