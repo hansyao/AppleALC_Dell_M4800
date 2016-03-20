@@ -33,6 +33,30 @@
 					<data>
 					AwAAAA==
 					</data>
+					<key>CodecID</key>
+					<integer>283902594</integer>
+					<key>Comment</key>
+					<string>ALC282 for Asus x200la</string>
+					<key>ConfigData</key>
+					<data>
+					ASccEAEnHQABJx6BAScfAAFHHCABRx0BAUce
+					EAFHH5kBdxzwAXcdAAF3HgABdx9AAYcc8AGH
+					HQABhx4AAYcfQAGXHDABlx0BAZcepgGXH5kB
+					pxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4A
+					AbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecd
+					AAHnHgAB5x9AAhccUAIXHUACFx4rAhcfAAFH
+					DAICFwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>86</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
 					<key>Codec</key>
 					<string>0x10ec0663</string>
 					<key>CodecID</key>

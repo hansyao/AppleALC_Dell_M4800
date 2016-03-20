@@ -2,6 +2,8 @@ AppleALC Changelog
 ==================
 
 #### v1.0.4
+- Fixed a rare kernel panic due to uninitialised kern_proc
+- Added ALC282 DSP features and config improvements (by savvamitrofanov)
 - Added ALC663, layout-id 28 codec support (by m-dudarev)
 
 #### v1.0.3
