@@ -3,9 +3,13 @@ AppleALC Changelog
 
 #### v1.0.4
 - Fixed a rare kernel panic due to uninitialised kern_proc
+- Fixed a rare loading failure due to IOHDA value bruteforce necessity
+- Added retry possibility for -alcpolicy
+- Set -alcpolicy mode the default mode
 - Added ALC269VC for Lenovo V850 codec support (by Ar4erR07)
 - Added ALC282 DSP features and config improvements (by savvamitrofanov)
 - Added ALC663, layout-id 28 codec support (by m-dudarev)
+- Added ALC887-VD for Z97 codec support (by John998)
 
 #### v1.0.3
 - Fixed AAPL,ig-platform-id naming

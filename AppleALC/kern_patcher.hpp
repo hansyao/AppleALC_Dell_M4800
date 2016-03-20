@@ -67,6 +67,7 @@ public:
 		const char *id {nullptr};
 		const char **paths {nullptr};
 		size_t pathNum {0};
+		bool detectCodecs {false};
 		size_t loadIndex {Unloaded}; // Updated after loading
 	};
 
