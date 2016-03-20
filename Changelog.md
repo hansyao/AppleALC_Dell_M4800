@@ -10,6 +10,7 @@ AppleALC Changelog
 - Added ALC282 DSP features and config improvements (by savvamitrofanov)
 - Added ALC663, layout-id 28 codec support (by m-dudarev)
 - Added ALC887-VD for Z97 codec support (by John998)
+- Added patch for AMD Radeon R7 370 HDMI (by John998)
 
 #### v1.0.3
 - Fixed AAPL,ig-platform-id naming
