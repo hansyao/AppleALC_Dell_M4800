@@ -30,23 +30,27 @@
 			<array>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Mirone - Realtek ALC887-VD</string>
+					<key>CodecID</key>
+					<integer>283904135</integer>
+					<key>ConfigData</key>
+					<data>AUccEAFHHUABRx4RAUcfAQGHHFABhx2QAYceoAGHH5ABlxxgAZcdkAGXHoEBlx8CAacccAGnHTABpx6BAacfAQG3HIABtx1AAbceIQG3HwIB5xyQAecdYAHnHkUB5x8BAUcMAg==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>5</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283902594</integer>
 					<key>Comment</key>
 					<string>ALC282 for Asus x200la</string>
 					<key>ConfigData</key>
-					<data>
-					ASccEAEnHQABJx6BAScfAAFHHCABRx0BAUce
-					EAFHH5kBdxzwAXcdAAF3HgABdx9AAYcc8AGH
-					HQABhx4AAYcfQAGXHDABlx0BAZcepgGXH5kB
-					pxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4A
-					AbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecd
-					AAHnHgAB5x9AAhccUAIXHUACFx4rAhcfAAFH
-					DAICFwwC
-					</data>
+					<data>ASccEAEnHQABJx6BAScfAAFHHCABRx0BAUceEAFHH5kBdxzwAXcdAAF3HgABdx9AAYcc8AGHHQABhx4AAYcfQAGXHDABlx0BAZcepgGXH5kBpxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4AAbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecdAAHnHgAB5x9AAhccUAIXHUACFx4rAhcfAAFHDAICFwwC</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -54,9 +58,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>0x10ec0663</string>
 					<key>CodecID</key>
@@ -64,12 +66,7 @@
 					<key>Comment</key>
 					<string>ALC663 for Asus N56/76</string>
 					<key>ConfigData</key>
-					<data>
-					AZccEAGXHQABlx6gAZcfkAGHHCABhx0QAYce
-					gQGHHwIBRxwwAUcdAAFHHhABRx+QAUcMAgIX
-					HEACFx0QAhceIQIXHwIBFxzwARcdAAEXHgAB
-					Fx9AAecc8AHnHQAB5x4AAecfQA==
-					</data>
+					<data>AZccEAGXHQABlx6gAZcfkAGHHCABhx0QAYcegQGHHwIBRxwwAUcdAAFHHhABRx+QAUcMAgIXHEACFx0QAhceIQIXHwIBFxzwARcdAAEXHgABFx9AAecc8AHnHQAB5x4AAecfQA==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -77,20 +74,13 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Realtek ALC887-VD</string>
 					<key>CodecID</key>
 					<integer>283904135</integer>
 					<key>ConfigData</key>
-					<data>
-					IUccECFHHUAhRx4RIUcfASGHHFAhhx2QIYce
-					oCGHH5AhlxxgIZcdkCGXHoEhlx8CIacccCGn
-					HTAhpx6BIacfASG3HIAhtx1AIbceISG3HwIh
-					5xyQIecdYCHnHkUh5x8B
-					</data>
+					<data>IUccECFHHUAhRx4RIUcfASGHHFAhhx2QIYceoCGHH5AhlxxgIZcdkCGXHoEhlx8CIacccCGnHTAhpx6BIacfASG3HIAhtx1AIbceISG3HwIh5xyQIecdYCHnHkUh5x8B</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -98,9 +88,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>ALC270</string>
 					<key>CodecID</key>
@@ -108,15 +96,7 @@
 					<key>Comment</key>
 					<string>ALC270 for Asus K56CB</string>
 					<key>ConfigData</key>
-					<data>
-					AScc8AEnHQABJx4AAScfQAFHHBABRx0BAUce
-					FwFHH5ABdxzwAXcdAAF3HgABdx9AAYccIAGH
-					HRABhx6BAYcfBAGXHDABlx0BAZceoAGXH5AB
-					pxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4A
-					AbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecd
-					AAHnHgAB5x9AAhccIAIXHRACFx4hAhcfBAFH
-					DAI=
-					</data>
+					<data>AScc8AEnHQABJx4AAScfQAFHHBABRx0BAUceFwFHH5ABdxzwAXcdAAF3HgABdx9AAYccIAGHHRABhx6BAYcfBAGXHDABlx0BAZceoAGXH5ABpxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4AAbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecdAAHnHgAB5x9AAhccIAIXHRACFx4hAhcfBAFHDAI=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -124,20 +104,13 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283903592</integer>
 					<key>Comment</key>
 					<string>ALC668 for Asus N750Jk, alex1960</string>
 					<key>ConfigData</key>
-					<data>
-					ABJxwQAScdAAEnHqABJx+QAUccIAFHHQABRx
-					4XAUcfkAFXHDABVx0QAVceIQFXHwEBZxxAAW
-					cdAAFnHgABZx9AAbccUAG3HRABtx6BAbcfAg
-					HXHGAB1x0AAdcewAHXH0ABRwwA==
-					</data>
+					<data>ABJxwQAScdAAEnHqABJx+QAUccIAFHHQABRx4XAUcfkAFXHDABVx0QAVceIQFXHwEBZxxAAWcdAAFnHgABZx9AAbccUAG3HRABtx6BAbcfAgHXHGAB1x0AAdcewAHXH0ABRwwA==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -145,9 +118,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>ALC269</string>
 					<key>CodecID</key>
@@ -155,15 +126,7 @@
 					<key>Comment</key>
 					<string>ALC269 for Asus K53SJ, alex1960</string>
 					<key>ConfigData</key>
-					<data>
-					AScc8AEnHQABJx4AAScfQAFHHBABRx0BAUce
-					EwFHH5ABdxxQAXcdAQF3HhMBdx+QAYccIAGH
-					HZABhx6BAYcfAwGXHDABlx0BAZceoAGXH5AB
-					pxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4A
-					AbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecd
-					AAHnHgAB5x9AAhccQAIXHRACFx4hAhcfAwFH
-					DAI=
-					</data>
+					<data>AScc8AEnHQABJx4AAScfQAFHHBABRx0BAUceEwFHH5ABdxxQAXcdAQF3HhMBdx+QAYccIAGHHZABhx6BAYcfAwGXHDABlx0BAZceoAGXH5ABpxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4AAbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecdAAHnHgAB5x9AAhccQAIXHRACFx4hAhcfAwFHDAI=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -177,15 +140,7 @@
 					<key>Comment</key>
 					<string>ALC269 for Acer Aspire, Andrey1970</string>
 					<key>ConfigData</key>
-					<data>
-					AScc8AEnHQABJx4AAScfQAFHHBABRx0BAUce
-					FwFHH5ABRwwCAXcc8AF3HQABdx4AAXcfQAGH
-					HPABhx0AAYceAAGHH0ABlxzwAZcdAAGXHgAB
-					lx9AAacc8AGnHQABpx4AAacfQAG3HCABtx0B
-					AbceoAG3H5AB1xzwAdcdAAHXHgAB1x9AAecc
-					8AHnHQAB5x4AAecfQAIXHDACFx0QAhceIQIX
-					HwMBhxwgAYcdkAGHHoEBhx8D
-					</data>
+					<data>AScc8AEnHQABJx4AAScfQAFHHBABRx0BAUceFwFHH5ABRwwCAXcc8AF3HQABdx4AAXcfQAGHHPABhx0AAYceAAGHH0ABlxzwAZcdAAGXHgABlx9AAacc8AGnHQABpx4AAacfQAG3HCABtx0BAbceoAG3H5AB1xzwAdcdAAHXHgAB1x9AAecc8AHnHQAB5x4AAecfQAIXHDACFx0QAhceIQIXHwMBhxwgAYcdkAGHHoEBhx8D</data>
 					<key>FuncGroup</key>
 					<string>1</string>
 					<key>LayoutID</key>
@@ -193,9 +148,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>ALC269VC</string>
 					<key>CodecID</key>
@@ -203,11 +156,7 @@
 					<key>Comment</key>
 					<string>ALC269VC for Lenovo Z580, John</string>
 					<key>ConfigData</key>
-					<data>
-					AVccQAFXHRABVx4hAVcfAwGHHCABhx0QAYce
-					gQGHHwMBlxwwAZcdAQGXHqABlx+QAbccEAG3
-					HQEBtx4XAbcfkAFXDAI=
-					</data>
+					<data>AVccQAFXHRABVx4hAVcfAwGHHCABhx0QAYcegQGHHwMBlxwwAZcdAQGXHqABlx+QAbccEAG3HQEBtx4XAbcfkAFXDAI=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -215,9 +164,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>0x11d4198b</string>
 					<key>CodecID</key>
@@ -225,14 +172,7 @@
 					<key>Comment</key>
 					<string>AD1988B, Rodion</string>
 					<key>ConfigData</key>
-					<data>
-					AXccIAF3HZABdx6gAXcfkQFHHCEBRx2QAUce
-					gQFHHwIBJxwQAScdQAEnHhEBJx8BAkccEQJH
-					HWACRx4RAkcfAQFnHBIBZx0QAWceEQFnHwEC
-					VxwUAlcdIAJXHhECVx8BAccc8AHHHQABxx4A
-					AccfQAE3HPABNx0AATceAAE3H0ABpxzwAacd
-					AAGnHgABpx9AAYcc8AGHHQABhx4AAYcfQA==
-					</data>
+					<data>AXccIAF3HZABdx6gAXcfkQFHHCEBRx2QAUcegQFHHwIBJxwQAScdQAEnHhEBJx8BAkccEQJHHWACRx4RAkcfAQFnHBIBZx0QAWceEQFnHwECVxwUAlcdIAJXHhECVx8BAccc8AHHHQABxx4AAccfQAE3HPABNx0AATceAAE3H0ABpxzwAacdAAGnHgABpx9AAYcc8AGHHQABhx4AAYcfQA==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -244,14 +184,7 @@
 					<key>Comment</key>
 					<string>ALC269, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					IUcc8CFHHQAhRx4AIUcfQCFXHHAhVx1AIVce
-					ISFXHwIhZxzwIWcdACFnHgAhZx9AIXcc8CF3
-					HQAhdx4AIXcfQCGHHPAhhx0AIYceACGHH0Ah
-					lxzwIZcdACGXHgAhlx9AIacc8CGnHQAhpx4A
-					IacfQCG3HPAhtx0AIbceACG3H0Ah5xyQIecd
-					YSHnHksh5x8B
-					</data>
+					<data>IUcc8CFHHQAhRx4AIUcfQCFXHHAhVx1AIVceISFXHwIhZxzwIWcdACFnHgAhZx9AIXcc8CF3HQAhdx4AIXcfQCGHHPAhhx0AIYceACGHH0AhlxzwIZcdACGXHgAhlx9AIacc8CGnHQAhpx4AIacfQCG3HPAhtx0AIbceACG3H0Ah5xyQIecdYSHnHksh5x8B</data>
 					<key>FuncGroup</key>
 					<string>1</string>
 					<key>LayoutID</key>
@@ -263,15 +196,7 @@
 					<key>Comment</key>
 					<string>ALC283, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					AScc8AEnHQABJx4AAScfQAFHHPABRx0AAUce
-					AAFHH0ABdxzwAXcdAAF3HgABdx9AAYcc8AGH
-					HQABhx4AAYcfQAGXHGABlx0wAZceiwGXHwEB
-					pxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4A
-					AbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecd
-					AAHnHgAB5x9AAhcccAIXHUACFx4rAhcfAQGX
-					DAICFwwC
-					</data>
+					<data>AScc8AEnHQABJx4AAScfQAFHHPABRx0AAUceAAFHH0ABdxzwAXcdAAF3HgABdx9AAYcc8AGHHQABhx4AAYcfQAGXHGABlx0wAZceiwGXHwEBpxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4AAbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecdAAHnHgAB5x9AAhcccAIXHUACFx4rAhcfAQGXDAICFwwC</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -279,9 +204,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>ALC885</string>
 					<key>CodecID</key>
@@ -289,15 +212,7 @@
 					<key>Comment</key>
 					<string>ALC885 by alex1960</string>
 					<key>ConfigData</key>
-					<data>
-					IUccECFHHUAhRx4RIUcfASFXHCAhVx0QIVce
-					ASFXHwEhZxwwIWcdYCFnHgEhZx8BIXcc8CF3
-					HQAhdx4AIXcfQCGHHEAhhx2QIYceoCGHH5Ah
-					lxxgIZcdkCGXHoEhlx8CIaccUCGnHTAhpx6B
-					IacfASG3HHAhtx1AIbceISG3HwIh5xyQIecd
-					YSHnHksh5x8BIfccoCH3HQEh9x7LIfcfASEX
-					HPAhFx0AIRceACEXH0A=
-					</data>
+					<data>IUccECFHHUAhRx4RIUcfASFXHCAhVx0QIVceASFXHwEhZxwwIWcdYCFnHgEhZx8BIXcc8CF3HQAhdx4AIXcfQCGHHEAhhx2QIYceoCGHH5AhlxxgIZcdkCGXHoEhlx8CIaccUCGnHTAhpx6BIacfASG3HHAhtx1AIbceISG3HwIh5xyQIecdYSHnHksh5x8BIfccoCH3HQEh9x7LIfcfASEXHPAhFx0AIRceACEXH0A=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -309,15 +224,7 @@
 					<key>Comment</key>
 					<string>ALC887, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					IUccECFHHUAhRx4RIUcfkCFHDAIhVxwgIVcd
-					ECFXHgEhVx8BIWccMCFnHWAhZx4BIWcfASF3
-					HPAhdx0AIXceACF3H0AhhxxAIYcdkCGHHqAh
-					hx+QIZccYCGXHZAhlx6BIZcfAiGnHFAhpx0w
-					IacegSGnHwEhtxxwIbcdQCG3HiEhtx8CIbcM
-					AiHnHJAh5x1hIeceSyHnHwEh9xzwIfcdACH3
-					HgAh9x9AIRcc8CEXHQAhFx4AIRcfQA==
-					</data>
+					<data>IUccECFHHUAhRx4RIUcfkCFHDAIhVxwgIVcdECFXHgEhVx8BIWccMCFnHWAhZx4BIWcfASF3HPAhdx0AIXceACF3H0AhhxxAIYcdkCGHHqAhhx+QIZccYCGXHZAhlx6BIZcfAiGnHFAhpx0wIacegSGnHwEhtxxwIbcdQCG3HiEhtx8CIbcMAiHnHJAh5x1hIeceSyHnHwEh9xzwIfcdACH3HgAh9x9AIRcc8CEXHQAhFx4AIRcfQA==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -329,15 +236,7 @@
 					<key>Comment</key>
 					<string>ALC887, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					IUccECFHHUAhRx4RIUcfkCFHDAIhVxzwIVcd
-					ACFXHgAhVx9AIWcc8CFnHQAhZx4AIWcfQCF3
-					HPAhdx0AIXceACF3H0AhhxxAIYcdYCGHHgEh
-					hx8BIZccYCGXHZAhlx6gIZcfkCGnHFAhpx0Q
-					IaceASGnHwEhtxxwIbcdQCG3HiEhtx8CIbcM
-					AiHnHJAh5x1hIeceSyHnHwEh9xzwIfcdACH3
-					HgAh9x9AIRcc8CEXHQAhFx4AIRcfQA==
-					</data>
+					<data>IUccECFHHUAhRx4RIUcfkCFHDAIhVxzwIVcdACFXHgAhVx9AIWcc8CFnHQAhZx4AIWcfQCF3HPAhdx0AIXceACF3H0AhhxxAIYcdYCGHHgEhhx8BIZccYCGXHZAhlx6gIZcfkCGnHFAhpx0QIaceASGnHwEhtxxwIbcdQCG3HiEhtx8CIbcMAiHnHJAh5x1hIeceSyHnHwEh9xzwIfcdACH3HgAh9x9AIRcc8CEXHQAhFx4AIRcfQA==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -349,15 +248,7 @@
 					<key>Comment</key>
 					<string>ALC887, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					IUccECFHHUAhRx4RIUcfkCFXHCAhVx0QIVce
-					ASFXHwEhZxzwIWcdACFnHgAhZx9AIXcc8CF3
-					HQAhdx4AIXcfQCGHHEAhhx2QIYceoCGHH5Ah
-					lxxgIZcdkCGXHoEhlx8CIaccUCGnHTAhpx6B
-					IacfASG3HHAhtx1AIbceISG3HwIh5xyQIecd
-					YSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEX
-					HPAhFx0AIRceACEXH0A=
-					</data>
+					<data>IUccECFHHUAhRx4RIUcfkCFXHCAhVx0QIVceASFXHwEhZxzwIWcdACFnHgAhZx9AIXcc8CF3HQAhdx4AIXcfQCGHHEAhhx2QIYceoCGHH5AhlxxgIZcdkCGXHoEhlx8CIaccUCGnHTAhpx6BIacfASG3HHAhtx1AIbceISG3HwIh5xyQIecdYSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEXHPAhFx0AIRceACEXH0A=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -369,15 +260,7 @@
 					<key>Comment</key>
 					<string>ALC888, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					IUccECFHHUAhRx4RIUcfkCFXHCAhVx0QIVce
-					ASFXHwEhZxwwIWcdYCFnHgEhZx8BIXcc8CF3
-					HQAhdx4AIXcfQCGHHEAhhx2QIYceoCGHH5Ah
-					lxxgIZcdkCGXHoEhlx8CIaccUCGnHTAhpx6B
-					IacfASG3HHAhtx1AIbceISG3HwIh5xyQIecd
-					YSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEX
-					HPAhFx0AIRceACEXH0A=
-					</data>
+					<data>IUccECFHHUAhRx4RIUcfkCFXHCAhVx0QIVceASFXHwEhZxwwIWcdYCFnHgEhZx8BIXcc8CF3HQAhdx4AIXcfQCGHHEAhhx2QIYceoCGHH5AhlxxgIZcdkCGXHoEhlx8CIaccUCGnHTAhpx6BIacfASG3HHAhtx1AIbceISG3HwIh5xyQIecdYSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEXHPAhFx0AIRceACEXH0A=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -389,15 +272,7 @@
 					<key>Comment</key>
 					<string>ALC888, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					IUccECFHHUAhRx4RIUcfkCFXHPAhVx0AIVce
-					ACFXH0AhZxzwIWcdACFnHgAhZx9AIXcc8CF3
-					HQAhdx4AIXcfQCGHHEAhhx1gIYceASGHHwEh
-					lxxgIZcdkCGXHqAhlx+QIaccUCGnHRAhpx4B
-					IacfASG3HHAhtx1AIbceISG3HwIh5xyQIecd
-					YSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEX
-					HPAhFx0AIRceACEXH0A=
-					</data>
+					<data>IUccECFHHUAhRx4RIUcfkCFXHPAhVx0AIVceACFXH0AhZxzwIWcdACFnHgAhZx9AIXcc8CF3HQAhdx4AIXcfQCGHHEAhhx1gIYceASGHHwEhlxxgIZcdkCGXHqAhlx+QIaccUCGnHRAhpx4BIacfASG3HHAhtx1AIbceISG3HwIh5xyQIecdYSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEXHPAhFx0AIRceACEXH0A=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -409,15 +284,7 @@
 					<key>Comment</key>
 					<string>ALC888, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					IUccECFHHUAhRx4RIUcfkCFXHCAhVx0QIVce
-					ASFXHwEhZxzwIWcdACFnHgAhZx9AIXcc8CF3
-					HQAhdx4AIXcfQCGHHEAhhx2QIYceoCGHH5Ah
-					lxxgIZcdkCGXHoEhlx8CIaccUCGnHTAhpx6B
-					IacfASG3HHAhtx1AIbceISG3HwIh5xyQIecd
-					YSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEX
-					HPAhFx0AIRceACEXH0A=
-					</data>
+					<data>IUccECFHHUAhRx4RIUcfkCFXHCAhVx0QIVceASFXHwEhZxzwIWcdACFnHgAhZx9AIXcc8CF3HQAhdx4AIXcfQCGHHEAhhx2QIYceoCGHH5AhlxxgIZcdkCGXHoEhlx8CIaccUCGnHTAhpx6BIacfASG3HHAhtx1AIbceISG3HwIh5xyQIecdYSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEXHPAhFx0AIRceACEXH0A=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -429,15 +296,7 @@
 					<key>Comment</key>
 					<string>ALC889, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					IUccECFHHUAhRx4RIUcfkCFXHCAhVx0QIVce
-					ASFXHwEhZxwwIWcdYCFnHgEhZx8BIXcc8CF3
-					HQAhdx4AIXcfQCGHHEAhhx2QIYceoCGHH5Ah
-					lxxgIZcdkCGXHoEhlx8CIaccUCGnHTAhpx6B
-					IacfASG3HHAhtx1AIbceISG3HwIh5xyQIecd
-					YSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEX
-					HPAhFx0AIRceACEXH0A=
-					</data>
+					<data>IUccECFHHUAhRx4RIUcfkCFXHCAhVx0QIVceASFXHwEhZxwwIWcdYCFnHgEhZx8BIXcc8CF3HQAhdx4AIXcfQCGHHEAhhx2QIYceoCGHH5AhlxxgIZcdkCGXHoEhlx8CIaccUCGnHTAhpx6BIacfASG3HHAhtx1AIbceISG3HwIh5xyQIecdYSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEXHPAhFx0AIRceACEXH0A=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -449,17 +308,7 @@
 					<key>Comment</key>
 					<string>alc889, Sergey_Galan</string>
 					<key>ConfigData</key>
-					<data>
-					IRcc8CEXHQAhFx4AIRcfQCEnHPAhJx0AISce
-					ACEnH0AhRxwwIUcdQSFHHhEhRx8BIVcc8CFX
-					HQAhVx4AIVcfQCFnHPAhZx0AIWceACFnH0Ah
-					dxzwIXcdACF3HgAhdx9AIYccECGHHZEhhx6g
-					IYcfkCGXHCAhlx2QIZcegSGXHwEhpxzwIacd
-					ACGnHgAhpx9AIbccgCG3HUAhtx4hIbcfASHH
-					HPAhxx0AIcceACHHH0Ah1xzwIdcdACHXHgAh
-					1x9AIecckCHnHSEh5x5LIecfASH3HPAh9x0A
-					IfceACH3H0A=
-					</data>
+					<data>IRcc8CEXHQAhFx4AIRcfQCEnHPAhJx0AISceACEnH0AhRxwwIUcdQSFHHhEhRx8BIVcc8CFXHQAhVx4AIVcfQCFnHPAhZx0AIWceACFnH0AhdxzwIXcdACF3HgAhdx9AIYccECGHHZEhhx6gIYcfkCGXHCAhlx2QIZcegSGXHwEhpxzwIacdACGnHgAhpx9AIbccgCG3HUAhtx4hIbcfASHHHPAhxx0AIcceACHHH0Ah1xzwIdcdACHXHgAh1x9AIecckCHnHSEh5x5LIecfASH3HPAh9x0AIfceACH3H0A=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -471,15 +320,7 @@
 					<key>Comment</key>
 					<string>ALC889, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					IUccECFHHUAhRx4RIUcfkCFXHCAhVx0QIVce
-					ASFXHwEhZxzwIWcdACFnHgAhZx9AIXcc8CF3
-					HQAhdx4AIXcfQCGHHEAhhx2QIYceoCGHH5Ah
-					lxxgIZcdkCGXHoEhlx8CIaccUCGnHTAhpx6B
-					IacfASG3HHAhtx1AIbceISG3HwIh5xyQIecd
-					YSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEX
-					HPAhFx0AIRceACEXH0A=
-					</data>
+					<data>IUccECFHHUAhRx4RIUcfkCFXHCAhVx0QIVceASFXHwEhZxzwIWcdACFnHgAhZx9AIXcc8CF3HQAhdx4AIXcfQCGHHEAhhx2QIYceoCGHH5AhlxxgIZcdkCGXHoEhlx8CIaccUCGnHTAhpx6BIacfASG3HHAhtx1AIbceISG3HwIh5xyQIecdYSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEXHPAhFx0AIRceACEXH0A=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -491,15 +332,7 @@
 					<key>Comment</key>
 					<string>ALC892, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					IUccECFHHUAhRx4RIUcfkCFHDAIhVxwgIVcd
-					ECFXHgEhVx8BIWccMCFnHWAhZx4BIWcfASF3
-					HPAhdx0AIXceACF3H0AhhxxAIYcdkCGHHqAh
-					hx+QIZccYCGXHZAhlx6BIZcfAiGnHFAhpx0w
-					IacegSGnHwEhtxxwIbcdQCG3HiEhtx8CIbcM
-					AiHnHJAh5x1hIeceSyHnHwEh9xzwIfcdACH3
-					HgAh9x9AIRcc8CEXHQAhFx4AIRcfQA==
-					</data>
+					<data>IUccECFHHUAhRx4RIUcfkCFHDAIhVxwgIVcdECFXHgEhVx8BIWccMCFnHWAhZx4BIWcfASF3HPAhdx0AIXceACF3H0AhhxxAIYcdkCGHHqAhhx+QIZccYCGXHZAhlx6BIZcfAiGnHFAhpx0wIacegSGnHwEhtxxwIbcdQCG3HiEhtx8CIbcMAiHnHJAh5x1hIeceSyHnHwEh9xzwIfcdACH3HgAh9x9AIRcc8CEXHQAhFx4AIRcfQA==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -511,15 +344,7 @@
 					<key>Comment</key>
 					<string>ALC892, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					IUccECFHHUAhRx4RIUcfkCFHDAIhVxzwIVcd
-					ACFXHgAhVx9AIWcc8CFnHQAhZx4AIWcfQCF3
-					HPAhdx0AIXceACF3H0AhhxxAIYcdYCGHHgEh
-					hx8BIZccYCGXHZAhlx6gIZcfkCGnHFAhpx0Q
-					IaceASGnHwEhtxxwIbcdQCG3HiEhtx8CIbcM
-					AiHnHJAh5x1hIeceSyHnHwEh9xzwIfcdACH3
-					HgAh9x9AIRcc8CEXHQAhFx4AIRcfQA==
-					</data>
+					<data>IUccECFHHUAhRx4RIUcfkCFHDAIhVxzwIVcdACFXHgAhVx9AIWcc8CFnHQAhZx4AIWcfQCF3HPAhdx0AIXceACF3H0AhhxxAIYcdYCGHHgEhhx8BIZccYCGXHZAhlx6gIZcfkCGnHFAhpx0QIaceASGnHwEhtxxwIbcdQCG3HiEhtx8CIbcMAiHnHJAh5x1hIeceSyHnHwEh9xzwIfcdACH3HgAh9x9AIRcc8CEXHQAhFx4AIRcfQA==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -531,15 +356,7 @@
 					<key>Comment</key>
 					<string>ALC892, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					IUccECFHHUAhRx4RIUcfkCFXHCAhVx0QIVce
-					ASFXHwEhZxzwIWcdACFnHgAhZx9AIXcc8CF3
-					HQAhdx4AIXcfQCGHHEAhhx2QIYceoCGHH5Ah
-					lxxgIZcdkCGXHoEhlx8CIaccUCGnHTAhpx6B
-					IacfASG3HHAhtx1AIbceISG3HwIh5xyQIecd
-					YSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEX
-					HPAhFx0AIRceACEXH0A=
-					</data>
+					<data>IUccECFHHUAhRx4RIUcfkCFXHCAhVx0QIVceASFXHwEhZxzwIWcdACFnHgAhZx9AIXcc8CF3HQAhdx4AIXcfQCGHHEAhhx2QIYceoCGHH5AhlxxgIZcdkCGXHoEhlx8CIaccUCGnHTAhpx6BIacfASG3HHAhtx1AIbceISG3HwIh5xyQIecdYSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEXHPAhFx0AIRceACEXH0A=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -551,15 +368,7 @@
 					<key>Comment</key>
 					<string>ALC898, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					IUccECFHHUAhRx4RIUcfkCFHDAIhVxwgIVcd
-					ECFXHgEhVx8BIWccMCFnHWAhZx4BIWcfASF3
-					HPAhdx0AIXceACF3H0AhhxxAIYcdkCGHHqAh
-					hx+QIZccYCGXHZAhlx6BIZcfAiGnHFAhpx0w
-					IacegSGnHwEhtxxwIbcdQCG3HiEhtx8CIbcM
-					AiHnHJAh5x1hIeceSyHnHwEh9xzwIfcdACH3
-					HgAh9x9AIRcc8CEXHQAhFx4AIRcfQA==
-					</data>
+					<data>IUccECFHHUAhRx4RIUcfkCFHDAIhVxwgIVcdECFXHgEhVx8BIWccMCFnHWAhZx4BIWcfASF3HPAhdx0AIXceACF3H0AhhxxAIYcdkCGHHqAhhx+QIZccYCGXHZAhlx6BIZcfAiGnHFAhpx0wIacegSGnHwEhtxxwIbcdQCG3HiEhtx8CIbcMAiHnHJAh5x1hIeceSyHnHwEh9xzwIfcdACH3HgAh9x9AIRcc8CEXHQAhFx4AIRcfQA==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -571,15 +380,7 @@
 					<key>Comment</key>
 					<string>ALC898, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					IUccECFHHUAhRx4RIUcfkCFHDAIhVxzwIVcd
-					ACFXHgAhVx9AIWcc8CFnHQAhZx4AIWcfQCF3
-					HPAhdx0AIXceACF3H0AhhxxAIYcdYCGHHgEh
-					hx8BIZccYCGXHZAhlx6gIZcfkCGnHFAhpx0Q
-					IaceASGnHwEhtxxwIbcdQCG3HiEhtx8CIbcM
-					AiHnHJAh5x1hIeceSyHnHwEh9xzwIfcdACH3
-					HgAh9x9AIRcc8CEXHQAhFx4AIRcfQA==
-					</data>
+					<data>IUccECFHHUAhRx4RIUcfkCFHDAIhVxzwIVcdACFXHgAhVx9AIWcc8CFnHQAhZx4AIWcfQCF3HPAhdx0AIXceACF3H0AhhxxAIYcdYCGHHgEhhx8BIZccYCGXHZAhlx6gIZcfkCGnHFAhpx0QIaceASGnHwEhtxxwIbcdQCG3HiEhtx8CIbcMAiHnHJAh5x1hIeceSyHnHwEh9xzwIfcdACH3HgAh9x9AIRcc8CEXHQAhFx4AIRcfQA==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -591,15 +392,7 @@
 					<key>Comment</key>
 					<string>ALC898, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					IUccECFHHUAhRx4RIUcfkCFXHCAhVx0QIVce
-					ASFXHwEhZxzwIWcdACFnHgAhZx9AIXcc8CF3
-					HQAhdx4AIXcfQCGHHEAhhx2QIYceoCGHH5Ah
-					lxxgIZcdkCGXHoEhlx8CIaccUCGnHTAhpx6B
-					IacfASG3HHAhtx1AIbceISG3HwIh5xyQIecd
-					YSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEX
-					HPAhFx0AIRceACEXH0A=
-					</data>
+					<data>IUccECFHHUAhRx4RIUcfkCFXHCAhVx0QIVceASFXHwEhZxzwIWcdACFnHgAhZx9AIXcc8CF3HQAhdx4AIXcfQCGHHEAhhx2QIYceoCGHH5AhlxxgIZcdkCGXHoEhlx8CIaccUCGnHTAhpx6BIacfASG3HHAhtx1AIbceISG3HwIh5xyQIecdYSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEXHPAhFx0AIRceACEXH0A=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -611,15 +404,7 @@
 					<key>Comment</key>
 					<string>ALC1150, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					AUccEAFHHUABRx4RAUcfkAFHDAIBVxwgAVcd
-					EAFXHgEBVx8BAWccMAFnHWABZx4BAWcfAQF3
-					HPABdx0AAXceAAF3H0ABhxxAAYcdkAGHHqAB
-					hx+QAZccYAGXHZABlx6BAZcfAgGnHFABpx0w
-					AacegQGnHwEBtxxwAbcdQAG3HiEBtx8CAbcM
-					AgHnHJAB5x1hAeceSwHnHwEB9xzwAfcdAAH3
-					HgAB9x9AARcc8AEXHQABFx4AARcfQA==
-					</data>
+					<data>AUccEAFHHUABRx4RAUcfkAFHDAIBVxwgAVcdEAFXHgEBVx8BAWccMAFnHWABZx4BAWcfAQF3HPABdx0AAXceAAF3H0ABhxxAAYcdkAGHHqABhx+QAZccYAGXHZABlx6BAZcfAgGnHFABpx0wAacegQGnHwEBtxxwAbcdQAG3HiEBtx8CAbcMAgHnHJAB5x1hAeceSwHnHwEB9xzwAfcdAAH3HgAB9x9AARcc8AEXHQABFx4AARcfQA==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -631,15 +416,7 @@
 					<key>Comment</key>
 					<string>ALC1150, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					AUccEAFHHUABRx4RAUcfkAFHDAIBVxzwAVcd
-					AAFXHgABVx9AAWcc8AFnHQABZx4AAWcfQAF3
-					HPABdx0AAXceAAF3H0ABhxxAAYcdYAGHHgEB
-					hx8BAZccYAGXHZABlx6gAZcfkAGnHFABpx0Q
-					AaceAQGnHwEBtxxwAbcdQAG3HiEBtx8CAbcM
-					AgHnHJAB5x1hAeceSwHnHwEB9xzwAfcdAAH3
-					HgAB9x9AARcc8AEXHQABFx4AARcfQA==
-					</data>
+					<data>AUccEAFHHUABRx4RAUcfkAFHDAIBVxzwAVcdAAFXHgABVx9AAWcc8AFnHQABZx4AAWcfQAF3HPABdx0AAXceAAF3H0ABhxxAAYcdYAGHHgEBhx8BAZccYAGXHZABlx6gAZcfkAGnHFABpx0QAaceAQGnHwEBtxxwAbcdQAG3HiEBtx8CAbcMAgHnHJAB5x1hAeceSwHnHwEB9xzwAfcdAAH3HgAB9x9AARcc8AEXHQABFx4AARcfQA==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -651,14 +428,7 @@
 					<key>Comment</key>
 					<string>ALC269, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					IUcc8CFHHQAhRx4AIUcfQCFXHHAhVx1AIVce
-					ISFXHwIhZxzwIWcdACFnHgAhZx9AIXcc8CF3
-					HQAhdx4AIXcfQCGHHPAhhx0AIYceACGHH0Ah
-					lxzwIZcdACGXHgAhlx9AIacc8CGnHQAhpx4A
-					IacfQCG3HPAhtx0AIbceACG3H0Ah5xyQIecd
-					YSHnHksh5x8B
-					</data>
+					<data>IUcc8CFHHQAhRx4AIUcfQCFXHHAhVx1AIVceISFXHwIhZxzwIWcdACFnHgAhZx9AIXcc8CF3HQAhdx4AIXcfQCGHHPAhhx0AIYceACGHH0AhlxzwIZcdACGXHgAhlx9AIacc8CGnHQAhpx4AIacfQCG3HPAhtx0AIbceACG3H0Ah5xyQIecdYSHnHksh5x8B</data>
 					<key>FuncGroup</key>
 					<string>1</string>
 					<key>LayoutID</key>
@@ -670,9 +440,7 @@
 					<key>Comment</key>
 					<string>ALC283, Toleda</string>
 					<key>ConfigData</key>
-					<data>
-					AhccIAIXHRACFx4hAhcfAwIXDAI=
-					</data>
+					<data>AhccIAIXHRACFx4hAhcfAwIXDAI=</data>
 					<key>FuncGroup</key>
 					<string>1</string>
 					<key>LayoutID</key>
@@ -680,22 +448,13 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AQAAAA==
-					</data>
+					<data>AQAAAA==</data>
 					<key>CodecID</key>
 					<integer>351359086</integer>
 					<key>Comment</key>
 					<string>CX20590 for Lenovo Yoga 13, usr-sse2</string>
 					<key>ConfigData</key>
-					<data>
-					AZccMAGXHUABlx4rAZcfDgH3HCAB9x0BAfce
-					EAH3H5ACNxwQAjcdAQI3HqACNx+QAaccQAGn
-					HRABpx6BAacfAQG3HPABtx0AAbceAAG3H0AB
-					xxzwAccdAAHHHgABxx9AAdcc8AHXHQAB1x4A
-					AdcfQAHnHPAB5x0AAeceAAHnH0ACBxzwAgcd
-					AAIHHgACBx9AAicc8AInHQACJx4AAicfQA==
-					</data>
+					<data>AZccMAGXHUABlx4rAZcfDgH3HCAB9x0BAfceEAH3H5ACNxwQAjcdAQI3HqACNx+QAaccQAGnHRABpx6BAacfAQG3HPABtx0AAbceAAG3H0ABxxzwAccdAAHHHgABxx9AAdcc8AHXHQAB1x4AAdcfQAHnHPAB5x0AAeceAAHnH0ACBxzwAgcdAAIHHgACBx9AAicc8AInHQACJx4AAicfQA==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -703,19 +462,13 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283902569</integer>
 					<key>Comment</key>
 					<string>ALC269VC for Lenovo V580, ar4er</string>
 					<key>ConfigData</key>
-					<data>
-					ASccEAEnHQABJx6mAScfkAFHHCABRx0AAUce
-					FwFHH5ABVxwwAVcdEAFXHiEBVx8AAYccQAGH
-					HZABhx6BAYcfAgFHDAI=
-					</data>
+					<data>ASccEAEnHQABJx6mAScfkAFHHCABRx0AAUceFwFHH5ABVxwwAVcdEAFXHiEBVx8AAYccQAGHHZABhx6BAYcfAgFHDAI=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
