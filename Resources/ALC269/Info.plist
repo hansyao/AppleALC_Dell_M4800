@@ -43,6 +43,14 @@
 				<key>Path</key>
 				<string>Platforms3.xml.zlib</string>
 			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>29</integer>
+				<key>Comment</key>
+				<string>ALC269VC Lenovo V580, ar4er</string>
+				<key>Path</key>
+				<string>Platforms29.xml.zlib</string>
+			</dict>
 		</array>
 		<key>Layouts</key>
 		<array>
@@ -69,6 +77,14 @@
 				<string>ALC269 Asus K53SJ</string>
 				<key>Path</key>
 				<string>layout3.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>29</integer>
+				<key>Comment</key>
+				<string>ALC269VC Lenovo V580</string>
+				<key>Path</key>
+				<string>layout29.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>

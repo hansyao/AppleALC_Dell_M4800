@@ -701,6 +701,26 @@
 					<key>LayoutID</key>
 					<integer>12</integer>
 				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>CodecID</key>
+					<integer>283902569</integer>
+					<key>Comment</key>
+					<string>ALC269VC for Lenovo V580, ar4er</string>
+					<key>ConfigData</key>
+					<data>
+					ASccEAEnHQABJx6mAScfkAFHHCABRx0AAUce
+					FwFHH5ABVxwwAVcdEAFXHiEBVx8AAYccQAGH
+					HZABhx6BAYcfAgFHDAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>29</integer>
+				</dict>
 			</array>
 			<key>IOClass</key>
 			<string>AppleHDAHardwareConfigDriver</string>
