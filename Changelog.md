@@ -6,13 +6,13 @@ AppleALC Changelog
 - Fixed a rare loading failure due to IOHDA value bruteforce necessity
 - Added retry possibility for -alcpolicy
 - Set -alcpolicy mode the default mode
-- Added ALC269VC for Lenovo V850 codec support (by Ar4erR07)
-- Added ALC282 DSP features and config improvements (by savvamitrofanov)
-- Added ALC663, layout-id 28 codec support (by m-dudarev)
 - Added patch for AMD Radeon R7 370 HDMI (by John998)
 - Changed platforms12.xml.zlib for ALC889 set MinimumSampleRate to 48000 (by Sergey_Galan)
-- Added ALC662, layout-id 12 codec support (by AxenovGosha)
+- Added ALC269VC for Lenovo V850 codec support (by Ar4erR07)
 - Added ALC270, layout-id 27 codec support (by m-dudarev)
+- Added ALC282 DSP features and config improvements (by savvamitrofanov)
+- Added ALC662, layout-id 12 codec support (by AxenovGosha)
+- Added ALC663, layout-id 28 codec support (by m-dudarev)
 
 #### v1.0.3
 - Fixed AAPL,ig-platform-id naming
