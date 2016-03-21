@@ -9,7 +9,6 @@ AppleALC Changelog
 - Added ALC269VC for Lenovo V850 codec support (by Ar4erR07)
 - Added ALC282 DSP features and config improvements (by savvamitrofanov)
 - Added ALC663, layout-id 28 codec support (by m-dudarev)
-- Added ALC887-VD for Z97 codec support (by John998)
 - Added patch for AMD Radeon R7 370 HDMI (by John998)
 - Changed platforms12.xml.zlib for ALC889 set MinimumSampleRate to 48000 (by Sergey_Galan)
 

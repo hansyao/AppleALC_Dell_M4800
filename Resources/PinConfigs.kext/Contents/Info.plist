@@ -31,20 +31,6 @@
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
-					<key>Codec</key>
-					<string>Mirone - Realtek ALC887-VD</string>
-					<key>CodecID</key>
-					<integer>283904135</integer>
-					<key>ConfigData</key>
-					<data>AUccEAFHHUABRx4RAUcfAQGHHFABhx2QAYceoAGHH5ABlxxgAZcdkAGXHoEBlx8CAacccAGnHTABpx6BAacfAQG3HIABtx1AAbceIQG3HwIB5xyQAecdYAHnHkUB5x8BAUcMAg==</data>
-					<key>FuncGroup</key>
-					<integer>1</integer>
-					<key>LayoutID</key>
-					<integer>5</integer>
-				</dict>
-				<dict>
-					<key>AFGLowPowerState</key>
-					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283902594</integer>
 					<key>Comment</key>
