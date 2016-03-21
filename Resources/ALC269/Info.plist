@@ -5,7 +5,7 @@
 	<key>Vendor</key>
 	<string>Realtek</string>
 	<key>CodecID</key>
-	<integer>283902569</integer>
+	<integer>617</integer>
 	<key>CodecName</key>
 	<string>ALC269</string>
 	<key>Revisions</key>

@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.0.5
+- Added ALC887-VD, layout-id 5 codec support (by John98)
+- Changed error in ALC269 info.plist codec-id->617
 
 #### v1.0.4
 - Fixed a rare kernel panic due to uninitialised kern_proc
