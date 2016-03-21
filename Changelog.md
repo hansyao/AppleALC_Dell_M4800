@@ -11,6 +11,8 @@ AppleALC Changelog
 - Added ALC663, layout-id 28 codec support (by m-dudarev)
 - Added patch for AMD Radeon R7 370 HDMI (by John998)
 - Changed platforms12.xml.zlib for ALC889 set MinimumSampleRate to 48000 (by Sergey_Galan)
+- Added ALC662, layout-id 12 codec support (by AxenovGosha)
+- Added ALC270, layout-id 27 codec support (by m-dudarev)
 
 #### v1.0.3
 - Fixed AAPL,ig-platform-id naming

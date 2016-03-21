@@ -31,6 +31,36 @@
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>ALC270</string>
+					<key>CodecID</key>
+					<integer>283902576</integer>
+					<key>Comment</key>
+					<string>ALC270 for Asus Laptop with alternative microphone</string>
+					<key>ConfigData</key>
+					<data>ASccEAEnHQEBJx6mAScfkAFHHCABRx0BAUceEwFHH5ABdxzwAXcdAAF3HgABdx9AAYccMAGHHRABhx6BAYcfAgGXHPABlx0AAZceAAGXH0ABpxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4AAbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecdAAHnHgAB5x9AAhccQAIXHRACFx4hAhcfAgFHDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>27</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Realtek ALC662 by AxenovGosha</string>
+					<key>CodecID</key>
+					<integer>283903586</integer>
+					<key>ConfigData</key>
+					<data>AUccEAFHHUABRx4RAUcfkAGHHCABhx2QAYceoAGHH5AB5xwwAecdYQHnHksB5x8BAaccQAGnHTABpx6BAacfAQG3HFABtx1AAbceIQG3HwEBlxxgAZcdkAGXHoEBlx8C</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283902594</integer>
 					<key>Comment</key>
@@ -80,7 +110,7 @@
 					<key>CodecID</key>
 					<integer>283902576</integer>
 					<key>Comment</key>
-					<string>ALC270 for Asus K56CB</string>
+					<string>ALC270 for Asus Laptop</string>
 					<key>ConfigData</key>
 					<data>AScc8AEnHQABJx4AAScfQAFHHBABRx0BAUceFwFHH5ABdxzwAXcdAAF3HgABdx9AAYccIAGHHRABhx6BAYcfBAGXHDABlx0BAZceoAGXH5ABpxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4AAbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecdAAHnHgAB5x9AAhccIAIXHRACFx4hAhcfBAFHDAI=</data>
 					<key>FuncGroup</key>
