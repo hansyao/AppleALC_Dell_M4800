@@ -7,6 +7,7 @@ AppleALC Changelog
 - Added ALC887-VD, layout-id 5 codec support (by John98)
 - Added ALC887-VD, layout-id 11-15 codec support (by InsanelyDeepak)
 - Added ALC883, layout-id 7 codec support (by Andrey1970)
+- Changed resources and pinconfig for ALC888 deleted layout 1 using layout 5 for 3 ports and layout 7 for 5/6 ports 
 
 #### v1.0.4
 - Fixed a rare kernel panic due to uninitialised kern_proc
