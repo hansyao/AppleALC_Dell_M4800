@@ -30,10 +30,10 @@ static const char * kextPath1[] { "/System/Library/Extensions/AppleIntelFramebuf
 static const char * kextPath2[] { "/System/Library/Extensions/AppleHDA.kext/Contents/MacOS/AppleHDA", };
 static const char * kextPath3[] { "/System/Library/Extensions/AppleIntelFramebufferCapri.kext/Contents/MacOS/AppleIntelFramebufferCapri", };
 KernelPatcher::KextInfo kextList[] {
-	{ "com.apple.driver.AppleHDAController", kextPath0, 1, false },
-	{ "com.apple.driver.AppleIntelFramebufferAzul", kextPath1, 1, false },
-	{ "com.apple.driver.AppleHDA", kextPath2, 1, true },
-	{ "com.apple.driver.AppleIntelFramebufferCapri", kextPath3, 1, false },
+	{ "com.apple.driver.AppleHDAController", kextPath0, 1, false, KernelPatcher::KextInfo::Unloaded },
+	{ "com.apple.driver.AppleIntelFramebufferAzul", kextPath1, 1, false, KernelPatcher::KextInfo::Unloaded },
+	{ "com.apple.driver.AppleHDA", kextPath2, 1, true, KernelPatcher::KextInfo::Unloaded },
+	{ "com.apple.driver.AppleIntelFramebufferCapri", kextPath3, 1, false, KernelPatcher::KextInfo::Unloaded },
 };
 
 const size_t kextListSize {4};
