@@ -13,6 +13,8 @@
 		<key>Layouts</key>
 		<array>
 			<dict>
+				<key>Comment</key>
+				<string>Mirone 5/6 ports (Gray, Black, Orange, Pink, Green, Blue)</string>
 				<key>Id</key>
 				<integer>7</integer>
 				<key>Path</key>
@@ -22,10 +24,12 @@
 		<key>Platforms</key>
 		<array>
 			<dict>
+				<key>Comment</key>
+				<string>Mirone resources</string>
 				<key>Id</key>
 				<integer>7</integer>
 				<key>Path</key>
-				<string>Platforms.xml.zlib</string>
+				<string>PlatformsM.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>

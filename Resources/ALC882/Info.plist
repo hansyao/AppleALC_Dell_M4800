@@ -3,31 +3,47 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>alex1960</string>
+	<string>Vandroiy</string>
 	<key>CodecID</key>
-	<integer>1640</integer>
+	<integer>2178</integer>
 	<key>CodecName</key>
-	<string>ALC668</string>
+	<string>ALC882</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
 		<array>
 			<dict>
-				<key>Comment </key>
-				<string>Mirone Laptop Patch</string>
+				<key>Comment</key>
+				<string>Mirone 3 ports (Pink, Green, Blue)</string>
 				<key>Id</key>
-				<integer>3</integer>
+				<integer>5</integer>
 				<key>Path</key>
-				<string>layout3.xml.zlib</string>
+				<string>layout5.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Mirone 5/6 ports (Gray, Black, Orange, Pink, Green, Blue)</string>
+				<key>Id</key>
+				<integer>7</integer>
+				<key>Path</key>
+				<string>layout7.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
 			<dict>
-				<key>Comment </key>
-				<string>Mirone Laptop Patch</string>
+				<key>Comment</key>
+				<string>Mirone resources</string>
 				<key>Id</key>
-				<integer>3</integer>
+				<integer>5</integer>
+				<key>Path</key>
+				<string>PlatformsM.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Mirone resources</string>
+				<key>Id</key>
+				<integer>7</integer>
 				<key>Path</key>
 				<string>PlatformsM.xml.zlib</string>
 			</dict>
@@ -83,7 +99,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>AAAAAA==</data>
+			<data>ggjsEA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>
@@ -101,18 +117,6 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>ixnUEQ==</data>
-			<key>MinKernel</key>
-			<integer>13</integer>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>aAbsEA==</data>
-		</dict>
-		<dict>
-			<key>Count</key>
-			<integer>2</integer>
-			<key>Find</key>
 			<data>gxnUEQ==</data>
 			<key>MinKernel</key>
 			<integer>15</integer>
@@ -121,10 +125,6 @@
 			<key>Replace</key>
 			<data>AAAAAA==</data>
 		</dict>
-	</array>
-	<key>Revisions</key>
-	<array>
-		<integer>1048579</integer>
 	</array>
 	<key>Vendor</key>
 	<string>Realtek</string>
