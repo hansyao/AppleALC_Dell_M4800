@@ -4,6 +4,7 @@ AppleALC Changelog
 #### v1.0.5
 - Fixed AppleHDAController patching regression
 - Fixed incorrect ALC269 codec-id (should be 617)
+- Added embedded resource file deduplication reducing the size
 - Added ALC887-VD, layout-id 11-15 codec support (by InsanelyDeepak)
 - Added ALC883, layout-id 7 codec support (by Andrey1970)
 - Changed resources and pinconfig for ALC888 deleted layout 1 using layout 5 for 3 ports and layout 7 for 5/6 ports 
