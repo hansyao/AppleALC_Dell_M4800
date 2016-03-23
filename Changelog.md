@@ -17,7 +17,7 @@ AppleALC Changelog
 - Changed ALC662 resources to Mirone resources layout-id 5 for 3 ports and layout-id 7 for 5/6 ports 
 - Added ALC282 Mirone resources v1 - layout-id 3, v2 - layout-id 4
 - Sync PinConfig info.plist deleted unnesessary items
-- Sync layout names (1,2,3 - Toleda Desktop, 3,4 - Mirone Laptop, 5,7 - Mirone Desktop, 10-99 - Custom User layouts)
+- Sync layout names (1,2,3 - Toleda Desktop, 1-8 - Mirone Laptop Patches, 5,7 - Mirone Desktop, 10-99 - Custom User layouts)
 - Sync platforms names (platformsT - Toleda, PlatformsM - Mirone, Platforms10-99 - custom user platforms)
 - Fix error in ALC282 PinConfig
 - Added ALC270 Mirone resources layout-id 3, 4
