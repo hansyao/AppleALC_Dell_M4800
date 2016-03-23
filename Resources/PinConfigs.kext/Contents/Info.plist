@@ -32,6 +32,22 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>0x11d4198b</string>
+					<key>CodecID</key>
+					<integer>299112843</integer>
+					<key>Comment</key>
+					<string>AD1988B, Rodion</string>
+					<key>ConfigData</key>
+					<data>AXccIAF3HZABdx6gAXcfkQFHHCEBRx2QAUcegQFHHwIBJxwQAScdQAEnHhEBJx8BAkccEQJHHWACRx4RAkcfAQFnHBIBZx0QAWceEQFnHwECVxwUAlcdIAJXHhECVx8BAccc8AHHHQABxx4AAccfQAE3HPABNx0AATceAAE3H0ABpxzwAacdAAGnHgABpx9AAYcc8AGHHQABhx4AAYcfQA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Miron Laptop patch ALC269 Asus N53J</string>
 					<key>CodecID</key>
 					<integer>283902569</integer>
@@ -146,13 +162,13 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>ALC270</string>
+					<string>ALC269</string>
 					<key>CodecID</key>
-					<integer>283902576</integer>
+					<integer>283902569</integer>
 					<key>Comment</key>
-					<string>ALC270 for Asus Laptop with alternative microphone</string>
+					<string>Custom ALC269 for Acer Aspire by Andrey1970</string>
 					<key>ConfigData</key>
-					<data>ASccEAEnHQEBJx6mAScfkAFHHCABRx0BAUceEwFHH5ABdxzwAXcdAAF3HgABdx9AAYccMAGHHRABhx6BAYcfAgGXHPABlx0AAZceAAGXH0ABpxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4AAbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecdAAHnHgAB5x9AAhccQAIXHRACFx4hAhcfAgFHDAI=</data>
+					<data>AScc8AEnHQABJx4AAScfQAFHHBABRx0BAUceFwFHH5ABRwwCAXcc8AF3HQABdx4AAXcfQAGHHPABhx0AAYceAAGHH0ABlxzwAZcdAAGXHgABlx9AAacc8AGnHQABpx4AAacfQAG3HCABtx0BAbceoAG3H5AB1xzwAdcdAAHXHgAB1x9AAecc8AHnHQAB5x4AAecfQAIXHDACFx0QAhceIQIXHwMBhxwgAYcdkAGHHoEBhx8D</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -177,18 +193,16 @@
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
-					<key>Codec</key>
-					<string>0x11d4198b</string>
 					<key>CodecID</key>
-					<integer>299112843</integer>
+					<integer>283902569</integer>
 					<key>Comment</key>
-					<string>AD1988B, Rodion</string>
+					<string>ALC269VC for Lenovo V580, ar4er</string>
 					<key>ConfigData</key>
-					<data>AXccIAF3HZABdx6gAXcfkQFHHCEBRx2QAUcegQFHHwIBJxwQAScdQAEnHhEBJx8BAkccEQJHHWACRx4RAkcfAQFnHBIBZx0QAWceEQFnHwECVxwUAlcdIAJXHhECVx8BAccc8AHHHQABxx4AAccfQAE3HPABNx0AATceAAE3H0ABpxzwAacdAAGnHgABpx9AAYcc8AGHHQABhx4AAYcfQA==</data>
+					<data>ASccEAEnHQABJx6mAScfkAFHHCABRx0AAUceFwFHH5ABVxwwAVcdEAFXHiEBVx8AAYccQAGHHZABhx6BAYcfAgFHDAI=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
-					<integer>12</integer>
+					<integer>29</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -284,7 +298,7 @@
 					<key>CodecID</key>
 					<integer>283902594</integer>
 					<key>Comment</key>
-					<string>ALC282 for Asus x200la</string>
+					<string>Custom ALC282 for Asus x200la</string>
 					<key>ConfigData</key>
 					<data>ASccEAEnHQABJx6BAScfAAFHHCABRx0BAUceEAFHH5kBdxzwAXcdAAF3HgABdx9AAYcc8AGHHQABhx4AAYcfQAGXHDABlx0BAZcepgGXH5kBpxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4AAbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecdAAHnHgAB5x9AAhccUAIXHUACFx4rAhcfAAFHDAICFwwC</data>
 					<key>FuncGroup</key>
@@ -352,7 +366,7 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>0x10ec0663</string>
+					<string>ALC663</string>
 					<key>CodecID</key>
 					<integer>283903587</integer>
 					<key>Comment</key>
@@ -685,6 +699,30 @@
 					<integer>3</integer>
 				</dict>
 				<dict>
+					<key>CodecID</key>
+					<integer>283904256</integer>
+					<key>Comment</key>
+					<string>ALC1150, Toleda</string>
+					<key>ConfigData</key>
+					<data>AUccEAFHHUABRx4RAUcfkAFHDAIBVxwgAVcdEAFXHgEBVx8BAWccMAFnHWABZx4BAWcfAQF3HPABdx0AAXceAAF3H0ABhxxAAYcdkAGHHqABhx+QAZccYAGXHZABlx6BAZcfAgGnHFABpx0wAacegQGnHwEBtxxwAbcdQAG3HiEBtx8CAbcMAgHnHJAB5x1hAeceSwHnHwEB9xzwAfcdAAH3HgAB9x9AARcc8AEXHQABFx4AARcfQA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>CodecID</key>
+					<integer>283904256</integer>
+					<key>Comment</key>
+					<string>ALC1150, Toleda</string>
+					<key>ConfigData</key>
+					<data>AUccEAFHHUABRx4RAUcfkAFHDAIBVxzwAVcdAAFXHgABVx9AAWcc8AFnHQABZx4AAWcfQAF3HPABdx0AAXceAAF3H0ABhxxAAYcdYAGHHgEBhx8BAZccYAGXHZABlx6gAZcfkAGnHFABpx0QAaceAQGnHwEBtxxwAbcdQAG3HiEBtx8CAbcMAgHnHJAB5x1hAeceSwHnHwEB9xzwAfcdAAH3HgAB9x9AARcc8AEXHQABFx4AARcfQA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>2</integer>
+				</dict>
+				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
@@ -713,42 +751,6 @@
 					<integer>7</integer>
 				</dict>
 				<dict>
-					<key>CodecID</key>
-					<integer>283904256</integer>
-					<key>Comment</key>
-					<string>ALC1150, Toleda</string>
-					<key>ConfigData</key>
-					<data>AUccEAFHHUABRx4RAUcfkAFHDAIBVxwgAVcdEAFXHgEBVx8BAWccMAFnHWABZx4BAWcfAQF3HPABdx0AAXceAAF3H0ABhxxAAYcdkAGHHqABhx+QAZccYAGXHZABlx6BAZcfAgGnHFABpx0wAacegQGnHwEBtxxwAbcdQAG3HiEBtx8CAbcMAgHnHJAB5x1hAeceSwHnHwEB9xzwAfcdAAH3HgAB9x9AARcc8AEXHQABFx4AARcfQA==</data>
-					<key>FuncGroup</key>
-					<integer>1</integer>
-					<key>LayoutID</key>
-					<integer>1</integer>
-				</dict>
-				<dict>
-					<key>CodecID</key>
-					<integer>283904256</integer>
-					<key>Comment</key>
-					<string>ALC1150, Toleda</string>
-					<key>ConfigData</key>
-					<data>AUccEAFHHUABRx4RAUcfkAFHDAIBVxzwAVcdAAFXHgABVx9AAWcc8AFnHQABZx4AAWcfQAF3HPABdx0AAXceAAF3H0ABhxxAAYcdYAGHHgEBhx8BAZccYAGXHZABlx6gAZcfkAGnHFABpx0QAaceAQGnHwEBtxxwAbcdQAG3HiEBtx8CAbcMAgHnHJAB5x1hAeceSwHnHwEB9xzwAfcdAAH3HgAB9x9AARcc8AEXHQABFx4AARcfQA==</data>
-					<key>FuncGroup</key>
-					<integer>1</integer>
-					<key>LayoutID</key>
-					<integer>2</integer>
-				</dict>
-				<dict>
-					<key>CodecID</key>
-					<string>283902569</string>
-					<key>Comment</key>
-					<string>ALC269, Toleda</string>
-					<key>ConfigData</key>
-					<data>IUcc8CFHHQAhRx4AIUcfQCFXHHAhVx1AIVceISFXHwIhZxzwIWcdACFnHgAhZx9AIXcc8CF3HQAhdx4AIXcfQCGHHPAhhx0AIYceACGHH0AhlxzwIZcdACGXHgAhlx9AIacc8CGnHQAhpx4AIacfQCG3HPAhtx0AIbceACG3H0Ah5xyQIecdYSHnHksh5x8B</data>
-					<key>FuncGroup</key>
-					<string>1</string>
-					<key>LayoutID</key>
-					<string>1</string>
-				</dict>
-				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
@@ -775,20 +777,6 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>12</integer>
-				</dict>
-				<dict>
-					<key>AFGLowPowerState</key>
-					<data>AwAAAA==</data>
-					<key>CodecID</key>
-					<integer>283902569</integer>
-					<key>Comment</key>
-					<string>ALC269VC for Lenovo V580, ar4er</string>
-					<key>ConfigData</key>
-					<data>ASccEAEnHQABJx6mAScfkAFHHCABRx0AAUceFwFHH5ABVxwwAVcdEAFXHiEBVx8AAYccQAGHHZABhx6BAYcfAgFHDAI=</data>
-					<key>FuncGroup</key>
-					<integer>1</integer>
-					<key>LayoutID</key>
-					<integer>29</integer>
 				</dict>
 			</array>
 			<key>IOClass</key>
