@@ -20,6 +20,9 @@ AppleALC Changelog
 - Sync layout names (1,2,3 - Toleda Desktop, 3,4 - Mirone Laptop, 5,7 - Mirone Desktop, 10-99 - Custom User layouts)
 - Sync platforms names (platformsT - Toleda, PlatformsM - Mirone, Platforms10-99 - custom user platforms)
 - Fix error in ALC282 PinConfig
+- Added ALC270 Mirone resources layout-id 3, 4
+- Added ALC269, ALC269-VB, ALC269-VC Mirone resources layout-id 1, 2, 3, 4, 5, 6, 7, 8
+- Changed ALC269 layout-id 27 pinconfig
 
 #### v1.0.4
 - Fixed a rare kernel panic due to uninitialised kern_proc
