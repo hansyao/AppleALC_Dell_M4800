@@ -18,6 +18,7 @@ AppleALC Changelog
 - Sync PinConfig info.plist deleted unnesessary items
 - Sync layout names (1,2,3 - Toleda Desktop, 3,4 - Mirone Laptop, 5,7 - Mirone Desktop, 10-99 - Custom User layouts)
 - Sync platforms names (platformsT - Toleda, PlatformsM - Mirone, Platforms10-99 - custom user platforms)
+- Fix error in ALC282 PinConfig
 
 #### v1.0.4
 - Fixed a rare kernel panic due to uninitialised kern_proc
