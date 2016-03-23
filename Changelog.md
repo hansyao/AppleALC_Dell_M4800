@@ -8,12 +8,12 @@ AppleALC Changelog
 - Added ALC883, layout-id 7 codec support (by Andrey1970)
 - Changed resources and pinconfig for ALC888 deleted layout 1 using layout 5 for 3 ports and layout 7 for 5/6 ports 
 - Added CX20590 Mirone resources layout-id 3
-- Added ALC1150 Mirone resources layout-id 5 5 for 3 ports and layout-id 7 for 5/6 ports 
-- Added ALC887-VD Mirone resources layout-id 5 5 for 3 ports and layout-id 7 for 5/6 ports 
-- Added ALC882 codec support Mirone resources layout-id 5 5 for 3 ports and layout-id 7 for 5/6 ports
+- Added ALC1150 Mirone resources layout-id 5 for 3 ports and layout-id 7 for 5/6 ports 
+- Added ALC887-VD Mirone resources layout-id 5 for 3 ports and layout-id 7 for 5/6 ports 
+- Added ALC882 codec support Mirone resources layout-id 5 for 3 ports and layout-id 7 for 5/6 ports
 - Changed ALC668 resources and pinconfig Mirone resources
 - Added ALC663 Mirone resources v1 - layout-id 3, v2 - layout-id 4
-- Changed ALC662 resources to Mirone resources layout-id 5 5 for 3 ports and layout-id 7 for 5/6 ports 
+- Changed ALC662 resources to Mirone resources layout-id 5 for 3 ports and layout-id 7 for 5/6 ports 
 - Added ALC282 Mirone resources v1 - layout-id 3, v2 - layout-id 4
 - Sync PinConfig info.plist deleted unnesessary items
 - Sync layout names (1,2,3 - Toleda Desktop, 3,4 - Mirone Laptop, 5,7 - Mirone Desktop, 10-99 - Custom User layouts)
