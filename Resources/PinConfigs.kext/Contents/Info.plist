@@ -778,6 +778,20 @@
 					<key>LayoutID</key>
 					<integer>12</integer>
 				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Mirone - VIA VT1802</string>
+					<key>CodecID</key>
+					<integer>285639750</integer>
+					<key>ConfigData</key>
+					<data>AkccEAJHHQACRx4TAkcfkAJXHCACVx1AAlceIQJXHwEClxxAApcdAAKXHqAClx+QArccYAK3HZACtx6BArcfAgLXHHAC1x0QAtceRALXHwACRwwCAlcMAw==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>3</integer>
+				</dict>
 			</array>
 			<key>IOClass</key>
 			<string>AppleHDAHardwareConfigDriver</string>
