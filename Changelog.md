@@ -23,6 +23,7 @@ AppleALC Changelog
 - Added ALC270 Mirone resources layout-id 3, 4
 - Added ALC269, ALC269-VB, ALC269-VC Mirone resources layout-id 1, 2, 3, 4, 5, 6, 7, 8
 - Changed ALC269 layout-id 27 pinconfig
+- Added revision 0x100001 into ALC888 info.plist and sync platforms name to common view
 
 #### v1.0.4
 - Fixed a rare kernel panic due to uninitialised kern_proc

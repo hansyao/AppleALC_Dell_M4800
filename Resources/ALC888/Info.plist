@@ -10,6 +10,7 @@
 	<string>ALC888</string>
 	<key>Revisions</key>
 	<array>
+		<integer>1048577</integer>
 		<integer>1048833</integer>
 	</array>
 	<key>Files</key>
@@ -41,7 +42,7 @@
 				<key>Id</key>
 				<integer>5</integer>
 				<key>Path</key>
-				<string>Platforms57.xml.zlib</string>
+				<string>PlatformsM.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -49,7 +50,7 @@
 				<key>Id</key>
 				<integer>7</integer>
 				<key>Path</key>
-				<string>Platforms57.xml.zlib</string>
+				<string>PlatformsM.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
