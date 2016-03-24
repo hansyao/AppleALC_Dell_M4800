@@ -32,17 +32,73 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Mirone - ADI-1988B</string>
+					<key>CodecID</key>
+					<integer>299112843</integer>
+					<key>ConfigData</key>
+					<data>ARccEAEXHUABFx4hARcfAQEnHCABJx1AASceAQEnHwEBRxxAAUcdkAFHHqEBRx8BAVccUAFXHTABVx6BAVcfAQF3HHABdx2QAXceoQF3HwEBtxzwAbcd8QG3HkUBtx8B</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>5</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Mirone - ADI-1988B</string>
+					<key>CodecID</key>
+					<integer>299112843</integer>
+					<key>ConfigData</key>
+					<data>ARccEAEXHUABFx4hARcfAQEnHCABJx1AASceEQEnHwEBRxwwAUcdkAFHHqABRx+QAWccQAFnHRABZx4BAWcfAQF3HFABdx2QAXcegQF3HwEBtxxgAbcd8QG3HkUBtx8BAccccAHHHfEBxx7FAccfAQHXHIAB1x3xAdceVgHXHxgCRxyQAkcdYAJHHgECRx8BAlcckAJXHSACVx4BAlcfAQ==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>7</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>0x11d4198b</string>
 					<key>CodecID</key>
 					<integer>299112843</integer>
 					<key>Comment</key>
-					<string>AD1988B, Rodion</string>
+					<string>Custom AD1988B by Rodion</string>
 					<key>ConfigData</key>
 					<data>AXccIAF3HZABdx6gAXcfkQFHHCEBRx2QAUcegQFHHwIBJxwQAScdQAEnHhEBJx8BAkccEQJHHWACRx4RAkcfAQFnHBIBZx0QAWceEQFnHwECVxwUAlcdIAJXHhECVx8BAccc8AHHHQABxx4AAccfQAE3HPABNx0AATceAAE3H0ABpxzwAacdAAGnHgABpx9AAYcc8AGHHQABhx4AAYcfQA==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>12</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Mirone - ADI-2000B</string>
+					<key>CodecID</key>
+					<integer>299145371</integer>
+					<key>ConfigData</key>
+					<data>ARccEAEXHUABFx4hARcfAQEnHCABJx1AASceAQEnHwEBRxxAAUcdkAFHHqEBRx8BAVccUAFXHTABVx6BAVcfAQF3HHABdx2QAXceoQF3HwEBtxzwAbcd8QG3HkUBtx8B</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>5</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Mirone - ADI-2000B</string>
+					<key>CodecID</key>
+					<integer>299145371</integer>
+					<key>ConfigData</key>
+					<data>ARccMAEXHUABFx4hARcfAQEnHBABJx1AASceEQEnHwEBRxxAAUcdkAFHHqABRx+QAWccUAFnHRABZx4BAWcfAQF3HCABdx2QAXcegQF3HwEBtxygAbcd8QG3HkUBtx8BAcccYAHHHfEBxx7FAccfAQHXHLAB1x3xAdceVgHXHxgCRxxwAkcdYAJHHgECRx8BAlccgAJXHSACVx4BAlcfAQ==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>7</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>

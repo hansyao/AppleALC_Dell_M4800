@@ -3,36 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>Rodion</string>
+	<string>Vandroiy</string>
 	<key>CodecID</key>
-	<integer>6539</integer>
+	<integer>39067</integer>
 	<key>CodecName</key>
-	<string>AD1988B</string>
+	<string>AD2000B</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Mirone - AD1988B 3 ports</string>
+				<string>Mirone - AD2000B</string>
 				<key>Id</key>
 				<integer>5</integer>
 				<key>Path</key>
-				<string>layout5.xml.zlib</string>
+				<string>layout12.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Mirone - AD1988B 5/6 ports</string>
+				<string>Mirone - AD2000B</string>
 				<key>Id</key>
 				<integer>7</integer>
-				<key>Path</key>
-				<string>layout7.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Custom AD1988B by Rodion</string>
-				<key>Id</key>
-				<integer>12</integer>
 				<key>Path</key>
 				<string>layout12.xml.zlib</string>
 			</dict>
@@ -41,7 +33,7 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Mirone - AD1988B</string>
+				<string>Mirone - AD2000B</string>
 				<key>Id</key>
 				<integer>5</integer>
 				<key>Path</key>
@@ -49,24 +41,28 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Mirone - AD1988B</string>
+				<string>Mirone - AD2000B</string>
 				<key>Id</key>
 				<integer>7</integer>
 				<key>Path</key>
 				<string>PlatformsM.xml.zlib</string>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Custom AD1988B by Rodion</string>
-				<key>Id</key>
-				<integer>12</integer>
-				<key>Path</key>
-				<string>Platforms12.xml.zlib</string>
-			</dict>
 		</array>
 	</dict>
 	<key>Patches</key>
 	<array>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>ixnUEQ==</data>
+			<key>MinKernel</key>
+			<string>13</string>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>m5jUEQ==</data>
+		</dict>
 		<dict>
 			<key>Count</key>
 			<integer>2</integer>
