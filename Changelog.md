@@ -27,6 +27,7 @@ AppleALC Changelog
 - Added VIA VT1802 revision 0x100000 layout-id 3 codec support Mirone resources
 - Added AD1988B layout-id 5, 7 (3 ports, 5/6 Ports) Mirone resources and patch for El Capitan 8319D411->00000000
 - Added AD2000B codec support layout-id 5, 7 (3 ports, 5/6 Ports) Mirone resources
+- Change ALC270 layout28.xml.zlib and platforms28xml.zlib workaround for external microphone
 
 #### v1.0.4
 - Fixed a rare kernel panic due to uninitialised kern_proc
