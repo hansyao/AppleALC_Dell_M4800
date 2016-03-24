@@ -1,6 +1,9 @@
 AppleALC Changelog
 ==================
 
+#### v1.0.6
+- Reduced kext size by optimising capstone build options
+
 #### v1.0.5
 - Fixed AppleHDAController patching regression
 - Fixed incorrect ALC269 codec-id (should be 617)
