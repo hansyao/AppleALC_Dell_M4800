@@ -262,5 +262,59 @@
 		<key>Vendor</key>
 		<string>Intel</string>
 	</dict>
+	<dict>
+		<key>Device</key>
+		<integer>358</integer>
+		<key>Name</key>
+		<string>Intel HD4000 LVDS, HDMI (ig-platform-id 0x0166000A) Laptop only</string>
+		<key>Patches</key>
+		<array>
+			<dict>
+				<key>Count</key>
+				<integer>4</integer>
+				<key>Find</key>
+				<data>AgUAAAAEAAAHAQAAAwQAAAAEAAAHAQAA</data>
+				<key>MinKernel</key>
+				<string>13</string>
+				<key>Name</key>
+				<string>AppleIntelFramebufferCapri</string>
+				<key>Replace</key>
+				<data>BQMAAAIAAAAwAgAAAwQAAAAIAAAHAQAA</data>
+			</dict>
+		</array>
+		<key>Platform</key>
+		<integer>23461898</integer>
+		<key>Vendor</key>
+		<string>Intel</string>
+		<key>Model</key>
+		<string>Laptop</string>
+	</dict>
+	<dict>
+		<key>Device</key>
+		<integer>358</integer>
+		<key>Name</key>
+		<string>Intel HD4000 HDMI (ig-platform-id 0x0166000A) Desktop only</string>
+		<key>Patches</key>
+		<array>
+			<dict>
+				<key>Count</key>
+				<integer>4</integer>
+				<key>Find</key>
+				<data>AgUAAAAEAAAHAQAAAwQAAAAEAAAHAQAA</data>
+				<key>MinKernel</key>
+				<string>13</string>
+				<key>Name</key>
+				<string>AppleIntelFramebufferCapri</string>
+				<key>Replace</key>
+				<data>AgUAAAAIAAAHAQAAAwQAAAAIAAAHAQAA</data>
+			</dict>
+		</array>
+		<key>Platform</key>
+		<integer>23461898</integer>
+		<key>Vendor</key>
+		<string>Intel</string>
+		<key>Model</key>
+		<string>Desktop</string>
+	</dict>
 </array>
 </plist>

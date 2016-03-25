@@ -14877,6 +14877,16 @@ static const KextPatch patches25[] {
 	{ { &kextList[3], patchBuf206, patchBuf207, 12, 4 }, 13, KernelPatcher::KernelAny },
 	{ { &kextList[3], patchBuf208, patchBuf209, 12, 6 }, 13, KernelPatcher::KernelAny },
 };
+static const uint8_t patchBuf210[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, };
+static const uint8_t patchBuf211[] { 0x05, 0x03, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x30, 0x02, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, };
+static const KextPatch patches26[] {
+	{ { &kextList[3], patchBuf210, patchBuf211, 24, 4 }, 13, KernelPatcher::KernelAny },
+};
+static const uint8_t patchBuf212[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, };
+static const uint8_t patchBuf213[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, };
+static const KextPatch patches27[] {
+	{ { &kextList[3], patchBuf212, patchBuf213, 24, 4 }, 13, KernelPatcher::KernelAny },
+};
 ControllerModInfo controllerMod[] {
 	{ "Z97 HDEF controller", 0x1002, 0x8CA0, nullptr, 0, ControllerModInfo::PlatformAny, IOUtil::ComputerModel::ComputerAny, patches20, 1 },
 	{ "HD4600 controller", 0x8086, 0xC0C, nullptr, 0, ControllerModInfo::PlatformAny, IOUtil::ComputerModel::ComputerAny, patches21, 5 },
@@ -14884,6 +14894,8 @@ ControllerModInfo controllerMod[] {
 	{ "Intel HD4600 HDMI (ig-platform-id 0x0d220003)", 0x8086, 0x412, nullptr, 0, 220332035, IOUtil::ComputerModel::ComputerAny, patches23, 3 },
 	{ "Intel HD4000 HDMI (ig-platform-id 0x01660003)", 0x8086, 0x166, nullptr, 0, 23461891, IOUtil::ComputerModel::ComputerAny, patches24, 3 },
 	{ "Intel HD4000 HDMI (ig-platform-id 0x01660009)", 0x8086, 0x166, nullptr, 0, 23461897, IOUtil::ComputerModel::ComputerAny, patches25, 2 },
+	{ "Intel HD4000 LVDS, HDMI (ig-platform-id 0x0166000A) Laptop only", 0x8086, 0x166, nullptr, 0, 23461898, IOUtil::ComputerModel::ComputerLaptop, patches26, 1 },
+	{ "Intel HD4000 HDMI (ig-platform-id 0x0166000A) Desktop only", 0x8086, 0x166, nullptr, 0, 23461898, IOUtil::ComputerModel::ComputerDesktop, patches27, 1 },
 };
 
-const size_t controllerModSize {6};
+const size_t controllerModSize {8};
