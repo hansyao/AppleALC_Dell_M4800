@@ -848,6 +848,34 @@
 					<key>LayoutID</key>
 					<integer>3</integer>
 				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Mirone - VIA VT2021</string>
+					<key>CodecID</key>
+					<integer>285606977</integer>
+					<key>ConfigData</key>
+					<data>IkccECJHHUAiRx4BIkcfASKHHCAihx1AIoceISKHHwEilxwwIpcdkCKXHqEilx8CIqccQCKnHTAipx6BIqcfASK3HFAitx2QIrcegSK3HwEi5xxgIucdECLnHkUi5x8A</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>5</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Mirone - VIA VT2021</string>
+					<key>CodecID</key>
+					<integer>285606977</integer>
+					<key>ConfigData</key>
+					<data>IkccECJHHUAiRx4RIkcfASJXHCAiVx0QIlceASJXHwEiZxwwImcdYCJnHgEiZx8BInccQCJ3HSAidx4BIncfASKHHFAihx1AIoceISKHHwEilxxgIpcdkCKXHqEilx8CIqcccCKnHTAipx6BIqcfASK3HIAitx2QIrcegSK3HwEi5xygIucdECLnHkUi5x8A</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>7</integer>
+				</dict>
 			</array>
 			<key>IOClass</key>
 			<string>AppleHDAHardwareConfigDriver</string>
