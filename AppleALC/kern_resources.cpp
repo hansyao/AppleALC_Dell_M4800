@@ -14878,12 +14878,12 @@ static const KextPatch patches25[] {
 	{ { &kextList[3], patchBuf208, patchBuf209, 12, 6 }, 13, KernelPatcher::KernelAny },
 };
 ControllerModInfo controllerMod[] {
-	{ "Z97 HDEF controller", 0x1002, 0x8CA0, nullptr, 0, ControllerModInfo::PlatformAny, patches20, 1 },
-	{ "HD4600 controller", 0x8086, 0xC0C, nullptr, 0, ControllerModInfo::PlatformAny, patches21, 5 },
-	{ "X99 HDEF controller", 0x8086, 0x8D20, nullptr, 0, ControllerModInfo::PlatformAny, patches22, 1 },
-	{ "Intel HD4600 HDMI (ig-platform-id 0x0d220003)", 0x8086, 0x412, nullptr, 0, 220332035, patches23, 3 },
-	{ "Intel HD4000 HDMI (ig-platform-id 0x01660003)", 0x8086, 0x166, nullptr, 0, 23461891, patches24, 3 },
-	{ "Intel HD4000 HDMI (ig-platform-id 0x01660009)", 0x8086, 0x166, nullptr, 0, 23461897, patches25, 2 },
+	{ "Z97 HDEF controller", 0x1002, 0x8CA0, nullptr, 0, ControllerModInfo::PlatformAny, IOUtil::ComputerModel::ComputerAny, patches20, 1 },
+	{ "HD4600 controller", 0x8086, 0xC0C, nullptr, 0, ControllerModInfo::PlatformAny, IOUtil::ComputerModel::ComputerAny, patches21, 5 },
+	{ "X99 HDEF controller", 0x8086, 0x8D20, nullptr, 0, ControllerModInfo::PlatformAny, IOUtil::ComputerModel::ComputerAny, patches22, 1 },
+	{ "Intel HD4600 HDMI (ig-platform-id 0x0d220003)", 0x8086, 0x412, nullptr, 0, 220332035, IOUtil::ComputerModel::ComputerAny, patches23, 3 },
+	{ "Intel HD4000 HDMI (ig-platform-id 0x01660003)", 0x8086, 0x166, nullptr, 0, 23461891, IOUtil::ComputerModel::ComputerAny, patches24, 3 },
+	{ "Intel HD4000 HDMI (ig-platform-id 0x01660009)", 0x8086, 0x166, nullptr, 0, 23461897, IOUtil::ComputerModel::ComputerAny, patches25, 2 },
 };
 
 const size_t controllerModSize {6};

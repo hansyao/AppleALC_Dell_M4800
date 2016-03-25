@@ -3,6 +3,7 @@ AppleALC Changelog
 
 #### v1.0.6
 - Reduced kext size by optimising capstone build options
+- Added Model key with possible Laptop/Desktop/Any values to Controllers.plist (matches IODT/comptaible)
 - Added VIA VT2020/2021 codec support layout-id 5, 7 Mirone resources
 - Added Z97 HDEF controller patch
 

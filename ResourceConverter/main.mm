@@ -279,12 +279,22 @@ static void generateControllers(NSString *file, NSArray *ctrls, NSDictionary *ve
 	for (NSDictionary *entry in ctrls) {
 		auto revs = generateRevisions(file, entry);
 		auto patches = generatePatches(file, entry, kextIndexes);
+		
+		auto model = @"IOUtil::ComputerModel::ComputerAny";
+		if ([entry objectForKey:@"Model"]) {
+			if ([[entry objectForKey:@"Model"] isEqualToString:@"Laptop"]) {
+				model = @"IOUtil::ComputerModel::ComputerLaptop";
+			} else if ([[entry objectForKey:@"Model"] isEqualToString:@"Desktop"]) {
+				model = @"IOUtil::ComputerModel::ComputerDesktop";
+			}
+		}
 				
-		[ctrlModSection appendFormat:@"\t{ \"%@\", 0x%X, 0x%X, %@, %@, %@ },\n",
+		[ctrlModSection appendFormat:@"\t{ \"%@\", 0x%X, 0x%X, %@, %@, %@, %@ },\n",
 		 [entry objectForKey:@"Name"],
 		 [[vendors objectForKey:[entry objectForKey:@"Vendor"]] unsignedShortValue],
 		 [[entry objectForKey:@"Device"] unsignedShortValue],
-		 revs, [entry objectForKey:@"Platform"] ?: @"ControllerModInfo::PlatformAny", patches
+		 revs, [entry objectForKey:@"Platform"] ?: @"ControllerModInfo::PlatformAny",
+		 model, patches
 		];
 	}
 	

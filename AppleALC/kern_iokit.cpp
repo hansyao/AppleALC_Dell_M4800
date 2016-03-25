@@ -31,6 +31,30 @@ namespace IOUtil {
 		return nullptr;
 	}
 	
+	int getComputerModel() {
+		auto entry = IORegistryEntry::fromPath("/", gIODTPlane);
+		if (entry) {
+			auto prop =  entry->getProperty("compatible");
+			if (prop) {
+				auto data = OSDynamicCast(OSData, prop);
+				if (data) {
+					//TODO: make this more reliable
+					if (strstr(static_cast<const char *>(data->getBytesNoCopy()), "Book", strlen("Book"))) {
+						return ComputerModel::ComputerLaptop;
+					} else {
+						return ComputerModel::ComputerDesktop;
+					}
+				} else {
+					DBGLOG("ioutil @ compatible property has invalid format");
+				}
+			} else {
+				DBGLOG("ioutil @ failed to get compatible property");
+			}
+		}
+		DBGLOG("ioutil @ failed to get DT entry");
+		return ComputerModel::ComputerAny;
+	}
+	
 	IORegistryEntry *findEntryByPrefix(const char *path, const char *prefix, const IORegistryPlane *plane, bool (*proc)(IORegistryEntry *), bool brute) {
 		auto entry = IORegistryEntry::fromPath(path, plane);
 		if (entry) {
