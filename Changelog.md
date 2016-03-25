@@ -4,6 +4,7 @@ AppleALC Changelog
 #### v1.0.6
 - Reduced kext size by optimising capstone build options
 - Added VIA VT2020/2021 codec support layout-id 5, 7 Mirone resources
+- Added Z97 HDEF controller patch
 
 #### v1.0.5
 - Fixed AppleHDAController patching regression

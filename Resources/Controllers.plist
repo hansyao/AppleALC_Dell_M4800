@@ -4,9 +4,9 @@
 <array>
 	<dict>
 		<key>Device</key>
-		<integer>26640</integer>
+		<integer>36000</integer>
 		<key>Name</key>
-		<string>AMD Radeon R7 370</string>
+		<string>Z97 HDEF controller</string>
 		<key>Patches</key>
 		<array>
 			<dict>
