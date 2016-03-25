@@ -76,6 +76,10 @@
 			<data>AAAAAA==</data>
 		</dict>
 	</array>
+	<key>Revisions</key>
+	<array>
+		<integer>1048832</integer>
+	</array>
 	<key>Vendor</key>
 	<string>VIA</string>
 </dict>
