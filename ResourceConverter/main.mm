@@ -68,8 +68,8 @@ static NSDictionary * generateKexts(NSString *file, NSDictionary *kexts) {
 		
 		[kextPathsSection appendString:makeStringList(@"kextPath", kextIndex, kextPaths)];
 		
-		[kextSection appendFormat:@"\t{ \"%@\", kextPath%zu, %lu },\n",
-			kextID, kextIndex, [kextPaths count]];
+		[kextSection appendFormat:@"\t{ \"%@\", kextPath%zu, %lu, %s, KernelPatcher::KextInfo::Unloaded },\n",
+			kextID, kextIndex, [kextPaths count], [kextInfo objectForKey:@"Detect"] ? "true" : "false" ];
 		
 		[kextNums setObject:[NSNumber numberWithUnsignedLongLong:kextIndex] forKey:kextName];
 		
@@ -87,10 +87,15 @@ static NSDictionary * generateKexts(NSString *file, NSDictionary *kexts) {
 
 static NSString *generateFile(NSString *file, NSString *path, NSString *inFile) {
 	static size_t fileIndex {0};
+	static NSMutableDictionary *fileList = [[NSMutableDictionary alloc] init];
 	
 	auto fullInPath = [[NSString alloc] initWithFormat:@"%@/%@", path, inFile];
 	auto data = [[NSFileManager defaultManager] contentsAtPath:fullInPath];
 	auto bytes = static_cast<const uint8_t *>([data bytes]);
+	
+	if ([fileList objectForKey:fullInPath]) {
+		return [[NSString alloc] initWithFormat:@"file%@, %zu", [fileList objectForKey:fullInPath], [data length]];
+	}
 	
 	if (data) {
 		appendFile(file, [[NSString alloc] initWithFormat:@"static const uint8_t file%zu[] {\n", fileIndex]);
@@ -106,6 +111,7 @@ static NSString *generateFile(NSString *file, NSString *path, NSString *inFile) 
 		}
 		
 		appendFile(file, [[NSString alloc] initWithFormat:@"};\n"]);
+		[fileList setValue:[NSNumber numberWithUnsignedLongLong:fileIndex] forKey:fullInPath];
 		fileIndex++;
 		return [[NSString alloc] initWithFormat:@"file%zu, %zu", fileIndex-1, [data length]];
 	}

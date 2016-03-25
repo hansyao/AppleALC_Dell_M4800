@@ -16,6 +16,13 @@
 namespace IOUtil {
 
 	/**
+	 *  AppleHDAEngine::getLocation teaches us to use while(1) when talking to IOReg
+	 *  This feels mad and insane, since it may prevent the system from booting.
+	 *  Although this had never happened, we will use a far bigger fail-safe stop value.
+	 */
+	static constexpr size_t bruteMax {0x10000000};
+
+	/**
 	 *  Read OSData
 	 *
 	 *  @param sect   IORegistryEntry section
@@ -59,10 +66,11 @@ namespace IOUtil {
 	 *  @param prefix  entry prefix at path
 	 *  @param plane   plane to lookup in
 	 *  @param proc    process every found entry with the method
+	 *  @param brute   kick ioreg until a value is found
 	 *
 	 *  @return entry pointer (must NOT be released) or nullptr (on failure or in proc mode)
 	 */
-	IORegistryEntry *findEntryByPrefix(const char *path, const char *prefix, const IORegistryPlane *plane, void (*proc)(IORegistryEntry *)=nullptr);
+	IORegistryEntry *findEntryByPrefix(const char *path, const char *prefix, const IORegistryPlane *plane, bool (*proc)(IORegistryEntry *)=nullptr, bool brute=false);
 	
 	/**
 	 *  Retrieve an ioreg entry by path/prefix
@@ -71,10 +79,11 @@ namespace IOUtil {
 	 *  @param prefix  entry prefix at path
 	 *  @param plane   plane to lookup in
 	 *  @param proc    process every found entry with the method
+	 *  @param brute   kick ioreg until a value is found
 	 *
 	 *  @return entry pointer (must NOT be released) or nullptr (on failure or in proc mode)
 	 */
-	IORegistryEntry *findEntryByPrefix(IORegistryEntry *entry, const char *prefix, const IORegistryPlane *plane, void (*proc)(IORegistryEntry *)=nullptr);
+	IORegistryEntry *findEntryByPrefix(IORegistryEntry *entry, const char *prefix, const IORegistryPlane *plane, bool (*proc)(IORegistryEntry *)=nullptr, bool brute=false);
 }
 
 #endif /* kern_iokit_hpp */
