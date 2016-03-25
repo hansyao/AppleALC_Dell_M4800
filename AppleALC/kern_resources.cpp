@@ -14892,8 +14892,8 @@ ControllerModInfo controllerMod[] {
 	{ "HD4600 controller", 0x8086, 0xC0C, nullptr, 0, ControllerModInfo::PlatformAny, IOUtil::ComputerModel::ComputerAny, patches21, 5 },
 	{ "X99 HDEF controller", 0x8086, 0x8D20, nullptr, 0, ControllerModInfo::PlatformAny, IOUtil::ComputerModel::ComputerAny, patches22, 1 },
 	{ "Intel HD4600 HDMI (ig-platform-id 0x0d220003)", 0x8086, 0x412, nullptr, 0, 220332035, IOUtil::ComputerModel::ComputerAny, patches23, 3 },
-	{ "Intel HD4000 HDMI (ig-platform-id 0x01660003)", 0x8086, 0x166, nullptr, 0, 23461891, IOUtil::ComputerModel::ComputerAny, patches24, 3 },
-	{ "Intel HD4000 HDMI (ig-platform-id 0x01660009)", 0x8086, 0x166, nullptr, 0, 23461897, IOUtil::ComputerModel::ComputerAny, patches25, 2 },
+	{ "Intel HD4000 HDMI (ig-platform-id 0x01660003)", 0x8086, 0x166, nullptr, 0, 23461891, IOUtil::ComputerModel::ComputerLaptop, patches24, 3 },
+	{ "Intel HD4000 HDMI (ig-platform-id 0x01660009)", 0x8086, 0x166, nullptr, 0, 23461897, IOUtil::ComputerModel::ComputerLaptop, patches25, 2 },
 	{ "Intel HD4000 LVDS, HDMI (ig-platform-id 0x0166000A) Laptop only", 0x8086, 0x166, nullptr, 0, 23461898, IOUtil::ComputerModel::ComputerLaptop, patches26, 1 },
 	{ "Intel HD4000 HDMI (ig-platform-id 0x0166000A) Desktop only", 0x8086, 0x166, nullptr, 0, 23461898, IOUtil::ComputerModel::ComputerDesktop, patches27, 1 },
 };

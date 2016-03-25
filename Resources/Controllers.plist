@@ -224,6 +224,8 @@
 		<integer>23461891</integer>
 		<key>Vendor</key>
 		<string>Intel</string>
+		<key>Model</key>
+		<string>Laptop</string>
 	</dict>
 	<dict>
 		<key>Device</key>
@@ -261,6 +263,8 @@
 		<integer>23461897</integer>
 		<key>Vendor</key>
 		<string>Intel</string>
+		<key>Model</key>
+		<string>Laptop</string>
 	</dict>
 	<dict>
 		<key>Device</key>
