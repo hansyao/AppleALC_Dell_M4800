@@ -14888,7 +14888,7 @@ static const KextPatch patches27[] {
 	{ { &kextList[3], patchBuf212, patchBuf213, 24, 4 }, 13, KernelPatcher::KernelAny },
 };
 ControllerModInfo controllerMod[] {
-	{ "Z97 HDEF controller", 0x1002, 0x8CA0, nullptr, 0, ControllerModInfo::PlatformAny, IOUtil::ComputerModel::ComputerAny, patches20, 1 },
+	{ "Z97 HDEF controller", 0x8086, 0x8CA0, nullptr, 0, ControllerModInfo::PlatformAny, IOUtil::ComputerModel::ComputerAny, patches20, 1 },
 	{ "HD4600 controller", 0x8086, 0xC0C, nullptr, 0, ControllerModInfo::PlatformAny, IOUtil::ComputerModel::ComputerAny, patches21, 5 },
 	{ "X99 HDEF controller", 0x8086, 0x8D20, nullptr, 0, ControllerModInfo::PlatformAny, IOUtil::ComputerModel::ComputerAny, patches22, 1 },
 	{ "Intel HD4600 HDMI (ig-platform-id 0x0d220003)", 0x8086, 0x412, nullptr, 0, 220332035, IOUtil::ComputerModel::ComputerAny, patches23, 3 },
