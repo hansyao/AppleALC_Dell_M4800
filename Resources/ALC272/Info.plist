@@ -3,81 +3,33 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>m-dudarev</string>
+	<string>vandroiy</string>
 	<key>CodecID</key>
-	<integer>624</integer>
+	<integer>626</integer>
 	<key>CodecName</key>
-	<string>ALC270</string>
+	<string>ALC272</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Mirone Laptop Patch ALC270 v2</string>
-				<key>Id</key>
-				<integer>4</integer>
-				<key>Path</key>
-				<string>layout4.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Mirone Laptop Patch ALC270 v1</string>
+				<string>Mirone Laptop Patch ALC272</string>
 				<key>Id</key>
 				<integer>3</integer>
 				<key>Path</key>
 				<string>layout3.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Custom by m-dudarev</string>
-				<key>Id</key>
-				<integer>27</integer>
-				<key>Path</key>
-				<string>layout27.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Custom by m-dudarev</string>
-				<key>Id</key>
-				<integer>28</integer>
-				<key>Path</key>
-				<string>layout28.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Mirone Laptop Patch ALC270 v2</string>
-				<key>Id</key>
-				<integer>4</integer>
-				<key>Path</key>
-				<string>PlatformsM4.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Mirone Laptop Patch ALC270 v1</string>
+				<string>Mirone Laptop Patch ALC272</string>
 				<key>Id</key>
 				<integer>3</integer>
 				<key>Path</key>
 				<string>PlatformsM3.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Custom by m-dudarev</string>
-				<key>Id</key>
-				<integer>27</integer>
-				<key>Path</key>
-				<string>Platforms27.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Custom by m-dudarev</string>
-				<key>Id</key>
-				<integer>28</integer>
-				<key>Path</key>
-				<string>Platforms28.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -149,13 +101,13 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>ixnUEQ==</data>
+			<data>hBnUEQ==</data>
 			<key>MinKernel</key>
 			<integer>13</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>cALsEA==</data>
+			<data>cgLsEA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>
@@ -172,7 +124,7 @@
 	</array>
 	<key>Revisions</key>
 	<array>
-		<integer>1048832</integer>
+		<integer>1048577</integer>
 	</array>
 	<key>Vendor</key>
 	<string>Realtek</string>
