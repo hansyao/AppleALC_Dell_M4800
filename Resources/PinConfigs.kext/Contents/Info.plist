@@ -451,6 +451,20 @@
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283903592</integer>
+					<key>Comment</key>
+					<string>ALC668 Mirone Laptop Patch (Asus N750Jk)</string>
+					<key>ConfigData</key>
+					<data>ABJxwQAScdAAEnHqABJx+QAUccIAFHHQABRx4XAUcfkAFXHDABVx0QAVceIQFXHwEBZxxAAWcdAAFnHgABZx9AAbccUAG3HRABtx6BAbcfAgHXHGAB1x0AAdcewAHXH0ABRwwA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Mirone - Realtek ALC882</string>
 					<key>CodecID</key>
