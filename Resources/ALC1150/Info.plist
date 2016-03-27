@@ -93,6 +93,14 @@
 				<key>Path</key>
 				<string>PlatformsT.xml.zlib</string>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Custom by vit9696 (Toleda)</string>
+				<key>Id</key>
+				<integer>3</integer>
+				<key>Path</key>
+				<string>PlatformsT.xml.zlib</string>
+			</dict>
 		</array>
 	</dict>
 	<key>Patches</key>
