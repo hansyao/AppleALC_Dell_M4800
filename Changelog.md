@@ -12,6 +12,7 @@ AppleALC Changelog
 - Added ALC1150 layout-id 3 (Toleda update)
 - Added missing data for ALC1150 resources
 - Added ALC233 codec support layout-id 3 Mirone resources
+- Added ALC235 codec support layout-id 3 Mirone resources
 
 #### v1.0.5
 - Fixed AppleHDAController patching regression
