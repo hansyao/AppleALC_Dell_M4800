@@ -9,6 +9,7 @@ AppleALC Changelog
 - Added Intel HD4000 HDMI support ig-platform-id 0x0166000A for Laptop and Desktop
 - Added ALC668 layout-id 28 (for Asus N750Jk int.mic and sub working)
 - Added ALC272 layout-id 3 Mirone resources
+- Added ALC1150 layout-id 3 (Toleda update)
 
 #### v1.0.5
 - Fixed AppleHDAController patching regression
