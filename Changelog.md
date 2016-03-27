@@ -15,6 +15,7 @@ AppleALC Changelog
 - Added ALC235 codec support layout-id 3 Mirone resources
 - Added ALC255 codec support layout-id 3 Mirone resources
 - Added ALC268 codec support layout-id 3 Mirone resources
+- Fixed incorrect ALC282 codec-id (should be 642)
 
 #### v1.0.5
 - Fixed AppleHDAController patching regression
