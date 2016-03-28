@@ -60,6 +60,24 @@ namespace IOUtil {
 	OSSerialize *getProperty(IORegistryEntry *entry, const char *property);
 	
 	/**
+	 *  Model variants
+	 */
+	struct ComputerModel {
+		enum {
+			ComputerLaptop = 0x1,
+			ComputerDesktop = 0x2,
+			ComputerAny = ComputerLaptop | ComputerDesktop
+		};
+	};
+	
+	/**
+	 *  Retrieve the computer model (hw.model syscall analogue that actually works)
+	 *
+	 *  @return valid computer model or ComputerAny
+	 */
+	int getComputerModel();
+	
+	/**
 	 *  Retrieve an ioreg entry by path/prefix
 	 *
 	 *  @param path    an exact lookup path

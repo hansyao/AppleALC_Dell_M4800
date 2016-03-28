@@ -210,6 +210,8 @@ void AlcEnabler::grabControllers() {
 		return;
 	}
 	
+	computerModel = IOUtil::getComputerModel();
+	
 	bool found {false};
 	
 	for (size_t lookup = 0; lookup < codecLookupSize; lookup++) {
@@ -334,6 +336,12 @@ void AlcEnabler::validateControllers() {
 				if (controllerMod[mod].platform != ControllerModInfo::PlatformAny &&
 					controllerMod[mod].platform != controllers[i]->platform) {
 					DBGLOG("alc @ not matching platform was found %X vs %X", controllerMod[mod].platform, controllers[i]->platform);
+					continue;
+				}
+				
+				// Check if computer model is suitable
+				if (!(computerModel & controllerMod[mod].computerModel)) {
+					DBGLOG("alc @ unsuitable computer model was found %X vs %X", controllerMod[mod].computerModel, computerModel);
 					continue;
 				}
 			

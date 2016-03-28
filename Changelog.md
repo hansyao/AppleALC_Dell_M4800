@@ -3,6 +3,19 @@ AppleALC Changelog
 
 #### v1.0.6
 - Reduced kext size by optimising capstone build options
+- Added Model key with possible Laptop/Desktop/Any values to Controllers.plist (matches IODT/comptaible)
+- Added VIA VT2020/2021 codec support layout-id 5, 7 Mirone resources
+- Added Z97 HDEF controller patch
+- Added Intel HD4000 HDMI support ig-platform-id 0x0166000A for Laptop and Desktop
+- Added ALC668 layout-id 28 (for Asus N750Jk int.mic and sub working)
+- Added ALC272 layout-id 3 Mirone resources
+- Added ALC1150 layout-id 3 (Toleda update)
+- Added missing data for ALC1150 resources
+- Added ALC233 codec support layout-id 3 Mirone resources
+- Added ALC235 codec support layout-id 3 Mirone resources
+- Added ALC255 codec support layout-id 3 Mirone resources
+- Added ALC268 codec support layout-id 3 Mirone resources
+- Fixed incorrect ALC282 codec-id (should be 642)
 
 #### v1.0.5
 - Fixed AppleHDAController patching regression

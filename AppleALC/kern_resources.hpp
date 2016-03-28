@@ -10,6 +10,7 @@
 
 #include "kern_util.hpp"
 #include "kern_patcher.hpp"
+#include "kern_iokit.hpp"
 
 #include <sys/types.h>
 #include <stdint.h>
@@ -42,6 +43,7 @@ struct ControllerModInfo {
 	const uint32_t *revisions;
 	size_t revisionNum;
 	uint32_t platform;
+	int computerModel;
 	const KextPatch *patches;
 	size_t patchNum;
 };
