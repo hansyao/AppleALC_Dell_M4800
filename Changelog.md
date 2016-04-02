@@ -1,6 +1,10 @@
 AppleALC Changelog
 ==================
 
+#### v1.0.7
+- Added 0x100004 revision to ALC269
+- Added custom ALC269 resources for SONY VAIO VPCEB3M1R layout-id 20
+
 #### v1.0.6
 - Reduced kext size by optimising capstone build options
 - Added Model key with possible Laptop/Desktop/Any values to Controllers.plist (matches IODT/comptaible)
@@ -16,7 +20,6 @@ AppleALC Changelog
 - Added ALC255 codec support layout-id 3 Mirone resources
 - Added ALC268 codec support layout-id 3 Mirone resources
 - Fixed incorrect ALC282 codec-id (should be 642)
-- Added custom ALC269 resources for SONY VAIO VPCEB3M1R layout-id 20
 
 #### v1.0.5
 - Fixed AppleHDAController patching regression
