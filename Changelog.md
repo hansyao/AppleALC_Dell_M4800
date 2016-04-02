@@ -16,6 +16,7 @@ AppleALC Changelog
 - Added ALC255 codec support layout-id 3 Mirone resources
 - Added ALC268 codec support layout-id 3 Mirone resources
 - Fixed incorrect ALC282 codec-id (should be 642)
+- Added custom ALC269 resources for SONY VAIO VPCEB3M1R layout-id 20
 
 #### v1.0.5
 - Fixed AppleHDAController patching regression

@@ -278,6 +278,22 @@
 					<key>CodecID</key>
 					<integer>283902569</integer>
 					<key>Comment</key>
+					<string>Custom ALC269 Sony Vaio VPCEB3M1R by Rodion</string>
+					<key>ConfigData</key>
+					<data>AVccQAFXHRABVx4hAVcfAwGHHCABhx0QAYcegQGHHwMBlxwwAZcdAQGXHqABlx+QAbccEAG3HQEBtx4XAbcfkAFXDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>20</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>ALC269</string>
+					<key>CodecID</key>
+					<integer>283902569</integer>
+					<key>Comment</key>
 					<string>Custom ALC269 for Acer Aspire by Andrey1970</string>
 					<key>ConfigData</key>
 					<data>AScc8AEnHQABJx4AAScfQAFHHBABRx0BAUceFwFHH5ABRwwCAXcc8AF3HQABdx4AAXcfQAGHHPABhx0AAYceAAGHH0ABlxzwAZcdAAGXHgABlx9AAacc8AGnHQABpx4AAacfQAG3HCABtx0BAbceoAG3H5AB1xzwAdcdAAHXHgAB1x9AAecc8AHnHQAB5x4AAecfQAIXHDACFx0QAhceIQIXHwMBhxwgAYcdkAGHHoEBhx8D</data>
