@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>alex1960</string>
+	<string>Multiple</string>
 	<key>CodecID</key>
 	<integer>1640</integer>
 	<key>CodecName</key>
@@ -19,6 +19,14 @@
 				<integer>3</integer>
 				<key>Path</key>
 				<string>layout3.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment </key>
+				<string>Custom by Syscl for laptop Dell Precision M3800</string>
+				<key>Id</key>
+				<integer>27</integer>
+				<key>Path</key>
+				<string>layout27.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -38,6 +46,14 @@
 				<integer>3</integer>
 				<key>Path</key>
 				<string>PlatformsM.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment </key>
+				<string>Custom by Syscl for laptop Dell Precision M3800</string>
+				<key>Id</key>
+				<integer>27</integer>
+				<key>Path</key>
+				<string>Platforms27.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -124,6 +140,20 @@
 			<string>AppleHDA</string>
 			<key>Replace</key>
 			<data>aAbsEA==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>hBnUEQ==</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>aAbsEA==</data>
+			<key>Comment</key>
+			<string>Check this patch for 10.9 compliance</string>
 		</dict>
 		<dict>
 			<key>Count</key>

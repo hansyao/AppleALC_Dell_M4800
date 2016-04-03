@@ -7,6 +7,8 @@ AppleALC Changelog
 - Added custom ALC282 resources for Acer Aspire E1-572G layout-id 28
 - Added into ALC269 info.plist no-sleep, no-click, headphone detect patches
 - Added ALC282 resources for Acer Aspire on IvyBridge by Andrey1970 layout-id 27
+- Added Mirone resources to ALC892 thanks to cecekpawon
+- Added ALC668 resources for DELL Precision M3800 by Syscl
 
 #### v1.0.6
 - Reduced kext size by optimising capstone build options
