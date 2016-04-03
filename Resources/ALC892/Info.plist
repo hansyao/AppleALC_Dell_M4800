@@ -52,14 +52,6 @@
 				<key>Path</key>
 				<string>layout7.xml.zlib</string>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Mirone Resources by cecekpawon</string>
-				<key>Id</key>
-				<integer>9</integer>
-				<key>Path</key>
-				<string>layout9.xml.zlib</string>
-			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
@@ -100,14 +92,6 @@
 				<string>Mirone Resources by cecekpawon</string>
 				<key>Id</key>
 				<integer>7</integer>
-				<key>Path</key>
-				<string>PlatformsM.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Mirone Resources by cecekpawon</string>
-				<key>Id</key>
-				<integer>9</integer>
 				<key>Path</key>
 				<string>PlatformsM.xml.zlib</string>
 			</dict>

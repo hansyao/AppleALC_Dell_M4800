@@ -886,18 +886,6 @@
 				</dict>
 				<dict>
 					<key>CodecID</key>
-					<integer>283904146</integer>
-					<key>Comment</key>
-					<string>ALC892, Mirone</string>
-					<key>ConfigData</key>
-					<data>IUccECFHHUAhRx4RIUcfASFXHCAhVx0QIVceASFXHwEhZxwwIWcdYCFnHgEhZx8BIXccQCF3HSAhdx4BIXcfASGHHFAhhx2QIYceoCGHH5AhlxxgIZcdkCGXHoEhlx8CIacccCGnHTAhpx6BIacfASG3HIAhtx1AIbceISG3HwIh5xyQIecdYCHnHkUh5x8B</data>
-					<key>FuncGroup</key>
-					<integer>1</integer>
-					<key>LayoutID</key>
-					<integer>9</integer>
-				</dict>
-				<dict>
-					<key>CodecID</key>
 					<integer>283904153</integer>
 					<key>Comment</key>
 					<string>ALC898, Toleda</string>
