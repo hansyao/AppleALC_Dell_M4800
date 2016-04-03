@@ -5,6 +5,7 @@ AppleALC Changelog
 - Added 0x100004 revision to ALC269
 - Added custom ALC269 resources for SONY VAIO VPCEB3M1R layout-id 20
 - Added custom ALC282 resources for Acer Aspire E1-572G layout-id 28
+- Added into ALC269 info.plist no-sleep, no-click, headphone detect patches
 
 #### v1.0.6
 - Reduced kext size by optimising capstone build options
