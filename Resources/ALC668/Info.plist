@@ -145,20 +145,6 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>hBnUEQ==</data>
-			<key>MinKernel</key>
-			<integer>13</integer>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>aAbsEA==</data>
-			<key>Comment</key>
-			<string>Check this patch for 10.9 compliance</string>
-		</dict>
-		<dict>
-			<key>Count</key>
-			<integer>2</integer>
-			<key>Find</key>
 			<data>gxnUEQ==</data>
 			<key>MinKernel</key>
 			<integer>15</integer>
