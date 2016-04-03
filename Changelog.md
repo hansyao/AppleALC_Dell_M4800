@@ -9,6 +9,7 @@ AppleALC Changelog
 - Added ALC282 resources for Acer Aspire on IvyBridge by Andrey1970 layout-id 27
 - Added Mirone resources to ALC892 thanks to cecekpawon
 - Added ALC668 resources for DELL Precision M3800 by Syscl
+- Allowed providing non-existent layouts
 
 #### v1.0.6
 - Reduced kext size by optimising capstone build options
