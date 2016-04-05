@@ -16,6 +16,7 @@ AppleALC Changelog
 - Added IDT92HD91BXX codec support layout-id 12 by RehabMan
 - Added IDT92HD95 codec support layout-id 12 by RehabMan
 - Added Conexant CX20751/2 codec support layout-id 12 by RehabMan
+- Added ALC280 codec support layout-id 3 by Mirone
 
 #### v1.0.6
 - Reduced kext size by optimising capstone build options
