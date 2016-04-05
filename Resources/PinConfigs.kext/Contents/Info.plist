@@ -1016,6 +1016,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Conexant - CX20751/2 by RehabMan</string>
+					<key>CodecID</key>
+					<integer>351359247</integer>
+					<key>ConfigData</key>
+					<data>AWccQAFnHRABZx4hAWcfBAF3HBABdx0BAXceFwF3H5ABlxwwAZcdEAGXHoEBlx8EAaccIAGnHQEBpx6gAacfkA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Custom IDT 92HD87B1/3 by RehabMan</string>
 					<key>CodecID</key>
 					<integer>287143641</integer>
