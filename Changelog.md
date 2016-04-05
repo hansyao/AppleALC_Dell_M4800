@@ -10,6 +10,11 @@ AppleALC Changelog
 - Added Mirone resources to ALC892 thanks to cecekpawon
 - Added ALC668 resources for DELL Precision M3800 by Syscl
 - Allowed providing non-existent layouts
+- Added IDT92HD81B1X5 codec support layout-id 12 by RehabMan
+- Added IDT92HD87B1/3 codec support layout-id 12 by RehabMan
+- Added IDT92HD87B2/4 codec support layout-id 12 by RehabMan
+- Added IDT92HD91BXX codec support layout-id 12 by RehabMan
+- Added IDT92HD95 codec support layout-id 12 by RehabMan
 
 #### v1.0.6
 - Reduced kext size by optimising capstone build options
