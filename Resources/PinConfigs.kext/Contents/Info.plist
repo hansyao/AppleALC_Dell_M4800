@@ -1046,7 +1046,7 @@
 					<key>Codec</key>
 					<string>Custom IDT 92HD87B1/3 by RehabMan</string>
 					<key>CodecID</key>
-					<integer>287143641</integer>
+					<integer>287143633</integer>
 					<key>ConfigData</key>
 					<data>AMcegQDHHwM=</data>
 					<key>FuncGroup</key>
@@ -1058,7 +1058,7 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>Custom IDT92HD87B2 by RehabMan</string>
+					<string>Custom IDT92HD87B2/4 by RehabMan</string>
 					<key>CodecID</key>
 					<integer>287143641</integer>
 					<key>ConfigData</key>

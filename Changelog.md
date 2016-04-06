@@ -19,6 +19,7 @@ AppleALC Changelog
 - Added ALC280 codec support layout-id 3 by Mirone
 - Fixed CX20590 platform12.xml.zlib > platforms12.xml.zlib
 - Reduced kext size by optimizing every platforms.xml.zlib in Resources folder
+- Fixed codec-id in PinConfigs info.plist for IDT 92HD87B1/3 should be 287143633
 
 #### v1.0.6
 - Reduced kext size by optimising capstone build options
