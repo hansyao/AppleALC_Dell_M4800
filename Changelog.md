@@ -17,6 +17,8 @@ AppleALC Changelog
 - Added IDT92HD95 codec support layout-id 12 by RehabMan
 - Added Conexant CX20751/2 codec support layout-id 12 by RehabMan
 - Added ALC280 codec support layout-id 3 by Mirone
+- Fixed CX20590 platform12.xml.zlib > platforms12.xml.zlib
+- Reduced kext size by optimizing every platforms.xml.zlib in Resources folder
 
 #### v1.0.6
 - Reduced kext size by optimising capstone build options
