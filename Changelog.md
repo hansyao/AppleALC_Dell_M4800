@@ -1,6 +1,10 @@
 AppleALC Changelog
 ==================
 
+#### v1.0.8
+- Added ALC885 Toleda resources layout-id 1
+- Added ALC887 Toleda resources layout-id 1, 2, 3
+
 #### v1.0.7
 - Added 0x100004 revision to ALC269
 - Added custom ALC269 resources for SONY VAIO VPCEB3M1R layout-id 20

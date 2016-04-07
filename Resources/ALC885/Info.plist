@@ -14,22 +14,38 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Custom by alex1960</string>
+				<string>Toleda ALC885</string>
 				<key>Id</key>
 				<integer>1</integer>
 				<key>Path</key>
 				<string>layout1.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Custom by alex1960</string>
+				<key>Id</key>
+				<integer>12</integer>
+				<key>Path</key>
+				<string>layout12.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Custom by alex1960</string>
+				<string>Toleda ALC885</string>
 				<key>Id</key>
 				<integer>1</integer>
 				<key>Path</key>
-				<string>Platforms1.xml.zlib</string>
+				<string>PlatformsT.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Custom by alex1960</string>
+				<key>Id</key>
+				<integer>12</integer>
+				<key>Path</key>
+				<string>Platforms12.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
