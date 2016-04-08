@@ -1083,8 +1083,6 @@
 					<integer>12</integer>
 				</dict>
 				<dict>
-					<key>AFGLowPowerState</key>
-					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Conexant - CX20751/2 by RehabMan</string>
 					<key>CodecID</key>
@@ -1094,7 +1092,7 @@
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
-					<integer>12</integer>
+					<integer>28</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
