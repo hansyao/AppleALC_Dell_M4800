@@ -19,6 +19,30 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>Toleda ALC888</string>
+				<key>Id</key>
+				<integer>1</integer>
+				<key>Path</key>
+				<string>layout1.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Toleda ALC888</string>
+				<key>Id</key>
+				<integer>2</integer>
+				<key>Path</key>
+				<string>layout2.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Toleda ALC888</string>
+				<key>Id</key>
+				<integer>3</integer>
+				<key>Path</key>
+				<string>layout3.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Mirone 3 ports (Pink, Green, Blue)</string>
 				<key>Id</key>
 				<integer>5</integer>
@@ -36,6 +60,30 @@
 		</array>
 		<key>Platforms</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Toleda ALC888</string>
+				<key>Id</key>
+				<integer>1</integer>
+				<key>Path</key>
+				<string>PlatformsT.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Toleda ALC888</string>
+				<key>Id</key>
+				<integer>2</integer>
+				<key>Path</key>
+				<string>PlatformsT.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Toleda ALC888</string>
+				<key>Id</key>
+				<integer>3</integer>
+				<key>Path</key>
+				<string>PlatformsT.xml.zlib</string>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Mirone resources</string>

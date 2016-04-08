@@ -5,6 +5,7 @@ AppleALC Changelog
 - Added ALC885 Toleda resources layout-id 1
 - Added ALC887 Toleda resources layout-id 1, 2, 3
 - Fix mistake in CX20751/2 info.plist and change layout-id to 28
+- Added ALC888 Toleda resources layout-id 1, 2, 3
 
 #### v1.0.7
 - Added 0x100004 revision to ALC269
