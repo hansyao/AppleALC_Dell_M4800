@@ -3,16 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>Vandroiy</string>
+	<string>vandroiy</string>
 	<key>CodecID</key>
-	<integer>30213</integer>
+	<integer>629</integer>
 	<key>CodecName</key>
-	<string>0x111d7605</string>
+	<string>ALC275</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
 		<array>
 			<dict>
+				<key>Comment</key>
+				<string>Mirone Laptop Patch ALC275</string>
 				<key>Id</key>
 				<integer>3</integer>
 				<key>Path</key>
@@ -22,10 +24,12 @@
 		<key>Platforms</key>
 		<array>
 			<dict>
+				<key>Comment</key>
+				<string>Mirone Laptop Patch ALC275</string>
 				<key>Id</key>
 				<integer>3</integer>
 				<key>Path</key>
-				<string>Platforms3.xml.zlib</string>
+				<string>PlatformsM.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -73,13 +77,13 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>ixnUEQ==</data>
+			<data>hQjsEA==</data>
 			<key>MinKernel</key>
 			<integer>13</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>BXYdEQ==</data>
+			<data>AAAAAA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>
@@ -91,7 +95,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>AAAAAA==</data>
+			<data>dQLsEA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>
@@ -107,6 +111,6 @@
 		</dict>
 	</array>
 	<key>Vendor</key>
-	<string>IDT</string>
+	<string>Realtek</string>
 </dict>
 </plist>

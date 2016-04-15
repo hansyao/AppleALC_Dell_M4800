@@ -5,9 +5,9 @@
 	<key>Author</key>
 	<string>Vandroiy</string>
 	<key>CodecID</key>
-	<integer>30213</integer>
+	<integer>30211</integer>
 	<key>CodecName</key>
-	<string>0x111d7605</string>
+	<string>0x111d7603</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
@@ -25,7 +25,7 @@
 				<key>Id</key>
 				<integer>3</integer>
 				<key>Path</key>
-				<string>Platforms3.xml.zlib</string>
+				<string>PlatformsM.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -73,25 +73,13 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>ixnUEQ==</data>
-			<key>MinKernel</key>
-			<integer>13</integer>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>BXYdEQ==</data>
-		</dict>
-		<dict>
-			<key>Count</key>
-			<integer>2</integer>
-			<key>Find</key>
 			<data>hBnUEQ==</data>
 			<key>MinKernel</key>
 			<integer>13</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>AAAAAA==</data>
+			<data>A3YdEQ==</data>
 		</dict>
 		<dict>
 			<key>Count</key>

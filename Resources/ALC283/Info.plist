@@ -5,14 +5,16 @@
 	<key>Author</key>
 	<string>Vandroiy</string>
 	<key>CodecID</key>
-	<integer>30213</integer>
+	<integer>643</integer>
 	<key>CodecName</key>
-	<string>0x111d7605</string>
+	<string>ALC283</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
 		<array>
 			<dict>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC283</string>
 				<key>Id</key>
 				<integer>3</integer>
 				<key>Path</key>
@@ -22,10 +24,12 @@
 		<key>Platforms</key>
 		<array>
 			<dict>
+				<key>Comment</key>
+				<string>Mirone resources</string>
 				<key>Id</key>
 				<integer>3</integer>
 				<key>Path</key>
-				<string>Platforms3.xml.zlib</string>
+				<string>PlatformsM.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -73,21 +77,21 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>ixnUEQ==</data>
+			<data>hBnUEQ==</data>
 			<key>MinKernel</key>
-			<integer>13</integer>
+			<string>13</string>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>BXYdEQ==</data>
+			<data>gwLsEA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>hBnUEQ==</data>
+			<data>hQjsEA==</data>
 			<key>MinKernel</key>
-			<integer>13</integer>
+			<string>13</string>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
@@ -99,7 +103,7 @@
 			<key>Find</key>
 			<data>gxnUEQ==</data>
 			<key>MinKernel</key>
-			<integer>15</integer>
+			<string>15</string>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
@@ -107,6 +111,6 @@
 		</dict>
 	</array>
 	<key>Vendor</key>
-	<string>IDT</string>
+	<string>Realtek</string>
 </dict>
 </plist>

@@ -6,6 +6,20 @@ AppleALC Changelog
 - Added ALC887 Toleda resources layout-id 1, 2, 3
 - Fix mistake in CX20751/2 info.plist and change layout-id to 28
 - Added ALC888 Toleda resources layout-id 1, 2, 3
+- Added ALC668 layout 20 for Asus G551JM 
+- Added ALC275 layout-id 3 Mirone resources
+- Added ALC283 layout-id 3 Mirone resources
+- Added ALC284 layout-id 3 Mirone resources
+- Added ALC288 layout-id 3 Mirone resources
+- Added ALC290 layout-id 3 Mirone resources
+- Added IDT92HD66C3/65 layout-id 3 Mirone resources
+- Added IDT92HD71B7X layout-id 3 Mirone resources
+- Added IDT92HD75B2X5 layout-id 3 Mirone resources
+- Added IDT92HD75B3X5 layout-id 3 Mirone resources
+- Added IDT92HD99BXX layout-id 3 Mirone resources
+- Added IDT92HD87B1 layout-id 3 Mirone resources
+- Change IDT92HD81B1X5 to Mirone resources layout-id 3
+- Change IDT92HD91BXX  to Mirone resources layout-id 3
 
 #### v1.0.7
 - Added 0x100004 revision to ALC269

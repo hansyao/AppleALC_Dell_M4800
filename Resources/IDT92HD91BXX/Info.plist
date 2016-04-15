@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>moorre</string>
+	<string>Vandroiy</string>
 	<key>CodecID</key>
 	<integer>30432</integer>
 	<key>CodecName</key>
@@ -14,18 +14,18 @@
 		<array>
 			<dict>
 				<key>Id</key>
-				<integer>12</integer>
+				<integer>3</integer>
 				<key>Path</key>
-				<string>layout12.xml.zlib</string>
+				<string>layout3.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
 			<dict>
 				<key>Id</key>
-				<integer>12</integer>
+				<integer>3</integer>
 				<key>Path</key>
-				<string>Platforms12.xml.zlib</string>
+				<string>PlatformsM.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -80,6 +80,18 @@
 			<string>AppleHDA</string>
 			<key>Replace</key>
 			<data>4HYdEQ==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>hBnUEQ==</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>AAAAAA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>
