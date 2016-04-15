@@ -20,6 +20,7 @@ AppleALC Changelog
 - Added IDT92HD87B1 layout-id 3 Mirone resources
 - Change IDT92HD81B1X5 to Mirone resources layout-id 3
 - Change IDT92HD91BXX  to Mirone resources layout-id 3
+- AppleALC should not abort loading if it fails to find some kext
 
 #### v1.0.7
 - Added 0x100004 revision to ALC269

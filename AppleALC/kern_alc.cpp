@@ -62,7 +62,9 @@ bool AlcEnabler::loadKexts() {
 		if (patcher.getError() != KernelPatcher::Error::NoError) {
 			SYSLOG("alc @ failed to load %s kext file", kextList[i].id);
 			patcher.clearError();
-			return false;
+			//return false;
+			// Depending on a system some kexts may actually not exist
+			continue;
 		}
 		
 		patcher.setupKextListening();
