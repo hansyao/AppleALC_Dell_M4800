@@ -20,6 +20,7 @@ An open source kernel extension enabling native OS X HD audio for not officially
 - [Pike R. Alpha](https://github.com/Piker-Alpha) for [lzvn](https://github.com/Piker-Alpha/LZVN) decompression  
 - [07151129](https://github.com/07151129) for some code parts and suggestions  
 - [vit9696](https://github.com/vit9696) for writing the software and maintaining it
+- [vandroiy2013](https://github.com/vandroiy2013) for maintaining the codec database
 
 #### Installation
 The minimal instruction is available on the [wiki](https://github.com/vit9696/AppleALC/wiki).  
