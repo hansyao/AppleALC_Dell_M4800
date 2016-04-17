@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.0.9
+- Replace ALC888 patch 11d4198b->10ec0885 it prevents Sound Asserions on layout-id 1, 2, 3
+- Deleted unnecessary ALC888 patch 11d41983
 
 #### v1.0.8
 - Added ALC885 Toleda resources layout-id 1
