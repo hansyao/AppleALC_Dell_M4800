@@ -110,6 +110,10 @@
 			<data>AAAAAA==</data>
 		</dict>
 	</array>
+	<key>Revisions</key>
+	<array>
+		<integer>1048584</integer>
+	</array>
 	<key>Vendor</key>
 	<string>Realtek</string>
 </dict>
