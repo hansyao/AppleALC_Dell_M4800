@@ -5,6 +5,7 @@ AppleALC Changelog
 - Deleted unnecessary ALC888 patch 11d41983
 - Changed patch for Intel HD4600 HDMI (ig-platform-id 0x0d220003)
 - Changed ALC275 Resources
+- Deleted not working Intel HD4000 LVDS, HDMI (ig-platform-id 0x0166000A) Laptop only patch
 
 #### v1.0.8
 - Added ALC885 Toleda resources layout-id 1
