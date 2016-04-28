@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>lihuachuan</string>
+	<string>Vandroiy</string>
 	<key>CodecID</key>
 	<integer>20751</integer>
 	<key>CodecName</key>
@@ -13,6 +13,16 @@
 		<key>Layouts</key>
 		<array>
 			<dict>
+				<key>Comment</key>
+				<string>Mirone - Conexant 20752</string>
+				<key>Id</key>
+				<integer>3</integer>
+				<key>Path</key>
+				<string>layout3.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Custom Conexant 20751</string>
 				<key>Id</key>
 				<integer>28</integer>
 				<key>Path</key>
@@ -22,6 +32,16 @@
 		<key>Platforms</key>
 		<array>
 			<dict>
+				<key>Comment</key>
+				<string>Mirone - Conexant 20752</string>
+				<key>Id</key>
+				<integer>3</integer>
+				<key>Path</key>
+				<string>PlatformsM.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Custom Conexant 20751</string>
 				<key>Id</key>
 				<integer>28</integer>
 				<key>Path</key>

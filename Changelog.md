@@ -6,6 +6,15 @@ AppleALC Changelog
 - Changed patch for Intel HD4600 HDMI (ig-platform-id 0x0d220003)
 - Changed ALC275 Resources
 - Deleted not working Intel HD4000 LVDS, HDMI (ig-platform-id 0x0166000A) Laptop only patch
+- Added Conexant CX20583 codec support layout-id 3 by Mirone
+- Added Conexant CX20585 codec support layout-id 3 by Mirone
+- Added Conexant CX20588 codec support layout-id 3 by Mirone
+- Added Conexant CX20724 codec support layout-id 3 by Mirone
+- Added Conexant CX20752 codec support layout-id 3 by Mirone
+- Added Conexant CX20756 codec support layout-id 3 by Mirone
+- Added Conexant CX20757 codec support layout-id 3 by Mirone
+- Added NoSleep/NoClick pathes to Conexant CX20590 info.plist
+
 
 #### v1.0.8
 - Added ALC885 Toleda resources layout-id 1

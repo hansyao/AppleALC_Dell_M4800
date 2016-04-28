@@ -5,15 +5,11 @@
 	<key>Vendor</key>
 	<string>Conexant</string>
 	<key>CodecID</key>
-	<integer>20590</integer>
+	<integer>20757</integer>
 	<key>CodecName</key>
-	<string>CX20590</string>
-	<key>Revisions</key>
-	<array>
-		<integer>1048579</integer>
-	</array>
+	<string>CX20757</string>
 	<key>Author</key>
-	<string>usr-sse2</string>
+	<string>Vandroiy</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
@@ -26,14 +22,6 @@
 				<key>Path</key>
 				<string>layout3.xml.zlib</string>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Custom for Lenovo Yoga 13 by usr-sse2</string>
-				<key>Id</key>
-				<integer>12</integer>
-				<key>Path</key>
-				<string>layout12.xml.zlib</string>
-			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
@@ -44,14 +32,6 @@
 				<integer>3</integer>
 				<key>Path</key>
 				<string>PlatformsM.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Custom for Lenovo Yoga 13 by usr-sse2</string>
-				<key>Id</key>
-				<integer>12</integer>
-				<key>Path</key>
-				<string>Platforms12.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -117,7 +97,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>blDxFA==</data>
+			<data>FVHxFA==</data>
 		</dict>
 	</array>
 </dict>
