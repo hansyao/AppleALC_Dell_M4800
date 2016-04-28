@@ -15,7 +15,8 @@ AppleALC Changelog
 - Added Conexant CX20757 codec support layout-id 3 by Mirone
 - Added NoSleep/NoClick pathes to Conexant CX20590 info.plist
 - Added ALC280 layout-id 4 Combo Jack Support by Mirone
-
+- Added ALC1150 support for OS X 10.8
+- Changed Comment lines for Toleda resources in 1150 info.plist
 
 #### v1.0.8
 - Added ALC885 Toleda resources layout-id 1
