@@ -20,6 +20,14 @@
 				<key>Path</key>
 				<string>layout3.xml.zlib</string>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC280 - Combo Jack Support</string>
+				<key>Id</key>
+				<integer>4</integer>
+				<key>Path</key>
+				<string>layout4.xml.zlib</string>
+			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
@@ -29,7 +37,15 @@
 				<key>Id</key>
 				<integer>3</integer>
 				<key>Path</key>
-				<string>PlatformsM.xml.zlib</string>
+				<string>PlatformsM3.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Mirone resources Combo Jack Support</string>
+				<key>Id</key>
+				<integer>4</integer>
+				<key>Path</key>
+				<string>PlatformsM4.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>

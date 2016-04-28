@@ -14,6 +14,7 @@ AppleALC Changelog
 - Added Conexant CX20756 codec support layout-id 3 by Mirone
 - Added Conexant CX20757 codec support layout-id 3 by Mirone
 - Added NoSleep/NoClick pathes to Conexant CX20590 info.plist
+- Added ALC280 layout-id 4 Combo Jack Support by Mirone
 
 
 #### v1.0.8
