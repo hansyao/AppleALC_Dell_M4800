@@ -470,10 +470,10 @@ static const uint8_t patchBuf7[] { 0x00, 0x09, 0xEC, 0x10, };
 static const uint8_t patchBuf8[] { 0x83, 0x19, 0xD4, 0x11, };
 static const uint8_t patchBuf9[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches0[] {
-	{ { &kextList[2], patchBuf0, patchBuf1, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf0, patchBuf1, 8, 1 }, 12, 13 },
 	{ { &kextList[2], patchBuf2, patchBuf3, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf4, patchBuf5, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf6, patchBuf7, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf4, patchBuf5, 8, 1 }, 12, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf6, patchBuf7, 4, 2 }, 12, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf8, patchBuf9, 4, 2 }, 15, KernelPatcher::KernelAny },
 };
 static const uint8_t file7[] {
