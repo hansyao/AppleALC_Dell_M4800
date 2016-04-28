@@ -17,6 +17,7 @@ AppleALC Changelog
 - Added ALC280 layout-id 4 Combo Jack Support by Mirone
 - Added ALC1150 support for OS X 10.8
 - Changed Comment lines for Toleda resources in 1150 info.plist
+- Added IDT92HD93BXX codec support layout-id 12
 
 #### v1.0.8
 - Added ALC885 Toleda resources layout-id 1
