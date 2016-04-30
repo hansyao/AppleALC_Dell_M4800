@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.0.10
+- Added ALC665 codec support layout-id 12, 13 by insanelydeepak
+
 #### v1.0.9
 - Replace ALC888 patch 11d4198b->10ec0885 it prevents Sound Asserions on layout-id 1, 2, 3
 - Deleted unnecessary ALC888 patch 11d41983

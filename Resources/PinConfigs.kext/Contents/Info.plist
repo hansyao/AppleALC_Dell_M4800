@@ -649,6 +649,34 @@
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Deepak - Realtek ALC665</string>
+					<key>CodecID</key>
+					<integer>283903589</integer>
+					<key>ConfigData</key>
+					<data>ASccEAEnHQEBJx6gAScfmQFXHEABVx0BAVceEwFXH5kBlxxQAZcdEAGXHiEBlx8DAaccIAGnHRABpx6hAacfkwG3HGABtx0QAbceIQG3HwMB5xxwAecdEAHnHkUB5x8DAVcMAg==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Deepak - Realtek ALC665</string>
+					<key>CodecID</key>
+					<integer>283903589</integer>
+					<key>ConfigData</key>
+					<data>ASccUAEnHQABJx6gAScfkAFXHBABVx0AAVceEwFXH5ABVwwCAZccIAGXHRABlx4hAZcfAAGnHEABpx0QAacegQGnHwABtxxgAbcdEAG3HiEBtx8AAdcc8AHXHQAB1x6DAdcfUA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283903592</integer>
 					<key>Comment</key>
