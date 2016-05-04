@@ -48,6 +48,7 @@
 		1C3E7B2D1C84B73400A6448A /* kern_disasm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C3E7B2B1C84B73400A6448A /* kern_disasm.cpp */; };
 		1C3E7B2E1C84B73400A6448A /* kern_disasm.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1C3E7B2C1C84B73400A6448A /* kern_disasm.hpp */; };
 		1C642F561C8F1BD8006B4C51 /* PinConfigs.kext in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1C642F551C8F1BD8006B4C51 /* PinConfigs.kext */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C6BDD851CDA887600C80B7B /* kern_policy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C6BDD841CDA887600C80B7B /* kern_policy.cpp */; };
 		1C748C2B1C21952C0024EED2 /* kern_start.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1C748C2A1C21952C0024EED2 /* kern_start.hpp */; };
 		1C748C2D1C21952C0024EED2 /* kern_start.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C748C2C1C21952C0024EED2 /* kern_start.cpp */; };
 		1C88DDEC1C89EE540003E1BF /* kern_resources.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C88DDEA1C89EE540003E1BF /* kern_resources.cpp */; };
@@ -61,6 +62,7 @@
 		1C9CB7B11C789FF500231E41 /* kern_alc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1C9CB7AF1C789FF500231E41 /* kern_alc.hpp */; };
 		1C9CB7B41C78A12C00231E41 /* kern_patcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C9CB7B21C78A12C00231E41 /* kern_patcher.cpp */; };
 		1C9CB7B51C78A12C00231E41 /* kern_patcher.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1C9CB7B31C78A12C00231E41 /* kern_patcher.hpp */; };
+		1CC144031CDA446E000D8D5F /* kern_policy.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1CC144011CDA446E000D8D5F /* kern_policy.hpp */; };
 		1CD5B2B41C88B83500E45373 /* kern_iokit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1CD5B2B21C88B83500E45373 /* kern_iokit.cpp */; };
 		1CD5B2B51C88B83500E45373 /* kern_iokit.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1CD5B2B31C88B83500E45373 /* kern_iokit.hpp */; };
 		1CD5B2BF1C89CF2D00E45373 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1CD5B2BE1C89CF2D00E45373 /* main.mm */; };
@@ -152,6 +154,7 @@
 		1C3E7B2C1C84B73400A6448A /* kern_disasm.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = kern_disasm.hpp; sourceTree = "<group>"; };
 		1C642F551C8F1BD8006B4C51 /* PinConfigs.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; name = PinConfigs.kext; path = Resources/PinConfigs.kext; sourceTree = "<group>"; };
 		1C642F571C8F1BEE006B4C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/PinConfigs.kext/Contents/Info.plist; sourceTree = "<group>"; };
+		1C6BDD841CDA887600C80B7B /* kern_policy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kern_policy.cpp; sourceTree = "<group>"; };
 		1C748C271C21952C0024EED2 /* AppleALC.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleALC.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C748C2A1C21952C0024EED2 /* kern_start.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kern_start.hpp; sourceTree = "<group>"; };
 		1C748C2C1C21952C0024EED2 /* kern_start.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kern_start.cpp; sourceTree = "<group>"; };
@@ -170,6 +173,7 @@
 		1C9CB7B21C78A12C00231E41 /* kern_patcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kern_patcher.cpp; sourceTree = "<group>"; };
 		1C9CB7B31C78A12C00231E41 /* kern_patcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = kern_patcher.hpp; sourceTree = "<group>"; };
 		1C9CB7B71C78EEEB00231E41 /* kern_patcher_private.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kern_patcher_private.hpp; sourceTree = "<group>"; };
+		1CC144011CDA446E000D8D5F /* kern_policy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = kern_policy.hpp; sourceTree = "<group>"; };
 		1CD5B2B21C88B83500E45373 /* kern_iokit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kern_iokit.cpp; sourceTree = "<group>"; };
 		1CD5B2B31C88B83500E45373 /* kern_iokit.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = kern_iokit.hpp; sourceTree = "<group>"; };
 		1CD5B2B71C89BEB000E45373 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
@@ -326,6 +330,8 @@
 				1C3E7B2C1C84B73400A6448A /* kern_disasm.hpp */,
 				1C9CB7B21C78A12C00231E41 /* kern_patcher.cpp */,
 				1C9CB7B31C78A12C00231E41 /* kern_patcher.hpp */,
+				1C6BDD841CDA887600C80B7B /* kern_policy.cpp */,
+				1CC144011CDA446E000D8D5F /* kern_policy.hpp */,
 				1CD5C7F61C81EADD00F4C31A /* kern_mach.cpp */,
 				1CD5C7F71C81EADD00F4C31A /* kern_mach.hpp */,
 				1C9CB7AA1C789A5E00231E41 /* kern_util.cpp */,
@@ -376,6 +382,7 @@
 				1C3E7AFB1C84B63000A6448A /* mips.h in Headers */,
 				1C3E7ADE1C84B61700A6448A /* MCDisassembler.h in Headers */,
 				1C3E7AFE1C84B63000A6448A /* arm.h in Headers */,
+				1CC144031CDA446E000D8D5F /* kern_policy.hpp in Headers */,
 				1C9CB7B51C78A12C00231E41 /* kern_patcher.hpp in Headers */,
 				1C9CB7AD1C789A5E00231E41 /* kern_util.hpp in Headers */,
 				1C3E7ADF1C84B61700A6448A /* MCFixedLenDisassembler.h in Headers */,
@@ -519,6 +526,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C9CB7B01C789FF500231E41 /* kern_alc.cpp in Sources */,
+				1C6BDD851CDA887600C80B7B /* kern_policy.cpp in Sources */,
 				1C748C2D1C21952C0024EED2 /* kern_start.cpp in Sources */,
 				1C3E7B261C84B65400A6448A /* X86DisassemblerDecoder.c in Sources */,
 				1CD5C7F81C81EADD00F4C31A /* kern_mach.cpp in Sources */,
@@ -665,9 +673,12 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MODULE_NAME = as.vit9696.AppleALC;
+				MODULE_START = kern_start;
+				MODULE_STOP = kern_stop;
 				MODULE_VERSION = 1.0.10;
 				PRODUCT_BUNDLE_IDENTIFIER = as.vit9696.AppleALC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = kext;
 			};
 			name = Debug;
@@ -696,9 +707,12 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MODULE_NAME = as.vit9696.AppleALC;
+				MODULE_START = kern_start;
+				MODULE_STOP = kern_stop;
 				MODULE_VERSION = 1.0.10;
 				PRODUCT_BUNDLE_IDENTIFIER = as.vit9696.AppleALC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = kext;
 			};
 			name = Release;

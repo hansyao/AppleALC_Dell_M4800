@@ -15,90 +15,31 @@
 #include <mach/mach_types.h>
 
 OSDefineMetaClassAndStructors(AppleALC, IOService)
-AlcEnabler AppleALC::enabler;
-mac_policy_ops AppleALC::policyOps  {
-	.mpo_policy_initbsd					= policyInitBSD,
-	.mpo_mount_check_remount			= policyCheckRemount
-};
+Configuration config;
 
-void AppleALC::policyInitBSD(mac_policy_conf *conf) {
-	// Do nothing for now
-}
-
-int AppleALC::policyCheckRemount(kauth_cred_t cred, mount *mp, label *mlabel) {
+int Configuration::policyCheckRemount(kauth_cred_t cred, mount *mp, label *mlabel) {
 	static bool initialised {false};
 	
-	DBGLOG("init @ policy hit");
+	DBGLOG("config @ policy hit");
 
 	if (!initialised) {
-		DBGLOG("init @ initialising enabler");
-		initialised = enabler.init();
+		DBGLOG("config @ initialising enabler");
+		initialised = config.enabler.init();
 		if (!initialised) {
-			DBGLOG("init @ initialisation failed");
-			enabler.deinit();
+			DBGLOG("config @ initialisation failed");
+			config.enabler.deinit();
 		}
 	}
 	
 	return 0;
 }
 
-bool AppleALC::init(OSDictionary *dict) {
-	if (!IOService::init(dict)) {
-		SYSLOG("init @ failed to initalise the parent");
-		return false;
-	}
+bool Configuration::getBootArguments() {
+	if (readArguments) return !isDisabled;
 	
-	getBootArguments();
-	
-	if (isDisabled) {
-		SYSLOG("init @ found a disabling argument or no arguments, exiting");
-		return false;
-	}
-	
-	if (mode == StartMode::Policy) {
-		DBGLOG("init @ initialising AppleALC with policy mode");
-		
-		if (mac_policy_register(&policyConf, &policyHandle, NULL)) {
-			SYSLOG("init @ failed to register the policy");
-			return false;
-		}
-	}
-	
-	return true;
-}
-
-bool AppleALC::start(IOService *provider) {
-	if (mode == StartMode::IOKit) {
-		DBGLOG("init @ initialising AppleALC with IOKit mode");
-		
-		if (!IOService::start(provider)) {
-			SYSLOG("init @ failed to start the parent");
-			return false;
-		}
-		
-		bool res = enabler.init();
-		if (!res) enabler.deinit();
-		return res;
-	} else {
-		return true;
-	}
-}
-
-void AppleALC::stop(IOService *provider) {
-	if (mode == StartMode::Policy && policyHandle) {
-		mac_policy_unregister(policyHandle);
-	}
-	
-	enabler.deinit();
-	IOService::stop(provider);
-	
-	DBGLOG("init @ stopped");
-}
-
-void AppleALC::getBootArguments() {
 	isDisabled = false;
 	char buf[16];
-
+	
 	isDisabled |= PE_parse_boot_argn(bootargOff, buf, sizeof(buf));
 	isDisabled |= PE_parse_boot_argn("-s", buf, sizeof(buf));
 	isDisabled |= PE_parse_boot_argn("-x", buf, sizeof(buf));
@@ -112,6 +53,82 @@ void AppleALC::getBootArguments() {
 	} else if (PE_parse_boot_argn(bootargIOKit, buf, sizeof(buf))) {
 		mode = StartMode::IOKit;
 	}
-		
-	DBGLOG("init @ boot arguments disabled %d, debug %d", isDisabled, debugEnabled);
+	
+	readArguments = true;
+	
+	DBGLOG("config @ boot arguments disabled %d, debug %d", isDisabled, debugEnabled);
+	
+	if (isDisabled) {
+		SYSLOG("init @ found a disabling argument or no arguments, exiting");
+	}
+	
+	return !isDisabled;
 }
+
+bool AppleALC::init(OSDictionary *dict) {
+	if (!IOService::init(dict)) {
+		SYSLOG("init @ failed to initalise the parent");
+		return false;
+	}
+	
+	return config.getBootArguments();
+}
+
+bool AppleALC::start(IOService *provider) {
+	if (config.mode == Configuration::StartMode::IOKit) {
+		DBGLOG("init @ initialising AppleALC with IOKit mode");
+		
+		if (!IOService::start(provider)) {
+			SYSLOG("init @ failed to start the parent");
+			return false;
+		}
+		
+		bool res = config.enabler.init();
+		if (!res) config.enabler.deinit();
+		return res;
+	} else {
+		return true;
+	}
+}
+
+void AppleALC::stop(IOService *provider) {
+	if (config.mode == Configuration::StartMode::IOKit) {
+		config.enabler.deinit();
+	}
+	IOService::stop(provider);
+	
+	DBGLOG("init @ stopped");
+}
+
+extern "C" kern_return_t kern_start(kmod_info_t * ki, void *d) {
+	DBGLOG("init @ start arrived");
+	
+	if (config.getBootArguments()) {
+		if (config.mode == Configuration::StartMode::Policy) {
+			DBGLOG("init @ initialising AppleALC with Policy mode");
+			
+			if (config.policy.registerPolicy()) {
+				return KERN_SUCCESS;
+			}
+
+			SYSLOG("init @ failed to register the policy");
+		} else {
+			return KERN_SUCCESS;
+		}
+	}
+	
+	return KERN_FAILURE;
+}
+
+extern "C" kern_return_t kern_stop(kmod_info_t *ki, void *d) {
+	if (config.mode == Configuration::StartMode::Policy) {
+		if (!config.policy.unregisterPolicy()) {
+			SYSLOG("init @ cannot unregister the policy");
+			return KERN_FAILURE;
+		}
+		config.enabler.deinit();
+	}
+	
+	return KERN_SUCCESS;
+}
+

@@ -9,16 +9,19 @@
 #define kern_start_hpp
 
 #include "kern_alc.hpp"
+#include "kern_policy.hpp"
 
 #include <IOKit/IOService.h>
-extern "C" {
-	#include <security/mac_framework.h>
-	#include <security/mac_policy.h>
-}
 
 class AppleALC : public IOService {
 	OSDeclareDefaultStructors(AppleALC)
-	
+public:
+	bool init(OSDictionary *dict) override;
+	bool start(IOService *provider) override;
+	void stop(IOService *provider) override;
+};
+
+class Configuration {
 	/**
 	 *  Possible boot arguments
 	 */
@@ -29,44 +32,9 @@ class AppleALC : public IOService {
 	static constexpr const char *bootargIOKit {"-alciokit"};    // Use IOKit::start method
 	
 	/**
-	 *  Retrieve boot arguments
+	 *  Set once the arguments are parsed
 	 */
-	void getBootArguments();
-	
-	/**
-	 *  Disable the extension by default
-	 */
-	bool isDisabled {true};
-	
-	/**
-	 *  Audio enabler
-	 */
-	static AlcEnabler enabler;
-	
-	/**
-	 *  Enabler start variants
-	 */
-	enum class StartMode {
-		IOKit,
-		Policy
-	};
-	
-	/**
-	 *  Enabler start mode
-	 */
-	StartMode mode {StartMode::Policy};
-	
-	/**
-	 *  TrustedBSD Policy handle
-	 */
-	mac_policy_handle_t policyHandle {0};
-	
-	/**
-	 *  Called at TrustedBSD policy initialisation
-	 *
-	 *  @param conf policy configuration
-	 */
-	static void policyInitBSD(mac_policy_conf *conf);
+	bool readArguments {false};
 	
 	/**
 	 *  TrustedBSD policy called before remounting
@@ -81,25 +49,48 @@ class AppleALC : public IOService {
 	/**
 	 *  TrustedBSD policy options
 	 */
-	static mac_policy_ops policyOps;
+	mac_policy_ops policyOps {
+		.mpo_policy_initbsd					= Policy::dummyPolicyInitBSD,
+		.mpo_mount_check_remount			= policyCheckRemount
+	};
+
+public:
+	/**
+	 *  Retrieve boot arguments
+	 *
+	 *  @return true if allowed to continue
+	 */
+	bool getBootArguments();
 	
 	/**
-	 *  TrustedBSD policy configuration
+	 *  Disable the extension by default
 	 */
-	mac_policy_conf policyConf {
-		.mpc_name				= "AppleALC",
-		.mpc_fullname			= "AppleALC Kernel Module",
-		.mpc_labelnames			= nullptr,
-		.mpc_labelname_count	= 0,
-		.mpc_ops				= &policyOps,
-		.mpc_loadtime_flags		= MPC_LOADTIME_FLAG_UNLOADOK,
-		.mpc_field_off			= nullptr,
-		.mpc_runtime_flags		= 0
+	bool isDisabled {true};
+
+	/**
+	 *  Enabler start variants
+	 */
+	enum class StartMode {
+		IOKit,
+		Policy
 	};
-public:
-	bool init(OSDictionary *dict) override;
-	bool start(IOService *provider) override;
-	void stop(IOService *provider) override;
+	
+	/**
+	 *  Enabler start mode
+	 */
+	StartMode mode {StartMode::Policy};
+	
+	/**
+	 *  Audio enabler
+	 */
+	AlcEnabler enabler;
+	
+	/**
+	 *  Policy controller
+	 */
+	Policy policy;
+
+	Configuration() : policy("AppleALC", "AppleALC Kernel Extension", &policyOps) {}
 };
 
 #endif /* kern_start_hpp */
