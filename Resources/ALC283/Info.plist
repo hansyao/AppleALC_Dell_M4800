@@ -20,6 +20,14 @@
 				<key>Path</key>
 				<string>layout3.xml.zlib</string>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Custom by Slbomber (Acer Aspire V3-371)</string>
+				<key>Id</key>
+				<integer>11</integer>
+				<key>Path</key>
+				<string>layout11.xml.zlib</string>
+			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
@@ -30,6 +38,14 @@
 				<integer>3</integer>
 				<key>Path</key>
 				<string>PlatformsM.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Custom Slbomber Resources (Aspire V3-371)</string>
+				<key>Id</key>
+				<integer>11</integer>
+				<key>Path</key>
+				<string>Platforms11.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>

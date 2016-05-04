@@ -3,6 +3,7 @@ AppleALC Changelog
 #### v1.0.10
 - Added ALC665 codec support layout-id 12, 13 by insanelydeepak
 - Added ALC292 codec support layout-id 12
+- Added ALC283 layout-id 11 for Aspire V3-371 by Slbomber
 - Prohibited kext unloading in policy mode since our policy is registered as static and cannot be unregistered
 - Bumped module versions to 10.8 to avoid accidental loading on 10.7
 
