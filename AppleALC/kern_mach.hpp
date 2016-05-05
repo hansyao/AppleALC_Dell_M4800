@@ -22,7 +22,9 @@ class MachInfo {
 	mach_vm_address_t running_text_addr {0}; // the address of running __TEXT segment
 	mach_vm_address_t disk_text_addr {0};    // the same address at from a file
 	mach_vm_address_t kaslr_slide {0};       // the kernel aslr slide, computed as the difference between above's addresses
+#ifdef COMPRESSION_SUPPORT
 	uint8_t *file_buf {nullptr};             // read file data if decompression was used
+#endif /* COMPRESSION_SUPPORT */
 	uint8_t *linkedit_buf {nullptr};         // pointer to __LINKEDIT buffer containing symbols to solve
 	uint64_t linkedit_fileoff {0};           // __LINKEDIT file offset so we can read
 	uint64_t linkedit_size {0};
@@ -190,7 +192,7 @@ public:
 	 *
 	 *  @return 0 on success
 	 */
-	int readFileData(void *buffer, off_t off, size_t sz, vnode_t vnode, vfs_context_t ctxt);
+	static int readFileData(void *buffer, off_t off, size_t sz, vnode_t vnode, vfs_context_t ctxt);
 	
 	/**
 	 *  Read file size from a vnode
@@ -200,7 +202,7 @@ public:
 	 *
 	 *  @return file size or 0
 	 */
-	size_t readFileSize(vnode_t vnode, vfs_context_t ctxt);
+	static size_t readFileSize(vnode_t vnode, vfs_context_t ctxt);
 
 	/**
 	 *  find the kernel base address (mach-o header)

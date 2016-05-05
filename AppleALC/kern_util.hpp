@@ -14,14 +14,17 @@
 extern bool debugEnabled;
 extern bool lowMemory;
 
+#define xStringify(a) Stringify(a)
+#define Stringify(a) #a
+
 #ifndef SYSLOG
-#define SYSLOG(str, ...) printf("AppleALC: " str "\n", ## __VA_ARGS__)
+#define SYSLOG(str, ...) printf( xStringify(PRODUCT_NAME) ": " str "\n", ## __VA_ARGS__)
 
 #ifdef DEBUG
 #define DBGLOG(str, ...)													\
 	do {																	\
 		if (debugEnabled)													\
-			printf("AppleALC: (DEBUG) " str "\n", ## __VA_ARGS__);		\
+			printf( xStringify(PRODUCT_NAME) ": (DEBUG) " str "\n", ## __VA_ARGS__);		\
 	} while(0)
 #else
 #define DBGLOG(str, ...) do { } while(0)

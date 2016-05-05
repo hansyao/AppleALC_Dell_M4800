@@ -15,7 +15,9 @@
 #include "kern_disasm.hpp"
 
 namespace Patch { union All; void deleter(All *); }
+#ifdef KEXTPATCH_SUPPORT
 class OSKextLoadedKextSummaryHeader;
+#endif /* KEXTPATCH_SUPPORT */
 
 class KernelPatcher {
 public:
@@ -59,6 +61,7 @@ public:
 	 */
 	void deinit();
 
+#ifdef KEXTPATCH_SUPPORT
 	/**
 	 *  Kext information
 	 */
@@ -70,6 +73,7 @@ public:
 		bool detectCodecs;
 		size_t loadIndex; // Updated after loading
 	};
+#endif /* KEXTPATCH_SUPPORT */
 
 	/**
 	 *  Loads and stores kinfo information locally
@@ -82,7 +86,8 @@ public:
 	 *  @return loaded kinfo id
 	 */
 	size_t loadKinfo(const char *id, const char * const paths[], size_t num=1, bool isKernel=false);
-	
+
+#ifdef KEXTPATCH_SUPPORT
 	/**
 	 *  Loads and stores kinfo information locally
 	 *
@@ -91,7 +96,8 @@ public:
 	 *  @return loaded kinfo id
 	 */
 	size_t loadKinfo(KextInfo *info);
-	
+#endif /* KEXTPATCH_SUPPORT */
+
 	/**
 	 *  Kernel kinfo id
 	 */
@@ -158,7 +164,8 @@ public:
 		size_t size {0};
 		t_handler handler {nullptr};
 	};
-	
+
+#ifdef KEXTPATCH_SUPPORT
 	/**
 	 *  Enqueue handler processing at kext loading
 	 *
@@ -183,7 +190,8 @@ public:
 	 *  @param patch patch to apply
 	 */
 	void applyLookupPatch(const LookupPatch *patch);
-	
+#endif /* KEXTPATCH_SUPPORT */
+
 	/**
 	 *  Route function to function
 	 *
@@ -207,7 +215,8 @@ private:
 	 *  @return trampoline pointer or 0
 	 */
 	mach_vm_address_t createTrampoline(mach_vm_address_t func, size_t min);
-	
+
+#ifdef KEXTPATCH_SUPPORT
 	/**
 	 *  Called at kext loading and unloading if kext listening is enabled
 	 */
@@ -217,6 +226,7 @@ private:
 	 *  A pointer to loaded kext information
 	 */
 	OSKextLoadedKextSummaryHeader **loadedKextSummaries {nullptr};
+#endif /* KEXTPATCH_SUPPORT */
 
 	/**
 	 *  Local disassmebler instance, initialised on demand
@@ -232,11 +242,13 @@ private:
 	 *  Applied patches
 	 */
 	evector<Patch::All *, Patch::deleter> kpatches;
-	
+
+#ifdef KEXTPATCH_SUPPORT	
 	/**
 	 *  Awaiting kext notificators
 	 */
 	evector<KextHandler *, KextHandler::deleter> khandlers;
+#endif /* KEXTPATCH_SUPPORT */
 	
 	/**
 	 *  Allocated pages
@@ -258,14 +270,20 @@ private:
 	/**
 	 *  Possible kernel paths
 	 */
+#ifdef COMPRESSION_SUPPORT
 	static constexpr size_t kernelPathsNum {6};
+#else
+	static constexpr size_t kernelPathsNum {4};
+#endif /* COMPRESSION_SUPPORT */
 	const char *kernelPaths[kernelPathsNum] {
 		"/mach_kernel",
 		"/System/Library/Kernels/kernel",	//since 10.10
 		"/System/Library/Kernels/kernel.debug",
 		"/System/Library/Kernels/kernel.development",
-		"/System/Library/Caches/com.apple.kext.caches/Startup/kernelcache", //compressed one
-		"/System/Library/PrelinkedKernels/prelinkedkernel" //compressed one
+#ifdef COMPRESSION_SUPPORT
+		"/System/Library/Caches/com.apple.kext.caches/Startup/kernelcache",
+		"/System/Library/PrelinkedKernels/prelinkedkernel"
+#endif /* COMPRESSION_SUPPORT */
 		
 	};
 };

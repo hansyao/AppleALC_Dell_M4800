@@ -13,8 +13,8 @@
 
 #include <IOKit/IOService.h>
 
-class AppleALC : public IOService {
-	OSDeclareDefaultStructors(AppleALC)
+class PRODUCT_NAME : public IOService {
+	OSDeclareDefaultStructors(PRODUCT_NAME)
 public:
 	bool init(OSDictionary *dict) override;
 	bool start(IOService *provider) override;
@@ -90,7 +90,7 @@ public:
 	 */
 	Policy policy;
 
-	Configuration() : policy("AppleALC", "AppleALC Kernel Extension", &policyOps) {}
+	Configuration() : policy(xStringify(PRODUCT_NAME), xStringify(PRODUCT_NAME) " Kernel Extension", &policyOps) {}
 };
 
 #endif /* kern_start_hpp */

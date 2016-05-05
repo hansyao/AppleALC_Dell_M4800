@@ -14,7 +14,7 @@
 #include <IOKit/IORegistryEntry.h>
 #include <mach/mach_types.h>
 
-OSDefineMetaClassAndStructors(AppleALC, IOService)
+OSDefineMetaClassAndStructors(PRODUCT_NAME, IOService)
 Configuration config;
 
 int Configuration::policyCheckRemount(kauth_cred_t cred, mount *mp, label *mlabel) {
@@ -65,7 +65,7 @@ bool Configuration::getBootArguments() {
 	return !isDisabled;
 }
 
-bool AppleALC::init(OSDictionary *dict) {
+bool PRODUCT_NAME::init(OSDictionary *dict) {
 	if (!IOService::init(dict)) {
 		SYSLOG("init @ failed to initalise the parent");
 		return false;
@@ -74,9 +74,9 @@ bool AppleALC::init(OSDictionary *dict) {
 	return config.getBootArguments();
 }
 
-bool AppleALC::start(IOService *provider) {
+bool PRODUCT_NAME::start(IOService *provider) {
 	if (config.mode == Configuration::StartMode::IOKit) {
-		DBGLOG("init @ initialising AppleALC with IOKit mode");
+		DBGLOG("init @ initialising with IOKit mode");
 		
 		if (!IOService::start(provider)) {
 			SYSLOG("init @ failed to start the parent");
@@ -91,7 +91,7 @@ bool AppleALC::start(IOService *provider) {
 	}
 }
 
-void AppleALC::stop(IOService *provider) {
+void PRODUCT_NAME::stop(IOService *provider) {
 	if (config.mode == Configuration::StartMode::IOKit) {
 		config.enabler.deinit();
 	}
@@ -105,7 +105,7 @@ extern "C" kern_return_t kern_start(kmod_info_t * ki, void *d) {
 	
 	if (config.getBootArguments()) {
 		if (config.mode == Configuration::StartMode::Policy) {
-			DBGLOG("init @ initialising AppleALC with Policy mode");
+			DBGLOG("init @ initialising with Policy mode");
 			
 			if (config.policy.registerPolicy()) {
 				return KERN_SUCCESS;

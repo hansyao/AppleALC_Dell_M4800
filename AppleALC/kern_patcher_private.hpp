@@ -113,6 +113,8 @@ namespace Patch {
 	}
 }
 
+#ifdef KEXTPATCH_SUPPORT
+
 /**
  *  Taken from libkern/libkern/OSKextLibPrivate.h
  */
@@ -134,5 +136,7 @@ struct OSKextLoadedKextSummaryHeader {
 	uint32_t reserved; /* explicit alignment for gdb  */
 	OSKextLoadedKextSummary summaries[0];
 };
+
+#endif /* KEXTPATCH_SUPPORT */
 
 #endif /* kern_patcher_private_h */

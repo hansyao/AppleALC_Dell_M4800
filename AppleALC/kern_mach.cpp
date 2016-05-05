@@ -8,7 +8,9 @@
 //
 
 #include "kern_mach.hpp"
+#ifdef COMPRESSION_SUPPORT
 #include "kern_compression.hpp"
+#endif /* COMPRESSION_SUPPORT */
 #include "kern_util.hpp"
 
 #include <sys/malloc.h>
@@ -89,13 +91,14 @@ kern_return_t MachInfo::init(const char * const paths[], size_t num) {
 	// drop the iocount due to vnode_lookup()
 	// we must do this or the machine gets stuck on shutdown/reboot
 	vnode_put(vnode);
-	
+
+#ifdef COMPRESSION_SUPPORT
 	// We do not need the whole file buffer anymore
 	if (file_buf) {
 		Buffer::deleter(file_buf);
 		file_buf = nullptr;
 	}
-	
+#endif /* COMPRESSION_SUPPORT */
 	Buffer::deleter(machHeader);
 	
 	return error;
@@ -245,6 +248,7 @@ kern_return_t MachInfo::readMachHeader(uint8_t *buffer, vnode_t vnode, vfs_conte
 				SYSLOG("mach @ failed to find a x86_64 mach");
 				return KERN_FAILURE;
 			}
+#ifdef COMPRESSION_SUPPORT
 			case CompressedMagic: { // comp
 				auto header = reinterpret_cast<CompressedHeader *>(buffer);
 				auto compressedBuf = Buffer::create<uint8_t>(_OSSwapInt32(header->compressed));
@@ -270,7 +274,7 @@ kern_return_t MachInfo::readMachHeader(uint8_t *buffer, vnode_t vnode, vfs_conte
 				Buffer::deleter(compressedBuf);
 				return KERN_FAILURE;
 			}
-			
+#endif /* COMPRESSION_SUPPORT */
 			default:
 				SYSLOG("mach @ read mach has unsupported %X magic", magic);
 				return KERN_FAILURE;
@@ -290,16 +294,20 @@ kern_return_t MachInfo::readLinkedit(vnode_t vnode, vfs_context_t ctxt) {
 		SYSLOG("mach @ Could not allocate enough memory (%lld) for __LINKEDIT segment", linkedit_size);
 		return KERN_FAILURE;
 	}
-	
+
+#ifdef COMPRESSION_SUPPORT
 	if (!file_buf) {
+#endif /* COMPRESSION_SUPPORT */
 		int error = readFileData(linkedit_buf, fat_offset+linkedit_fileoff, linkedit_size, vnode, ctxt);
 		if (error) {
 			SYSLOG("mach @ linkedit read failed with %d error", error);
 			return KERN_FAILURE;
 		}
+#ifdef COMPRESSION_SUPPORT
 	} else {
 		memcpy(linkedit_buf, file_buf+linkedit_fileoff, linkedit_size);
 	}
+#endif /* COMPRESSION_SUPPORT */
 
 	return KERN_SUCCESS;
 }

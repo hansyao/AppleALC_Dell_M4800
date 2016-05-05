@@ -10,8 +10,9 @@
 
 #include <mach/mach_types.h>
 
-//TODO: get rid of this
+#ifdef KEXTPATCH_SUPPORT
 static KernelPatcher *that {nullptr};
+#endif /* KEXTPATCH_SUPPORT */
 // Kernel version
 extern const uint32_t version_major;
 
@@ -39,7 +40,6 @@ void KernelPatcher::init() {
 }
 
 void KernelPatcher::deinit() {
-	
 	// Deinitialise disassembler
 	disasm.deinit();
 	
@@ -87,6 +87,7 @@ size_t KernelPatcher::loadKinfo(const char *id, const char * const paths[], size
 	return INVALID;
 }
 
+#ifdef KEXTPATCH_SUPPORT
 size_t KernelPatcher::loadKinfo(KernelPatcher::KextInfo *info) {
 	if (!info) {
 		SYSLOG("patcher @ loadKinfo got a null info");
@@ -107,6 +108,7 @@ size_t KernelPatcher::loadKinfo(KernelPatcher::KextInfo *info) {
 	
 	return idx;
 }
+#endif /* KEXTPATH_SUPPORT */
 
 void KernelPatcher::updateRunningInfo(size_t id, mach_vm_address_t slide, size_t size) {
 	if (id >= kinfos.size()) {
@@ -134,6 +136,7 @@ mach_vm_address_t KernelPatcher::solveSymbol(size_t id, const char *symbol) {
 	return kinfos[id]->solveSymbol(symbol);
 }
 
+#ifdef KEXTPATCH_SUPPORT
 void KernelPatcher::setupKextListening() {
 	// We have already done this
 	if (that) return;
@@ -218,6 +221,7 @@ void KernelPatcher::applyLookupPatch(const LookupPatch *patch) {
 		code = Error::MemoryIssue;
 	}
 }
+#endif /* KEXTPATCH_SUPPORT */
 
 mach_vm_address_t KernelPatcher::routeFunction(mach_vm_address_t from, mach_vm_address_t to, bool buildWrapper, bool kernelRoute) {
 	mach_vm_address_t diff = (to - (from + SmallJump));
@@ -338,6 +342,7 @@ mach_vm_address_t KernelPatcher::createTrampoline(mach_vm_address_t func, size_t
 	return 0;
 }
 
+#ifdef KEXTPATCH_SUPPORT
 void KernelPatcher::onKextSummariesUpdated() {
 	DBGLOG("patcher @ invoked at kext loading/unloading");
 	
@@ -363,3 +368,4 @@ void KernelPatcher::onKextSummariesUpdated() {
 		}
 	}
 }
+#endif /* KEXTPATCH_SUPPORT */
