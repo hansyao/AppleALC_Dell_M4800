@@ -1,6 +1,6 @@
 //
 //  kern_mach.hpp
-//  AppleALC
+//  KernelCommon
 //
 //  Certain parts of code are the subject of
 //   copyright © 2011, 2012, 2013, 2014 fG!, reverser@put.as - http://reverse.put.as
@@ -79,7 +79,7 @@ class MachInfo {
 	 *
 	 *  @return KERN_SUCCESS if succeeded
 	 */
-	kern_return_t setWPBit(bool enable);
+	static kern_return_t setWPBit(bool enable);
 	
 	/**
 	 *  retrieve the first pages of a binary at disk into a buffer
@@ -182,29 +182,6 @@ public:
 	mach_vm_address_t solveSymbol(const char *symbol);
 
 	/**
-	 *  Read file data from a vnode
-	 *
-	 *  @param buffer output buffer
-	 *  @param off    file offset
-	 *  @param sz     bytes to read
-	 *  @param vnode  file node
-	 *  @param ctxt   filesystem context
-	 *
-	 *  @return 0 on success
-	 */
-	static int readFileData(void *buffer, off_t off, size_t sz, vnode_t vnode, vfs_context_t ctxt);
-	
-	/**
-	 *  Read file size from a vnode
-	 *
-	 *  @param vnode file node
-	 *  @param ctxt  filesystem context
-	 *
-	 *  @return file size or 0
-	 */
-	static size_t readFileSize(vnode_t vnode, vfs_context_t ctxt);
-
-	/**
 	 *  find the kernel base address (mach-o header)
 	 *  by searching backwards using the int80 handler as starting point
 	 *
@@ -219,7 +196,7 @@ public:
 	 *
 	 *  @return KERN_SUCCESS if succeeded
 	 */
-	kern_return_t setKernelWriting(bool enable);
+	static kern_return_t setKernelWriting(bool enable);
 	
 	/**
 	 *  Compare the loaded kernel with the passed kernel header
@@ -229,6 +206,19 @@ public:
 	 *  @return true if the kernel uuids match
 	 */
 	bool isCurrentKernel(void *kernelHeader);
+	
+	/**
+	 *  Find section bounds in a passed binary for provided cpu
+	 *
+	 *  @param ptr         pointer to a complete mach binary
+	 *  @param vmstart     returned vm text pointer
+	 *  @param ptrstart    returned ptr text pointer
+	 *  @param size        returned text size or 0 on failure
+	 *  @param segmentName segment name
+	 *  @param sectionName section name
+	 *  @param cpu         cpu to look for in case of fat binaries
+	 */
+	static void findSectionBounds(void *ptr, void *&vmstart, void *&ptrstart, size_t &size, const char *segmentName="__TEXT", const char *sectionName="__text", cpu_type_t cpu=CPU_TYPE_X86_64);
 };
 
 #endif /* kern_mach_hpp */

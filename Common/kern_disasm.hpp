@@ -1,6 +1,6 @@
 //
 //  kern_disasm.hpp
-//  AppleALC
+//  KernelCommon
 //
 //  Copyright © 2016 vit9696. All rights reserved.
 //

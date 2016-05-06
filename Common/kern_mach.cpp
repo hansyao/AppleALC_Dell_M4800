@@ -1,6 +1,6 @@
 //
 //  kern_mach.cpp
-//  AppleALC
+//  KernelCommon
 //
 //  Certain parts of code are the subject of
 //   copyright © 2011, 2012, 2013, 2014 fG!, reverser@put.as - http://reverse.put.as
@@ -11,6 +11,7 @@
 #ifdef COMPRESSION_SUPPORT
 #include "kern_compression.hpp"
 #endif /* COMPRESSION_SUPPORT */
+#include "kern_file.hpp"
 #include "kern_util.hpp"
 
 #include <sys/malloc.h>
@@ -186,47 +187,8 @@ mach_vm_address_t MachInfo::solveSymbol(const char *symbol) {
 	return 0;
 }
 
-int MachInfo::readFileData(void *buffer, off_t off, size_t sz, vnode_t vnode, vfs_context_t ctxt) {
-	int error = 0;
-
-	uio_t uio = uio_create(1, off, UIO_SYSSPACE, UIO_READ);
-	if (!uio) {
-		SYSLOG("mach @ uio_create returned null!");
-		return error;
-	}
-	
-	// imitate the kernel and read a single page from the file
-	error = uio_addiov(uio, CAST_USER_ADDR_T(buffer), sz);
-	if (error) {
-		SYSLOG("mach @ uio_addiov returned error %d!", error);
-		return error;
-	}
-	
-	// read mach vnode into the buffer
-	error = VNOP_READ(vnode, uio, 0, ctxt);
-	if (error) {
-		SYSLOG("mach @ VNOP_READ failed %d!", error);
-		return error;
-	}
-	
-	if (uio_resid(uio)) {
-		SYSLOG("mach @ uio_resid returned non-null!");
-		return EINVAL;
-	}
-	
-	return error;
-}
-
-size_t MachInfo::readFileSize(vnode_t vnode, vfs_context_t ctxt) {
-	// Taken from XNU vnode_size
-	vnode_attr va;
-	VATTR_INIT(&va);
-	VATTR_WANTED(&va, va_data_size);
-	return vnode_getattr(vnode, &va, ctxt) ? 0 : va.va_data_size;
-}
-
 kern_return_t MachInfo::readMachHeader(uint8_t *buffer, vnode_t vnode, vfs_context_t ctxt, off_t off) {
-	int error = readFileData(buffer, off, HeaderSize, vnode, ctxt);
+	int error = FileIO::readFileData(buffer, off, HeaderSize, vnode, ctxt);
 	if (error) {
 		SYSLOG("mach @ mach header read failed with %d error", error);
 		return KERN_FAILURE;
@@ -254,7 +216,7 @@ kern_return_t MachInfo::readMachHeader(uint8_t *buffer, vnode_t vnode, vfs_conte
 				auto compressedBuf = Buffer::create<uint8_t>(_OSSwapInt32(header->compressed));
 				if (!compressedBuf) {
 					SYSLOG("mach @ failed to allocate memory for reading mach binary");
-				} else if (readFileData(compressedBuf, off+sizeof(CompressedHeader), _OSSwapInt32(header->compressed),
+				} else if (FileIO::readFileData(compressedBuf, off+sizeof(CompressedHeader), _OSSwapInt32(header->compressed),
 										vnode, ctxt) != KERN_SUCCESS) {
 					SYSLOG("mach @ failed to read compressed binary");
 				} else {
@@ -298,7 +260,7 @@ kern_return_t MachInfo::readLinkedit(vnode_t vnode, vfs_context_t ctxt) {
 #ifdef COMPRESSION_SUPPORT
 	if (!file_buf) {
 #endif /* COMPRESSION_SUPPORT */
-		int error = readFileData(linkedit_buf, fat_offset+linkedit_fileoff, linkedit_size, vnode, ctxt);
+		int error = FileIO::readFileData(linkedit_buf, fat_offset+linkedit_fileoff, linkedit_size, vnode, ctxt);
 		if (error) {
 			SYSLOG("mach @ linkedit read failed with %d error", error);
 			return KERN_FAILURE;
@@ -310,6 +272,74 @@ kern_return_t MachInfo::readLinkedit(vnode_t vnode, vfs_context_t ctxt) {
 #endif /* COMPRESSION_SUPPORT */
 
 	return KERN_SUCCESS;
+}
+
+void MachInfo::findSectionBounds(void *ptr, void *&vmstart, void *&ptrstart, size_t &size, const char *segmentName, const char *sectionName, cpu_type_t cpu) {
+	vmstart = 0;
+	ptrstart = 0;
+	size = 0;
+	
+	mach_header *header = static_cast<mach_header *>(ptr);
+	load_command *cmd = static_cast<load_command *>(ptr);
+	
+	if (header->magic == MH_MAGIC_64) {
+		((uintptr_t &)cmd) += sizeof(mach_header_64);
+	} else if (header->magic == MH_MAGIC) {
+		((uintptr_t &)cmd) += sizeof(mach_header);
+	} else if (header->magic == FAT_CIGAM){
+		fat_header *fheader = static_cast<fat_header *>(ptr);
+		uint32_t num = __builtin_bswap32(fheader->nfat_arch);
+		fat_arch *farch = reinterpret_cast<fat_arch *>(reinterpret_cast<uintptr_t>(ptr) + sizeof(fat_header));
+		for (size_t i = 0; i < num; i++, farch++) {
+			if (__builtin_bswap32(farch->cputype) ==  cpu) {
+				findSectionBounds(reinterpret_cast<void *>(reinterpret_cast<uintptr_t>(ptr) + __builtin_bswap32(farch->offset)), vmstart, ptrstart, size, segmentName, sectionName, cpu);
+				break;
+			}
+		}
+		return;
+	}
+	
+	for (uint32_t no = 0; no < header->ncmds; no++) {
+		if (cmd->cmd == LC_SEGMENT) {
+			segment_command *scmd = reinterpret_cast<segment_command *>(cmd);
+			if (!strcmp(scmd->segname, segmentName)) {
+				section *sect = reinterpret_cast<section *>(cmd);
+				((uintptr_t &)sect) += sizeof(segment_command);
+				
+				for (uint32_t sno = 0; sno < scmd->nsects; sno++) {
+					if (!strcmp(sect->sectname, sectionName)) {
+						vmstart = reinterpret_cast<void *>(sect->addr);
+						ptrstart = reinterpret_cast<void *>(sect->offset+reinterpret_cast<uintptr_t>(ptr));
+						size = static_cast<size_t>(sect->size);
+						DBGLOG("mach @ found start %p size %zu\n", vmstart, size);
+						return;
+					}
+					
+					sect++;
+				}
+			}
+		} else if (cmd->cmd == LC_SEGMENT_64) {
+			segment_command_64 *scmd = reinterpret_cast<segment_command_64 *>(cmd);
+			if (!strcmp(scmd->segname, segmentName)) {
+				section_64 *sect = reinterpret_cast<section_64 *>(cmd);
+				((uintptr_t &)sect) += sizeof(segment_command_64);
+				
+				for (uint32_t sno = 0; sno < scmd->nsects; sno++) {
+					if (!strcmp(sect->sectname, sectionName)) {
+						vmstart = reinterpret_cast<void *>(sect->addr);
+						ptrstart = reinterpret_cast<void *>(sect->offset+reinterpret_cast<uintptr_t>(ptr));
+						size = static_cast<size_t>(sect->size);
+						DBGLOG("mach @ found start %p size %zu\n", vmstart, size);
+						return;
+					}
+					
+					sect++;
+				}
+			}
+		}
+		
+		((uintptr_t &)cmd) += cmd->cmdsize;
+	}
 }
 
 //FIXME: Guard pointer access by HeaderSize

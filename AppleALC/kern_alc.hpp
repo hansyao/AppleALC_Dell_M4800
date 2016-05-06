@@ -174,7 +174,8 @@ private:
 	
 	/**
 	 *  Detected ComputerModel
-	 */	int computerModel;
+	 */
+	int computerModel;
 
 };
 
