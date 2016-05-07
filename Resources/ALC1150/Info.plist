@@ -36,7 +36,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Custom by vit9696 (Toleda)</string>
+				<string>Toleda ALC1150</string>
 				<key>Id</key>
 				<integer>1</integer>
 				<key>Path</key>
@@ -44,7 +44,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Custom by vit9696 (Toleda)</string>
+				<string>Toleda ALC1150</string>
 				<key>Id</key>
 				<integer>2</integer>
 				<key>Path</key>
@@ -52,7 +52,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Custom by vit9696 (Toleda)</string>
+				<string>Toleda ALC1150</string>
 				<key>Id</key>
 				<integer>3</integer>
 				<key>Path</key>
@@ -79,7 +79,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Custom by vit9696 (Toleda)</string>
+				<string>Toleda resources</string>
 				<key>Id</key>
 				<integer>1</integer>
 				<key>Path</key>
@@ -87,7 +87,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Custom by vit9696 (Toleda)</string>
+				<string>Toleda resources</string>
 				<key>Id</key>
 				<integer>2</integer>
 				<key>Path</key>
@@ -95,7 +95,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Custom by vit9696 (Toleda)</string>
+				<string>Toleda resources</string>
 				<key>Id</key>
 				<integer>3</integer>
 				<key>Path</key>
@@ -113,7 +113,7 @@
 			<key>MaxKernel</key>
 			<integer>13</integer>
 			<key>MinKernel</key>
-			<integer>13</integer>
+			<integer>12</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
@@ -137,7 +137,7 @@
 			<key>Find</key>
 			<data>QcaGQwEAAAA=</data>
 			<key>MinKernel</key>
-			<integer>13</integer>
+			<integer>12</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
@@ -149,7 +149,7 @@
 			<key>Find</key>
 			<data>ixnUEQ==</data>
 			<key>MinKernel</key>
-			<string>13</string>
+			<string>12</string>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>

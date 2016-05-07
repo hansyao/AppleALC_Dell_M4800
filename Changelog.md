@@ -1,5 +1,71 @@
 AppleALC Changelog
 ==================
+#### v1.0.10
+- Added ALC665 codec support layout-id 12, 13 by insanelydeepak
+- Added ALC292 codec support layout-id 12
+- Added ALC283 layout-id 11 for Aspire V3-371 by Slbomber
+- Prohibited kext unloading in policy mode since our policy is registered as static and cannot be unregistered
+- Bumped module versions to 10.8 to avoid accidental loading on 10.7
+
+#### v1.0.9
+- Replace ALC888 patch 11d4198b->10ec0885 it prevents Sound Asserions on layout-id 1, 2, 3
+- Deleted unnecessary ALC888 patch 11d41983
+- Changed patch for Intel HD4600 HDMI (ig-platform-id 0x0d220003)
+- Changed ALC275 Resources
+- Deleted not working Intel HD4000 LVDS, HDMI (ig-platform-id 0x0166000A) Laptop only patch
+- Added Conexant CX20583 codec support layout-id 3 by Mirone
+- Added Conexant CX20585 codec support layout-id 3 by Mirone
+- Added Conexant CX20588 codec support layout-id 3 by Mirone
+- Added Conexant CX20724 codec support layout-id 3 by Mirone
+- Added Conexant CX20752 codec support layout-id 3 by Mirone
+- Added Conexant CX20756 codec support layout-id 3 by Mirone
+- Added Conexant CX20757 codec support layout-id 3 by Mirone
+- Added NoSleep/NoClick pathes to Conexant CX20590 info.plist
+- Added ALC280 layout-id 4 Combo Jack Support by Mirone
+- Added ALC1150 support for OS X 10.8
+- Changed Comment lines for Toleda resources in 1150 info.plist
+- Added IDT92HD93BXX codec support layout-id 12
+
+#### v1.0.8
+- Added ALC885 Toleda resources layout-id 1
+- Added ALC887 Toleda resources layout-id 1, 2, 3
+- Fix mistake in CX20751/2 info.plist and change layout-id to 28
+- Added ALC888 Toleda resources layout-id 1, 2, 3
+- Added ALC668 layout 20 for Asus G551JM 
+- Added ALC275 layout-id 3 Mirone resources
+- Added ALC283 layout-id 3 Mirone resources
+- Added ALC284 layout-id 3 Mirone resources
+- Added ALC288 layout-id 3 Mirone resources
+- Added ALC290 layout-id 3 Mirone resources
+- Added IDT92HD66C3/65 layout-id 3 Mirone resources
+- Added IDT92HD71B7X layout-id 3 Mirone resources
+- Added IDT92HD75B2X5 layout-id 3 Mirone resources
+- Added IDT92HD75B3X5 layout-id 3 Mirone resources
+- Added IDT92HD99BXX layout-id 3 Mirone resources
+- Added IDT92HD87B1 layout-id 3 Mirone resources
+- Change IDT92HD81B1X5 to Mirone resources layout-id 3
+- Change IDT92HD91BXX  to Mirone resources layout-id 3
+- AppleALC should not abort loading if it fails to find some kext
+
+#### v1.0.7
+- Added 0x100004 revision to ALC269
+- Added custom ALC269 resources for SONY VAIO VPCEB3M1R layout-id 20
+- Added custom ALC282 resources for Acer Aspire E1-572G layout-id 28
+- Added into ALC269 info.plist no-sleep, no-click, headphone detect patches
+- Added ALC282 resources for Acer Aspire on IvyBridge by Andrey1970 layout-id 27
+- Added Mirone resources to ALC892 thanks to cecekpawon
+- Added ALC668 resources for DELL Precision M3800 by Syscl
+- Allowed providing non-existent layouts
+- Added IDT92HD81B1X5 codec support layout-id 12 by RehabMan
+- Added IDT92HD87B1/3 codec support layout-id 12 by RehabMan
+- Added IDT92HD87B2/4 codec support layout-id 12 by RehabMan
+- Added IDT92HD91BXX codec support layout-id 12 by RehabMan
+- Added IDT92HD95 codec support layout-id 12 by RehabMan
+- Added Conexant CX20751/2 codec support layout-id 12 by RehabMan
+- Added ALC280 codec support layout-id 3 by Mirone
+- Fixed CX20590 platform12.xml.zlib > platforms12.xml.zlib
+- Reduced kext size by optimizing every platforms.xml.zlib in Resources folder
+- Fixed codec-id in PinConfigs info.plist for IDT 92HD87B1/3 should be 287143633
 
 #### v1.0.6
 - Reduced kext size by optimising capstone build options
