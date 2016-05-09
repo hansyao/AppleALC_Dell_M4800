@@ -8,6 +8,7 @@
 #include "kern_file.hpp"
 #include "kern_util.hpp"
 
+#include <sys/time.h>
 #include <sys/vnode.h>
 
 uint8_t *FileIO::readFileToBuffer(const char *path) {
