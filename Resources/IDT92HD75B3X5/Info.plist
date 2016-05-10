@@ -18,12 +18,28 @@
 				<key>Path</key>
 				<string>layout3.xml.zlib</string>
 			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>11</integer>
+				<key>Comment</key>
+				<string>Custom pinconfig by olderst</string>
+				<key>Path</key>
+				<string>layout3.xml.zlib</string>
+			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
 			<dict>
 				<key>Id</key>
 				<integer>3</integer>
+				<key>Path</key>
+				<string>PlatformsM.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>11</integer>
+				<key>Comment</key>
+				<string>Custom pinconfig by olderst</string>
 				<key>Path</key>
 				<string>PlatformsM.xml.zlib</string>
 			</dict>

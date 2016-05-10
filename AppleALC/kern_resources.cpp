@@ -14159,6 +14159,7 @@ static const uint8_t file186[] {
 };
 static const CodecModInfo::File platforms43[] {
 	{ file186, 540, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3},
+	{ file186, 540, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 11},
 };
 static const uint8_t file187[] {
 	0x78, 0x9C, 0xCD, 0x53, 0x4D, 0x4F, 0xC2, 0x40, 0x10, 0x3D, 0x97, 0x5F, 0x51, 0x7B, 0x87, 0xE5, 0x4B, 0x21, 0xA6, 0x94, 0x00, 0x45, 0x6D, 0x52, 
@@ -14181,6 +14182,7 @@ static const uint8_t file187[] {
 };
 static const CodecModInfo::File layouts43[] {
 	{ file187, 391, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
+	{ file187, 391, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 11 },
 };
 static const uint8_t patchBuf488[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
 static const uint8_t patchBuf489[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
@@ -15380,7 +15382,7 @@ CodecModInfo codecModIDT[] {
 	{ "0x111d76f3", 0x76F3, nullptr, 0, platforms40, 1, layouts40, 1, patches40, 5 },
 	{ "0x111d76b2", 0x76B2, nullptr, 0, platforms41, 1, layouts41, 1, patches41, 5 },
 	{ "0x111d7608", 0x7608, nullptr, 0, platforms42, 1, layouts42, 1, patches42, 5 },
-	{ "0x111d7603", 0x7603, nullptr, 0, platforms43, 1, layouts43, 1, patches43, 5 },
+	{ "0x111d7603", 0x7603, nullptr, 0, platforms43, 2, layouts43, 2, patches43, 5 },
 	{ "0x111d7605", 0x7605, nullptr, 0, platforms44, 1, layouts44, 1, patches44, 6 },
 	{ "0x111d7605", 0x7605, nullptr, 0, platforms45, 1, layouts45, 1, patches45, 6 },
 	{ "0x111d76d1 Rev:0x100205", 0x76D1, revisions19, 1, platforms46, 1, layouts46, 1, patches46, 5 },
