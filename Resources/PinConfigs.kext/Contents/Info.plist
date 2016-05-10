@@ -1456,6 +1456,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Mirone - IDT 92HD81B1X5</string>
+					<key>CodecID</key>
+					<integer>287143429</integer>
+					<key>ConfigData</key>
+					<data>AKccIACnHRAApx6hAKcfAQC3HBAAtx0QALceIQC3HwEA1xwwANcdAADXHhcA1x+QAOcc8ADnHQAA5x4AAOcfQAD3HEAA9x0AAPceAAD3H0ABBxxQAQcdAAEHHgABBx9AARccYAEXHQABFx6jARcf0AH3HHAB9x0AAfceAAH3H0ACBxyAAgcdAAIHHgACBx9A</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - IDT 92HD75B2X5</string>
 					<key>CodecID</key>
 					<integer>287143432</integer>
@@ -1470,43 +1484,29 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>olderst - IDT 92HD75B2X5</string>
+					<string>Mirone - IDT 92HD75B3X5</string>
 					<key>CodecID</key>
-					<integer>287143432</integer>
+					<integer>287143427</integer>
+					<key>ConfigData</key>
+					<data>ALccEAC3HRAAtx6gALcfkADXHCAA1x0AANceFwDXH5AA9xwwAPcdQAD3HiEA9x8BAYccQAGHHZABhx6BAYcfAQ==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Mirone - IDT 92HD75B3X5</string>
+					<key>CodecID</key>
+					<integer>287143427</integer>
 					<key>ConfigData</key>
 					<data>ALccAAC3HQAAtx6nALcfmQDXHBAA1x0AANceFwDXH5kA9xwgAPcdQAD3HiEA9x8B</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>11</integer>
-				</dict>
-				<dict>
-					<key>AFGLowPowerState</key>
-					<data>AwAAAA==</data>
-					<key>Codec</key>
-					<string>Mirone - IDT 92HD75B3X5</string>
-					<key>CodecID</key>
-					<integer>287143427</integer>
-					<key>ConfigData</key>
-					<data>ALccEAC3HRAAtx6gALcfkADXHCAA1x0AANceFwDXH5AA9xwwAPcdQAD3HiEA9x8BAYccQAGHHZABhx6BAYcfAQ==</data>
-					<key>FuncGroup</key>
-					<integer>1</integer>
-					<key>LayoutID</key>
-					<integer>3</integer>
-				</dict>
-				<dict>
-					<key>AFGLowPowerState</key>
-					<data>AwAAAA==</data>
-					<key>Codec</key>
-					<string>Mirone - IDT 92HD75B3X5</string>
-					<key>CodecID</key>
-					<integer>287143427</integer>
-					<key>ConfigData</key>
-					<data>ALccEAC3HRAAtx6gALcfkADXHCAA1x0AANceFwDXH5AA9xwwAPcdQAD3HiEA9x8BAYccQAGHHZABhx6BAYcfAQ==</data>
-					<key>FuncGroup</key>
-					<integer>1</integer>
-					<key>LayoutID</key>
-					<integer>3</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
