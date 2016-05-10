@@ -40,7 +40,7 @@ extern bool lowMemory;
  *
  *  @return substring address if there or nullptr
  */
-const char *strstr(const char *stack, const char *needle, size_t len);
+const char *strnstr(const char *stack, const char *needle, size_t len);
 
 /**
  *  @brief  C-style memory management from libkern, missing from headers

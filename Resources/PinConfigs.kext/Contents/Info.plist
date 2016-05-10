@@ -1470,6 +1470,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>olderst - IDT 92HD75B2X5</string>
+					<key>CodecID</key>
+					<integer>287143432</integer>
+					<key>ConfigData</key>
+					<data>ALccAAC3HQAAtx6nALcfmQDXHBAA1x0AANceFwDXH5kA9xwgAPcdQAD3HiEA9x8B</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - IDT 92HD75B3X5</string>
 					<key>CodecID</key>
 					<integer>287143427</integer>
@@ -1479,20 +1493,6 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>3</integer>
-				</dict>
-				<dict>
-					<key>AFGLowPowerState</key>
-					<data>AwAAAA==</data>
-					<key>Codec</key>
-					<string>olderst - IDT 92HD81B1X5</string>
-					<key>CodecID</key>
-					<integer>287143429</integer>
-					<key>ConfigData</key>
-					<data>ALccAAC3HQAAtx6nALcfmQDXHBAA1x0AANceFwDXH5kA9xwgAPcdQAD3HiEA9x8B</data>
-					<key>FuncGroup</key>
-					<integer>1</integer>
-					<key>LayoutID</key>
-					<integer>11</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>

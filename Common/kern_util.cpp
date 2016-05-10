@@ -15,7 +15,7 @@ bool debugEnabled = false;
 bool lowMemory = false;
 extern vm_map_t kernel_map;
 
-const char *strstr(const char *stack, const char *needle, size_t len) {
+const char *strnstr(const char *stack, const char *needle, size_t len) {
 	const char *i = needle;
 
 	while (*stack) {
