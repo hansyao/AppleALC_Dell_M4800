@@ -9,6 +9,7 @@ AppleALC Changelog
 - Bumped module versions to 10.8 to avoid accidental loading on 10.7
 - Added No-sleep, no-click patches into ALC892 info.plist
 - Added ALC670 codec support layout-id 12 by Alex Auditore
+- Added revision-id in ALC889 info.plist
 
 #### v1.0.9
 - Replace ALC888 patch 11d4198b->10ec0885 it prevents Sound Asserions on layout-id 1, 2, 3

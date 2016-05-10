@@ -114,6 +114,10 @@
 			<data>QcYGAUmLvCQ=</data>
 		</dict>
 	</array>
+	<key>Revisions</key>
+	<array>
+		<integer>1048580</integer>
+	</array>
 	<key>Vendor</key>
 	<string>Realtek</string>
 </dict>
