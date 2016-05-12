@@ -146,6 +146,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Custom ALC260</string>
+					<key>CodecID</key>
+					<integer>283902560</integer>
+					<key>ConfigData</key>
+					<data>AQccAAEHHUABBx4hAQcfAQEnHBABJx2QASceoQEnH5kBNxwgATcdMAE3HoEBNx8B</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - Realtek ALC268</string>
 					<key>CodecID</key>
 					<integer>283902568</integer>
