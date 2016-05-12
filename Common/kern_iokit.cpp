@@ -39,7 +39,7 @@ namespace IOUtil {
 				auto data = OSDynamicCast(OSData, prop);
 				if (data) {
 					//TODO: make this more reliable
-					if (strnstr(static_cast<const char *>(data->getBytesNoCopy()), "Book", strlen("Book"))) {
+					if (strstr(static_cast<const char *>(data->getBytesNoCopy()), "Book", strlen("Book"))) {
 						return ComputerModel::ComputerLaptop;
 					} else {
 						return ComputerModel::ComputerDesktop;
