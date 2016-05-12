@@ -11,14 +11,14 @@
 #include <sys/time.h>
 #include <sys/vnode.h>
 
-uint8_t *FileIO::readFileToBuffer(const char *path) {
+uint8_t *FileIO::readFileToBuffer(const char *path, size_t &size) {
 	vnode_t vnode = NULLVP;
 	vfs_context_t ctxt = vfs_context_create(nullptr);
 	uint8_t *buf = nullptr;
 	
 	errno_t err = vnode_lookup(path, 0, &vnode, ctxt);
 	if(!err) {
-		size_t size = readFileSize(vnode, ctxt);
+		size = readFileSize(vnode, ctxt);
 		if(size > 0) {
 			buf = Buffer::create<uint8_t>(size);
 			if (buf) {
