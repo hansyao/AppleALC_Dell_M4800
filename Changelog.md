@@ -13,6 +13,8 @@ AppleALC Changelog
 - Added ALC260 codec support layout-id 12
 - Added Creative CA0132 codec support layout-id 11 and 12
 - Added CirrusLogic CS4213 codec support layout-id 28 by insanelydeepak
+- Added revision 0x100202 into ALC888 info.plist
+- Changed not working layout12 and platforms12 for Creative CA0132
 
 #### v1.0.9
 - Replace ALC888 patch 11d4198b->10ec0885 it prevents Sound Asserions on layout-id 1, 2, 3
