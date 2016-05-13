@@ -32,6 +32,48 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Custom Creative CA0132 5.1 channel</string>
+					<key>CodecID</key>
+					<integer>285343761</integer>
+					<key>ConfigData</key>
+					<data>IVcD8CFXFw0hVxgkIVcPgCC3HCAgtx1AILceASC3HwEgxxxgIMcdICDHHkUgxx8BINcc8CDXHQAg1x4AINcfQCDnHPAg5x0AIOceACDnH0Ag9xwvIPcdQCD3HiEg9x8BIQccMCEHHUAhBx4hIQcfASEXHEAhFx0QIRceASEXHwEhJxwQIScdkSEnHqEhJx+QITcc8CE3HQAhNx4AITcfQCGHHFAhhx1gIYceASGHHwE=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Custom Creative CA0132</string>
+					<key>CodecID</key>
+					<integer>285343761</integer>
+					<key>ConfigData</key>
+					<data>AVcKAQAXFx8AFxUQAScIgQFnCIABVxcNAVcYJAEnH5A=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>InsanelyDeepak - Cirrus Logic -CS4213</string>
+					<key>CodecID</key>
+					<integer>269697555</integer>
+					<key>ConfigData</key>
+					<data>AEccEABHHRAARx4hAEcfAABXHCAAVx0AAFceFwBXH5AAZxwwAGcdEABnHoEAZx8AAHccQAB3HQAAdx6gAHcfkABXDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - ADI-1988B</string>
 					<key>CodecID</key>
 					<integer>299112843</integer>

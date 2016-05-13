@@ -11,6 +11,8 @@ AppleALC Changelog
 - Added ALC670 codec support layout-id 12 by Alex Auditore
 - Added revision-id in ALC889 info.plist
 - Added ALC260 codec support layout-id 12
+- Added Creative CA0132 codec support layout-id 11 and 12
+- Added CirrusLogic CS4213 codec support layout-id 28 by insanelydeepak
 
 #### v1.0.9
 - Replace ALC888 patch 11d4198b->10ec0885 it prevents Sound Asserions on layout-id 1, 2, 3
