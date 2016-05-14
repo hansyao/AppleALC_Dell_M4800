@@ -33,6 +33,7 @@ uint8_t *FileIO::readFileToBuffer(const char *path, size_t &size) {
 		} else {
 			SYSLOG("file @ failed to obtain %s size", path);
 		}
+		vnode_put(vnode);
 	} else {
 		SYSLOG("file @ failed to find %s", path);
 	}
