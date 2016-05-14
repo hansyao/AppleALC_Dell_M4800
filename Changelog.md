@@ -4,8 +4,17 @@ AppleALC Changelog
 - Added ALC665 codec support layout-id 12, 13 by insanelydeepak
 - Added ALC292 codec support layout-id 12
 - Added ALC283 layout-id 11 for Aspire V3-371 by Slbomber
+- Added IDT92HD75B3X5 layout-id 11 with a custom pinconfig by olderst
 - Prohibited kext unloading in policy mode since our policy is registered as static and cannot be unregistered
 - Bumped module versions to 10.8 to avoid accidental loading on 10.7
+- Added No-sleep, no-click patches into ALC892 info.plist
+- Added ALC670 codec support layout-id 12 by Alex Auditore
+- Added revision-id in ALC889 info.plist
+- Added ALC260 codec support layout-id 12
+- Added Creative CA0132 codec support layout-id 11 and 12
+- Added CirrusLogic CS4213 codec support layout-id 28 by insanelydeepak
+- Added revision 0x100202 into ALC888 info.plist
+- Changed not working layout12 and platforms12 for Creative CA0132
 
 #### v1.0.9
 - Replace ALC888 patch 11d4198b->10ec0885 it prevents Sound Asserions on layout-id 1, 2, 3

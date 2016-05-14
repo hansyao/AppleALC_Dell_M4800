@@ -211,14 +211,15 @@ public:
 	 *  Find section bounds in a passed binary for provided cpu
 	 *
 	 *  @param ptr         pointer to a complete mach binary
-	 *  @param vmstart     returned vm text pointer
-	 *  @param ptrstart    returned ptr text pointer
-	 *  @param size        returned text size or 0 on failure
+	 *  @param vmsegment   returned vm segment pointer
+	 *  @param vmsection   returned vm section pointer
+	 *  @param sectionptr  returned section pointer
+	 *  @param size        returned section size or 0 on failure
 	 *  @param segmentName segment name
 	 *  @param sectionName section name
 	 *  @param cpu         cpu to look for in case of fat binaries
 	 */
-	static void findSectionBounds(void *ptr, void *&vmstart, void *&ptrstart, size_t &size, const char *segmentName="__TEXT", const char *sectionName="__text", cpu_type_t cpu=CPU_TYPE_X86_64);
+	static void findSectionBounds(void *ptr, vm_address_t &vmsegment, vm_address_t &vmsection, void *&sectionptr, size_t &size, const char *segmentName="__TEXT", const char *sectionName="__text", cpu_type_t cpu=CPU_TYPE_X86_64);
 };
 
 #endif /* kern_mach_hpp */

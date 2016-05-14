@@ -16,13 +16,17 @@ bool lowMemory = false;
 extern vm_map_t kernel_map;
 
 const char *strstr(const char *stack, const char *needle, size_t len) {
+	if (!len && !(len = strlen(needle))) {
+		return stack;
+	}
+	
 	const char *i = needle;
 
 	while (*stack) {
 		if (*stack == *i) {
 			i++;
 			if (i - needle == len)
-				return stack-len;
+				return stack - len + 1;
 		} else {
 			i = needle;
 		}

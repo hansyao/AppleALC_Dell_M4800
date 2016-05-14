@@ -274,9 +274,9 @@ kern_return_t MachInfo::readLinkedit(vnode_t vnode, vfs_context_t ctxt) {
 	return KERN_SUCCESS;
 }
 
-void MachInfo::findSectionBounds(void *ptr, void *&vmstart, void *&ptrstart, size_t &size, const char *segmentName, const char *sectionName, cpu_type_t cpu) {
-	vmstart = 0;
-	ptrstart = 0;
+void MachInfo::findSectionBounds(void *ptr, vm_address_t &vmsegment, vm_address_t &vmsection, void *&sectionptr, size_t &size, const char *segmentName, const char *sectionName, cpu_type_t cpu) {
+	vmsegment = vmsection = 0;
+	sectionptr = 0;
 	size = 0;
 	
 	mach_header *header = static_cast<mach_header *>(ptr);
@@ -292,7 +292,7 @@ void MachInfo::findSectionBounds(void *ptr, void *&vmstart, void *&ptrstart, siz
 		fat_arch *farch = reinterpret_cast<fat_arch *>(reinterpret_cast<uintptr_t>(ptr) + sizeof(fat_header));
 		for (size_t i = 0; i < num; i++, farch++) {
 			if (__builtin_bswap32(farch->cputype) ==  cpu) {
-				findSectionBounds(reinterpret_cast<void *>(reinterpret_cast<uintptr_t>(ptr) + __builtin_bswap32(farch->offset)), vmstart, ptrstart, size, segmentName, sectionName, cpu);
+				findSectionBounds(reinterpret_cast<void *>(reinterpret_cast<uintptr_t>(ptr) + __builtin_bswap32(farch->offset)), vmsegment, vmsection, sectionptr, size, segmentName, sectionName, cpu);
 				break;
 			}
 		}
@@ -308,10 +308,11 @@ void MachInfo::findSectionBounds(void *ptr, void *&vmstart, void *&ptrstart, siz
 				
 				for (uint32_t sno = 0; sno < scmd->nsects; sno++) {
 					if (!strcmp(sect->sectname, sectionName)) {
-						vmstart = reinterpret_cast<void *>(sect->addr);
-						ptrstart = reinterpret_cast<void *>(sect->offset+reinterpret_cast<uintptr_t>(ptr));
+						vmsegment = scmd->vmaddr;
+						vmsection = sect->addr;
+						sectionptr = reinterpret_cast<void *>(sect->offset+reinterpret_cast<uintptr_t>(ptr));
 						size = static_cast<size_t>(sect->size);
-						DBGLOG("mach @ found start %p size %zu\n", vmstart, size);
+						DBGLOG("mach @ found section %lu size %zu in segment %lu\n", vmsection, vmsegment, size);
 						return;
 					}
 					
@@ -326,10 +327,11 @@ void MachInfo::findSectionBounds(void *ptr, void *&vmstart, void *&ptrstart, siz
 				
 				for (uint32_t sno = 0; sno < scmd->nsects; sno++) {
 					if (!strcmp(sect->sectname, sectionName)) {
-						vmstart = reinterpret_cast<void *>(sect->addr);
-						ptrstart = reinterpret_cast<void *>(sect->offset+reinterpret_cast<uintptr_t>(ptr));
+						vmsegment = scmd->vmaddr;
+						vmsection = sect->addr;
+						sectionptr = reinterpret_cast<void *>(sect->offset+reinterpret_cast<uintptr_t>(ptr));
 						size = static_cast<size_t>(sect->size);
-						DBGLOG("mach @ found start %p size %zu\n", vmstart, size);
+						DBGLOG("mach @ found section %lu size %zu in segment %lu\n", vmsection, vmsegment, size);
 						return;
 					}
 					

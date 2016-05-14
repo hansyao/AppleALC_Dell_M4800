@@ -16,6 +16,8 @@ extern "C" {
 	#include <security/mac_policy.h>
 }
 
+#include "kern_util.hpp"
+
 class Policy {
 	/**
 	 *  TrustedBSD Policy handle
@@ -32,7 +34,9 @@ public:
 	 *
 	 *  @param conf policy configuration
 	 */
-	static void dummyPolicyInitBSD(mac_policy_conf *conf) {}
+	static void dummyPolicyInitBSD(mac_policy_conf *conf) {
+		DBGLOG("policy @ init bsd");
+	}
 	
 	/**
 	 *  Compile-time policy constructor

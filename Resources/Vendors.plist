@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CirrusLogic</key>
+	<integer>4115</integer>
+	<key>Creative</key>
+	<integer>4354</integer>
 	<key>IDT</key>
 	<integer>4381</integer>
 	<key>AMD</key>

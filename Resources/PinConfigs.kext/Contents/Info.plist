@@ -32,6 +32,48 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Custom Creative CA0132 5.1 channel</string>
+					<key>CodecID</key>
+					<integer>285343761</integer>
+					<key>ConfigData</key>
+					<data>IVcD8CFXFw0hVxgkIVcPgCC3HCAgtx1AILceASC3HwEgxxxgIMcdICDHHkUgxx8BINcc8CDXHQAg1x4AINcfQCDnHPAg5x0AIOceACDnH0Ag9xwvIPcdQCD3HiEg9x8BIQccMCEHHUAhBx4hIQcfASEXHEAhFx0QIRceASEXHwEhJxwQIScdkSEnHqEhJx+QITcc8CE3HQAhNx4AITcfQCGHHFAhhx1gIYceASGHHwE=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Custom Creative CA0132</string>
+					<key>CodecID</key>
+					<integer>285343761</integer>
+					<key>ConfigData</key>
+					<data>AVcKAQAXFx8AFxUQAScIgQFnCIABVxcNAVcYJAEnH5A=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>InsanelyDeepak - Cirrus Logic -CS4213</string>
+					<key>CodecID</key>
+					<integer>269697555</integer>
+					<key>ConfigData</key>
+					<data>AEccEABHHRAARx4hAEcfAABXHCAAVx0AAFceFwBXH5AAZxwwAGcdEABnHoEAZx8AAHccQAB3HQAAdx6gAHcfkABXDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - ADI-1988B</string>
 					<key>CodecID</key>
 					<integer>299112843</integer>
@@ -141,6 +183,20 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Custom ALC260</string>
+					<key>CodecID</key>
+					<integer>283902560</integer>
+					<key>ConfigData</key>
+					<data>AQccAAEHHUABBx4hAQcfAQEnHBABJx2QASceoQEnH5kBNxwgATcdMAE3HoEBNx8B</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -533,21 +589,19 @@
 					<integer>3</integer>
 				</dict>
 				<dict>
-                    <key>AFGLowPowerState</key>
-                    <data>
-                    AwAAAA==
-                    </data>
-                    <key>Codec</key>
-                    <string>Custom by Slbomber ALC283 (V3-371)</string>
-                    <key>CodecID</key>
-                    <integer>283902595</integer>
-                    <key>ConfigData</key>
-                    <data>ASccEAEnHQEBJx6gAScfkAFHHEABRx0BAUceFwFHH5ABdxzwAXcdAAF3HgABdx9AAYcc8AGHHQABhx4AAYcfQAGXHPABlx0AAZceAAGXH0ABpxzwAacdAAGnHgABpx8AAbcc8AG3HQABtx4AAbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecdAAHnHgAB5x9AAhccUAIXHRACFx4hAhcfAwFHDAICFwwC</data>
-                    <key>FuncGroup</key>
-                    <integer>1</integer>
-                    <key>LayoutID</key>
-                    <integer>11</integer>
-                </dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Custom by Slbomber ALC283 (V3-371)</string>
+					<key>CodecID</key>
+					<integer>283902595</integer>
+					<key>ConfigData</key>
+					<data>ASccEAEnHQEBJx6gAScfkAFHHEABRx0BAUceFwFHH5ABdxzwAXcdAAF3HgABdx9AAYcc8AGHHQABhx4AAYcfQAGXHPABlx0AAZceAAGXH0ABpxzwAacdAAGnHgABpx8AAbcc8AG3HQABtx4AAbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecdAAHnHgAB5x9AAhccUAIXHRACFx4hAhcfAwFHDAICFwwC</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
@@ -759,6 +813,20 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283903600</integer>
+					<key>Comment</key>
+					<string>Custom ALC670 by Alex Auditore</string>
+					<key>ConfigData</key>
+					<data>AbccQAG3HRABtx4rAbcfAQFXHDABVx0BAVceEwFXH5ABJxwQAScdAQEnHqABJx+QAaccUAGnHTEBpx6BAacfAQGXHCABlx2QAZcegQGXHwEB5xxgAecdEQHnHksB5x8BARcc8AEXHQABFx4AARcfQAE3HPABNx0AATceAAE3H0ABRxzwAUcdAAFHHgABRx9AAWcc8AFnHQABZx4AAWcfQAF3HPABdx0AAXceAAF3H0ABhxzwAYcdAAGHHgABhx9AAdcc8AHXHQAB1x4AAdcfQAIXHPACFx0AAhceAAIXH0A=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -1458,6 +1526,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Mirone - IDT 92HD81B1X5</string>
+					<key>CodecID</key>
+					<integer>287143429</integer>
+					<key>ConfigData</key>
+					<data>AKccIACnHRAApx6hAKcfAQC3HBAAtx0QALceIQC3HwEA1xwwANcdAADXHhcA1x+QAOcc8ADnHQAA5x4AAOcfQAD3HEAA9x0AAPceAAD3H0ABBxxQAQcdAAEHHgABBx9AARccYAEXHQABFx6jARcf0AH3HHAB9x0AAfceAAH3H0ACBxyAAgcdAAIHHgACBx9A</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - IDT 92HD75B2X5</string>
 					<key>CodecID</key>
 					<integer>287143432</integer>
@@ -1486,15 +1568,15 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>Mirone - IDT 92HD81B1X5</string>
+					<string>Mirone - IDT 92HD75B3X5</string>
 					<key>CodecID</key>
-					<integer>287143429</integer>
+					<integer>287143427</integer>
 					<key>ConfigData</key>
-					<data>AKccIACnHRAApx6hAKcfAQC3HBAAtx0QALceIQC3HwEA1xwwANcdAADXHhcA1x+QAOcc8ADnHQAA5x4AAOcfQAD3HEAA9x0AAPceAAD3H0ABBxxQAQcdAAEHHgABBx9AARccYAEXHQABFx6jARcf0AH3HHAB9x0AAfceAAH3H0ACBxyAAgcdAAIHHgACBx9A</data>
+					<data>ALccAAC3HQAAtx6nALcfmQDXHBAA1x0AANceFwDXH5kA9xwgAPcdQAD3HiEA9x8B</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
-					<integer>3</integer>
+					<integer>11</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>

@@ -5,43 +5,31 @@
 	<key>Author</key>
 	<string>Vandroiy</string>
 	<key>CodecID</key>
-	<integer>30211</integer>
+	<integer>16915</integer>
 	<key>CodecName</key>
-	<string>0x111d7603</string>
+	<string>0x10134213 Rev:0x100100</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
 		<array>
 			<dict>
-				<key>Id</key>
-				<integer>3</integer>
-				<key>Path</key>
-				<string>layout3.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Id</key>
-				<integer>11</integer>
 				<key>Comment</key>
-				<string>Custom pinconfig by olderst</string>
+				<string>Custom CirrusLogic CS4213 by InsanelyDeepak</string>
+				<key>Id</key>
+				<integer>28</integer>
 				<key>Path</key>
-				<string>layout3.xml.zlib</string>
+				<string>layout28.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
 			<dict>
-				<key>Id</key>
-				<integer>3</integer>
-				<key>Path</key>
-				<string>PlatformsM.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Id</key>
-				<integer>11</integer>
 				<key>Comment</key>
-				<string>Custom pinconfig by olderst</string>
+				<string>Custom CirrusLogic CS4213 by InsanelyDeepak</string>
+				<key>Id</key>
+				<integer>28</integer>
 				<key>Path</key>
-				<string>PlatformsM.xml.zlib</string>
+				<string>Platforms28.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -89,13 +77,49 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>hBnUEQ==</data>
+			<data>BgDeEA==</data>
 			<key>MinKernel</key>
 			<integer>13</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>A3YdEQ==</data>
+			<data>AAAAAA==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>YQLsEA==</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>AAAAAA==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>YgLsEA==</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>AAAAAA==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>hQjsEA==</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>AAAAAA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>
@@ -109,8 +133,22 @@
 			<key>Replace</key>
 			<data>AAAAAA==</data>
 		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>hBnUEQ==</data>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>E0ITEA==</data>
+		</dict>
+	</array>
+	<key>Revisions</key>
+	<array>
+		<integer>1048832</integer>
 	</array>
 	<key>Vendor</key>
-	<string>IDT</string>
+	<string>CirrusLogic</string>
 </dict>
 </plist>

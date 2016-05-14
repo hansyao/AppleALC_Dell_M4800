@@ -17,6 +17,9 @@ public:
 	void deinit();
 	
 private:
+	/**
+	 *  Kernel level patcher and symbol solver
+	 */
 	KernelPatcher patcher;
 	
 	/**

@@ -15,10 +15,11 @@ namespace FileIO {
 	 *  Reads file data at path
 	 *
 	 *  @param path full file path
+	 *  @param size bytes read
 	 *
 	 *  @return allocated buffer on success or nullptr on error
 	 */
-	uint8_t *readFileToBuffer(const char *path);
+	uint8_t *readFileToBuffer(const char *path, size_t &size);
 	
 	/**
 	 *  Read file data from a vnode

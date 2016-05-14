@@ -3,28 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>Multiple</string>
+	<string>yassinex</string>
 	<key>CodecID</key>
-	<integer>2185</integer>
+	<integer>17</integer>
 	<key>CodecName</key>
-	<string>ALC889</string>
+	<string>0x11020011 Rev:0x100918</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
 		<array>
 			<dict>
-				<key>Id</key>
-				<integer>1</integer>
 				<key>Comment</key>
-				<string>Toleda resources by Ukr55</string>
+				<string>Custom Creative CA0132 5.1 channel</string>
+				<key>Id</key>
+				<integer>11</integer>
 				<key>Path</key>
-				<string>layout1.xml.zlib</string>
+				<string>layout11.xml.zlib</string>
 			</dict>
 			<dict>
+				<key>Comment</key>
+				<string>Custom Creative CA0132</string>
 				<key>Id</key>
 				<integer>12</integer>
-				<key>Comment</key>
-				<string>Custom by Sergey_Galan</string>
 				<key>Path</key>
 				<string>layout12.xml.zlib</string>
 			</dict>
@@ -32,18 +32,18 @@
 		<key>Platforms</key>
 		<array>
 			<dict>
-				<key>Id</key>
-				<integer>1</integer>
 				<key>Comment</key>
-				<string>Toleda resources by Ukr55</string>
+				<string>Custom Creative CA0132 5.1 channel</string>
+				<key>Id</key>
+				<integer>11</integer>
 				<key>Path</key>
-				<string>PlatformsT.xml.zlib</string>
+				<string>Platforms11.xml.zlib</string>
 			</dict>
 			<dict>
+				<key>Comment</key>
+				<string>Custom Creative CA0132</string>
 				<key>Id</key>
 				<integer>12</integer>
-				<key>Comment</key>
-				<string>Custom by Sergey_Galan</string>
 				<key>Path</key>
 				<string>Platforms12.xml.zlib</string>
 			</dict>
@@ -51,54 +51,6 @@
 	</dict>
 	<key>Patches</key>
 	<array>
-		<dict>
-			<key>Count</key>
-			<integer>2</integer>
-			<key>Find</key>
-			<data>ixnUEQ==</data>
-			<key>MinKernel</key>
-			<string>13</string>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>iQjsEA==</data>
-		</dict>
-		<dict>
-			<key>Count</key>
-			<integer>2</integer>
-			<key>Find</key>
-			<data>gxnUEQ==</data>
-			<key>MinKernel</key>
-			<string>15</string>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>AAAAAA==</data>
-		</dict>
-		<dict>
-			<key>Count</key>
-			<integer>1</integer>
-			<key>Find</key>
-			<data>QcaGQwEAAAA=</data>
-			<key>MinKernel</key>
-			<string>13</string>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>QcaGQwEAAAE=</data>
-		</dict>
-		<dict>
-			<key>Count</key>
-			<integer>1</integer>
-			<key>Find</key>
-			<data>QcYGAEiLu2g=</data>
-			<key>MinKernel</key>
-			<string>14</string>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>QcYGAUiLu2g=</data>
-		</dict>
 		<dict>
 			<key>Count</key>
 			<integer>1</integer>
@@ -113,12 +65,60 @@
 			<key>Replace</key>
 			<data>QcYGAUmLvCQ=</data>
 		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>1</integer>
+			<key>Find</key>
+			<data>QcYGAEiLu2g=</data>
+			<key>MinKernel</key>
+			<integer>14</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>QcYGAUiLu2g=</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>1</integer>
+			<key>Find</key>
+			<data>QcaGQwEAAAA=</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>QcaGQwEAAAE=</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>AIjsGg==</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>EQACEQ==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>dBmtFQ==</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>EAACEQ==</data>
+		</dict>
 	</array>
 	<key>Revisions</key>
 	<array>
-		<integer>1048580</integer>
+		<integer>1050904</integer>
 	</array>
 	<key>Vendor</key>
-	<string>Realtek</string>
+	<string>Creative</string>
 </dict>
 </plist>
