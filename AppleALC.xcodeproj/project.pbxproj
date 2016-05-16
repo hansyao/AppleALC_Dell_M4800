@@ -696,7 +696,7 @@
 				MODULE_NAME = as.vit9696.AppleALC;
 				MODULE_START = kern_start;
 				MODULE_STOP = kern_stop;
-				MODULE_VERSION = 1.0.10;
+				MODULE_VERSION = 1.0.11;
 				PRODUCT_BUNDLE_IDENTIFIER = as.vit9696.AppleALC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -733,7 +733,7 @@
 				MODULE_NAME = as.vit9696.AppleALC;
 				MODULE_START = kern_start;
 				MODULE_STOP = kern_stop;
-				MODULE_VERSION = 1.0.10;
+				MODULE_VERSION = 1.0.11;
 				PRODUCT_BUNDLE_IDENTIFIER = as.vit9696.AppleALC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
