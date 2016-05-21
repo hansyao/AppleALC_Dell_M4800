@@ -818,6 +818,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>CodecID</key>
+					<integer>283903592</integer>
+					<key>Comment</key>
+					<string>ALC668 Custom (Asus N750JV)</string>
+					<key>ConfigData</key>
+					<data>ASccAAEnHQEBJx6mAScfkAFHHBABRx0BAUceFwFHH5ABVxwfAVcdEAFXHiEBVx8DAWcc8AFnHQABZx4AAWcfQAGHHPABhx0AAYceAAGHH0ABlxzwAZcdAAGXHgABlx9AAacc8AGnHQABpx4AAacfQAG3HDABtx0QAbcegQG3HwMB1xzwAdcdAAHXHgAB1x9AAecc8AHnHQAB5x4AAecfQAH3HPAB9x0AAfceAAH3H0ABRwwCAVcMAg==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>29</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
 					<integer>283903600</integer>
 					<key>Comment</key>
 					<string>Custom ALC670 by Alex Auditore</string>

@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.0.11
+- Added ALC668 layout-id 29 for Asus N750JV by DroID969
+
 #### v1.0.10
 - Added ALC665 codec support layout-id 12, 13 by insanelydeepak
 - Added ALC292 codec support layout-id 12
