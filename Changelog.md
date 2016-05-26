@@ -2,12 +2,12 @@ AppleALC Changelog
 ==================
 #### v1.0.11
 - Added ALC668 layout-id 29 for Asus N750JV by DroID969
-- AL887VD Optimization Layout 11 officially will Support AC97 Front Panel like Windows Driver
-- AL887VD Optimization Added Layout 11, 12, 13, 17
-- AL887VD Optimization Layout 11 Front Mic and Back Mic Fix
-- AL887VD Optimization Layout 12 LinIn Fix
-- AL887VD Optimization Added AMD Support in all Layouts
-- AL887VD Optimization replace several custom platforms.xml.zlib with common platformsID.xml.zlib
+- ALC887VD Optimization Layout 11 officially will Support AC97 Front Panel like Windows Driver
+- ALC887VD Optimization Added Layout 11, 12, 13, 17
+- ALC887VD Optimization Layout 11 Front Mic and Back Mic Fix
+- ALC887VD Optimization Layout 12 LinIn Fix
+- ALC887VD Optimization Added AMD Support in all Layouts
+- ALC887VD Optimization replace several custom platforms.xml.zlib with common platformsID.xml.zlib
 
 #### v1.0.10
 - Added ALC665 codec support layout-id 12, 13 by insanelydeepak
