@@ -661,6 +661,20 @@
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283902608</integer>
+					<key>Comment</key>
+					<string>macpeetALC ALC290 aka ALC3241</string>
+					<key>ConfigData</key>
+					<data>AaccIAGnHRABpx6BAacfAAEnHDABJx0AASceowEnH5ABRxxAAUcdAAFHHhcBRx+QAVccUAFXHRABVx4hAVcfAAFHDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>4</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Custom ALC292</string>
 					<key>CodecID</key>
