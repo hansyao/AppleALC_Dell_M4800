@@ -86,6 +86,14 @@
 			</dict>
 			<dict>
 				<key>Id</key>
+				<integer>13</integer>
+				<key>Comment</key>
+				<string>InsanelyDeepak - Realtek ALC269VC for Samsung NP350V5C-S08IT</string>
+				<key>Path</key>
+				<string>PlatformsID.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
 				<integer>20</integer>
 				<key>Comment</key>
 				<string>Custom ALC269 Sony Vaio VPCEB3M1R by Rodion</string>
@@ -182,6 +190,14 @@
 				<string>Miron Laptop patch ALC269-VC v3</string>
 				<key>Path</key>
 				<string>layout8.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>13</integer>
+				<key>Comment</key>
+				<string>InsanelyDeepak - Realtek ALC269VC for Samsung NP350V5C-S08IT</string>
+				<key>Path</key>
+				<string>layout13.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Id</key>
