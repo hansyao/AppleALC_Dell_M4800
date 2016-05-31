@@ -160,11 +160,11 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>Custom Realtek ALC233 (236)</string>
+					<string>Custom Realtek ALC233 (3236)</string>
 					<key>CodecID</key>
 					<integer>283902515</integer>
 					<key>ConfigData</key>
-					<data>ASccEAEnHQABJx4AAScfQAFHHCABRx0AAUceEwFHH5ABtxxAAbcdAAG3HqABtx+QAdccUAHXHZAB1x5FAdcfQAIXHDACFx0QAhceIQIXHwABRwwCAhcMAg==</data>
+					<data>AUccEAFHHQABRx4XAUcfkAG3HCABtx0AAbceoAG3H5ACFxwwAhcdEAIXHiECFx8BAUcMAg==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
