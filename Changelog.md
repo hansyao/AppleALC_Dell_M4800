@@ -11,6 +11,7 @@ AppleALC Changelog
 - Added ALC233 layout-id 4 for ALC236 codec 
 - Added ALC290 layout-id 4 for ALC3241 codec
 - Added IDT92HD91BXX layout-id 12 by RehabMan for HP Envy laptops
+- Changed ALC665 resources by insanelydeepak
 
 #### v1.0.10
 - Added ALC665 codec support layout-id 12, 13 by insanelydeepak
