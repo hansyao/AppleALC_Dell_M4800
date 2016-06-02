@@ -160,6 +160,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Custom Realtek ALC233 (3236)</string>
+					<key>CodecID</key>
+					<integer>283902515</integer>
+					<key>ConfigData</key>
+					<data>AUccEAFHHQABRx4XAUcfkAG3HCABtx0AAbceoAG3H5ACFxwwAhcdEAIXHiECFx8BAUcMAg==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>4</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - Realtek ALC235</string>
 					<key>CodecID</key>
 					<integer>283902517</integer>
@@ -325,6 +339,20 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>8</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>InsanelyDeepak - Realtek ALC269VC for Samsung NP350V5C-S08IT</string>
+					<key>CodecID</key>
+					<integer>283902569</integer>
+					<key>ConfigData</key>
+					<data>AZccEAGXHQABlx6nAZcfmQFXHCABVx0QAVceIQFXHwIBhxwwAYcdEAGHHoEBhx8CAUccQAFHHQABRx4XAUcfmQFHDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -647,6 +675,20 @@
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283902608</integer>
+					<key>Comment</key>
+					<string>macpeetALC ALC290 aka ALC3241</string>
+					<key>ConfigData</key>
+					<data>AaccIAGnHRABpx6BAacfAAEnHDABJx0AASceowEnH5ABRxxAAUcdAAFHHhcBRx+QAVccUAFXHRABVx4hAVcfAAFHDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>4</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Custom ALC292</string>
 					<key>CodecID</key>
@@ -734,11 +776,11 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>Deepak - Realtek ALC665</string>
+					<string>InsanelyDeepak - Realtek ALC665</string>
 					<key>CodecID</key>
 					<integer>283903589</integer>
 					<key>ConfigData</key>
-					<data>ASccEAEnHQEBJx6gAScfmQFXHEABVx0BAVceEwFXH5kBlxxQAZcdEAGXHiEBlx8DAaccIAGnHRABpx6hAacfkwG3HGABtx0QAbceIQG3HwMB5xxwAecdEAHnHkUB5x8DAVcMAg==</data>
+					<data>ASccEAEnHQEBJx6gAScfmQGnHCABpx0QAacegQGnH5MBVxxAAVcdAQFXHhMBVx+ZAZccUAGXHRABlx4hAZcfAwG3HGABtx0QAbceIQG3HwMB5xxwAecdEAHnHkUB5x8D</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -748,7 +790,7 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>Deepak - Realtek ALC665</string>
+					<string>InsanelyDeepak - Realtek ALC665</string>
 					<key>CodecID</key>
 					<integer>283903589</integer>
 					<key>ConfigData</key>
@@ -813,6 +855,20 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283903592</integer>
+					<key>Comment</key>
+					<string>ALC668 Custom (Asus N750JV)</string>
+					<key>ConfigData</key>
+					<data>ASccAAEnHQEBJx6mAScfkAFHHBABRx0BAUceFwFHH5ABVxwfAVcdEAFXHiEBVx8DAWcc8AFnHQABZx4AAWcfQAGHHPABhx0AAYceAAGHH0ABlxzwAZcdAAGXHgABlx9AAacc8AGnHQABpx4AAacfQAG3HDABtx0QAbcegQG3HwMB1xzwAdcdAAHXHgAB1x9AAecc8AHnHQAB5x4AAecfQAH3HPAB9x0AAfceAAH3H0ABRwwCAVcMAg==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>29</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -976,13 +1032,11 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>Realtek ALC887-VD</string>
+					<string>InsanelyDeepak - Realtek ALC887-VD</string>
 					<key>CodecID</key>
 					<integer>283904135</integer>
-					<key>Comment</key>
-					<string>InsanelyDeepak RealtekALC</string>
 					<key>ConfigData</key>
-					<data>IUccECFHHUAhRx4RIUcfASG3HCAhtx1AIbceISG3HwIhpxwwIacdMCGnHoEhpx8BIYccUCGHHZAhhx6hIYcfkCGXHGAhlx2QIZcegSGXHwIh5xyQIecdYCHnHkUh5x8B</data>
+					<data>AUccEAFHHUABRx4RAUcfkQFHDAIBtxwgAbcdQAG3HiEBtx8CAbcMAgGHHDABhx2QAYceoQGHH5EBlxxAAZcdkQGXHoEBlx+S</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -992,13 +1046,11 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>Realtek ALC887-VD</string>
+					<string>InsanelyDeepak - Realtek ALC887-VD</string>
 					<key>CodecID</key>
 					<integer>283904135</integer>
-					<key>Comment</key>
-					<string>InsanelyDeepak RealtekALC</string>
 					<key>ConfigData</key>
-					<data>IUccECFHHUAhRx4RIUcfkCFXHPAhVx0AIVceACFXH0AhZxzwIWcdACFnHgAhZx9AIXcc8CF3HQAhdx4AIXcfQCGHHEAhhx1gIYceASGHHwEhlxxgIZcdkCGXHqAhlx+QIaccUCGnHRAhpx4BIacfASG3HHAhtx1AIbceISG3HwIh5xyQIecdYSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEXHPAhFx0AIRceACEXH0A=</data>
+					<data>AbccAAG3HUABtx4hAbcfAQG3DAIBhxwQAYcdkAGHHqEBhx+RAZccIAGXHZABlx6BAZcfAQFHHDABRx1AAUceEQFHH5EBRwwCAaccQAGnHTABpx6BAacfAQ==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -1008,13 +1060,11 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>Realtek ALC887-VD</string>
+					<string>InsanelyDeepak - Realtek ALC887-VD</string>
 					<key>CodecID</key>
 					<integer>283904135</integer>
-					<key>Comment</key>
-					<string>InsanelyDeepak RealtekALC</string>
 					<key>ConfigData</key>
-					<data>IUccECFHHUAhRx4RIUcfkCFXHCAhVx0QIVceASFXHwEhZxzwIWcdACFnHgAhZx9AIXcc8CF3HQAhdx4AIXcfQCGHHEAhhx2QIYceoCGHH5AhlxxgIZcdkCGXHoEhlx8CIaccUCGnHTAhpx6BIacfASG3HHAhtx1AIbceISG3HwIh5xyQIecdYSHnHksh5x8BIfcc8CH3HQAh9x4AIfcfQCEXHPAhFx0AIRceACEXH0A=</data>
+					<data>IUccECFHHUAhRx4RIUcfkSFHDAIhhxxAIYcdYCGHHgEhhx8BIaccUCGnHRAhpx4BIacfASGXHGAhlx2QIZceoSGXH5EhtxxwIbcdQCG3HiEhtx8CIecckCHnHWEh5x5LIecfAQ==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -1024,33 +1074,15 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>Realtek ALC887-VD</string>
+					<string>InsanelyDeepak - Realtek ALC887-VD</string>
 					<key>CodecID</key>
 					<integer>283904135</integer>
-					<key>Comment</key>
-					<string>InsanelyDeepak RealtekALC</string>
 					<key>ConfigData</key>
-					<data>ARcc8AEXHQABFx4AARcfQAEnHPABJx0AASceAAEnH0ABRxxAAUcdQAFHHhEBRx8BAVcc8AFXHQABVx4AAVcfQAFnHPABZx0AAWceAAFnH0ABdxzwAXcdAAF3HgABdx9AAYccEAGHHZABhx6gAYcfkAGXHPABlx0AAZceAAGXH0ABpxwgAacdMAGnHoEBpx8CAbccUAG3HUABtx4hAbcfAgHnHHAB5x1hAeceRQHnHwIB9xzwAfcdAAH3HgAB9x9A</data>
+					<data>IUccECFHHUAhRx4RIUcfkCFXHCAhVx0QIVceASFXHwEhhxxAIYcdkCGHHqAhhx+QIaccUCGnHTAhpx6BIacfASGXHGAhlx2QIZcegSGXHwIhtxxwIbcdQCG3HiEhtx8CIecckCHnHWEh5x5LIecfAQ==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>AFGLowPowerState</key>
-					<data>AwAAAA==</data>
-					<key>Codec</key>
-					<string>Realtek ALC887-VD</string>
-					<key>CodecID</key>
-					<integer>283904135</integer>
-					<key>Comment</key>
-					<string>InsanelyDeepak RealtekALC</string>
-					<key>ConfigData</key>
-					<data>AUccEAFHHUABRx4RAUcfAQGHHFABhx2QAYceoAGHH5ABlxxgAZcdkAGXHoEBlx8CAacccAGnHTABpx6BAacfAQG3HIABtx1AAbceIQG3HwIB5xyQAecdYAHnHkUB5x8B</data>
-					<key>FuncGroup</key>
-					<integer>1</integer>
-					<key>LayoutID</key>
-					<integer>15</integer>
+					<integer>17</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -1591,6 +1623,20 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>RehabMan - IDT 92HD91BXX for HP Envy</string>
+					<key>CodecID</key>
+					<integer>287143648</integer>
+					<key>ConfigData</key>
+					<data>AKccAACnHRAApx6BAKcfAQC3HBAAtx0QALceIQC3HwMAxxwgAMcdAADHHgAAxx9JARccMAEXHQABFx6gARcfmQD3HEAA9x0BAPceFwD3H5kA5xxQAOcdEADnHgEA5x8jAQccYAEHHQABBx4AAQcfSQH3HHAB9x0AAfceAAH3H0kCBxyAAgcdAAIHHgACBx9J</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
