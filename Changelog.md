@@ -13,7 +13,8 @@ AppleALC Changelog
 - Added IDT92HD91BXX layout-id 12 by RehabMan for HP Envy laptops
 - Changed ALC665 resources by InsanelyDeepak 
 - Added ALC269VC layout-id 13 for Samsung NP350V5C-S08IT by InsanelyDeepak
-- Changed ALC233 resources layout-id 4 for ALC3236 codec 
+- Changed ALC233 resources layout-id 4 for ALC3236 codec
+- Added ALC888 layout-id 4 for Laptop by Mirone
 
 #### v1.0.10
 - Added ALC665 codec support layout-id 12, 13 by insanelydeepak

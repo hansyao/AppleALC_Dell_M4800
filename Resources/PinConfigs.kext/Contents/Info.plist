@@ -1138,6 +1138,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Mirone - Realtek ALC888 for Laptop</string>
+					<key>CodecID</key>
+					<integer>283904136</integer>
+					<key>ConfigData</key>
+					<data>ASccEAEnHQABJx6gAScfmQFHHCABRx1AAUceIQFHHwEBtxwwAbcdAQG3HhMBtx+ZAXccQAF3HSABdx4BAXcfAQGHHFABhx2QAYcegQGHHwEBpxxgAacdMAGnHoEBpx8BAecccAHnHUAB5x5FAecfAQFHDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>4</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - Realtek ALC888 3 ports (Pink, Green, Blue)</string>
 					<key>CodecID</key>
 					<integer>283904136</integer>
