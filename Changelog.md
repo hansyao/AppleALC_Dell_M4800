@@ -16,6 +16,7 @@ AppleALC Changelog
 - Changed ALC233 resources layout-id 4 for ALC3236 codec
 - Added ALC888 layout-id 4 for Laptop by Mirone
 - Added ALC892 layout-id 4 for Laptop by Mirone
+- Added ALC269VB layout-id 9 for Toshiba Satellite C660-1DR
 
 #### v1.0.10
 - Added ALC665 codec support layout-id 12, 13 by insanelydeepak

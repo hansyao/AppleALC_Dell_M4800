@@ -8,123 +8,10 @@
 	<integer>617</integer>
 	<key>CodecName</key>
 	<string>ALC269</string>
-	<key>Revisions</key>
-	<array>
-		<integer>1048580</integer>
-		<integer>1049090</integer>
-		<integer>1048832</integer>
-	</array>
 	<key>Author</key>
 	<string>Multiple</string>
 	<key>Files</key>
 	<dict>
-		<key>Platforms</key>
-		<array>
-			<dict>
-				<key>Id</key>
-				<integer>1</integer>
-				<key>Comment</key>
-				<string>Miron Laptop patch ALC269 Asus N53J</string>
-				<key>Path</key>
-				<string>PlatformsM1.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Id</key>
-				<integer>2</integer>
-				<key>Comment</key>
-				<string>Miron Laptop patch ALC269-VB v1</string>
-				<key>Path</key>
-				<string>PlatformsM2.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Id</key>
-				<integer>3</integer>
-				<key>Comment</key>
-				<string>Miron Laptop patch ALC269 Asus K53SJ, Asus G73s</string>
-				<key>Path</key>
-				<string>PlatformsM3.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Id</key>
-				<integer>4</integer>
-				<key>Comment</key>
-				<string>Miron Laptop patch ALC269-VB v2</string>
-				<key>Path</key>
-				<string>PlatformsM4.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Id</key>
-				<integer>5</integer>
-				<key>Comment</key>
-				<string>Miron Laptop patch ALC269-VB v3</string>
-				<key>Path</key>
-				<string>PlatformsM5.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Id</key>
-				<integer>6</integer>
-				<key>Comment</key>
-				<string>Miron Laptop patch ALC269-VC v1</string>
-				<key>Path</key>
-				<string>PlatformsM6.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Id</key>
-				<integer>7</integer>
-				<key>Comment</key>
-				<string>Miron Laptop patch ALC269-VC v2</string>
-				<key>Path</key>
-				<string>PlatformsM7.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Id</key>
-				<integer>8</integer>
-				<key>Comment</key>
-				<string>Miron Laptop patch ALC269-VC v3</string>
-				<key>Path</key>
-				<string>PlatformsM8.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Id</key>
-				<integer>13</integer>
-				<key>Comment</key>
-				<string>InsanelyDeepak - Realtek ALC269VC for Samsung NP350V5C-S08IT</string>
-				<key>Path</key>
-				<string>PlatformsID.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Id</key>
-				<integer>20</integer>
-				<key>Comment</key>
-				<string>Custom ALC269 Sony Vaio VPCEB3M1R by Rodion</string>
-				<key>Path</key>
-				<string>Platforms20.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Id</key>
-				<integer>27</integer>
-				<key>Comment</key>
-				<string>Custom ALC269 Acer Aspire by Andrey1970</string>
-				<key>Path</key>
-				<string>Platforms27.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Id</key>
-				<integer>28</integer>
-				<key>Comment</key>
-				<string>Custom ALC269VC Lenovo Z580 by John</string>
-				<key>Path</key>
-				<string>Platforms28.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Id</key>
-				<integer>29</integer>
-				<key>Comment</key>
-				<string>Custom ALC269VC Lenovo V580 by ar4er</string>
-				<key>Path</key>
-				<string>Platforms29.xml.zlib</string>
-			</dict>
-		</array>
 		<key>Layouts</key>
 		<array>
 			<dict>
@@ -193,6 +80,14 @@
 			</dict>
 			<dict>
 				<key>Id</key>
+				<integer>9</integer>
+				<key>Comment</key>
+				<string>Miron Laptop patch ALC269-VB v4</string>
+				<key>Path</key>
+				<string>layout9.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
 				<integer>13</integer>
 				<key>Comment</key>
 				<string>InsanelyDeepak - Realtek ALC269VC for Samsung NP350V5C-S08IT</string>
@@ -230,6 +125,121 @@
 				<string>Custom ALC269VC Lenovo V580 by ar4er</string>
 				<key>Path</key>
 				<string>layout29.xml.zlib</string>
+			</dict>
+		</array>
+		<key>Platforms</key>
+		<array>
+			<dict>
+				<key>Id</key>
+				<integer>1</integer>
+				<key>Comment</key>
+				<string>Miron Laptop patch ALC269 Asus N53J</string>
+				<key>Path</key>
+				<string>PlatformsM1.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>2</integer>
+				<key>Comment</key>
+				<string>Miron Laptop patch ALC269-VB v1</string>
+				<key>Path</key>
+				<string>PlatformsM2.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>3</integer>
+				<key>Comment</key>
+				<string>Miron Laptop patch ALC269 Asus K53SJ, Asus G73s</string>
+				<key>Path</key>
+				<string>PlatformsM3.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>4</integer>
+				<key>Comment</key>
+				<string>Miron Laptop patch ALC269-VB v2</string>
+				<key>Path</key>
+				<string>PlatformsM4.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>5</integer>
+				<key>Comment</key>
+				<string>Miron Laptop patch ALC269-VB v3</string>
+				<key>Path</key>
+				<string>PlatformsM5.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>6</integer>
+				<key>Comment</key>
+				<string>Miron Laptop patch ALC269-VC v1</string>
+				<key>Path</key>
+				<string>PlatformsM6.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>7</integer>
+				<key>Comment</key>
+				<string>Miron Laptop patch ALC269-VC v2</string>
+				<key>Path</key>
+				<string>PlatformsM7.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>8</integer>
+				<key>Comment</key>
+				<string>Miron Laptop patch ALC269-VC v3</string>
+				<key>Path</key>
+				<string>PlatformsM8.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>9</integer>
+				<key>Comment</key>
+				<string>Miron Laptop patch ALC269-VB v4</string>
+				<key>Path</key>
+				<string>PlatformsM9.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>13</integer>
+				<key>Comment</key>
+				<string>InsanelyDeepak - Realtek ALC269VC for Samsung NP350V5C-S08IT</string>
+				<key>Path</key>
+				<string>PlatformsID.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>20</integer>
+				<key>Comment</key>
+				<string>Custom ALC269 Sony Vaio VPCEB3M1R by Rodion</string>
+				<key>Path</key>
+				<string>Platforms20.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>27</integer>
+				<key>Comment</key>
+				<string>Custom ALC269 Acer Aspire by Andrey1970</string>
+				<key>Path</key>
+				<string>Platforms27.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>28</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VC Lenovo Z580 by John</string>
+				<key>Path</key>
+				<string>Platforms28.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>29</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VC Lenovo V580 by ar4er</string>
+				<key>Path</key>
+				<string>Platforms29.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -323,6 +333,12 @@
 			<key>Replace</key>
 			<data>AAAAAA==</data>
 		</dict>
+	</array>
+	<key>Revisions</key>
+	<array>
+		<integer>1048580</integer>
+		<integer>1049090</integer>
+		<integer>1048832</integer>
 	</array>
 </dict>
 </plist>
