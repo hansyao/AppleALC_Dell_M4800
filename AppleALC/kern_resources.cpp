@@ -14243,7 +14243,7 @@ CodecModInfo codecModRealtek[] {
 	{ "ALC288", 0x288, nullptr, 0, platforms15, 1, layouts15, 1, patches15, 6 },
 	{ "ALC290", 0x290, nullptr, 0, platforms16, 2, layouts16, 2, patches16, 6 },
 	{ "ALC292", 0x292, nullptr, 0, platforms17, 1, layouts17, 1, patches17, 7 },
-	{ "0x10ec0662 Rev:0x100101", 0x662, revisions7, 1, platforms18, 2, layouts18, 2, patches18, 7 },
+	{ "ALC662", 0x662, revisions7, 1, platforms18, 2, layouts18, 2, patches18, 7 },
 	{ "ALC663", 0x663, revisions8, 1, platforms19, 3, layouts19, 3, patches19, 7 },
 	{ "ALC665", 0x665, nullptr, 0, platforms20, 2, layouts20, 2, patches20, 7 },
 	{ "ALC668", 0x668, revisions9, 1, platforms21, 5, layouts21, 5, patches21, 7 },
@@ -14700,7 +14700,7 @@ static const KextPatch patches31[] {
 	{ { &kextList[2], patchBuf422, patchBuf423, 4, 2 }, KernelPatcher::KernelAny, KernelPatcher::KernelAny },
 };
 CodecModInfo codecModCirrusLogic[] {
-	{ "0x10134213 Rev:0x100100", 0x4213, revisions17, 1, platforms31, 1, layouts31, 1, patches31, 9 },
+	{ "CS4213", 0x4213, revisions17, 1, platforms31, 1, layouts31, 1, patches31, 9 },
 };
 
 // AnalogDevices CodecMod section
@@ -16632,7 +16632,7 @@ CodecModInfo codecModConexant[] {
 	{ "CX20588", 0x506C, nullptr, 0, platforms36, 1, layouts36, 1, patches36, 5 },
 	{ "CX20590", 0x506E, revisions18, 1, platforms37, 2, layouts37, 2, patches37, 5 },
 	{ "CX20724", 0x50F4, nullptr, 0, platforms38, 1, layouts38, 1, patches38, 5 },
-	{ "0x14f1510f Rev:0x100100", 0x510F, revisions19, 1, platforms39, 2, layouts39, 2, patches39, 5 },
+	{ "CX20751_2", 0x510F, revisions19, 1, platforms39, 2, layouts39, 2, patches39, 5 },
 	{ "CX20756", 0x5114, nullptr, 0, platforms40, 1, layouts40, 1, patches40, 5 },
 	{ "CX20757", 0x5115, nullptr, 0, platforms41, 1, layouts41, 1, patches41, 5 },
 };
@@ -18286,18 +18286,18 @@ static const KextPatch patches55[] {
 	{ { &kextList[2], patchBuf646, patchBuf647, 4, 2 }, 15, KernelPatcher::KernelAny },
 };
 CodecModInfo codecModIDT[] {
-	{ "0x111d76f3", 0x76F3, nullptr, 0, platforms44, 1, layouts44, 1, patches44, 5 },
-	{ "0x111d76b2", 0x76B2, nullptr, 0, platforms45, 1, layouts45, 1, patches45, 5 },
-	{ "0x111d7608", 0x7608, nullptr, 0, platforms46, 1, layouts46, 1, patches46, 5 },
-	{ "0x111d7603", 0x7603, nullptr, 0, platforms47, 2, layouts47, 2, patches47, 5 },
-	{ "0x111d7605", 0x7605, nullptr, 0, platforms48, 1, layouts48, 1, patches48, 6 },
-	{ "0x111d7605", 0x7605, nullptr, 0, platforms49, 1, layouts49, 1, patches49, 6 },
-	{ "0x111d76d1 Rev:0x100205", 0x76D1, revisions22, 1, platforms50, 1, layouts50, 1, patches50, 5 },
-	{ "0x111d76d9", 0x76D9, nullptr, 0, platforms51, 1, layouts51, 1, patches51, 5 },
-	{ "0x111d76e0", 0x76E0, nullptr, 0, platforms52, 2, layouts52, 2, patches52, 6 },
-	{ "0x111d76df Rev:0x100203", 0x76DF, revisions23, 1, platforms53, 1, layouts53, 1, patches53, 6 },
-	{ "0x111d7695", 0x7695, nullptr, 0, platforms54, 1, layouts54, 1, patches54, 5 },
-	{ "0x111d76e5", 0x76E5, nullptr, 0, platforms55, 1, layouts55, 1, patches55, 6 },
+	{ "IDT92HD66C3_65", 0x76F3, nullptr, 0, platforms44, 1, layouts44, 1, patches44, 5 },
+	{ "IDT92HD71B7X", 0x76B2, nullptr, 0, platforms45, 1, layouts45, 1, patches45, 5 },
+	{ "IDT92HD75B2X5", 0x7608, nullptr, 0, platforms46, 1, layouts46, 1, patches46, 5 },
+	{ "IDT92HD75B3X5", 0x7603, nullptr, 0, platforms47, 2, layouts47, 2, patches47, 5 },
+	{ "IDT92HD81B1X5", 0x7605, nullptr, 0, platforms48, 1, layouts48, 1, patches48, 6 },
+	{ "IDT92HD87B1", 0x7605, nullptr, 0, platforms49, 1, layouts49, 1, patches49, 6 },
+	{ "IDT92HD87B1_3", 0x76D1, revisions22, 1, platforms50, 1, layouts50, 1, patches50, 5 },
+	{ "IDT92HD87B2_4", 0x76D9, nullptr, 0, platforms51, 1, layouts51, 1, patches51, 5 },
+	{ "IDT92HD91BXX", 0x76E0, nullptr, 0, platforms52, 2, layouts52, 2, patches52, 6 },
+	{ "IDT92HD93BXX", 0x76DF, revisions23, 1, platforms53, 1, layouts53, 1, patches53, 6 },
+	{ "IDT92HD95", 0x7695, nullptr, 0, platforms54, 1, layouts54, 1, patches54, 5 },
+	{ "IDT92HD99BXX", 0x76E5, nullptr, 0, platforms55, 1, layouts55, 1, patches55, 6 },
 };
 
 // Vendor section
