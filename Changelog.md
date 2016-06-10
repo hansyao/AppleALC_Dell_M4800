@@ -2,6 +2,7 @@ AppleALC Changelog
 ==================
 #### v1.0.12
 - Lowered minimal OS requirement to 10.8 for ALC269
+- Added ALC269 revision-id 0x100203 support
 
 #### v1.0.11
 - Added ALC668 layout-id 29 for Asus N750JV by DroID969
