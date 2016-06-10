@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.0.12
+- Lowered minimal OS requirement to 10.8 for ALC269
+
 #### v1.0.11
 - Added ALC668 layout-id 29 for Asus N750JV by DroID969
 - ALC887VD Optimization Layout 11 officially will Support AC97 Front Panel like Windows Driver

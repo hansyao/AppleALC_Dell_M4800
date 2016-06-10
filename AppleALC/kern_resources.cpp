@@ -4922,10 +4922,10 @@ static const KextPatch patches7[] {
 	{ { &kextList[2], patchBuf104, patchBuf105, 8, 1 }, 13, 13 },
 	{ { &kextList[2], patchBuf106, patchBuf107, 8, 1 }, 14, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf108, patchBuf109, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf110, patchBuf111, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf110, patchBuf111, 4, 2 }, 12, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf112, patchBuf113, 4, 2 }, 13, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf114, patchBuf115, 4, 2 }, 15, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf116, patchBuf117, 4, 2 }, 13, 14 },
+	{ { &kextList[2], patchBuf116, patchBuf117, 4, 2 }, 12, 14 },
 };
 static const uint32_t revisions3[] { 0x100100, };
 static const uint8_t file51[] {

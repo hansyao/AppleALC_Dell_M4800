@@ -289,7 +289,7 @@
 			<key>Find</key>
 			<data>hBnUEQ==</data>
 			<key>MinKernel</key>
-			<string>13</string>
+			<string>12</string>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
@@ -325,7 +325,7 @@
 			<key>Find</key>
 			<data>hAjsEA==</data>
 			<key>MinKernel</key>
-			<string>13</string>
+			<string>12</string>
 			<key>MaxKernel</key>
 			<string>14</string>
 			<key>Name</key>
