@@ -1,5 +1,11 @@
 AppleALC Changelog
 ==================
+#### v1.0.12
+- Lowered minimal OS requirement to 10.8 for ALC269
+- Added ALC269 revision-id 0x100203 support
+- Workaround for booting in 10.12 Beta
+- Added a new version of null (8319D411) patch (now 8A19D411) for 10.12
+
 #### v1.0.11
 - Added ALC668 layout-id 29 for Asus N750JV by DroID969
 - ALC887VD Optimization Layout 11 officially will Support AC97 Front Panel like Windows Driver
@@ -13,7 +19,10 @@ AppleALC Changelog
 - Added IDT92HD91BXX layout-id 12 by RehabMan for HP Envy laptops
 - Changed ALC665 resources by InsanelyDeepak 
 - Added ALC269VC layout-id 13 for Samsung NP350V5C-S08IT by InsanelyDeepak
-- Changed ALC233 resources layout-id 4 for ALC3236 codec 
+- Changed ALC233 resources layout-id 4 for ALC3236 codec
+- Added ALC888 layout-id 4 for Laptop by Mirone
+- Added ALC892 layout-id 4 for Laptop by Mirone
+- Added ALC269VB layout-id 9 for Toshiba Satellite C660-1DR
 
 #### v1.0.10
 - Added ALC665 codec support layout-id 12, 13 by insanelydeepak

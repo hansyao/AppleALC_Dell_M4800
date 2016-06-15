@@ -193,10 +193,11 @@ public:
 	 *  enable/disable kernel memory write protection
 	 *
 	 *  @param enable the desired value
+	 *  @param sync   for synchronous execution, calls in the middle will be ignored
 	 *
 	 *  @return KERN_SUCCESS if succeeded
 	 */
-	static kern_return_t setKernelWriting(bool enable);
+	static kern_return_t setKernelWriting(bool enable, bool sync=false);
 	
 	/**
 	 *  Compare the loaded kernel with the passed kernel header

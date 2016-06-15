@@ -7,7 +7,7 @@
 	<key>CodecID</key>
 	<integer>30431</integer>
 	<key>CodecName</key>
-	<string>0x111d76df Rev:0x100203</string>
+	<string>IDT92HD93BXX</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
@@ -104,6 +104,20 @@
 			<data>gxnUEQ==</data>
 			<key>MinKernel</key>
 			<integer>15</integer>
+			<key>MaxKernel</key>
+			<integer>15</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>AAAAAA==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>ihnUEQ==</data>
+			<key>MinKernel</key>
+			<integer>16</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
