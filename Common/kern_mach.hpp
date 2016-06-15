@@ -193,7 +193,7 @@ public:
 	 *  enable/disable kernel memory write protection
 	 *
 	 *  @param enable the desired value
-     *  @param sync   for synchronous execution, calls in the middle will be ignored
+	 *  @param sync   for synchronous execution, calls in the middle will be ignored
 	 *
 	 *  @return KERN_SUCCESS if succeeded
 	 */

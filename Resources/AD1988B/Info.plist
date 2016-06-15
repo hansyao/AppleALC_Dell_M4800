@@ -74,6 +74,20 @@
 			<data>gxnUEQ==</data>
 			<key>MinKernel</key>
 			<string>15</string>
+			<key>MaxKernel</key>
+			<string>15</string>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>AAAAAA==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>ihnUEQ==</data>
+			<key>MinKernel</key>
+			<string>16</string>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>

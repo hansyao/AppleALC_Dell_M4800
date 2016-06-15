@@ -349,9 +349,9 @@ mach_vm_address_t KernelPatcher::createTrampoline(mach_vm_address_t func, size_t
 
 #ifdef KEXTPATCH_SUPPORT
 void KernelPatcher::onKextSummariesUpdated() {
-    // macOS 10.12 seems to generate an interrupt during this call causing the boot to hang
-    //FIXME: debug what exactly happens and write a proper fix
-    if (version_major >= 16) MachInfo::setKernelWriting(true, true);
+	// macOS 10.12 seems to generate an interrupt during this call causing the boot to hang
+	//FIXME: debug what exactly happens and write a proper fix
+	if (version_major >= 16) MachInfo::setKernelWriting(true, true);
     
 	DBGLOG("patcher @ invoked at kext loading/unloading");
 	
@@ -377,7 +377,7 @@ void KernelPatcher::onKextSummariesUpdated() {
 		}
 	}
     
-    // Restore interrupts, although the handler might actually restore them itself...
-    if (version_major >= 16) MachInfo::setKernelWriting(false, true);
+	// Restore interrupts, although the handler might actually restore them itself...
+	if (version_major >= 16) MachInfo::setKernelWriting(false, true);
 }
 #endif /* KEXTPATCH_SUPPORT */

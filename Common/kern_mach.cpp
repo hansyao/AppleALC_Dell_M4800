@@ -135,14 +135,14 @@ mach_vm_address_t MachInfo::findKernelBase() {
 }
 
 kern_return_t MachInfo::setKernelWriting(bool enable, bool sync) {
-    static bool syncState {false};
-    if (sync) {
-        syncState = enable;
-    } else if (syncState) {
-        // We are currently ignoring interrupts until the next sync call arrives
-        return KERN_SUCCESS;
-    }
-    
+	static bool syncState {false};
+	if (sync) {
+		syncState = enable;
+	} else if (syncState) {
+		// We are currently ignoring interrupts until the next sync call arrives
+		return KERN_SUCCESS;
+	}
+	
 	kern_return_t res = KERN_SUCCESS;
 	if (enable) __asm__ volatile("cli"); // disable interrupts
 	if (setWPBit(!enable) != KERN_SUCCESS) {
