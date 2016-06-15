@@ -128,12 +128,17 @@ bool KernelPatcher::compatibleKernel(uint32_t min, uint32_t max) {
 }
 
 mach_vm_address_t KernelPatcher::solveSymbol(size_t id, const char *symbol) {
-	if (id >= kinfos.size()) {
-		SYSLOG("patcher @ invalid kinfo id %zu for %s symbol lookup", id, symbol);
-		return 0;
-	}
-	
-	return kinfos[id]->solveSymbol(symbol);
+    if (id < kinfos.size()) {
+        auto addr = kinfos[id]->solveSymbol(symbol);
+        if (addr) {
+            return addr;
+        }
+    } else {
+        SYSLOG("patcher @ invalid kinfo id %zu for %s symbol lookup", id, symbol);
+    }
+    
+    code = Error::NoSymbolFound;
+    return 0;
 }
 
 #ifdef KEXTPATCH_SUPPORT
