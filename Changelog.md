@@ -5,6 +5,8 @@ AppleALC Changelog
 - Added ALC269 revision-id 0x100203 support
 - Workaround for booting in 10.12 Beta
 - Added a new version of null (8319D411) patch (now 8A19D411) for 10.12
+- ALC269 deleted unnecessary macOS Sierra patch
+- ALC887 added macOS Sierra patch
 
 #### v1.0.11
 - Added ALC668 layout-id 29 for Asus N750JV by DroID969
