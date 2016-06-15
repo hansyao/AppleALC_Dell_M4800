@@ -73,9 +73,9 @@
 			<key>Find</key>
 			<data>gxnUEQ==</data>
 			<key>MinKernel</key>
-			<string>15</string>
+			<integer>15</integer>
 			<key>MaxKernel</key>
-			<string>15</string>
+			<integer>15</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
@@ -87,7 +87,7 @@
 			<key>Find</key>
 			<data>ihnUEQ==</data>
 			<key>MinKernel</key>
-			<string>16</string>
+			<integer>16</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>

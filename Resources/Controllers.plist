@@ -15,7 +15,7 @@
 				<key>Find</key>
 				<data>IIw=</data>
 				<key>MinKernel</key>
-				<string>13</string>
+				<integer>13</integer>
 				<key>Name</key>
 				<string>AppleHDAController</string>
 				<key>Replace</key>
@@ -38,9 +38,9 @@
 				<key>Find</key>
 				<data>DAoAAA==</data>
 				<key>MaxKernel</key>
-				<string>13</string>
+				<integer>13</integer>
 				<key>MinKernel</key>
-				<string>13</string>
+				<integer>13</integer>
 				<key>Name</key>
 				<string>AppleHDAController</string>
 				<key>Replace</key>
@@ -52,9 +52,9 @@
 				<key>Find</key>
 				<data>CwwAAA==</data>
 				<key>MaxKernel</key>
-				<string>13</string>
+				<integer>13</integer>
 				<key>MinKernel</key>
-				<string>13</string>
+				<integer>13</integer>
 				<key>Name</key>
 				<string>AppleHDAController</string>
 				<key>Replace</key>
@@ -66,9 +66,9 @@
 				<key>Find</key>
 				<data>PQwKAAA=</data>
 				<key>MaxKernel</key>
-				<string>14</string>
+				<integer>14</integer>
 				<key>MinKernel</key>
-				<string>14</string>
+				<integer>14</integer>
 				<key>Name</key>
 				<string>AppleHDAController</string>
 				<key>Replace</key>
@@ -80,9 +80,9 @@
 				<key>Find</key>
 				<data>PQsMAAA=</data>
 				<key>MaxKernel</key>
-				<string>14</string>
+				<integer>14</integer>
 				<key>MinKernel</key>
-				<string>14</string>
+				<integer>14</integer>
 				<key>Name</key>
 				<string>AppleHDAController</string>
 				<key>Replace</key>
@@ -94,7 +94,7 @@
 				<key>Find</key>
 				<data>PQwKAAA=</data>
 				<key>MinKernel</key>
-				<string>15</string>
+				<integer>15</integer>
 				<key>Name</key>
 				<string>AppleHDAController</string>
 				<key>Replace</key>
@@ -117,7 +117,7 @@
 				<key>Find</key>
 				<data>IIw=</data>
 				<key>MinKernel</key>
-				<string>13</string>
+				<integer>13</integer>
 				<key>Name</key>
 				<string>AppleHDAController</string>
 				<key>Replace</key>
@@ -142,7 +142,7 @@
 				<key>Find</key>
 				<data>AQUJAAAEAACHAAAAAgQKAAAEAACHAAAAAwYIAAAEAAARAAAA</data>
 				<key>MinKernel</key>
-				<string>14</string>
+				<integer>14</integer>
 				<key>Name</key>
 				<string>AppleIntelFramebufferAzul</string>
 				<key>Replace</key>
@@ -169,7 +169,7 @@
 				<key>Find</key>
 				<data>AgUAAAAEAAAHBAAAAwQAAAAEAACBAAAABAYAAAAEAACBAAAA</data>
 				<key>MinKernel</key>
-				<string>13</string>
+				<integer>13</integer>
 				<key>Name</key>
 				<string>AppleIntelFramebufferCapri</string>
 				<key>Replace</key>
@@ -196,7 +196,7 @@
 				<key>Find</key>
 				<data>AgUAAAAEAAAHAQAAAwQAAAAEAAAHAQAA</data>
 				<key>MinKernel</key>
-				<string>13</string>
+				<integer>13</integer>
 				<key>Name</key>
 				<string>AppleIntelFramebufferCapri</string>
 				<key>Replace</key>
@@ -223,7 +223,7 @@
 				<key>Find</key>
 				<data>AgUAAAAEAAAHAQAAAwQAAAAEAAAHAQAA</data>
 				<key>MinKernel</key>
-				<string>13</string>
+				<integer>13</integer>
 				<key>Name</key>
 				<string>AppleIntelFramebufferCapri</string>
 				<key>Replace</key>

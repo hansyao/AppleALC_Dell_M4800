@@ -289,7 +289,7 @@
 			<key>Find</key>
 			<data>hBnUEQ==</data>
 			<key>MinKernel</key>
-			<string>12</string>
+			<integer>12</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
@@ -301,7 +301,7 @@
 			<key>Find</key>
 			<data>hQjsEA==</data>
 			<key>MinKernel</key>
-			<string>13</string>
+			<integer>13</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
@@ -313,9 +313,9 @@
 			<key>Find</key>
 			<data>gxnUEQ==</data>
 			<key>MinKernel</key>
-			<string>15</string>
+			<integer>15</integer>
 			<key>MaxKernel</key>
-			<string>15</string>
+			<integer>15</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
@@ -327,7 +327,7 @@
 			<key>Find</key>
 			<data>ihnUEQ==</data>
 			<key>MinKernel</key>
-			<string>16</string>
+			<integer>16</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
@@ -339,9 +339,9 @@
 			<key>Find</key>
 			<data>hAjsEA==</data>
 			<key>MinKernel</key>
-			<string>12</string>
+			<integer>12</integer>
 			<key>MaxKernel</key>
-			<string>14</string>
+			<integer>14</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
