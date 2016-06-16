@@ -7,6 +7,7 @@ AppleALC Changelog
 - Added a new version of null (8319D411) patch (now 8A19D411) for 10.12
 - ALC269 deleted unnecessary macOS Sierra patch
 - ALC887 added macOS Sierra patch
+- Added revision-id 0x100005 to ALC275
 
 #### v1.0.11
 - Added ALC668 layout-id 29 for Asus N750JV by DroID969
