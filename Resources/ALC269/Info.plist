@@ -132,7 +132,7 @@
 				<key>Comment</key>
 				<string>Custom ALC271x Acer Aspire s3-951</string>
 				<key>Path</key>
-				<string>layout31.xml.zlib</string>
+				<string>layout9.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
@@ -255,7 +255,7 @@
 				<key>Comment</key>
 				<string>Custom ALC271x Acer Aspire s3-951</string>
 				<key>Path</key>
-				<string>Platforms31.xml.zlib</string>
+				<string>PlatformsM9.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
