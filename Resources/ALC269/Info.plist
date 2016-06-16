@@ -126,6 +126,14 @@
 				<key>Path</key>
 				<string>layout29.xml.zlib</string>
 			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>31</integer>
+				<key>Comment</key>
+				<string>Custom ALC271x Acer Aspire s3-951</string>
+				<key>Path</key>
+				<string>layout31.xml.zlib</string>
+			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
@@ -240,6 +248,14 @@
 				<string>Custom ALC269VC Lenovo V580 by ar4er</string>
 				<key>Path</key>
 				<string>Platforms29.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>31</integer>
+				<key>Comment</key>
+				<string>Custom ALC271x Acer Aspire s3-951</string>
+				<key>Path</key>
+				<string>Platforms31.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
