@@ -1670,6 +1670,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Mirone - IDT 92HD90BXX</string>
+					<key>CodecID</key>
+					<integer>287143655</integer>
+					<key>ConfigData</key>
+					<data>ALccEAC3HRAAtx4hALcfAACnHCAApx0QAKcegQCnHwABFxwwARcdkAEXHqABFx+QANccQADXHQAA1x4XANcfkADnHFAA5x0QAOceAQDnHyAA9xxgAPcdEAD3HqEA9x8gAQcc8AEHHQABBx4AAQcfQA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - IDT 92HD91BXX </string>
 					<key>CodecID</key>
 					<integer>287143648</integer>
