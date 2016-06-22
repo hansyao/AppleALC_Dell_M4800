@@ -3,15 +3,31 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>yassinex</string>
+	<string>Yassinex and Andres</string>
 	<key>CodecID</key>
-	<integer>17</integer>
+	<integer>285343761</integer>
 	<key>CodecName</key>
-	<string>0x11020011 Rev:0x100918</string>
+	<string>CA0132</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Andres ZeroCross - No Volume Control</string>
+				<key>Id</key>
+				<integer>9</integer>
+				<key>Path</key>
+				<string>layout9.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Andres ZeroCross - No Volume Control</string>
+				<key>Id</key>
+				<integer>10</integer>
+				<key>Path</key>
+				<string>layout10.xml.zlib</string>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Custom Creative CA0132 5.1 channel</string>
@@ -31,6 +47,22 @@
 		</array>
 		<key>Platforms</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Andres ZeroCross - No Volume Control</string>
+				<key>Id</key>
+				<integer>9</integer>
+				<key>Path</key>
+				<string>Platforms9.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Andres ZeroCross </string>
+				<key>Id</key>
+				<integer>10</integer>
+				<key>Path</key>
+				<string>Platforms10.xml.zlib</string>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Custom Creative CA0132 5.1 channel</string>
@@ -112,6 +144,18 @@
 			<string>AppleHDA</string>
 			<key>Replace</key>
 			<data>EAACEQ==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>ihnUEQ==</data>
+			<key>MinKernel</key>
+			<integer>16</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>AAAAAA==</data>
 		</dict>
 	</array>
 	<key>Revisions</key>
