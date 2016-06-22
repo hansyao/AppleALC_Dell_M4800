@@ -12,6 +12,7 @@ AppleALC Changelog
 - Added IDT 92HD90BXX layout-id 3 by Mirone
 - Changed ALC233 layout-id 3 resources
 - ALC662 deleted unnecessary macOS Sierra patch
+- Added layout-id 9, 10 to CA0132 by Andres ZeroCross
 
 #### v1.0.11
 - Added ALC668 layout-id 29 for Asus N750JV by DroID969

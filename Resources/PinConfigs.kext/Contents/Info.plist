@@ -32,6 +32,34 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Creative CA0132 by Andres ZeroCross</string>
+					<key>CodecID</key>
+					<integer>285343761</integer>
+					<key>ConfigData</key>
+					<data>IVcKAQC3HBAAtx1AALceAQC3HwEAxxwgAMcdgADHHkUAxx8BANccIADXHUAA1x4BANcfAQD3HDAA9x1AAPceIQD3HwEBBxxAAQcdQAEHHiEBBx8CARccUAEXHUABFx4BARcfAQEnHFABJx2QAScepwEnH5A=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>9</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Creative CA0132 by Andres ZeroCross</string>
+					<key>CodecID</key>
+					<integer>285343761</integer>
+					<key>ConfigData</key>
+					<data>AVcKAQAXFRQBJwiBAWcIgAFXFw0BVxgkIQceAQEnH5A=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>10</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Custom Creative CA0132 5.1 channel</string>
 					<key>CodecID</key>
 					<integer>285343761</integer>
