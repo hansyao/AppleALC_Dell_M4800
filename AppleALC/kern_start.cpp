@@ -8,6 +8,7 @@
 #include "kern_start.hpp"
 #include "kern_iokit.hpp"
 #include "kern_alc.hpp"
+#include "kern_patcher.hpp"
 #include "kern_util.hpp"
 
 #include <IOKit/IOLib.h>
@@ -39,6 +40,17 @@ bool Configuration::getBootArguments() {
 	
 	isDisabled = false;
 	char buf[16];
+	
+	bool compatible = KernelPatcher::compatibleKernel(12, 15);
+	if (!compatible) {
+		if (PE_parse_boot_argn(bootargBeta, buf, sizeof(buf))) {
+			SYSLOG("init @ force enabling on an unsupported operating system");
+		} else {
+			SYSLOG("init @ automatically disabling on an unsupported operating system");
+			isDisabled = true;
+		}
+	}
+	
 	
 	isDisabled |= PE_parse_boot_argn(bootargOff, buf, sizeof(buf));
 	isDisabled |= PE_parse_boot_argn("-s", buf, sizeof(buf));

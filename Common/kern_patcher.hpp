@@ -125,7 +125,7 @@ public:
 	 *
 	 *  @return true on success
 	 */
-	bool compatibleKernel(uint32_t min, uint32_t max);
+	static bool compatibleKernel(uint32_t min, uint32_t max);
 	
 	/**
 	 *  Solve a kinfo symbol

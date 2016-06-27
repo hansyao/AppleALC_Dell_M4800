@@ -14,6 +14,7 @@ AppleALC Changelog
 - ALC662 deleted unnecessary macOS Sierra patch
 - Added layout-id 9, 10 to CA0132 by Andres ZeroCross
 - Fixed MuteGPIO in ALC3236(ALC233) by nguyenlc1993
+- Disabled by default on unsupported operating systems (e.g. 10.12), use -alcbeta boot arg to override this
 
 #### v1.0.11
 - Added ALC668 layout-id 29 for Asus N750JV by DroID969

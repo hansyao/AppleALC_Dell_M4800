@@ -28,6 +28,7 @@ class Configuration {
 	static constexpr const char *bootargOff {"-alcoff"};        // Disable the kext
 	static constexpr const char *bootargDebug {"-alcdbg"};      // Enable debug logging
 	static constexpr const char *bootargLowMem {"-alclowmem"};  // Disable memory consuming operations
+	static constexpr const char *bootargBeta {"-alcbeta"};      // Enforce on unsupported systems
 	static constexpr const char *bootargPolicy {"-alcpolicy"};  // Use TrustedBSD policy
 	static constexpr const char *bootargIOKit {"-alciokit"};    // Use IOKit::start method
 	
