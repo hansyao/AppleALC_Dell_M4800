@@ -13,6 +13,7 @@ AppleALC Changelog
 - Changed ALC233 layout-id 3 resources
 - ALC662 deleted unnecessary macOS Sierra patch
 - Added layout-id 9, 10 to CA0132 by Andres ZeroCross
+- Fixed MuteGPIO in ALC3236(ALC233) by nguyenlc1993
 
 #### v1.0.11
 - Added ALC668 layout-id 29 for Asus N750JV by DroID969
