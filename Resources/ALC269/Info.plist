@@ -134,6 +134,14 @@
 				<key>Path</key>
 				<string>layout9.xml.zlib</string>
 			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>32</integer>
+				<key>Comment</key>
+				<string>Custom ALC269 Samsung np880z5e-x01ru by Constanta</string>
+				<key>Path</key>
+				<string>layout32.xml.zlib</string>
+			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
@@ -256,6 +264,14 @@
 				<string>Custom ALC271x Acer Aspire s3-951</string>
 				<key>Path</key>
 				<string>PlatformsM9.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>32</integer>
+				<key>Comment</key>
+				<string>Custom ALC269 Samsung np880z5e-x01ru by Constanta</string>
+				<key>Path</key>
+				<string>Platforms32.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>

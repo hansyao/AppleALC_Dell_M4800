@@ -464,13 +464,13 @@
 					<key>CodecID</key>
 					<integer>283902569</integer>
 					<key>Comment</key>
-					<string>Custom ALC271x Acer Aspire s3-951</string>
+					<string>Custom ALC269 Samsung np880z5e-x01ru by Constanta</string>
 					<key>ConfigData</key>
-					<data>ASccEAEnHQABJx6gAScfkAFHHCABRx0AAUceEwFHH5ABhxwwAYcdkAGHHoEBhx8AAdccQAHXHZAB1x4XAdcfQAHnHFAB5x0QAeceRQHnHwACFxxgAhcdEAIXHiECFx8AAUcMAg==</data>
+					<data>ASccEAEnHQABJx6mAScfkAG3HCABtx0AAbceFwG3H5ABVxwwAVcdEAFXHiEBVx8AAYccQAGHHZABhx6BAYcfAgG3DAI=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
-					<integer>31</integer>
+					<integer>32</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -531,6 +531,20 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283902569</integer>
+					<key>Comment</key>
+					<string>Custom ALC271x Acer Aspire s3-951</string>
+					<key>ConfigData</key>
+					<data>ASccEAEnHQABJx6gAScfkAFHHCABRx0AAUceEwFHH5ABhxwwAYcdkAGHHoEBhx8AAdccQAHXHZAB1x4XAdcfQAHnHFAB5x0QAeceRQHnHwACFxxgAhcdEAIXHiECFx8AAUcMAg==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>31</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
