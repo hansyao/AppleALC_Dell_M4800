@@ -17,6 +17,8 @@ AppleALC Changelog
 - Disabled by default on unsupported operating systems (e.g. 10.12), use -alcbeta boot arg to override this
 - Added ALC269 layout-id 32 for Samsung np880z5e-x01ru by Constanta
 - Added CX20561 layout-id 3 by depingzheng
+- Changed CX20561 layout 3 -> layout 11
+- Optimized CX20561 platforms11.xml.zlib
 
 #### v1.0.11
 - Added ALC668 layout-id 29 for Asus N750JV by DroID969

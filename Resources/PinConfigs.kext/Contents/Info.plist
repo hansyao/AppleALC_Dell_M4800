@@ -1445,6 +1445,18 @@
 					<integer>7</integer>
 				</dict>
 				<dict>
+					<key>Codec</key>
+					<string>Conexant CX20561</string>
+					<key>CodecID</key>
+					<integer>351359057</integer>
+					<key>ConfigData</key>
+					<data>AWccQAFnHUABZx4hAWcfAQF3HPABdx0AAXceAAF3H0ABhxwwAYcdMAGHHoEBhx8BAZcc8AGXHQABlx4AAZcfQAGnHBABpx0BAaceFwGnH5ABtxzwAbcdAAG3HgABtx9AAccc8AHHHQABxx4AAccfQAHXHCAB1x0BAdceoAHXH5A=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
@@ -1833,18 +1845,6 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>7</integer>
-				</dict>
-				<dict>
-					<key>Codec</key>
-					<string>Conexant CX20561</string>
-					<key>CodecID</key>
-					<integer>351359057</integer>
-					<key>ConfigData</key>
-					<data>AWccQAFnHUABZx4hAWcfAQF3HPABdx0AAXceAAF3H0ABhxwwAYcdMAGHHoEBhx8BAZcc8AGXHQABlx4AAZcfQAGnHBABpx0BAaceFwGnH5ABtxzwAbcdAAG3HgABtx9AAccc8AHHHQABxx4AAccfQAHXHCAB1x0BAdceoAHXH5A=</data>
-					<key>FuncGroup</key>
-					<integer>1</integer>
-					<key>LayoutID</key>
-					<integer>3</integer>
 				</dict>
 			</array>
 			<key>IOClass</key>
