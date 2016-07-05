@@ -146,6 +146,21 @@ void KernelPatcher::setupKextListening() {
 	// We have already done this
 	if (that) return;
 	
+	// Lock primitives are needed to protect us from vm interrupts
+	if (version_major >= 16) {
+		usimpleLock = reinterpret_cast<void(*)(void *)>(solveSymbol(KernelID, "_usimple_lock"));
+		usimpleUnlock = reinterpret_cast<void(*)(void *)>(solveSymbol(KernelID, "_usimple_unlock"));
+		vmAllocationSitesLock = reinterpret_cast<void *>(solveSymbol(KernelID, "_vm_allocation_sites_lock"));
+		
+		if (!usimpleLock || !usimpleUnlock || !vmAllocationSitesLock) {
+			SYSLOG("patcher @ unable to obtain locking primitives lock %d unlock %d vmlock %d",
+				usimpleLock != nullptr, usimpleUnlock != nullptr, vmAllocationSitesLock != nullptr);
+			usimpleLock = usimpleUnlock = nullptr;
+			code = Error::NoSymbolFound;
+			return;
+		}
+	}
+	
 	mach_vm_address_t s = solveSymbol(KernelID, "_OSKextLoadedKextSummariesUpdated");
 	
 	if (s) {
@@ -349,35 +364,38 @@ mach_vm_address_t KernelPatcher::createTrampoline(mach_vm_address_t func, size_t
 
 #ifdef KEXTPATCH_SUPPORT
 void KernelPatcher::onKextSummariesUpdated() {
-	// macOS 10.12 seems to generate an interrupt during this call causing the boot to hang
-	//FIXME: debug what exactly happens and write a proper fix
-	if (version_major >= 16) MachInfo::setKernelWriting(true, true);
-    
-	DBGLOG("patcher @ invoked at kext loading/unloading");
+	if (that) {
+		// macOS 10.12 generates an interrupt during this call causing the boot to hang
+		// unless we take the vm allocation lock
+		if (version_major >= 16) that->usimpleLock(that->vmAllocationSitesLock);
 	
-	if (that && that->khandlers.size() > 0 && that->loadedKextSummaries) {
-		auto num = (*that->loadedKextSummaries)->numSummaries;
-		if (num > 0) {
-			OSKextLoadedKextSummary &last = (*that->loadedKextSummaries)->summaries[num-1];
-			DBGLOG("patcher @ last kext is %llX and its name is %.*s", last.address, KMOD_MAX_NAME, last.name);
-			// We may add khandlers items inside the handler
-			for (size_t i = 0; i < that->khandlers.size(); i++) {
-				if (!strncmp(that->khandlers[i]->id, last.name, KMOD_MAX_NAME)) {
-					DBGLOG("patcher @ caught the right kext at %llX, invoking handler", last.address);
-					that->khandlers[i]->address = last.address;
-					that->khandlers[i]->size = last.size;
-					that->khandlers[i]->handler(that->khandlers[i]);
-					// Remove the item
-					that->khandlers.erase(i);
-					break;
+		DBGLOG("patcher @ invoked at kext loading/unloading");
+		
+		if (that->khandlers.size() > 0 && that->loadedKextSummaries) {
+			auto num = (*that->loadedKextSummaries)->numSummaries;
+			if (num > 0) {
+				OSKextLoadedKextSummary &last = (*that->loadedKextSummaries)->summaries[num-1];
+				DBGLOG("patcher @ last kext is %llX and its name is %.*s", last.address, KMOD_MAX_NAME, last.name);
+				// We may add khandlers items inside the handler
+				for (size_t i = 0; i < that->khandlers.size(); i++) {
+					if (!strncmp(that->khandlers[i]->id, last.name, KMOD_MAX_NAME)) {
+						DBGLOG("patcher @ caught the right kext at %llX, invoking handler", last.address);
+						that->khandlers[i]->address = last.address;
+						that->khandlers[i]->size = last.size;
+						that->khandlers[i]->handler(that->khandlers[i]);
+						// Remove the item
+						that->khandlers.erase(i);
+						break;
+					}
 				}
+			} else {
+				SYSLOG("patcher @ no kext is currently loaded, this should not happen");
 			}
-		} else {
-			SYSLOG("patcher @ no kext is currently loaded, this should not happen");
 		}
+		
+		//FIXME: we should not unlock this but instead avoid the lock in the caller
+		//Fortunately there does not appear to be enough time for anybody to 
+		if (version_major >= 16) that->usimpleUnlock(that->vmAllocationSitesLock);
 	}
-    
-	// Restore interrupts, although the handler might actually restore them itself...
-	if (version_major >= 16) MachInfo::setKernelWriting(false, true);
 }
 #endif /* KEXTPATCH_SUPPORT */

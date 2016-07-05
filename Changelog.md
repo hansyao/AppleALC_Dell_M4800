@@ -1,6 +1,9 @@
 AppleALC Changelog
 ==================
 #### v1.0.12
+- Improved workaround for 10.12 Beta issues
+
+#### v1.0.12
 - Lowered minimal OS requirement to 10.8 for ALC269
 - Added ALC269 revision-id 0x100203 support
 - Workaround for booting in 10.12 Beta

@@ -226,6 +226,15 @@ private:
 	 *  A pointer to loaded kext information
 	 */
 	OSKextLoadedKextSummaryHeader **loadedKextSummaries {nullptr};
+	
+	
+	/**
+	 *  Lock primitives taken from the kernel
+	 */
+	void (*usimpleLock)(void *l) {nullptr};
+	void (*usimpleUnlock)(void *l) {nullptr};
+	void *vmAllocationSitesLock {nullptr};
+	
 #endif /* KEXTPATCH_SUPPORT */
 
 	/**
