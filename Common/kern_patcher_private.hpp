@@ -41,6 +41,7 @@ namespace Patch {
 
 	template <typename T>
 	static void writeType(mach_vm_address_t addr, T value) {
+		DBGLOG("private @ writing to %X value of %zu which is %X", (unsigned int)addr, sizeof(T), (unsigned int)value);
 		*reinterpret_cast<T *>(addr) = value;
 	}
 

@@ -50,8 +50,7 @@ bool Configuration::getBootArguments() {
 			isDisabled = true;
 		}
 	}
-	
-	
+
 	isDisabled |= PE_parse_boot_argn(bootargOff, buf, sizeof(buf));
 	isDisabled |= PE_parse_boot_argn("-s", buf, sizeof(buf));
 	isDisabled |= PE_parse_boot_argn("-x", buf, sizeof(buf));
@@ -87,6 +86,12 @@ bool PRODUCT_NAME::init(OSDictionary *dict) {
 }
 
 bool PRODUCT_NAME::start(IOService *provider) {
+#ifdef DEBUG
+	SYSLOG("init @ version " xStringify(MODULE_VERSION) " DEBUG build");
+#else
+	SYSLOG("init @ version " xStringify(MODULE_VERSION));
+#endif
+
 	if (config.mode == Configuration::StartMode::IOKit) {
 		DBGLOG("init @ initialising with IOKit mode");
 		

@@ -2,6 +2,8 @@ AppleALC Changelog
 ==================
 #### v1.0.12
 - Improved workaround for 10.12 Beta issues
+- Fixed PAGE FAULT panic on 10.12 Beta
+- Added version information on boot
 
 #### v1.0.12
 - Lowered minimal OS requirement to 10.8 for ALC269

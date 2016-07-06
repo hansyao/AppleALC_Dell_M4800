@@ -311,6 +311,10 @@ mach_vm_address_t KernelPatcher::routeFunction(mach_vm_address_t from, mach_vm_a
 	return trampoline;
 }
 
+void KernelPatcher::tempExecutableMemory() {
+	asm (".rept " xStringify(TempExecutableMemorySize) "\nnop\n.endr");
+}
+
 mach_vm_address_t KernelPatcher::createTrampoline(mach_vm_address_t func, size_t min) {
 	if (!disasm.init()) {
 		SYSLOG("patcher @ failed to use disasm");
@@ -327,38 +331,32 @@ mach_vm_address_t KernelPatcher::createTrampoline(mach_vm_address_t func, size_t
 		return 0;
 	}
 	
-	auto p = Page::create();
-	if (!p) {
-		SYSLOG("patcher @ failed to generate a page object");
-		code = Error::MemoryIssue;
-		return 0;
-	}
+	uint8_t *tempDataPtr = reinterpret_cast<uint8_t *>(tempExecutableMemory) + tempExecutableMemoryOff;
 	
-	if (!p->alloc()) {
-		SYSLOG("patcher @ failed to allocate a new page");
-		code = Error::MemoryIssue;
-		Page::deleter(p);
-		return 0;
-	}
+	tempExecutableMemoryOff += off + LongJump;
 	
-	// Copy the prologue, assuming it is PIC
-	memcpy(p->p, reinterpret_cast<void *>(func), off);
+	if (tempExecutableMemoryOff >= TempExecutableMemorySize) {
+		SYSLOG("patcher @ not enough executable memory requested %lld have %d", tempExecutableMemoryOff+1, TempExecutableMemorySize);
+		code = Error::DisasmFailure;
+	} else if (kinfos[KernelID]->setKernelWriting(true) == KERN_SUCCESS) {
+		// Copy the prologue, assuming it is PIC
+		memcpy(tempDataPtr, reinterpret_cast<void *>(func), off);
 	
-	// Add a jump
-	routeFunction(reinterpret_cast<mach_vm_address_t>(p->p+off), func+off, false, false);
-	if (getError() != Error::NoError) {
-		SYSLOG("patcher @ failed to route an inner trempoline");
-	} else if (!p->protect(VM_PROT_READ|VM_PROT_EXECUTE)) {
+		// Add a jump
+		routeFunction(reinterpret_cast<mach_vm_address_t>(tempDataPtr+off), func+off, false, false);
+		
+		kinfos[KernelID]->setKernelWriting(false);
+		
+		if (getError() == Error::NoError) {
+			return reinterpret_cast<mach_vm_address_t>(tempDataPtr);
+		} else {
+			SYSLOG("patcher @ failed to route an inner trempoline");
+		}
+	} else {
 		SYSLOG("patcher @ failed to set executable permissions");
 		code = Error::MemoryProtection;
-	} else if (!kpages.push_back(p)) {
-		SYSLOG("patcher @ unable to store a page object");
-		code = Error::MemoryIssue;
-	} else {
-		return reinterpret_cast<mach_vm_address_t>(p->p);
 	}
 	
-	Page::deleter(p);
 	return 0;
 }
 
