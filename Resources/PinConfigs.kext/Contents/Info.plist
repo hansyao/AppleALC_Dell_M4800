@@ -1382,6 +1382,18 @@
 				</dict>
 				<dict>
 					<key>CodecID</key>
+					<integer>283904153</integer>
+					<key>Comment</key>
+					<string>Custom ALC898 by Irving23 for MSI GT72S 6QF-065CN</string>
+					<key>ConfigData</key>
+					<data>ARcc8AEXHQABFx4AARcfQAEnHBABJx0BASceoAEnH5ABRxzwAUcdAAFHHgABRx9AAVcc8AFXHQABVx4AAVcfQAFnHPABZx0AAWceAAFnH0ABdxxgAXcdEAF3HgEBdx8BAYccEAGHHRABhx6hAYcfAQGXHEABlx0BAZceFwGXH5ABpxwgAacdEAGnHoEBpx8BAbccQAG3HQEBtx4XAbcfkAHHHPABxx0AAcceAAHHH0AB1xzwAdcdAAHXHgAB1x9AAecccAHnHREB5x5FAecfAQH3HPAB9x0AAfceAAH3H0ABRwwC</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>CodecID</key>
 					<integer>283904256</integer>
 					<key>Comment</key>
 					<string>ALC1150, Toleda</string>
