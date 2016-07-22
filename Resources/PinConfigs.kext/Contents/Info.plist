@@ -88,6 +88,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>InsanelyDeepak - Cirrus Logic CS4210</string>
+					<key>CodecID</key>
+					<integer>269697552</integer>
+					<key>ConfigData</key>
+					<data>AFccEABXHUAAVx4hAFcfAABnHCAAZx0AAGceFwBnH5AAdxwwAHcdkAB3HoEAdx8AAJccQACXHQAAlx6gAJcfkA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>InsanelyDeepak - Cirrus Logic -CS4213</string>
 					<key>CodecID</key>
 					<integer>269697555</integer>
@@ -573,6 +587,20 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>InsanelyDeepak - Realtek ALC275</string>
+					<key>CodecID</key>
+					<integer>283902581</integer>
+					<key>ConfigData</key>
+					<data>AUccEAFHHQEBRx4XAUcfkAFXHCABVx0QAVceIQFXHwMBJxwwAScdAAEnHqABJx+QAYccQAGHHVABhx6BAYcfAAHnHFAB5x0QAeceRQHnHwABRwwC</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -1271,6 +1299,20 @@
 					<integer>12</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>InsanelyDeepak - Realtek ALC891</string>
+					<key>CodecID</key>
+					<integer>283904103</integer>
+					<key>ConfigData</key>
+					<data>AXccEAF3HUABdx4hAXcfAQFnHDABZx0wAWcegQFnHwEBhxxAAYcdkAGHHqEBhx+RAaccYAGnHZABpx6BAacfAgHnHHAB5x0AAeceRgHnH5ACFxyAAhcdQAIXHhECFx8B</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
+				</dict>
+				<dict>
 					<key>CodecID</key>
 					<integer>283904146</integer>
 					<key>Comment</key>
@@ -1551,6 +1593,20 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>InsanelyDeepak - Conexant CX20724</string>
+					<key>CodecID</key>
+					<integer>351359220</integer>
+					<key>ConfigData</key>
+					<data>AXccEAF3HQEBdx4XAXcfkQGnHCABpx0BAaceoAGnH5UBlxwwAZcdEAGXHosBlx8EAdccQAHXHRAB1x4rAdcfBA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>

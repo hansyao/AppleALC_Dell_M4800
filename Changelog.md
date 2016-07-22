@@ -5,6 +5,10 @@ AppleALC Changelog
 - Fixed PAGE FAULT panic on 10.12 Beta
 - Added version information on boot
 - Added ALC898 layout-id 11 for MSI GT72S 6QF-065CN by Irving23
+- Added Conexant CX20724 layout-id 13 by InsanelyDeepak
+- Added Cirrus Logic CS4210 codec support layout-id 13 by InsanelyDeepak
+- Added Realtek ALC275 layout-id 13 by InsanelyDeepak
+- Added Realtek ALC891 codec support layout-id 13 by InsanelyDeepak
 
 #### v1.0.12
 - Lowered minimal OS requirement to 10.8 for ALC269

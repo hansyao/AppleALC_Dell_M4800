@@ -3,26 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>vandroiy</string>
+	<string>InsanelyDeepak</string>
 	<key>CodecID</key>
-	<integer>629</integer>
+	<integer>2151</integer>
 	<key>CodecName</key>
-	<string>ALC275</string>
+	<string>ALC891</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Mirone Laptop Patch ALC275</string>
-				<key>Id</key>
-				<integer>3</integer>
-				<key>Path</key>
-				<string>layout3.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>InsanelyDeepak - Realtek ALC275</string>
+				<string>InsanelyDeepak - Realtek ALC891</string>
 				<key>Id</key>
 				<integer>13</integer>
 				<key>Path</key>
@@ -33,15 +25,7 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Mirone Laptop Patch ALC275</string>
-				<key>Id</key>
-				<integer>3</integer>
-				<key>Path</key>
-				<string>PlatformsM.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>InsanelyDeepak - Realtek ALC275</string>
+				<string>InsanelyDeepak - Realtek ALC891</string>
 				<key>Id</key>
 				<integer>13</integer>
 				<key>Path</key>
@@ -59,7 +43,7 @@
 			<key>MaxKernel</key>
 			<integer>13</integer>
 			<key>MinKernel</key>
-			<integer>13</integer>
+			<integer>12</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
@@ -83,7 +67,7 @@
 			<key>Find</key>
 			<data>QcaGQwEAAAA=</data>
 			<key>MinKernel</key>
-			<integer>13</integer>
+			<integer>12</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
@@ -93,34 +77,22 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>hQjsEA==</data>
+			<data>ixnUEQ==</data>
 			<key>MinKernel</key>
-			<integer>13</integer>
+			<integer>12</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>AAAAAA==</data>
-		</dict>
-		<dict>
-			<key>Count</key>
-			<integer>2</integer>
-			<key>Find</key>
-			<data>hBnUEQ==</data>
-			<key>MinKernel</key>
-			<integer>13</integer>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>dQLsEA==</data>
+			<data>ZwjsEA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
 			<data>gxnUEQ==</data>
-			<key>MinKernel</key>
-			<integer>15</integer>
 			<key>MaxKernel</key>
+			<integer>15</integer>
+			<key>MinKernel</key>
 			<integer>15</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
@@ -142,8 +114,7 @@
 	</array>
 	<key>Revisions</key>
 	<array>
-		<integer>1048584</integer>
-		<integer>1048581</integer>
+		<integer>1048578</integer>
 	</array>
 	<key>Vendor</key>
 	<string>Realtek</string>

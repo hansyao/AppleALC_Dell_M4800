@@ -3,49 +3,33 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>vandroiy</string>
+	<string>InsanelyDeepak</string>
 	<key>CodecID</key>
-	<integer>629</integer>
+	<integer>16912</integer>
 	<key>CodecName</key>
-	<string>ALC275</string>
+	<string>0x10134210 Rev:0x100101</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
 		<array>
 			<dict>
-				<key>Comment</key>
-				<string>Mirone Laptop Patch ALC275</string>
-				<key>Id</key>
-				<integer>3</integer>
-				<key>Path</key>
-				<string>layout3.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>InsanelyDeepak - Realtek ALC275</string>
 				<key>Id</key>
 				<integer>13</integer>
 				<key>Path</key>
 				<string>layout13.xml.zlib</string>
+				<key>comment</key>
+				<string>InsanelyDeepak - Cirrus Logic CS4210</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
 			<dict>
-				<key>Comment</key>
-				<string>Mirone Laptop Patch ALC275</string>
-				<key>Id</key>
-				<integer>3</integer>
-				<key>Path</key>
-				<string>PlatformsM.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>InsanelyDeepak - Realtek ALC275</string>
 				<key>Id</key>
 				<integer>13</integer>
 				<key>Path</key>
 				<string>PlatformsID.xml.zlib</string>
+				<key>comment</key>
+				<string>InsanelyDeepak - Cirrus Logic CS4210</string>
 			</dict>
 		</array>
 	</dict>
@@ -55,7 +39,9 @@
 			<key>Count</key>
 			<integer>1</integer>
 			<key>Find</key>
-			<data>QcYGAEmLvCQ=</data>
+			<data>
+			QcYGAEmLvCQ=
+			</data>
 			<key>MaxKernel</key>
 			<integer>13</integer>
 			<key>MinKernel</key>
@@ -63,89 +49,80 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>QcYGAUmLvCQ=</data>
+			<data>
+			QcYGAUmLvCQ=
+			</data>
 		</dict>
 		<dict>
 			<key>Count</key>
 			<integer>1</integer>
 			<key>Find</key>
-			<data>QcYGAEiLu2g=</data>
+			<data>
+			QcYGAEiLu2g=
+			</data>
 			<key>MinKernel</key>
 			<integer>14</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>QcYGAUiLu2g=</data>
+			<data>
+			QcYGAUiLu2g=
+			</data>
 		</dict>
 		<dict>
 			<key>Count</key>
 			<integer>1</integer>
 			<key>Find</key>
-			<data>QcaGQwEAAAA=</data>
+			<data>
+			QcaGQwEAAAA=
+			</data>
 			<key>MinKernel</key>
 			<integer>13</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>QcaGQwEAAAE=</data>
+			<data>
+			QcaGQwEAAAE=
+			</data>
 		</dict>
 		<dict>
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>hQjsEA==</data>
+			<data>
+			hBnUEQ==
+			</data>
 			<key>MinKernel</key>
 			<integer>13</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>AAAAAA==</data>
+			<data>
+			EEITEA==
+			</data>
 		</dict>
 		<dict>
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>hBnUEQ==</data>
+			<data>
+			gxnUEQ==
+			</data>
 			<key>MinKernel</key>
-			<integer>13</integer>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>dQLsEA==</data>
-		</dict>
-		<dict>
-			<key>Count</key>
-			<integer>2</integer>
-			<key>Find</key>
-			<data>gxnUEQ==</data>
-			<key>MinKernel</key>
-			<integer>15</integer>
-			<key>MaxKernel</key>
 			<integer>15</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>AAAAAA==</data>
-		</dict>
-		<dict>
-			<key>Count</key>
-			<integer>2</integer>
-			<key>Find</key>
-			<data>ihnUEQ==</data>
-			<key>MinKernel</key>
-			<integer>16</integer>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>AAAAAA==</data>
+			<data>
+			AAAAAA==
+			</data>
 		</dict>
 	</array>
 	<key>Revisions</key>
 	<array>
-		<integer>1048584</integer>
-		<integer>1048581</integer>
+		<integer>1048833</integer>
 	</array>
 	<key>Vendor</key>
-	<string>Realtek</string>
+	<string>CirrusLogic</string>
 </dict>
 </plist>
