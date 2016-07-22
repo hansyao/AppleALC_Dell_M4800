@@ -4,6 +4,7 @@ AppleALC Changelog
 - Improved workaround for 10.12 Beta issues
 - Fixed PAGE FAULT panic on 10.12 Beta
 - Added version information on boot
+- Added ALC898 layout-id 11 for MSI GT72S 6QF-065CN by Irving23
 
 #### v1.0.12
 - Lowered minimal OS requirement to 10.8 for ALC269
