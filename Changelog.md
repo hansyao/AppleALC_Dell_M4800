@@ -1,6 +1,6 @@
 AppleALC Changelog
 ==================
-#### v1.0.12
+#### v1.0.13
 - Improved workaround for 10.12 Beta issues
 - Fixed PAGE FAULT panic on 10.12 Beta
 - Added version information on boot
