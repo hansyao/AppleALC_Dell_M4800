@@ -9,6 +9,7 @@ AppleALC Changelog
 - Added Cirrus Logic CS4210 codec support layout-id 13 by InsanelyDeepak
 - Added Realtek ALC275 layout-id 13 by InsanelyDeepak
 - Added Realtek ALC891 codec support layout-id 13 by InsanelyDeepak
+- Added IDT 92HD90BXX layout-id 12 for Dell Latitude E6x20/Dell Precision Mx600 by vusun123
 
 #### v1.0.12
 - Lowered minimal OS requirement to 10.8 for ALC269
