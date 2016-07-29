@@ -816,6 +816,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>InsanelyDeepak - Realtek ALC298</string>
+					<key>CodecID</key>
+					<integer>283902616</integer>
+					<key>ConfigData</key>
+					<data>AXccEAF3HQABdx4XAXcfkAEnHCABJx0AASceoAEnH5ACFxwwAhcdEAIXHiECFx8CAYccQAGHHRABhx6BAYcfAgFHDAICFwwC</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - Realtek ALC662</string>
 					<key>CodecID</key>
 					<integer>283903586</integer>

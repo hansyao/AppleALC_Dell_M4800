@@ -11,6 +11,7 @@ AppleALC Changelog
 - Added Realtek ALC891 codec support layout-id 13 by InsanelyDeepak
 - Added IDT 92HD90BXX layout-id 12 for Dell Latitude E6x20/Dell Precision Mx600 by vusun123
 - Added ALC275 layout-id 28 for Sony Vaio by vusun123
+- Added ALC298 codec support layout-id 13 by InsanelyDeepak
 
 #### v1.0.12
 - Lowered minimal OS requirement to 10.8 for ALC269
