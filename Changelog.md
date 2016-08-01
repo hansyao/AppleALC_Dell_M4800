@@ -15,6 +15,8 @@ AppleALC Changelog
 - Added AD1984A codec support layout-id 11 by MacPeet
 - Added revision-id into AD1984A info.plist
 - Fixed lock acquisition panic in iokit routins on 10.12 Beta
+- Removed ALC1150 layouts 1-3 to reduce kext size
+- Added ALC1150 layout 11 with boosted microphone (built on 7)
 
 #### v1.0.12
 - Lowered minimal OS requirement to 10.8 for ALC269
