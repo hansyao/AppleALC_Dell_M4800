@@ -14,6 +14,7 @@ AppleALC Changelog
 - Added ALC298 codec support layout-id 13 by InsanelyDeepak
 - Added AD1984A codec support layout-id 11 by MacPeet
 - Added revision-id into AD1984A info.plist
+- Fixed lock acquisition panic in iokit routins on 10.12 Beta
 
 #### v1.0.12
 - Lowered minimal OS requirement to 10.8 for ALC269

@@ -52,6 +52,16 @@ extern "C" {
 	void *kern_os_realloc(void* addr, size_t nsize);
 }
 
+enum KernelVersion {
+	SnowLeopard = 10,
+	Lion = 11,
+	MountainLion = 12,
+	Mavericks = 13,
+	Yosemite = 14,
+	ElCapitan = 15,
+	Sierra = 16
+};
+
 /**
  *  Typed buffer allocator
  */

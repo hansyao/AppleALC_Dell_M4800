@@ -7,6 +7,7 @@
 
 #include "kern_iokit.hpp"
 #include "kern_util.hpp"
+#include "kern_patcher.hpp"
 
 #include <libkern/c++/OSSerialize.h>
 #include <IOKit/IORegistryEntry.h>
@@ -18,12 +19,16 @@ namespace IOUtil {
 	OSSerialize *getProperty(IORegistryEntry *entry, const char *property) {
 		auto value = entry->getProperty(property);
 		if (value) {
+			KernelPatcher::releaseMemoryLock();
 			auto s = OSSerialize::withCapacity(PAGE_SIZE);
+			KernelPatcher::obtainMemoryLock();
 			if (value->serialize(s)) {
 				return s;
 			} else {
 				SYSLOG("ioutil @ failed to serialise %s property", property);
+				KernelPatcher::releaseMemoryLock();
 				s->release();
+				KernelPatcher::obtainMemoryLock();
 			}
 		} else {
 			DBGLOG("ioutil @ failed to get %s property", property);
@@ -56,10 +61,14 @@ namespace IOUtil {
 	}
 	
 	IORegistryEntry *findEntryByPrefix(const char *path, const char *prefix, const IORegistryPlane *plane, bool (*proc)(IORegistryEntry *), bool brute) {
+		KernelPatcher::releaseMemoryLock();
 		auto entry = IORegistryEntry::fromPath(path, plane);
+		KernelPatcher::obtainMemoryLock();
 		if (entry) {
 			auto res = findEntryByPrefix(entry, prefix, plane, proc, brute);
+			KernelPatcher::releaseMemoryLock();
 			entry->release();
+			KernelPatcher::obtainMemoryLock();
 			return res;
 		}
 		DBGLOG("ioutil @ failed to get %s entry", path);
@@ -75,23 +84,31 @@ namespace IOUtil {
 		
 		do {
 			bruteCount++;
+			KernelPatcher::releaseMemoryLock();
 			auto iterator = entry->getChildIterator(plane);
+			KernelPatcher::obtainMemoryLock();
 			
 			if (iterator) {
 				size_t len = strlen(prefix);
-				while ((res = OSDynamicCast(IORegistryEntry, iterator->getNextObject())) != nullptr) {
+				while (KernelPatcher::releaseMemoryLock(), (res = OSDynamicCast(IORegistryEntry, iterator->getNextObject())) != nullptr) {
+					KernelPatcher::obtainMemoryLock();
+					
 					//DBGLOG("ioutil @ iterating over %s", res->getName());
 					if (!strncmp(prefix, res->getName(), len)) {
 						found = proc ? proc(res) : true;
 						if (found) {
 							if (bruteCount > 1)
 								DBGLOG("ioutil @ bruted %s value in %zu attempts", prefix, bruteCount);
-							if (!proc)
+							if (!proc) {
+								KernelPatcher::releaseMemoryLock();
 								break;
+							}
 						}
 					}
 				}
+				
 				iterator->release();
+				KernelPatcher::obtainMemoryLock();
 				
 			} else {
 				SYSLOG("ioutil @ failed to iterate over entry");

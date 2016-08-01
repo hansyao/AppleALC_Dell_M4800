@@ -315,6 +315,28 @@ void KernelPatcher::tempExecutableMemory() {
 	asm (".rept " xStringify(TempExecutableMemorySize) "\nnop\n.endr");
 }
 
+#ifdef KEXTPATCH_SUPPORT
+
+void KernelPatcher::releaseMemoryLock() {
+	if (that && that->wasAcquired && that->vmAllocationSitesLock && version_major >= KernelVersion::Sierra) {
+		that->usimpleUnlock(that->vmAllocationSitesLock);
+	}
+}
+
+void KernelPatcher::obtainMemoryLock() {
+	if (that && that->wasAcquired && that->vmAllocationSitesLock && version_major >= KernelVersion::Sierra) {
+		that->usimpleLock(that->vmAllocationSitesLock);
+	}
+}
+
+#else
+
+void KernelPatcher::releaseMemoryLock() {}
+
+void KernelPatcher::obtainMemoryLock() {}
+
+#endif /* KEXTPATCH_SUPPORT */
+
 mach_vm_address_t KernelPatcher::createTrampoline(mach_vm_address_t func, size_t min) {
 	if (!disasm.init()) {
 		SYSLOG("patcher @ failed to use disasm");
@@ -365,8 +387,11 @@ void KernelPatcher::onKextSummariesUpdated() {
 	if (that) {
 		// macOS 10.12 generates an interrupt during this call causing the boot to hang
 		// unless we take the vm allocation lock
-		if (version_major >= 16) that->usimpleLock(that->vmAllocationSitesLock);
-	
+		if (version_major >= KernelVersion::Sierra) {
+			that->usimpleLock(that->vmAllocationSitesLock);
+			that->wasAcquired = true;
+		}
+		
 		DBGLOG("patcher @ invoked at kext loading/unloading");
 		
 		if (that->khandlers.size() > 0 && that->loadedKextSummaries) {
@@ -393,7 +418,10 @@ void KernelPatcher::onKextSummariesUpdated() {
 		
 		//FIXME: we should not unlock this but instead avoid the lock in the caller
 		//Fortunately there does not appear to be enough time for anybody to 
-		if (version_major >= 16) that->usimpleUnlock(that->vmAllocationSitesLock);
+		if (version_major >= KernelVersion::Sierra) {
+			that->usimpleUnlock(that->vmAllocationSitesLock);
+			that->wasAcquired = false;
+		}
 	}
 }
 #endif /* KEXTPATCH_SUPPORT */

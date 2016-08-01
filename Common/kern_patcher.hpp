@@ -204,6 +204,16 @@ public:
 	 */
 	mach_vm_address_t routeFunction(mach_vm_address_t from, mach_vm_address_t to, bool buildWrapper=false, bool kernelRoute=true);
 
+	/**
+	 *  External interface to get the memory allocation lock released
+	 */
+	static void releaseMemoryLock();
+	
+	/**
+	 *  External interface to get the memory allocation lock obtain again
+	 */
+	static void obtainMemoryLock();
+	
 private:
 
 	/**
@@ -247,12 +257,13 @@ private:
 	/**
 	 *  Lock primitives taken from the kernel
 	 */
-	void (*usimpleLock)(void *l) {nullptr};
-	void (*usimpleUnlock)(void *l) {nullptr};
-	void *vmAllocationSitesLock {nullptr};
+	void (*usimpleLock)(void *l);
+	void (*usimpleUnlock)(void *l);
+	void *vmAllocationSitesLock;
+	bool wasAcquired;
 	
 #endif /* KEXTPATCH_SUPPORT */
-
+	
 	/**
 	 *  Local disassmebler instance, initialised on demand
 	 */
