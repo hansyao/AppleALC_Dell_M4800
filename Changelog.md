@@ -13,6 +13,7 @@ AppleALC Changelog
 - Added ALC275 layout-id 28 for Sony Vaio by vusun123
 - Added ALC298 codec support layout-id 13 by InsanelyDeepak
 - Added AD1984A codec support layout-id 11 by MacPeet
+- Added revision-id into AD1984A info.plist
 
 #### v1.0.12
 - Lowered minimal OS requirement to 10.8 for ALC269
