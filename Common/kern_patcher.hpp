@@ -257,10 +257,10 @@ private:
 	/**
 	 *  Lock primitives taken from the kernel
 	 */
-	void (*usimpleLock)(void *l);
-	void (*usimpleUnlock)(void *l);
-	void *vmAllocationSitesLock;
-	bool wasAcquired;
+	void (*usimpleLock)(void *l) {nullptr};
+	void (*usimpleUnlock)(void *l) {nullptr};
+	void *vmAllocationSitesLock {nullptr};
+	bool wasAcquired {false};
 	
 #endif /* KEXTPATCH_SUPPORT */
 	
