@@ -1,5 +1,9 @@
 AppleALC Changelog
 ==================
+#### v1.0.14
+- Added ALC290 layout-id 28 for Dell Vostro 5480 by vusun123
+- Added ALC292 layout-id 28 for Lenovo T440 vusun123
+
 #### v1.0.13
 - Improved workaround for 10.12 Beta issues
 - Fixed PAGE FAULT panic on 10.12 Beta
