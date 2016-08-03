@@ -9,6 +9,7 @@
 #define kern_iokit_hpp
 
 #include "kern_util.hpp"
+#include "kern_patcher.hpp"
 
 #include <libkern/c++/OSSerialize.h>
 #include <IOKit/IORegistryEntry.h>
@@ -33,7 +34,9 @@ namespace IOUtil {
 	 */
 	template <typename T>
 	bool getOSDataValue(IORegistryEntry *sect, const char *name, T &value) {
+		KernelPatcher::releaseMemoryLock();
 		auto obj = sect->getProperty(name);
+		KernelPatcher::obtainMemoryLock();
 		if (obj) {
 			auto data = OSDynamicCast(OSData, obj);
 			if (data && data->getLength() == sizeof(T)) {

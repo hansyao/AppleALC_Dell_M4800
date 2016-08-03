@@ -285,8 +285,10 @@ bool AlcEnabler::grabCodecs() {
 			sect = IOUtil::findEntryByPrefix(sect, ctlr->lookup->tree[i], gIOServicePlane,
 											 last ? [](IORegistryEntry *e) {
 				
+				KernelPatcher::releaseMemoryLock();
 				auto ven = e->getProperty("IOHDACodecVendorID");
 				auto rev = e->getProperty("IOHDACodecRevisionID");
+				KernelPatcher::obtainMemoryLock();
 				
 				if (!ven || !rev) {
 					DBGLOG("alc @ codec entry misses properties, skipping");
