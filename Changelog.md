@@ -4,6 +4,7 @@ AppleALC Changelog
 - Added ALC290 layout-id 28 for Dell Vostro 5480 by vusun123
 - Added ALC292 layout-id 28 for Lenovo T440 vusun123
 - Added a few more fixes to lock acquisition panic on 10.12 Beta
+- Fixed VT2020/2021 patches for 10.12 Beta by melxman
 
 #### v1.0.13
 - Improved workaround for 10.12 Beta issues
