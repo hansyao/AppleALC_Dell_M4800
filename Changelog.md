@@ -5,6 +5,7 @@ AppleALC Changelog
 - Added ALC292 layout-id 28 for Lenovo T440 vusun123
 - Added a few more fixes to lock acquisition panic on 10.12 Beta
 - Fixed VT2020/2021 patches for 10.12 Beta by melxman
+- Fixed Creative CA0132 patches for 10.12 by nmano
 
 #### v1.0.13
 - Improved workaround for 10.12 Beta issues
