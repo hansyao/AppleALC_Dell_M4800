@@ -6,6 +6,7 @@ AppleALC Changelog
 - Added a few more fixes to lock acquisition panic on 10.12 Beta
 - Fixed VT2020/2021 patches for 10.12 Beta by melxman
 - Fixed Creative CA0132 patches for 10.12 by nmano
+- Added revision-id 0x100002 for Conexant CX20590 
 
 #### v1.0.13
 - Improved workaround for 10.12 Beta issues

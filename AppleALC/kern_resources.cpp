@@ -18536,7 +18536,7 @@ static const KextPatch patches41[] {
 	{ { &kextList[2], patchBuf576, patchBuf577, 4, 2 }, 16, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf578, patchBuf579, 4, 2 }, 13, KernelPatcher::KernelAny },
 };
-static const uint32_t revisions23[] { 0x100003, };
+static const uint32_t revisions23[] { 0x100002, 0x100003, };
 static const uint8_t file203[] {
 	0x78, 0x9C, 0xED, 0x58, 0x5D, 0x6F, 0xDA, 0x30, 0x14, 0x7D, 0x86, 0x5F, 0x91, 0xE5, 0x1D, 0x0C, 0xEB, 0xA7, 0xA6, 0x34, 0x55, 0x21, 0x54, 0x45, 
 	0x02, 0x1A, 0xAD, 0x69, 0xA5, 0x3D, 0x7A, 0x89, 0xD7, 0x58, 0x4D, 0x6C, 0xCB, 0x71, 0x4A, 0xF9, 0xF7, 0x75, 0x80, 0x8C, 0xD8, 0x98, 0x41, 0xCB, 
@@ -19890,7 +19890,7 @@ CodecModInfo codecModConexant[] {
 	{ "CX20583", 0x5067, nullptr, 0, platforms39, 1, layouts39, 1, patches39, 6 },
 	{ "CX20585", 0x5069, nullptr, 0, platforms40, 1, layouts40, 1, patches40, 6 },
 	{ "CX20588", 0x506C, nullptr, 0, platforms41, 1, layouts41, 1, patches41, 6 },
-	{ "CX20590", 0x506E, revisions23, 1, platforms42, 2, layouts42, 2, patches42, 6 },
+	{ "CX20590", 0x506E, revisions23, 2, platforms42, 2, layouts42, 2, patches42, 6 },
 	{ "CX20724", 0x50F4, nullptr, 0, platforms43, 2, layouts43, 2, patches43, 6 },
 	{ "CX20751_2", 0x510F, revisions24, 1, platforms44, 2, layouts44, 2, patches44, 6 },
 	{ "CX20756", 0x5114, nullptr, 0, platforms45, 1, layouts45, 1, patches45, 6 },

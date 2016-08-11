@@ -2,18 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Vendor</key>
-	<string>Conexant</string>
+	<key>Author</key>
+	<string>usr-sse2</string>
 	<key>CodecID</key>
 	<integer>20590</integer>
 	<key>CodecName</key>
 	<string>CX20590</string>
-	<key>Revisions</key>
-	<array>
-		<integer>1048579</integer>
-	</array>
-	<key>Author</key>
-	<string>usr-sse2</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
@@ -134,5 +128,12 @@
 			<data>blDxFA==</data>
 		</dict>
 	</array>
+	<key>Revisions</key>
+	<array>
+		<integer>1048578</integer>
+		<integer>1048579</integer>
+	</array>
+	<key>Vendor</key>
+	<string>Conexant</string>
 </dict>
 </plist>
