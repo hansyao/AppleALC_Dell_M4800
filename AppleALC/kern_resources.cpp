@@ -16902,7 +16902,7 @@ CodecModInfo codecModRealtek[] {
 	{ "ALC288", 0x288, nullptr, 0, platforms15, 1, layouts15, 1, patches15, 7 },
 	{ "ALC290", 0x290, nullptr, 0, platforms16, 3, layouts16, 3, patches16, 7 },
 	{ "ALC292", 0x292, nullptr, 0, platforms17, 2, layouts17, 2, patches17, 8 },
-	{ "0x10ec0298 Rev:0x100103", 0x298, revisions8, 1, platforms18, 1, layouts18, 1, patches18, 7 },
+	{ "ALC298", 0x298, revisions8, 1, platforms18, 1, layouts18, 1, patches18, 7 },
 	{ "ALC662", 0x662, revisions9, 1, platforms19, 2, layouts19, 2, patches19, 7 },
 	{ "ALC663", 0x663, revisions10, 1, platforms20, 3, layouts20, 3, patches20, 8 },
 	{ "ALC665", 0x665, nullptr, 0, platforms21, 2, layouts21, 2, patches21, 8 },
@@ -17632,7 +17632,7 @@ static const KextPatch patches34[] {
 	{ { &kextList[2], patchBuf510, patchBuf511, 4, 2 }, KernelPatcher::KernelAny, KernelPatcher::KernelAny },
 };
 CodecModInfo codecModCirrusLogic[] {
-	{ "0x10134210 Rev:0x100101", 0x4210, revisions20, 1, platforms33, 1, layouts33, 1, patches33, 5 },
+	{ "CS4210", 0x4210, revisions20, 1, platforms33, 1, layouts33, 1, patches33, 5 },
 	{ "CS4213", 0x4213, revisions21, 1, platforms34, 1, layouts34, 1, patches34, 10 },
 };
 
