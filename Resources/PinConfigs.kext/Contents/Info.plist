@@ -1645,6 +1645,20 @@
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>351359086</integer>
+					<key>Comment</key>
+					<string>Custom for Dell Vostro 3x60 by vusun123</string>
+					<key>ConfigData</key>
+					<data>AfccEAH3HQAB9x4XAfcfkQGnHDABpx0QAacegQGnHwkBlxxAAZcdEAGXHiEBlx8AAjccIAI3HQECNx6nAjcfkAG3DAIB1wwC</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Mirone - Conexant CX20724</string>
 					<key>CodecID</key>

@@ -9,6 +9,7 @@ AppleALC Changelog
 - Added revision-id 0x100002 for Conexant CX20590 
 - Added ALC233 layout-id 12 for Asus X550LC
 - Added revision-id into ALC233 info.plist
+- Added CX20590 layout-id 28 for Dell Vostro 3x60 by vusun123
 
 #### v1.0.13
 - Improved workaround for 10.12 Beta issues
