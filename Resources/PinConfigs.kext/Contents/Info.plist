@@ -1826,6 +1826,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>RehabMan - IDT 92HD81B1X5</string>
+					<key>CodecID</key>
+					<integer>287143429</integer>
+					<key>ConfigData</key>
+					<data>AMcegQDHHwMBFx6gARcfkA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - IDT 92HD75B2X5</string>
 					<key>CodecID</key>
 					<integer>287143432</integer>

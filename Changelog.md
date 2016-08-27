@@ -10,6 +10,7 @@ AppleALC Changelog
 - Added ALC233 layout-id 12 for Asus X550LC
 - Added revision-id into ALC233 info.plist
 - Added CX20590 layout-id 28 for Dell Vostro 3x60 by vusun123
+- Added IDT 92HD81B1X5 layout-id 12 for HP Elitebook 8460P by RehabMan
 
 #### v1.0.13
 - Improved workaround for 10.12 Beta issues
