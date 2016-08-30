@@ -11,6 +11,7 @@ AppleALC Changelog
 - Added revision-id into ALC233 info.plist
 - Added CX20590 layout-id 28 for Dell Vostro 3x60 by vusun123
 - Added IDT 92HD81B1X5 layout-id 12 for HP Elitebook 8460P by RehabMan
+- Added IDT 92HD81B1C5 codec support layout-id 3 by Mirone
 
 #### v1.0.13
 - Improved workaround for 10.12 Beta issues
