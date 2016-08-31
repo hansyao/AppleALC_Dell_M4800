@@ -14,6 +14,7 @@ AppleALC Changelog
 - Added IDT 92HD81B1C5 codec support layout-id 3 by Mirone
 - Added ALC298 layout-id 3 with ComboJack by Mirone
 - Added ALC233/3236 layout-id 5 by Mirone
+- Added ALC1150 layout-id's 1, 2, 3 by Toleda
 
 #### v1.0.13
 - Improved workaround for 10.12 Beta issues
