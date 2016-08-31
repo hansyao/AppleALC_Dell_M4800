@@ -30,6 +30,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Mirone Laptop Patch ALC3236</string>
+				<key>Id</key>
+				<integer>5</integer>
+				<key>Path</key>
+				<string>layout5.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Custom ALC233 for Asus X550LC</string>
 				<key>Id</key>
 				<integer>12</integer>
@@ -54,6 +62,14 @@
 				<integer>4</integer>
 				<key>Path</key>
 				<string>Platforms4.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Mirone Laptop Patch ALC3236</string>
+				<key>Id</key>
+				<integer>5</integer>
+				<key>Path</key>
+				<string>Platforms5.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
