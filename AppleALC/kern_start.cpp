@@ -41,7 +41,7 @@ bool Configuration::getBootArguments() {
 	isDisabled = false;
 	char buf[16];
 	
-	bool compatible = KernelPatcher::compatibleKernel(12, 15);
+	bool compatible = KernelPatcher::compatibleKernel(KernelVersion::MountainLion, KernelVersion::Sierra);
 	if (!compatible) {
 		if (PE_parse_boot_argn(bootargBeta, buf, sizeof(buf))) {
 			SYSLOG("init @ force enabling on an unsupported operating system");
