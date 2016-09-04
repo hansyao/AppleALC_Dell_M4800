@@ -2,6 +2,7 @@ AppleALC Changelog
 ==================
 #### v1.0.15
 - Added macOS 10.12 to the list of supported systems
+- Added ALC262 codec support layout-id 11 by MacPeet
 
 #### v1.0.14
 - Added ALC290 layout-id 28 for Dell Vostro 5480 by vusun123
