@@ -2363,6 +2363,26 @@
 					<data>
 					AwAAAA==
 					</data>
+					<key>Codec</key>
+					<string>InsanelyDeepak - Realtek ALC898 for MSI GS40</string>
+					<key>CodecID</key>
+					<integer>283904153</integer>
+					<key>ConfigData</key>
+					<data>
+					AaccEAGnHQABpx4XAacfkAHnHCAB5x0QAece
+					RgHnHwEBhxwwAYcdEAGHHoEBhx8BASccQAEn
+					HQABJx6gAScfkA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
 					<key>CodecID</key>
 					<integer>283904256</integer>
 					<key>Comment</key>
