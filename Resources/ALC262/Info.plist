@@ -3,33 +3,33 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>InsanelyDeepak</string>
+	<string>MacPeet</string>
 	<key>CodecID</key>
-	<integer>16912</integer>
+	<integer>610</integer>
 	<key>CodecName</key>
-	<string>CS4210</string>
+	<string>ALC262</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
 		<array>
 			<dict>
+				<key>Comment</key>
+				<string>MacPeet - ALC262</string>
 				<key>Id</key>
-				<integer>13</integer>
+				<integer>11</integer>
 				<key>Path</key>
-				<string>layout13.xml.zlib</string>
-				<key>comment</key>
-				<string>InsanelyDeepak - Cirrus Logic CS4210</string>
+				<string>layout11.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
 			<dict>
+				<key>Comment</key>
+				<string>MacPeet - ALC262</string>
 				<key>Id</key>
-				<integer>13</integer>
+				<integer>11</integer>
 				<key>Path</key>
-				<string>PlatformsID.xml.zlib</string>
-				<key>comment</key>
-				<string>InsanelyDeepak - Cirrus Logic CS4210</string>
+				<string>Platforms11.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -79,19 +79,47 @@
 			<key>Find</key>
 			<data>hBnUEQ==</data>
 			<key>MinKernel</key>
+			<integer>12</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>YgLsEA==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>hQjsEA==</data>
+			<key>MinKernel</key>
 			<integer>13</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>EEITEA==</data>
+			<data>AAAAAA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
 			<data>gxnUEQ==</data>
+			<key>MaxKernel</key>
+			<integer>15</integer>
 			<key>MinKernel</key>
 			<integer>15</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>AAAAAA==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>hAjsEA==</data>
+			<key>MaxKernel</key>
+			<integer>14</integer>
+			<key>MinKernel</key>
+			<integer>12</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
@@ -100,9 +128,9 @@
 	</array>
 	<key>Revisions</key>
 	<array>
-		<integer>1048833</integer>
+		<integer>1049090</integer>
 	</array>
 	<key>Vendor</key>
-	<string>CirrusLogic</string>
+	<string>Realtek</string>
 </dict>
 </plist>

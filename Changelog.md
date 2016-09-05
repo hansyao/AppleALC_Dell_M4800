@@ -1,5 +1,9 @@
 AppleALC Changelog
 ==================
+#### v1.0.15
+- Added macOS 10.12 to the list of supported systems
+- Added ALC262 codec support layout-id 11 by MacPeet
+
 #### v1.0.14
 - Added ALC290 layout-id 28 for Dell Vostro 5480 by vusun123
 - Added ALC292 layout-id 28 for Lenovo T440 vusun123
@@ -9,6 +13,12 @@ AppleALC Changelog
 - Added revision-id 0x100002 for Conexant CX20590 
 - Added ALC233 layout-id 12 for Asus X550LC
 - Added revision-id into ALC233 info.plist
+- Added CX20590 layout-id 28 for Dell Vostro 3x60 by vusun123
+- Added IDT 92HD81B1X5 layout-id 12 for HP Elitebook 8460P by RehabMan
+- Added IDT 92HD81B1C5 codec support layout-id 3 by Mirone
+- Added ALC298 layout-id 3 with ComboJack by Mirone
+- Added ALC233/3236 layout-id 5 by Mirone
+- Added ALC1150 layout-id's 1, 2, 3 by Toleda
 
 #### v1.0.13
 - Improved workaround for 10.12 Beta issues

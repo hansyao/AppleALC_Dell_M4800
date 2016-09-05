@@ -3,33 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>InsanelyDeepak</string>
+	<string>Vandroiy</string>
 	<key>CodecID</key>
-	<integer>16912</integer>
+	<integer>30421</integer>
 	<key>CodecName</key>
-	<string>CS4210</string>
+	<string>IDT92HD81B1C5</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
 		<array>
 			<dict>
 				<key>Id</key>
-				<integer>13</integer>
+				<integer>3</integer>
 				<key>Path</key>
-				<string>layout13.xml.zlib</string>
-				<key>comment</key>
-				<string>InsanelyDeepak - Cirrus Logic CS4210</string>
+				<string>layout3.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
 			<dict>
 				<key>Id</key>
-				<integer>13</integer>
+				<integer>3</integer>
 				<key>Path</key>
-				<string>PlatformsID.xml.zlib</string>
-				<key>comment</key>
-				<string>InsanelyDeepak - Cirrus Logic CS4210</string>
+				<string>Platforms3.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -83,7 +79,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>EEITEA==</data>
+			<data>1XYdEQ==</data>
 		</dict>
 		<dict>
 			<key>Count</key>
@@ -92,17 +88,15 @@
 			<data>gxnUEQ==</data>
 			<key>MinKernel</key>
 			<integer>15</integer>
+			<key>MaxKernel</key>
+			<integer>15</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
 			<data>AAAAAA==</data>
 		</dict>
 	</array>
-	<key>Revisions</key>
-	<array>
-		<integer>1048833</integer>
-	</array>
 	<key>Vendor</key>
-	<string>CirrusLogic</string>
+	<string>IDT</string>
 </dict>
 </plist>

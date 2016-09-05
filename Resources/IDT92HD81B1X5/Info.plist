@@ -18,6 +18,14 @@
 				<key>Path</key>
 				<string>layout3.xml.zlib</string>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IDT 92HD81B1X5 by RehabMan</string>
+				<key>Id</key>
+				<integer>12</integer>
+				<key>Path</key>
+				<string>layout12.xml.zlib</string>
+			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
@@ -26,6 +34,14 @@
 				<integer>3</integer>
 				<key>Path</key>
 				<string>Platforms3.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IDT 92HD81B1X5 by RehabMan</string>
+				<key>Id</key>
+				<integer>12</integer>
+				<key>Path</key>
+				<string>Platforms12.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -80,18 +96,6 @@
 			<string>AppleHDA</string>
 			<key>Replace</key>
 			<data>BXYdEQ==</data>
-		</dict>
-		<dict>
-			<key>Count</key>
-			<integer>2</integer>
-			<key>Find</key>
-			<data>hBnUEQ==</data>
-			<key>MinKernel</key>
-			<integer>13</integer>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>AAAAAA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>

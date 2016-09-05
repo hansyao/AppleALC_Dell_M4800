@@ -2,22 +2,40 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Vendor</key>
-	<string>Realtek</string>
+	<key>Author</key>
+	<string>Vandroiy</string>
 	<key>CodecID</key>
 	<integer>2304</integer>
 	<key>CodecName</key>
 	<string>ALC1150</string>
-	<key>Revisions</key>
-	<array>
-		<integer>1048577</integer>
-	</array>
-	<key>Author</key>
-	<string>toleda</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Toleda - ALC1150</string>
+				<key>Id</key>
+				<integer>1</integer>
+				<key>Path</key>
+				<string>layout1.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Toleda - ALC1150</string>
+				<key>Id</key>
+				<integer>2</integer>
+				<key>Path</key>
+				<string>layout2.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Toleda - ALC1150</string>
+				<key>Id</key>
+				<integer>3</integer>
+				<key>Path</key>
+				<string>layout3.xml.zlib</string>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Mirone 3 ports (Pink, Green, Blue)</string>
@@ -45,6 +63,30 @@
 		</array>
 		<key>Platforms</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Toleda resources</string>
+				<key>Id</key>
+				<integer>1</integer>
+				<key>Path</key>
+				<string>PlatformsT.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Toleda resources</string>
+				<key>Id</key>
+				<integer>2</integer>
+				<key>Path</key>
+				<string>PlatformsT.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Toleda resources</string>
+				<key>Id</key>
+				<integer>3</integer>
+				<key>Path</key>
+				<string>PlatformsT.xml.zlib</string>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Mirone resources</string>
@@ -150,5 +192,11 @@
 			<data>AAAAAA==</data>
 		</dict>
 	</array>
+	<key>Revisions</key>
+	<array>
+		<integer>1048577</integer>
+	</array>
+	<key>Vendor</key>
+	<string>Realtek</string>
 </dict>
 </plist>
