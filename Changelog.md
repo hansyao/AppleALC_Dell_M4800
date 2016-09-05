@@ -3,6 +3,10 @@ AppleALC Changelog
 #### v1.0.15
 - Added macOS 10.12 to the list of supported systems
 - Added ALC262 codec support layout-id 11 by MacPeet
+- Added ALC898 layout-id 13 for MSI GS40 by InsanelyDeepak
+- Added ALC887 layout-id 18 by InsanelyDeepak
+- Several optimisations to ALC887 resources by InsanelyDeepak
+- Removed not working ALC887 layout-id 12 by InsanelyDeepak
 
 #### v1.0.14
 - Added ALC290 layout-id 28 for Dell Vostro 5480 by vusun123
