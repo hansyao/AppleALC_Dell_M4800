@@ -136,6 +136,10 @@
 			<data>AAAAAA==</data>
 		</dict>
 	</array>
+	<key>Revisions</key>
+	<array>
+		<integer>1048834</integer>
+	</array>
 	<key>Vendor</key>
 	<string>IDT</string>
 </dict>
