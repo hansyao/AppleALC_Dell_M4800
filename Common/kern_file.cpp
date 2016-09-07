@@ -45,16 +45,14 @@ uint8_t *FileIO::readFileToBuffer(const char *path, size_t &size) {
 
 
 int FileIO::readFileData(void *buffer, off_t off, size_t sz, vnode_t vnode, vfs_context_t ctxt) {
-	int error = 0;
-	
 	uio_t uio = uio_create(1, off, UIO_SYSSPACE, UIO_READ);
 	if (!uio) {
 		SYSLOG("file @ uio_create returned null!");
-		return error;
+		return EINVAL;
 	}
 	
 	// imitate the kernel and read a single page from the file
-	error = uio_addiov(uio, CAST_USER_ADDR_T(buffer), sz);
+	int error = uio_addiov(uio, CAST_USER_ADDR_T(buffer), sz);
 	if (error) {
 		SYSLOG("file @ uio_addiov returned error %d!", error);
 		return error;

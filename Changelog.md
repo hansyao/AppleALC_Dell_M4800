@@ -8,6 +8,7 @@ AppleALC Changelog
 - Several optimisations to ALC887 resources by InsanelyDeepak
 - Removed not working ALC887 layout-id 12 by InsanelyDeepak
 - Added revision-id in IDT 92HD91BXX info.plist
+- Fixed an undefined behaviour when failing to perform an i/o operation
 
 #### v1.0.14
 - Added ALC290 layout-id 28 for Dell Vostro 5480 by vusun123
