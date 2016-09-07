@@ -20,12 +20,15 @@ uint8_t *FileIO::readFileToBuffer(const char *path, size_t &size) {
 	if(!err) {
 		size = readFileSize(vnode, ctxt);
 		if(size > 0) {
-			buf = Buffer::create<uint8_t>(size);
+			buf = Buffer::create<uint8_t>(size+1);
 			if (buf) {
 				if (readFileData(buf, 0, size, vnode, ctxt)) {
 					SYSLOG("file @ failed to read %s file of %zu size", path, size);
 					Buffer::deleter(buf);
 					buf = nullptr;
+				} else {
+					// Guarantee null termination
+					buf[size] = 0x00;
 				}
 			} else {
 				SYSLOG("file @ failed to allocate memory for reading %s file of %zu size", path, size);
