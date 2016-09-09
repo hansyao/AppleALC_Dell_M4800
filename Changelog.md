@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.0.16
+- Fixed a rare lock acquisition issue on 10.12
+
 #### v1.0.15
 - Added macOS 10.12 to the list of supported systems
 - Added ALC262 codec support layout-id 11 by MacPeet

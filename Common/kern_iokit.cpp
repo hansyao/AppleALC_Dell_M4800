@@ -91,10 +91,11 @@ namespace IOUtil {
 			if (iterator) {
 				size_t len = strlen(prefix);
 				while (KernelPatcher::releaseMemoryLock(), (res = OSDynamicCast(IORegistryEntry, iterator->getNextObject())) != nullptr) {
+					const char *resname = res->getName();
 					KernelPatcher::obtainMemoryLock();
 					
-					//DBGLOG("ioutil @ iterating over %s", res->getName());
-					if (!strncmp(prefix, res->getName(), len)) {
+					//DBGLOG("ioutil @ iterating over %s", resname);
+					if (!strncmp(prefix, resname, len)) {
 						found = proc ? proc(res) : true;
 						if (found) {
 							if (bruteCount > 1)
