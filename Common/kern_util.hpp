@@ -241,6 +241,7 @@ public:
 			}
 			kern_os_free(ptr);
 			ptr = nullptr;
+			cnt = 0;
 		}
 	}
 };
