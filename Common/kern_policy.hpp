@@ -12,8 +12,11 @@
 #include <sys/proc.h>
 
 extern "C" {
+	#pragma clang diagnostic push
+	#pragma clang diagnostic ignored "-W#warnings"
 	#include <security/mac_framework.h>
 	#include <security/mac_policy.h>
+	#pragma clang diagnostic pop
 }
 
 #include "kern_util.hpp"

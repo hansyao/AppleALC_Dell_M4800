@@ -20,12 +20,15 @@ uint8_t *FileIO::readFileToBuffer(const char *path, size_t &size) {
 	if(!err) {
 		size = readFileSize(vnode, ctxt);
 		if(size > 0) {
-			buf = Buffer::create<uint8_t>(size);
+			buf = Buffer::create<uint8_t>(size+1);
 			if (buf) {
 				if (readFileData(buf, 0, size, vnode, ctxt)) {
 					SYSLOG("file @ failed to read %s file of %zu size", path, size);
 					Buffer::deleter(buf);
 					buf = nullptr;
+				} else {
+					// Guarantee null termination
+					buf[size] = 0x00;
 				}
 			} else {
 				SYSLOG("file @ failed to allocate memory for reading %s file of %zu size", path, size);
@@ -45,16 +48,14 @@ uint8_t *FileIO::readFileToBuffer(const char *path, size_t &size) {
 
 
 int FileIO::readFileData(void *buffer, off_t off, size_t sz, vnode_t vnode, vfs_context_t ctxt) {
-	int error = 0;
-	
 	uio_t uio = uio_create(1, off, UIO_SYSSPACE, UIO_READ);
 	if (!uio) {
 		SYSLOG("file @ uio_create returned null!");
-		return error;
+		return EINVAL;
 	}
 	
 	// imitate the kernel and read a single page from the file
-	error = uio_addiov(uio, CAST_USER_ADDR_T(buffer), sz);
+	int error = uio_addiov(uio, CAST_USER_ADDR_T(buffer), sz);
 	if (error) {
 		SYSLOG("file @ uio_addiov returned error %d!", error);
 		return error;
