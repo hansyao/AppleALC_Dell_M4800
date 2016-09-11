@@ -8,6 +8,7 @@ AppleALC Changelog
 - Added ALC898 layout-id 12 with adtodetect disabled by D-an-W
 - Deleted not working ALC233 layout-id 12
 - Added ALC233 layout-id 13 for Asus X550LC by InsanelyDeepak
+- Added ALC662 layout-id 11 for Lenovo ThinkCentre M8400t-N000 by Irving23
 
 #### v1.0.15
 - Added macOS 10.12 to the list of supported systems
