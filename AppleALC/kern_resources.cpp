@@ -17723,7 +17723,7 @@ static const CodecModInfo::File platforms33[] {
 	{ file190, 2101, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 2},
 	{ file190, 2101, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3},
 	{ file191, 4627, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 11},
-	{ file192, 1769, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 12},
+	{ file192, 1769, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 28},
 	{ file193, 4566, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 13},
 };
 static const uint8_t file194[] {
@@ -18227,7 +18227,7 @@ static const CodecModInfo::File layouts33[] {
 	{ file195, 1225, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 2 },
 	{ file196, 1159, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 	{ file197, 6257, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 11 },
-	{ file196, 1159, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 12 },
+	{ file196, 1159, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 28 },
 	{ file198, 1721, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 13 },
 };
 static const uint8_t patchBuf482[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };

@@ -48,7 +48,7 @@
 				<key>Comment</key>
 				<string>Custom - Realtek ALC898 (Autodetect disabled)</string>
 				<key>Id</key>
-				<integer>12</integer>
+				<integer>28</integer>
 				<key>Path</key>
 				<string>layout3.xml.zlib</string>
 			</dict>
@@ -99,9 +99,9 @@
 				<key>Comment</key>
 				<string>Custom - Realtek ALC898 (Autodetect disabled)</string>
 				<key>Id</key>
-				<integer>12</integer>
+				<integer>28</integer>
 				<key>Path</key>
-				<string>Platforms12.xml.zlib</string>
+				<string>Platforms28.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>

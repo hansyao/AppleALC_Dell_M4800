@@ -10,6 +10,7 @@ AppleALC Changelog
 - Added ALC233 layout-id 13 for Asus X550LC by InsanelyDeepak
 - Added ALC662 layout-id 11 for Lenovo ThinkCentre M8400t-N000 by Irving23
 - Fixed ALC255 macOS 10.12 compatibility issue
+- Changed ALC898 layout-id 12 to 28 due to compatibility issue
 
 #### v1.0.15
 - Added macOS 10.12 to the list of supported systems
