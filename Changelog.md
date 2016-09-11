@@ -5,7 +5,7 @@ AppleALC Changelog
 - Fixed a rare kernel panic on initialisation failure
 - Improved ALC887 layout-id 11, 13 by InsanelyDeepak
 - Added ALC269VC layout-id 33 for NP530U3C-A0F by BblDE3HAP
-- Added ALC898 layout-id 12 with adtodetect disabled by D-an-W
+- Added ALC898 layout-id 12 with autodetect disabled by D-an-W
 - Deleted not working ALC233 layout-id 12
 - Added ALC233 layout-id 13 for Asus X550LC by InsanelyDeepak
 - Added ALC662 layout-id 11 for Lenovo ThinkCentre M8400t-N000 by Irving23
