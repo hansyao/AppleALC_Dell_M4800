@@ -970,6 +970,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Custom ALC662 by Irving23 for Lenovo ThinkCentre M8400t-N000</string>
+					<key>CodecID</key>
+					<integer>283903586</integer>
+					<key>ConfigData</key>
+					<data>IUccECFHHUAhRx4RIUcfASGHHCAhhx2QIYceoCGHH5AhlxxgIZcdkCGXHqEhlx8CIaccQCGnHTAhpx6BIacfASG3HFAhtx1AIbceISG3HwIh5xwwIecdYSHnHksh5x8B</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - Realtek ALC663</string>
 					<key>CodecID</key>
 					<integer>283903587</integer>
