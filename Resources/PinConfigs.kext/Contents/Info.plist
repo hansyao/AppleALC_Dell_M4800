@@ -286,6 +286,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Realtek ALC255 for Lenovo B470 - vusun123</string>
+					<key>CodecID</key>
+					<integer>283902549</integer>
+					<key>ConfigData</key>
+					<data>ASccYAEnHQABJx6gAScfkAFHHCABRx0AAUceFwFHH5ABRwwCAhccMAIXHRACFx4hAhcfAQ==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Custom ALC260</string>
 					<key>CodecID</key>
 					<integer>283902560</integer>

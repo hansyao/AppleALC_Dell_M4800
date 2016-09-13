@@ -12,6 +12,7 @@ AppleALC Changelog
 - Fixed ALC255 macOS 10.12 compatibility issue
 - Changed ALC898 layout-id 12 to 28 due to compatibility issue
 - Fixed ALC275 macOS 10.12 compatibility issue
+- Added ALC255 layout-id 28 for Lenovo B470 by vusun123
 
 #### v1.0.15
 - Added macOS 10.12 to the list of supported systems
