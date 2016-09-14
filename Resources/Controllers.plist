@@ -4,6 +4,29 @@
 <array>
 	<dict>
 		<key>Device</key>
+		<integer>3844</integer>
+		<key>Name</key>
+		<string>Atom Z36xxx/Z37xxx Audio Controller</string>
+		<key>Patches</key>
+		<array>
+			<dict>
+				<key>Count</key>
+				<integer>4</integer>
+				<key>Find</key>
+				<data>Vjs=</data>
+				<key>MinKernel</key>
+				<integer>13</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>BA8=</data>
+			</dict>
+		</array>
+		<key>Vendor</key>
+		<string>Intel</string>
+	</dict>
+	<dict>
+		<key>Device</key>
 		<integer>36000</integer>
 		<key>Name</key>
 		<string>Z97 HDEF controller</string>
