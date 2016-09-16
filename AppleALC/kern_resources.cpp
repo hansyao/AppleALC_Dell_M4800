@@ -24831,7 +24831,7 @@ const size_t vendorModSize {10};
 
 // ControllerMod section
 
-static const uint8_t patchBuf840[] { 0x56, 0x3B, };
+static const uint8_t patchBuf840[] { 0x0C, 0x0C, };
 static const uint8_t patchBuf841[] { 0x04, 0x0F, };
 static const KextPatch patches64[] {
 	{ { &kextList[0], patchBuf840, patchBuf841, 2, 4 }, 13, KernelPatcher::KernelAny },
