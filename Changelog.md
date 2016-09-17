@@ -1,5 +1,10 @@
 AppleALC Changelog
 ==================
+#### v1.0.17
+- Added C610/X99 Audio Controller r1 support by masking to 8c20
+- Added C610/X99 Audio Controller r2 support by masking to 8c20
+- Disabled Z97 controller patching on 10.10 and newer because it is supported by default
+
 #### v1.0.16
 - Fixed a rare lock acquisition issue on 10.12
 - Fixed a rare kernel panic on initialisation failure
