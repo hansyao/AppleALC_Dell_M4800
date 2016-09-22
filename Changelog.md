@@ -6,6 +6,7 @@ AppleALC Changelog
 - Disabled Z97 controller patching on 10.10 and newer because it is supported by default
 - Fixed ALC272 macOS 10.12 compatibility issue
 - Fixed ALC885 and ALC888 macOS 10.12 compatibility issue
+- Added ALC888 revision-id 100302
 
 #### v1.0.16
 - Fixed a rare lock acquisition issue on 10.12
