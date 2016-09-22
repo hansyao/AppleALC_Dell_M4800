@@ -197,6 +197,7 @@
 		<integer>1048577</integer>
 		<integer>1048833</integer>
 		<integer>1049090</integer>
+		<integer>1049346</integer>
 	</array>
 	<key>Vendor</key>
 	<string>Realtek</string>
