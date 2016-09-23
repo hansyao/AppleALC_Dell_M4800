@@ -8,6 +8,7 @@ AppleALC Changelog
 - Fixed ALC885 and ALC888 macOS 10.12 compatibility issue
 - Added ALC888 revision-id 100302
 - Fixed CX20585 macOS 10.12 compatibility issue
+- Fixed CX20588, CX20590 and CX20724 macOS 10.12 compatibility issue
 
 #### v1.0.16
 - Fixed a rare lock acquisition issue on 10.12
