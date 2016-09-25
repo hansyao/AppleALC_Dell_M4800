@@ -115,6 +115,18 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
+			<data>hBnUEQ==</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>AAAAAA==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
 			<data>ihnUEQ==</data>
 			<key>MinKernel</key>
 			<integer>16</integer>
