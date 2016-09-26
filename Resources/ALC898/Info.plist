@@ -38,6 +38,22 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Mirone Resources ALC898</string>
+				<key>Id</key>
+				<integer>5</integer>
+				<key>Path</key>
+				<string>layout5.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Mirone Resources ALC898</string>
+				<key>Id</key>
+				<integer>7</integer>
+				<key>Path</key>
+				<string>layout7.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Ivring23 Resources</string>
 				<key>Id</key>
 				<integer>11</integer>
@@ -86,6 +102,22 @@
 				<integer>3</integer>
 				<key>Path</key>
 				<string>PlatformsT.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Mirone Resources ALC898</string>
+				<key>Id</key>
+				<integer>5</integer>
+				<key>Path</key>
+				<string>PlatformsM.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Mirone Resources ALC898</string>
+				<key>Id</key>
+				<integer>7</integer>
+				<key>Path</key>
+				<string>PlatformsM.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
