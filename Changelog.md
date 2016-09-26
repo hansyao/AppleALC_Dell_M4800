@@ -11,7 +11,8 @@ AppleALC Changelog
 - Fixed CX20588, CX20590 and CX20724 macOS 10.12 compatibility issue
 - Fixed CX20757 macOS 10.12 compatibility issue
 - Fixed rest of Conexant codecs for macOS 10.12 compatibility
-- Added missing zero patch in IDT 92HD81B1X5 info.plist 
+- Added missing zero patch in IDT 92HD81B1X5 info.plist
+- Added ALC892 layout-id 99 for DNS P150EM by Constanta
  
 #### v1.0.16
 - Fixed a rare lock acquisition issue on 10.12

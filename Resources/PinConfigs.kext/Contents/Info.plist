@@ -1556,6 +1556,18 @@
 				</dict>
 				<dict>
 					<key>CodecID</key>
+					<integer>283904146</integer>
+					<key>Comment</key>
+					<string>Custom ALC892 DNS P150EM by Constanta</string>
+					<key>ConfigData</key>
+					<data>AUccEAFHHUABRx4RAUcfAQGHHHABhx2QAYcegQGHHwEBlxxgAZcdAQGXHqABlx+QAaccgAGnHTABpx6BAacfAQG3HCABtx1AAbceIQG3HwEB5xyQAecd4AHnHkUB5x8B</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>99</integer>
+				</dict>
+				<dict>
+					<key>CodecID</key>
 					<integer>283904153</integer>
 					<key>Comment</key>
 					<string>ALC898, Toleda</string>
