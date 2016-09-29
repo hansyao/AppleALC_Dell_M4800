@@ -10,6 +10,7 @@
 
 #include <libkern/libkern.h>
 #include <mach/vm_prot.h>
+#include <IOKit/IOLib.h>
 
 extern bool debugEnabled;
 extern bool lowMemory;
@@ -18,13 +19,13 @@ extern bool lowMemory;
 #define Stringify(a) #a
 
 #ifndef SYSLOG
-#define SYSLOG(str, ...) printf( xStringify(PRODUCT_NAME) ": " str "\n", ## __VA_ARGS__)
+#define SYSLOG(str, ...) IOLog( xStringify(PRODUCT_NAME) ": " str "\n", ## __VA_ARGS__)
 
 #ifdef DEBUG
 #define DBGLOG(str, ...)													\
 	do {																	\
 		if (debugEnabled)													\
-			printf( xStringify(PRODUCT_NAME) ": (DEBUG) " str "\n", ## __VA_ARGS__);		\
+			IOLog( xStringify(PRODUCT_NAME) ": (DEBUG) " str "\n", ## __VA_ARGS__);		\
 	} while(0)
 #else
 #define DBGLOG(str, ...) do { } while(0)

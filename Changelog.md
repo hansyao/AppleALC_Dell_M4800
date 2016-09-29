@@ -14,6 +14,7 @@ AppleALC Changelog
 - Added missing zero patch in IDT 92HD81B1X5 info.plist
 - Added ALC892 layout-id 99 for DNS P150EM by Constanta
 - Added ALC898 layout-id 5 and 7 by Mirone
+- Changed logging to be done by IOLog since printf is broken on 10.12
  
 #### v1.0.16
 - Fixed a rare lock acquisition issue on 10.12

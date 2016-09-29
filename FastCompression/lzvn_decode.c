@@ -33,11 +33,12 @@
 #include <string.h>
 
 #include <libkern/OSByteOrder.h>
+#include <IOKit/IOLib.h>
 
 #define DEBUG_STATE_ENABLED		0
 
 #if DEBUG_STATE_ENABLED
-#define _LZVN_DEBUG_DUMP(x...)	printf(x)
+#define _LZVN_DEBUG_DUMP(x...)	IOLog(x)
 #else
 #define _LZVN_DEBUG_DUMP(x...)
 #endif
@@ -301,9 +302,7 @@ size_t lzvn_decode(void * decompressedData, size_t decompressedSize, void * comp
 						
 							jmpTo = LZVN_11;										// jmp	Llzvn_l11
 							break;
-#if DEBUG_STATE_ENABLED
-					default:printf("default() caseTableIndex[%d]\n", (uint8_t)caseTableIndex);
-#endif
+					default:_LZVN_DEBUG_DUMP("default() caseTableIndex[%d]\n", (uint8_t)caseTableIndex);
 				}																	// switch (caseTable[caseTableIndex])
 
 				break;
