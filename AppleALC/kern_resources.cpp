@@ -2939,8 +2939,6 @@ static const uint8_t patchBuf58[] { 0x62, 0x02, 0xEC, 0x10, };
 static const uint8_t patchBuf59[] { 0x00, 0x00, 0x00, 0x00, };
 static const uint8_t patchBuf60[] { 0x83, 0x19, 0xD4, 0x11, };
 static const uint8_t patchBuf61[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf62[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf63[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches3[] {
 	{ { &kextList[2], patchBuf44, patchBuf45, 8, 1 }, 13, 13 },
 	{ { &kextList[2], patchBuf46, patchBuf47, 8, 1 }, 14, KernelPatcher::KernelAny },
@@ -2951,7 +2949,6 @@ static const KextPatch patches3[] {
 	{ { &kextList[2], patchBuf56, patchBuf57, 4, 2 }, 13, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf58, patchBuf59, 4, 2 }, 13, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf60, patchBuf61, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf62, patchBuf63, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint8_t file28[] {
 	0x78, 0x9C, 0xED, 0x59, 0xDB, 0x4E, 0xE3, 0x30, 0x10, 0x7D, 0x6E, 0xBF, 0x22, 0x9B, 0xF7, 0xD6, 0xBD, 0x08, 0x09, 0xAD, 0x42, 0x10, 0x6D, 0x40, 
@@ -3624,34 +3621,34 @@ static const CodecModInfo::File layouts4[] {
 	{ file30, 2277, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 	{ file31, 4487, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 28 },
 };
-static const uint8_t patchBuf64[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf65[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf66[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf67[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf68[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf69[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf70[] { 0x61, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf62[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf63[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf64[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf65[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf66[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf67[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf68[] { 0x61, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf69[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf70[] { 0x84, 0x08, 0xEC, 0x10, };
 static const uint8_t patchBuf71[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf72[] { 0x84, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf72[] { 0x85, 0x08, 0xEC, 0x10, };
 static const uint8_t patchBuf73[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf74[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf75[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf76[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf77[] { 0x55, 0x02, 0xEC, 0x10, };
-static const uint8_t patchBuf78[] { 0x62, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf74[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf75[] { 0x55, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf76[] { 0x62, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf77[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf78[] { 0x83, 0x19, 0xD4, 0x11, };
 static const uint8_t patchBuf79[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf80[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf81[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches4[] {
-	{ { &kextList[2], patchBuf64, patchBuf65, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf66, patchBuf67, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf68, patchBuf69, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf62, patchBuf63, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf64, patchBuf65, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf66, patchBuf67, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf68, patchBuf69, 4, 2 }, 13, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf70, patchBuf71, 4, 2 }, 13, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf72, patchBuf73, 4, 2 }, 13, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf74, patchBuf75, 4, 2 }, 13, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf76, patchBuf77, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf78, patchBuf79, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf80, patchBuf81, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf78, patchBuf79, 4, 2 }, 15, 15 },
 };
 static const uint8_t file32[] {
 	0x78, 0x9C, 0xED, 0x9D, 0x5F, 0x53, 0x1B, 0x39, 0x16, 0xC5, 0x9F, 0xC9, 0xA7, 0x60, 0x79, 0x4F, 0x0C, 0x86, 0xC9, 0xC0, 0x16, 0x93, 0xA9, 0x49, 
@@ -3984,34 +3981,31 @@ static const uint8_t file33[] {
 static const CodecModInfo::File layouts5[] {
 	{ file33, 2347, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 12 },
 };
-static const uint8_t patchBuf82[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf83[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf84[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf85[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf86[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf87[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf88[] { 0x61, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf80[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf81[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf82[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf83[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf84[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf85[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf86[] { 0x61, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf87[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf88[] { 0x85, 0x08, 0xEC, 0x10, };
 static const uint8_t patchBuf89[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf90[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf91[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf92[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf93[] { 0x60, 0x02, 0xEC, 0x10, };
-static const uint8_t patchBuf94[] { 0x62, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf90[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf91[] { 0x60, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf92[] { 0x62, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf93[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf94[] { 0x83, 0x19, 0xD4, 0x11, };
 static const uint8_t patchBuf95[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf96[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf97[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf98[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf99[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches5[] {
-	{ { &kextList[2], patchBuf82, patchBuf83, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf84, patchBuf85, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf86, patchBuf87, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf80, patchBuf81, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf82, patchBuf83, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf84, patchBuf85, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf86, patchBuf87, 4, 2 }, 13, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf88, patchBuf89, 4, 2 }, 13, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf90, patchBuf91, 4, 2 }, 13, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf92, patchBuf93, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf94, patchBuf95, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf96, patchBuf97, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf98, patchBuf99, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf94, patchBuf95, 4, 2 }, 15, 15 },
 };
 static const uint32_t revisions3[] { 0x100202, };
 static const uint8_t file34[] {
@@ -4143,28 +4137,28 @@ static const uint8_t file35[] {
 static const CodecModInfo::File layouts6[] {
 	{ file35, 2286, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 11 },
 };
-static const uint8_t patchBuf100[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf101[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf102[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf103[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf104[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf105[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf106[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf107[] { 0x62, 0x02, 0xEC, 0x10, };
-static const uint8_t patchBuf108[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf96[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf97[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf98[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf99[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf100[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf101[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf102[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf103[] { 0x62, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf104[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf105[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf106[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf107[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf108[] { 0x84, 0x08, 0xEC, 0x10, };
 static const uint8_t patchBuf109[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf110[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf111[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf112[] { 0x84, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf113[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches6[] {
-	{ { &kextList[2], patchBuf100, patchBuf101, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf102, patchBuf103, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf104, patchBuf105, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf106, patchBuf107, 4, 2 }, 12, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf108, patchBuf109, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf110, patchBuf111, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf112, patchBuf113, 4, 2 }, 12, 14 },
+	{ { &kextList[2], patchBuf96, patchBuf97, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf98, patchBuf99, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf100, patchBuf101, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf102, patchBuf103, 4, 2 }, 12, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf104, patchBuf105, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf106, patchBuf107, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf108, patchBuf109, 4, 2 }, 12, 14 },
 };
 static const uint8_t file36[] {
 	0x78, 0x9C, 0xED, 0x58, 0x51, 0x4F, 0xDB, 0x30, 0x10, 0x7E, 0x6E, 0x7F, 0x45, 0x96, 0xF7, 0xD6, 0x6D, 0x60, 0x0C, 0x4D, 0x21, 0x88, 0x36, 0x4C, 
@@ -4250,28 +4244,28 @@ static const uint8_t file37[] {
 static const CodecModInfo::File layouts7[] {
 	{ file37, 1215, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 };
-static const uint8_t patchBuf114[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf115[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf116[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf117[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf118[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf119[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf120[] { 0x84, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf121[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf122[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf110[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf111[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf112[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf113[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf114[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf115[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf116[] { 0x84, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf117[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf118[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf119[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf120[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf121[] { 0x68, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf122[] { 0x83, 0x19, 0xD4, 0x11, };
 static const uint8_t patchBuf123[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf124[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf125[] { 0x68, 0x02, 0xEC, 0x10, };
-static const uint8_t patchBuf126[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf127[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches7[] {
-	{ { &kextList[2], patchBuf114, patchBuf115, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf116, patchBuf117, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf118, patchBuf119, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf110, patchBuf111, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf112, patchBuf113, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf114, patchBuf115, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf116, patchBuf117, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf118, patchBuf119, 4, 2 }, 13, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf120, patchBuf121, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf122, patchBuf123, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf124, patchBuf125, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf126, patchBuf127, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf122, patchBuf123, 4, 2 }, 15, 15 },
 };
 static const uint32_t revisions4[] { 0x100203, 0x100004, 0x100202, 0x100100, };
 static const uint8_t file38[] {
@@ -7166,28 +7160,28 @@ static const CodecModInfo::File layouts8[] {
 	{ file67, 3991, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 32 },
 	{ file68, 1772, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 33 },
 };
-static const uint8_t patchBuf128[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf129[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf130[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf131[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf132[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf133[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf134[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf135[] { 0x69, 0x02, 0xEC, 0x10, };
-static const uint8_t patchBuf136[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf124[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf125[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf126[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf127[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf128[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf129[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf130[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf131[] { 0x69, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf132[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf133[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf134[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf135[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf136[] { 0x84, 0x08, 0xEC, 0x10, };
 static const uint8_t patchBuf137[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf138[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf139[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf140[] { 0x84, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf141[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches8[] {
-	{ { &kextList[2], patchBuf128, patchBuf129, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf130, patchBuf131, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf132, patchBuf133, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf134, patchBuf135, 4, 2 }, 12, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf136, patchBuf137, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf138, patchBuf139, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf140, patchBuf141, 4, 2 }, 12, 14 },
+	{ { &kextList[2], patchBuf124, patchBuf125, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf126, patchBuf127, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf128, patchBuf129, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf130, patchBuf131, 4, 2 }, 12, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf132, patchBuf133, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf134, patchBuf135, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf136, patchBuf137, 4, 2 }, 12, 14 },
 };
 static const uint32_t revisions5[] { 0x100100, };
 static const uint8_t file69[] {
@@ -7587,31 +7581,31 @@ static const CodecModInfo::File layouts9[] {
 	{ file75, 2272, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 27 },
 	{ file76, 2216, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 28 },
 };
-static const uint8_t patchBuf142[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf143[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf144[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf145[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf146[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf147[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf148[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf149[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf150[] { 0x84, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf138[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf139[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf140[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf141[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf142[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf143[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf144[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf145[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf146[] { 0x84, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf147[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf148[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf149[] { 0x70, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf150[] { 0x83, 0x19, 0xD4, 0x11, };
 static const uint8_t patchBuf151[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf152[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf153[] { 0x70, 0x02, 0xEC, 0x10, };
-static const uint8_t patchBuf154[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf155[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf156[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf157[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf152[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf153[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches9[] {
-	{ { &kextList[2], patchBuf142, patchBuf143, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf144, patchBuf145, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf146, patchBuf147, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf138, patchBuf139, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf140, patchBuf141, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf142, patchBuf143, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf144, patchBuf145, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf146, patchBuf147, 4, 2 }, 13, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf148, patchBuf149, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf150, patchBuf151, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf152, patchBuf153, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf154, patchBuf155, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf156, patchBuf157, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf150, patchBuf151, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf152, patchBuf153, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint32_t revisions6[] { 0x100001, };
 static const uint8_t file77[] {
@@ -7698,28 +7692,28 @@ static const uint8_t file78[] {
 static const CodecModInfo::File layouts10[] {
 	{ file78, 1215, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 };
-static const uint8_t patchBuf158[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf159[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf160[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf161[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf162[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf163[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf164[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf165[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf166[] { 0x84, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf154[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf155[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf156[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf157[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf158[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf159[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf160[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf161[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf162[] { 0x84, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf163[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf164[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf165[] { 0x72, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf166[] { 0x83, 0x19, 0xD4, 0x11, };
 static const uint8_t patchBuf167[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf168[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf169[] { 0x72, 0x02, 0xEC, 0x10, };
-static const uint8_t patchBuf170[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf171[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches10[] {
-	{ { &kextList[2], patchBuf158, patchBuf159, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf160, patchBuf161, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf162, patchBuf163, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf154, patchBuf155, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf156, patchBuf157, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf158, patchBuf159, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf160, patchBuf161, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf162, patchBuf163, 4, 2 }, 13, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf164, patchBuf165, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf166, patchBuf167, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf168, patchBuf169, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf170, patchBuf171, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf166, patchBuf167, 4, 2 }, 15, 15 },
 };
 static const uint32_t revisions7[] { 0x100008, 0x100005, };
 static const uint8_t file79[] {
@@ -8433,25 +8427,25 @@ static const CodecModInfo::File layouts11[] {
 	{ file83, 2320, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 13 },
 	{ file84, 2376, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 28 },
 };
-static const uint8_t patchBuf172[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf173[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf174[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf175[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf176[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf177[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf178[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf168[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf169[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf170[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf171[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf172[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf173[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf174[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf175[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf176[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf177[] { 0x75, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf178[] { 0x83, 0x19, 0xD4, 0x11, };
 static const uint8_t patchBuf179[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf180[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf181[] { 0x75, 0x02, 0xEC, 0x10, };
-static const uint8_t patchBuf182[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf183[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches11[] {
-	{ { &kextList[2], patchBuf172, patchBuf173, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf174, patchBuf175, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf176, patchBuf177, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf178, patchBuf179, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf180, patchBuf181, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf182, patchBuf183, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf168, patchBuf169, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf170, patchBuf171, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf172, patchBuf173, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf174, patchBuf175, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf176, patchBuf177, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf178, patchBuf179, 4, 2 }, 15, 15 },
 };
 static const uint8_t file85[] {
 	0x78, 0x9C, 0xED, 0x59, 0xDF, 0x6F, 0x9B, 0x30, 0x10, 0x7E, 0x4E, 0xFE, 0x0A, 0xC6, 0x7B, 0xE2, 0x84, 0x6E, 0x53, 0x5A, 0x51, 0xAA, 0x26, 0x74, 
@@ -8881,31 +8875,28 @@ static const CodecModInfo::File layouts12[] {
 	{ file87, 1899, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 	{ file88, 1917, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 4 },
 };
-static const uint8_t patchBuf184[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf185[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf186[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf187[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf188[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf189[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf190[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf191[] { 0x80, 0x02, 0xEC, 0x10, };
-static const uint8_t patchBuf192[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf180[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf181[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf182[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf183[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf184[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf185[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf186[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf187[] { 0x80, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf188[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf189[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf190[] { 0x84, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf191[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf192[] { 0x83, 0x19, 0xD4, 0x11, };
 static const uint8_t patchBuf193[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf194[] { 0x84, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf195[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf196[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf197[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf198[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf199[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches12[] {
-	{ { &kextList[2], patchBuf184, patchBuf185, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf186, patchBuf187, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf188, patchBuf189, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf180, patchBuf181, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf182, patchBuf183, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf184, patchBuf185, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf186, patchBuf187, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf188, patchBuf189, 4, 2 }, 13, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf190, patchBuf191, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf192, patchBuf193, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf194, patchBuf195, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf196, patchBuf197, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf198, patchBuf199, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf192, patchBuf193, 4, 2 }, 15, 15 },
 };
 static const uint32_t revisions8[] { 0x100003, };
 static const uint8_t file89[] {
@@ -9830,28 +9821,28 @@ static const CodecModInfo::File layouts13[] {
 	{ file97, 1781, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 28 },
 	{ file98, 3726, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 86 },
 };
-static const uint8_t patchBuf200[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf201[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf202[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf203[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf204[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf205[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf206[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf207[] { 0x82, 0x02, 0xEC, 0x10, };
-static const uint8_t patchBuf208[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf209[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf210[] { 0x84, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf211[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf212[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf213[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf194[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf195[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf196[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf197[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf198[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf199[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf200[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf201[] { 0x82, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf202[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf203[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf204[] { 0x84, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf205[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf206[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf207[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches13[] {
-	{ { &kextList[2], patchBuf200, patchBuf201, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf202, patchBuf203, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf204, patchBuf205, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf206, patchBuf207, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf208, patchBuf209, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf210, patchBuf211, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf212, patchBuf213, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf194, patchBuf195, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf196, patchBuf197, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf198, patchBuf199, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf200, patchBuf201, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf202, patchBuf203, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf204, patchBuf205, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf206, patchBuf207, 4, 2 }, 15, 15 },
 };
 static const uint8_t file99[] {
 	0x78, 0x9C, 0xED, 0x58, 0x5B, 0x6F, 0xDA, 0x30, 0x14, 0x7E, 0x86, 0x5F, 0x91, 0xE6, 0x1D, 0xCC, 0x45, 0xD3, 0xD0, 0x94, 0xA6, 0x2A, 0xA4, 0xD3, 
@@ -10251,25 +10242,25 @@ static const CodecModInfo::File layouts14[] {
 	{ file101, 2133, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 	{ file102, 1899, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 11 },
 };
-static const uint8_t patchBuf214[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf215[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf216[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf217[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf218[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf219[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf220[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf221[] { 0x83, 0x02, 0xEC, 0x10, };
-static const uint8_t patchBuf222[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf223[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf224[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf225[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf208[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf209[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf210[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf211[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf212[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf213[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf214[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf215[] { 0x83, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf216[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf217[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf218[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf219[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches14[] {
-	{ { &kextList[2], patchBuf214, patchBuf215, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf216, patchBuf217, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf218, patchBuf219, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf220, patchBuf221, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf222, patchBuf223, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf224, patchBuf225, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf208, patchBuf209, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf210, patchBuf211, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf212, patchBuf213, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf214, patchBuf215, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf216, patchBuf217, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf218, patchBuf219, 4, 2 }, 15, 15 },
 };
 static const uint8_t file103[] {
 	0x78, 0x9C, 0xED, 0x59, 0xDF, 0x6F, 0x9B, 0x30, 0x10, 0x7E, 0x4E, 0xFE, 0x0A, 0xC6, 0x7B, 0xE2, 0x84, 0x6E, 0x52, 0x56, 0x51, 0xAA, 0x26, 0x74, 
@@ -10386,28 +10377,25 @@ static const uint8_t file104[] {
 static const CodecModInfo::File layouts15[] {
 	{ file104, 1929, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 };
-static const uint8_t patchBuf226[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf227[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf228[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf229[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf230[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf231[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf232[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf233[] { 0x84, 0x02, 0xEC, 0x10, };
-static const uint8_t patchBuf234[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf235[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf236[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf237[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf238[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf239[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf220[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf221[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf222[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf223[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf224[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf225[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf226[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf227[] { 0x84, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf228[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf229[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf230[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf231[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches15[] {
-	{ { &kextList[2], patchBuf226, patchBuf227, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf228, patchBuf229, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf230, patchBuf231, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf232, patchBuf233, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf234, patchBuf235, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf236, patchBuf237, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf238, patchBuf239, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf220, patchBuf221, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf222, patchBuf223, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf224, patchBuf225, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf226, patchBuf227, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf228, patchBuf229, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf230, patchBuf231, 4, 2 }, 15, 15 },
 };
 static const uint8_t file105[] {
 	0x78, 0x9C, 0xED, 0x59, 0xDF, 0x6F, 0x9B, 0x30, 0x10, 0x7E, 0x4E, 0xFE, 0x0A, 0xC6, 0x7B, 0xE2, 0x90, 0x6E, 0x52, 0x36, 0x51, 0xAA, 0x26, 0x74, 
@@ -10522,28 +10510,25 @@ static const uint8_t file106[] {
 static const CodecModInfo::File layouts16[] {
 	{ file106, 1908, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 };
-static const uint8_t patchBuf240[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf241[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf242[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf243[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf244[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf245[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf246[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf247[] { 0x88, 0x02, 0xEC, 0x10, };
-static const uint8_t patchBuf248[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf249[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf250[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf251[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf252[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf253[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf232[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf233[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf234[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf235[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf236[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf237[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf238[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf239[] { 0x88, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf240[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf241[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf242[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf243[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches16[] {
-	{ { &kextList[2], patchBuf240, patchBuf241, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf242, patchBuf243, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf244, patchBuf245, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf246, patchBuf247, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf248, patchBuf249, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf250, patchBuf251, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf252, patchBuf253, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf232, patchBuf233, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf234, patchBuf235, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf236, patchBuf237, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf238, patchBuf239, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf240, patchBuf241, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf242, patchBuf243, 4, 2 }, 15, 15 },
 };
 static const uint8_t file107[] {
 	0x78, 0x9C, 0xED, 0x58, 0x5B, 0x4F, 0xDB, 0x30, 0x14, 0x7E, 0x6E, 0x7F, 0x45, 0x96, 0xF7, 0xD6, 0x6D, 0x18, 0x13, 0x4C, 0x21, 0x08, 0x1A, 0x26, 
@@ -10916,28 +10901,25 @@ static const CodecModInfo::File layouts17[] {
 	{ file111, 2351, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 4 },
 	{ file112, 2162, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 28 },
 };
-static const uint8_t patchBuf254[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf255[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf256[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf257[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf258[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf259[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf260[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf261[] { 0x90, 0x02, 0xEC, 0x10, };
-static const uint8_t patchBuf262[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf263[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf264[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf265[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf266[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf267[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf244[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf245[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf246[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf247[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf248[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf249[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf250[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf251[] { 0x90, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf252[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf253[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf254[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf255[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches17[] {
-	{ { &kextList[2], patchBuf254, patchBuf255, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf256, patchBuf257, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf258, patchBuf259, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf260, patchBuf261, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf262, patchBuf263, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf264, patchBuf265, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf266, patchBuf267, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf244, patchBuf245, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf246, patchBuf247, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf248, patchBuf249, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf250, patchBuf251, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf252, patchBuf253, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf254, patchBuf255, 4, 2 }, 15, 15 },
 };
 static const uint8_t file113[] {
 	0x78, 0x9C, 0xED, 0x9D, 0x5B, 0x53, 0x1B, 0x49, 0x12, 0x85, 0x9F, 0xF1, 0xAF, 0x60, 0x79, 0xB7, 0x65, 0x04, 0xF6, 0xC0, 0x06, 0xE3, 0x89, 0xB1, 
@@ -11425,31 +11407,28 @@ static const CodecModInfo::File layouts18[] {
 	{ file115, 1896, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 12 },
 	{ file116, 4491, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 28 },
 };
-static const uint8_t patchBuf268[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf269[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf270[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf271[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf272[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf273[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf274[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf275[] { 0x92, 0x02, 0xEC, 0x10, };
-static const uint8_t patchBuf276[] { 0x84, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf277[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf278[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf279[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf280[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf281[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf282[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf283[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf256[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf257[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf258[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf259[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf260[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf261[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf262[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf263[] { 0x92, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf264[] { 0x84, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf265[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf266[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf267[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf268[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf269[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches18[] {
-	{ { &kextList[2], patchBuf268, patchBuf269, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf270, patchBuf271, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf272, patchBuf273, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf274, patchBuf275, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf276, patchBuf277, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf278, patchBuf279, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf280, patchBuf281, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf282, patchBuf283, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf256, patchBuf257, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf258, patchBuf259, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf260, patchBuf261, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf262, patchBuf263, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf264, patchBuf265, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf266, patchBuf267, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf268, patchBuf269, 4, 2 }, 15, 15 },
 };
 static const uint32_t revisions9[] { 0x100103, };
 static const uint8_t file117[] {
@@ -11692,28 +11671,28 @@ static const CodecModInfo::File layouts19[] {
 	{ file119, 2127, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 	{ file120, 2101, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 13 },
 };
-static const uint8_t patchBuf284[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf285[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf286[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf287[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf288[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf289[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf290[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf291[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf292[] { 0x84, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf293[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf294[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf295[] { 0x98, 0x02, 0xEC, 0x10, };
-static const uint8_t patchBuf296[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf297[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf270[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf271[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf272[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf273[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf274[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf275[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf276[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf277[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf278[] { 0x84, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf279[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf280[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf281[] { 0x98, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf282[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf283[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches19[] {
-	{ { &kextList[2], patchBuf284, patchBuf285, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf286, patchBuf287, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf288, patchBuf289, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf290, patchBuf291, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf292, patchBuf293, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf294, patchBuf295, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf296, patchBuf297, 4, 2 }, 15, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf270, patchBuf271, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf272, patchBuf273, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf274, patchBuf275, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf276, patchBuf277, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf278, patchBuf279, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf280, patchBuf281, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf282, patchBuf283, 4, 2 }, 15, KernelPatcher::KernelAny },
 };
 static const uint32_t revisions10[] { 0x100101, 0x100300, };
 static const uint8_t file121[] {
@@ -12136,28 +12115,28 @@ static const CodecModInfo::File layouts20[] {
 	{ file124, 1097, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 7 },
 	{ file125, 1079, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 11 },
 };
-static const uint8_t patchBuf298[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf299[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf300[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf301[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf302[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf303[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf304[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf305[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf306[] { 0x84, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf307[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf308[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf309[] { 0x62, 0x06, 0xEC, 0x10, };
-static const uint8_t patchBuf310[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf311[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf284[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf285[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf286[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf287[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf288[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf289[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf290[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf291[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf292[] { 0x84, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf293[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf294[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf295[] { 0x62, 0x06, 0xEC, 0x10, };
+static const uint8_t patchBuf296[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf297[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches20[] {
-	{ { &kextList[2], patchBuf298, patchBuf299, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf300, patchBuf301, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf302, patchBuf303, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf304, patchBuf305, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf306, patchBuf307, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf308, patchBuf309, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf310, patchBuf311, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf284, patchBuf285, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf286, patchBuf287, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf288, patchBuf289, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf290, patchBuf291, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf292, patchBuf293, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf294, patchBuf295, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf296, patchBuf297, 4, 2 }, 15, 15 },
 };
 static const uint32_t revisions11[] { 0x100002, };
 static const uint8_t file126[] {
@@ -12510,31 +12489,31 @@ static const CodecModInfo::File layouts21[] {
 	{ file130, 1900, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 4 },
 	{ file131, 2250, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 28 },
 };
-static const uint8_t patchBuf312[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf313[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf314[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf315[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf316[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf317[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf318[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf319[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf320[] { 0x84, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf321[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf322[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf323[] { 0x63, 0x06, 0xEC, 0x10, };
-static const uint8_t patchBuf324[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf325[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf326[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf327[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf298[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf299[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf300[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf301[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf302[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf303[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf304[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf305[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf306[] { 0x84, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf307[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf308[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf309[] { 0x63, 0x06, 0xEC, 0x10, };
+static const uint8_t patchBuf310[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf311[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf312[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf313[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches21[] {
-	{ { &kextList[2], patchBuf312, patchBuf313, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf314, patchBuf315, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf316, patchBuf317, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf318, patchBuf319, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf320, patchBuf321, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf322, patchBuf323, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf324, patchBuf325, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf326, patchBuf327, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf298, patchBuf299, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf300, patchBuf301, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf302, patchBuf303, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf304, patchBuf305, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf306, patchBuf307, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf308, patchBuf309, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf310, patchBuf311, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf312, patchBuf313, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint8_t file132[] {
 	0x78, 0x9C, 0xED, 0x5D, 0x59, 0x73, 0xDA, 0xCA, 0x12, 0x7E, 0xCE, 0xF9, 0x15, 0xBE, 0x79, 0x75, 0xE5, 0xA0, 0x7D, 0xB9, 0x95, 0x93, 0x5B, 0xF6, 
@@ -13094,31 +13073,31 @@ static const CodecModInfo::File layouts22[] {
 	{ file133, 4490, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 12 },
 	{ file134, 4490, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 13 },
 };
-static const uint8_t patchBuf328[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf329[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf330[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf331[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf332[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf333[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf334[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf335[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf336[] { 0x84, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf337[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf338[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf339[] { 0x65, 0x06, 0xEC, 0x10, };
-static const uint8_t patchBuf340[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf341[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf342[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf343[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf314[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf315[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf316[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf317[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf318[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf319[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf320[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf321[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf322[] { 0x84, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf323[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf324[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf325[] { 0x65, 0x06, 0xEC, 0x10, };
+static const uint8_t patchBuf326[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf327[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf328[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf329[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches22[] {
-	{ { &kextList[2], patchBuf328, patchBuf329, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf330, patchBuf331, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf332, patchBuf333, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf334, patchBuf335, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf336, patchBuf337, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf338, patchBuf339, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf340, patchBuf341, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf342, patchBuf343, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf314, patchBuf315, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf316, patchBuf317, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf318, patchBuf319, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf320, patchBuf321, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf322, patchBuf323, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf324, patchBuf325, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf326, patchBuf327, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf328, patchBuf329, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint32_t revisions12[] { 0x100003, };
 static const uint8_t file135[] {
@@ -14319,31 +14298,31 @@ static const CodecModInfo::File layouts23[] {
 	{ file143, 1863, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 28 },
 	{ file144, 1838, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 29 },
 };
-static const uint8_t patchBuf344[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf345[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf346[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf347[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf348[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf349[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf350[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf351[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf352[] { 0x84, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf353[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf354[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf355[] { 0x68, 0x06, 0xEC, 0x10, };
-static const uint8_t patchBuf356[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf357[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf358[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf359[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf330[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf331[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf332[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf333[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf334[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf335[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf336[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf337[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf338[] { 0x84, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf339[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf340[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf341[] { 0x68, 0x06, 0xEC, 0x10, };
+static const uint8_t patchBuf342[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf343[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf344[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf345[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches23[] {
-	{ { &kextList[2], patchBuf344, patchBuf345, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf346, patchBuf347, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf348, patchBuf349, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf350, patchBuf351, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf352, patchBuf353, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf354, patchBuf355, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf356, patchBuf357, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf358, patchBuf359, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf330, patchBuf331, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf332, patchBuf333, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf334, patchBuf335, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf336, patchBuf337, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf338, patchBuf339, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf340, patchBuf341, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf342, patchBuf343, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf344, patchBuf345, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint8_t file145[] {
 	0x78, 0x9C, 0xED, 0x59, 0x5B, 0x6F, 0x9B, 0x30, 0x14, 0x7E, 0x4E, 0x7E, 0x05, 0xE5, 0x3D, 0x71, 0x92, 0xEE, 0xD2, 0x4D, 0x94, 0xAA, 0x09, 0x9D, 
@@ -14474,31 +14453,31 @@ static const uint8_t file146[] {
 static const CodecModInfo::File layouts24[] {
 	{ file146, 2277, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 12 },
 };
-static const uint8_t patchBuf360[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf361[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf362[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf363[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf364[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf365[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf366[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf367[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf368[] { 0x84, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf369[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf370[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf371[] { 0x70, 0x06, 0xEC, 0x10, };
-static const uint8_t patchBuf372[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf373[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf374[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf375[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf346[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf347[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf348[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf349[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf350[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf351[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf352[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf353[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf354[] { 0x84, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf355[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf356[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf357[] { 0x70, 0x06, 0xEC, 0x10, };
+static const uint8_t patchBuf358[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf359[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf360[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf361[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches24[] {
-	{ { &kextList[2], patchBuf360, patchBuf361, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf362, patchBuf363, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf364, patchBuf365, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf366, patchBuf367, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf368, patchBuf369, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf370, patchBuf371, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf372, patchBuf373, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf374, patchBuf375, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf346, patchBuf347, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf348, patchBuf349, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf350, patchBuf351, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf352, patchBuf353, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf354, patchBuf355, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf356, patchBuf357, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf358, patchBuf359, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf360, patchBuf361, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint8_t file147[] {
 	0x78, 0x9C, 0xED, 0x9D, 0x5B, 0x8F, 0x9A, 0x40, 0x14, 0xC7, 0x9F, 0xF5, 0x53, 0x50, 0xDE, 0x75, 0xBC, 0xF4, 0xB2, 0x6D, 0x58, 0x36, 0xAB, 0x6E, 
@@ -14642,28 +14621,28 @@ static const CodecModInfo::File layouts25[] {
 	{ file148, 1119, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 5 },
 	{ file149, 1119, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 7 },
 };
-static const uint8_t patchBuf376[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf377[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf378[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf379[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf380[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf381[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf382[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf383[] { 0x82, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf384[] { 0x84, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf385[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf386[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf387[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf388[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf389[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf362[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf363[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf364[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf365[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf366[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf367[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf368[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf369[] { 0x82, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf370[] { 0x84, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf371[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf372[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf373[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf374[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf375[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches25[] {
-	{ { &kextList[2], patchBuf376, patchBuf377, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf378, patchBuf379, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf380, patchBuf381, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf382, patchBuf383, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf384, patchBuf385, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf386, patchBuf387, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf388, patchBuf389, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf362, patchBuf363, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf364, patchBuf365, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf366, patchBuf367, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf368, patchBuf369, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf370, patchBuf371, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf372, patchBuf373, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf374, patchBuf375, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint32_t revisions13[] { 0x100002, };
 static const uint8_t file150[] {
@@ -14915,31 +14894,31 @@ static const uint8_t file151[] {
 static const CodecModInfo::File layouts26[] {
 	{ file151, 415, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 7 },
 };
-static const uint8_t patchBuf390[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf391[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf392[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf393[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf394[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf395[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf396[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf397[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf398[] { 0x84, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf399[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf400[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf401[] { 0x83, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf402[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf403[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf404[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf405[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf376[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf377[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf378[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf379[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf380[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf381[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf382[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf383[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf384[] { 0x84, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf385[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf386[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf387[] { 0x83, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf388[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf389[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf390[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf391[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches26[] {
-	{ { &kextList[2], patchBuf390, patchBuf391, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf392, patchBuf393, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf394, patchBuf395, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf396, patchBuf397, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf398, patchBuf399, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf400, patchBuf401, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf402, patchBuf403, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf404, patchBuf405, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf376, patchBuf377, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf378, patchBuf379, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf380, patchBuf381, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf382, patchBuf383, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf384, patchBuf385, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf386, patchBuf387, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf388, patchBuf389, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf390, patchBuf391, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint32_t revisions14[] { 0x100101, };
 static const uint8_t file152[] {
@@ -15284,25 +15263,25 @@ static const CodecModInfo::File layouts27[] {
 	{ file154, 1795, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 1 },
 	{ file155, 1795, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 12 },
 };
-static const uint8_t patchBuf406[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf407[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf408[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf409[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf410[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf411[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf412[] { 0x84, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf413[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf414[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf415[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf416[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf417[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf392[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf393[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf394[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf395[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf396[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf397[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf398[] { 0x84, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf399[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf400[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf401[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf402[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf403[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches27[] {
-	{ { &kextList[2], patchBuf406, patchBuf407, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf408, patchBuf409, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf410, patchBuf411, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf412, patchBuf413, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf414, patchBuf415, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf416, patchBuf417, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf392, patchBuf393, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf394, patchBuf395, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf396, patchBuf397, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf398, patchBuf399, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf400, patchBuf401, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf402, patchBuf403, 4, 2 }, 15, 15 },
 };
 static const uint32_t revisions15[] { 0x100302, };
 static const uint8_t file156[] {
@@ -16244,25 +16223,25 @@ static const CodecModInfo::File layouts28[] {
 	{ file168, 1393, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 18 },
 	{ file169, 1196, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 99 },
 };
-static const uint8_t patchBuf418[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf419[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf420[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf421[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf422[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf423[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf424[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf425[] { 0x87, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf426[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf427[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf428[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf429[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf404[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf405[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf406[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf407[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf408[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf409[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf410[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf411[] { 0x87, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf412[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf413[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf414[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf415[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches28[] {
-	{ { &kextList[2], patchBuf418, patchBuf419, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf420, patchBuf421, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf422, patchBuf423, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf424, patchBuf425, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf426, patchBuf427, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf428, patchBuf429, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf404, patchBuf405, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf406, patchBuf407, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf408, patchBuf409, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf410, patchBuf411, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf412, patchBuf413, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf414, patchBuf415, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint32_t revisions16[] { 0x100001, 0x100101, 0x100202, 0x100302, };
 static const uint8_t file170[] {
@@ -16754,25 +16733,25 @@ static const CodecModInfo::File layouts29[] {
 	{ file177, 1165, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 5 },
 	{ file178, 1168, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 7 },
 };
-static const uint8_t patchBuf430[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf431[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf432[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf433[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf434[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf435[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf436[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf437[] { 0x88, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf438[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf439[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf440[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf441[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf416[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf417[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf418[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf419[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf420[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf421[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf422[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf423[] { 0x88, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf424[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf425[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf426[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf427[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches29[] {
-	{ { &kextList[2], patchBuf430, patchBuf431, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf432, patchBuf433, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf434, patchBuf435, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf436, patchBuf437, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf438, patchBuf439, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf440, patchBuf441, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf416, patchBuf417, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf418, patchBuf419, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf420, patchBuf421, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf422, patchBuf423, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf424, patchBuf425, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf426, patchBuf427, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint32_t revisions17[] { 0x100004, };
 static const uint8_t file179[] {
@@ -16975,25 +16954,25 @@ static const CodecModInfo::File layouts30[] {
 	{ file181, 1159, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 1 },
 	{ file182, 551, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 12 },
 };
-static const uint8_t patchBuf442[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf443[] { 0x89, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf444[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf445[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf446[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf447[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf448[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf449[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf450[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf451[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf452[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf453[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf428[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf429[] { 0x89, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf430[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf431[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf432[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf433[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf434[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf435[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf436[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf437[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf438[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf439[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
 static const KextPatch patches30[] {
-	{ { &kextList[2], patchBuf442, patchBuf443, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf444, patchBuf445, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf446, patchBuf447, 4, 2 }, 16, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf448, patchBuf449, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf450, patchBuf451, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf452, patchBuf453, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf428, patchBuf429, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf430, patchBuf431, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf432, patchBuf433, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf434, patchBuf435, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf436, patchBuf437, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf438, patchBuf439, 8, 1 }, 13, 13 },
 };
 static const uint32_t revisions18[] { 0x100002, };
 static const uint8_t file183[] {
@@ -17259,25 +17238,25 @@ static const uint8_t file184[] {
 static const CodecModInfo::File layouts31[] {
 	{ file184, 1418, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 13 },
 };
-static const uint8_t patchBuf454[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf455[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf456[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf457[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf458[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf459[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf460[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf461[] { 0x67, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf462[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf463[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf464[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf465[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf440[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf441[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf442[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf443[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf444[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf445[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf446[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf447[] { 0x67, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf448[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf449[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf450[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf451[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches31[] {
-	{ { &kextList[2], patchBuf454, patchBuf455, 8, 1 }, 12, 13 },
-	{ { &kextList[2], patchBuf456, patchBuf457, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf458, patchBuf459, 8, 1 }, 12, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf460, patchBuf461, 4, 2 }, 12, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf462, patchBuf463, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf464, patchBuf465, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf440, patchBuf441, 8, 1 }, 12, 13 },
+	{ { &kextList[2], patchBuf442, patchBuf443, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf444, patchBuf445, 8, 1 }, 12, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf446, patchBuf447, 4, 2 }, 12, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf448, patchBuf449, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf450, patchBuf451, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint32_t revisions19[] { 0x100302, };
 static const uint8_t file185[] {
@@ -17880,28 +17859,28 @@ static const CodecModInfo::File layouts32[] {
 	{ file194, 1119, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 7 },
 	{ file195, 1121, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 99 },
 };
-static const uint8_t patchBuf466[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf467[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf468[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf469[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf470[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf471[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf472[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf473[] { 0x92, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf474[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf475[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf476[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf477[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf478[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf479[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf452[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf453[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf454[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf455[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf456[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf457[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf458[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf459[] { 0x92, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf460[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf461[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf462[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf463[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf464[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf465[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches32[] {
-	{ { &kextList[2], patchBuf466, patchBuf467, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf468, patchBuf469, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf470, patchBuf471, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf472, patchBuf473, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf474, patchBuf475, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf476, patchBuf477, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf478, patchBuf479, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf452, patchBuf453, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf454, patchBuf455, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf456, patchBuf457, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf458, patchBuf459, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf460, patchBuf461, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf462, patchBuf463, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf464, patchBuf465, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint32_t revisions20[] { 0x100003, };
 static const uint8_t file196[] {
@@ -19118,45 +19097,45 @@ static const CodecModInfo::File layouts33[] {
 	{ file203, 1159, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 28 },
 	{ file207, 1721, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 13 },
 };
-static const uint8_t patchBuf480[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf481[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf482[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf483[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf484[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf485[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf486[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf487[] { 0x99, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf488[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf489[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf490[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf491[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf466[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf467[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf468[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf469[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf470[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf471[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf472[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf473[] { 0x99, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf474[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf475[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf476[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf477[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches33[] {
-	{ { &kextList[2], patchBuf480, patchBuf481, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf482, patchBuf483, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf484, patchBuf485, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf486, patchBuf487, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf488, patchBuf489, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf490, patchBuf491, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf466, patchBuf467, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf468, patchBuf469, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf470, patchBuf471, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf472, patchBuf473, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf474, patchBuf475, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf476, patchBuf477, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 CodecModInfo codecModRealtek[] {
 	{ "ALC1150", 0x900, revisions1, 1, platforms1, 6, layouts1, 6, patches1, 6 },
 	{ "ALC233", 0x233, revisions2, 1, platforms2, 5, layouts2, 5, patches2, 9 },
-	{ "ALC235", 0x235, nullptr, 0, platforms3, 1, layouts3, 1, patches3, 10 },
+	{ "ALC235", 0x235, nullptr, 0, platforms3, 1, layouts3, 1, patches3, 9 },
 	{ "ALC255", 0x255, nullptr, 0, platforms4, 2, layouts4, 2, patches4, 9 },
-	{ "ALC260", 0x260, nullptr, 0, platforms5, 1, layouts5, 1, patches5, 9 },
+	{ "ALC260", 0x260, nullptr, 0, platforms5, 1, layouts5, 1, patches5, 8 },
 	{ "ALC262", 0x262, revisions3, 1, platforms6, 1, layouts6, 1, patches6, 7 },
 	{ "ALC268", 0x268, nullptr, 0, platforms7, 1, layouts7, 1, patches7, 7 },
 	{ "ALC269", 0x269, revisions4, 4, platforms8, 17, layouts8, 17, patches8, 7 },
 	{ "ALC270", 0x270, revisions5, 1, platforms9, 4, layouts9, 4, patches9, 8 },
 	{ "ALC272", 0x272, revisions6, 1, platforms10, 1, layouts10, 1, patches10, 7 },
 	{ "ALC275", 0x275, revisions7, 2, platforms11, 3, layouts11, 3, patches11, 6 },
-	{ "ALC280", 0x280, nullptr, 0, platforms12, 2, layouts12, 2, patches12, 8 },
+	{ "ALC280", 0x280, nullptr, 0, platforms12, 2, layouts12, 2, patches12, 7 },
 	{ "ALC282", 0x282, revisions8, 1, platforms13, 5, layouts13, 5, patches13, 7 },
 	{ "ALC283", 0x283, nullptr, 0, platforms14, 2, layouts14, 2, patches14, 6 },
-	{ "ALC284", 0x284, nullptr, 0, platforms15, 1, layouts15, 1, patches15, 7 },
-	{ "ALC288", 0x288, nullptr, 0, platforms16, 1, layouts16, 1, patches16, 7 },
-	{ "ALC290", 0x290, nullptr, 0, platforms17, 3, layouts17, 3, patches17, 7 },
-	{ "ALC292", 0x292, nullptr, 0, platforms18, 2, layouts18, 2, patches18, 8 },
+	{ "ALC284", 0x284, nullptr, 0, platforms15, 1, layouts15, 1, patches15, 6 },
+	{ "ALC288", 0x288, nullptr, 0, platforms16, 1, layouts16, 1, patches16, 6 },
+	{ "ALC290", 0x290, nullptr, 0, platforms17, 3, layouts17, 3, patches17, 6 },
+	{ "ALC292", 0x292, nullptr, 0, platforms18, 2, layouts18, 2, patches18, 7 },
 	{ "ALC298", 0x298, revisions9, 1, platforms19, 2, layouts19, 2, patches19, 7 },
 	{ "ALC662", 0x662, revisions10, 2, platforms20, 3, layouts20, 3, patches20, 7 },
 	{ "ALC663", 0x663, revisions11, 1, platforms21, 3, layouts21, 3, patches21, 8 },
@@ -19432,22 +19411,22 @@ static const uint8_t file209[] {
 static const CodecModInfo::File layouts34[] {
 	{ file209, 1172, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 13 },
 };
-static const uint8_t patchBuf492[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf493[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf494[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf495[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf496[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf497[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf498[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf499[] { 0x10, 0x42, 0x13, 0x10, };
-static const uint8_t patchBuf500[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf501[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf478[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf479[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf480[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf481[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf482[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf483[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf484[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf485[] { 0x10, 0x42, 0x13, 0x10, };
+static const uint8_t patchBuf486[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf487[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches34[] {
-	{ { &kextList[2], patchBuf492, patchBuf493, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf494, patchBuf495, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf496, patchBuf497, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf498, patchBuf499, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf500, patchBuf501, 4, 2 }, 15, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf478, patchBuf479, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf480, patchBuf481, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf482, patchBuf483, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf484, patchBuf485, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf486, patchBuf487, 4, 2 }, 15, KernelPatcher::KernelAny },
 };
 static const uint32_t revisions22[] { 0x100100, };
 static const uint8_t file210[] {
@@ -19854,37 +19833,37 @@ static const uint8_t file211[] {
 static const CodecModInfo::File layouts35[] {
 	{ file211, 4488, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 28 },
 };
-static const uint8_t patchBuf502[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf503[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf504[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf505[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf506[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf507[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf508[] { 0x06, 0x00, 0xDE, 0x10, };
-static const uint8_t patchBuf509[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf510[] { 0x61, 0x02, 0xEC, 0x10, };
-static const uint8_t patchBuf511[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf512[] { 0x62, 0x02, 0xEC, 0x10, };
-static const uint8_t patchBuf513[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf514[] { 0x85, 0x08, 0xEC, 0x10, };
-static const uint8_t patchBuf515[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf516[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf517[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf518[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf519[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf520[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf521[] { 0x13, 0x42, 0x13, 0x10, };
+static const uint8_t patchBuf488[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf489[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf490[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf491[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf492[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf493[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf494[] { 0x06, 0x00, 0xDE, 0x10, };
+static const uint8_t patchBuf495[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf496[] { 0x61, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf497[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf498[] { 0x62, 0x02, 0xEC, 0x10, };
+static const uint8_t patchBuf499[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf500[] { 0x85, 0x08, 0xEC, 0x10, };
+static const uint8_t patchBuf501[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf502[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf503[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf504[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf505[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf506[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf507[] { 0x13, 0x42, 0x13, 0x10, };
 static const KextPatch patches35[] {
-	{ { &kextList[2], patchBuf502, patchBuf503, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf504, patchBuf505, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf506, patchBuf507, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf508, patchBuf509, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf510, patchBuf511, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf512, patchBuf513, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf514, patchBuf515, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf516, patchBuf517, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf518, patchBuf519, 4, 2 }, 16, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf520, patchBuf521, 4, 2 }, KernelPatcher::KernelAny, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf488, patchBuf489, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf490, patchBuf491, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf492, patchBuf493, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf494, patchBuf495, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf496, patchBuf497, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf498, patchBuf499, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf500, patchBuf501, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf502, patchBuf503, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf504, patchBuf505, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf506, patchBuf507, 4, 2 }, KernelPatcher::KernelAny, KernelPatcher::KernelAny },
 };
 CodecModInfo codecModCirrusLogic[] {
 	{ "CS4210", 0x4210, revisions21, 1, platforms34, 1, layouts34, 1, patches34, 5 },
@@ -20022,25 +20001,25 @@ static const uint8_t file213[] {
 static const CodecModInfo::File layouts36[] {
 	{ file213, 2269, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 11 },
 };
-static const uint8_t patchBuf522[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf523[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf524[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf525[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf526[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf527[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf528[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf529[] { 0x4A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf530[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf531[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf532[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf533[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf508[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf509[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf510[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf511[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf512[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf513[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf514[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf515[] { 0x4A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf516[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf517[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf518[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf519[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches36[] {
-	{ { &kextList[2], patchBuf522, patchBuf523, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf524, patchBuf525, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf526, patchBuf527, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf528, patchBuf529, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf530, patchBuf531, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf532, patchBuf533, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf508, patchBuf509, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf510, patchBuf511, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf512, patchBuf513, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf514, patchBuf515, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf516, patchBuf517, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf518, patchBuf519, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint8_t file214[] {
 	0x78, 0x9C, 0xED, 0x5D, 0x5D, 0x4F, 0xA3, 0x40, 0x14, 0x7D, 0xD6, 0x5F, 0xC1, 0xF2, 0x6E, 0x47, 0xEB, 0xC7, 0xEA, 0x06, 0x6B, 0x54, 0xDC, 0x6C, 
@@ -20349,13 +20328,13 @@ static const CodecModInfo::File layouts37[] {
 	{ file217, 1952, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 7 },
 	{ file218, 1175, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 12 },
 };
-static const uint8_t patchBuf534[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf535[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf536[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf537[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf520[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf521[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf522[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf523[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches37[] {
-	{ { &kextList[2], patchBuf534, patchBuf535, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf536, patchBuf537, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf520, patchBuf521, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf522, patchBuf523, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint8_t file219[] {
 	0x78, 0x9C, 0xED, 0x5D, 0x5D, 0x4F, 0xA3, 0x40, 0x14, 0x7D, 0xD6, 0x5F, 0xC1, 0xF2, 0x6E, 0x47, 0xEB, 0xC7, 0xEA, 0x06, 0x6B, 0x54, 0xDC, 0x6C, 
@@ -20578,16 +20557,16 @@ static const CodecModInfo::File layouts38[] {
 	{ file220, 1955, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 5 },
 	{ file221, 1955, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 7 },
 };
-static const uint8_t patchBuf538[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf539[] { 0x9B, 0x98, 0xD4, 0x11, };
-static const uint8_t patchBuf540[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf541[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf542[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf543[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf524[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf525[] { 0x9B, 0x98, 0xD4, 0x11, };
+static const uint8_t patchBuf526[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf527[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf528[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf529[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches38[] {
-	{ { &kextList[2], patchBuf538, patchBuf539, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf540, patchBuf541, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf542, patchBuf543, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf524, patchBuf525, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf526, patchBuf527, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf528, patchBuf529, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 CodecModInfo codecModAnalogDevices[] {
 	{ "AD1984A", 0x194A, revisions23, 1, platforms36, 1, layouts36, 1, patches36, 6 },
@@ -20729,25 +20708,25 @@ static const uint8_t file223[] {
 static const CodecModInfo::File layouts39[] {
 	{ file223, 2345, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 11 },
 };
-static const uint8_t patchBuf544[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf545[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf546[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf547[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf548[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf549[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf550[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf551[] { 0x51, 0x50, 0xF1, 0x14, };
-static const uint8_t patchBuf552[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf553[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf554[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf555[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf530[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf531[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf532[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf533[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf534[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf535[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf536[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf537[] { 0x51, 0x50, 0xF1, 0x14, };
+static const uint8_t patchBuf538[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf539[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf540[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf541[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches39[] {
-	{ { &kextList[2], patchBuf544, patchBuf545, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf546, patchBuf547, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf548, patchBuf549, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf550, patchBuf551, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf552, patchBuf553, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf554, patchBuf555, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf530, patchBuf531, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf532, patchBuf533, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf534, patchBuf535, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf536, patchBuf537, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf538, patchBuf539, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf540, patchBuf541, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint8_t file224[] {
 	0x78, 0x9C, 0xED, 0x5A, 0xD1, 0x72, 0xA2, 0x30, 0x14, 0x7D, 0xD6, 0xAF, 0x60, 0x79, 0xD7, 0x68, 0xD9, 0xEE, 0xDA, 0x1D, 0x4A, 0xA7, 0x8A, 0x9D, 
@@ -20854,22 +20833,22 @@ static const uint8_t file225[] {
 static const CodecModInfo::File layouts40[] {
 	{ file225, 1631, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 };
-static const uint8_t patchBuf556[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf557[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf558[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf559[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf560[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf561[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf562[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf563[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf564[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf565[] { 0x67, 0x50, 0xF1, 0x14, };
+static const uint8_t patchBuf542[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf543[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf544[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf545[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf546[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf547[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf548[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf549[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf550[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf551[] { 0x67, 0x50, 0xF1, 0x14, };
 static const KextPatch patches40[] {
-	{ { &kextList[2], patchBuf556, patchBuf557, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf558, patchBuf559, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf560, patchBuf561, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf562, patchBuf563, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf564, patchBuf565, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf542, patchBuf543, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf544, patchBuf545, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf546, patchBuf547, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf548, patchBuf549, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf550, patchBuf551, 4, 2 }, 13, KernelPatcher::KernelAny },
 };
 static const uint8_t file226[] {
 	0x78, 0x9C, 0xED, 0x58, 0x5B, 0x6F, 0xDA, 0x30, 0x14, 0x7E, 0x86, 0x5F, 0x91, 0xE5, 0x1D, 0x0C, 0x65, 0x97, 0xAA, 0x4A, 0x53, 0x15, 0x42, 0x35, 
@@ -20922,22 +20901,22 @@ static const uint8_t file227[] {
 static const CodecModInfo::File layouts41[] {
 	{ file227, 403, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 };
-static const uint8_t patchBuf566[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf567[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf568[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf569[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf570[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf571[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf572[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf573[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf574[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf575[] { 0x69, 0x50, 0xF1, 0x14, };
+static const uint8_t patchBuf552[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf553[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf554[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf555[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf556[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf557[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf558[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf559[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf560[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf561[] { 0x69, 0x50, 0xF1, 0x14, };
 static const KextPatch patches41[] {
-	{ { &kextList[2], patchBuf566, patchBuf567, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf568, patchBuf569, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf570, patchBuf571, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf572, patchBuf573, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf574, patchBuf575, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf552, patchBuf553, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf554, patchBuf555, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf556, patchBuf557, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf558, patchBuf559, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf560, patchBuf561, 4, 2 }, 13, KernelPatcher::KernelAny },
 };
 static const uint8_t file228[] {
 	0x78, 0x9C, 0xED, 0x58, 0x4D, 0x4F, 0xE3, 0x30, 0x10, 0x3D, 0xB7, 0xBF, 0x22, 0xE4, 0xDE, 0xBA, 0x05, 0xED, 0x82, 0x50, 0x08, 0xA2, 0x0D, 0xAB, 
@@ -21017,22 +20996,22 @@ static const uint8_t file229[] {
 static const CodecModInfo::File layouts42[] {
 	{ file229, 1085, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 };
-static const uint8_t patchBuf576[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf577[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf578[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf579[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf580[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf581[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf582[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf583[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf584[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf585[] { 0x6C, 0x50, 0xF1, 0x14, };
+static const uint8_t patchBuf562[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf563[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf564[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf565[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf566[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf567[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf568[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf569[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf570[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf571[] { 0x6C, 0x50, 0xF1, 0x14, };
 static const KextPatch patches42[] {
-	{ { &kextList[2], patchBuf576, patchBuf577, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf578, patchBuf579, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf580, patchBuf581, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf582, patchBuf583, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf584, patchBuf585, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf562, patchBuf563, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf564, patchBuf565, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf566, patchBuf567, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf568, patchBuf569, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf570, patchBuf571, 4, 2 }, 13, KernelPatcher::KernelAny },
 };
 static const uint32_t revisions25[] { 0x100002, 0x100003, };
 static const uint8_t file230[] {
@@ -21273,25 +21252,25 @@ static const CodecModInfo::File layouts43[] {
 	{ file234, 1199, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 12 },
 	{ file235, 1189, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 28 },
 };
-static const uint8_t patchBuf586[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf587[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf588[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf589[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf590[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf591[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf592[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf593[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf594[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf595[] { 0x6E, 0x50, 0xF1, 0x14, };
-static const uint8_t patchBuf596[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf597[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf572[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf573[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf574[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf575[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf576[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf577[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf578[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf579[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf580[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf581[] { 0x6E, 0x50, 0xF1, 0x14, };
+static const uint8_t patchBuf582[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf583[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches43[] {
-	{ { &kextList[2], patchBuf586, patchBuf587, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf588, patchBuf589, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf590, patchBuf591, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf592, patchBuf593, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf594, patchBuf595, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf596, patchBuf597, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf572, patchBuf573, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf574, patchBuf575, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf576, patchBuf577, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf578, patchBuf579, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf580, patchBuf581, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf582, patchBuf583, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint8_t file236[] {
 	0x78, 0x9C, 0xED, 0x9D, 0x5D, 0x53, 0x23, 0xB7, 0x12, 0x86, 0xAF, 0xC9, 0xAF, 0xE0, 0x70, 0x9F, 0x35, 0x5F, 0xD9, 0xC0, 0x29, 0xB2, 0xA9, 0xEC, 
@@ -21815,22 +21794,22 @@ static const CodecModInfo::File layouts44[] {
 	{ file238, 1188, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 	{ file239, 1172, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 13 },
 };
-static const uint8_t patchBuf598[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf599[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf600[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf601[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf602[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf603[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf604[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf605[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf606[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf607[] { 0xF4, 0x50, 0xF1, 0x14, };
+static const uint8_t patchBuf584[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf585[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf586[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf587[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf588[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf589[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf590[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf591[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf592[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf593[] { 0xF4, 0x50, 0xF1, 0x14, };
 static const KextPatch patches44[] {
-	{ { &kextList[2], patchBuf598, patchBuf599, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf600, patchBuf601, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf602, patchBuf603, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf604, patchBuf605, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf606, patchBuf607, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf584, patchBuf585, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf586, patchBuf587, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf588, patchBuf589, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf590, patchBuf591, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf592, patchBuf593, 4, 2 }, 13, KernelPatcher::KernelAny },
 };
 static const uint32_t revisions26[] { 0x100100, };
 static const uint8_t file240[] {
@@ -22293,25 +22272,25 @@ static const CodecModInfo::File layouts45[] {
 	{ file242, 353, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 	{ file243, 5179, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 28 },
 };
-static const uint8_t patchBuf608[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf609[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf610[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf611[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf612[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf613[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf614[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf615[] { 0x0F, 0x51, 0xF1, 0x14, };
-static const uint8_t patchBuf616[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf617[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf618[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf619[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf594[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf595[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf596[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf597[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf598[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf599[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf600[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf601[] { 0x0F, 0x51, 0xF1, 0x14, };
+static const uint8_t patchBuf602[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf603[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf604[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf605[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches45[] {
-	{ { &kextList[2], patchBuf608, patchBuf609, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf610, patchBuf611, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf612, patchBuf613, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf614, patchBuf615, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf616, patchBuf617, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf618, patchBuf619, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf594, patchBuf595, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf596, patchBuf597, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf598, patchBuf599, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf600, patchBuf601, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf602, patchBuf603, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf604, patchBuf605, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint8_t file244[] {
 	0x78, 0x9C, 0xED, 0x58, 0x5D, 0x4F, 0xDB, 0x30, 0x14, 0x7D, 0x6E, 0x7F, 0x45, 0xC8, 0x7B, 0xEB, 0xB6, 0x9B, 0x26, 0x40, 0x21, 0x88, 0x36, 0x45, 
@@ -22362,22 +22341,22 @@ static const uint8_t file245[] {
 static const CodecModInfo::File layouts46[] {
 	{ file245, 353, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 };
-static const uint8_t patchBuf620[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf621[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf622[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf623[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf624[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf625[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf626[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf627[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf628[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf629[] { 0x14, 0x51, 0xF1, 0x14, };
+static const uint8_t patchBuf606[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf607[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf608[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf609[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf610[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf611[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf612[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf613[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf614[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf615[] { 0x14, 0x51, 0xF1, 0x14, };
 static const KextPatch patches46[] {
-	{ { &kextList[2], patchBuf620, patchBuf621, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf622, patchBuf623, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf624, patchBuf625, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf626, patchBuf627, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf628, patchBuf629, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf606, patchBuf607, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf608, patchBuf609, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf610, patchBuf611, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf612, patchBuf613, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf614, patchBuf615, 4, 2 }, 13, KernelPatcher::KernelAny },
 };
 static const uint8_t file246[] {
 	0x78, 0x9C, 0xED, 0x58, 0x5D, 0x4F, 0xDB, 0x30, 0x14, 0x7D, 0x6E, 0x7F, 0x45, 0x96, 0xF7, 0xD6, 0x6D, 0x37, 0x4D, 0x80, 0x42, 0x10, 0x6D, 0x8A, 
@@ -22435,22 +22414,22 @@ static const uint8_t file247[] {
 static const CodecModInfo::File layouts47[] {
 	{ file247, 547, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 };
-static const uint8_t patchBuf630[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf631[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf632[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf633[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf634[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf635[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf636[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf637[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf638[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf639[] { 0x15, 0x51, 0xF1, 0x14, };
+static const uint8_t patchBuf616[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf617[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf618[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf619[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf620[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf621[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf622[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf623[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf624[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf625[] { 0x15, 0x51, 0xF1, 0x14, };
 static const KextPatch patches47[] {
-	{ { &kextList[2], patchBuf630, patchBuf631, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf632, patchBuf633, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf634, patchBuf635, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf636, patchBuf637, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf638, patchBuf639, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf616, patchBuf617, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf618, patchBuf619, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf620, patchBuf621, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf622, patchBuf623, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf624, patchBuf625, 4, 2 }, 13, KernelPatcher::KernelAny },
 };
 CodecModInfo codecModConexant[] {
 	{ "CX20561", 0x5051, revisions24, 1, platforms39, 1, layouts39, 1, patches39, 6 },
@@ -22518,16 +22497,16 @@ static const uint8_t file249[] {
 static const CodecModInfo::File layouts48[] {
 	{ file249, 368, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 };
-static const uint8_t patchBuf640[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf641[] { 0x46, 0x84, 0x06, 0x11, };
-static const uint8_t patchBuf642[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf643[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf644[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf645[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf626[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf627[] { 0x46, 0x84, 0x06, 0x11, };
+static const uint8_t patchBuf628[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf629[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf630[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf631[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches48[] {
-	{ { &kextList[2], patchBuf640, patchBuf641, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf642, patchBuf643, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf644, patchBuf645, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf626, patchBuf627, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf628, patchBuf629, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf630, patchBuf631, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint32_t revisions28[] { 0x100100, };
 static const uint8_t file250[] {
@@ -22609,19 +22588,19 @@ static const CodecModInfo::File layouts49[] {
 	{ file251, 349, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 5 },
 	{ file252, 347, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 7 },
 };
-static const uint8_t patchBuf646[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf647[] { 0x41, 0x04, 0x06, 0x11, };
-static const uint8_t patchBuf648[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf649[] { 0x41, 0x04, 0x06, 0x11, };
-static const uint8_t patchBuf650[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf651[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf652[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf653[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf632[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf633[] { 0x41, 0x04, 0x06, 0x11, };
+static const uint8_t patchBuf634[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf635[] { 0x41, 0x04, 0x06, 0x11, };
+static const uint8_t patchBuf636[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf637[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf638[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf639[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches49[] {
-	{ { &kextList[2], patchBuf646, patchBuf647, 4, 2 }, 13, 14 },
-	{ { &kextList[2], patchBuf648, patchBuf649, 4, 2 }, 15, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf650, patchBuf651, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf652, patchBuf653, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf632, patchBuf633, 4, 2 }, 13, 14 },
+	{ { &kextList[2], patchBuf634, patchBuf635, 4, 2 }, 15, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf636, patchBuf637, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf638, patchBuf639, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 CodecModInfo codecModVIA[] {
 	{ "VT1802", 0x8446, revisions27, 1, platforms48, 1, layouts48, 1, patches48, 3 },
@@ -22680,25 +22659,25 @@ static const uint8_t file254[] {
 static const CodecModInfo::File layouts50[] {
 	{ file254, 391, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 };
-static const uint8_t patchBuf654[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf655[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf656[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf657[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf658[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf659[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf660[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf661[] { 0xF3, 0x76, 0x1D, 0x11, };
-static const uint8_t patchBuf662[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf663[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf664[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf665[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf640[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf641[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf642[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf643[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf644[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf645[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf646[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf647[] { 0xF3, 0x76, 0x1D, 0x11, };
+static const uint8_t patchBuf648[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf649[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf650[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf651[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches50[] {
-	{ { &kextList[2], patchBuf654, patchBuf655, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf656, patchBuf657, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf658, patchBuf659, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf660, patchBuf661, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf662, patchBuf663, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf664, patchBuf665, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf640, patchBuf641, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf642, patchBuf643, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf644, patchBuf645, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf646, patchBuf647, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf648, patchBuf649, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf650, patchBuf651, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint8_t file255[] {
 	0x78, 0x9C, 0xED, 0x58, 0x5D, 0x6F, 0xDA, 0x30, 0x14, 0x7D, 0x86, 0x5F, 0x91, 0xE5, 0x1D, 0x0C, 0xDD, 0xA4, 0x75, 0x53, 0x9A, 0xAA, 0x90, 0x4E, 
@@ -22750,25 +22729,25 @@ static const uint8_t file256[] {
 static const CodecModInfo::File layouts51[] {
 	{ file256, 391, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 };
-static const uint8_t patchBuf666[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf667[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf668[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf669[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf670[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf671[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf672[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf673[] { 0xB2, 0x76, 0x1D, 0x11, };
-static const uint8_t patchBuf674[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf675[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf676[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf677[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf652[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf653[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf654[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf655[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf656[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf657[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf658[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf659[] { 0xB2, 0x76, 0x1D, 0x11, };
+static const uint8_t patchBuf660[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf661[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf662[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf663[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches51[] {
-	{ { &kextList[2], patchBuf666, patchBuf667, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf668, patchBuf669, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf670, patchBuf671, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf672, patchBuf673, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf674, patchBuf675, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf676, patchBuf677, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf652, patchBuf653, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf654, patchBuf655, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf656, patchBuf657, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf658, patchBuf659, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf660, patchBuf661, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf662, patchBuf663, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint8_t file257[] {
 	0x78, 0x9C, 0xED, 0x58, 0x5D, 0x6F, 0x9B, 0x30, 0x14, 0x7D, 0x4E, 0x7E, 0x05, 0xE3, 0x3D, 0x71, 0xD2, 0x87, 0xAD, 0x9B, 0x28, 0x55, 0x13, 0x3A, 
@@ -22820,25 +22799,25 @@ static const uint8_t file258[] {
 static const CodecModInfo::File layouts52[] {
 	{ file258, 391, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 };
-static const uint8_t patchBuf678[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf679[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf680[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf681[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf682[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf683[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf684[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf685[] { 0x08, 0x76, 0x1D, 0x11, };
-static const uint8_t patchBuf686[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf687[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf688[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf689[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf664[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf665[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf666[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf667[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf668[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf669[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf670[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf671[] { 0x08, 0x76, 0x1D, 0x11, };
+static const uint8_t patchBuf672[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf673[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf674[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf675[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches52[] {
-	{ { &kextList[2], patchBuf678, patchBuf679, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf680, patchBuf681, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf682, patchBuf683, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf684, patchBuf685, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf686, patchBuf687, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf688, patchBuf689, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf664, patchBuf665, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf666, patchBuf667, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf668, patchBuf669, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf670, patchBuf671, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf672, patchBuf673, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf674, patchBuf675, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint8_t file259[] {
 	0x78, 0x9C, 0xED, 0x58, 0x5D, 0x6F, 0xDA, 0x30, 0x14, 0x7D, 0x86, 0x5F, 0x91, 0xE5, 0x1D, 0x5C, 0xBA, 0xAF, 0x6E, 0x4A, 0x53, 0x15, 0xD2, 0x69, 
@@ -22892,25 +22871,25 @@ static const CodecModInfo::File layouts53[] {
 	{ file260, 391, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 	{ file260, 391, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 11 },
 };
-static const uint8_t patchBuf690[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf691[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf692[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf693[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf694[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf695[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf696[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf697[] { 0x03, 0x76, 0x1D, 0x11, };
-static const uint8_t patchBuf698[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf699[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf700[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf701[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf676[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf677[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf678[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf679[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf680[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf681[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf682[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf683[] { 0x03, 0x76, 0x1D, 0x11, };
+static const uint8_t patchBuf684[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf685[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf686[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf687[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches53[] {
-	{ { &kextList[2], patchBuf690, patchBuf691, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf692, patchBuf693, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf694, patchBuf695, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf696, patchBuf697, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf698, patchBuf699, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf700, patchBuf701, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf676, patchBuf677, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf678, patchBuf679, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf680, patchBuf681, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf682, patchBuf683, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf684, patchBuf685, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf686, patchBuf687, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint8_t file261[] {
 	0x78, 0x9C, 0xED, 0x59, 0xDD, 0x6F, 0x9B, 0x30, 0x10, 0x7F, 0x4E, 0xFE, 0x0A, 0xCA, 0x7B, 0xE2, 0x90, 0x4D, 0xDA, 0x87, 0x28, 0x55, 0x13, 0x3A, 
@@ -23220,22 +23199,22 @@ static const uint8_t file262[] {
 static const CodecModInfo::File layouts54[] {
 	{ file262, 6533, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 };
-static const uint8_t patchBuf702[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf703[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf704[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf705[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf706[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf707[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf708[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf709[] { 0xD5, 0x76, 0x1D, 0x11, };
-static const uint8_t patchBuf710[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf711[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf688[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf689[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf690[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf691[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf692[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf693[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf694[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf695[] { 0xD5, 0x76, 0x1D, 0x11, };
+static const uint8_t patchBuf696[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf697[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches54[] {
-	{ { &kextList[2], patchBuf702, patchBuf703, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf704, patchBuf705, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf706, patchBuf707, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf708, patchBuf709, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf710, patchBuf711, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf688, patchBuf689, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf690, patchBuf691, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf692, patchBuf693, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf694, patchBuf695, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf696, patchBuf697, 4, 2 }, 15, 15 },
 };
 static const uint8_t file263[] {
 	0x78, 0x9C, 0xED, 0x5D, 0x59, 0x77, 0xDA, 0x4A, 0x12, 0x7E, 0xCE, 0xFC, 0x8A, 0x4C, 0x5E, 0x7D, 0xEE, 0x45, 0x0B, 0x5A, 0x98, 0x93, 0xC9, 0x1C, 
@@ -23516,28 +23495,28 @@ static const CodecModInfo::File layouts55[] {
 	{ file264, 392, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 	{ file265, 884, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 12 },
 };
-static const uint8_t patchBuf712[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf713[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf714[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf715[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf716[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf717[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf718[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf719[] { 0x05, 0x76, 0x1D, 0x11, };
-static const uint8_t patchBuf720[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf721[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf722[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf723[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf724[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf725[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf698[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf699[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf700[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf701[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf702[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf703[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf704[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf705[] { 0x05, 0x76, 0x1D, 0x11, };
+static const uint8_t patchBuf706[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf707[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf708[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf709[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf710[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf711[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches55[] {
-	{ { &kextList[2], patchBuf712, patchBuf713, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf714, patchBuf715, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf716, patchBuf717, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf718, patchBuf719, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf720, patchBuf721, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf722, patchBuf723, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf724, patchBuf725, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf698, patchBuf699, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf700, patchBuf701, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf702, patchBuf703, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf704, patchBuf705, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf706, patchBuf707, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf708, patchBuf709, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf710, patchBuf711, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint8_t file266[] {
 	0x78, 0x9C, 0xED, 0x57, 0x51, 0x4F, 0xDB, 0x30, 0x10, 0x7E, 0x6E, 0x7F, 0x45, 0x96, 0xF7, 0xD6, 0x04, 0x90, 0xC6, 0x50, 0x08, 0xA2, 0x0D, 0x88, 
@@ -23587,28 +23566,28 @@ static const uint8_t file267[] {
 static const CodecModInfo::File layouts56[] {
 	{ file267, 392, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 };
-static const uint8_t patchBuf726[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf727[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf728[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf729[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf730[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf731[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf732[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf733[] { 0x05, 0x76, 0x1D, 0x11, };
-static const uint8_t patchBuf734[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf735[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf736[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf737[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf738[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf739[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf712[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf713[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf714[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf715[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf716[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf717[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf718[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf719[] { 0x05, 0x76, 0x1D, 0x11, };
+static const uint8_t patchBuf720[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf721[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf722[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf723[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf724[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf725[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches56[] {
-	{ { &kextList[2], patchBuf726, patchBuf727, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf728, patchBuf729, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf730, patchBuf731, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf732, patchBuf733, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf734, patchBuf735, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf736, patchBuf737, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf738, patchBuf739, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf712, patchBuf713, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf714, patchBuf715, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf716, patchBuf717, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf718, patchBuf719, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf720, patchBuf721, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf722, patchBuf723, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf724, patchBuf725, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint32_t revisions29[] { 0x100205, };
 static const uint8_t file268[] {
@@ -23701,25 +23680,25 @@ static const uint8_t file269[] {
 static const CodecModInfo::File layouts57[] {
 	{ file269, 880, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 12 },
 };
-static const uint8_t patchBuf740[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf741[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf742[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf743[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf744[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf745[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf746[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf747[] { 0xD1, 0x76, 0x1D, 0x11, };
-static const uint8_t patchBuf748[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf749[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf750[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf751[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf726[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf727[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf728[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf729[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf730[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf731[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf732[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf733[] { 0xD1, 0x76, 0x1D, 0x11, };
+static const uint8_t patchBuf734[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf735[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf736[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf737[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches57[] {
-	{ { &kextList[2], patchBuf740, patchBuf741, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf742, patchBuf743, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf744, patchBuf745, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf746, patchBuf747, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf748, patchBuf749, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf750, patchBuf751, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf726, patchBuf727, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf728, patchBuf729, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf730, patchBuf731, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf732, patchBuf733, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf734, patchBuf735, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf736, patchBuf737, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint8_t file270[] {
 	0x78, 0x9C, 0xED, 0x5C, 0x5D, 0x73, 0x9A, 0x40, 0x14, 0x7D, 0x36, 0xBF, 0x82, 0xF2, 0x1E, 0x37, 0xC6, 0xB6, 0x49, 0x3A, 0xC4, 0x4C, 0x12, 0xD3, 
@@ -23811,25 +23790,25 @@ static const uint8_t file271[] {
 static const CodecModInfo::File layouts58[] {
 	{ file271, 880, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 12 },
 };
-static const uint8_t patchBuf752[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf753[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf754[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf755[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf756[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf757[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf758[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf759[] { 0xD9, 0x76, 0x1D, 0x11, };
-static const uint8_t patchBuf760[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf761[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf762[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf763[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf738[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf739[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf740[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf741[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf742[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf743[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf744[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf745[] { 0xD9, 0x76, 0x1D, 0x11, };
+static const uint8_t patchBuf746[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf747[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf748[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf749[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches58[] {
-	{ { &kextList[2], patchBuf752, patchBuf753, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf754, patchBuf755, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf756, patchBuf757, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf758, patchBuf759, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf760, patchBuf761, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf762, patchBuf763, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf738, patchBuf739, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf740, patchBuf741, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf742, patchBuf743, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf744, patchBuf745, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf746, patchBuf747, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf748, patchBuf749, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint8_t file272[] {
 	0x78, 0x9C, 0xED, 0x58, 0x6D, 0x6F, 0x9B, 0x30, 0x10, 0xFE, 0x9C, 0xFC, 0x0A, 0xC6, 0xF7, 0xC4, 0x21, 0x9B, 0xB4, 0x17, 0x51, 0xAA, 0x26, 0x74, 
@@ -24203,28 +24182,28 @@ static const CodecModInfo::File layouts59[] {
 	{ file274, 6581, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 	{ file275, 878, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 12 },
 };
-static const uint8_t patchBuf764[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf765[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf766[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf767[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf768[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf769[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf770[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf771[] { 0xE7, 0x76, 0x1D, 0x11, };
-static const uint8_t patchBuf772[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf773[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf774[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf775[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf776[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf777[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf750[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf751[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf752[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf753[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf754[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf755[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf756[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf757[] { 0xE7, 0x76, 0x1D, 0x11, };
+static const uint8_t patchBuf758[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf759[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf760[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf761[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf762[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf763[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches59[] {
-	{ { &kextList[2], patchBuf764, patchBuf765, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf766, patchBuf767, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf768, patchBuf769, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf770, patchBuf771, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf772, patchBuf773, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf774, patchBuf775, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf776, patchBuf777, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf750, patchBuf751, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf752, patchBuf753, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf754, patchBuf755, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf756, patchBuf757, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf758, patchBuf759, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf760, patchBuf761, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf762, patchBuf763, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint32_t revisions30[] { 0x100102, };
 static const uint8_t file276[] {
@@ -24576,28 +24555,28 @@ static const CodecModInfo::File layouts60[] {
 	{ file278, 6534, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 	{ file279, 352, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 12 },
 };
-static const uint8_t patchBuf778[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf779[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf780[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf781[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf782[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf783[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf784[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf785[] { 0xE0, 0x76, 0x1D, 0x11, };
-static const uint8_t patchBuf786[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf787[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf788[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf789[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf790[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf791[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf764[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf765[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf766[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf767[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf768[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf769[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf770[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf771[] { 0xE0, 0x76, 0x1D, 0x11, };
+static const uint8_t patchBuf772[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf773[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf774[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf775[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf776[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf777[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches60[] {
-	{ { &kextList[2], patchBuf778, patchBuf779, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf780, patchBuf781, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf782, patchBuf783, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf784, patchBuf785, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf786, patchBuf787, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf788, patchBuf789, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf790, patchBuf791, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf764, patchBuf765, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf766, patchBuf767, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf768, patchBuf769, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf770, patchBuf771, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf772, patchBuf773, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf774, patchBuf775, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf776, patchBuf777, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint32_t revisions31[] { 0x100203, };
 static const uint8_t file280[] {
@@ -24671,28 +24650,28 @@ static const uint8_t file281[] {
 static const CodecModInfo::File layouts61[] {
 	{ file281, 905, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 12 },
 };
-static const uint8_t patchBuf792[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf793[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf794[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf795[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf796[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf797[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf798[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf799[] { 0xDF, 0x76, 0x1D, 0x11, };
-static const uint8_t patchBuf800[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf801[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf802[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf803[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf804[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf805[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf778[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf779[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf780[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf781[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf782[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf783[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf784[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf785[] { 0xDF, 0x76, 0x1D, 0x11, };
+static const uint8_t patchBuf786[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf787[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf788[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf789[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf790[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf791[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches61[] {
-	{ { &kextList[2], patchBuf792, patchBuf793, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf794, patchBuf795, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf796, patchBuf797, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf798, patchBuf799, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf800, patchBuf801, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf802, patchBuf803, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf804, patchBuf805, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf778, patchBuf779, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf780, patchBuf781, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf782, patchBuf783, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf784, patchBuf785, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf786, patchBuf787, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf788, patchBuf789, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf790, patchBuf791, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint8_t file282[] {
 	0x78, 0x9C, 0xED, 0x5C, 0x5D, 0x73, 0x9A, 0x40, 0x14, 0x7D, 0x36, 0xBF, 0x82, 0xF2, 0x1E, 0x37, 0xC6, 0xB6, 0x49, 0x3A, 0xC4, 0x4C, 0x12, 0xD3, 
@@ -24784,25 +24763,25 @@ static const uint8_t file283[] {
 static const CodecModInfo::File layouts62[] {
 	{ file283, 880, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 12 },
 };
-static const uint8_t patchBuf806[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf807[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf808[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf809[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf810[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf811[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf812[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf813[] { 0x95, 0x76, 0x1D, 0x11, };
-static const uint8_t patchBuf814[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf815[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf816[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf817[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf792[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf793[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf794[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf795[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf796[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf797[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf798[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf799[] { 0x95, 0x76, 0x1D, 0x11, };
+static const uint8_t patchBuf800[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf801[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf802[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf803[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches62[] {
-	{ { &kextList[2], patchBuf806, patchBuf807, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf808, patchBuf809, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf810, patchBuf811, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf812, patchBuf813, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf814, patchBuf815, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf816, patchBuf817, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf792, patchBuf793, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf794, patchBuf795, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf796, patchBuf797, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf798, patchBuf799, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf800, patchBuf801, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf802, patchBuf803, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint8_t file284[] {
 	0x78, 0x9C, 0xED, 0x58, 0xDF, 0x6F, 0x9B, 0x30, 0x10, 0x7E, 0x4E, 0xFE, 0x0A, 0xC6, 0x7B, 0xE2, 0xD0, 0x4D, 0xDA, 0x56, 0x51, 0xAA, 0x26, 0x74, 
@@ -25109,28 +25088,28 @@ static const uint8_t file285[] {
 static const CodecModInfo::File layouts63[] {
 	{ file285, 6536, KernelPatcher::KernelAny, KernelPatcher::KernelAny, 3 },
 };
-static const uint8_t patchBuf818[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf819[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
-static const uint8_t patchBuf820[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf821[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
-static const uint8_t patchBuf822[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf823[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
-static const uint8_t patchBuf824[] { 0x8B, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf825[] { 0xE5, 0x76, 0x1D, 0x11, };
-static const uint8_t patchBuf826[] { 0x84, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf827[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf828[] { 0x83, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf829[] { 0x00, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf830[] { 0x8A, 0x19, 0xD4, 0x11, };
-static const uint8_t patchBuf831[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf804[] { 0x41, 0xC6, 0x06, 0x00, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf805[] { 0x41, 0xC6, 0x06, 0x01, 0x49, 0x8B, 0xBC, 0x24, };
+static const uint8_t patchBuf806[] { 0x41, 0xC6, 0x06, 0x00, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf807[] { 0x41, 0xC6, 0x06, 0x01, 0x48, 0x8B, 0xBB, 0x68, };
+static const uint8_t patchBuf808[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf809[] { 0x41, 0xC6, 0x86, 0x43, 0x01, 0x00, 0x00, 0x01, };
+static const uint8_t patchBuf810[] { 0x8B, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf811[] { 0xE5, 0x76, 0x1D, 0x11, };
+static const uint8_t patchBuf812[] { 0x84, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf813[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf814[] { 0x83, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf815[] { 0x00, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf816[] { 0x8A, 0x19, 0xD4, 0x11, };
+static const uint8_t patchBuf817[] { 0x00, 0x00, 0x00, 0x00, };
 static const KextPatch patches63[] {
-	{ { &kextList[2], patchBuf818, patchBuf819, 8, 1 }, 13, 13 },
-	{ { &kextList[2], patchBuf820, patchBuf821, 8, 1 }, 14, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf822, patchBuf823, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf824, patchBuf825, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf826, patchBuf827, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &kextList[2], patchBuf828, patchBuf829, 4, 2 }, 15, 15 },
-	{ { &kextList[2], patchBuf830, patchBuf831, 4, 2 }, 16, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf804, patchBuf805, 8, 1 }, 13, 13 },
+	{ { &kextList[2], patchBuf806, patchBuf807, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf808, patchBuf809, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf810, patchBuf811, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf812, patchBuf813, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[2], patchBuf814, patchBuf815, 4, 2 }, 15, 15 },
+	{ { &kextList[2], patchBuf816, patchBuf817, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 CodecModInfo codecModIDT[] {
 	{ "IDT92HD66C3_65", 0x76F3, nullptr, 0, platforms50, 1, layouts50, 1, patches50, 6 },
@@ -25168,67 +25147,67 @@ const size_t vendorModSize {10};
 
 // ControllerMod section
 
-static const uint8_t patchBuf832[] { 0xA0, 0x8C, };
-static const uint8_t patchBuf833[] { 0x21, 0x8D, };
+static const uint8_t patchBuf818[] { 0xA0, 0x8C, };
+static const uint8_t patchBuf819[] { 0x21, 0x8D, };
 static const KextPatch patches64[] {
-	{ { &kextList[0], patchBuf832, patchBuf833, 2, 4 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[0], patchBuf818, patchBuf819, 2, 4 }, 13, KernelPatcher::KernelAny },
 };
-static const uint8_t patchBuf834[] { 0xA0, 0x8C, };
-static const uint8_t patchBuf835[] { 0x20, 0x8D, };
+static const uint8_t patchBuf820[] { 0xA0, 0x8C, };
+static const uint8_t patchBuf821[] { 0x20, 0x8D, };
 static const KextPatch patches65[] {
-	{ { &kextList[0], patchBuf834, patchBuf835, 2, 4 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[0], patchBuf820, patchBuf821, 2, 4 }, 13, KernelPatcher::KernelAny },
 };
-static const uint8_t patchBuf836[] { 0x0C, 0x0C, };
-static const uint8_t patchBuf837[] { 0x04, 0x0F, };
+static const uint8_t patchBuf822[] { 0x0C, 0x0C, };
+static const uint8_t patchBuf823[] { 0x04, 0x0F, };
 static const KextPatch patches66[] {
+	{ { &kextList[0], patchBuf822, patchBuf823, 2, 4 }, 13, KernelPatcher::KernelAny },
+};
+static const uint8_t patchBuf824[] { 0x20, 0x8C, };
+static const uint8_t patchBuf825[] { 0xA0, 0x8C, };
+static const KextPatch patches67[] {
+	{ { &kextList[0], patchBuf824, patchBuf825, 2, 4 }, 13, 13 },
+};
+static const uint8_t patchBuf826[] { 0x0C, 0x0A, 0x00, 0x00, };
+static const uint8_t patchBuf827[] { 0x0C, 0x0C, 0x00, 0x00, };
+static const uint8_t patchBuf828[] { 0x0B, 0x0C, 0x00, 0x00, };
+static const uint8_t patchBuf829[] { 0x0C, 0x0C, 0x00, 0x00, };
+static const uint8_t patchBuf830[] { 0x3D, 0x0C, 0x0A, 0x00, 0x00, };
+static const uint8_t patchBuf831[] { 0x3D, 0x0C, 0x0C, 0x00, 0x00, };
+static const uint8_t patchBuf832[] { 0x3D, 0x0B, 0x0C, 0x00, 0x00, };
+static const uint8_t patchBuf833[] { 0x3D, 0x0C, 0x0C, 0x00, 0x00, };
+static const uint8_t patchBuf834[] { 0x3D, 0x0C, 0x0A, 0x00, 0x00, };
+static const uint8_t patchBuf835[] { 0x3D, 0x0C, 0x0C, 0x00, 0x00, };
+static const KextPatch patches68[] {
+	{ { &kextList[0], patchBuf826, patchBuf827, 4, 4 }, 13, 13 },
+	{ { &kextList[0], patchBuf828, patchBuf829, 4, 2 }, 13, 13 },
+	{ { &kextList[0], patchBuf830, patchBuf831, 5, 3 }, 14, 14 },
+	{ { &kextList[0], patchBuf832, patchBuf833, 5, 1 }, 14, 14 },
+	{ { &kextList[0], patchBuf834, patchBuf835, 5, 5 }, 15, KernelPatcher::KernelAny },
+};
+static const uint8_t patchBuf836[] { 0x20, 0x8C, };
+static const uint8_t patchBuf837[] { 0x20, 0x8D, };
+static const KextPatch patches69[] {
 	{ { &kextList[0], patchBuf836, patchBuf837, 2, 4 }, 13, KernelPatcher::KernelAny },
 };
-static const uint8_t patchBuf838[] { 0x20, 0x8C, };
-static const uint8_t patchBuf839[] { 0xA0, 0x8C, };
-static const KextPatch patches67[] {
-	{ { &kextList[0], patchBuf838, patchBuf839, 2, 4 }, 13, 13 },
-};
-static const uint8_t patchBuf840[] { 0x0C, 0x0A, 0x00, 0x00, };
-static const uint8_t patchBuf841[] { 0x0C, 0x0C, 0x00, 0x00, };
-static const uint8_t patchBuf842[] { 0x0B, 0x0C, 0x00, 0x00, };
-static const uint8_t patchBuf843[] { 0x0C, 0x0C, 0x00, 0x00, };
-static const uint8_t patchBuf844[] { 0x3D, 0x0C, 0x0A, 0x00, 0x00, };
-static const uint8_t patchBuf845[] { 0x3D, 0x0C, 0x0C, 0x00, 0x00, };
-static const uint8_t patchBuf846[] { 0x3D, 0x0B, 0x0C, 0x00, 0x00, };
-static const uint8_t patchBuf847[] { 0x3D, 0x0C, 0x0C, 0x00, 0x00, };
-static const uint8_t patchBuf848[] { 0x3D, 0x0C, 0x0A, 0x00, 0x00, };
-static const uint8_t patchBuf849[] { 0x3D, 0x0C, 0x0C, 0x00, 0x00, };
-static const KextPatch patches68[] {
-	{ { &kextList[0], patchBuf840, patchBuf841, 4, 4 }, 13, 13 },
-	{ { &kextList[0], patchBuf842, patchBuf843, 4, 2 }, 13, 13 },
-	{ { &kextList[0], patchBuf844, patchBuf845, 5, 3 }, 14, 14 },
-	{ { &kextList[0], patchBuf846, patchBuf847, 5, 1 }, 14, 14 },
-	{ { &kextList[0], patchBuf848, patchBuf849, 5, 5 }, 15, KernelPatcher::KernelAny },
-};
-static const uint8_t patchBuf850[] { 0x20, 0x8C, };
-static const uint8_t patchBuf851[] { 0x20, 0x8D, };
-static const KextPatch patches69[] {
-	{ { &kextList[0], patchBuf850, patchBuf851, 2, 4 }, 13, KernelPatcher::KernelAny },
-};
-static const uint8_t patchBuf852[] { 0x01, 0x05, 0x09, 0x00, 0x00, 0x04, 0x00, 0x00, 0x87, 0x00, 0x00, 0x00, 0x02, 0x04, 0x0A, 0x00, 0x00, 0x04, 0x00, 0x00, 0x87, 0x00, 0x00, 0x00, 0x03, 0x06, 0x08, 0x00, 0x00, 0x04, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf853[] { 0x01, 0x05, 0x09, 0x00, 0x00, 0x08, 0x00, 0x00, 0x87, 0x00, 0x00, 0x00, 0x02, 0x04, 0x0A, 0x00, 0x00, 0x08, 0x00, 0x00, 0x87, 0x00, 0x00, 0x00, 0x03, 0x06, 0x08, 0x00, 0x00, 0x08, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf838[] { 0x01, 0x05, 0x09, 0x00, 0x00, 0x04, 0x00, 0x00, 0x87, 0x00, 0x00, 0x00, 0x02, 0x04, 0x0A, 0x00, 0x00, 0x04, 0x00, 0x00, 0x87, 0x00, 0x00, 0x00, 0x03, 0x06, 0x08, 0x00, 0x00, 0x04, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf839[] { 0x01, 0x05, 0x09, 0x00, 0x00, 0x08, 0x00, 0x00, 0x87, 0x00, 0x00, 0x00, 0x02, 0x04, 0x0A, 0x00, 0x00, 0x08, 0x00, 0x00, 0x87, 0x00, 0x00, 0x00, 0x03, 0x06, 0x08, 0x00, 0x00, 0x08, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, };
 static const KextPatch patches70[] {
-	{ { &kextList[1], patchBuf852, patchBuf853, 36, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &kextList[1], patchBuf838, patchBuf839, 36, 1 }, 14, KernelPatcher::KernelAny },
 };
-static const uint8_t patchBuf854[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x04, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x81, 0x00, 0x00, 0x00, 0x04, 0x06, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x81, 0x00, 0x00, 0x00, };
-static const uint8_t patchBuf855[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x07, 0x04, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x81, 0x00, 0x00, 0x00, 0x04, 0x06, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x81, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf840[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x04, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x81, 0x00, 0x00, 0x00, 0x04, 0x06, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x81, 0x00, 0x00, 0x00, };
+static const uint8_t patchBuf841[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x07, 0x04, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x81, 0x00, 0x00, 0x00, 0x04, 0x06, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x81, 0x00, 0x00, 0x00, };
 static const KextPatch patches71[] {
-	{ { &kextList[3], patchBuf854, patchBuf855, 36, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[3], patchBuf840, patchBuf841, 36, 1 }, 13, KernelPatcher::KernelAny },
 };
-static const uint8_t patchBuf856[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, };
-static const uint8_t patchBuf857[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, };
+static const uint8_t patchBuf842[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, };
+static const uint8_t patchBuf843[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, };
 static const KextPatch patches72[] {
-	{ { &kextList[3], patchBuf856, patchBuf857, 24, 4 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[3], patchBuf842, patchBuf843, 24, 4 }, 13, KernelPatcher::KernelAny },
 };
-static const uint8_t patchBuf858[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, };
-static const uint8_t patchBuf859[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, };
+static const uint8_t patchBuf844[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, };
+static const uint8_t patchBuf845[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, };
 static const KextPatch patches73[] {
-	{ { &kextList[3], patchBuf858, patchBuf859, 24, 4 }, 13, KernelPatcher::KernelAny },
+	{ { &kextList[3], patchBuf844, patchBuf845, 24, 4 }, 13, KernelPatcher::KernelAny },
 };
 ControllerModInfo controllerMod[] {
 	{ "X99 HDEF controller r2", 0x8086, 0x8D21, nullptr, 0, ControllerModInfo::PlatformAny, IOUtil::ComputerModel::ComputerAny, patches64, 1 },
