@@ -38,19 +38,19 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Custom for Realtek ALC3236 for Asus TP500LN by Mohamed Khairy</string>
-				<key>Id</key>
-				<integer>12</integer>
-				<key>Path</key>
-				<string>layout12.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>InsanelyDeepak - Realtek ALC233 for Asus X550LC</string>
 				<key>Id</key>
 				<integer>13</integer>
 				<key>Path</key>
 				<string>layout13.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Custom for Realtek ALC3236 for Asus TP500LN by Mohamed Khairy</string>
+				<key>Id</key>
+				<integer>28</integer>
+				<key>Path</key>
+				<string>layout28.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
@@ -81,19 +81,19 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Custom for Realtek ALC3236 for Asus TP500LN by Mohamed Khairy</string>
-				<key>Id</key>
-				<integer>12</integer>
-				<key>Path</key>
-				<string>Platforms12.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>InsanelyDeepak - Realtek ALC233 for Asus X550LC</string>
 				<key>Id</key>
 				<integer>13</integer>
 				<key>Path</key>
 				<string>PlatformsID.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Custom for Realtek ALC3236 for Asus TP500LN by Mohamed Khairy</string>
+				<key>Id</key>
+				<integer>28</integer>
+				<key>Path</key>
+				<string>Platforms28.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>

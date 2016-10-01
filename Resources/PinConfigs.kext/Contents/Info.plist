@@ -244,20 +244,6 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>Custom for Realtek ALC3236 for Asus TP500LN by Mohamed Khairy</string>
-					<key>CodecID</key>
-					<integer>283902515</integer>
-					<key>ConfigData</key>
-					<data>ASccEAEnHQABJx4AAScfQAFHHCABRx0AAUceEwFHH5ABtxxAAbcdAAG3HqABtx+QAdccUAHXHZAB1x5FAdcfQAIXHDACFx0QAhceIQIXHwABRwwCAhcMAg==</data>
-					<key>FuncGroup</key>
-					<integer>1</integer>
-					<key>LayoutID</key>
-					<integer>12</integer>
-				</dict>
-				<dict>
-					<key>AFGLowPowerState</key>
-					<data>AwAAAA==</data>
-					<key>Codec</key>
 					<string>InsanelyDeepak - Realtek ALC233 for Asus X550LC</string>
 					<key>CodecID</key>
 					<integer>283902515</integer>
@@ -267,6 +253,20 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>13</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Custom for Realtek ALC3236 for Asus TP500LN by Mohamed Khairy</string>
+					<key>CodecID</key>
+					<integer>283902515</integer>
+					<key>ConfigData</key>
+					<data>ASccEAEnHQABJx4AAScfQAFHHCABRx0AAUceEwFHH5ABtxxAAbcdAAG3HqABtx+QAdccUAHXHZAB1x5FAdcfQAIXHDACFx0QAhceIQIXHwABRwwCAhcMAg==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>28</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>

@@ -15,7 +15,7 @@ AppleALC Changelog
 - Added ALC892 layout-id 99 for DNS P150EM by Constanta
 - Added ALC898 layout-id 5 and 7 by Mirone
 - Changed logging to be done by IOLog since printf is broken on 10.12
-- Added ALC3236 layout-id 12 for Asus TP500LN by Mohamed Khairy
+- Added ALC3236 layout-id 28 for Asus TP500LN by Mohamed Khairy
  
 #### v1.0.16
 - Fixed a rare lock acquisition issue on 10.12
