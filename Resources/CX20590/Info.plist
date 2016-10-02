@@ -123,9 +123,23 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>ixnUEQ==</data>
+			<data>hBnUEQ==</data>
 			<key>MinKernel</key>
 			<integer>13</integer>
+			<key>MaxKernel</key>
+			<integer>15</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>blDxFA==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>ixnUEQ==</data>
+			<key>MinKernel</key>
+			<integer>16</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
