@@ -17,6 +17,7 @@ AppleALC Changelog
 - Changed logging to be done by IOLog since printf is broken on 10.12
 - Added ALC3236 layout-id 28 for Asus TP500LN by Mohamed Khairy
 - Fixed ALC235, ALC260, ALC280, ALC284, ALC288, ALC290, ALC292 macOS 10.12 compatibility issue
+- Added ALC233 layout-id 27 for SONY VAIO Fit 14E(SVF14316SCW) by SquallATF
  
 #### v1.0.16
 - Fixed a rare lock acquisition issue on 10.12

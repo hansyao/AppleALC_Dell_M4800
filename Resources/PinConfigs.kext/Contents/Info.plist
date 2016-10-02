@@ -258,6 +258,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Custom for Realtek ALC233 for SONY VAIO Fit 14E(SVF14316SCW) by SquallATF</string>
+					<key>CodecID</key>
+					<integer>283902515</integer>
+					<key>ConfigData</key>
+					<data>ASccQAEnHQEBJx6mAScfkAGnHDABpx1QAacegQGnHwMBRxwQAUcdAQFHHhcBRx+QAUcMAgIXHCACFx0QAhceIQIXHwMCFwwC</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>27</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Custom for Realtek ALC3236 for Asus TP500LN by Mohamed Khairy</string>
 					<key>CodecID</key>
 					<integer>283902515</integer>

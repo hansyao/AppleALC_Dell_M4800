@@ -46,6 +46,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Custom for Realtek ALC233 for SONY VAIO Fit 14E(SVF14316SCW) by SquallATF</string>
+				<key>Id</key>
+				<integer>27</integer>
+				<key>Path</key>
+				<string>layout27.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Custom for Realtek ALC3236 for Asus TP500LN by Mohamed Khairy</string>
 				<key>Id</key>
 				<integer>28</integer>
@@ -86,6 +94,14 @@
 				<integer>13</integer>
 				<key>Path</key>
 				<string>PlatformsID.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Custom for Realtek ALC233 for SONY VAIO Fit 14E(SVF14316SCW) by SquallATF</string>
+				<key>Id</key>
+				<integer>27</integer>
+				<key>Path</key>
+				<string>Platforms27.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
