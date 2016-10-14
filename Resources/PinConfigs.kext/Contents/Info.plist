@@ -1381,6 +1381,20 @@
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283904135</integer>
+					<key>Comment</key>
+					<string>Custom by klblk ALC887 for GA-Q87TN</string>
+					<key>ConfigData</key>
+					<data>IRcc8CEXHQAhFx4AIRcfQCEnHPAhJx0AISceACEnH0AhRxzwIUcdACFHHgAhRx9AIVcc8CFXHQAhVx4AIVcfQCFnHPAhZx0AIWceACFnH0AhdxzwIXcdACF3HgAhdx9AIYcccCGHHZAhhx6BIYcfASGXHPAhlx0AIZceACGXH0AhpxwgIacdQCGnHgEhpx8BIbcc8CG3HQAhtx4AIbcfQCHHHPAhxx0AIcceACHHH0Ah1xzwIdcdACHXHgAh1x9AIecc8CHnHQAh5x4AIecfQCH3HPAh9x0AIfceACH3H0A=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>33</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Custom Realtek ALC887-VD by Constanta</string>
 					<key>CodecID</key>
