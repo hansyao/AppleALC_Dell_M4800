@@ -21,6 +21,8 @@ AppleALC Changelog
 - Fixed all Conexant codecs macOS 10.12 compatibility issue
 - Added IDT 92HD81B1X5 layout-id 11 by Andres ZeroCross
 - Added ALC887 layout-id 33 for GA-Q87TN by klblk
+- Added ALC256 (3246) codec support layout-id 13 by InsanelyDeepak
+- Added ALC255 layout-id 13 and 17 by InsanelyDeepak
  
 #### v1.0.16
 - Fixed a rare lock acquisition issue on 10.12

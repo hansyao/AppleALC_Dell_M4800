@@ -5,79 +5,31 @@
 	<key>Author</key>
 	<string>Vandroiy</string>
 	<key>CodecID</key>
-	<integer>597</integer>
+	<integer>598</integer>
 	<key>CodecName</key>
-	<string>ALC255</string>
+	<string>ALC256 (3246)</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Mirone Laptop Patch ALC255</string>
-				<key>Id</key>
-				<integer>3</integer>
-				<key>Path</key>
-				<string>layout3.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>InsanelyDeepak - Realtek ALC255_v1</string>
+				<string>Insanelydeepak - Realtek ALC256 (3246) for Dell Series</string>
 				<key>Id</key>
 				<integer>13</integer>
 				<key>Path</key>
 				<string>layout13.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>InsanelyDeepak - Realtek ALC255_v2</string>
-				<key>Id</key>
-				<integer>17</integer>
-				<key>Path</key>
-				<string>layout17.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Realtek ALC255 for Lenovo B470 - vusun123</string>
-				<key>Id</key>
-				<integer>28</integer>
-				<key>Path</key>
-				<string>layout28.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Mirone Laptop Patch ALC255</string>
-				<key>Id</key>
-				<integer>3</integer>
-				<key>Path</key>
-				<string>PlatformsM.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>InsanelyDeepak - Realtek ALC255_v1</string>
+				<string>Insanelydeepak - Realtek ALC256 (3246) for Dell Series</string>
 				<key>Id</key>
 				<integer>13</integer>
 				<key>Path</key>
 				<string>PlatformsID.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>InsanelyDeepak - Realtek ALC255_v2</string>
-				<key>Id</key>
-				<integer>17</integer>
-				<key>Path</key>
-				<string>PlatformsID.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Realtek ALC255 for Lenovo B470 - vusun123</string>
-				<key>Id</key>
-				<integer>28</integer>
-				<key>Path</key>
-				<string>Platforms28.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -137,7 +89,7 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>hAjsEA==</data>
+			<data>YgLsEA==</data>
 			<key>MinKernel</key>
 			<integer>13</integer>
 			<key>Name</key>
@@ -161,30 +113,6 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>hBnUEQ==</data>
-			<key>MinKernel</key>
-			<integer>13</integer>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>VQLsEA==</data>
-		</dict>
-		<dict>
-			<key>Count</key>
-			<integer>2</integer>
-			<key>Find</key>
-			<data>YgLsEA==</data>
-			<key>MinKernel</key>
-			<integer>13</integer>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>AAAAAA==</data>
-		</dict>
-		<dict>
-			<key>Count</key>
-			<integer>2</integer>
-			<key>Find</key>
 			<data>gxnUEQ==</data>
 			<key>MinKernel</key>
 			<integer>15</integer>
@@ -195,6 +123,22 @@
 			<key>Replace</key>
 			<data>AAAAAA==</data>
 		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>hBnUEQ==</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>VgLsEA==</data>
+		</dict>
+	</array>
+	<key>Revisions</key>
+	<array>
+		<integer>1048578</integer>
 	</array>
 	<key>Vendor</key>
 	<string>Realtek</string>
