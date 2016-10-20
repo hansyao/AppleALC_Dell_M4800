@@ -214,26 +214,29 @@ void KernelPatcher::applyLookupPatch(const LookupPatch *patch) {
 	curr = off;
 	off += size - patch->size;
 	size_t changes {0};
+	
+	if (kinfo->setKernelWriting(true) != KERN_SUCCESS) {
+		SYSLOG("patcher @ lookup patching failed to write to kernel");
+		code = Error::MemoryProtection;
+		return;
+	}
+	
 	for (size_t i = 0; curr < off && (i < patch->count || patch->count == 0); i++) {
 		while (curr < off && memcmp(curr, patch->find, patch->size))
 			curr++;
 		
 		if (curr != off) {
-			if (kinfo->setKernelWriting(true) != KERN_SUCCESS) {
-				SYSLOG("patcher @ lookup patching failed to write to kernel");
-				code = Error::MemoryProtection;
-				return;
-			}
 			for (size_t j = 0; j < patch->size; j++) {
 				curr[j] = patch->replace[j];
 			}
-			if (kinfo->setKernelWriting(false) != KERN_SUCCESS) {
-				SYSLOG("patcher @ lookup patching failed to disable kernel writing");
-				code = Error::MemoryProtection;
-				return;
-			}
 			changes++;
 		}
+	}
+		
+	if (kinfo->setKernelWriting(false) != KERN_SUCCESS) {
+		SYSLOG("patcher @ lookup patching failed to disable kernel writing");
+		code = Error::MemoryProtection;
+		return;
 	}
 	
 	if (changes != patch->count) {

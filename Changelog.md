@@ -23,6 +23,7 @@ AppleALC Changelog
 - Added ALC887 layout-id 33 for GA-Q87TN by klblk
 - Added ALC256 (3246) codec support layout-id 13 by InsanelyDeepak
 - Added ALC255 layout-id 13 and 17 by InsanelyDeepak
+- Fixed an extremely rare crash on 10.12
  
 #### v1.0.16
 - Fixed a rare lock acquisition issue on 10.12
