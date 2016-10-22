@@ -13,8 +13,6 @@
 #ifdef KEXTPATCH_SUPPORT
 static KernelPatcher *that {nullptr};
 #endif /* KEXTPATCH_SUPPORT */
-// Kernel version
-extern const uint32_t version_major;
 
 KernelPatcher::Error KernelPatcher::getError() {
 	return code;
@@ -123,8 +121,8 @@ void KernelPatcher::updateRunningInfo(size_t id, mach_vm_address_t slide, size_t
 }
 
 bool KernelPatcher::compatibleKernel(uint32_t min, uint32_t max) {
-	return (min == KernelAny || min <= version_major) &&
-			(max == KernelAny || max >= version_major);
+	return (min == KernelAny || min <= getKernelVersion()) &&
+			(max == KernelAny || max >= getKernelVersion());
 }
 
 mach_vm_address_t KernelPatcher::solveSymbol(size_t id, const char *symbol) {
@@ -147,7 +145,7 @@ void KernelPatcher::setupKextListening() {
 	if (that) return;
 	
 	// Lock primitives are needed to protect us from vm interrupts
-	if (version_major >= 16) {
+	if (getKernelVersion() >= KernelVersion::Sierra) {
 		usimpleLock = reinterpret_cast<void(*)(void *)>(solveSymbol(KernelID, "_usimple_lock"));
 		usimpleUnlock = reinterpret_cast<void(*)(void *)>(solveSymbol(KernelID, "_usimple_unlock"));
 		vmAllocationSitesLock = reinterpret_cast<void *>(solveSymbol(KernelID, "_vm_allocation_sites_lock"));
@@ -321,13 +319,13 @@ void KernelPatcher::tempExecutableMemory() {
 #ifdef KEXTPATCH_SUPPORT
 
 void KernelPatcher::releaseMemoryLock() {
-	if (that && that->wasAcquired && that->vmAllocationSitesLock && version_major >= KernelVersion::Sierra) {
+	if (that && that->wasAcquired && that->vmAllocationSitesLock && getKernelVersion() >= KernelVersion::Sierra) {
 		that->usimpleUnlock(that->vmAllocationSitesLock);
 	}
 }
 
 void KernelPatcher::obtainMemoryLock() {
-	if (that && that->wasAcquired && that->vmAllocationSitesLock && version_major >= KernelVersion::Sierra) {
+	if (that && that->wasAcquired && that->vmAllocationSitesLock && getKernelVersion() >= KernelVersion::Sierra) {
 		that->usimpleLock(that->vmAllocationSitesLock);
 	}
 }
@@ -390,7 +388,7 @@ void KernelPatcher::onKextSummariesUpdated() {
 	if (that) {
 		// macOS 10.12 generates an interrupt during this call causing the boot to hang
 		// unless we take the vm allocation lock
-		if (version_major >= KernelVersion::Sierra) {
+		if (getKernelVersion() >= KernelVersion::Sierra) {
 			that->usimpleLock(that->vmAllocationSitesLock);
 			that->wasAcquired = true;
 		}
@@ -421,7 +419,7 @@ void KernelPatcher::onKextSummariesUpdated() {
 		
 		//FIXME: we should not unlock this but instead avoid the lock in the caller
 		//Fortunately there does not appear to be enough time for anybody to 
-		if (version_major >= KernelVersion::Sierra) {
+		if (getKernelVersion() >= KernelVersion::Sierra) {
 			that->usimpleUnlock(that->vmAllocationSitesLock);
 			that->wasAcquired = false;
 		}

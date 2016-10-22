@@ -14,6 +14,8 @@
 
 extern bool debugEnabled;
 extern bool lowMemory;
+// Kernel version major
+extern const int version_major;
 
 #define xStringify(a) Stringify(a)
 #define Stringify(a) #a
@@ -62,6 +64,10 @@ enum KernelVersion {
 	ElCapitan = 15,
 	Sierra = 16
 };
+
+inline KernelVersion getKernelVersion() {
+	return static_cast<KernelVersion>(version_major);
+}
 
 /**
  *  Typed buffer allocator
