@@ -1527,6 +1527,34 @@
 					<integer>7</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>ALC888S-VD Version1 for MedionP9614 by MacPeet</string>
+					<key>CodecID</key>
+					<integer>283904136</integer>
+					<key>ConfigData</key>
+					<data>AUccEAFHHRABRx4hAUcfAQFHDAIBhxwwAYcdEAGHHqEBhx8BASccQAEnHQABJx6jAScfkAF3HFABdx0AAXceEwF3H5ABpxxgAacdEAGnHoEBpx8BAecccAHnHRAB5x5FAecfAQ==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>ALC888S-VD Version2 for MedionE7216 by MacPeet</string>
+					<key>CodecID</key>
+					<integer>283904136</integer>
+					<key>ConfigData</key>
+					<data>AUccEAFHHQABRx4TAUcfkAFHDAIBdxwgAXcdAAF3HhMBdx+QAeccMAHnHRAB5x5EAecfAAGHHEABhx0QAYceoQGHHwABJxxQAScdAAEnHqMBJx+QAaccYAGnHRABpx6BAacfAAG3HHABtx0QAbceIQG3HwA=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>28</integer>
+				</dict>
+				<dict>
 					<key>CodecID</key>
 					<integer>283904137</integer>
 					<key>Comment</key>
