@@ -116,6 +116,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>MacPeet - AD1984 - for_IBM_Lenovo_ThinkPad_T61</string>
+					<key>CodecID</key>
+					<integer>299112836</integer>
+					<key>ConfigData</key>
+					<data>ARccEAEXHUABFx4hARcfAgFHHCABRx1QAUcegQFHHwIBJxwwAScdAAEnHhcBJx+QAScMAgFXHEABVx0AAVcepwFXH5ABtxygAbcdEAG3HkQBtx8h</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>MacPeet - AD1984A</string>
 					<key>CodecID</key>
 					<integer>299112778</integer>
