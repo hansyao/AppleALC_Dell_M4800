@@ -5,6 +5,9 @@ AppleALC Changelog
 - Added ALC888S-VD layout-it 11 and 28 for Medion P9614 and E7216 by MacPeet
 - Added initial support AD1984 layout-id 11 for IBM_Lenovo_ThinkPad_T61 by MacPeet
 - Added ALC272 layout-id 11 for Lenovo B470 by Sam Chen
+- Added Laptop Intel Broadwell HD5500/5600 HDMI audio support (ig-platform-id 0x16260006)
+- Added Laptop Intel Skylake HD515/520/530 HDMI audio support (ig-platform-id 0x191E0000, 0x19160000)
+- Added Desktop Intel Skylake HD530 HDMI audio support (ig-platform-id 0x19120000)
 
 #### v1.0.17
 - Added C610/X99 Audio Controller r1 support by masking to 8ca0
