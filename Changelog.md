@@ -8,6 +8,7 @@ AppleALC Changelog
 - Added Laptop Intel Broadwell HD5500/5600 HDMI audio support (ig-platform-id 0x16260006)
 - Added Laptop Intel Skylake HD515/520/530 HDMI audio support (ig-platform-id 0x191E0000, 0x19160000)
 - Added Desktop Intel Skylake HD530 HDMI audio support (ig-platform-id 0x19120000)
+- Fixed Creative CA0132 macOS 10.12 compatibility issue
 
 #### v1.0.17
 - Added C610/X99 Audio Controller r1 support by masking to 8ca0
