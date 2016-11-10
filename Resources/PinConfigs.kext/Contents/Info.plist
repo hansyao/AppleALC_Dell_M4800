@@ -1698,6 +1698,18 @@
 					<key>CodecID</key>
 					<integer>283904146</integer>
 					<key>Comment</key>
+					<string>Custom ALC892 for GA-Z87-HD3 by BIM167</string>
+					<key>ConfigData</key>
+					<data>IRccUCEXHXEhFx5EIRcfASEnHPAhJx0AISceACEnH0AhRxwQIUcdQCFHHhEhRx+QIVccICFXHRAhVx4BIVcfASFnHDAhZx1gIWceASFnHwEhdxzwIXcdACF3HgAhdx9AIYccYCGHHZAhhx6gIYcfkCGXHIAhlx2QIZcegSGXHwIhpxxwIacdMCGnHoEhpx8BIbccQCG3HUAhtx4hIbcfAiHHHPAhxx0AIcceACHHH0Ah5xzwIecdACHnHgAh5x9AIfcckCH3HXEh9x7EIfcfAQ==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>92</integer>
+				</dict>
+				<dict>
+					<key>CodecID</key>
+					<integer>283904146</integer>
+					<key>Comment</key>
 					<string>Custom ALC892 DNS P150EM by Constanta</string>
 					<key>ConfigData</key>
 					<data>AUccEAFHHUABRx4RAUcfAQGHHHABhx2QAYcegQGHHwEBlxxgAZcdAQGXHqABlx+QAaccgAGnHTABpx6BAacfAQG3HCABtx1AAbceIQG3HwEB5xyQAecd4AHnHkUB5x8B</data>
