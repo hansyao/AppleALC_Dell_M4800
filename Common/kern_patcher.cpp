@@ -219,6 +219,8 @@ void KernelPatcher::applyLookupPatch(const LookupPatch *patch) {
 		return;
 	}
 	
+	KernelPatcher::releaseMemoryLock();
+	
 	for (size_t i = 0; curr < off && (i < patch->count || patch->count == 0); i++) {
 		while (curr < off && memcmp(curr, patch->find, patch->size))
 			curr++;
@@ -230,6 +232,8 @@ void KernelPatcher::applyLookupPatch(const LookupPatch *patch) {
 			changes++;
 		}
 	}
+	
+	KernelPatcher::obtainMemoryLock();
 		
 	if (kinfo->setKernelWriting(false) != KERN_SUCCESS) {
 		SYSLOG("patcher @ lookup patching failed to disable kernel writing");

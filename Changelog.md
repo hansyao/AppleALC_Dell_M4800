@@ -10,6 +10,7 @@ AppleALC Changelog
 - Added Desktop Intel Skylake HD530 HDMI audio support (ig-platform-id 0x19120000)
 - Fixed Creative CA0132 macOS 10.12 compatibility issue
 - Added ALC892 layout-id 92 for GA-Z87-HD3 by BIM167
+- Another rare kernel panic fixed on 10.12 
 
 #### v1.0.17
 - Added C610/X99 Audio Controller r1 support by masking to 8ca0
