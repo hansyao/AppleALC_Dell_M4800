@@ -1026,6 +1026,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>vusun123 - ALC 295 for Skylake HP Pavilion</string>
+					<key>CodecID</key>
+					<integer>283902613</integer>
+					<key>ConfigData</key>
+					<data>ASccMAEnHQABJx6gAScfuQFHHFABRx0AAUceFwFHH5ABRwwCAZccQAGXHRABlx6BAZcfAAIXHCACFx0QAhceIQIXHwA=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - Realtek ALC298 SP4 - ComboJack</string>
 					<key>CodecID</key>
 					<integer>283902616</integer>
