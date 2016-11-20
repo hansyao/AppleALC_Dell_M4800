@@ -2223,6 +2223,30 @@
 					<integer>12</integer>
 				</dict>
 				<dict>
+					<key>CodecID</key>
+					<integer>287143429</integer>
+					<key>Codec</key>
+					<string>Custom IDT 92HD81B1X5 by Sergey_Galan for HP ProBook 4520s</string>
+					<key>ConfigData</key>
+					<data>AKccIACnHRAApx6BAKcfAQC3HFAAtx0QALceIQC3HwEA1xwwANcdAQDXHhAA1x+QAOcc8ADnHQAA5x4AAOcfQAD3HPAA9x0AAPceAAD3H0ABBxzwAQcdAAEHHgABBx9AARccEAEXHQEBFx6gARcfkAH3HPAB9x0AAfceAAH3H0ACBxzwAgcdAAIHHgACBx9AAMcc8ADHHQAAxx4AAMcfQA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>20</integer>
+				</dict>
+				<dict>
+					<key>CodecID</key>
+					<integer>287143429</integer>
+					<key>Codec</key>
+					<string>Custom IDT 92HD81B1X5 by Sergey_Galan for HP DV6-6169er</string>
+					<key>ConfigData</key>
+					<data>AMccIADHHRAAxx6BAMcfAQC3HFAAtx0QALceIQC3HwEA9xwwAPcdAQD3HhAA9x+QAOcc8ADnHQAA5x4AAOcfQADXHPAA1x0AANceAADXH0ABBxzwAQcdAAEHHgABBx9AARccEAEXHQEBFx6gARcfkAH3HPAB9x0AAfceAAH3H0ACBxzwAgcdAAIHHgACBx9AAKcc8ACnHQAApx4AAKcfQA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>21</integer>
+				</dict>
+				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>

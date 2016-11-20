@@ -34,6 +34,22 @@
 				<key>Path</key>
 				<string>layout12.xml.zlib</string>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IDT 92HD81B1X5 by Sergey_Galan for HP ProBook 4520s</string>
+				<key>Id</key>
+				<integer>20</integer>
+				<key>Path</key>
+				<string>layout20.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IDT 92HD81B1X5 by Sergey_Galan for HP DV6-6169er</string>
+				<key>Id</key>
+				<integer>21</integer>
+				<key>Path</key>
+				<string>layout21.xml.zlib</string>
+			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
@@ -41,7 +57,7 @@
 				<key>Id</key>
 				<integer>3</integer>
 				<key>Path</key>
-				<string>Platforms3.xml.zlib</string>
+				<string>PlatformsM.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -58,6 +74,22 @@
 				<integer>12</integer>
 				<key>Path</key>
 				<string>Platforms12.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IDT 92HD81B1X5 by Sergey_Galan for HP ProBook 4520s</string>
+				<key>Id</key>
+				<integer>20</integer>
+				<key>Path</key>
+				<string>Platforms20.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IDT 92HD81B1X5 by Sergey_Galan for HP DV6-6169er</string>
+				<key>Id</key>
+				<integer>21</integer>
+				<key>Path</key>
+				<string>Platforms21.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
