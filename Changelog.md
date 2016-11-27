@@ -13,6 +13,7 @@ AppleALC Changelog
 - Another rare kernel panic fixed on 10.12 
 - Added ALC295 codec support layout-id 28 for Skylake HP Pavilion by vusun123
 - Added IDT92HD81B1X5 layout-id 20 and 21 by Sergey_Galan for HP ProBook 4520s and HP DV6-6169er
+- Added IDT92HD81B1X5 layout-id 28 by Gujiangjiang for HP Pavilion g4 1000 series
 
 #### v1.0.17
 - Added C610/X99 Audio Controller r1 support by masking to 8ca0

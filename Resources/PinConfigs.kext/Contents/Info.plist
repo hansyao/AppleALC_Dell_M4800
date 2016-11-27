@@ -2250,6 +2250,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Custom IDT 92HD81B1X5 by Gujiangjiang for HP Pavilion g4 1000 series</string>
+					<key>CodecID</key>
+					<integer>287143429</integer>
+					<key>ConfigData</key>
+					<data>ARccAAEXHQEBFx6jARcfmQDHHBAAxx0QAMcegQDHHwEA1xwgANcdAQDXHhMA1x+ZALccMAC3HRAAtx4hALcfAQFHDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - IDT 92HD75B2X5</string>
 					<key>CodecID</key>
 					<integer>287143432</integer>
