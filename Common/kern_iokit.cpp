@@ -37,6 +37,7 @@ namespace IOUtil {
 	}
 	
 	int getComputerModel() {
+		KernelPatcher::releaseMemoryLock();
 		auto entry = IORegistryEntry::fromPath("/", gIODTPlane);
 		if (entry) {
 			auto prop =  entry->getProperty("compatible");
@@ -44,6 +45,7 @@ namespace IOUtil {
 				auto data = OSDynamicCast(OSData, prop);
 				if (data) {
 					//TODO: make this more reliable
+					KernelPatcher::obtainMemoryLock();
 					if (strstr(static_cast<const char *>(data->getBytesNoCopy()), "Book", strlen("Book"))) {
 						return ComputerModel::ComputerLaptop;
 					} else {
@@ -57,6 +59,7 @@ namespace IOUtil {
 			}
 		}
 		DBGLOG("ioutil @ failed to get DT entry");
+		KernelPatcher::obtainMemoryLock();
 		return ComputerModel::ComputerAny;
 	}
 	
