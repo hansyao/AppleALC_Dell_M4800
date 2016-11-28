@@ -404,7 +404,7 @@ void KernelPatcher::onKextSummariesUpdated() {
 			}
 		}
 		
-		if (OSDecrementAtomic(&updateSummariesEntryCount) != 1) {
+		if (getKernelVersion() >= KernelVersion::Sierra && OSDecrementAtomic(&updateSummariesEntryCount) != 1) {
 			panic("onKextSummariesUpdated left another time");
 		}
 	}
