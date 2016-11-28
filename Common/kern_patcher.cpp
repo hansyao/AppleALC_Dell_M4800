@@ -12,6 +12,7 @@
 
 #ifdef KEXTPATCH_SUPPORT
 static KernelPatcher *that {nullptr};
+static SInt32 updateSummariesEntryCount;
 #endif /* KEXTPATCH_SUPPORT */
 
 KernelPatcher::Error KernelPatcher::getError() {
@@ -144,30 +145,6 @@ void KernelPatcher::setupKextListening() {
 	// We have already done this
 	if (that) return;
 	
-	// Lock primitives are needed to protect us from vm interrupts
-	if (getKernelVersion() >= KernelVersion::Sierra) {
-		usimpleLock = reinterpret_cast<void(*)(void *)>(solveSymbol(KernelID, "_usimple_lock"));
-		usimpleUnlock = reinterpret_cast<void(*)(void *)>(solveSymbol(KernelID, "_usimple_unlock"));
-		vmAllocationSitesLock = reinterpret_cast<void *>(solveSymbol(KernelID, "_vm_allocation_sites_lock"));
-		
-		if (!usimpleLock || !usimpleUnlock || !vmAllocationSitesLock) {
-			SYSLOG("patcher @ unable to obtain locking primitives lock %d unlock %d vmlock %d",
-				usimpleLock != nullptr, usimpleUnlock != nullptr, vmAllocationSitesLock != nullptr);
-			usimpleLock = usimpleUnlock = nullptr;
-			code = Error::NoSymbolFound;
-			return;
-		}
-	}
-	
-	mach_vm_address_t s = solveSymbol(KernelID, "_OSKextLoadedKextSummariesUpdated");
-	
-	if (s) {
-		DBGLOG("patcher @ _OSKextLoadedKextSummariesUpdated address %llX value %llX", s, *reinterpret_cast<uint64_t *>(s));
-	} else {
-		code = Error::NoSymbolFound;
-		return;
-	}
-	
 	loadedKextSummaries = reinterpret_cast<OSKextLoadedKextSummaryHeader **>(solveSymbol(KernelID, "_gLoadedKextSummaries"));
 
 	if (loadedKextSummaries) {
@@ -176,8 +153,27 @@ void KernelPatcher::setupKextListening() {
 		code = Error::NoSymbolFound;
 		return;
 	}
-
-	routeFunction(s, reinterpret_cast<mach_vm_address_t>(onKextSummariesUpdated));
+	
+	bool hookOuter = getKernelVersion() >= KernelVersion::Sierra;
+	
+	mach_vm_address_t s = solveSymbol(KernelID, hookOuter ?
+									  "__ZN6OSKext25updateLoadedKextSummariesEv" :
+									  "_OSKextLoadedKextSummariesUpdated");
+	
+	if (s) {
+		DBGLOG("patcher @ kext summaries (%d) address %llX value %llX", hookOuter, s, *reinterpret_cast<uint64_t *>(s));
+	} else {
+		code = Error::NoSymbolFound;
+		return;
+	}
+	
+	if (hookOuter) {
+		orgUpdateLoadedKextSummaries = reinterpret_cast<void(*)(void)>(
+			routeFunction(s, reinterpret_cast<mach_vm_address_t>(onKextSummariesUpdated), true, true)
+		);
+	} else {
+		routeFunction(s, reinterpret_cast<mach_vm_address_t>(onKextSummariesUpdated));
+	}
 	
 	if (getError() == Error::NoError) {
 		// Allow static functions to access the patcher body
@@ -219,8 +215,6 @@ void KernelPatcher::applyLookupPatch(const LookupPatch *patch) {
 		return;
 	}
 	
-	KernelPatcher::releaseMemoryLock();
-	
 	for (size_t i = 0; curr < off && (i < patch->count || patch->count == 0); i++) {
 		while (curr < off && memcmp(curr, patch->find, patch->size))
 			curr++;
@@ -233,8 +227,6 @@ void KernelPatcher::applyLookupPatch(const LookupPatch *patch) {
 		}
 	}
 	
-	KernelPatcher::obtainMemoryLock();
-		
 	if (kinfo->setKernelWriting(false) != KERN_SUCCESS) {
 		SYSLOG("patcher @ lookup patching failed to disable kernel writing");
 		code = Error::MemoryProtection;
@@ -320,28 +312,6 @@ void KernelPatcher::tempExecutableMemory() {
 	asm (".rept " xStringify(TempExecutableMemorySize) "\nnop\n.endr");
 }
 
-#ifdef KEXTPATCH_SUPPORT
-
-void KernelPatcher::releaseMemoryLock() {
-	if (that && that->wasAcquired && that->vmAllocationSitesLock && getKernelVersion() >= KernelVersion::Sierra) {
-		that->usimpleUnlock(that->vmAllocationSitesLock);
-	}
-}
-
-void KernelPatcher::obtainMemoryLock() {
-	if (that && that->wasAcquired && that->vmAllocationSitesLock && getKernelVersion() >= KernelVersion::Sierra) {
-		that->usimpleLock(that->vmAllocationSitesLock);
-	}
-}
-
-#else
-
-void KernelPatcher::releaseMemoryLock() {}
-
-void KernelPatcher::obtainMemoryLock() {}
-
-#endif /* KEXTPATCH_SUPPORT */
-
 mach_vm_address_t KernelPatcher::createTrampoline(mach_vm_address_t func, size_t min) {
 	if (!disasm.init()) {
 		SYSLOG("patcher @ failed to use disasm");
@@ -390,13 +360,26 @@ mach_vm_address_t KernelPatcher::createTrampoline(mach_vm_address_t func, size_t
 #ifdef KEXTPATCH_SUPPORT
 void KernelPatcher::onKextSummariesUpdated() {
 	if (that) {
-		// macOS 10.12 generates an interrupt during this call causing the boot to hang
-		// unless we take the vm allocation lock
-		if (getKernelVersion() >= KernelVersion::Sierra) {
-			that->usimpleLock(that->vmAllocationSitesLock);
-			that->wasAcquired = true;
-		}
+		// macOS 10.12 generates an interrupt during this call but unlike 10.11 and below
+		// it never stops handling interrupts hanging forever inside hndl_allintrs.
+		// This happens even with cpus=1, and the reason is not fully understood.
+		//
+		// For this reason on 10.12 and above the outer function is routed, and so far it
+		// seems to cause fewer issues. Regarding syncing:
+		//  - the only place modifying gLoadedKextSummaries is updateLoadedKextSummaries;
+		//  - updateLoadedKextSummaries is called from load/unload separately;
+		//  - sKextSummariesLock is not exported or visible.
+		// As a result no syncing should be necessary but there are guards for future
+		// changes and in case of any misunderstanding.
 		
+		if (getKernelVersion() >= KernelVersion::Sierra) {
+			if (OSIncrementAtomic(&updateSummariesEntryCount) != 0) {
+				panic("onKextSummariesUpdated entered another time");
+			}
+			
+			that->orgUpdateLoadedKextSummaries();
+		}
+
 		DBGLOG("patcher @ invoked at kext loading/unloading");
 		
 		if (that->khandlers.size() > 0 && that->loadedKextSummaries) {
@@ -421,11 +404,8 @@ void KernelPatcher::onKextSummariesUpdated() {
 			}
 		}
 		
-		//FIXME: we should not unlock this but instead avoid the lock in the caller
-		//Fortunately there does not appear to be enough time for anybody to 
-		if (getKernelVersion() >= KernelVersion::Sierra) {
-			that->usimpleUnlock(that->vmAllocationSitesLock);
-			that->wasAcquired = false;
+		if (OSDecrementAtomic(&updateSummariesEntryCount) != 1) {
+			panic("onKextSummariesUpdated left another time");
 		}
 	}
 }

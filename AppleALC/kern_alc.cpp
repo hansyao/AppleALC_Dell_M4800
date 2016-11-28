@@ -285,14 +285,12 @@ bool AlcEnabler::grabCodecs() {
 			sect = IOUtil::findEntryByPrefix(sect, ctlr->lookup->tree[i], gIOServicePlane,
 											 last ? [](IORegistryEntry *e) {
 				
-				KernelPatcher::releaseMemoryLock();
 				auto ven = e->getProperty("IOHDACodecVendorID");
 				auto rev = e->getProperty("IOHDACodecRevisionID");
 				
 				
 				if (!ven || !rev) {
 					DBGLOG("alc @ codec entry misses properties, skipping");
-					KernelPatcher::obtainMemoryLock();
 					return false;
 				}
 				
@@ -301,15 +299,12 @@ bool AlcEnabler::grabCodecs() {
 				
 				if (!venNum || !revNum) {
 					SYSLOG("alc @ codec entry contains invalid properties, skipping");
-					KernelPatcher::obtainMemoryLock();
 					return true;
 				}
 				
 				auto ci = AlcEnabler::CodecInfo::create(that->currentController,
 														venNum->unsigned64BitValue(),
 														revNum->unsigned32BitValue());
-				KernelPatcher::obtainMemoryLock();
-
 				if (ci) {
 					if (!that->codecs.push_back(ci)) {
 						SYSLOG("alc @ failed to store codec info for %X:%X:%X", ci->vendor, ci->codec, ci->revision);

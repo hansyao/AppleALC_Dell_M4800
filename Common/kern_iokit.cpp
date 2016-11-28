@@ -19,16 +19,12 @@ namespace IOUtil {
 	OSSerialize *getProperty(IORegistryEntry *entry, const char *property) {
 		auto value = entry->getProperty(property);
 		if (value) {
-			KernelPatcher::releaseMemoryLock();
 			auto s = OSSerialize::withCapacity(PAGE_SIZE);
-			KernelPatcher::obtainMemoryLock();
 			if (value->serialize(s)) {
 				return s;
 			} else {
 				SYSLOG("ioutil @ failed to serialise %s property", property);
-				KernelPatcher::releaseMemoryLock();
 				s->release();
-				KernelPatcher::obtainMemoryLock();
 			}
 		} else {
 			DBGLOG("ioutil @ failed to get %s property", property);
@@ -37,7 +33,6 @@ namespace IOUtil {
 	}
 	
 	int getComputerModel() {
-		KernelPatcher::releaseMemoryLock();
 		auto entry = IORegistryEntry::fromPath("/", gIODTPlane);
 		if (entry) {
 			auto prop =  entry->getProperty("compatible");
@@ -45,7 +40,6 @@ namespace IOUtil {
 				auto data = OSDynamicCast(OSData, prop);
 				if (data) {
 					//TODO: make this more reliable
-					KernelPatcher::obtainMemoryLock();
 					if (strstr(static_cast<const char *>(data->getBytesNoCopy()), "Book", strlen("Book"))) {
 						return ComputerModel::ComputerLaptop;
 					} else {
@@ -59,19 +53,14 @@ namespace IOUtil {
 			}
 		}
 		DBGLOG("ioutil @ failed to get DT entry");
-		KernelPatcher::obtainMemoryLock();
 		return ComputerModel::ComputerAny;
 	}
 	
 	IORegistryEntry *findEntryByPrefix(const char *path, const char *prefix, const IORegistryPlane *plane, bool (*proc)(IORegistryEntry *), bool brute) {
-		KernelPatcher::releaseMemoryLock();
 		auto entry = IORegistryEntry::fromPath(path, plane);
-		KernelPatcher::obtainMemoryLock();
 		if (entry) {
 			auto res = findEntryByPrefix(entry, prefix, plane, proc, brute);
-			KernelPatcher::releaseMemoryLock();
 			entry->release();
-			KernelPatcher::obtainMemoryLock();
 			return res;
 		}
 		DBGLOG("ioutil @ failed to get %s entry", path);
@@ -87,15 +76,12 @@ namespace IOUtil {
 		
 		do {
 			bruteCount++;
-			KernelPatcher::releaseMemoryLock();
 			auto iterator = entry->getChildIterator(plane);
-			KernelPatcher::obtainMemoryLock();
 			
 			if (iterator) {
 				size_t len = strlen(prefix);
-				while (KernelPatcher::releaseMemoryLock(), (res = OSDynamicCast(IORegistryEntry, iterator->getNextObject())) != nullptr) {
+				while ((res = OSDynamicCast(IORegistryEntry, iterator->getNextObject())) != nullptr) {
 					const char *resname = res->getName();
-					KernelPatcher::obtainMemoryLock();
 					
 					//DBGLOG("ioutil @ iterating over %s", resname);
 					if (!strncmp(prefix, resname, len)) {
@@ -104,7 +90,6 @@ namespace IOUtil {
 							if (bruteCount > 1)
 								DBGLOG("ioutil @ bruted %s value in %zu attempts", prefix, bruteCount);
 							if (!proc) {
-								KernelPatcher::releaseMemoryLock();
 								break;
 							}
 						}
@@ -112,8 +97,6 @@ namespace IOUtil {
 				}
 				
 				iterator->release();
-				KernelPatcher::obtainMemoryLock();
-				
 			} else {
 				SYSLOG("ioutil @ failed to iterate over entry");
 				return nullptr;

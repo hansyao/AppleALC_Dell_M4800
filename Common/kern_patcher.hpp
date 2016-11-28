@@ -204,16 +204,6 @@ public:
 	 */
 	mach_vm_address_t routeFunction(mach_vm_address_t from, mach_vm_address_t to, bool buildWrapper=false, bool kernelRoute=true);
 
-	/**
-	 *  External interface to get the memory allocation lock released
-	 */
-	static void releaseMemoryLock();
-	
-	/**
-	 *  External interface to get the memory allocation lock obtain again
-	 */
-	static void obtainMemoryLock();
-	
 private:
 
 	/**
@@ -253,14 +243,10 @@ private:
 	 */
 	OSKextLoadedKextSummaryHeader **loadedKextSummaries {nullptr};
 	
-	
 	/**
-	 *  Lock primitives taken from the kernel
+	 *  A pointer to kext summaries update
 	 */
-	void (*usimpleLock)(void *l) {nullptr};
-	void (*usimpleUnlock)(void *l) {nullptr};
-	void *vmAllocationSitesLock {nullptr};
-	bool wasAcquired {false};
+	void (*orgUpdateLoadedKextSummaries)(void) {nullptr};
 	
 #endif /* KEXTPATCH_SUPPORT */
 	

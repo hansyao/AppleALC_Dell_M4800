@@ -34,9 +34,7 @@ namespace IOUtil {
 	 */
 	template <typename T>
 	bool getOSDataValue(IORegistryEntry *sect, const char *name, T &value) {
-		KernelPatcher::releaseMemoryLock();
 		auto obj = sect->getProperty(name);
-		KernelPatcher::obtainMemoryLock();
 		if (obj) {
 			auto data = OSDynamicCast(OSData, obj);
 			if (data && data->getLength() == sizeof(T)) {

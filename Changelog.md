@@ -2,6 +2,7 @@ AppleALC Changelog
 ==================
 #### v1.0.18
 - Improved operating system detection
+- Decent workaround for 10.12 issues and panics
 - Added ALC888S-VD layout-it 11 and 28 for Medion P9614 and E7216 by MacPeet
 - Added initial support AD1984 layout-id 11 for IBM_Lenovo_ThinkPad_T61 by MacPeet
 - Added ALC272 layout-id 11 for Lenovo B470 by Sam Chen
@@ -10,7 +11,6 @@ AppleALC Changelog
 - Added Desktop Intel Skylake HD530 HDMI audio support (ig-platform-id 0x19120000)
 - Fixed Creative CA0132 macOS 10.12 compatibility issue
 - Added ALC892 layout-id 92 for GA-Z87-HD3 by BIM167
-- Another rare kernel panic fixed on 10.12 
 - Added ALC295 codec support layout-id 28 for Skylake HP Pavilion by vusun123
 - Added IDT92HD81B1X5 layout-id 20 and 21 by Sergey_Galan for HP ProBook 4520s and HP DV6-6169er
 - Added IDT92HD81B1X5 layout-id 28 by Gujiangjiang for HP Pavilion g4 1000 series
