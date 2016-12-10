@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.0.19
+- Added ALC269 layout-id 35 for Samsung NP350V5C-S0URU by Mirone
+
 #### v1.0.18
 - Improved operating system detection
 - Decent workaround for 10.12 issues and panics
