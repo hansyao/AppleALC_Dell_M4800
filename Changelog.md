@@ -2,6 +2,7 @@ AppleALC Changelog
 ==================
 #### v1.0.19
 - Added ALC269 layout-id 35 for Samsung NP350V5C-S0URU by Mirone
+- Added Conexant CX20755 layout-id 3 by Mirone 
 
 #### v1.0.18
 - Improved operating system detection

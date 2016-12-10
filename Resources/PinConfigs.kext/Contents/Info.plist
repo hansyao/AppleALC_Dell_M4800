@@ -2084,6 +2084,20 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Mirone - Conexant CX20755</string>
+					<key>CodecID</key>
+					<integer>351359251</integer>
+					<key>ConfigData</key>
+					<data>AXccEAF3HQABdx4XAXcfkAGnHCABpx0AAacepgGnH5UBhxwwAYcdkAGHHosBhx8CAWccQAFnHUABZx4rAWcfAg==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
 					<data>AQAAAA==</data>
 					<key>Codec</key>
 					<string>Mirone - Conexant CX20756</string>
