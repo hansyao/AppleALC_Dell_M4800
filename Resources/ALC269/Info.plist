@@ -158,6 +158,14 @@
 				<key>Path</key>
 				<string>layout35.xml.zlib</string>
 			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>76</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VB C16B by jimmy19990</string>
+				<key>Path</key>
+				<string>layout76.xml.zlib</string>
+			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
@@ -304,6 +312,14 @@
 				<string>Custom ALC269VC for Samsung NP350V5C-S0URU by Mirone</string>
 				<key>Path</key>
 				<string>PlatformsM35.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>76</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VB C16B by jimmy19990</string>
+				<key>Path</key>
+				<string>Platforms76.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
