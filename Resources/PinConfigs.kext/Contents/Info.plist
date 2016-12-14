@@ -31,6 +31,18 @@
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283902569</integer>
+					<key>ConfigData</key>
+					<data>AUccEAFHHQEBRx4TAUcfkAGHHCABhx0QAYcegQGHHwEBlxwgAZcdAQGXHqABlx+QAhccEAIXHRACFx4hAhcfAQFHDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>76</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Creative CA0132 by Andres ZeroCross</string>
 					<key>CodecID</key>
