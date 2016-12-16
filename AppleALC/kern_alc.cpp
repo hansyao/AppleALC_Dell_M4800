@@ -107,6 +107,11 @@ bool AlcEnabler::loadKexts() {
 void AlcEnabler::processKext(size_t index, mach_vm_address_t address, size_t size) {
 	patcher.updateRunningInfo(index, address, size);
 	
+	if (userPatchSize > 0) {
+		DBGLOG("alc @ applying user patches");
+		applyPatches(index, userPatch, userPatchSize);
+	}
+	
 	if (patcher.getError() == KernelPatcher::Error::NoError) {
 		if (!(progressState & ProcessingState::ControllersLoaded)) {
 			grabControllers();

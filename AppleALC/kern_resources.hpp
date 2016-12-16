@@ -99,5 +99,8 @@ extern const size_t controllerModSize;
 extern VendorModInfo vendorMod[];
 extern const size_t vendorModSize;
 
+extern KextPatch userPatch[];
+extern const size_t userPatchSize;
+
 
 #endif /* kern_resource_hpp */

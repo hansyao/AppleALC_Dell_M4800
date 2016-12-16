@@ -28030,3 +28030,10 @@ ControllerModInfo controllerMod[] {
 };
 
 const size_t controllerModSize {16};
+
+// UserPatches section
+
+KextPatch userPatch[] {
+};
+
+const size_t userPatchSize {0};

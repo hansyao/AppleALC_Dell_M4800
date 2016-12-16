@@ -183,14 +183,13 @@ static NSString *generateLayouts(NSString *file, NSDictionary *codecDict, NSStri
 	return @"nullptr, 0";
 }
 
-static NSString *generatePatches(NSString *file, NSDictionary *codecDict, NSDictionary *kextIndexes) {
+static NSString *generatePatches(NSString *file, NSArray *patches, NSDictionary *kextIndexes, long *num=nullptr, NSString *header=nullptr) {
 	static size_t patchIndex {0};
 	static size_t patchBufIndex {0};
-	
-	NSArray *patches = [codecDict objectForKey:@"Patches"];
 
 	if (patches) {
-		auto pStr = [[NSMutableString alloc] initWithFormat:@"static const KextPatch patches%zu[] {\n", patchIndex];
+		auto pStr = [NSMutableString alloc];
+		pStr = header ? [pStr initWithString:header] : [pStr initWithFormat:@"static const KextPatch patches%zu[] {\n", patchIndex];
 		auto pbStr = [[NSMutableString alloc] init];
 		for (NSDictionary *p in patches) {
             NSData *f[] = {[p objectForKey:@"Find"], [p objectForKey:@"Replace"]};
@@ -223,6 +222,8 @@ static NSString *generatePatches(NSString *file, NSDictionary *codecDict, NSDict
 			];
 		}
 		[pStr appendString:@"};\n"];
+		if (num)
+			*num = [patches count];
 		
 		appendFile(file, pbStr);
 		appendFile(file, pStr);
@@ -253,7 +254,7 @@ static size_t generateCodecs(NSString *file, NSString *vendor, NSString *path, N
 				auto revs = generateRevisions(file, codecDict);
 				auto platforms = generatePlatforms(file, codecDict, baseDirStr);
 				auto layouts = generateLayouts(file, codecDict, baseDirStr);
-				auto patches = generatePatches(file, codecDict, kextIndexes);
+				auto patches = generatePatches(file, [codecDict objectForKey:@"Patches"], kextIndexes);
 			
 				[codecModSection appendFormat:@"\t{ \"%@\", 0x%X, %@, %@, %@, %@ },\n",
 				 [codecDict objectForKey:@"CodecName"],
@@ -278,7 +279,7 @@ static void generateControllers(NSString *file, NSArray *ctrls, NSDictionary *ve
 
 	for (NSDictionary *entry in ctrls) {
 		auto revs = generateRevisions(file, entry);
-		auto patches = generatePatches(file, entry, kextIndexes);
+		auto patches = generatePatches(file, [entry objectForKey:@"Patches"], kextIndexes);
 		
 		auto model = @"IOUtil::ComputerModel::ComputerAny";
 		if ([entry objectForKey:@"Model"]) {
@@ -301,6 +302,14 @@ static void generateControllers(NSString *file, NSArray *ctrls, NSDictionary *ve
 	[ctrlModSection appendString:@"};\n"];
 	[ctrlModSection appendFormat:@"\nconst size_t controllerModSize {%lu};\n", [ctrls count]];
 	appendFile(file, ctrlModSection);
+}
+
+static void generateUserPatches(NSString *file, NSArray *userp, NSDictionary *kextIndexes) {
+	appendFile(file, @"\n// UserPatches section\n\n");
+	
+	long count;
+	generatePatches(file, userp, kextIndexes, &count, @"KextPatch userPatch[] {\n");
+	appendFile(file, [[NSMutableString alloc] initWithFormat:@"\nconst size_t userPatchSize {%lu};\n", count]);
 }
 
 static void generateVendors(NSString *file, NSDictionary *vendors, NSString *path, NSDictionary *kextIndexes) {
@@ -356,12 +365,14 @@ int main(int argc, const char * argv[]) {
 	auto vendorsCfg = [[NSString alloc] initWithFormat:@"%@/Vendors.plist", basePath];
 	auto kextsCfg = [[NSString alloc] initWithFormat:@"%@/Kexts.plist",basePath];
 	auto ctrlsCfg = [[NSString alloc] initWithFormat:@"%@/Controllers.plist",basePath];
+	auto userCfg = [[NSString alloc] initWithFormat:@"%@/UserPatches.plist",basePath];
 	auto outputCpp = [[NSString alloc] initWithUTF8String:argv[2]];
 	
 	auto lookup = [NSArray arrayWithContentsOfFile:lookupCfg];
 	auto vendors = [NSDictionary dictionaryWithContentsOfFile:vendorsCfg];
 	auto kexts = [NSDictionary dictionaryWithContentsOfFile:kextsCfg];
 	auto ctrls = [NSArray arrayWithContentsOfFile:ctrlsCfg];
+	auto userp = [NSArray arrayWithContentsOfFile:userCfg];
 	
 	if (!lookup || !vendors || !kexts || !ctrls)
 		ERROR("Missing resource data (lookup:%p, vendors:%p, kexts:%p, ctrls:%p)", lookup, vendors, kexts, ctrls);
@@ -374,4 +385,5 @@ int main(int argc, const char * argv[]) {
 	auto kextIndexes = generateKexts(outputCpp, kexts);
 	generateVendors(outputCpp, vendors, basePath, kextIndexes);
 	generateControllers(outputCpp, ctrls, vendors, kextIndexes);
+	generateUserPatches(outputCpp, userp, kextIndexes);
 }
