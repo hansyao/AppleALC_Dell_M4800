@@ -88,6 +88,14 @@
 			</dict>
 			<dict>
 				<key>Id</key>
+				<integer>11</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VB for Dell Precision Workstation T1600 - Mosser</string>
+				<key>Path</key>
+				<string>layout11.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
 				<integer>13</integer>
 				<key>Comment</key>
 				<string>InsanelyDeepak - Realtek ALC269VC for Samsung NP350V5C-S08IT</string>
@@ -240,6 +248,14 @@
 				<string>Miron Laptop patch ALC269-VB v4</string>
 				<key>Path</key>
 				<string>PlatformsM9.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>11</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VB for Dell Precision Workstation T1600 - Mosser</string>
+				<key>Path</key>
+				<string>Platforms11.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Id</key>

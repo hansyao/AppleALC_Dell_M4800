@@ -554,6 +554,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Mosser - ALC269VB Dell Precision Workstation T1600</string>
+					<key>CodecID</key>
+					<integer>283902569</integer>
+					<key>ConfigData</key>
+					<data>AUccEAFHHQEBRx4TAUcfmQG3HCABtx1AAbceAQG3HwECFxwvAhcdQAIXHiECFx8CAYccMAGHHZgBhx6hAYcfAgGXHEABlx2YAZceoQGXHwE=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>InsanelyDeepak - Realtek ALC269VC for Samsung NP350V5C-S08IT</string>
 					<key>CodecID</key>
 					<integer>283902569</integer>

@@ -5,6 +5,7 @@ AppleALC Changelog
 - Added Conexant CX20755 layout-id 3 by Mirone
 - Added ALC269VB layout-id 76 for ENZ C16B by jimmy19990
 - Added UserPatches.plist for internal testing
+- Added ALC269VB layout-id 11 for Dell Precision Workstation T1600 by Mosser
 
 #### v1.0.18
 - Improved operating system detection
