@@ -7,6 +7,8 @@ AppleALC Changelog
 - Added UserPatches.plist for internal testing
 - Added ALC269VB layout-id 11 for Dell Precision Workstation T1600 by Mosser
 - Recovered Creative CA0132 macOS 10.12 patch due to caused issues
+- Maximised zlib resource compression level
+- Added stripping of tabs and new lines in resources
 
 #### v1.0.18
 - Improved operating system detection

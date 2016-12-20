@@ -189,6 +189,11 @@
 		1CF01C901C8CF97F002DCEA3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1CF01C921C8CF997002DCEA3 /* Changelog.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Changelog.md; sourceTree = "<group>"; };
 		1CF01C931C8DF02E002DCEA3 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		CE4E88071E099CC8009AC98D /* merge_pinconfigs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = merge_pinconfigs.sh; sourceTree = "<group>"; };
+		CE4E88081E099CC8009AC98D /* zlib.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = zlib.pl; sourceTree = "<group>"; };
+		CE4E88091E099CC8009AC98D /* zlib_optimize.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zlib_optimize.command; sourceTree = "<group>"; };
+		CE4E880A1E099CC8009AC98D /* zlib_pack.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zlib_pack.command; sourceTree = "<group>"; };
+		CE4E880B1E099CC8009AC98D /* zlib_unpack.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zlib_unpack.command; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				1CF01C911C8CF982002DCEA3 /* Docs */,
+				CE4E88061E099CC8009AC98D /* Tools */,
 				1C642F581C8F1BF2006B4C51 /* PinConfigs */,
 				1CD5B2B71C89BEB000E45373 /* Resources */,
 				1C3E7AC91C84B5E500A6448A /* capstone */,
@@ -384,6 +390,18 @@
 				1CF01C921C8CF997002DCEA3 /* Changelog.md */,
 			);
 			name = Docs;
+			sourceTree = "<group>";
+		};
+		CE4E88061E099CC8009AC98D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				CE4E88071E099CC8009AC98D /* merge_pinconfigs.sh */,
+				CE4E88081E099CC8009AC98D /* zlib.pl */,
+				CE4E88091E099CC8009AC98D /* zlib_optimize.command */,
+				CE4E880A1E099CC8009AC98D /* zlib_pack.command */,
+				CE4E880B1E099CC8009AC98D /* zlib_unpack.command */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,7 +499,7 @@
 		1C748C1E1C21952C0024EED2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = vit9696;
 				TargetAttributes = {
 					1C748C261C21952C0024EED2 = {
