@@ -86,12 +86,6 @@ bool PRODUCT_NAME::init(OSDictionary *dict) {
 }
 
 bool PRODUCT_NAME::start(IOService *provider) {
-#ifdef DEBUG
-	SYSLOG("init @ version " xStringify(MODULE_VERSION) " DEBUG build");
-#else
-	SYSLOG("init @ version " xStringify(MODULE_VERSION));
-#endif
-
 	if (config.mode == Configuration::StartMode::IOKit) {
 		DBGLOG("init @ initialising with IOKit mode");
 		
