@@ -314,6 +314,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Jake Lo - Realtek ALC236</string>
+					<key>CodecID</key>
+					<integer>283902518</integer>
+					<key>ConfigData</key>
+					<data>ASccEAEnHQEBJx6gAScfkAE3HPABNx0AATceAAE3H0ABRxwwAUcdAQFHHhABRx+QAUcMAgGHHPABhx0AAYceAAGHH0ABlxwgAZcdMAGXHosBlx8BAacc8AGnHQABpx4AAacfQAG3HPABtx0AAbceAAG3H0AB1xzwAdcdAAHXHgAB1x9AAecc8AHnHQAB5x4AAecfQAIXHEACFx1AAhceKwIXHwECFwwCABcgAAAXIXIAFyJrABcjEA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - Realtek ALC255</string>
 					<key>CodecID</key>
 					<integer>283902549</integer>

@@ -9,6 +9,7 @@ AppleALC Changelog
 - Recovered Creative CA0132 macOS 10.12 patch due to caused issues
 - Maximised zlib resource compression level
 - Added stripping of tabs and new lines in resources
+- Added ALC236 layout-id 11 Initial support by Jake Lo (forum.osxlatitude)
 
 #### v1.0.18
 - Improved operating system detection
