@@ -10,6 +10,7 @@ AppleALC Changelog
 - Maximised zlib resource compression level
 - Added stripping of tabs and new lines in resources
 - Added ALC236 layout-id 11 Initial support by Jake Lo (forum.osxlatitude)
+- Added ALC269VC for Samsung NT550P7C-S65 with subwoofer 2.1ch by Rockjesus
 
 #### v1.0.18
 - Improved operating system detection
