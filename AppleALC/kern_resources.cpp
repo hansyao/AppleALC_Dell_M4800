@@ -2515,7 +2515,7 @@ static const KextPatch patches3[] {
 	{ { &kextList[2], patchBuf58, patchBuf59, 4, 2 }, 13, KernelPatcher::KernelAny },
 	{ { &kextList[2], patchBuf60, patchBuf61, 4, 2 }, 15, 15 },
 };
-static const uint32_t revisions3[] { 0x100002, };
+static const uint32_t revisions3[] { 0x100001, 0x100002, };
 static const uint8_t file30[] {
 	0x78, 0xDA, 0xED, 0x56, 0xD1, 0x6E, 0x82, 0x30, 0x14, 0xFD, 0x15, 0xC6, 0xBB, 0x54, 0x31, 0x26, 0x66, 0xA9, 0x18, 0x15, 0x97, 0x99, 0xA8, 0x23, 
 	0x11, 0x97, 0xEC, 0xB1, 0x83, 0x4E, 0x9A, 0x41, 0xDB, 0x94, 0xA2, 0xF3, 0xEF, 0x07, 0x13, 0x23, 0x62, 0x41, 0x4D, 0x7C, 0x59, 0xF4, 0xA9, 0xD0, 
@@ -17123,7 +17123,7 @@ CodecModInfo codecModRealtek[] {
 	{ "ALC1150", 0x900, revisions1, 1, platforms1, 6, layouts1, 6, patches1, 6 },
 	{ "ALC233", 0x233, revisions2, 1, platforms2, 6, layouts2, 6, patches2, 9 },
 	{ "ALC235", 0x235, nullptr, 0, platforms3, 1, layouts3, 1, patches3, 9 },
-	{ "ALC236", 0x236, revisions3, 1, platforms4, 1, layouts4, 1, patches4, 10 },
+	{ "ALC236", 0x236, revisions3, 2, platforms4, 1, layouts4, 1, patches4, 10 },
 	{ "ALC255", 0x255, nullptr, 0, platforms5, 4, layouts5, 4, patches5, 9 },
 	{ "ALC256 (3246)", 0x256, revisions4, 1, platforms6, 1, layouts6, 1, patches6, 8 },
 	{ "ALC260", 0x260, nullptr, 0, platforms7, 1, layouts7, 1, patches7, 8 },
