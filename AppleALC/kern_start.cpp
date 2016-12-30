@@ -86,13 +86,13 @@ bool PRODUCT_NAME::init(OSDictionary *dict) {
 }
 
 bool PRODUCT_NAME::start(IOService *provider) {
+	if (!IOService::start(provider)) {
+		SYSLOG("init @ failed to start the parent");
+		return false;
+	}
+	
 	if (config.mode == Configuration::StartMode::IOKit) {
 		DBGLOG("init @ initialising with IOKit mode");
-		
-		if (!IOService::start(provider)) {
-			SYSLOG("init @ failed to start the parent");
-			return false;
-		}
 		
 		bool res = config.enabler.init();
 		if (!res) config.enabler.deinit();
