@@ -14,6 +14,7 @@ AppleALC Changelog
 - Added Laptop Intel Skylake HD530 HDMI audio support (ig-platform-id 0x191B0000)
 - Added revision-id 0x100001 into ALC236 info.plist 
 - Added ALC293 codec support layout-id 28, 29 for Lenovo T460/T560 by tluck
+- Added Conexant CX20751_2 HDMI/DisplayPort Output fix by syscl
 
 #### v1.0.18
 - Improved operating system detection
