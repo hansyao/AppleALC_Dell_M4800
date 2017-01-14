@@ -13,6 +13,7 @@ AppleALC Changelog
 - Added ALC269VC layout-id 14 for Samsung NT550P7C-S65 with subwoofer 2.1ch by Rockjesus
 - Added Laptop Intel Skylake HD530 HDMI audio support (ig-platform-id 0x191B0000)
 - Added revision-id 0x100001 into ALC236 info.plist 
+- Added ALC293 codec support layout-id 28, 29 for Lenovo T460/T560 by tluck
 
 #### v1.0.18
 - Improved operating system detection

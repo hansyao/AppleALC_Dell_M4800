@@ -1096,6 +1096,34 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>tluck - ALC 293 for Lenovo T460/T560 - extra LineOut on Dock</string>
+					<key>CodecID</key>
+					<integer>283902611</integer>
+					<key>ConfigData</key>
+					<data>ASccEAEnHQEBJx6mAScfkAE3HPABNx0AATceAAE3H0ABRxwgAUcdAQFHHhcBRx+QAVccMAFXHRABVx4hAVcfAwFnHPABZx0AAWceAAFnH0ABhxzwAYcdAAGHHgABhx9AAZcc8AGXHQABlx4AAZcfQAGnHEABpx0QAacegQGnHwMBtxzwAbcdAAG3HgABtx9AAdcc8AHXHQAB1x4AAdcfQAHnHPAB5x0AAeceAAHnH0ABRwwCAVcMAg==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>tluck - ALC 293 for Lenovo T460/T560</string>
+					<key>CodecID</key>
+					<integer>283902611</integer>
+					<key>ConfigData</key>
+					<data>ASccEAEnHQEBJx6mAScfkAE3HPABNx0AATceAAE3H0ABRxwgAUcdAQFHHhcBRx+QAVccMAFXHRABVx4hAVcfAwFnHPABZx0AAWceAAFnH0ABhxzwAYcdAAGHHgABhx9AAZcc8AGXHQABlx4AAZcfQAGnHEABpx0QAacegQGnHwMBtxzwAbcdAAG3HgABtx9AAdcc8AHXHQAB1x4AAdcfQAHnHPAB5x0AAeceAAHnH0ABRwwCAVcMAg==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>29</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>vusun123 - ALC 295 for Skylake HP Pavilion</string>
 					<key>CodecID</key>
 					<integer>283902613</integer>
