@@ -119,7 +119,7 @@ mach_vm_address_t MachInfo::findKernelBase() {
 	// search backwards for the kernel base address (mach-o header)
 	segment_command_64 *segmentCommand;
 	while (tmp > 0) {
-		if (*(uint32_t*)(tmp) == MH_MAGIC_64) {
+		if (*reinterpret_cast<uint32_t *>(tmp) == MH_MAGIC_64) {
 			// make sure it's the header and not some reference to the MAGIC number
 			segmentCommand = reinterpret_cast<segment_command_64 *>(tmp + sizeof(mach_header_64));
 			if (strncmp(segmentCommand->segname, "__TEXT", 16) == 0) {
@@ -127,8 +127,6 @@ mach_vm_address_t MachInfo::findKernelBase() {
 				return tmp;
 			}
 		}
-		// overflow check
-		if (tmp - 1 > tmp) break;
 		tmp--;
 	}
 	return 0;
@@ -178,11 +176,11 @@ mach_vm_address_t MachInfo::solveSymbol(const char *symbol) {
 	uint64_t stringOff = stringtable_fileoff - (linkedit_fileoff);
 	if (stringOff > stringtable_fileoff) return 0;
 	
-	nlist_64 *nlist64 = NULL;
+	nlist_64 *nlist64 = nullptr;
 	// search for the symbol and get its location if found
 	for (uint32_t i = 0; i < symboltable_nr_symbols; i++) {
 		// get the pointer to the symbol entry and extract its symbol string
-		nlist64 = (nlist_64*)(linkedit_buf + symbolOff + i * sizeof(nlist_64));
+		nlist64 = reinterpret_cast<nlist_64 *>(linkedit_buf + symbolOff + i * sizeof(nlist_64));
 		char *symbolStr = reinterpret_cast<char *>(linkedit_buf + stringOff + nlist64->n_un.n_strx);
 		// find if symbol matches
 		if (strncmp(symbol, symbolStr, strlen(symbol)+1) == 0) {
