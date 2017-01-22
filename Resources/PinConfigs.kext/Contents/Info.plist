@@ -958,6 +958,20 @@
 					<key>CodecID</key>
 					<integer>283902594</integer>
 					<key>Comment</key>
+					<string>Custom ALC282 Dell Inspirion 3521 by Generation88</string>
+					<key>ConfigData</key>
+					<data>ASccQAEnHQEBJx6gAScfkAFHHBABRx0BAUceFwFHH5ABlxwwAZcdEAGXHoEBlx8BAhccIAIXHRACFx4hAhcfAQFHDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>29</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283902594</integer>
+					<key>Comment</key>
 					<string>Custom ALC282 for Asus x200la</string>
 					<key>ConfigData</key>
 					<data>ASccEAEnHQABJx6BAScfAAFHHCABRx0BAUceEAFHH5kBdxzwAXcdAAF3HgABdx9AAYcc8AGHHQABhx4AAYcfQAGXHDABlx0BAZcepgGXH5kBpxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4AAbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecdAAHnHgAB5x9AAhccUAIXHUACFx4rAhcfAAFHDAICFwwC</data>
