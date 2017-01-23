@@ -16,6 +16,7 @@ AppleALC Changelog
 - Added ALC293 codec support layout-id 28, 29 for Lenovo T460/T560 by tluck
 - Added Conexant CX20751_2 HDMI/DisplayPort Output fix by syscl
 - Added ALC282 layout-id 29 for Dell Inspirion 3521 by Generation88
+- Added ALC293 layout-id 11 for Dell E7450 by Andres ZeroCross 
 
 #### v1.0.18
 - Improved operating system detection

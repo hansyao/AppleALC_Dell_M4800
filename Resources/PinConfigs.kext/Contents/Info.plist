@@ -1110,6 +1110,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Andres ALC293 Dell E7450</string>
+					<key>CodecID</key>
+					<integer>283902611</integer>
+					<key>ConfigData</key>
+					<data>AScc8AEnHQABJx4AAScfQAE3HBABNx0BATceoAE3H5ABRxwwAUcdAQFHHhcBRx+QAUcMAgFXHEABVx1AAVceKwFXHwEBVwwCAWccUAFnHUABZx4BAWcfAQFnDAIBhxzwAYcdAAGHHgABhx9AAZcc8AGXHQABlx4AAZcfQAGnHCABpx0QAaceiwGnHwEBtxzwAbcdAAG3HgABtx9AAdcc8AHXHQAB1x4AAdcfQAHnHPAB5x0AAeceAAHnH0ACBQBFAgTUKQAXIAAAFyFyABciawAXIxA=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>tluck - ALC 293 for Lenovo T460/T560 - extra LineOut on Dock</string>
 					<key>CodecID</key>
 					<integer>283902611</integer>
