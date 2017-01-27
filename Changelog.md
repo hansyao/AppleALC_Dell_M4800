@@ -17,6 +17,7 @@ AppleALC Changelog
 - Added Conexant CX20751_2 HDMI/DisplayPort Output fix by syscl
 - Added ALC282 layout-id 29 for Dell Inspirion 3521 by Generation88
 - Added ALC293 layout-id 11 for Dell E7450 by Andres ZeroCross 
+- Update PinConfig data for ALC269 layout-id 27 by Andrey1970
 
 #### v1.0.18
 - Improved operating system detection
