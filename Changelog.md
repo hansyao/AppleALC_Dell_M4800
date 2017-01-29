@@ -18,6 +18,11 @@ AppleALC Changelog
 - Added ALC282 layout-id 29 for Dell Inspirion 3521 by Generation88
 - Added ALC293 layout-id 11 for Dell E7450 by Andres ZeroCross 
 - Update PinConfig data for ALC269 layout-id 27 by Andrey1970
+- Added ALC3236 (ALC233) layout-id 29 for Asus X550LDV by Mirone
+- Added Conexant CX20722 codec support layout-id 3 by Mirone
+- Added Conexant CX20753/4 codec support layout-id 3 by Mirone
+- Added Conexant CX8050 codec support layout-id 3 by Mirone
+- Added Conexant CX8200 codec support layout-id 3 by Mirone
 
 #### v1.0.18
 - Improved operating system detection
