@@ -24,6 +24,7 @@ AppleALC Changelog
 - Added Conexant CX8050 codec support layout-id 3 by Mirone
 - Added Conexant CX8200 codec support layout-id 3 by Mirone
 - Added revision-id 0x100103 for ALC885
+- Added ALC269VB layout-id 15 for Dell Optiplex 790 by MacPeet
 
 #### v1.0.18
 - Improved operating system detection

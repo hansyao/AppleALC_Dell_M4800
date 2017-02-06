@@ -111,6 +111,14 @@
 				<string>layout14.xml.zlib</string>
 			</dict>
 			<dict>
+				<key>Comment</key>
+				<string>MacPeet - ALC269VB for Dell Optiplex 790</string>
+				<key>Id</key>
+				<integer>15</integer>
+				<key>Path</key>
+				<string>layout15.xml.zlib</string>
+			</dict>
+			<dict>
 				<key>Id</key>
 				<integer>20</integer>
 				<key>Comment</key>
@@ -280,6 +288,14 @@
 				<string>Custom ALC269VC for Samsung NT550P7C-S65 with subwoofer 2.1ch by Rockjesus</string>
 				<key>Path</key>
 				<string>Platforms14.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>MacPeet - ALC269VB for Dell Optiplex 790</string>
+				<key>Id</key>
+				<integer>15</integer>
+				<key>Path</key>
+				<string>Platforms15.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Id</key>
