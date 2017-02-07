@@ -71,6 +71,7 @@
 		1C9CB7B01C789FF500231E41 /* kern_alc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C9CB7AE1C789FF500231E41 /* kern_alc.cpp */; };
 		1C9CB7B11C789FF500231E41 /* kern_alc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1C9CB7AF1C789FF500231E41 /* kern_alc.hpp */; };
 		1CD5B2BF1C89CF2D00E45373 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1CD5B2BE1C89CF2D00E45373 /* main.mm */; };
+		CE2E7BDC1E2C6FC4009AC62A /* libkmod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2E7BDB1E2C6FC4009AC62A /* libkmod.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,6 +190,7 @@
 		1CF01C901C8CF97F002DCEA3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1CF01C921C8CF997002DCEA3 /* Changelog.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Changelog.md; sourceTree = "<group>"; };
 		1CF01C931C8DF02E002DCEA3 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		CE2E7BDB1E2C6FC4009AC62A /* libkmod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libkmod.a; path = Library/libkmod.a; sourceTree = "<group>"; };
 		CE4E88071E099CC8009AC98D /* merge_pinconfigs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = merge_pinconfigs.sh; sourceTree = "<group>"; };
 		CE4E88081E099CC8009AC98D /* zlib.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = zlib.pl; sourceTree = "<group>"; };
 		CE4E88091E099CC8009AC98D /* zlib_optimize.command */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = zlib_optimize.command; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2E7BDC1E2C6FC4009AC62A /* libkmod.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +331,7 @@
 		1C748C1D1C21952C0024EED2 = {
 			isa = PBXGroup;
 			children = (
+				CE2E7BDA1E2C6FC4009AC62A /* Frameworks */,
 				1CF01C911C8CF982002DCEA3 /* Docs */,
 				CE4E88061E099CC8009AC98D /* Tools */,
 				1C642F581C8F1BF2006B4C51 /* PinConfigs */,
@@ -390,6 +394,14 @@
 				1CF01C921C8CF997002DCEA3 /* Changelog.md */,
 			);
 			name = Docs;
+			sourceTree = "<group>";
+		};
+		CE2E7BDA1E2C6FC4009AC62A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE2E7BDB1E2C6FC4009AC62A /* libkmod.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CE4E88061E099CC8009AC98D /* Tools */ = {
@@ -715,6 +727,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FastCompression",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MODULE_NAME = as.vit9696.AppleALC;
@@ -758,6 +771,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FastCompression",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MODULE_NAME = as.vit9696.AppleALC;
