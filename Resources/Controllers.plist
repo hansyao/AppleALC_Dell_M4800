@@ -4,6 +4,29 @@
 <array>
 	<dict>
 		<key>Device</key>
+		<integer>41712</integer>
+		<key>Name</key>
+		<string>200 Series PCH HD Audio</string>
+		<key>Patches</key>
+		<array>
+			<dict>
+				<key>Count</key>
+				<integer>6</integer>
+				<key>Find</key>
+				<data>cKE=</data>
+				<key>MinKernel</key>
+				<integer>16</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>8KI=</data>
+			</dict>
+		</array>
+		<key>Vendor</key>
+		<string>Intel</string>
+	</dict>
+	<dict>
+		<key>Device</key>
 		<integer>36129</integer>
 		<key>Name</key>
 		<string>X99 HDEF controller r2</string>

@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.1.0
+- Added Intel 200 Series Audio controller support by chrome
+
 #### v1.0.19
 - Added ALC269 layout-id 35 for Samsung NP350V5C-S0URU by Mirone
 - Added Conexant CX20755 layout-id 3 by Mirone
