@@ -35,6 +35,4 @@ To support more audio codecs in the binary packages you are asked to submit your
 [AppleLife topic](https://applelife.ru/threads/applealc-dinamicheskij-patching-applehda.1171672/) in Russian
 
 #### Donations
-Writing and supporting code is fun but it takes time. If you want to thank the author for his work consider contributing, bugreporting, or donating:  
-PayPal: mrdconfirm at yandex dot com  
-BitCoin: 1EzU3snqcseZZNMzBWaNL4FxwtZmFdHDUz
+Writing and supporting code is fun but it takes time. If you want to thank the author for his work consider contributing, bugreporting, or providing the support to other users.
