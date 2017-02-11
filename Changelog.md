@@ -4,6 +4,7 @@ AppleALC Changelog
 - Added Intel 200 Series Audio controller support by chrome
 - Fixed typo in PinConfigs.kext for ALC233 layout-id 29
 - Added 10.8 support to ALC282
+- Added ALC286 layout-id 3 initial support by Mirone
 
 #### v1.0.19
 - Added ALC269 layout-id 35 for Samsung NP350V5C-S0URU by Mirone
