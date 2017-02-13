@@ -1765,6 +1765,20 @@
 					<integer>28</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>ALC888S-VD Version3 for MedionP8610 by MacPeet</string>
+					<key>CodecID</key>
+					<integer>283904136</integer>
+					<key>ConfigData</key>
+					<data>AUccEAFHHQABRx4TAUcfkAFHDAIBdxwgAXcdEAF3HhMBdx+QAeccMAHnHRAB5x5FAecfAAGXHEABlx0AAZceowGXH5ABhxxQAYcdEAGHHoEBhx8AAVccYAFXHRABVx4hAVcfAAFXDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>29</integer>
+				</dict>
+				<dict>
 					<key>CodecID</key>
 					<integer>283904137</integer>
 					<key>Comment</key>
