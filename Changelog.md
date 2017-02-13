@@ -5,7 +5,8 @@ AppleALC Changelog
 - Fixed typo in PinConfigs.kext for ALC233 layout-id 29
 - Added 10.8 support to ALC282
 - Added ALC286 layout-id 3 initial support by Mirone
-- Added ALC888S-VD for MedionP8610 by MacPeet
+- Added ALC888S-VD layout-id 29 for MedionP8610 by MacPeet
+- Added IDT 92HD73C1X5 layout-id 19 for Dell Studio 1535 by chunnann
 
 #### v1.0.19
 - Added ALC269 layout-id 35 for Samsung NP350V5C-S0URU by Mirone

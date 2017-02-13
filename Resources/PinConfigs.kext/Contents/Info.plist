@@ -2422,6 +2422,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Dell Studio 1535 - IDT 92HD73C1X5 by chunnann</string>
+					<key>CodecID</key>
+					<integer>287143541</integer>
+					<key>ConfigData</key>
+					<data>AKccEACnHRAApx4hAKcfAwDXHCAA1x0BANceFwDXH5AA5xwwAOcdEADnHoEA5x8DAPccQAD3HRAA9x4BAPcfAwE3HFABNx0BATceoAE3H5A=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>19</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - IDT 92HD81B1C5</string>
 					<key>CodecID</key>
 					<integer>287143637</integer>
