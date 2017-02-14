@@ -8,6 +8,7 @@ AppleALC Changelog
 - Added ALC888S-VD layout-id 29 for MedionP8610 by MacPeet
 - Added IDT 92HD73C1X5 layout-id 19 for Dell Studio 1535 by chunnann
 - Added ALC269 layout-id 19 for Asus Vivobook S300CA by chunnann
+- Added ALC283 layout-id 66 for ASRock DeskMini 110(H110M-STX) by licheedev
 
 #### v1.0.19
 - Added ALC269 layout-id 35 for Samsung NP350V5C-S0URU by Mirone
