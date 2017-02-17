@@ -411,6 +411,20 @@
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283902550</integer>
+					<key>Comment</key>
+					<string>vusun123 - ALC256 for Asus X555UJ</string>
+					<key>ConfigData</key>
+					<data>AUccUAFHHQABRx4XAUcfkAFHDAIBpxwwAacdAAGnHqABpx+QAhccIAIXHRACFx4hAhcfAA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Custom ALC260</string>
 					<key>CodecID</key>

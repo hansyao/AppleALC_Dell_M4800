@@ -10,6 +10,7 @@ AppleALC Changelog
 - Added ALC269 layout-id 19 for Asus Vivobook S300CA by chunnann
 - Added ALC283 layout-id 66 for ASRock DeskMini 110(H110M-STX) by licheedev
 - Optimize and compress ALC283 resources from previous commit
+- Added ALC256 layout-id 28 for Asus X555UJ by vusun123
 
 #### v1.0.19
 - Added ALC269 layout-id 35 for Samsung NP350V5C-S0URU by Mirone
