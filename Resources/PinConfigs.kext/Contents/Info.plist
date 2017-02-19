@@ -2143,6 +2143,20 @@
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283906592</integer>
+					<key>CodecName</key>
+					<string>Custom Realtek ALC1220 by truesoldier</string>
+					<key>ConfigData</key>
+					<data>AUccEAFHHUABRx4RAUcfAQFnHBEBZx1gAWceAQFnHwEBVxwSAVcdEAFXHgEBVx8BAXccFAF3HSABdx4BAXcfAQG3HCABtx1AAbceIQG3HwIBFxwwARcdAQEXHkMBFx+ZAYccQAGHHZABhx6hAYcfkQGnHE8Bpx0wAacegQGnHwEBlxxQAZcdkAGXHoEBlx8C</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Mirone - Conexant CX8050</string>
 					<key>CodecID</key>
