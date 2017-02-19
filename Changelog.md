@@ -12,6 +12,7 @@ AppleALC Changelog
 - Optimize and compress ALC283 resources from previous commit
 - Added ALC256 layout-id 28 for Asus X555UJ by vusun123
 - Added Realtek ALC1220 initial support layout-id 11 by truesoldier
+- Update PinConfig for ALC1220 by truesoldier
 
 #### v1.0.19
 - Added ALC269 layout-id 35 for Samsung NP350V5C-S0URU by Mirone

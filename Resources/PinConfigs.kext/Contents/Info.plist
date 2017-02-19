@@ -2148,7 +2148,7 @@
 					<key>CodecName</key>
 					<string>Custom Realtek ALC1220 by truesoldier</string>
 					<key>ConfigData</key>
-					<data>AUccEAFHHUABRx4RAUcfAQFnHBEBZx1gAWceAQFnHwEBVxwSAVcdEAFXHgEBVx8BAXccFAF3HSABdx4BAXcfAQG3HCABtx1AAbceIQG3HwIBFxwwARcdAQEXHkMBFx+ZAYccQAGHHZABhx6hAYcfkQGnHE8Bpx0wAacegQGnHwEBlxxQAZcdkAGXHoEBlx8C</data>
+					<data>AUccEAFHHUABRx4RAUcfAQG3HCABtx1AAbceIQG3HwIB5xwwAecdIAHnHkUB5x8BAYccQAGHHZABhx6hAYcfkQGXHFABlx2QAZcegQGXHwIBVxxwAVcdEAFXHgEBVx8BAWccgAFnHWABZx4BAWcfAQGnHKABpx0wAacegQGnHwE=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
