@@ -1,6 +1,7 @@
 AppleALC Changelog
 ==================
 #### v1.1.0
+- AppleALC now has its kernel patcher moved to [Lilu.kext](https://github.com/vit9696/Lilu)
 - Added Intel 200 Series Audio controller support by chrome
 - Fixed typo in PinConfigs.kext for ALC233 layout-id 29
 - Added 10.8 support to ALC282

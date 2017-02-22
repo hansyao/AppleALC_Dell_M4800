@@ -2,15 +2,15 @@
 //  kern_resource.hpp
 //  AppleALC
 //
-//  Copyright © 2016 vit9696. All rights reserved.
+//  Copyright © 2016-2017 vit9696. All rights reserved.
 //
 
 #ifndef kern_resource_hpp
 #define kern_resource_hpp
 
-#include "kern_util.hpp"
-#include "kern_patcher.hpp"
-#include "kern_iokit.hpp"
+#include <Headers/kern_util.hpp>
+#include <Headers/kern_patcher.hpp>
+#include <Headers/kern_iokit.hpp>
 
 #include <sys/types.h>
 #include <stdint.h>
@@ -87,20 +87,17 @@ struct VendorModInfo {
 /**
  *  Generated resource data
  */
-extern CodecLookupInfo codecLookup[];
-extern const size_t codecLookupSize;
+extern CodecLookupInfo ADDPR(codecLookup)[];
+extern const size_t ADDPR(codecLookupSize);
 
-extern KernelPatcher::KextInfo kextList[];
-extern const size_t kextListSize;
+extern KernelPatcher::KextInfo ADDPR(kextList)[];
+extern const size_t ADDPR(kextListSize);
 
-extern ControllerModInfo controllerMod[];
-extern const size_t controllerModSize;
+extern ControllerModInfo ADDPR(controllerMod)[];
+extern const size_t ADDPR(controllerModSize);
 
-extern VendorModInfo vendorMod[];
-extern const size_t vendorModSize;
-
-extern KextPatch userPatch[];
-extern const size_t userPatchSize;
+extern VendorModInfo ADDPR(vendorMod)[];
+extern const size_t ADDPR(vendorModSize);
 
 
 #endif /* kern_resource_hpp */

@@ -3,7 +3,7 @@
 #  generate.sh
 #  AppleALC
 #
-#  Copyright © 2016 vit9696. All rights reserved.
+#  Copyright © 2016-2017 vit9696. All rights reserved.
 
 ret=0
 

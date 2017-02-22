@@ -2,13 +2,14 @@
 //  kern_alc.hpp
 //  AppleALC
 //
-//  Copyright © 2016 vit9696. All rights reserved.
+//  Copyright © 2016-2017 vit9696. All rights reserved.
 //
 
 #ifndef kern_alc_hpp
 #define kern_alc_hpp
 
-#include "kern_patcher.hpp"
+#include <Headers/kern_patcher.hpp>
+
 #include "kern_resources.hpp"
 
 class AlcEnabler {
@@ -18,25 +19,14 @@ public:
 	
 private:
 	/**
-	 *  Kernel level patcher and symbol solver
-	 */
-	KernelPatcher patcher;
-	
-	/**
-	 *  Load kext files and prepare callbacks for processing
-	 *
-	 *  @return true on success
-	 */
-	bool loadKexts();
-	
-	/**
 	 *  Patch AppleHDA or another kext if needed and prepare other patches
 	 *
+	 *  @param patcher KernelPatcher instance
 	 *  @param index   kinfo handle
 	 *  @param address kinfo load address
 	 *  @param size    kinfo memory size
 	 */
-	void processKext(size_t index, mach_vm_address_t address, size_t size);
+	void processKext(KernelPatcher &patcher, size_t index, mach_vm_address_t address, size_t size);
 	
 	/**
 	 *  ResourceLoad callback type
@@ -84,11 +74,12 @@ private:
 	/**
 	 *  Apply kext patches for loaded kext index
 	 *
+	 *  @param patcher    KernelPatcher instance
 	 *  @param index      kinfo index
 	 *  @param patches    patch list
 	 *  @param patchesNum patch number
 	 */
-	void applyPatches(size_t index, const KextPatch *patches, size_t patchesNum);
+	void applyPatches(KernelPatcher &patcher, size_t index, const KextPatch *patches, size_t patchesNum);
 
 	/**
 	 *  Supported resource types
@@ -101,12 +92,13 @@ private:
 	/**
 	 *  Update resource request parameters with hooked data if necessary
 	 *
+	 *  @param patcher    KernelPatcher instance
 	 *  @param type               resource type
 	 *  @param result             kOSReturnSuccess on resource update
 	 *  @param resourceData       resource data reference
 	 *  @param resourceDataLength resource data length reference
 	 */
-	void updateResource(Resource type, kern_return_t &result, const void * &resourceData, uint32_t &resourceDataLength);
+	void updateResource(KernelPatcher &patcher, Resource type, kern_return_t &result, const void * &resourceData, uint32_t &resourceDataLength);
 
 	/**
 	 *  Controller identification and modification info
@@ -173,7 +165,7 @@ private:
 			CallbacksRouted = 8,
 		};
 	};
-	int progressState;
+	int progressState {ProcessingState::NotReady};
 	
 	/**
 	 *  Detected ComputerModel
