@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.1.1
+- Fixed IDT92HD71B7X macOS 10.12 compatibility issue
+
 #### v1.1.0
 - AppleALC now has its kernel patcher moved to [Lilu.kext](https://github.com/vit9696/Lilu)
 - Added Intel 200 Series Audio controller support by chrome
