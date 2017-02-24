@@ -24529,7 +24529,7 @@ static const KextPatch patches72[] {
 	{ { &ADDPR(kextList)[2], patchBuf954, patchBuf955, 4, 2 }, 15, 15 },
 	{ { &ADDPR(kextList)[2], patchBuf956, patchBuf957, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
-static const uint32_t revisions35[] { 0x100102, };
+static const uint32_t revisions35[] { 0x100102, 0x100303, };
 static const uint8_t file351[] {
 	0x78, 0xDA, 0xED, 0x56, 0x5D, 0x4F, 0xC2, 0x30, 0x14, 0xFD, 0x2B, 0x73, 0xEF, 0x50, 0x36, 0x4D, 0xFC, 0x48, 0x99, 0x51, 0x86, 0x91, 0x04, 0x74, 
 	0x09, 0xC3, 0xC4, 0xC7, 0xBA, 0x5D, 0x5D, 0xE3, 0xD6, 0x36, 0x6D, 0x27, 0xF2, 0xEF, 0xED, 0x60, 0x04, 0x18, 0x03, 0xC4, 0x48, 0xA2, 0xD1, 0xA7, 
@@ -25327,7 +25327,7 @@ static CodecModInfo codecModIDT[] {
 	{ "IDT92HD87B1_3", 0x76D1, revisions34, 1, platforms70, 1, layouts70, 1, patches70, 6 },
 	{ "IDT92HD87B2_4", 0x76D9, nullptr, 0, platforms71, 1, layouts71, 1, patches71, 6 },
 	{ "IDT92HD90BXX", 0x76E7, nullptr, 0, platforms72, 2, layouts72, 2, patches72, 7 },
-	{ "IDT92HD91BXX", 0x76E0, revisions35, 1, platforms73, 2, layouts73, 2, patches73, 7 },
+	{ "IDT92HD91BXX", 0x76E0, revisions35, 2, platforms73, 2, layouts73, 2, patches73, 7 },
 	{ "IDT92HD93BXX", 0x76DF, revisions36, 1, platforms74, 1, layouts74, 1, patches74, 7 },
 	{ "IDT92HD95", 0x7695, nullptr, 0, platforms75, 1, layouts75, 1, patches75, 6 },
 	{ "IDT92HD99BXX", 0x76E5, nullptr, 0, platforms76, 1, layouts76, 1, patches76, 7 },
