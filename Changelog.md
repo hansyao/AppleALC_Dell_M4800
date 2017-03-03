@@ -7,6 +7,8 @@ AppleALC Changelog
 - Added CX20724 menubar patch for 10.10 and above by Wern Apfel
 - Added CX20751/2 menubar patch for 10.10 and above by Wern Apfel
 - Updated ALC269VB layout-id 11 for Dell Precision Workstation T1600 by Mosser
+- Added ALC1220 layout-id 5 and 7 by Mirone
+- Added ALCS1220A layout-id 5 and 7 by Mirone
 
 #### v1.1.0
 - AppleALC now has its kernel patcher moved to [Lilu.kext](https://github.com/vit9696/Lilu)

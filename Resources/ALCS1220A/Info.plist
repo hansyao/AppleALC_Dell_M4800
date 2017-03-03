@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>truesoldier</string>
+	<string>Vandroiy</string>
 	<key>CodecID</key>
-	<integer>4640</integer>
+	<integer>4456</integer>
 	<key>CodecName</key>
-	<string>ALC1220</string>
+	<string>ALCS1220A</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Mirone - Realtek ALC1220</string>
+				<string>Mirone - Realtek ALC S1220A</string>
 				<key>Id</key>
 				<integer>5</integer>
 				<key>Path</key>
@@ -22,26 +22,18 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Mirone - Realtek ALC1220</string>
+				<string>Mirone - Realtek ALC S1220A</string>
 				<key>Id</key>
 				<integer>7</integer>
 				<key>Path</key>
 				<string>layout7.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Custom Realtek ALC1220 by truesoldier</string>
-				<key>Id</key>
-				<integer>11</integer>
-				<key>Path</key>
-				<string>layout11.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Mirone - Realtek ALC1220</string>
+				<string>Mirone - Realtek ALC S1220A</string>
 				<key>Id</key>
 				<integer>5</integer>
 				<key>Path</key>
@@ -49,19 +41,11 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Mirone - Realtek ALC1220</string>
+				<string>Mirone - Realtek ALC S1220A</string>
 				<key>Id</key>
 				<integer>7</integer>
 				<key>Path</key>
 				<string>PlatformsM.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Custom Realtek ALC1220 by truesoldier</string>
-				<key>Id</key>
-				<integer>11</integer>
-				<key>Path</key>
-				<string>Platforms11.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -115,7 +99,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>IBLsEA==</data>
+			<data>aBHsEA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>
@@ -143,10 +127,6 @@
 			<key>Replace</key>
 			<data>AAAAAA==</data>
 		</dict>
-	</array>
-	<key>Revisions</key>
-	<array>
-		<integer>1048579</integer>
 	</array>
 	<key>Vendor</key>
 	<string>Realtek</string>
