@@ -9,6 +9,7 @@ AppleALC Changelog
 - Updated ALC269VB layout-id 11 for Dell Precision Workstation T1600 by Mosser
 - Added ALC1220 layout-id 5 and 7 by Mirone
 - Added ALCS1220A layout-id 5 and 7 by Mirone
+- Increased replacement count for several SKL hdmi patches to workaround matching sequence issues by Andrey1970
 
 #### v1.1.0
 - AppleALC now has its kernel patcher moved to [Lilu.kext](https://github.com/vit9696/Lilu)

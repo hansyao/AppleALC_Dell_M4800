@@ -259,7 +259,7 @@
 		<array>
 			<dict>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>3</integer>
 				<key>Find</key>
 				<data>AQULAAAEAAAHBQAAAgQLAAAEAAAHBQAA</data>
 				<key>MinKernel</key>
@@ -286,7 +286,7 @@
 		<array>
 			<dict>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>3</integer>
 				<key>Find</key>
 				<data>AQULAAAEAAAHBQAAAgQLAAAEAAAHBQAA</data>
 				<key>MinKernel</key>
@@ -313,7 +313,7 @@
 		<array>
 			<dict>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>6</integer>
 				<key>Find</key>
 				<data>AQUJAAAEAACHAQAAAgQKAAAEAACHAQAA</data>
 				<key>MinKernel</key>
@@ -340,7 +340,7 @@
 		<array>
 			<dict>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>6</integer>
 				<key>Find</key>
 				<data>AQUJAAAEAACHAQAAAgQKAAAEAACHAQAA</data>
 				<key>MinKernel</key>
@@ -367,7 +367,7 @@
 		<array>
 			<dict>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>6</integer>
 				<key>Find</key>
 				<data>AQUJAAAEAACHAQAAAgQKAAAEAACHAQAA</data>
 				<key>MinKernel</key>
@@ -394,7 +394,7 @@
 		<array>
 			<dict>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>6</integer>
 				<key>Find</key>
 				<data>AQUJAAAEAACHAQAAAgQKAAAEAACHAQAA</data>
 				<key>MinKernel</key>
