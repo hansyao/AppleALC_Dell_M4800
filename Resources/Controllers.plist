@@ -227,7 +227,7 @@
 		<key>Model</key>
 		<string>Desktop</string>
 		<key>Name</key>
-		<string>Intel HD4600 HDMI (ig-platform-id 0x0d220003)</string>
+		<string>Desktop Intel HD4600 HDMI (ig-platform-id 0x0d220003)</string>
 		<key>Patches</key>
 		<array>
 			<dict>
@@ -443,7 +443,7 @@
 		<key>Model</key>
 		<string>Laptop</string>
 		<key>Name</key>
-		<string>Intel HD4000 HDMI (ig-platform-id 0x01660003)</string>
+		<string>Laptop Intel HD4000 HDMI (ig-platform-id 0x01660003)</string>
 		<key>Patches</key>
 		<array>
 			<dict>
@@ -470,20 +470,20 @@
 		<key>Model</key>
 		<string>Laptop</string>
 		<key>Name</key>
-		<string>Intel HD4000 HDMI (ig-platform-id 0x01660009)</string>
+		<string>Laptop Intel HD4000 HDMI (ig-platform-id 0x01660009)</string>
 		<key>Patches</key>
 		<array>
 			<dict>
 				<key>Count</key>
-				<integer>4</integer>
+				<integer>2</integer>
 				<key>Find</key>
-				<data>AgUAAAAEAAAHAQAAAwQAAAAEAAAHAQAA</data>
+				<data>AQAAAAIAAAAwAAAAAgUAAAAEAAAHAQAAAwQAAAAEAAAHAQAA</data>
 				<key>MinKernel</key>
 				<integer>13</integer>
 				<key>Name</key>
 				<string>AppleIntelFramebufferCapri</string>
 				<key>Replace</key>
-				<data>AgUAAAAIAAAHAQAAAwQAAAAIAAAHAQAA</data>
+				<data>AQAAAAIAAAAwAAAAAgUAAAAIAAAHAQAAAwQAAAAIAAAHAQAA</data>
 			</dict>
 		</array>
 		<key>Platform</key>
@@ -497,20 +497,20 @@
 		<key>Model</key>
 		<string>Desktop</string>
 		<key>Name</key>
-		<string>Intel HD4000 HDMI (ig-platform-id 0x0166000A) Desktop only</string>
+		<string>Desktop Intel HD4000 HDMI (ig-platform-id 0x0166000A)</string>
 		<key>Patches</key>
 		<array>
 			<dict>
 				<key>Count</key>
-				<integer>4</integer>
+				<integer>2</integer>
 				<key>Find</key>
-				<data>AgUAAAAEAAAHAQAAAwQAAAAEAAAHAQAA</data>
+				<data>AgUAAAAEAAAHAQAAAwQAAAAEAAAHAQAABAYAAAAIAAAGAAAA</data>
 				<key>MinKernel</key>
 				<integer>13</integer>
 				<key>Name</key>
 				<string>AppleIntelFramebufferCapri</string>
 				<key>Replace</key>
-				<data>AgUAAAAIAAAHAQAAAwQAAAAIAAAHAQAA</data>
+				<data>AgUAAAAIAAAHAQAAAwQAAAAIAAAHAQAABAYAAAAIAAAGAAAA</data>
 			</dict>
 		</array>
 		<key>Platform</key>
