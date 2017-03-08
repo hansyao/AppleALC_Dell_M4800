@@ -11,6 +11,8 @@
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
 #include <initializer_list>
+#include <unordered_map>
+#include <vector>
 
 #define SYSLOG(str, ...) printf("ResourceConverter: " str "\n", ## __VA_ARGS__)
 #define ERROR(str, ...) do { SYSLOG(str, ## __VA_ARGS__); exit(1); } while(0)
@@ -183,6 +185,35 @@ static NSString *generateLayouts(NSString *file, NSDictionary *codecDict, NSStri
 	return @"nullptr, 0";
 }
 
+namespace std {
+	template <>
+	struct hash<std::vector<uint8_t>> {
+		size_t operator()(const std::vector<uint8_t> &x) const {
+			auto size = x.size();
+			return size ^ (size > 0 ? x[0] : 0xFF);
+		}
+	};
+};
+
+static std::unordered_map<std::vector<uint8_t>, size_t> patchBufMap;
+
+static bool lookupPatchBufIndex(const uint8_t *patch, size_t len, size_t &index) {
+	std::vector<uint8_t> k;
+	k.assign(patch, patch+len);
+	auto it = patchBufMap.find(k);
+	if (it != patchBufMap.end()) {
+		index = it->second;
+		return true;
+	}
+	return false;
+}
+
+static void storePatchBufIndex(const uint8_t *patch, size_t len, size_t index) {
+	std::vector<uint8_t> k;
+	k.assign(patch, patch+len);
+	patchBufMap[k] = index;
+}
+
 static NSString *generatePatches(NSString *file, NSArray *patches, NSDictionary *kextIndexes, long *num=nullptr, NSString *header=nullptr) {
 	static size_t patchIndex {0};
 	static size_t patchBufIndex {0};
@@ -192,29 +223,37 @@ static NSString *generatePatches(NSString *file, NSArray *patches, NSDictionary 
 		pStr = header ? [pStr initWithString:header] : [pStr initWithFormat:@"static const KextPatch patches%zu[] {\n", patchIndex];
 		auto pbStr = [[NSMutableString alloc] init];
 		for (NSDictionary *p in patches) {
-            NSData *f[] = {[p objectForKey:@"Find"], [p objectForKey:@"Replace"]};
+			const size_t PatchNum = 2;
+            NSData *f[PatchNum] = {[p objectForKey:@"Find"], [p objectForKey:@"Replace"]};
+			size_t patchBufIndexes[PatchNum] {};
 			
 			if ([f[0] length] != [f[1] length]) {
 				[pStr appendString:@"#error not matching patch lengths\n"];
 				continue;
 			}
 			
-			for (auto d : f) {
-				[pbStr appendString:[[NSString alloc] initWithFormat:@"static const uint8_t patchBuf%zu[] { ", patchBufIndex]];
+			for (size_t i = 0; i < PatchNum; i++) {
+				auto patchBuf = reinterpret_cast<const uint8_t *>([f[i] bytes]);
+				size_t patchLen = [f[i] length];
 				
-				for (size_t b = 0; b < [d length]; b++) {
-					[pbStr appendString:[[NSString alloc] initWithFormat:@"0x%0.2X, ", reinterpret_cast<const uint8_t *>([d bytes])[b]]];
+				if (!lookupPatchBufIndex(patchBuf, patchLen, patchBufIndexes[i])) {
+					[pbStr appendString:[[NSString alloc] initWithFormat:@"static const uint8_t patchBuf%zu[] { ", patchBufIndex]];
+					
+					for (size_t b = 0; b < patchLen; b++) {
+						[pbStr appendString:[[NSString alloc] initWithFormat:@"0x%0.2X, ", patchBuf[b]]];
+					}
+					
+					[pbStr appendString:@"};\n"];
+					
+					patchBufIndexes[i] = patchBufIndex++;
+					storePatchBufIndex(patchBuf, patchLen, patchBufIndexes[i]);
 				}
-				
-				[pbStr appendString:@"};\n"];
-				
-				patchBufIndex++;
 			}
 			
 			[pStr appendFormat:@"\t{ { &ADDPR(kextList)[%@], patchBuf%zu, patchBuf%zu, %zu, %@ }, %@, %@ },\n",
 			 [kextIndexes objectForKey:[p objectForKey:@"Name"]],
-			 patchBufIndex-2,
-			 patchBufIndex-1,
+			 patchBufIndexes[0],
+			 patchBufIndexes[1],
 			 [f[0] length],
 			 [p objectForKey:@"Count"] ?: @"0",
 			 [p objectForKey:@"MinKernel"] ?: @"KernelPatcher::KernelAny",
