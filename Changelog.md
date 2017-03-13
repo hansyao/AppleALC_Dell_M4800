@@ -13,6 +13,7 @@ AppleALC Changelog
 - Update Intel HD4000 HDMI patches for 0x01660009 and 0x0166000A by Andrey1970
 - Implemented simple byte sequence deduplication to reduce kext size
 - Update pinconfig for ALC1220 layout-id 11 by truesoldier
+- Added IDT92HD71B7 menubar patch for 10.10 and above by Wern Apfel
 
 #### v1.1.0
 - AppleALC now has its kernel patcher moved to [Lilu.kext](https://github.com/vit9696/Lilu)
