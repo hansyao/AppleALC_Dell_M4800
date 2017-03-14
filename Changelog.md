@@ -16,6 +16,7 @@ AppleALC Changelog
 - Added IDT92HD71B7 menubar patch for 10.10 and above by Wern Apfel
 - Added IDT92HD91BXX ambient noise reduction to layout-id 12
 - Added ALC887 revision-id 0x100202
+- Changed ALC255 layout-id 3 resources by Mirone. It should fix kernel task loading issue
 
 #### v1.1.0
 - AppleALC now has its kernel patcher moved to [Lilu.kext](https://github.com/vit9696/Lilu)
