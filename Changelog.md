@@ -18,6 +18,7 @@ AppleALC Changelog
 - Added ALC887 revision-id 0x100202
 - Changed ALC255 layout-id 3 resources by Mirone. It should fix kernel task loading issue
 - Added CA0132 layout-ids 0-6 by Wern Apfel 
+- Fix CX20756 typo in layout3.xml.zlib
 
 #### v1.1.0
 - AppleALC now has its kernel patcher moved to [Lilu.kext](https://github.com/vit9696/Lilu)
