@@ -1,6 +1,7 @@
 AppleALC Changelog
 ==================
 #### v1.1.1
+- Requires Lilu 1.1.0 or newer
 - Fixed IDT92HD71B7X macOS 10.12 compatibility issue
 - Added IDT92HD91BXX revision-id 0x100303
 - Added CX20722 menubar patch for 10.10 and above by Wern Apfel
