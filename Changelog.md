@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.1.2
+- Added ALC225 layout-id 28 for DELL Inspirion 7579 by ChalesYu
+ 
 #### v1.1.1
 - Requires Lilu 1.1.0 or newer
 - Fixed IDT92HD71B7X macOS 10.12 compatibility issue

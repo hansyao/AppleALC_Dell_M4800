@@ -314,6 +314,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>ALC225/ALC3253 on dell 7579 by ChalesYu</string>
+					<key>CodecID</key>
+					<integer>283902501</integer>
+					<key>ConfigData</key>
+					<data>ASccUAEnHQEBJx6mAScftwE3HAABNx0AATceAAE3H0ABRxywAUcdAQFHHhcBRx+QAWcc8AFnHREBZx4RAWcfQQF3HPABdx0RAXceEQF3H0EBhxzwAYcdEQGHHhEBhx9BAZccQAGXHRABlx6BAZcfAQGnHPABpx0RAaceEQGnH0EBtxzwAbcdEQG3HhEBtx9BAdccAQHXHQAB1x5gAdcfQAHnHPAB5x0RAeceEQHnH0ECFxwgAhcdEAIXHiECFx8EAUcMAg==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - Realtek ALC233</string>
 					<key>CodecID</key>
 					<integer>283902515</integer>
