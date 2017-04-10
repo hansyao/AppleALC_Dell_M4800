@@ -1,7 +1,8 @@
 AppleALC Changelog
 ==================
 #### v1.1.2
-- Added ALC225 layout-id 28 for DELL Inspirion 7579 by ChalesYu
+- Added ALC225 layout-id 28 for Dell Inspirion 7579 by ChalesYu
+- Added ALC298 layout-id 28 for Dell XPS 9x50 by vusun123
  
 #### v1.1.1
 - Requires Lilu 1.1.0 or newer
