@@ -4,6 +4,7 @@ AppleALC Changelog
 - Added ALC225 layout-id 28 for Dell Inspirion 7579 by ChalesYu
 - Added ALC298 layout-id 28 for Dell XPS 9x50 by vusun123
 - Changed ALC290 layout-id 28 resources Mic & Line In Fix by vusun123
+- Added VIA VT1802 layout-id 33 for asus S400CA by ChalesYu
  
 #### v1.1.1
 - Requires Lilu 1.1.0 or newer
