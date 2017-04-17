@@ -2864,6 +2864,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>jl4c - IDT 92HD91BXX for HP Envy</string>
+					<key>CodecID</key>
+					<integer>287143648</integer>
+					<key>ConfigData</key>
+					<data>ALccIAC3HRAAtx4hALcfAwD3HDIA9x0BAPceFwD3H5ABFxwQARcdAQEXHqYBFx+XANcc8ADXHQAA1x4AANcfQAEHHPABBx0AAQceAAEHH0AApxzwAKcdAACnHgAApx9AAMcc8ADHHQAAxx4AAMcfQADnHPAA5x0AAOceAADnH0AB9xzwAfcdAAH3HgAB9x9AAgcc8AIHHQACBx4AAgcfQA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>33</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Custom - IDT 92HD93BXX Dell Latitude E6430</string>
 					<key>CodecID</key>
 					<integer>287143647</integer>
