@@ -8,6 +8,7 @@ AppleALC Changelog
 - Added IDT92HD91BXX layout-id 33 for HP Envy by jl4c 
 - Added ALCS1220A layout-id 1, 2 for ASUS 200 series by Toleda
 - Added ALC1220 layout-id 1, 2 for 200 series by Toleda
+- Added ALC662 layout-id 12 for Lenovo ThinkCentre M800 by stich86 
  
 #### v1.1.1
 - Requires Lilu 1.1.0 or newer
