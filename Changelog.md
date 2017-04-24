@@ -9,6 +9,7 @@ AppleALC Changelog
 - Added ALCS1220A layout-id 1, 2 for ASUS 200 series by Toleda
 - Added ALC1220 layout-id 1, 2 for 200 series by Toleda
 - Added ALC662 layout-id 12 for Lenovo ThinkCentre M800 by stich86 
+- Added ALC892 layout-id 28 for Clevo P751DMG by crysehillmes
  
 #### v1.1.1
 - Requires Lilu 1.1.0 or newer
