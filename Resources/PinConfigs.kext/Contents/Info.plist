@@ -880,6 +880,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>vusun123 - Realtek ALC269VC for Lenovo W530</string>
+					<key>CodecID</key>
+					<integer>283902569</integer>
+					<key>ConfigData</key>
+					<data>ASccQAEnHQABJx6gAScfkAFHHBABRx0AAUceFwFHH5ABRwwCAVccIAFXHRABVx4hAVcfAAGHHDABhx0QAYcegQGHHwA=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>40</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Custom ALC269VB for ENZ C16B by jimmy19990</string>
 					<key>CodecID</key>
 					<integer>283902569</integer>

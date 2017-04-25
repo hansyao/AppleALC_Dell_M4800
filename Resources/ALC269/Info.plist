@@ -191,6 +191,14 @@
 				<string>layout35.xml.zlib</string>
 			</dict>
 			<dict>
+				<key>Comment</key>
+				<string>vusun123 - RealtekALC269VC for Lenovo W530</string>
+				<key>Id</key>
+				<integer>40</integer>
+				<key>Path</key>
+				<string>layout40.xml.zlib</string>
+			</dict>
+			<dict>
 				<key>Id</key>
 				<integer>76</integer>
 				<key>Comment</key>
@@ -376,6 +384,14 @@
 				<string>Custom ALC269VC for Samsung NP350V5C-S0URU by Mirone</string>
 				<key>Path</key>
 				<string>PlatformsM35.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>vusun123 - RealtekALC269VC for Lenovo W530</string>
+				<key>Id</key>
+				<integer>40</integer>
+				<key>Path</key>
+				<string>Platforms40.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Id</key>
