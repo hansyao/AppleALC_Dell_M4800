@@ -1066,6 +1066,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Alienware alpha - Realtek ALC280</string>
+					<key>CodecID</key>
+					<integer>283902592</integer>
+					<key>ConfigData</key>
+					<data>IUcc8CFHHQAhRx4AIUcfQCFXHPAhVx0AIVceACFXH0AhZxzwIWcdACFnHgAhZx9AIXcc8CF3HQAhdx4AIXcfQCGHHPAhhx0AIYceACGHH0AhlxzwIZcdACGXHgAhlx9AIacc8CGnHQAhpx4AIacfQCG3HPAhtx0AIbceACG3H0Ah5xwQIecd4SHnHkUh5x8B</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - Realtek ALC280 - ComboJack</string>
 					<key>CodecID</key>
 					<integer>283902592</integer>

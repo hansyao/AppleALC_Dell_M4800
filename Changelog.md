@@ -10,7 +10,8 @@ AppleALC Changelog
 - Added ALC1220 layout-id 1, 2 for 200 series by Toleda
 - Added ALC662 layout-id 12 for Lenovo ThinkCentre M800 by stich86 
 - Added ALC892 layout-id 28 for Clevo P751DMG by crysehillmes
-- Added ALC269VC layout-id 40 for Lenovo W530 by vusun123 
+- Added ALC269VC layout-id 40 for Lenovo W530 by vusun123
+- Added ALC280 (ALC3220) layout-id 11 for Alienware alpha (ONLY SPDIF) by ganxiao
  
 #### v1.1.1
 - Requires Lilu 1.1.0 or newer
