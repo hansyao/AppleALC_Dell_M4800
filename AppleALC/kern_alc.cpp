@@ -192,6 +192,8 @@ void AlcEnabler::grabControllers() {
 				
 				if (WIOKit::getOSDataValue(sect, "AAPL,ig-platform-id", platform)) {
 					DBGLOG("alc @ AAPL,ig-platform-id %X was found in controller at %s", platform, ADDPR(codecLookup)[lookup].tree[i]);
+				} else if (WIOKit::getOSDataValue(sect, "AAPL,snb-platform-id", platform)) {
+					DBGLOG("alc @ AAPL,snb-platform-id %X was found in controller at %s", platform, ADDPR(codecLookup)[lookup].tree[i]);
 				}
 				
 				auto controller = ControllerInfo::create(ven, dev, rev, platform, lid, ADDPR(codecLookup)[lookup].detect);
