@@ -123,18 +123,10 @@
 			<key>Replace</key>
 			<data>AAAAAA==</data>
 		</dict>
-		<dict>
-			<key>Count</key>
-			<integer>2</integer>
-			<key>Find</key>
-			<data>ihnUEQ==</data>
-			<key>MinKernel</key>
-			<integer>16</integer>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>AAAAAA==</data>
-		</dict>
+	</array>
+	<key>Revisions</key>
+	<array>
+		<integer>1048578</integer>
 	</array>
 	<key>Vendor</key>
 	<string>Realtek</string>

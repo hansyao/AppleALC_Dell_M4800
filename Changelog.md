@@ -15,6 +15,7 @@ AppleALC Changelog
 - Added ALC662 layout-id 13 by Vandroiy for Asus X66Ic, Asus K61Ic, Asus K70Ic
 - Added SPDIF support to ALC887 layout-id 99
 - Added Conexant CX20590 revision-id 0x100000
+- Added revision-id 0x100002 in ALC670 info.plist
  
 #### v1.1.1
 - Requires Lilu 1.1.0 or newer
