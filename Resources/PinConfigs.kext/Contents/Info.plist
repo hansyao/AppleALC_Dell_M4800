@@ -1262,6 +1262,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>InsanelyDeepak - Realtek ALC288 for Dell XPS 9343</string>
+					<key>CodecID</key>
+					<integer>283902600</integer>
+					<key>ConfigData</key>
+					<data>ASccIAEnHQABJx6gAScfkAFHHDABRx0AAUceFwFHH5ABNxxAATcdEAE3HoEBNx8AAhccUAIXHRACFx4hAhcfAAFHDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - Realtek ALC290</string>
 					<key>CodecID</key>
 					<integer>283902608</integer>

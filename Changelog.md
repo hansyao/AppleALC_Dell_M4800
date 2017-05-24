@@ -16,6 +16,7 @@ AppleALC Changelog
 - Added SPDIF support to ALC887 layout-id 99
 - Added Conexant CX20590 revision-id 0x100000
 - Added revision-id 0x100002 in ALC670 info.plist
+- Added ALC288 layout-id 13 for Dell XPS 9343 by InsanelyDeepak
  
 #### v1.1.1
 - Requires Lilu 1.1.0 or newer
