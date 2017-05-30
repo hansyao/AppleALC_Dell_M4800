@@ -18,7 +18,8 @@ AppleALC Changelog
 - Added revision-id 0x100002 in ALC670 info.plist
 - Added ALC288 layout-id 13 for Dell XPS 9343 by InsanelyDeepak
 - Added ALC286 revision-id 0x100003
- 
+- Added OSBundleCompatibleVersion
+
 #### v1.1.1
 - Requires Lilu 1.1.0 or newer
 - Fixed IDT92HD71B7X macOS 10.12 compatibility issue
