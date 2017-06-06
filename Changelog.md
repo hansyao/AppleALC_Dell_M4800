@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.1.3
+- Fixed ALC889 info.plist min/max kernel
+
 #### v1.1.2
 - Added ALC225 layout-id 28 for Dell Inspirion 7579 by ChalesYu
 - Added ALC298 layout-id 28 for Dell XPS 9x50 by vusun123

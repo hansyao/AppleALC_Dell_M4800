@@ -18491,12 +18491,12 @@ static const CodecModInfo::File layouts37[] {
 };
 static const uint8_t patchBuf56[] { 0x89, 0x08, 0xEC, 0x10, };
 static const KextPatch patches37[] {
-	{ { &ADDPR(kextList)[2], patchBuf14, patchBuf56, 4, 2 }, 13, KernelPatcher::KernelAny },
-	{ { &ADDPR(kextList)[2], patchBuf16, patchBuf17, 4, 2 }, 15, 15 },
-	{ { &ADDPR(kextList)[2], patchBuf7, patchBuf17, 4, 2 }, 16, KernelPatcher::KernelAny },
-	{ { &ADDPR(kextList)[2], patchBuf0, patchBuf1, 8, 1 }, 13, KernelPatcher::KernelAny },
-	{ { &ADDPR(kextList)[2], patchBuf12, patchBuf13, 8, 1 }, 14, KernelPatcher::KernelAny },
 	{ { &ADDPR(kextList)[2], patchBuf10, patchBuf11, 8, 1 }, 13, 13 },
+	{ { &ADDPR(kextList)[2], patchBuf12, patchBuf13, 8, 1 }, 14, KernelPatcher::KernelAny },
+	{ { &ADDPR(kextList)[2], patchBuf0, patchBuf1, 8, 1 }, 13, KernelPatcher::KernelAny },
+	{ { &ADDPR(kextList)[2], patchBuf14, patchBuf56, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &ADDPR(kextList)[2], patchBuf16, patchBuf17, 4, 2 }, 13, KernelPatcher::KernelAny },
+	{ { &ADDPR(kextList)[2], patchBuf7, patchBuf17, 4, 2 }, 16, KernelPatcher::KernelAny },
 };
 static const uint32_t revisions23[] { 0x100002, };
 static const uint8_t file261[] {
