@@ -2,6 +2,7 @@ AppleALC Changelog
 ==================
 #### v1.1.3
 - Fixed ALC889 info.plist min/max kernel
+- Added Desktop Intel Kaby Lake HD630 HDMI audio support (ig-platform-id 0x59120000) 
 
 #### v1.1.2
 - Added ALC225 layout-id 28 for Dell Inspirion 7579 by ChalesYu

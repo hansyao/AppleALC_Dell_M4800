@@ -58,5 +58,14 @@
 			<string>/System/Library/Extensions/AppleIntelSKLGraphicsFramebuffer.kext/Contents/MacOS/AppleIntelSKLGraphicsFramebuffer</string>
 		</array>
 	</dict>
+	<key>AppleIntelKBLGraphicsFramebuffer</key>
+	<dict>
+		<key>Id</key>
+		<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
+		<key>Paths</key>
+		<array>
+			<string>/System/Library/Extensions/AppleIntelKBLGraphicsFramebuffer.kext/Contents/MacOS/AppleIntelKBLGraphicsFramebuffer</string>
+		</array>
+	</dict>
 </dict>
 </plist>

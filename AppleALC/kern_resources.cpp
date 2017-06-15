@@ -28,19 +28,21 @@ const size_t ADDPR(codecLookupSize) {3};
 static const char * kextPath0[] { "/System/Library/Extensions/AppleHDA.kext/Contents/PlugIns/AppleHDAController.kext/Contents/MacOS/AppleHDAController", };
 static const char * kextPath1[] { "/System/Library/Extensions/AppleIntelFramebufferAzul.kext/Contents/MacOS/AppleIntelFramebufferAzul", };
 static const char * kextPath2[] { "/System/Library/Extensions/AppleHDA.kext/Contents/MacOS/AppleHDA", };
-static const char * kextPath3[] { "/System/Library/Extensions/AppleIntelBDWGraphicsFramebuffer.kext/Contents/MacOS/AppleIntelBDWGraphicsFramebuffer", };
-static const char * kextPath4[] { "/System/Library/Extensions/AppleIntelFramebufferCapri.kext/Contents/MacOS/AppleIntelFramebufferCapri", };
-static const char * kextPath5[] { "/System/Library/Extensions/AppleIntelSKLGraphicsFramebuffer.kext/Contents/MacOS/AppleIntelSKLGraphicsFramebuffer", };
+static const char * kextPath3[] { "/System/Library/Extensions/AppleIntelKBLGraphicsFramebuffer.kext/Contents/MacOS/AppleIntelKBLGraphicsFramebuffer", };
+static const char * kextPath4[] { "/System/Library/Extensions/AppleIntelBDWGraphicsFramebuffer.kext/Contents/MacOS/AppleIntelBDWGraphicsFramebuffer", };
+static const char * kextPath5[] { "/System/Library/Extensions/AppleIntelFramebufferCapri.kext/Contents/MacOS/AppleIntelFramebufferCapri", };
+static const char * kextPath6[] { "/System/Library/Extensions/AppleIntelSKLGraphicsFramebuffer.kext/Contents/MacOS/AppleIntelSKLGraphicsFramebuffer", };
 KernelPatcher::KextInfo ADDPR(kextList)[] {
 	{ "com.apple.driver.AppleHDAController", kextPath0, 1, false, {false}, KernelPatcher::KextInfo::Unloaded },
 	{ "com.apple.driver.AppleIntelFramebufferAzul", kextPath1, 1, false, {false}, KernelPatcher::KextInfo::Unloaded },
 	{ "com.apple.driver.AppleHDA", kextPath2, 1, false, {true}, KernelPatcher::KextInfo::Unloaded },
-	{ "com.apple.driver.AppleIntelBDWGraphicsFramebuffer", kextPath3, 1, false, {false}, KernelPatcher::KextInfo::Unloaded },
-	{ "com.apple.driver.AppleIntelFramebufferCapri", kextPath4, 1, false, {false}, KernelPatcher::KextInfo::Unloaded },
-	{ "com.apple.driver.AppleIntelSKLGraphicsFramebuffer", kextPath5, 1, false, {false}, KernelPatcher::KextInfo::Unloaded },
+	{ "com.apple.driver.AppleIntelKBLGraphicsFramebuffer", kextPath3, 1, false, {false}, KernelPatcher::KextInfo::Unloaded },
+	{ "com.apple.driver.AppleIntelBDWGraphicsFramebuffer", kextPath4, 1, false, {false}, KernelPatcher::KextInfo::Unloaded },
+	{ "com.apple.driver.AppleIntelFramebufferCapri", kextPath5, 1, false, {false}, KernelPatcher::KextInfo::Unloaded },
+	{ "com.apple.driver.AppleIntelSKLGraphicsFramebuffer", kextPath6, 1, false, {false}, KernelPatcher::KextInfo::Unloaded },
 };
 
-const size_t ADDPR(kextListSize) {6};
+const size_t ADDPR(kextListSize) {7};
 
 // Creative CodecMod section
 
@@ -26298,44 +26300,47 @@ static const KextPatch patches86[] {
 static const uint8_t patchBuf112[] { 0x01, 0x05, 0x0B, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x05, 0x00, 0x00, 0x02, 0x04, 0x0B, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x05, 0x00, 0x00, };
 static const uint8_t patchBuf113[] { 0x01, 0x05, 0x0B, 0x00, 0x00, 0x08, 0x00, 0x00, 0x82, 0x00, 0x00, 0x00, 0x02, 0x04, 0x0B, 0x00, 0x00, 0x08, 0x00, 0x00, 0x82, 0x00, 0x00, 0x00, };
 static const KextPatch patches87[] {
-	{ { &ADDPR(kextList)[3], patchBuf112, patchBuf113, 24, 3 }, 15, KernelPatcher::KernelAny },
+	{ { &ADDPR(kextList)[4], patchBuf112, patchBuf113, 24, 3 }, 15, KernelPatcher::KernelAny },
 };
 static const KextPatch patches88[] {
-	{ { &ADDPR(kextList)[3], patchBuf112, patchBuf113, 24, 3 }, 15, KernelPatcher::KernelAny },
+	{ { &ADDPR(kextList)[4], patchBuf112, patchBuf113, 24, 3 }, 15, KernelPatcher::KernelAny },
 };
 static const uint8_t patchBuf114[] { 0x01, 0x05, 0x09, 0x00, 0x00, 0x04, 0x00, 0x00, 0x87, 0x01, 0x00, 0x00, 0x02, 0x04, 0x0A, 0x00, 0x00, 0x04, 0x00, 0x00, 0x87, 0x01, 0x00, 0x00, };
 static const uint8_t patchBuf115[] { 0x01, 0x05, 0x09, 0x00, 0x00, 0x08, 0x00, 0x00, 0x87, 0x01, 0x00, 0x00, 0x02, 0x04, 0x0A, 0x00, 0x00, 0x08, 0x00, 0x00, 0x87, 0x01, 0x00, 0x00, };
 static const KextPatch patches89[] {
-	{ { &ADDPR(kextList)[5], patchBuf114, patchBuf115, 24, 6 }, 15, KernelPatcher::KernelAny },
+	{ { &ADDPR(kextList)[6], patchBuf114, patchBuf115, 24, 6 }, 15, KernelPatcher::KernelAny },
 };
 static const KextPatch patches90[] {
-	{ { &ADDPR(kextList)[5], patchBuf114, patchBuf115, 24, 6 }, 15, KernelPatcher::KernelAny },
+	{ { &ADDPR(kextList)[6], patchBuf114, patchBuf115, 24, 6 }, 15, KernelPatcher::KernelAny },
 };
 static const KextPatch patches91[] {
-	{ { &ADDPR(kextList)[5], patchBuf114, patchBuf115, 24, 6 }, 15, KernelPatcher::KernelAny },
+	{ { &ADDPR(kextList)[6], patchBuf114, patchBuf115, 24, 6 }, 15, KernelPatcher::KernelAny },
 };
 static const KextPatch patches92[] {
-	{ { &ADDPR(kextList)[5], patchBuf114, patchBuf115, 24, 6 }, 15, KernelPatcher::KernelAny },
+	{ { &ADDPR(kextList)[6], patchBuf114, patchBuf115, 24, 6 }, 15, KernelPatcher::KernelAny },
 };
 static const uint8_t patchBuf116[] { 0x01, 0x05, 0x09, 0x00, 0x00, 0x04, 0x00, 0x00, 0x87, 0x01, 0x00, 0x00, 0x02, 0x04, 0x0A, 0x00, 0x00, 0x04, 0x00, 0x00, 0x87, 0x01, 0x00, 0x00, 0x03, 0x06, 0x0A, 0x00, 0x00, 0x04, 0x00, 0x00, 0x87, 0x01, 0x00, 0x00, };
 static const uint8_t patchBuf117[] { 0x01, 0x05, 0x09, 0x00, 0x00, 0x08, 0x00, 0x00, 0x87, 0x01, 0x00, 0x00, 0x02, 0x04, 0x0A, 0x00, 0x00, 0x08, 0x00, 0x00, 0x87, 0x01, 0x00, 0x00, 0x03, 0x06, 0x0A, 0x00, 0x00, 0x08, 0x00, 0x00, 0x87, 0x01, 0x00, 0x00, };
 static const KextPatch patches93[] {
-	{ { &ADDPR(kextList)[5], patchBuf116, patchBuf117, 36, 1 }, 15, KernelPatcher::KernelAny },
+	{ { &ADDPR(kextList)[6], patchBuf116, patchBuf117, 36, 1 }, 15, KernelPatcher::KernelAny },
+};
+static const KextPatch patches94[] {
+	{ { &ADDPR(kextList)[3], patchBuf116, patchBuf117, 36, 1 }, 15, KernelPatcher::KernelAny },
 };
 static const uint8_t patchBuf118[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x04, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x81, 0x00, 0x00, 0x00, 0x04, 0x06, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x81, 0x00, 0x00, 0x00, };
 static const uint8_t patchBuf119[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x07, 0x04, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x81, 0x00, 0x00, 0x00, 0x04, 0x06, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x81, 0x00, 0x00, 0x00, };
-static const KextPatch patches94[] {
-	{ { &ADDPR(kextList)[4], patchBuf118, patchBuf119, 36, 1 }, 13, KernelPatcher::KernelAny },
+static const KextPatch patches95[] {
+	{ { &ADDPR(kextList)[5], patchBuf118, patchBuf119, 36, 1 }, 13, KernelPatcher::KernelAny },
 };
 static const uint8_t patchBuf120[] { 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x30, 0x00, 0x00, 0x00, 0x02, 0x05, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, };
 static const uint8_t patchBuf121[] { 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x30, 0x00, 0x00, 0x00, 0x02, 0x05, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, };
-static const KextPatch patches95[] {
-	{ { &ADDPR(kextList)[4], patchBuf120, patchBuf121, 36, 2 }, 13, KernelPatcher::KernelAny },
+static const KextPatch patches96[] {
+	{ { &ADDPR(kextList)[5], patchBuf120, patchBuf121, 36, 2 }, 13, KernelPatcher::KernelAny },
 };
 static const uint8_t patchBuf122[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, 0x04, 0x06, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, };
 static const uint8_t patchBuf123[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x07, 0x01, 0x00, 0x00, 0x04, 0x06, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, };
-static const KextPatch patches96[] {
-	{ { &ADDPR(kextList)[4], patchBuf122, patchBuf123, 36, 2 }, 13, KernelPatcher::KernelAny },
+static const KextPatch patches97[] {
+	{ { &ADDPR(kextList)[5], patchBuf122, patchBuf123, 36, 2 }, 13, KernelPatcher::KernelAny },
 };
 ControllerModInfo ADDPR(controllerMod)[] {
 	{ "200 Series PCH HD Audio", 0x8086, 0xA2F0, nullptr, 0, ControllerModInfo::PlatformAny, WIOKit::ComputerModel::ComputerAny, patches79, 1 },
@@ -26353,9 +26358,10 @@ ControllerModInfo ADDPR(controllerMod)[] {
 	{ "Laptop Intel HD530 HDMI (ig-platform-id 0x19160000)", 0x8086, 0x191B, nullptr, 0, 420872192, WIOKit::ComputerModel::ComputerLaptop, patches91, 1 },
 	{ "Laptop Intel HD530 HDMI (ig-platform-id 0x191b0000)", 0x8086, 0x191B, nullptr, 0, 421199872, WIOKit::ComputerModel::ComputerLaptop, patches92, 1 },
 	{ "Desktop Intel HD530 HDMI (ig-platform-id 0x19120000)", 0x8086, 0x1912, nullptr, 0, 420610048, WIOKit::ComputerModel::ComputerDesktop, patches93, 1 },
-	{ "Laptop Intel HD4000 HDMI (ig-platform-id 0x01660003)", 0x8086, 0x166, nullptr, 0, 23461891, WIOKit::ComputerModel::ComputerLaptop, patches94, 1 },
-	{ "Laptop Intel HD4000 HDMI (ig-platform-id 0x01660009)", 0x8086, 0x166, nullptr, 0, 23461897, WIOKit::ComputerModel::ComputerLaptop, patches95, 1 },
-	{ "Desktop Intel HD4000 HDMI (ig-platform-id 0x0166000A)", 0x8086, 0x166, nullptr, 0, 23461898, WIOKit::ComputerModel::ComputerDesktop, patches96, 1 },
+	{ "Desktop Intel HD630 HDMI (ig-platform-id 0x59120000)", 0x8086, 0x5912, nullptr, 0, 1494351872, WIOKit::ComputerModel::ComputerDesktop, patches94, 1 },
+	{ "Laptop Intel HD4000 HDMI (ig-platform-id 0x01660003)", 0x8086, 0x166, nullptr, 0, 23461891, WIOKit::ComputerModel::ComputerLaptop, patches95, 1 },
+	{ "Laptop Intel HD4000 HDMI (ig-platform-id 0x01660009)", 0x8086, 0x166, nullptr, 0, 23461897, WIOKit::ComputerModel::ComputerLaptop, patches96, 1 },
+	{ "Desktop Intel HD4000 HDMI (ig-platform-id 0x0166000A)", 0x8086, 0x166, nullptr, 0, 23461898, WIOKit::ComputerModel::ComputerDesktop, patches97, 1 },
 };
 
-const size_t ADDPR(controllerModSize) {18};
+const size_t ADDPR(controllerModSize) {19};
