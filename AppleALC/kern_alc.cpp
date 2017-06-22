@@ -94,7 +94,7 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 				continue;
 			}
 			
-			if (info->platforms > 0 && info->layoutNum > 0) {
+			if (info->platformNum > 0 || info->layoutNum > 0) {
 				DBGLOG("alc @ will route callbacks resource loading callbacks");
 				progressState |= ProcessingState::CallbacksWantRouting;
 			}
@@ -118,10 +118,10 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 		
 		if (!layout || !platform) {
 			SYSLOG("alc @ failed to find AppleHDA layout or platform callback symbols (%llX, %llX)", layout, platform);
-		} else if (orgLayoutLoadCallback = reinterpret_cast<t_callback>(patcher.routeFunction(layout, reinterpret_cast<mach_vm_address_t>(layoutLoadCallback), true)),
+		} else if (static_cast<void>(orgLayoutLoadCallback = reinterpret_cast<t_callback>(patcher.routeFunction(layout, reinterpret_cast<mach_vm_address_t>(layoutLoadCallback), true))),
 				   patcher.getError() != KernelPatcher::Error::NoError) {
 			SYSLOG("alc @ failed to hook layout callback");
-		} else if (orgPlatformLoadCallback = reinterpret_cast<t_callback>(patcher.routeFunction(platform, reinterpret_cast<mach_vm_address_t>(platformLoadCallback), true)),
+		} else if (static_cast<void>(orgPlatformLoadCallback = reinterpret_cast<t_callback>(patcher.routeFunction(platform, reinterpret_cast<mach_vm_address_t>(platformLoadCallback), true))),
 				   patcher.getError() != KernelPatcher::Error::NoError) {
 			SYSLOG("alc @ failed to hook platform callback");
 		} else {
