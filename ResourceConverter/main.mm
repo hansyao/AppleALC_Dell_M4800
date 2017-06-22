@@ -55,9 +55,9 @@ static NSString *makeStringList(NSString *name, size_t index, NSArray *array, NS
 }
 
 static NSDictionary * generateKexts(NSString *file, NSDictionary *kexts) {
-	auto kextPathsSection = [[NSMutableString alloc] initWithUTF8String:"\n// Kext section\n\n"];
-	auto kextSection = [[NSMutableString alloc] init];
-	auto kextNums = [[NSMutableDictionary alloc] init];
+	auto kextPathsSection = [[[NSMutableString alloc] initWithUTF8String:"\n// Kext section\n\n"] autorelease];
+	auto kextSection = [[[NSMutableString alloc] init] autorelease];
+	auto kextNums = [[[NSMutableDictionary alloc] init] autorelease];
 	
 	[kextSection appendString:@"KernelPatcher::KextInfo ADDPR(kextList)[] {\n"];
 	
@@ -89,22 +89,22 @@ static NSDictionary * generateKexts(NSString *file, NSDictionary *kexts) {
 
 static NSString *generateFile(NSString *file, NSString *path, NSString *inFile) {
 	static size_t fileIndex {0};
-	static NSMutableDictionary *fileList = [[NSMutableDictionary alloc] init];
+	static NSMutableDictionary *fileList = [[[NSMutableDictionary alloc] init] autorelease];
 	
 	auto fullInPath = [[NSString alloc] initWithFormat:@"%@/%@", path, inFile];
 	auto data = [[NSFileManager defaultManager] contentsAtPath:fullInPath];
 	auto bytes = static_cast<const uint8_t *>([data bytes]);
 	
 	if ([fileList objectForKey:fullInPath]) {
-		return [[NSString alloc] initWithFormat:@"file%@, %zu", [fileList objectForKey:fullInPath], [data length]];
+		return [[[NSString alloc] initWithFormat:@"file%@, %zu", [fileList objectForKey:fullInPath], [data length]] autorelease];
 	}
 	
 	if (data) {
-		appendFile(file, [[NSString alloc] initWithFormat:@"static const uint8_t file%zu[] {\n", fileIndex]);
+		appendFile(file, [[[NSString alloc] initWithFormat:@"static const uint8_t file%zu[] {\n", fileIndex] autorelease]);
 		
 		size_t i = 0;
 		while (i < [data length]) {
-			auto outLine = [[NSMutableString alloc] initWithString:@"\t"];
+			auto outLine = [[[NSMutableString alloc] initWithString:@"\t"] autorelease];
 			for (size_t p = 0; p < 24 && i < [data length]; p++, i++) {
 				[outLine appendFormat:@"0x%0.2X, ", bytes[i]];
 			}
@@ -112,10 +112,10 @@ static NSString *generateFile(NSString *file, NSString *path, NSString *inFile) 
 			appendFile(file, outLine);
 		}
 		
-		appendFile(file, [[NSString alloc] initWithFormat:@"};\n"]);
+		appendFile(file, [[[NSString alloc] initWithFormat:@"};\n"] autorelease]);
 		[fileList setValue:[NSNumber numberWithUnsignedLongLong:fileIndex] forKey:fullInPath];
 		fileIndex++;
-		return [[NSString alloc] initWithFormat:@"file%zu, %zu", fileIndex-1, [data length]];
+		return [[[NSString alloc] initWithFormat:@"file%zu, %zu", fileIndex-1, [data length]] autorelease];
 	}
 	
 	return @"nullptr, 0";
@@ -129,7 +129,7 @@ static NSString *generateRevisions(NSString *file, NSDictionary *codecDict) {
 	if (revs) {
 		appendFile(file, makeStringList(@"revisions", revisionIndex, revs, @"uint32_t"));
 		revisionIndex++;
-		return [[NSString alloc] initWithFormat:@"revisions%zu, %lu", revisionIndex-1, [revs count]];
+		return [[[NSString alloc] initWithFormat:@"revisions%zu, %lu", revisionIndex-1, [revs count]] autorelease];
 	}
 	
 	return @"nullptr, 0";
@@ -141,7 +141,7 @@ static NSString *generatePlatforms(NSString *file, NSDictionary *codecDict, NSSt
 	NSArray *plats = [[codecDict objectForKey:@"Files"] objectForKey:@"Platforms"];
 	
 	if (plats) {
-		auto pStr = [[NSMutableString alloc] initWithFormat:@"static const CodecModInfo::File platforms%zu[] {\n", platformIndex];
+		auto pStr = [[[NSMutableString alloc] initWithFormat:@"static const CodecModInfo::File platforms%zu[] {\n", platformIndex] autorelease];
 		for (NSDictionary *p in plats) {
 			[pStr appendFormat:@"\t{ %@, %@, %@, %@},\n",
 			 generateFile(file, path, [p objectForKey:@"Path"]),
@@ -154,7 +154,7 @@ static NSString *generatePlatforms(NSString *file, NSDictionary *codecDict, NSSt
 	
 		appendFile(file, pStr);
 		platformIndex++;
-		return [[NSString alloc] initWithFormat:@"platforms%zu, %lu", platformIndex-1, [plats count]];
+		return [[[NSString alloc] initWithFormat:@"platforms%zu, %lu", platformIndex-1, [plats count]] autorelease];
 	}
 	
 	return @"nullptr, 0";
@@ -166,7 +166,7 @@ static NSString *generateLayouts(NSString *file, NSDictionary *codecDict, NSStri
 	NSArray *lts = [[codecDict objectForKey:@"Files"] objectForKey:@"Layouts"];
 	
 	if (lts) {
-		auto pStr = [[NSMutableString alloc] initWithFormat:@"static const CodecModInfo::File layouts%zu[] {\n", layoutIndex];
+		auto pStr = [[[NSMutableString alloc] initWithFormat:@"static const CodecModInfo::File layouts%zu[] {\n", layoutIndex] autorelease];
 		for (NSDictionary *p in lts) {
 			[pStr appendFormat:@"\t{ %@, %@, %@, %@ },\n",
 			 generateFile(file, path, [p objectForKey:@"Path"]),
@@ -179,7 +179,7 @@ static NSString *generateLayouts(NSString *file, NSDictionary *codecDict, NSStri
 		
 		appendFile(file, pStr);
 		layoutIndex++;
-		return [[NSString alloc] initWithFormat:@"layouts%zu, %lu", layoutIndex-1, [lts count]];
+		return [[[NSString alloc] initWithFormat:@"layouts%zu, %lu", layoutIndex-1, [lts count]] autorelease];
 	}
 	
 	return @"nullptr, 0";
@@ -220,8 +220,8 @@ static NSString *generatePatches(NSString *file, NSArray *patches, NSDictionary 
 
 	if (patches) {
 		auto pStr = [NSMutableString alloc];
-		pStr = header ? [pStr initWithString:header] : [pStr initWithFormat:@"static const KextPatch patches%zu[] {\n", patchIndex];
-		auto pbStr = [[NSMutableString alloc] init];
+		pStr = header ? [[pStr initWithString:header] autorelease] : [[pStr initWithFormat:@"static const KextPatch patches%zu[] {\n", patchIndex] autorelease];
+		auto pbStr = [[[NSMutableString alloc] init] autorelease];
 		for (NSDictionary *p in patches) {
 			const size_t PatchNum = 2;
             NSData *f[PatchNum] = {[p objectForKey:@"Find"], [p objectForKey:@"Replace"]};
@@ -237,10 +237,10 @@ static NSString *generatePatches(NSString *file, NSArray *patches, NSDictionary 
 				size_t patchLen = [f[i] length];
 				
 				if (!lookupPatchBufIndex(patchBuf, patchLen, patchBufIndexes[i])) {
-					[pbStr appendString:[[NSString alloc] initWithFormat:@"static const uint8_t patchBuf%zu[] { ", patchBufIndex]];
+					[pbStr appendString:[[[NSString alloc] initWithFormat:@"static const uint8_t patchBuf%zu[] { ", patchBufIndex] autorelease]];
 					
 					for (size_t b = 0; b < patchLen; b++) {
-						[pbStr appendString:[[NSString alloc] initWithFormat:@"0x%0.2X, ", patchBuf[b]]];
+						[pbStr appendString:[[[NSString alloc] initWithFormat:@"0x%0.2X, ", patchBuf[b]] autorelease]];
 					}
 					
 					[pbStr appendString:@"};\n"];
@@ -267,23 +267,23 @@ static NSString *generatePatches(NSString *file, NSArray *patches, NSDictionary 
 		appendFile(file, pbStr);
 		appendFile(file, pStr);
 		patchIndex++;
-		return [[NSString alloc] initWithFormat:@"patches%zu, %lu", patchIndex-1, [patches count]];
+		return [[[NSString alloc] initWithFormat:@"patches%zu, %lu", patchIndex-1, [patches count]] autorelease];
 	}
 	
 	return @"nullptr, 0";
 }
 
 static size_t generateCodecs(NSString *file, NSString *vendor, NSString *path, NSDictionary *kextIndexes) {
-	appendFile(file, [[NSString alloc] initWithFormat:@"\n// %@ CodecMod section\n\n", vendor]);
+	appendFile(file, [[[NSString alloc] initWithFormat:@"\n// %@ CodecMod section\n\n", vendor] autorelease]);
 
-	auto codecModSection = [[NSMutableString alloc] initWithFormat:@"static CodecModInfo codecMod%@[] {\n", vendor];
+	auto codecModSection = [[[NSMutableString alloc] initWithFormat:@"static CodecModInfo codecMod%@[] {\n", vendor] autorelease];
 	auto fm = [NSFileManager defaultManager];
 	NSArray *entries = [fm contentsOfDirectoryAtPath:path error:nil];
 	
 	size_t codecs {0};
 	for (NSString *entry in entries) {
-		NSString *baseDirStr = [[NSString alloc] initWithFormat:@"%@/%@", path, entry];
-		NSString *infoCfgStr = [[NSString alloc] initWithFormat:@"%@/Info.plist", baseDirStr];
+		NSString *baseDirStr = [[[NSString alloc] initWithFormat:@"%@/%@", path, entry] autorelease];
+		NSString *infoCfgStr = [[[NSString alloc] initWithFormat:@"%@/Info.plist", baseDirStr] autorelease];
 		
 		// Dir exists and is codec dir
 		if ([fm fileExistsAtPath:infoCfgStr]) {
@@ -314,7 +314,7 @@ static size_t generateCodecs(NSString *file, NSString *vendor, NSString *path, N
 static void generateControllers(NSString *file, NSArray *ctrls, NSDictionary *vendors, NSDictionary *kextIndexes) {
 	appendFile(file, @"\n// ControllerMod section\n\n");
 	
-	auto ctrlModSection = [[NSMutableString alloc] initWithString:@"ControllerModInfo ADDPR(controllerMod)[] {\n"];
+	auto ctrlModSection = [[[NSMutableString alloc] initWithString:@"ControllerModInfo ADDPR(controllerMod)[] {\n"] autorelease];
 
 	for (NSDictionary *entry in ctrls) {
 		auto revs = generateRevisions(file, entry);
@@ -348,11 +348,11 @@ static void generateControllers(NSString *file, NSArray *ctrls, NSDictionary *ve
 	
 	long count;
 	generatePatches(file, userp, kextIndexes, &count, @"KextPatch userPatch[] {\n");
-	appendFile(file, [[NSMutableString alloc] initWithFormat:@"\nconst size_t userPatchSize {%lu};\n", count]);
+	appendFile(file, [[[NSMutableString alloc] initWithFormat:@"\nconst size_t userPatchSize {%lu};\n", count] autorelease]);
 }*/
 
 static void generateVendors(NSString *file, NSDictionary *vendors, NSString *path, NSDictionary *kextIndexes) {
-	auto vendorSection = [[NSMutableString alloc] initWithUTF8String:"\n// Vendor section\n\n"];
+	auto vendorSection = [[[NSMutableString alloc] initWithUTF8String:"\n// Vendor section\n\n"] autorelease];
 	
 	[vendorSection appendString:@"VendorModInfo ADDPR(vendorMod)[] {\n"];
 	
@@ -371,8 +371,8 @@ static void generateVendors(NSString *file, NSDictionary *vendors, NSString *pat
 static void generateLookup(NSString *file, NSArray *lookup) {
 	appendFile(file, @"\n// Lookup section\n\n");
 
-	auto trees = [[NSMutableString alloc] init];
-	auto lookups = [[NSMutableString alloc] init];
+	auto trees = [[[NSMutableString alloc] init] autorelease];
+	auto lookups = [[[NSMutableString alloc] init] autorelease];
 	size_t treeIndex {0};
 	
 	for (NSDictionary *set in lookup) {
@@ -392,37 +392,39 @@ static void generateLookup(NSString *file, NSArray *lookup) {
 	appendFile(file, @"CodecLookupInfo ADDPR(codecLookup)[] {\n");
 	appendFile(file, lookups);
 	appendFile(file, @"};\n");
-	appendFile(file, [[NSString alloc] initWithFormat:@"const size_t ADDPR(codecLookupSize) {%zu};\n", treeIndex]);
+	appendFile(file, [[[NSString alloc] initWithFormat:@"const size_t ADDPR(codecLookupSize) {%zu};\n", treeIndex] autorelease]);
 }
 
 int main(int argc, const char * argv[]) {
-	if (argc != 3)
-		ERROR("Invalid usage");
-	
-	auto basePath = [[NSString alloc] initWithUTF8String:argv[1]];
-	auto lookupCfg = [[NSString alloc] initWithFormat:@"%@/CodecLookup.plist", basePath];
-	auto vendorsCfg = [[NSString alloc] initWithFormat:@"%@/Vendors.plist", basePath];
-	auto kextsCfg = [[NSString alloc] initWithFormat:@"%@/Kexts.plist",basePath];
-	auto ctrlsCfg = [[NSString alloc] initWithFormat:@"%@/Controllers.plist",basePath];
-	//auto userCfg = [[NSString alloc] initWithFormat:@"%@/UserPatches.plist",basePath];
-	auto outputCpp = [[NSString alloc] initWithUTF8String:argv[2]];
-	
-	auto lookup = [NSArray arrayWithContentsOfFile:lookupCfg];
-	auto vendors = [NSDictionary dictionaryWithContentsOfFile:vendorsCfg];
-	auto kexts = [NSDictionary dictionaryWithContentsOfFile:kextsCfg];
-	auto ctrls = [NSArray arrayWithContentsOfFile:ctrlsCfg];
-	//auto userp = [NSArray arrayWithContentsOfFile:userCfg];
-	
-	if (!lookup || !vendors || !kexts || !ctrls)
-		ERROR("Missing resource data (lookup:%p, vendors:%p, kexts:%p, ctrls:%p)", lookup, vendors, kexts, ctrls);
-	
-	// Create a file
-	[[NSFileManager defaultManager] createFileAtPath:outputCpp contents:nil attributes:nil];
-	
-	appendFile(outputCpp, ResourceHeader);
-	generateLookup(outputCpp, lookup);
-	auto kextIndexes = generateKexts(outputCpp, kexts);
-	generateVendors(outputCpp, vendors, basePath, kextIndexes);
-	generateControllers(outputCpp, ctrls, vendors, kextIndexes);
-	//generateUserPatches(outputCpp, userp, kextIndexes);
+	@autoreleasepool {
+		if (argc != 3)
+			ERROR("Invalid usage");
+		
+		auto basePath = [[[NSString alloc] initWithUTF8String:argv[1]] autorelease];
+		auto lookupCfg = [[[NSString alloc] initWithFormat:@"%@/CodecLookup.plist", basePath] autorelease];
+		auto vendorsCfg = [[[NSString alloc] initWithFormat:@"%@/Vendors.plist", basePath] autorelease];
+		auto kextsCfg = [[[NSString alloc] initWithFormat:@"%@/Kexts.plist",basePath] autorelease];
+		auto ctrlsCfg = [[[NSString alloc] initWithFormat:@"%@/Controllers.plist",basePath] autorelease];
+		//auto userCfg = [[[NSString alloc] initWithFormat:@"%@/UserPatches.plist",basePath] autorelease];
+		auto outputCpp = [[[NSString alloc] initWithUTF8String:argv[2]] autorelease];
+		
+		auto lookup = [NSArray arrayWithContentsOfFile:lookupCfg];
+		auto vendors = [NSDictionary dictionaryWithContentsOfFile:vendorsCfg];
+		auto kexts = [NSDictionary dictionaryWithContentsOfFile:kextsCfg];
+		auto ctrls = [NSArray arrayWithContentsOfFile:ctrlsCfg];
+		//auto userp = [NSArray arrayWithContentsOfFile:userCfg];
+		
+		if (!lookup || !vendors || !kexts || !ctrls)
+			ERROR("Missing resource data (lookup:%p, vendors:%p, kexts:%p, ctrls:%p)", lookup, vendors, kexts, ctrls);
+		
+		// Create a file
+		[[NSFileManager defaultManager] createFileAtPath:outputCpp contents:nil attributes:nil];
+		
+		appendFile(outputCpp, ResourceHeader);
+		generateLookup(outputCpp, lookup);
+		auto kextIndexes = generateKexts(outputCpp, kexts);
+		generateVendors(outputCpp, vendors, basePath, kextIndexes);
+		generateControllers(outputCpp, ctrls, vendors, kextIndexes);
+		//generateUserPatches(outputCpp, userp, kextIndexes);
+	}
 }
