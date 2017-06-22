@@ -16,12 +16,14 @@
 static const char * tree0[] { "AppleACPIPCI", "IGPU", };
 static const char * tree1[] { "AppleACPIPCI", "HDAU", };
 static const char * tree2[] { "AppleACPIPCI", "HDEF", "AppleHDAController", "IOHDACodecDevice", };
+static const char * tree3[] { "AppleACPIPCI", "HDEF", "AppleHDA8086_9D70Controller", "IOHDACodecDevice", };
 CodecLookupInfo ADDPR(codecLookup)[] {
 	{ tree0, 2, 1, false },
 	{ tree1, 2, 1, false },
 	{ tree2, 4, 1, true },
+	{ tree3, 4, 1, true },
 };
-const size_t ADDPR(codecLookupSize) {3};
+const size_t ADDPR(codecLookupSize) {4};
 
 // Kext section
 

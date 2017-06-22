@@ -6,6 +6,7 @@ AppleALC Changelog
 - Added Conexant CX20756 layout-id 13 by InsanelyDeepak
 - Added ALC282 layout-id 13 by InsanelyDeepak
 - Fixed separate layout/platform injection
+- Added AppleHDA8086_9D70Controller for 10.13
 
 #### v1.1.2
 - Added ALC225 layout-id 28 for Dell Inspirion 7579 by ChalesYu

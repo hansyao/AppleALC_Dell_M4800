@@ -39,5 +39,20 @@
 		<key>controllerNum</key>
 		<integer>1</integer>
 	</dict>
+	<dict>
+		<key>Comment</key>
+		<string>Skylake 9D70 Controller</string>
+		<key>Detect</key>
+		<true/>
+		<key>Tree</key>
+		<array>
+			<string>AppleACPIPCI</string>
+			<string>HDEF</string>
+			<string>AppleHDA8086_9D70Controller</string>
+			<string>IOHDACodecDevice</string>
+		</array>
+		<key>controllerNum</key>
+		<integer>1</integer>
+	</dict>
 </array>
 </plist>
