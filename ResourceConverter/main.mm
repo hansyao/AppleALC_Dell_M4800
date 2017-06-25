@@ -70,8 +70,8 @@ static NSDictionary * generateKexts(NSString *file, NSDictionary *kexts) {
 		
 		[kextPathsSection appendString:makeStringList(@"kextPath", kextIndex, kextPaths)];
 		
-		[kextSection appendFormat:@"\t{ \"%@\", kextPath%zu, %lu, false, {%s}, KernelPatcher::KextInfo::Unloaded },\n",
-			kextID, kextIndex, [kextPaths count], [kextInfo objectForKey:@"Detect"] ? "true" : "false" ];
+		[kextSection appendFormat:@"\t{ \"%@\", kextPath%zu, %lu, false, %s, {%s}, KernelPatcher::KextInfo::Unloaded },\n",
+			kextID, kextIndex, [kextPaths count], [kextInfo objectForKey:@"Reloadable"] ? "true" : "false", [kextInfo objectForKey:@"Detect"] ? "true" : ""];
 		
 		[kextNums setObject:[NSNumber numberWithUnsignedLongLong:kextIndex] forKey:kextName];
 		

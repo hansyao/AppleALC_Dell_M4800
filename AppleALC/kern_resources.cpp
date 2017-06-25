@@ -35,13 +35,13 @@ static const char * kextPath4[] { "/System/Library/Extensions/AppleIntelBDWGraph
 static const char * kextPath5[] { "/System/Library/Extensions/AppleIntelFramebufferCapri.kext/Contents/MacOS/AppleIntelFramebufferCapri", };
 static const char * kextPath6[] { "/System/Library/Extensions/AppleIntelSKLGraphicsFramebuffer.kext/Contents/MacOS/AppleIntelSKLGraphicsFramebuffer", };
 KernelPatcher::KextInfo ADDPR(kextList)[] {
-	{ "com.apple.driver.AppleHDAController", kextPath0, 1, false, {false}, KernelPatcher::KextInfo::Unloaded },
-	{ "com.apple.driver.AppleIntelFramebufferAzul", kextPath1, 1, false, {false}, KernelPatcher::KextInfo::Unloaded },
-	{ "com.apple.driver.AppleHDA", kextPath2, 1, false, {true}, KernelPatcher::KextInfo::Unloaded },
-	{ "com.apple.driver.AppleIntelKBLGraphicsFramebuffer", kextPath3, 1, false, {false}, KernelPatcher::KextInfo::Unloaded },
-	{ "com.apple.driver.AppleIntelBDWGraphicsFramebuffer", kextPath4, 1, false, {false}, KernelPatcher::KextInfo::Unloaded },
-	{ "com.apple.driver.AppleIntelFramebufferCapri", kextPath5, 1, false, {false}, KernelPatcher::KextInfo::Unloaded },
-	{ "com.apple.driver.AppleIntelSKLGraphicsFramebuffer", kextPath6, 1, false, {false}, KernelPatcher::KextInfo::Unloaded },
+	{ "com.apple.driver.AppleHDAController", kextPath0, 1, false, false, {}, KernelPatcher::KextInfo::Unloaded },
+	{ "com.apple.driver.AppleIntelFramebufferAzul", kextPath1, 1, false, false, {}, KernelPatcher::KextInfo::Unloaded },
+	{ "com.apple.driver.AppleHDA", kextPath2, 1, false, true, {true}, KernelPatcher::KextInfo::Unloaded },
+	{ "com.apple.driver.AppleIntelKBLGraphicsFramebuffer", kextPath3, 1, false, false, {}, KernelPatcher::KextInfo::Unloaded },
+	{ "com.apple.driver.AppleIntelBDWGraphicsFramebuffer", kextPath4, 1, false, false, {}, KernelPatcher::KextInfo::Unloaded },
+	{ "com.apple.driver.AppleIntelFramebufferCapri", kextPath5, 1, false, false, {}, KernelPatcher::KextInfo::Unloaded },
+	{ "com.apple.driver.AppleIntelSKLGraphicsFramebuffer", kextPath6, 1, false, false, {}, KernelPatcher::KextInfo::Unloaded },
 };
 
 const size_t ADDPR(kextListSize) {7};

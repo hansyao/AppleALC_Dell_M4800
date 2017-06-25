@@ -161,8 +161,7 @@ private:
 			NotReady = 0,
 			ControllersLoaded = 1,
 			CodecsLoaded = 2,
-			CallbacksWantRouting = 4,
-			CallbacksRouted = 8,
+			CallbacksWantRouting = 4
 		};
 	};
 	int progressState {ProcessingState::NotReady};

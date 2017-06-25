@@ -8,7 +8,8 @@ AppleALC Changelog
 - Fixed separate layout/platform injection
 - Added AppleHDA8086_9D70Controller for 10.13
 - Changed ALC255 layout-id 13 & 17 by InsanelyDeepak
-- Fix typo in CodecID
+- Fixed typo in ALC255 CodecID
+- Fixed audio reenable after kextunload/kextload AppleHDA 
 
 #### v1.1.2
 - Added ALC225 layout-id 28 for Dell Inspirion 7579 by ChalesYu

@@ -58,22 +58,30 @@ void AlcEnabler::platformLoadCallback(uint32_t requestTag, kern_return_t result,
 }
 
 void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_address_t address, size_t size) {
+	size_t kextIndex = 0;
+	
+	while (kextIndex < ADDPR(kextListSize)) {
+		if (ADDPR(kextList)[kextIndex].loadIndex == index)
+			break;
+		kextIndex++;
+	}
+	
+	if (kextIndex == ADDPR(kextListSize))
+		return;
+	
 	if (!(progressState & ProcessingState::ControllersLoaded)) {
 		grabControllers();
 		progressState |= ProcessingState::ControllersLoaded;
-	} else if (!(progressState & ProcessingState::CodecsLoaded)) {
-		for (size_t i = 0; i < ADDPR(kextListSize); i++) {
-			if (ADDPR(kextList)[i].loadIndex == index) {
-				if (ADDPR(kextList)[i].user[0] && grabCodecs()) {
-					progressState |= ProcessingState::CodecsLoaded;
-					break;
-				}
-				DBGLOG("alc @ failed to find a suitable codec, we have nothing to do");
-				// Continue to patch controllers
-			}
-		}
+	} else if (!(progressState & ProcessingState::CodecsLoaded) && ADDPR(kextList)[kextIndex].user[0]) {
+		if (grabCodecs())
+			progressState |= ProcessingState::CodecsLoaded;
+		else
+			DBGLOG("alc @ failed to find a suitable codec, we have nothing to do");
 	}
-
+			   
+			   
+	// Continue to patch controllers
+	
 	if (progressState & ProcessingState::ControllersLoaded) {
 		for (size_t i = 0, num = controllers.size(); i < num; i++) {
 			auto &info = controllers[i]->info;
@@ -103,7 +111,7 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 		}
 	}
 	
-	if ((progressState & ProcessingState::CallbacksWantRouting) && !(progressState & ProcessingState::CallbacksRouted)) {
+	if ((progressState & ProcessingState::CallbacksWantRouting) && ADDPR(kextList)[kextIndex].user[0]) {
 		auto layout = patcher.solveSymbol(index, "__ZN14AppleHDADriver18layoutLoadCallbackEjiPKvjPv");
 		auto platform = patcher.solveSymbol(index, "__ZN14AppleHDADriver20platformLoadCallbackEjiPKvjPv");
 
@@ -124,8 +132,6 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 		} else if (static_cast<void>(orgPlatformLoadCallback = reinterpret_cast<t_callback>(patcher.routeFunction(platform, reinterpret_cast<mach_vm_address_t>(platformLoadCallback), true))),
 				   patcher.getError() != KernelPatcher::Error::NoError) {
 			SYSLOG("alc @ failed to hook platform callback");
-		} else {
-			progressState |= ProcessingState::CallbacksRouted;
 		}
 	}
 	

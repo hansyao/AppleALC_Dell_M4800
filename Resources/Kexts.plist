@@ -8,6 +8,8 @@
 		<string>com.apple.driver.AppleHDA</string>
 		<key>Detect</key>
 		<true/>
+		<key>Reloadable</key>
+		<true/>
 		<key>Paths</key>
 		<array>
 			<string>/System/Library/Extensions/AppleHDA.kext/Contents/MacOS/AppleHDA</string>
