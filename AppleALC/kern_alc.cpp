@@ -31,6 +31,19 @@ bool AlcEnabler::init() {
 		return false;
 	}
 	
+	if (getKernelVersion() >= KernelVersion::Sierra) {
+		char tmp[16];
+		// Unlock custom audio engines by disabling Apple private entitlement verification
+		if (PE_parse_boot_argn("-alcdhost", tmp, sizeof(tmp))) {
+			error = lilu.onPatcherLoad([](void *user, KernelPatcher &patcher) {
+				callbackAlc = static_cast<AlcEnabler *>(user);
+				callbackPatcher = &patcher;
+				callbackAlc->hookEntitlementVerification(patcher);
+			}, this);
+		}
+	}
+	
+	
 	return true;
 }
 
@@ -55,6 +68,18 @@ void AlcEnabler::platformLoadCallback(uint32_t requestTag, kern_return_t result,
 	} else {
 		SYSLOG("alc @ platform callback arrived at nowhere");
 	}
+}
+
+OSObject *AlcEnabler::copyClientEntitlement(task_t task, const char *entitlement) {
+	if (callbackAlc && callbackAlc->orgCopyClientEntitlement) {
+		auto obj = callbackAlc->orgCopyClientEntitlement(task, entitlement);
+		if ((!obj || obj != kOSBooleanTrue) && !strcmp(entitlement, "com.apple.private.audio.driver-host"))
+			obj = kOSBooleanTrue;
+		return obj;
+	}
+	
+	SYSLOG("alc @ copy client entitlement arrived at nowhere");
+	return nullptr;
 }
 
 void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_address_t address, size_t size) {
@@ -137,6 +162,17 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 	
 	// Ignore all the errors for other processors
 	patcher.clearError();
+}
+
+void AlcEnabler::hookEntitlementVerification(KernelPatcher &patcher) {
+	auto entitlement = patcher.solveSymbol(KernelPatcher::KernelID, "__ZN12IOUserClient21copyClientEntitlementEP4taskPKc");
+	
+	if (entitlement) {
+		orgCopyClientEntitlement = reinterpret_cast<t_copyClientEntitlement>(patcher.routeFunction(entitlement, reinterpret_cast<mach_vm_address_t>(copyClientEntitlement), true));
+		if (patcher.getError() != KernelPatcher::Error::NoError) {
+			SYSLOG("alc @ failed to hook copy user entitlement");
+		}
+	}
 }
 
 void AlcEnabler::updateResource(KernelPatcher &patcher, Resource type, kern_return_t &result, const void * &resourceData, uint32_t &resourceDataLength) {
