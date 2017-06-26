@@ -11,6 +11,7 @@ AppleALC Changelog
 - Fixed typo in ALC255 CodecID
 - Fixed audio reenable after kextunload/kextload AppleHDA
 - Added `-alcdhost` argument to enable custom audio drivers in 10.12+ (e.g. Audirvana)
+- Added ALC255 layout-id 27 for Asus X556UA m-dudarev
 
 #### v1.1.2
 - Added ALC225 layout-id 28 for Dell Inspirion 7579 by ChalesYu

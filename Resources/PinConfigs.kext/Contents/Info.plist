@@ -496,6 +496,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>ALC255 for Asus X556UA m-dudarev</string>
+					<key>CodecID</key>
+					<integer>283902549</integer>
+					<key>ConfigData</key>
+					<data>AUccEAFHHQEBRx4XAUcfkAGXHCABlx0QAZcegQGXHwQCFxwgAhcdEAIXHiECFx8EAbccMAG3HQEBtx6gAbcfkAFHDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>27</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Realtek ALC255 for Lenovo B470 - vusun123</string>
 					<key>CodecID</key>
 					<integer>283902549</integer>
