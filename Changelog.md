@@ -1,5 +1,9 @@
 AppleALC Changelog
 ==================
+
+#### v1.1.4
+- Added High Sierra to the list of compatible OS
+
 #### v1.1.3
 - Fixed ALC889 info.plist min/max kernel
 - Added Desktop Intel Kaby Lake HD630 HDMI audio support (ig-platform-id 0x59120000)
