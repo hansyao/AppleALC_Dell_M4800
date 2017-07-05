@@ -3,6 +3,7 @@ AppleALC Changelog
 
 #### v1.1.4
 - Added High Sierra to the list of compatible OS
+- Added ALC295/ALC3254 layout-id 3 by Mirone
 
 #### v1.1.3
 - Fixed ALC889 info.plist min/max kernel
