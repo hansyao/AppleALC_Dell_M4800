@@ -1486,6 +1486,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Custom - Realtek ALC298 for Dell XPS 9560 by KNNSpeed</string>
+					<key>CodecID</key>
+					<integer>283902616</integer>
+					<key>ConfigData</key>
+					<data>ASccEAEnHQEBJx6mAScfkAF3HCABdx0BAXceFwF3H5ABhxwwAYcdEAGHHqsBhx8DAaccQAGnHRABpx6LAacfAwIXHFACFx0QAhceKwIXHwMBRwwCAXcMAgGnDAICFwwC</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>72</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - Realtek ALC662</string>
 					<key>CodecID</key>
 					<integer>283903586</integer>
