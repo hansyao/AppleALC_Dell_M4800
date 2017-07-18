@@ -176,7 +176,7 @@ void AlcEnabler::hookEntitlementVerification(KernelPatcher &patcher) {
 }
 
 void AlcEnabler::updateResource(KernelPatcher &patcher, Resource type, kern_return_t &result, const void * &resourceData, uint32_t &resourceDataLength) {
-	DBGLOG("alc @ resource-request arrived %s", type == Resource::Platform ? "paltform" : "layout");
+	DBGLOG("alc @ resource-request arrived %s", type == Resource::Platform ? "platform" : "layout");
 	
 	for (size_t i = 0, s = codecs.size(); i < s; i++) {
 		DBGLOG("alc @ checking codec %X:%X:%X", codecs[i]->vendor, codecs[i]->codec, codecs[i]->revision);
