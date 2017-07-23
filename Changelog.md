@@ -5,6 +5,8 @@ AppleALC Changelog
 - Added High Sierra to the list of compatible OS
 - Added ALC295/ALC3254 layout-id 3 by Mirone
 - Added ALC298 layout-id 72 for Dell XPS 9560 by KNNSpeed
+- Added ALC236 layout-id 3 by Mirone
+- Added ALC236 layout-id 13 by rexx0520
 
 #### v1.1.3
 - Fixed ALC889 info.plist min/max kernel
