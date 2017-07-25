@@ -111,7 +111,7 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 		for (size_t i = 0, num = controllers.size(); i < num; i++) {
 			auto &info = controllers[i]->info;
 			if (!info) {
-				DBGLOG("alc @ missing ControllerModInfo for %zu controller", i);
+				DBGLOG("alc @ missing ControllerModInfo for %lu controller", i);
 				continue;
 			}
 			
@@ -123,7 +123,7 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 		for (size_t i = 0, num = codecs.size(); i < num; i++) {
 			auto &info = codecs[i]->info;
 			if (!info) {
-				SYSLOG("alc @ missing CodecModInfo for %zu codec", i);
+				SYSLOG("alc @ missing CodecModInfo for %lu codec", i);
 				continue;
 			}
 			
@@ -183,18 +183,18 @@ void AlcEnabler::updateResource(KernelPatcher &patcher, Resource type, kern_retu
 		
 		auto info = codecs[i]->info;
 		if (!info) {
-			SYSLOG("alc @ missing CodecModInfo for %zu codec at resource updating", i);
+			SYSLOG("alc @ missing CodecModInfo for %lu codec at resource updating", i);
 			continue;
 		}
 		
 		if ((type == Resource::Platform && info->platforms) || (type == Resource::Layout && info->layouts)) {
 			size_t num = type == Resource::Platform ? info->platformNum : info->layoutNum;
-			DBGLOG("alc @ selecting from %zu files", num);
+			DBGLOG("alc @ selecting from %lu files", num);
 			for (size_t f = 0; f < num; f++) {
 				auto &fi = (type == Resource::Platform ? info->platforms : info->layouts)[f];
-				DBGLOG("alc @ comparing %zu layout %X/%X", f, fi.layout, controllers[codecs[i]->controller]->layout);
+				DBGLOG("alc @ comparing %lu layout %X/%X", f, fi.layout, controllers[codecs[i]->controller]->layout);
 				if (controllers[codecs[i]->controller]->layout == fi.layout && patcher.compatibleKernel(fi.minKernel, fi.maxKernel)) {
-					DBGLOG("Found %s at %zu index", type == Resource::Platform ? "platform" : "layout", f);
+					DBGLOG("Found %s at %lu index", type == Resource::Platform ? "platform" : "layout", f);
 					resourceData = fi.data;
 					resourceDataLength = fi.dataLength;
 					result = kOSReturnSuccess;
@@ -255,7 +255,7 @@ void AlcEnabler::grabControllers() {
 	}
 	
 	if (found) {
-		DBGLOG("alc @ found %zu audio controllers", controllers.size());
+		DBGLOG("alc @ found %lu audio controllers", controllers.size());
 		validateControllers();
 	}
 }
@@ -317,9 +317,9 @@ bool AlcEnabler::grabCodecs() {
 
 void AlcEnabler::validateControllers() {
 	for (size_t i = 0, num = controllers.size(); i < num; i++) {
-		DBGLOG("alc @ validating %zu controller %X:%X:%X", i, controllers[i]->vendor, controllers[i]->device, controllers[i]->revision);
+		DBGLOG("alc @ validating %lu controller %X:%X:%X", i, controllers[i]->vendor, controllers[i]->device, controllers[i]->revision);
 		for (size_t mod = 0; mod < ADDPR(controllerModSize); mod++) {
-			DBGLOG("alc @ comparing to %zu mod %X:%X", mod, ADDPR(controllerMod)[mod].vendor, ADDPR(controllerMod)[mod].device);
+			DBGLOG("alc @ comparing to %lu mod %X:%X", mod, ADDPR(controllerMod)[mod].vendor, ADDPR(controllerMod)[mod].device);
 			if (controllers[i]->vendor == ADDPR(controllerMod)[mod].vendor &&
 				controllers[i]->device == ADDPR(controllerMod)[mod].device) {
 				
@@ -344,7 +344,7 @@ void AlcEnabler::validateControllers() {
 			
 				if (rev != ADDPR(controllerMod)[mod].revisionNum ||
 					ADDPR(controllerMod)[mod].revisionNum == 0) {
-					DBGLOG("alc @ found mod for %zu controller", i);
+					DBGLOG("alc @ found mod for %lu controller", i);
 					controllers[i]->info = &ADDPR(controllerMod)[mod];
 					break;
 				}
@@ -406,12 +406,12 @@ bool AlcEnabler::validateCodecs() {
 }
 
 void AlcEnabler::applyPatches(KernelPatcher &patcher, size_t index, const KextPatch *patches, size_t patchNum) {
-	DBGLOG("alc @ applying patches for %zu kext", index);
+	DBGLOG("alc @ applying patches for %lu kext", index);
 	for (size_t p = 0; p < patchNum; p++) {
 		auto &patch = patches[p];
 		if (patch.patch.kext->loadIndex == index) {
 			if (patcher.compatibleKernel(patch.minKernel, patch.maxKernel)) {
-				DBGLOG("alc @ applying %zu patch for %zu kext", p, index);
+				DBGLOG("alc @ applying %lu patch for %lu kext", p, index);
 				patcher.applyLookupPatch(&patch.patch);
 				// Do not really care for the errors for now
 				patcher.clearError();
