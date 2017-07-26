@@ -8,6 +8,7 @@ AppleALC Changelog
 - Added ALC236 layout-id 3 by Mirone
 - Added ALC236 layout-id 13 for Lenovo Air 13 Pro by rexx0520
 - Added a workaround for xnu printf limitations
+- Added ALC235 layout-id 11 for Ienovo by soto2080
 
 #### v1.1.3
 - Fixed ALC889 info.plist min/max kernel
