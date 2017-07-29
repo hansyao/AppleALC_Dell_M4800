@@ -84,6 +84,8 @@ OSObject *AlcEnabler::copyClientEntitlement(task_t task, const char *entitlement
 
 void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_address_t address, size_t size) {
 	size_t kextIndex = 0;
+	static const uint8_t logFind[] = { 0x53, 0x6F, 0x75, 0x6E, 0x64, 0x20, 0x61, 0x73, 0x73, 0x65, 0x72, 0x74, 0x69, 0x6F, 0x6E, 0x20 };
+	static const uint8_t logRepl[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 	
 	while (kextIndex < ADDPR(kextListSize)) {
 		if (ADDPR(kextList)[kextIndex].loadIndex == index)
@@ -116,6 +118,14 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 			}
 			
 			applyPatches(patcher, index, info->patches, info->patchNum);
+		}
+    
+		// patch AppleHDAController to remove redundant logs
+		if (!ADDPR(debugEnabled) && !strcmp(ADDPR(kextList)[kextIndex].id, "com.apple.driver.AppleHDAController")) {
+			KernelPatcher::LookupPatch hdaLogRMPatch {
+				&ADDPR(kextList)[kextIndex], logFind, logRepl, sizeof(logFind), 3   // 3 occurrences inside AppleHDAController
+			};
+			patcher.applyLookupPatch(&hdaLogRMPatch);
 		}
 	}
 	
@@ -157,6 +167,14 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 		} else if (static_cast<void>(orgPlatformLoadCallback = reinterpret_cast<t_callback>(patcher.routeFunction(platform, reinterpret_cast<mach_vm_address_t>(platformLoadCallback), true))),
 				   patcher.getError() != KernelPatcher::Error::NoError) {
 			SYSLOG("alc @ failed to hook platform callback");
+		}
+    
+		// patch AppleHDA to remove redundant logs
+		if (!ADDPR(debugEnabled)) {
+			KernelPatcher::LookupPatch hdaLogRMPatch {
+				&ADDPR(kextList)[kextIndex], logFind, logRepl, sizeof(logFind), 2   // 2 occurrences inside AppleHDA
+			};
+			patcher.applyLookupPatch(&hdaLogRMPatch);
 		}
 	}
 	
