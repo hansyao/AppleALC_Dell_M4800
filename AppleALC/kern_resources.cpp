@@ -15,15 +15,29 @@
 
 static const char * tree0[] { "AppleACPIPCI", "IGPU", };
 static const char * tree1[] { "AppleACPIPCI", "HDAU", };
-static const char * tree2[] { "AppleACPIPCI", "HDEF", "AppleHDAController", "IOHDACodecDevice", };
-static const char * tree3[] { "AppleACPIPCI", "HDEF", "AppleHDA8086_9D70Controller", "IOHDACodecDevice", };
+static const char * tree2[] { "AppleACPIPCI", "PEG0", "IOPP", "HDAU", };
+static const char * tree3[] { "AppleACPIPCI", "PEG1", "IOPP", "HDAU", };
+static const char * tree4[] { "AppleACPIPCI", "BR3A", "IOPP", "HDAU", };
+static const char * tree5[] { "AppleACPIPCI", "P0P1", "IOPP", "HDAU", };
+static const char * tree6[] { "AppleACPIPCI", "P0P2", "IOPP", "HDAU", };
+static const char * tree7[] { "AppleACPIPCI", "NPE3", "IOPP", "HDAU", };
+static const char * tree8[] { "AppleACPIPCI", "NPE7", "IOPP", "HDAU", };
+static const char * tree9[] { "AppleACPIPCI", "HDEF", "AppleHDAController", "IOHDACodecDevice", };
+static const char * tree10[] { "AppleACPIPCI", "HDEF", "AppleHDA8086_9D70Controller", "IOHDACodecDevice", };
 CodecLookupInfo ADDPR(codecLookup)[] {
 	{ tree0, 2, 1, false },
 	{ tree1, 2, 1, false },
-	{ tree2, 4, 1, true },
-	{ tree3, 4, 1, true },
+	{ tree2, 4, 3, false },
+	{ tree3, 4, 3, false },
+	{ tree4, 4, 3, false },
+	{ tree5, 4, 3, false },
+	{ tree6, 4, 3, false },
+	{ tree7, 4, 3, false },
+	{ tree8, 4, 3, false },
+	{ tree9, 4, 1, true },
+	{ tree10, 4, 1, true },
 };
-const size_t ADDPR(codecLookupSize) {4};
+const size_t ADDPR(codecLookupSize) {11};
 
 // Kext section
 
@@ -27581,6 +27595,17 @@ static const uint8_t patchBuf123[] { 0x02, 0x05, 0x00, 0x00, 0x00, 0x08, 0x00, 0
 static const KextPatch patches97[] {
 	{ { &ADDPR(kextList)[5], patchBuf122, patchBuf123, 36, 2 }, 13, KernelPatcher::KernelAny },
 };
+static const uint8_t patchBuf124[] { 0x02, 0x10, 0xE0, 0xAA, };
+static const uint8_t patchBuf125[] { 0x02, 0x10, 0xC8, 0xAA, };
+static const uint8_t patchBuf126[] { 0xE0, 0xAA, 0x00, 0x00, };
+static const uint8_t patchBuf127[] { 0xC8, 0xAA, 0x00, 0x00, };
+static const uint8_t patchBuf128[] { 0xD7, 0xAA, 0x00, 0x00, };
+static const uint8_t patchBuf129[] { 0xC7, 0xAA, 0x00, 0x00, };
+static const KextPatch patches98[] {
+	{ { &ADDPR(kextList)[0], patchBuf124, patchBuf125, 4, 1 }, 15, KernelPatcher::KernelAny },
+	{ { &ADDPR(kextList)[2], patchBuf126, patchBuf127, 4, 2 }, 15, KernelPatcher::KernelAny },
+	{ { &ADDPR(kextList)[2], patchBuf128, patchBuf129, 4, 2 }, 15, KernelPatcher::KernelAny },
+};
 ControllerModInfo ADDPR(controllerMod)[] {
 	{ "200 Series PCH HD Audio", 0x8086, 0xA2F0, nullptr, 0, ControllerModInfo::PlatformAny, WIOKit::ComputerModel::ComputerAny, patches79, 1 },
 	{ "X99 HDEF controller r2", 0x8086, 0x8D21, nullptr, 0, ControllerModInfo::PlatformAny, WIOKit::ComputerModel::ComputerAny, patches80, 1 },
@@ -27601,6 +27626,7 @@ ControllerModInfo ADDPR(controllerMod)[] {
 	{ "Laptop Intel HD4000 HDMI (ig-platform-id 0x01660003)", 0x8086, 0x166, nullptr, 0, 23461891, WIOKit::ComputerModel::ComputerLaptop, patches95, 1 },
 	{ "Laptop Intel HD4000 HDMI (ig-platform-id 0x01660009)", 0x8086, 0x166, nullptr, 0, 23461897, WIOKit::ComputerModel::ComputerLaptop, patches96, 1 },
 	{ "Desktop Intel HD4000 HDMI (ig-platform-id 0x0166000A)", 0x8086, 0x166, nullptr, 0, 23461898, WIOKit::ComputerModel::ComputerDesktop, patches97, 1 },
+	{ "AMD R9 290X HDMI", 0x1002, 0xAAC8, nullptr, 0, ControllerModInfo::PlatformAny, WIOKit::ComputerModel::ComputerDesktop, patches98, 3 },
 };
 
-const size_t ADDPR(controllerModSize) {19};
+const size_t ADDPR(controllerModSize) {20};

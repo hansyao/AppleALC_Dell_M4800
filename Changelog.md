@@ -10,6 +10,7 @@ AppleALC Changelog
 - Added a workaround for xnu printf limitations
 - Added ALC235 layout-id 11 for Ienovo by soto2080
 - Disabled redundant warnings for non-debug mode by PMheart
+- Added AMD R9 290X HDMI patches
 
 #### v1.1.3
 - Fixed ALC889 info.plist min/max kernel

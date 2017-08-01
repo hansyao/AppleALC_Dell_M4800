@@ -545,5 +545,56 @@
 		<key>Vendor</key>
 		<string>Intel</string>
 	</dict>
+	<dict>
+		<key>Device</key>
+		<integer>43720</integer>
+		<key>Model</key>
+		<string>Desktop</string>
+		<key>Name</key>
+		<string>AMD R9 290X HDMI</string>
+		<key>Patches</key>
+		<array>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Find</key>
+				<data>AhDgqg==</data>
+				<key>MinKernel</key>
+				<integer>15</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>AhDIqg==</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>2</integer>
+				<key>Find</key>
+				<data>4KoAAA==</data>
+				<key>MinKernel</key>
+				<integer>15</integer>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>yKoAAA==</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>2</integer>
+				<key>Find</key>
+				<data>16oAAA==</data>
+				<key>MinKernel</key>
+				<integer>15</integer>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Comment</key>
+				<string>Lowers the if condition to let the patch above work</string>
+				<key>Replace</key>
+				<data>x6oAAA==</data>
+			</dict>
+		</array>
+		<key>Vendor</key>
+		<string>AMD</string>
+	</dict>
 </array>
 </plist>
