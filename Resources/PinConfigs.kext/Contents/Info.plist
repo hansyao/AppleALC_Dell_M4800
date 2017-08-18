@@ -594,6 +594,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>MacPeet ALC260 for Fujitsu Celsius M 450</string>
+					<key>CodecID</key>
+					<integer>283902560</integer>
+					<key>ConfigData</key>
+					<data>IPccECD3HUAg9x4RIPcfASD3DAIhhxwgIYcdYCGHHkQhhx8BITccQCE3HZAhNx6hITcfmSFHHFAhRx0wIUcegSFHHwEhVxxgIVcdQCFXHiEhVx8C</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Custom ALC260</string>
 					<key>CodecID</key>
 					<integer>283902560</integer>

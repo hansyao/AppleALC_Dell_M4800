@@ -12,6 +12,7 @@ AppleALC Changelog
 - Disabled redundant warnings for non-debug mode by PMheart
 - Added AMD R9 290X HDMI patches
 - Fix ALC236 layout 13's Headphone amplification
+- Added ALC260 layout-id 11 for Fujitsu Celsius M 450 by MacPeet
 
 #### v1.1.3
 - Fixed ALC889 info.plist min/max kernel
