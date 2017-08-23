@@ -119,6 +119,14 @@
 				<string>layout15.xml.zlib</string>
 			</dict>
 			<dict>
+				<key>Comment</key>
+				<string>MacPeet - ALC269VB for Dell Optiplex 790 Version2</string>
+				<key>Id</key>
+				<integer>16</integer>
+				<key>Path</key>
+				<string>layout16.xml.zlib</string>
+			</dict>
+			<dict>
 				<key>Id</key>
 				<integer>19</integer>
 				<key>Comment</key>
@@ -312,6 +320,14 @@
 				<integer>15</integer>
 				<key>Path</key>
 				<string>Platforms15.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>MacPeet - ALC269VB for Dell Optiplex 790 Version2</string>
+				<key>Id</key>
+				<integer>16</integer>
+				<key>Path</key>
+				<string>Platforms16.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Id</key>

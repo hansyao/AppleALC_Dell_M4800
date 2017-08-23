@@ -14,6 +14,7 @@ AppleALC Changelog
 - Fix ALC236 layout 13's Headphone amplification
 - Added ALC260 layout-id 11 for Fujitsu Celsius M 450 by MacPeet
 - Added AD1984A layout-id 13 for Dell Optiplex760/780 by MacPeet
+- Added ALC269VB layout-id 16 for Dell Optiplex 790 by MacPeet
 
 #### v1.1.3
 - Fixed ALC889 info.plist min/max kernel
