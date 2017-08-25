@@ -27,7 +27,7 @@ bool AlcEnabler::init() {
 	}, this);
 	
 	if (error != LiluAPI::Error::NoError) {
-		SYSLOG("alc @ failed to register onPatcherLoad method %d", error);
+		SYSLOG("alc @ failed to register onKextLoad method %d", error);
 		return false;
 	}
 	
@@ -40,6 +40,8 @@ bool AlcEnabler::init() {
 				callbackPatcher = &patcher;
 				callbackAlc->hookEntitlementVerification(patcher);
 			}, this);
+			if (error != LiluAPI::Error::NoError)
+				DBGLOG("alic @ failed to register onPatcherLoad method %d", error);
 		}
 	}
 	
