@@ -1,6 +1,9 @@
 AppleALC Changelog
 ==================
 
+#### v1.1.5
+- Added Lilu 1.1.8 safe mode loading compatibility
+
 #### v1.1.4
 - Added High Sierra to the list of compatible OS
 - Added ALC295/ALC3254 layout-id 3 by Mirone

@@ -13,7 +13,8 @@
 static AlcEnabler alc;
 
 static const char *bootargOff[] {
-	"-alcoff"
+	"-alcoff",
+	"-x"
 };
 
 static const char *bootargDebug[] {
