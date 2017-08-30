@@ -3,6 +3,7 @@ AppleALC Changelog
 
 #### v1.1.5
 - Added Lilu 1.1.8 safe mode loading compatibility
+- Added Laptop Intel Broadwell HD6000 HDMI audio support (ig-platform-id 0x16260004)
 
 #### v1.1.4
 - Added High Sierra to the list of compatible OS

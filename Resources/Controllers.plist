@@ -304,6 +304,33 @@
 	</dict>
 	<dict>
 		<key>Device</key>
+		<integer>5670</integer>
+		<key>Model</key>
+		<string>Laptop</string>
+		<key>Name</key>
+		<string>Laptop Intel HD6000 HDMI (ig-platform-id 0x16260004)</string>
+		<key>Patches</key>
+		<array>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Find</key>
+				<data>AQUJAAAEAAAHBQAAAgQKAAAEAAAHBQAA</data>
+				<key>MinKernel</key>
+				<integer>15</integer>
+				<key>Name</key>
+				<string>AppleIntelBDWGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>AQUJAAAIAACCAAAAAgQKAAAIAACCAAAA</data>
+			</dict>
+		</array>
+		<key>Platform</key>
+		<integer>371589124</integer>
+		<key>Vendor</key>
+		<string>Intel</string>
+	</dict>
+	<dict>
+		<key>Device</key>
 		<integer>6430</integer>
 		<key>Model</key>
 		<string>Laptop</string>
