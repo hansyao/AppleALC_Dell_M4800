@@ -5,6 +5,7 @@ AppleALC Changelog
 - Added Lilu 1.1.8 safe mode loading compatibility
 - Added Intel Broadwell HD6000 HDMI audio support (ig-platform-id 0x16260004)
 - Added ALC262 layout-id 12 for HP Compaq dc7700 SFF by Goldfish64
+- Added Intel 200 Series Mobile HDA controller 0xA171 support
 
 #### v1.1.4
 - Added High Sierra to the list of compatible OS
