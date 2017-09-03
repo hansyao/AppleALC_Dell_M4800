@@ -2992,6 +2992,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Goldfish64 - IDT 92HD81B1C5 for Dell Latitude E6410</string>
+					<key>CodecID</key>
+					<integer>287143637</integer>
+					<key>ConfigData</key>
+					<data>AKccIACnHRAApx6BAKcfBACnDAIAtxwwALcdEAC3HiEAtx8EALcMAgDHHPAAxx0AAMceAADHH0AA1xxAANcdAQDXHhcA1x+QANcMAgDnHPAA5x0AAOceAADnH0AA9xzwAPcdAAD3HgAA9x9AAQcc8AEHHQABBx4AAQcfQAEXHFABFx0BARcepgEXH5AB9xzwAfcdAAH3HgAB9x9AAgcc8AIHHQACBx4AAgcfQA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - IDT 92HD81B1X5</string>
 					<key>CodecID</key>
 					<integer>287143429</integer>
