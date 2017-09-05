@@ -7,6 +7,7 @@ AppleALC Changelog
 - Added ALC262 layout-id 12 for HP Compaq dc7700 SFF by Goldfish64
 - Added Intel 200 Series Mobile HDA controller 0xA171 support
 - Added IDT92HD81B1C5 layout-id 11 for Dell Latitude E6410 by Goldfish64
+- Added ALC898 layout-id 99 for MSI GP62 Leopard Pro by edward-p
 
 #### v1.1.4
 - Added High Sierra to the list of compatible OS
