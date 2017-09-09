@@ -9,6 +9,7 @@ AppleALC Changelog
 - Added IDT92HD81B1C5 layout-id 11 for Dell Latitude E6410 by Goldfish64
 - Added ALC898 layout-id 99 for MSI GP62 Leopard Pro by edward-p
 - Correct issues with layout 11 for IDT92HD81B1C5 for Dell Latitude E6410
+- Added ALC221 layout-id 11 for HP Compaq Pro 4300/Pro 6300/Elite 8300 by Goldfish64
 
 #### v1.1.4
 - Added High Sierra to the list of compatible OS
