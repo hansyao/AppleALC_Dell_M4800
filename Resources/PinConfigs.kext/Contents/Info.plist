@@ -2310,6 +2310,19 @@
 					<key>CodecID</key>
 					<integer>283904146</integer>
 					<key>Comment</key>
+					<string>ALC892 for Clevo P65xSE/SA by Derek Zhu</string>
+					<key>ConfigData</key>
+					<data>ASccEAEnHZEBJx6mAScfkAGHHCABhx1gAYcegQGHHwEBRxwwAUcdAQFHHhcBRx+QAbccQAG3HTABtx4hAbcfAQF3HFABdx1AAXceAQF3HwEB5xxgAecdYQHnHkUB5x8BALcccAC3HREAtx4WALcfkAFXHPABVx0AAVceAAFXHwQBZxzwAWcdAAFnHgABZx8EAZcc8AGXHQABlx4AAZcfBAGnHPABpx0AAaceAAGnHwQBxxzwAccdAAHHHgABxx8EAdcc8AHXHQAB1x4AAdcfBAH3HPAB9x0AAfceAAH3HwQBRwwCAbcMAg==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>31</integer>
+				</dict>
+				<dict>
+					<key>CodecID</key>
+					<integer>283904146</integer>
+					<key>Comment</key>
 					<string>Custom ALC892 for GA-Z87-HD3 by BIM167</string>
 					<key>ConfigData</key>
 					<data>IRccUCEXHXEhFx5EIRcfASEnHPAhJx0AISceACEnH0AhRxwQIUcdQCFHHhEhRx+QIVccICFXHRAhVx4BIVcfASFnHDAhZx1gIWceASFnHwEhdxzwIXcdACF3HgAhdx9AIYccYCGHHZAhhx6gIYcfkCGXHIAhlx2QIZcegSGXHwIhpxxwIacdMCGnHoEhpx8BIbccQCG3HUAhtx4hIbcfAiHHHPAhxx0AIcceACHHH0Ah5xzwIecdACHnHgAh5x9AIfcckCH3HXEh9x7EIfcfAQ==</data>
