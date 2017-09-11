@@ -11,6 +11,7 @@ AppleALC Changelog
 - Correct issues with layout 11 for IDT92HD81B1C5 for Dell Latitude E6410
 - Added ALC221 layout-id 11 for HP Compaq Pro 4300/Pro 6300/Elite 8300 by Goldfish64
 - Added ALC892 layout-id 31 for Clevo P65xSE/SA by Derek Zhu
+- Added Conexant CX20585 layout-id 13 for Toshiba L755-16R by Constanta 
 
 #### v1.1.4
 - Added High Sierra to the list of compatible OS

@@ -2312,8 +2312,7 @@
 					<key>Comment</key>
 					<string>ALC892 for Clevo P65xSE/SA by Derek Zhu</string>
 					<key>ConfigData</key>
-					<data>ASccEAEnHZEBJx6mAScfkAGHHCABhx1gAYcegQGHHwEBRxwwAUcdAQFHHhcBRx+QAbccQAG3HTABtx4hAbcfAQF3HFABdx1AAXceAQF3HwEB5xxgAecdYQHnHkUB5x8BALcccAC3HREAtx4WALcfkAFXHPABVx0AAVceAAFXHwQBZxzwAWcdAAFnHgABZx8EAZcc8AGXHQABlx4AAZcfBAGnHPABpx0AAaceAAGnHwQBxxzwAccdAAHHHgABxx8EAdcc8AHXHQAB1x4AAdcfBAH3HPAB9x0AAfceAAH3HwQBRwwCAbcMAg==
-					</data>
+					<data>ASccEAEnHZEBJx6mAScfkAGHHCABhx1gAYcegQGHHwEBRxwwAUcdAQFHHhcBRx+QAbccQAG3HTABtx4hAbcfAQF3HFABdx1AAXceAQF3HwEB5xxgAecdYQHnHkUB5x8BALcccAC3HREAtx4WALcfkAFXHPABVx0AAVceAAFXHwQBZxzwAWcdAAFnHgABZx8EAZcc8AGXHQABlx4AAZcfBAGnHPABpx0AAaceAAGnHwQBxxzwAccdAAHHHgABxx8EAdcc8AHXHQAB1x4AAdcfBAH3HPAB9x0AAfceAAH3HwQBRwwCAbcMAg==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -2736,6 +2735,20 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Constanta custom for Toshiba L755-16R - Conexant CX20585</string>
+					<key>CodecID</key>
+					<integer>351359081</integer>
+					<key>ConfigData</key>
+					<data>AZccEAGXHRABlx4gAZcfAAGnHCABpx0wAacegQGnHwEBtxwwAbcdAAG3HgABtx9AAcccUAHHHQABxx4AAccfQAHXHGAB1x0AAdceAAHXH0AB5xxgAecdAAHnHgAB5x9AAfcccAH3HQAB9x4QAfcfkAIHHIACBx0AAgceAAIHH0ACJxyAAicdAAInHgACJx9AAjcckAI3HQECNx6gAjcfkA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
