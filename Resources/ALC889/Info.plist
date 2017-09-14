@@ -21,6 +21,14 @@
 				<string>layout1.xml.zlib</string>
 			</dict>
 			<dict>
+				<key>Comment</key>
+				<string>MacPeet ALC889 Medion P4020 D</string>
+				<key>Id</key>
+				<integer>11</integer>
+				<key>Path</key>
+				<string>layout11.xml.zlib</string>
+			</dict>
+			<dict>
 				<key>Id</key>
 				<integer>12</integer>
 				<key>Comment</key>
@@ -38,6 +46,14 @@
 				<string>Toleda resources by Ukr55</string>
 				<key>Path</key>
 				<string>PlatformsT.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>MacPeet ALC889 Medion P4020 D</string>
+				<key>Id</key>
+				<integer>11</integer>
+				<key>Path</key>
+				<string>Platforms11.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Id</key>

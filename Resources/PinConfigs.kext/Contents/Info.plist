@@ -2198,6 +2198,18 @@
 					<key>CodecID</key>
 					<integer>283904137</integer>
 					<key>Comment</key>
+					<string>MacPeet ALC889 Medion P4020 D</string>
+					<key>ConfigData</key>
+					<data>AUccEAFHHUABRx4hAUcfAQFHDAIBtxwgAbcdAAG3HhMBtx+QAeccMAHnHWAB5x5EAecfAQGXHFABlx0AAZceowGXH5ABpxxgAacdMAGnHoEBpx8B</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>CodecID</key>
+					<integer>283904137</integer>
+					<key>Comment</key>
 					<string>alc889, Custom by Sergey_Galan</string>
 					<key>ConfigData</key>
 					<data>IRcc8CEXHQAhFx4AIRcfQCEnHPAhJx0AISceACEnH0AhRxwwIUcdQSFHHhEhRx8BIVcc8CFXHQAhVx4AIVcfQCFnHPAhZx0AIWceACFnH0AhdxzwIXcdACF3HgAhdx9AIYccECGHHZEhhx6gIYcfkCGXHCAhlx2QIZcegSGXHwEhpxzwIacdACGnHgAhpx9AIbccgCG3HUAhtx4hIbcfASHHHPAhxx0AIcceACHHH0Ah1xzwIdcdACHXHgAh1x9AIecckCHnHSEh5x5LIecfASH3HPAh9x0AIfceACH3H0A=</data>
