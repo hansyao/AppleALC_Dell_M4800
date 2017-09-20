@@ -15,6 +15,7 @@ AppleALC Changelog
 - Added Conexant CX20585 layout-id 13 for Toshiba L755-16R by Constanta
 - Added ALC889 layout-id 11 for Medion P4020 D by MacPeet
 - Update ConfigData for ALC898 layout-id 99
+- Update ALC269 layout-id 16 by MacPeet
 
 #### v1.1.4
 - Added High Sierra to the list of compatible OS
