@@ -27,7 +27,7 @@ bool AlcEnabler::init() {
 	}, this);
 	
 	if (error != LiluAPI::Error::NoError) {
-		SYSLOG("alc @ failed to register onKextLoad method %d", error);
+		SYSLOG("alc", "failed to register onKextLoad method %d", error);
 		return false;
 	}
 	
@@ -41,7 +41,7 @@ bool AlcEnabler::init() {
 				callbackAlc->hookEntitlementVerification(patcher);
 			}, this);
 			if (error != LiluAPI::Error::NoError)
-				DBGLOG("alic @ failed to register onPatcherLoad method %d", error);
+				DBGLOG("alc", "failed to register onPatcherLoad method %d", error);
 		}
 	}
 	
@@ -59,7 +59,7 @@ void AlcEnabler::layoutLoadCallback(uint32_t requestTag, kern_return_t result, c
 		callbackAlc->updateResource(*callbackPatcher, Resource::Layout, result, resourceData, resourceDataLength);
 		callbackAlc->orgLayoutLoadCallback(requestTag, result, resourceData, resourceDataLength, context);
 	} else {
-		SYSLOG("alc @ layout callback arrived at nowhere");
+		SYSLOG("alc", "layout callback arrived at nowhere");
 	}
 }
 
@@ -68,7 +68,7 @@ void AlcEnabler::platformLoadCallback(uint32_t requestTag, kern_return_t result,
 		callbackAlc->updateResource(*callbackPatcher, Resource::Platform, result, resourceData, resourceDataLength);
 		callbackAlc->orgPlatformLoadCallback(requestTag, result, resourceData, resourceDataLength, context);
 	} else {
-		SYSLOG("alc @ platform callback arrived at nowhere");
+		SYSLOG("alc", "platform callback arrived at nowhere");
 	}
 }
 
@@ -80,7 +80,7 @@ OSObject *AlcEnabler::copyClientEntitlement(task_t task, const char *entitlement
 		return obj;
 	}
 	
-	SYSLOG("alc @ copy client entitlement arrived at nowhere");
+	SYSLOG("alc", "copy client entitlement arrived at nowhere");
 	return nullptr;
 }
 
@@ -105,7 +105,7 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 		if (grabCodecs())
 			progressState |= ProcessingState::CodecsLoaded;
 		else
-			DBGLOG("alc @ failed to find a suitable codec, we have nothing to do");
+			DBGLOG("alc", "failed to find a suitable codec, we have nothing to do");
 	}
 			   
 			   
@@ -115,7 +115,7 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 		for (size_t i = 0, num = controllers.size(); i < num; i++) {
 			auto &info = controllers[i]->info;
 			if (!info) {
-				DBGLOG("alc @ missing ControllerModInfo for %lu controller", i);
+				DBGLOG("alc", "missing ControllerModInfo for %lu controller", i);
 				continue;
 			}
 			
@@ -136,12 +136,12 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 		for (size_t i = 0, num = codecs.size(); i < num; i++) {
 			auto &info = codecs[i]->info;
 			if (!info) {
-				SYSLOG("alc @ missing CodecModInfo for %lu codec", i);
+				SYSLOG("alc", "missing CodecModInfo for %lu codec", i);
 				continue;
 			}
 			
 			if (info->platformNum > 0 || info->layoutNum > 0) {
-				DBGLOG("alc @ will route callbacks resource loading callbacks");
+				DBGLOG("alc", "will route callbacks resource loading callbacks");
 				progressState |= ProcessingState::CallbacksWantRouting;
 			}
 			
@@ -154,22 +154,22 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 		auto platform = patcher.solveSymbol(index, "__ZN14AppleHDADriver20platformLoadCallbackEjiPKvjPv");
 
 		if (layout && platform) {
-			DBGLOG("layout call %X %X %X %X %X %X %X %X %X %X %X %X %X %X %X %X", ((uint8_t *)layout)[0], ((uint8_t *)layout)[1], ((uint8_t *)layout)[2], ((uint8_t *)layout)[3],
+			DBGLOG("alc", "layout call %X %X %X %X %X %X %X %X %X %X %X %X %X %X %X %X", ((uint8_t *)layout)[0], ((uint8_t *)layout)[1], ((uint8_t *)layout)[2], ((uint8_t *)layout)[3],
 				   ((uint8_t *)layout)[4], ((uint8_t *)layout)[5], ((uint8_t *)layout)[6], ((uint8_t *)layout)[7], ((uint8_t *)layout)[8], ((uint8_t *)layout)[9], ((uint8_t *)layout)[10],
 				   ((uint8_t *)layout)[11], ((uint8_t *)layout)[12], ((uint8_t *)layout)[13], ((uint8_t *)layout)[14], ((uint8_t *)layout)[15]);
-			DBGLOG("platform call %X %X %X %X %X %X %X %X %X %X %X %X %X %X %X %X", ((uint8_t *)platform)[0], ((uint8_t *)platform)[1], ((uint8_t *)platform)[2], ((uint8_t *)platform)[3],
+			DBGLOG("alc", "platform call %X %X %X %X %X %X %X %X %X %X %X %X %X %X %X %X", ((uint8_t *)platform)[0], ((uint8_t *)platform)[1], ((uint8_t *)platform)[2], ((uint8_t *)platform)[3],
 				   ((uint8_t *)platform)[4], ((uint8_t *)platform)[5], ((uint8_t *)platform)[6], ((uint8_t *)platform)[7], ((uint8_t *)platform)[8], ((uint8_t *)platform)[9], ((uint8_t *)platform)[10],
 				   ((uint8_t *)platform)[11], ((uint8_t *)platform)[12], ((uint8_t *)platform)[13], ((uint8_t *)platform)[14], ((uint8_t *)platform)[15]);
 		}
 		
 		if (!layout || !platform) {
-			SYSLOG("alc @ failed to find AppleHDA layout or platform callback symbols (%llX, %llX)", layout, platform);
+			SYSLOG("alc", "failed to find AppleHDA layout or platform callback symbols (%llX, %llX)", layout, platform);
 		} else if (static_cast<void>(orgLayoutLoadCallback = reinterpret_cast<t_callback>(patcher.routeFunction(layout, reinterpret_cast<mach_vm_address_t>(layoutLoadCallback), true))),
 				   patcher.getError() != KernelPatcher::Error::NoError) {
-			SYSLOG("alc @ failed to hook layout callback");
+			SYSLOG("alc", "failed to hook layout callback");
 		} else if (static_cast<void>(orgPlatformLoadCallback = reinterpret_cast<t_callback>(patcher.routeFunction(platform, reinterpret_cast<mach_vm_address_t>(platformLoadCallback), true))),
 				   patcher.getError() != KernelPatcher::Error::NoError) {
-			SYSLOG("alc @ failed to hook platform callback");
+			SYSLOG("alc", "failed to hook platform callback");
 		}
     
 		// patch AppleHDA to remove redundant logs
@@ -192,31 +192,31 @@ void AlcEnabler::hookEntitlementVerification(KernelPatcher &patcher) {
 	if (entitlement) {
 		orgCopyClientEntitlement = reinterpret_cast<t_copyClientEntitlement>(patcher.routeFunction(entitlement, reinterpret_cast<mach_vm_address_t>(copyClientEntitlement), true));
 		if (patcher.getError() != KernelPatcher::Error::NoError) {
-			SYSLOG("alc @ failed to hook copy user entitlement");
+			SYSLOG("alc", "failed to hook copy user entitlement");
 		}
 	}
 }
 
 void AlcEnabler::updateResource(KernelPatcher &patcher, Resource type, kern_return_t &result, const void * &resourceData, uint32_t &resourceDataLength) {
-	DBGLOG("alc @ resource-request arrived %s", type == Resource::Platform ? "platform" : "layout");
+	DBGLOG("alc", "resource-request arrived %s", type == Resource::Platform ? "platform" : "layout");
 	
 	for (size_t i = 0, s = codecs.size(); i < s; i++) {
-		DBGLOG("alc @ checking codec %X:%X:%X", codecs[i]->vendor, codecs[i]->codec, codecs[i]->revision);
+		DBGLOG("alc", "checking codec %X:%X:%X", codecs[i]->vendor, codecs[i]->codec, codecs[i]->revision);
 		
 		auto info = codecs[i]->info;
 		if (!info) {
-			SYSLOG("alc @ missing CodecModInfo for %lu codec at resource updating", i);
+			SYSLOG("alc", "missing CodecModInfo for %lu codec at resource updating", i);
 			continue;
 		}
 		
 		if ((type == Resource::Platform && info->platforms) || (type == Resource::Layout && info->layouts)) {
 			size_t num = type == Resource::Platform ? info->platformNum : info->layoutNum;
-			DBGLOG("alc @ selecting from %lu files", num);
+			DBGLOG("alc", "selecting from %lu files", num);
 			for (size_t f = 0; f < num; f++) {
 				auto &fi = (type == Resource::Platform ? info->platforms : info->layouts)[f];
-				DBGLOG("alc @ comparing %lu layout %X/%X", f, fi.layout, controllers[codecs[i]->controller]->layout);
+				DBGLOG("alc", "comparing %lu layout %X/%X", f, fi.layout, controllers[codecs[i]->controller]->layout);
 				if (controllers[codecs[i]->controller]->layout == fi.layout && patcher.compatibleKernel(fi.minKernel, fi.maxKernel)) {
-					DBGLOG("Found %s at %lu index", type == Resource::Platform ? "platform" : "layout", f);
+					DBGLOG("alc", "found %s at %lu index", type == Resource::Platform ? "platform" : "layout", f);
 					resourceData = fi.data;
 					resourceDataLength = fi.dataLength;
 					result = kOSReturnSuccess;
@@ -245,19 +245,19 @@ void AlcEnabler::grabControllers() {
 				if (!WIOKit::getOSDataValue(sect, "vendor-id", ven) ||
 					!WIOKit::getOSDataValue(sect, "device-id", dev) ||
 					!WIOKit::getOSDataValue(sect, "revision-id", rev)) {
-					SYSLOG("alc @ found an incorrect controller at %s", ADDPR(codecLookup)[lookup].tree[i]);
+					SYSLOG("alc", "found an incorrect controller at %s", ADDPR(codecLookup)[lookup].tree[i]);
 					break;
 				}
 				
 				if (ADDPR(codecLookup)[lookup].detect && !WIOKit::getOSDataValue(sect, "layout-id", lid)) {
-					SYSLOG("alc @ layout-id was not provided by controller at %s", ADDPR(codecLookup)[lookup].tree[i]);
+					SYSLOG("alc", "layout-id was not provided by controller at %s", ADDPR(codecLookup)[lookup].tree[i]);
 					break;
 				}
 				
 				if (WIOKit::getOSDataValue(sect, "AAPL,ig-platform-id", platform)) {
-					DBGLOG("alc @ AAPL,ig-platform-id %X was found in controller at %s", platform, ADDPR(codecLookup)[lookup].tree[i]);
+					DBGLOG("alc", "AAPL,ig-platform-id %X was found in controller at %s", platform, ADDPR(codecLookup)[lookup].tree[i]);
 				} else if (WIOKit::getOSDataValue(sect, "AAPL,snb-platform-id", platform)) {
-					DBGLOG("alc @ AAPL,snb-platform-id %X was found in controller at %s", platform, ADDPR(codecLookup)[lookup].tree[i]);
+					DBGLOG("alc", "AAPL,snb-platform-id %X was found in controller at %s", platform, ADDPR(codecLookup)[lookup].tree[i]);
 				}
 				
 				auto controller = ControllerInfo::create(ven, dev, rev, platform, lid, ADDPR(codecLookup)[lookup].detect);
@@ -266,18 +266,18 @@ void AlcEnabler::grabControllers() {
 						controller->lookup = &ADDPR(codecLookup)[lookup];
 						found = true;
 					} else {
-						SYSLOG("alc @ failed to store controller info for %X:%X:%X", ven, dev, rev);
+						SYSLOG("alc", "failed to store controller info for %X:%X:%X", ven, dev, rev);
 						ControllerInfo::deleter(controller);
 					}
 				} else {
-					SYSLOG("alc @ failed to create controller info for %X:%X:%X", ven, dev, rev);
+					SYSLOG("alc", "failed to create controller info for %X:%X:%X", ven, dev, rev);
 				}
 			}
 		}
 	}
 	
 	if (found) {
-		DBGLOG("alc @ found %lu audio controllers", controllers.size());
+		DBGLOG("alc", "found %lu audio controllers", controllers.size());
 		validateControllers();
 	}
 }
@@ -304,7 +304,7 @@ bool AlcEnabler::grabCodecs() {
 				
 				
 				if (!ven || !rev) {
-					DBGLOG("alc @ codec entry misses properties, skipping");
+					DBGLOG("alc", "codec entry misses properties, skipping");
 					return false;
 				}
 				
@@ -312,7 +312,7 @@ bool AlcEnabler::grabCodecs() {
 				auto revNum = OSDynamicCast(OSNumber, rev);
 				
 				if (!venNum || !revNum) {
-					SYSLOG("alc @ codec entry contains invalid properties, skipping");
+					SYSLOG("alc", "codec entry contains invalid properties, skipping");
 					return true;
 				}
 				
@@ -321,11 +321,11 @@ bool AlcEnabler::grabCodecs() {
 														revNum->unsigned32BitValue());
 				if (ci) {
 					if (!alc->codecs.push_back(ci)) {
-						SYSLOG("alc @ failed to store codec info for %X:%X:%X", ci->vendor, ci->codec, ci->revision);
+						SYSLOG("alc", "failed to store codec info for %X:%X:%X", ci->vendor, ci->codec, ci->revision);
 						AlcEnabler::CodecInfo::deleter(ci);
 					}
 				} else {
-					SYSLOG("alc @ failed to create codec info for %X %X:%X", ci->vendor, ci->codec, ci->revision);
+					SYSLOG("alc", "failed to create codec info for %X %X:%X", ci->vendor, ci->codec, ci->revision);
 				}
 				
 				return true;
@@ -339,9 +339,9 @@ bool AlcEnabler::grabCodecs() {
 
 void AlcEnabler::validateControllers() {
 	for (size_t i = 0, num = controllers.size(); i < num; i++) {
-		DBGLOG("alc @ validating %lu controller %X:%X:%X", i, controllers[i]->vendor, controllers[i]->device, controllers[i]->revision);
+		DBGLOG("alc", "validating %lu controller %X:%X:%X", i, controllers[i]->vendor, controllers[i]->device, controllers[i]->revision);
 		for (size_t mod = 0; mod < ADDPR(controllerModSize); mod++) {
-			DBGLOG("alc @ comparing to %lu mod %X:%X", mod, ADDPR(controllerMod)[mod].vendor, ADDPR(controllerMod)[mod].device);
+			DBGLOG("alc", "comparing to %lu mod %X:%X", mod, ADDPR(controllerMod)[mod].vendor, ADDPR(controllerMod)[mod].device);
 			if (controllers[i]->vendor == ADDPR(controllerMod)[mod].vendor &&
 				controllers[i]->device == ADDPR(controllerMod)[mod].device) {
 				
@@ -354,19 +354,19 @@ void AlcEnabler::validateControllers() {
 				// Check AAPL,ig-platform-id if present
 				if (ADDPR(controllerMod)[mod].platform != ControllerModInfo::PlatformAny &&
 					ADDPR(controllerMod)[mod].platform != controllers[i]->platform) {
-					DBGLOG("alc @ not matching platform was found %X vs %X", ADDPR(controllerMod)[mod].platform, controllers[i]->platform);
+					DBGLOG("alc", "not matching platform was found %X vs %X", ADDPR(controllerMod)[mod].platform, controllers[i]->platform);
 					continue;
 				}
 				
 				// Check if computer model is suitable
 				if (!(computerModel & ADDPR(controllerMod)[mod].computerModel)) {
-					DBGLOG("alc @ unsuitable computer model was found %X vs %X", ADDPR(controllerMod)[mod].computerModel, computerModel);
+					DBGLOG("alc", "unsuitable computer model was found %X vs %X", ADDPR(controllerMod)[mod].computerModel, computerModel);
 					continue;
 				}
 			
 				if (rev != ADDPR(controllerMod)[mod].revisionNum ||
 					ADDPR(controllerMod)[mod].revisionNum == 0) {
-					DBGLOG("alc @ found mod for %lu controller", i);
+					DBGLOG("alc", "found mod for %lu controller", i);
 					controllers[i]->info = &ADDPR(controllerMod)[mod];
 					break;
 				}
@@ -407,15 +407,15 @@ bool AlcEnabler::validateCodecs() {
 					
 				}
 				
-				DBGLOG("alc @ found %s %s %s codec revision 0x%X",
+				DBGLOG("alc", "found %s %s %s codec revision 0x%X",
 					   suitable ? "supported" : "unsupported", ADDPR(vendorMod)[vIdx].name,
 					   ADDPR(vendorMod)[vIdx].codecs[cIdx].name, codecs[i]->revision);
 			} else {
-				DBGLOG("alc @ found unsupported %s codec 0x%X revision 0x%X", ADDPR(vendorMod)[vIdx].name,
+				DBGLOG("alc", "found unsupported %s codec 0x%X revision 0x%X", ADDPR(vendorMod)[vIdx].name,
 					   codecs[i]->codec, codecs[i]->revision);
 			}
 		} else {
-			DBGLOG("alc @ found unsupported codec vendor 0x%X", codecs[i]->vendor);
+			DBGLOG("alc", "found unsupported codec vendor 0x%X", codecs[i]->vendor);
 		}
 		
 		if (suitable)
@@ -428,12 +428,12 @@ bool AlcEnabler::validateCodecs() {
 }
 
 void AlcEnabler::applyPatches(KernelPatcher &patcher, size_t index, const KextPatch *patches, size_t patchNum) {
-	DBGLOG("alc @ applying patches for %lu kext", index);
+	DBGLOG("alc", "applying patches for %lu kext", index);
 	for (size_t p = 0; p < patchNum; p++) {
 		auto &patch = patches[p];
 		if (patch.patch.kext->loadIndex == index) {
 			if (patcher.compatibleKernel(patch.minKernel, patch.maxKernel)) {
-				DBGLOG("alc @ applying %lu patch for %lu kext", p, index);
+				DBGLOG("alc", "applying %lu patch for %lu kext", p, index);
 				patcher.applyLookupPatch(&patch.patch);
 				// Do not really care for the errors for now
 				patcher.clearError();
