@@ -13,8 +13,7 @@
 static AlcEnabler alc;
 
 static const char *bootargOff[] {
-	"-alcoff",
-	"-x"
+	"-alcoff"
 };
 
 static const char *bootargDebug[] {
@@ -28,6 +27,7 @@ static const char *bootargBeta[] {
 PluginConfiguration ADDPR(config) {
 	xStringify(PRODUCT_NAME),
 	parseModuleVersion(xStringify(MODULE_VERSION)),
+	LiluAPI::AllowNormal | LiluAPI::AllowInstallerRecovery,
 	bootargOff,
 	arrsize(bootargOff),
 	bootargDebug,
