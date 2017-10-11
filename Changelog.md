@@ -1,5 +1,7 @@
 AppleALC Changelog
 ==================
+#### v1.2.1
+- Added ALC298 layout-id 11 for Alienware 17 (ALC3266) by Rockjesus
 
 #### v1.2.0
 - Requires Lilu 1.2.0 and higher
