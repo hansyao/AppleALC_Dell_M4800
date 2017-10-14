@@ -1568,19 +1568,13 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Rockjesus - Realtek ALC298 for Alienware 17 ALC3266</string>
 					<key>CodecID</key>
 					<integer>283902616</integer>
 					<key>ConfigData</key>
-					<data>
-					ASccQAEnHQEBJx6mAScftwF3HBABdx0BAXce
-					FwF3H5ABpxwwAacdEAGnHqEBpx8DAhccIAIX
-					HRACFx4hAhcfAw==
-					</data>
+					<data>ASccQAEnHQEBJx6mAScftwF3HBABdx0BAXceFwF3H5ABpxwwAacdEAGnHqEBpx8DAhccIAIXHRACFx4hAhcfAw==</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
@@ -3377,6 +3371,20 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>7</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>SonicBSV - VIA VT2020/2021</string>
+					<key>CodecID</key>
+					<integer>285606977</integer>
+					<key>ConfigData</key>
+					<data>Ihcc8CIXHQAiFx4AIhcfQCJHHBAiRx1AIkceESJHHwEiRwwCIlcc8CJXHQAiVx4AIlcfQCJnHPAiZx0AImceACJnH0AidxzwIncdACJ3HgAidx9AIoccICKHHUAihx4hIocfASKXHEAilx2QIpceoCKXH5AilwchIqccgCKnHTAipx6BIqcfASK3HPAitx0AIrceACK3H0AixxzwIscdACLHHgAixx9AItcc8CLXHQAi1x4AItcfQCLnHJAi5x1hIuceSyLnHwEi9xzwIvcdACL3HgAi9x9A</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>9</integer>
 				</dict>
 			</array>
 			<key>IOClass</key>
