@@ -887,6 +887,20 @@
 					<integer>16</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Hypereitan - ALC269VC for Thinkpad X230 i7</string>
+					<key>CodecID</key>
+					<integer>283902569</integer>
+					<key>ConfigData</key>
+					<data>ASccEAEnHQEBJx6gAScfkAFHHEABRx0BAUceEAFHH5ABVxxQAVcdEAFXHiEBVx8BAYcccAGHHRABhx6hAYcfAQFHDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>18</integer>
+				</dict>
+				<dict>
 					<key>Codec</key>
 					<string>Asus Vivobook S300CA - Realtek ALC269VB</string>
 					<key>CodecID</key>
