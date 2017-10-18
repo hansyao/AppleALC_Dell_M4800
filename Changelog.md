@@ -4,6 +4,7 @@ AppleALC Changelog
 - Added ALC298 layout-id 11 for Alienware 17 (ALC3266) by Rockjesus
 - Added VIA VT2020/2021 layout-id 9 by SonicBSV
 - Added ALC269 layout-id 18 for Thinkpad X230 by Hypereitan
+- Added ALC235 layout-id 28 for Lenovo Legion Y520 by vusun123
 
 #### v1.2.0
 - Requires Lilu 1.2.0 and higher
