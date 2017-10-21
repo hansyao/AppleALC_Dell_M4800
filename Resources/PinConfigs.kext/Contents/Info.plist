@@ -2502,6 +2502,21 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Realtek ALC898 for CLEVO P65xRS(-G) by datasone</string>
+					<key>CodecID</key>
+					<integer>283904153</integer>
+					<key>ConfigData</key>
+					<data>ARcc8AEXHQABFx4AARcfQAEnHFABJx0BAScepgEnH5ABRxwQAUcdAQFHHhcBRx+QAXccIAF3HRABdx4BAXcfAQGHHEABhx0QAYcegQGHHwEB1xzwAdcdAAHXHgAB1x9AAeccMAHnHREB5x5EAecfAQFHDAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>65</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Realtek ALC898 for MSI GP62-6QG Leopard Pro</string>
 					<key>CodecID</key>
 					<integer>283904153</integer>
