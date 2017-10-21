@@ -5,6 +5,7 @@ AppleALC Changelog
 - Added VIA VT2020/2021 layout-id 9 by SonicBSV
 - Added ALC269 layout-id 18 for Thinkpad X230 by Hypereitan
 - Added ALC235 layout-id 28 for Lenovo Legion Y520 by vusun123
+- Added ALC898 layout-id 65 for CLEVO P65xRS(-G) by datasone
 
 #### v1.2.0
 - Requires Lilu 1.2.0 and higher
