@@ -1640,6 +1640,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>vusun123 - Realtek ALC298 for Lenovo X270</string>
+					<key>CodecID</key>
+					<integer>283902616</integer>
+					<key>ConfigData</key>
+					<data>AEcc8ABHHQAARx4AAEcfAABXHPAAVx0AAFceAABXHwAAdxzwAHcdAAB3HgAAdx8AAOcc8ADnHQAA5x4AAOcfAAD3HPAA9x0AAPceAAD3HwABBxzwAQcdAAEHHgABBx8AASccQAEnHQEBJx6gAScfkAE3HPABNx0AATceAAE3HwABRxwQAUcdAQFHHhcBRx+QAUcMAgFXHPABVx0AAVceAAFXHwABZxzwAWcdAAFnHgABZx8AAXcc8AF3HQABdx4AAXcfAAGHHDABhx0QAYcegQGHHwMBlxzwAZcdAAGXHgABlx8AAacc8AGnHQABpx4AAacfAAG3HPABtx0AAbceAAG3HwABxxzwAccdAAHHHgABxx8AAdcc8AHXHQAB1x4AAdcfAAHnHPAB5x0AAeceAAHnHwAB9xzwAfcdAAH3HgAB9x8AAgcc8AIHHQACBx4AAgcfAA==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>29</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Custom - Realtek ALC298 for Dell XPS 9560 by KNNSpeed</string>
 					<key>CodecID</key>
 					<integer>283902616</integer>
@@ -2506,8 +2520,7 @@
 					<key>CodecID</key>
 					<integer>283904153</integer>
 					<key>ConfigData</key>
-					<data>ARcc8AEXHQABFx4AARcfQAEnHFABJx0BAScepgEnH5ABRxwQAUcdAQFHHhcBRx+QAXccIAF3HRABdx4BAXcfAQGHHEABhx0QAYcegQGHHwEB1xzwAdcdAAHXHgAB1x9AAeccMAHnHREB5x5EAecfAQFHDAI=
-					</data>
+					<data>ARcc8AEXHQABFx4AARcfQAEnHFABJx0BAScepgEnH5ABRxwQAUcdAQFHHhcBRx+QAXccIAF3HRABdx4BAXcfAQGHHEABhx0QAYcegQGHHwEB1xzwAdcdAAHXHgAB1x9AAeccMAHnHREB5x5EAecfAQFHDAI=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
