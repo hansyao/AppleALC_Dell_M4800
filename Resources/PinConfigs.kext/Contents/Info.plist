@@ -1502,6 +1502,20 @@
 					<key>CodecID</key>
 					<integer>283902610</integer>
 					<key>Comment</key>
+					<string>vanquybn - ALC 292 for Dell M4800</string>
+					<key>ConfigData</key>
+					<data>AUccEAFHHQABRx4XAUcfkAGHHCABhx2QAYcegQGHHwEBJxwwAScdAAEnHqYBJx+QAVccQAFXHUABVx4hAVcfAQ==</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>18</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283902610</integer>
+					<key>Comment</key>
 					<string>vusun123 - ALC 292 for Lenovo T440</string>
 					<key>ConfigData</key>
 					<data>ASccMAEnHQABJx6gAScfkAFHHEABRx0AAUceFwFHH5ABRwwCAVccUAFXHRABVx4hAVcfAAGnHCABpx0QAacegQGnHwA=</data>

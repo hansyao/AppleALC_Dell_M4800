@@ -7,6 +7,7 @@ AppleALC Changelog
 - Added ALC235 layout-id 28 for Lenovo Legion Y520 by vusun123
 - Added ALC898 layout-id 65 for CLEVO P65xRS(-G) by datasone
 - Added ALC298 layout-id 29 for Lenovo X270 by vusun123
+- Added ALC292 layout-id 18 for Dell Precision M4800/M6800 by vanquybn
 
 #### v1.2.0
 - Requires Lilu 1.2.0 and higher
