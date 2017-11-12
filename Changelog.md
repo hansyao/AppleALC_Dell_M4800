@@ -1,5 +1,9 @@
 AppleALC Changelog
 ==================
+#### v1.2.2
+- Added ALC256 layout-id 56 for Dell 7000 by DalianSky
+- Added ALC256 layout-id 56 for Dell 7000 by DalianSky
+
 #### v1.2.1
 - Added ALC298 layout-id 11 for Alienware 17 (ALC3266) by Rockjesus
 - Added VIA VT2020/2021 layout-id 9 by SonicBSV
