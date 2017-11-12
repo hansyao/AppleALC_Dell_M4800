@@ -2478,6 +2478,26 @@
 					AwAAAA==
 					</data>
 					<key>Codec</key>
+					<string>Daliansky - Realtek ALC298 ThinkPad T470p</string>
+					<key>CodecID</key>
+					<integer>283902616</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccEAEnHQABJx6gAScfkAFHHCABRx0AAUce
+					FwFHH5ABhxwwAYcdEAGHHoEBhx8CAhccQAIX
+					HRACFx4hAhcfAgFHDAICFwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>47</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
 					<string>Custom - Realtek ALC298 for Dell XPS 9560 by KNNSpeed</string>
 					<key>CodecID</key>
 					<integer>283902616</integer>
