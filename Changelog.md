@@ -4,6 +4,7 @@ AppleALC Changelog
 - Added ALC256 layout-id 56 for Dell 7000 by DalianSky
 - Added ALC298 layout-id 47 for ThinkPad T470P by DalianSky
 - Update ALC269 layout27.xml.zlib by Andrey1970
+- Added ALC269 layout-id 99 and 127 by Andrey1970 (No input boost - no noise in Siri)
 
 #### v1.2.1
 - Added ALC298 layout-id 11 for Alienware 17 (ALC3266) by Rockjesus
