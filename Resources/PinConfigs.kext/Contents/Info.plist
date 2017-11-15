@@ -1076,6 +1076,22 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>ALC269</string>
+					<key>CodecID</key>
+					<integer>283902569</integer>
+					<key>Comment</key>
+					<string>ALC269 Asus K53SJ, Asus G73s Mod by Andrey1970 (No input boost - no noise in Siri)</string>
+					<key>ConfigData</key>
+					<data>AScc8AEnHQABJx4AAScfQAFHHBABRx0BAUceEwFHH5ABdxxQAXcdAQF3HhMBdx+QAYccIAGHHZABhx6BAYcfAwGXHDABlx0BAZceoAGXH5ABpxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4AAbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecdAAHnHgAB5x9AAhccQAIXHRACFx4hAhcfAwFHDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>93</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>ALC269-VB v4 Mod by Andrey1970 (No input boost - no noise in Siri)</string>
 					<key>CodecID</key>
 					<integer>283902569</integer>
