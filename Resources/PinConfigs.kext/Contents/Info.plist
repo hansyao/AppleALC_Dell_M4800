@@ -1981,6 +1981,20 @@
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283903601</integer>
+					<key>Comment</key>
+					<string>MacPeet - ALC671 for Fujitsu-Siemens D3433-S (Q170 chip)</string>
+					<key>ConfigData</key>
+					<data>AYccIAGHHTABhx6BAYcfAQIXHDACFx1AAhceAQIXHwECFwwC</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Mirone - Realtek ALC882</string>
 					<key>CodecID</key>
