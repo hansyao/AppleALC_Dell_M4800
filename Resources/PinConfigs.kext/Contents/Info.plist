@@ -706,6 +706,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>MacPeet - ALC262 for Fujitsu Celsius H270</string>
+					<key>CodecID</key>
+					<integer>283902562</integer>
+					<key>ConfigData</key>
+					<data>AUccEAFHHQABRx4TAUcfkAFXHCABVx0QAVceIQFXHwIBhxwwAYcdEAGHHoEBhx8CAZccQAGXHQABlx6jAZcfkAGnHFABpx0QAacegQGnHwE=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - Realtek ALC268</string>
 					<key>CodecID</key>
 					<integer>283902568</integer>
@@ -1280,6 +1294,20 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Mirone - Realtek ALC280 - ComboJack</string>
+					<key>CodecID</key>
+					<integer>283902592</integer>
+					<key>ConfigData</key>
+					<data>ASccEAEnHQABJx6gAScfkAFHHCABRx0AAUceFwFHH5ABVxwwAVcdEAFXHiEBVx8CAaccQAGnHRABpx6BAacfAgFHDAIBVwwC</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>4</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Alienware alpha - Realtek ALC280</string>
 					<key>CodecID</key>
 					<integer>283902592</integer>
@@ -1294,15 +1322,29 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>Mirone - Realtek ALC280 - ComboJack</string>
+					<string>MacPeet - Realtek ALC280 - Dell T20 - Version1 - ManualMode</string>
 					<key>CodecID</key>
 					<integer>283902592</integer>
 					<key>ConfigData</key>
-					<data>ASccEAEnHQABJx6gAScfkAFHHCABRx0AAUceFwFHH5ABVxwwAVcdEAFXHiEBVx8CAaccQAGnHRABpx6BAacfAgFHDAIBVwwC</data>
+					<data>AbccIAG3HUABtx4BAbcfAQGnHDABpx2QAacegQGnHwIBhxxAAYcdMAGHHoEBhx8BAVccYAFXHUABVx4hAVcfAgFXDAI=</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
-					<integer>4</integer>
+					<integer>13</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>MacPeet - Realtek ALC280 - Dell T20 - Version2 - SwitchMode</string>
+					<key>CodecID</key>
+					<integer>283902592</integer>
+					<key>ConfigData</key>
+					<data>AbccIAG3HUABtx4RAbcfkAGnHDABpx2QAacegQGnHwIBhxxAAYcdMAGHHoEBhx8BAVccYAFXHUABVx4hAVcfAgFXDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>15</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>

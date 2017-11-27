@@ -6,6 +6,8 @@ AppleALC Changelog
 - Update ALC269 layout27.xml.zlib by Andrey1970
 - Added ALC269 layout-id 93, 99 and 127 by Andrey1970 (No input boost - no noise in Siri)
 - Added ALC671 layout-id 12 for Fujitsu-Siemens D3433-S (Q170 chip) by MacPeet
+- Added ALC280 layout-id 13 and 15 for DELL T20 by MacPeet
+- Added ALC262 layout-id 13 for Fujitsu Celsius H270 by MacPeet
 
 #### v1.2.1
 - Added ALC298 layout-id 11 for Alienware 17 (ALC3266) by Rockjesus
