@@ -2,14 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Vendor</key>
-	<string>Conexant</string>
+	<key>Author</key>
+	<string>Vandroiy</string>
 	<key>CodecID</key>
 	<integer>8050</integer>
 	<key>CodecName</key>
 	<string>CX8050</string>
-	<key>Author</key>
-	<string>Vandroiy</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
@@ -100,5 +98,7 @@
 			<data>AAAAAA==</data>
 		</dict>
 	</array>
+	<key>Vendor</key>
+	<string>Conexant</string>
 </dict>
 </plist>

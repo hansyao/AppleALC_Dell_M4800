@@ -13,10 +13,10 @@
 		<key>Layouts</key>
 		<array>
 			<dict>
-				<key>Id</key>
-				<integer>1</integer>
 				<key>Comment</key>
 				<string>Toleda resources by Ukr55</string>
+				<key>Id</key>
+				<integer>1</integer>
 				<key>Path</key>
 				<string>layout1.xml.zlib</string>
 			</dict>
@@ -29,10 +29,10 @@
 				<string>layout11.xml.zlib</string>
 			</dict>
 			<dict>
-				<key>Id</key>
-				<integer>12</integer>
 				<key>Comment</key>
 				<string>Custom by Sergey_Galan</string>
+				<key>Id</key>
+				<integer>12</integer>
 				<key>Path</key>
 				<string>layout12.xml.zlib</string>
 			</dict>
@@ -40,10 +40,10 @@
 		<key>Platforms</key>
 		<array>
 			<dict>
-				<key>Id</key>
-				<integer>1</integer>
 				<key>Comment</key>
 				<string>Toleda resources by Ukr55</string>
+				<key>Id</key>
+				<integer>1</integer>
 				<key>Path</key>
 				<string>PlatformsT.xml.zlib</string>
 			</dict>
@@ -56,10 +56,10 @@
 				<string>Platforms11.xml.zlib</string>
 			</dict>
 			<dict>
-				<key>Id</key>
-				<integer>12</integer>
 				<key>Comment</key>
 				<string>Custom by Sergey_Galan</string>
+				<key>Id</key>
+				<integer>12</integer>
 				<key>Path</key>
 				<string>Platforms12.xml.zlib</string>
 			</dict>

@@ -4,16 +4,16 @@
 <dict>
 	<key>AppleHDA</key>
 	<dict>
-		<key>Id</key>
-		<string>com.apple.driver.AppleHDA</string>
 		<key>Detect</key>
 		<true/>
-		<key>Reloadable</key>
-		<true/>
+		<key>Id</key>
+		<string>com.apple.driver.AppleHDA</string>
 		<key>Paths</key>
 		<array>
 			<string>/System/Library/Extensions/AppleHDA.kext/Contents/MacOS/AppleHDA</string>
 		</array>
+		<key>Reloadable</key>
+		<true/>
 	</dict>
 	<key>AppleHDAController</key>
 	<dict>
@@ -22,6 +22,15 @@
 		<key>Paths</key>
 		<array>
 			<string>/System/Library/Extensions/AppleHDA.kext/Contents/PlugIns/AppleHDAController.kext/Contents/MacOS/AppleHDAController</string>
+		</array>
+	</dict>
+	<key>AppleIntelBDWGraphicsFramebuffer</key>
+	<dict>
+		<key>Id</key>
+		<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
+		<key>Paths</key>
+		<array>
+			<string>/System/Library/Extensions/AppleIntelBDWGraphicsFramebuffer.kext/Contents/MacOS/AppleIntelBDWGraphicsFramebuffer</string>
 		</array>
 	</dict>
 	<key>AppleIntelFramebufferAzul</key>
@@ -42,13 +51,13 @@
 			<string>/System/Library/Extensions/AppleIntelFramebufferCapri.kext/Contents/MacOS/AppleIntelFramebufferCapri</string>
 		</array>
 	</dict>
-	<key>AppleIntelBDWGraphicsFramebuffer</key>
+	<key>AppleIntelKBLGraphicsFramebuffer</key>
 	<dict>
 		<key>Id</key>
-		<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
+		<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
 		<key>Paths</key>
 		<array>
-			<string>/System/Library/Extensions/AppleIntelBDWGraphicsFramebuffer.kext/Contents/MacOS/AppleIntelBDWGraphicsFramebuffer</string>
+			<string>/System/Library/Extensions/AppleIntelKBLGraphicsFramebuffer.kext/Contents/MacOS/AppleIntelKBLGraphicsFramebuffer</string>
 		</array>
 	</dict>
 	<key>AppleIntelSKLGraphicsFramebuffer</key>
@@ -58,15 +67,6 @@
 		<key>Paths</key>
 		<array>
 			<string>/System/Library/Extensions/AppleIntelSKLGraphicsFramebuffer.kext/Contents/MacOS/AppleIntelSKLGraphicsFramebuffer</string>
-		</array>
-	</dict>
-	<key>AppleIntelKBLGraphicsFramebuffer</key>
-	<dict>
-		<key>Id</key>
-		<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
-		<key>Paths</key>
-		<array>
-			<string>/System/Library/Extensions/AppleIntelKBLGraphicsFramebuffer.kext/Contents/MacOS/AppleIntelKBLGraphicsFramebuffer</string>
 		</array>
 	</dict>
 </dict>

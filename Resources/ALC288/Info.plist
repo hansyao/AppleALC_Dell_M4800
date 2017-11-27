@@ -118,9 +118,9 @@
 			<integer>2</integer>
 			<key>Find</key>
 			<data>gxnUEQ==</data>
-			<key>MinKernel</key>
-			<integer>15</integer>
 			<key>MaxKernel</key>
+			<integer>15</integer>
+			<key>MinKernel</key>
 			<integer>15</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>

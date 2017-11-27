@@ -86,9 +86,9 @@
 			<integer>2</integer>
 			<key>Find</key>
 			<data>gxnUEQ==</data>
-			<key>MinKernel</key>
-			<integer>15</integer>
 			<key>MaxKernel</key>
+			<integer>15</integer>
+			<key>MinKernel</key>
 			<integer>15</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
@@ -102,10 +102,10 @@
 			<data>a3Bzaes=</data>
 			<key>MinKernel</key>
 			<string>14</string>
-			<key>Provider</key>
-			<string>Wern Apfel</string>
 			<key>Name</key>
 			<string>AppleHDA</string>
+			<key>Provider</key>
+			<string>Wern Apfel</string>
 			<key>Replace</key>
 			<data>Y2ltaes=</data>
 		</dict>

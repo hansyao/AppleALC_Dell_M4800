@@ -138,10 +138,10 @@
 			<integer>2</integer>
 			<key>Find</key>
 			<data>hAjsEA==</data>
-			<key>MinKernel</key>
-			<integer>12</integer>
 			<key>MaxKernel</key>
 			<integer>14</integer>
+			<key>MinKernel</key>
+			<integer>12</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>

@@ -2,14 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Vendor</key>
-	<string>Conexant</string>
+	<key>Author</key>
+	<string>Vandroiy</string>
 	<key>CodecID</key>
 	<integer>20722</integer>
 	<key>CodecName</key>
 	<string>CX20722</string>
-	<key>Author</key>
-	<string>Vandroiy</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
@@ -106,13 +104,15 @@
 			<data>a3Bzaes=</data>
 			<key>MinKernel</key>
 			<string>14</string>
-			<key>Provider</key>
-			<string>Wern Apfel</string>
 			<key>Name</key>
 			<string>AppleHDA</string>
+			<key>Provider</key>
+			<string>Wern Apfel</string>
 			<key>Replace</key>
 			<data>Y2ltaes=</data>
 		</dict>
 	</array>
+	<key>Vendor</key>
+	<string>Conexant</string>
 </dict>
 </plist>

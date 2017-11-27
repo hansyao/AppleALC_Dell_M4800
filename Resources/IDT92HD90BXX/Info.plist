@@ -22,7 +22,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>vusun123&apos;s IDT 92HD90BXX for Dell Latitude E6x20/Dell Precision Mx600</string>
+				<string>vusun123's IDT 92HD90BXX for Dell Latitude E6x20/Dell Precision Mx600</string>
 				<key>Id</key>
 				<integer>12</integer>
 				<key>Path</key>
@@ -41,7 +41,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>vusun123&apos;s IDT 92HD90BXX for Dell Latitude E6x20/Dell Precision Mx600</string>
+				<string>vusun123's IDT 92HD90BXX for Dell Latitude E6x20/Dell Precision Mx600</string>
 				<key>Id</key>
 				<integer>12</integer>
 				<key>Path</key>
@@ -118,9 +118,9 @@
 			<integer>2</integer>
 			<key>Find</key>
 			<data>gxnUEQ==</data>
-			<key>MinKernel</key>
-			<integer>15</integer>
 			<key>MaxKernel</key>
+			<integer>15</integer>
+			<key>MinKernel</key>
 			<integer>15</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
