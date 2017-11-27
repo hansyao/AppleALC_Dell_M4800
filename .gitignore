@@ -1,0 +1,4 @@
+DerivedData/
+*.xcodeproj/project.xcworkspace/
+AppleALC/kern_resources.cpp
+*.xcodeproj/xcuserdata/
