@@ -3299,6 +3299,24 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>MacPeet - ALC891 for HP Pavilion Power 580-030ng</string>
+					<key>CodecID</key>
+					<integer>283904103</integer>
+					<key>ConfigData</key>
+					<data>
+					AXccIAF3HRABdx4hAXcfAgGHHDABhx2QAYce
+					gQGHHwEBtxxAAbcdMAG3HoEBtx8BAhccYAIX
+					HQACFx4RAhcfAAIXDAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>InsanelyDeepak - Realtek ALC891</string>
 					<key>CodecID</key>
 					<integer>283904103</integer>

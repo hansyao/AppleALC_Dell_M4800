@@ -8,6 +8,7 @@ AppleALC Changelog
 - Added ALC671 layout-id 12 for Fujitsu-Siemens D3433-S (Q170 chip) by MacPeet
 - Added ALC280 layout-id 13 and 15 for DELL T20 by MacPeet
 - Added ALC262 layout-id 13 for Fujitsu Celsius H270 by MacPeet
+- Added ALC891 layout-id 11 for HP Pavilion Power 580-030ng by MacPeet
 
 #### v1.2.1
 - Added ALC298 layout-id 11 for Alienware 17 (ALC3266) by Rockjesus
