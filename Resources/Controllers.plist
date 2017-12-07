@@ -257,19 +257,13 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Find</key>
-				<data>
-				AQUJAAAEAACHAAAAAgQKAAAEAACHAAAAAwYIAAAEAAAR
-				AAAA
-				</data>
+				<data>AQUJAAAEAACHAAAAAgQKAAAEAACHAAAAAwYIAAAEAAARAAAA</data>
 				<key>MinKernel</key>
 				<integer>14</integer>
 				<key>Name</key>
 				<string>AppleIntelFramebufferAzul</string>
 				<key>Replace</key>
-				<data>
-				AQUJAAAIAACHAAAAAgQKAAAIAACHAAAAAwYIAAAIAAAR
-				AAAA
-				</data>
+				<data>AQUJAAAIAACHAAAAAgQKAAAIAACHAAAAAwYIAAAIAAARAAAA</data>
 			</dict>
 		</array>
 		<key>Platform</key>
@@ -477,19 +471,13 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Find</key>
-				<data>
-				AQUJAAAEAACHAQAAAgQKAAAEAACHAQAAAwYKAAAEAACH
-				AQAA
-				</data>
+				<data>AQUJAAAEAACHAQAAAgQKAAAEAACHAQAAAwYKAAAEAACHAQAA</data>
 				<key>MinKernel</key>
 				<integer>15</integer>
 				<key>Name</key>
 				<string>AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Replace</key>
-				<data>
-				AQUJAAAIAACHAQAAAgQKAAAIAACHAQAAAwYKAAAIAACH
-				AQAA
-				</data>
+				<data>AQUJAAAIAACHAQAAAgQKAAAIAACHAQAAAwYKAAAIAACHAQAA</data>
 			</dict>
 		</array>
 		<key>Platform</key>
@@ -510,19 +498,13 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Find</key>
-				<data>
-				AQUJAAAEAACHAQAAAgQKAAAEAACHAQAAAwYKAAAEAACH
-				AQAA
-				</data>
+				<data>AQUJAAAEAACHAQAAAgQKAAAEAACHAQAAAwYKAAAEAACHAQAA</data>
 				<key>MinKernel</key>
 				<integer>15</integer>
 				<key>Name</key>
 				<string>AppleIntelKBLGraphicsFramebuffer</string>
 				<key>Replace</key>
-				<data>
-				AQUJAAAIAACHAQAAAgQKAAAIAACHAQAAAwYKAAAIAACH
-				AQAA
-				</data>
+				<data>AQUJAAAIAACHAQAAAgQKAAAIAACHAQAAAwYKAAAIAACHAQAA</data>
 			</dict>
 		</array>
 		<key>Platform</key>
@@ -543,19 +525,13 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Find</key>
-				<data>
-				AgUAAAAEAAAHBAAAAwQAAAAEAACBAAAABAYAAAAEAACB
-				AAAA
-				</data>
+				<data>AgUAAAAEAAAHBAAAAwQAAAAEAACBAAAABAYAAAAEAACBAAAA</data>
 				<key>MinKernel</key>
 				<integer>13</integer>
 				<key>Name</key>
 				<string>AppleIntelFramebufferCapri</string>
 				<key>Replace</key>
-				<data>
-				AgUAAAAIAAAHBAAAAwQAAAAIAACBAAAABAYAAAAIAACB
-				AAAA
-				</data>
+				<data>AgUAAAAIAAAHBAAAAwQAAAAIAACBAAAABAYAAAAIAACBAAAA</data>
 			</dict>
 		</array>
 		<key>Platform</key>
@@ -576,19 +552,13 @@
 				<key>Count</key>
 				<integer>2</integer>
 				<key>Find</key>
-				<data>
-				AQAAAAIAAAAwAAAAAgUAAAAEAAAHAQAAAwQAAAAEAAAH
-				AQAA
-				</data>
+				<data>AQAAAAIAAAAwAAAAAgUAAAAEAAAHAQAAAwQAAAAEAAAHAQAA</data>
 				<key>MinKernel</key>
 				<integer>13</integer>
 				<key>Name</key>
 				<string>AppleIntelFramebufferCapri</string>
 				<key>Replace</key>
-				<data>
-				AQAAAAIAAAAwAAAAAgUAAAAIAAAHAQAAAwQAAAAIAAAH
-				AQAA
-				</data>
+				<data>AQAAAAIAAAAwAAAAAgUAAAAIAAAHAQAAAwQAAAAIAAAHAQAA</data>
 			</dict>
 		</array>
 		<key>Platform</key>
@@ -598,7 +568,7 @@
 	</dict>
 	<dict>
 		<key>Device</key>
-		<integer>358</integer>
+		<integer>354</integer>
 		<key>Model</key>
 		<string>Desktop</string>
 		<key>Name</key>
@@ -609,19 +579,13 @@
 				<key>Count</key>
 				<integer>2</integer>
 				<key>Find</key>
-				<data>
-				AgUAAAAEAAAHAQAAAwQAAAAEAAAHAQAABAYAAAAIAAAG
-				AAAA
-				</data>
+				<data>AgUAAAAEAAAHAQAAAwQAAAAEAAAHAQAABAYAAAAIAAAGAAAA</data>
 				<key>MinKernel</key>
 				<integer>13</integer>
 				<key>Name</key>
 				<string>AppleIntelFramebufferCapri</string>
 				<key>Replace</key>
-				<data>
-				AgUAAAAIAAAHAQAAAwQAAAAIAAAHAQAABAYAAAAIAAAG
-				AAAA
-				</data>
+				<data>AgUAAAAIAAAHAQAAAwQAAAAIAAAHAQAABAYAAAAIAAAGAAAA</data>
 			</dict>
 		</array>
 		<key>Platform</key>
