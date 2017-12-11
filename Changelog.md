@@ -14,6 +14,7 @@ AppleALC Changelog
 - Added IDT92HD91BXX layout-id 84 for HP Elitebook 840 G1 by macish
 - Added ALC295 layout-id 13 for Dell7570 by DalianSky
 - Added ALC298 layout-id 99 for XiaoMIPro by DalianSky
+- Added ALC283 layout-id 1 for NUC/BRIX by Toleda
 
 #### v1.2.1
 - Added ALC298 layout-id 11 for Alienware 17 (ALC3266) by Rockjesus
