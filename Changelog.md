@@ -11,6 +11,9 @@ AppleALC Changelog
 - Added ALC891 layout-id 11 for HP Pavilion Power 580-030ng by MacPeet
 - Added ALC282 layout-id 76 for Hasee K580C by YM2008
 - Fix desktop HD4000 id by Andrey1970
+- Added IDT92HD91BXX layout-id 84 for HP Elitebook 840 G1 by macish
+- Added ALC295 layout-id 13 for Dell7570 by DalianSky
+- Added ALC298 layout-id 99 for XiaoMIPro by DalianSky
 
 #### v1.2.1
 - Added ALC298 layout-id 11 for Alienware 17 (ALC3266) by Rockjesus
