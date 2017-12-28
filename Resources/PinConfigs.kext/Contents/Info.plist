@@ -3645,6 +3645,23 @@
 					<key>CodecID</key>
 					<integer>283904146</integer>
 					<key>Comment</key>
+					<string>ALC892 with working SPDIF</string>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHUABRx4RAUcfAQGHHFABhx2QAYce
+					oAGHH5ABlxxgAZcdkAGXHoEBlx8CAacccAGn
+					HTABpx6BAacfAQG3HIABtx1AAbceIQG3HwEB
+					5xyQAecd4AHnHkUB5x8B
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>98</integer>
+				</dict>
+				<dict>
+					<key>CodecID</key>
+					<integer>283904146</integer>
+					<key>Comment</key>
 					<string>Custom ALC892 DNS P150EM by Constanta</string>
 					<key>ConfigData</key>
 					<data>

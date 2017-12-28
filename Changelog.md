@@ -17,6 +17,7 @@ AppleALC Changelog
 - Added ALC283 layout-id 1 for NUC/BRIX by Toleda
 - Added ALC255 (3246) layout-id 99 for XiaoMi Air by DalianSky
 - Added ALC236 layout-id 15 for Lenovo Ideapad 500-15ISK by MacPeet
+- Added ALC892 layout-id 98 with workink SPDIF
 
 #### v1.2.1
 - Added ALC298 layout-id 11 for Alienware 17 (ALC3266) by Rockjesus
