@@ -806,6 +806,28 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>DalianSky - Realtek ALC255 (3246) for XiaoMi Air</string>
+					<key>CodecID</key>
+					<integer>283902549</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccIAEnHQEBJx6mAScfkAE3HPABNx0AATce
+					AAE3H0ABRxxAAUcdAQFHHhcBRx+QAUcMAgF3
+					HPABdx0AAXceAAF3H0ABhxzwAYcdAAGHHgAB
+					hx9AAZccEAGXHRABlx6LAZcfAgGnHPABpx0A
+					AaceAAGnH0ABtxzwAbcdAAG3HgABtx9AAdcc
+					8AHXHQAB1x4AAdcfQAHnHPAB5x0AAeceAAHn
+					H0ACFxwwAhcdEAIXHisCFx8CAhcMAg==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>99</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Insanelydeepak - Realtek ALC256 (3246) for Dell Series</string>
 					<key>CodecID</key>
 					<integer>283902550</integer>
