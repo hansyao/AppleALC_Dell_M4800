@@ -38,6 +38,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>DuNe - Realtek ALC255 for Aorus X5V7</string>
+				<key>Id</key>
+				<integer>18</integer>
+				<key>Path</key>
+				<string>layout18.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>ALC255 for Asus X556UA m-dudarev</string>
 				<key>Id</key>
 				<integer>27</integer>
@@ -86,6 +94,14 @@
 				<integer>17</integer>
 				<key>Path</key>
 				<string>PlatformsID.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>DuNe - Realtek ALC255 for Aorus X5V7</string>
+				<key>Id</key>
+				<integer>18</integer>
+				<key>Path</key>
+				<string>Platforms18.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
