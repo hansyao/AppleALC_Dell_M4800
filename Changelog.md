@@ -2,6 +2,7 @@ AppleALC Changelog
 ==================
 #### v1.2.3
 - Added ALC255 layout-id 18 for Aorus X5V7 by DuNe
+- Change Platforms18.xml.zlib for ALC255 by DuNe
 
 #### v1.2.2
 - Added ALC256 layout-id 56 for Dell 7000 by DalianSky
