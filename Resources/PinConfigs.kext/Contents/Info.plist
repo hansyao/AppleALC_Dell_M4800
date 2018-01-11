@@ -3900,6 +3900,26 @@
 					<integer>99</integer>
 				</dict>
 				<dict>
+					<key>CodecID</key>
+					<integer>283904153</integer>
+					<key>Comment</key>
+					<string>ALC898, 4 Line Out by Andrey1970</string>
+					<key>ConfigData</key>
+					<data>
+					AUccAAFHHUABRx4RAUcfkAFXHBABVx0QAVce
+					AQFXHwEBZxwgAWcdYAFnHgEBZx8BAYccMAGH
+					HZABhx6gAYcfkAGnHEABpx0wAacegQGnHwEB
+					lxxQAZcdkAGXHoEBlx8CAbccYAG3HUABtx4h
+					AbcfAgHnHHAB5x1hAeceSwHnHwEBdxyAAXcd
+					IAF3HgEBdx8BAfcc8AH3HQAB9x4AAfcfSQEX
+					HPABFx0AARceAAEXH0k=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>101</integer>
+				</dict>
+				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>CodecID</key>
