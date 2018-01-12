@@ -4,6 +4,7 @@ AppleALC Changelog
 - Added ALC255 layout-id 18 for Aorus X5V7 by DuNe
 - Change Platforms18.xml.zlib for ALC255 by DuNe
 - Added ALC898 layout-id 101 by Andrey1970 (4 Line Out)
+- Added ALC262 layout-id 28 for HP Z800-Z600 series by MacPeet
 
 #### v1.2.2
 - Added ALC256 layout-id 56 for Dell 7000 by DalianSky
