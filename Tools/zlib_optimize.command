@@ -9,7 +9,7 @@
 MyPath=$(dirname "$BASH_SOURCE")
 pushd "$MyPath/../" &>/dev/null
 
-find ./Resources/ -name 'Platform*.xml' | while read file
+find ./Resources -name 'Platform*.xml' | while read file
 do
 	echo "Optimizing" $file
 	#perl zlib.pl deflate "$file" > "$file.zlib"

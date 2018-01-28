@@ -243,7 +243,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C748C311C21952C0024EED2 /* Build configuration list for PBXNativeTarget "AppleALC" */;
 			buildPhases = (
-				CE873866201D344300053006 /* Convert resources */,
 				1C748C221C21952C0024EED2 /* Sources */,
 				1C748C231C21952C0024EED2 /* Frameworks */,
 				1C748C241C21952C0024EED2 /* Headers */,
@@ -268,6 +267,7 @@
 				1CD5B2B81C89CF2D00E45373 /* Sources */,
 				1CD5B2B91C89CF2D00E45373 /* Frameworks */,
 				1CD5B2BA1C89CF2D00E45373 /* CopyFiles */,
+				CE0C09F3201DBE6600926B8E /* Convert Resources */,
 			);
 			buildRules = (
 			);
@@ -324,6 +324,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		CE0C09F3201DBE6600926B8E /* Convert Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Convert Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "# For some reason recent Xcode ignores exit command completely.\n/bin/bash -e \"${PROJECT_DIR}/ResourceConverter/generate.sh\"";
+		};
 		CE131D6B1FB72A9D0036C3A0 /* Archive */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,20 +351,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
 			shellScript = "cd \"${TARGET_BUILD_DIR}\"\n\ndist=(\"$FULL_PRODUCT_NAME\")\nif [ -d \"$DWARF_DSYM_FILE_NAME\" ]; then dist+=(\"$DWARF_DSYM_FILE_NAME\"); fi\n\narchive=\"${MODULE_VERSION} ($(echo $CONFIGURATION | tr /a-z/ /A-Z/)).zip\"\nrm -rf *.zip\nzip -qry \"${archive}\" \"${dist[@]}\"";
-		};
-		CE873866201D344300053006 /* Convert resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Convert resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "sh \"${PROJECT_DIR}/ResourceConverter/generate.sh\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
