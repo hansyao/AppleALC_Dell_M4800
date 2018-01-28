@@ -84,11 +84,29 @@ OSObject *AlcEnabler::copyClientEntitlement(task_t task, const char *entitlement
 	return nullptr;
 }
 
+void AlcEnabler::eraseRedundantLogs(KernelPatcher &patcher, size_t index) {
+	static const uint8_t logAssertFind[] = { 0x53, 0x6F, 0x75, 0x6E, 0x64, 0x20, 0x61, 0x73 };
+	static const uint8_t nullReplace[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
+
+	KernelPatcher::LookupPatch currentPatch {
+		&ADDPR(kextList)[index], nullptr, nullReplace, sizeof(nullReplace)
+	};
+
+	if (index == KextIdAppleHDAController || index == KextIdAppleHDA) {
+		currentPatch.find = logAssertFind;
+		if (index == KextIdAppleHDAController)
+			currentPatch.count = 3;
+		else
+			currentPatch.count = 2;
+
+		patcher.applyLookupPatch(&currentPatch);
+		patcher.clearError();
+	}
+}
+
 void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_address_t address, size_t size) {
 	size_t kextIndex = 0;
-	static const uint8_t logFind[] = { 0x53, 0x6F, 0x75, 0x6E, 0x64, 0x20, 0x61, 0x73, 0x73, 0x65, 0x72, 0x74, 0x69, 0x6F, 0x6E, 0x20 };
-	static const uint8_t logRepl[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
-	
+
 	while (kextIndex < ADDPR(kextListSize)) {
 		if (ADDPR(kextList)[kextIndex].loadIndex == index)
 			break;
@@ -108,7 +126,6 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 			DBGLOG("alc", "failed to find a suitable codec, we have nothing to do");
 	}
 			   
-			   
 	// Continue to patch controllers
 	
 	if (progressState & ProcessingState::ControllersLoaded) {
@@ -121,15 +138,10 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 			
 			applyPatches(patcher, index, info->patches, info->patchNum);
 		}
-    
-		// patch AppleHDAController to remove redundant logs
-		if (!ADDPR(debugEnabled) && !strcmp(ADDPR(kextList)[kextIndex].id, "com.apple.driver.AppleHDAController")) {
-			KernelPatcher::LookupPatch hdaLogRMPatch {
-				&ADDPR(kextList)[kextIndex], logFind, logRepl, sizeof(logFind), 3 // 3 occurrences inside AppleHDAController
-			};
-			patcher.applyLookupPatch(&hdaLogRMPatch);
-			patcher.clearError();
-		}
+
+		// Only do this if -alcdbg is not passed
+		if (!ADDPR(debugEnabled))
+			eraseRedundantLogs(patcher, kextIndex);
 	}
 	
 	if (progressState & ProcessingState::CodecsLoaded) {
@@ -149,7 +161,7 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 		}
 	}
 	
-	if ((progressState & ProcessingState::CallbacksWantRouting) && ADDPR(kextList)[kextIndex].user[0]) {
+	if ((progressState & ProcessingState::CallbacksWantRouting) && kextIndex == KextIdAppleHDA) {
 		auto layout = patcher.solveSymbol(index, "__ZN14AppleHDADriver18layoutLoadCallbackEjiPKvjPv");
 		auto platform = patcher.solveSymbol(index, "__ZN14AppleHDADriver20platformLoadCallbackEjiPKvjPv");
 
@@ -173,13 +185,8 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 		}
     
 		// patch AppleHDA to remove redundant logs
-		if (!ADDPR(debugEnabled)) {
-			KernelPatcher::LookupPatch hdaLogRMPatch {
-				&ADDPR(kextList)[kextIndex], logFind, logRepl, sizeof(logFind), 2 // 2 occurrences inside AppleHDA
-			};
-			patcher.applyLookupPatch(&hdaLogRMPatch);
-			patcher.clearError();
-		}
+		if (!ADDPR(debugEnabled))
+			eraseRedundantLogs(patcher, kextIndex);
 	}
 	
 	// Ignore all the errors for other processors

@@ -99,5 +99,7 @@ extern const size_t ADDPR(controllerModSize);
 extern VendorModInfo ADDPR(vendorMod)[];
 extern const size_t ADDPR(vendorModSize);
 
+extern const size_t KextIdAppleHDAController;
+extern const size_t KextIdAppleHDA;
 
 #endif /* kern_resource_hpp */

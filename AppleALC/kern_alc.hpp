@@ -19,6 +19,14 @@ public:
 	
 private:
 	/**
+	 *  Remove log spam from AppleHDAController and AppleHDA.
+	 *
+	 *  @param patcher KernelPatcher instance
+	 *  @oaram index  kinfo handle
+	 */
+	void eraseRedundantLogs(KernelPatcher &patcher, size_t index);
+
+	/**
 	 *  Patch AppleHDA or another kext if needed and prepare other patches
 	 *
 	 *  @param patcher KernelPatcher instance

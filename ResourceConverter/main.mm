@@ -67,8 +67,15 @@ static NSDictionary * generateKexts(NSString *file, NSDictionary *kexts) {
 		NSDictionary *kextInfo = [kexts objectForKey:kextName];
 		NSString *kextID = [kextInfo objectForKey:@"Id"];
 		NSArray *kextPaths = [kextInfo objectForKey:@"Paths"];
+
+		NSString *normKextID = [[[kextID
+								stringByReplacingOccurrencesOfString:@"com.apple.driver." withString:@""]
+								stringByReplacingOccurrencesOfString:@"com.apple.iokit." withString:@""]
+								stringByReplacingOccurrencesOfString:@"." withString:@""];
 		
 		[kextPathsSection appendString:makeStringList(@"kextPath", kextIndex, kextPaths)];
+
+		[kextPathsSection appendFormat:@"__attribute__((unused))\nconst size_t KextId%@ = %zu;\n", normKextID, kextIndex];
 		
 		[kextSection appendFormat:@"\t{ \"%@\", kextPath%zu, %lu, {false, %s}, {%s}, KernelPatcher::KextInfo::Unloaded },\n",
 			kextID, kextIndex, [kextPaths count], [kextInfo objectForKey:@"Reloadable"] ? "true" : "false", [kextInfo objectForKey:@"Detect"] ? "true" : ""];
