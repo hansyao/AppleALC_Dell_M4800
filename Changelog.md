@@ -7,6 +7,7 @@ AppleALC Changelog
 - Added ALC262 layout-id 28 for HP Z800-Z600 series by MacPeet
 - Added ALC225 layout-id 33 by ChalesYu
 - Added ALC282 layout-id 127 No input boost Acer Aspire on IvyBridge by Andrey1970
+- Added ALC294 layout-id 13 by InsanelyDeepak
 
 #### v1.2.2
 - Added ALC256 layout-id 56 for Dell 7000 by DalianSky
