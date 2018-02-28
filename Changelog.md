@@ -8,6 +8,7 @@ AppleALC Changelog
 - Added ALC225 layout-id 33 by ChalesYu
 - Added ALC282 layout-id 127 No input boost Acer Aspire on IvyBridge by Andrey1970
 - Added ALC294 layout-id 13 by InsanelyDeepak
+- Added IDT92HD91BXX layout-id 13 for HP Envy 6 1171-SG by MacPeet
 
 #### v1.2.2
 - Added ALC256 layout-id 56 for Dell 7000 by DalianSky

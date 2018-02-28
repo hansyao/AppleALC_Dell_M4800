@@ -5093,6 +5093,24 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>MacPeet - IDT92HD91BXX for HP Envy 6 1171-SG</string>
+					<key>CodecID</key>
+					<integer>287143648</integer>
+					<key>ConfigData</key>
+					<data>
+					ALccEAC3HRAAtx4hALcfAAC3DAIAxxwgAMcd
+					EADHHoEAxx8AARccMAEXHQABFx6jARcfmQDX
+					HEAA1x0AANceEADXH5AA1wwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>jl4c - IDT 92HD91BXX for HP Envy</string>
 					<key>CodecID</key>
 					<integer>287143648</integer>
