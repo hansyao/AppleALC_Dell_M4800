@@ -1,6 +1,8 @@
 AppleALC Changelog
 ==================
 #### v1.2.3
+- Added `alcid=layout` boot argument for testing purposes
+- Added automatic rename for HDEF device
 - Added ALC255 layout-id 18 for Aorus X5V7 by DuNe
 - Change Platforms18.xml.zlib for ALC255 by DuNe
 - Added ALC898 layout-id 101 by Andrey1970 (4 Line Out)
