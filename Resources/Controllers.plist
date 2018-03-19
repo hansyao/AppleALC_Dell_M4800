@@ -640,9 +640,9 @@
 		<array>
 			<dict>
 				<key>Count</key>
-				<integer>1</integer>
+				<integer>2</integer>
 				<key>Find</key>
-				<data>AhDgqg==</data>
+				<data>AhDYqg==</data>
 				<key>MinKernel</key>
 				<integer>15</integer>
 				<key>Name</key>
@@ -654,7 +654,7 @@
 				<key>Count</key>
 				<integer>2</integer>
 				<key>Find</key>
-				<data>4KoAAA==</data>
+				<data>2KoAAA==</data>
 				<key>MinKernel</key>
 				<integer>15</integer>
 				<key>Name</key>
@@ -664,7 +664,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Lowers the if condition to let the patch above work</string>
+				<string>Lowers the if condition to let the patch above work (older os)</string>
 				<key>Count</key>
 				<integer>2</integer>
 				<key>Find</key>
@@ -675,6 +675,20 @@
 				<string>AppleHDA</string>
 				<key>Replace</key>
 				<data>x6oAAA==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Lowers the if condition to let the patch above work (10.13.4 17E182a+)</string>
+				<key>Count</key>
+				<integer>2</integer>
+				<key>Find</key>
+				<data>eFX//w==</data>
+				<key>MinKernel</key>
+				<integer>16</integer>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>uFX//w==</data>
 			</dict>
 		</array>
 		<key>Vendor</key>
