@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.2.4
+- Added ALC269 layout-id 10 (toleda) for Brix by ttimasdf
+
 #### v1.2.3
 - Added `alcid=layout` boot argument for testing purposes
 - Added automatic rename for HDEF device
