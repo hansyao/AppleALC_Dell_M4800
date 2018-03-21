@@ -2802,6 +2802,28 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>ALC663</string>
+					<key>CodecID</key>
+					<integer>283903587</integer>
+					<key>Comment</key>
+					<string>Custom by alex1960 for ASUS N71J</string>
+					<key>ConfigData</key>
+					<data>
+					AUccAAFHHQEBRx4TAUcfmQA3HBAANx0AADce
+					VgA3HxgCFxwgAhcdQAIXHiECFx8BAbccMAG3
+					HUABtx4hAbcfAQHnHEAB5x0BAeceQwHnH5kB
+					hxxQAYcdCQGHHqMBhx+ZAZccYAGXHZwBlx6B
+					AZcfAQF3HPABdx0BAXceEwF3H5k=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>99</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>InsanelyDeepak - Realtek ALC665</string>
 					<key>CodecID</key>
 					<integer>283903589</integer>
