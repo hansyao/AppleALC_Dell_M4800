@@ -3,6 +3,8 @@ AppleALC Changelog
 #### v1.2.4
 - Added ALC269 layout-id 10 (toleda) for Brix by ttimasdf
 - Added ALC663 layout-id 99 for ASUS N71J by alex1960
+- Added CX20641 layout-id 11 and layout-id 13 for Dell OptiPlex 3010 or compatible by MacPeet
+- Added CX20642 layout-id 11 and layout-id 13 for Fujitsu ESPRIMO E910 E90+ or compatible by MacPeet
 
 #### v1.2.3
 - Added `alcid=layout` boot argument for testing purposes
