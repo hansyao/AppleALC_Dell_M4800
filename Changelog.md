@@ -5,6 +5,7 @@ AppleALC Changelog
 - Added ALC663 layout-id 99 for ASUS N71J by alex1960
 - Added CX20641 layout-id 11 and layout-id 13 for Dell OptiPlex 3010 or compatible by MacPeet
 - Added CX20642 layout-id 11 and layout-id 13 for Fujitsu ESPRIMO E910 E90+ or compatible by MacPeet
+- Added NVIDIA HDMI patches for GK208, GM206, GP106 for 10.13.4+ by FredWst
 
 #### v1.2.3
 - Added `alcid=layout` boot argument for testing purposes
