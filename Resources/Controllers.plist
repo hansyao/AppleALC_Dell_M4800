@@ -250,7 +250,7 @@
 		<key>Model</key>
 		<string>Desktop</string>
 		<key>Name</key>
-		<string>Desktop Intel HD4600 HDMI (ig-platform-id 0x0d220003)</string>
+		<string>Desktop Intel HD4X00 HDMI (ig-platform-id 0x0d220003)</string>
 		<key>Patches</key>
 		<array>
 			<dict>
@@ -274,6 +274,39 @@
 		</array>
 		<key>Platform</key>
 		<integer>220332035</integer>
+		<key>Vendor</key>
+		<string>Intel</string>
+	</dict>
+	<dict>
+		<key>Device</key>
+		<integer>1042</integer>
+		<key>Model</key>
+		<string>Laptop</string>
+		<key>Name</key>
+		<string>Laptop Intel HD4X00 HDMI (ig-platform-id 0x0a260005)</string>
+		<key>Patches</key>
+		<array>
+			<dict>
+				<key>Count</key>
+				<integer>2</integer>
+				<key>Find</key>
+				<data>
+				AAAIAAIAAAAwAAAAAQUJAAAEAACHAAAAAgQJAAAEAACH
+				AAAA
+				</data>
+				<key>MinKernel</key>
+				<integer>14</integer>
+				<key>Name</key>
+				<string>AppleIntelFramebufferAzul</string>
+				<key>Replace</key>
+				<data>
+				AAAIAAIAAAAwAAAAAQUJAAAIAACHAAAAAgQJAAAIAACH
+				AAAA
+				</data>
+			</dict>
+		</array>
+		<key>Platform</key>
+		<integer>170262533</integer>
 		<key>Vendor</key>
 		<string>Intel</string>
 	</dict>
