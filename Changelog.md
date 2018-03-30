@@ -7,6 +7,7 @@ AppleALC Changelog
 - Added CX20642 layout-id 11 and layout-id 13 for Fujitsu ESPRIMO E910 E90+ or compatible by MacPeet
 - Added NVIDIA HDMI patches for GK208, GM206, GP102, GP106 for 10.13.4+ by FredWst
 - Added Intel HDMI patches for Haswell 0x0A260005  by Andrey1970
+- Added NVIDIA HDMI patch for GM200 by al3xtjames
 
 #### v1.2.3
 - Added `alcid=layout` boot argument for testing purposes
