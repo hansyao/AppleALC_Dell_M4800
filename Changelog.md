@@ -2,6 +2,7 @@ AppleALC Changelog
 ==================
 #### v1.2.5
 - Added GM204 patch
+- Added ALC233 layout-id 33 for ASUS VIVOBOOK S451LA by MacPeet
 
 #### v1.2.4
 - Added ALC269 layout-id 10 (toleda) for Brix by ttimasdf

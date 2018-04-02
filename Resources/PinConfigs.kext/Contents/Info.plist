@@ -614,6 +614,24 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>MacPeet - ALC233 (ALC3236) for ASUS VIVOBOOK S451LA </string>
+					<key>CodecID</key>
+					<integer>283902515</integer>
+					<key>ConfigData</key>
+					<data>
+					AhccIAIXHRACFx4hAhcfAAIXDAIBtxwwAbcd
+					AAG3HqcBtx+QAZccQAGXHRABlx6BAZcfAAFH
+					HFABRx0AAUceFwFHH5ABRwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>33</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - Realtek ALC235</string>
 					<key>CodecID</key>
 					<integer>283902517</integer>
