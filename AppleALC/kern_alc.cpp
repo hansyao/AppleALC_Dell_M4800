@@ -162,8 +162,8 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 	}
 	
 	if ((progressState & ProcessingState::CallbacksWantRouting) && kextIndex == KextIdAppleHDA) {
-		auto layout = patcher.solveSymbol(index, "__ZN14AppleHDADriver18layoutLoadCallbackEjiPKvjPv");
-		auto platform = patcher.solveSymbol(index, "__ZN14AppleHDADriver20platformLoadCallbackEjiPKvjPv");
+		auto layout = patcher.solveSymbol(index, "__ZN14AppleHDADriver18layoutLoadCallbackEjiPKvjPv", address, size);
+		auto platform = patcher.solveSymbol(index, "__ZN14AppleHDADriver20platformLoadCallbackEjiPKvjPv", address, size);
 
 		if (layout && platform) {
 			DBGLOG("alc", "layout call %X %X %X %X %X %X %X %X %X %X %X %X %X %X %X %X", ((uint8_t *)layout)[0], ((uint8_t *)layout)[1], ((uint8_t *)layout)[2], ((uint8_t *)layout)[3],

@@ -1,6 +1,8 @@
 AppleALC Changelog
 ==================
+
 #### v1.2.5
+- Hardened solved symbol verification to avoid panics with broken kext cache
 - Added GM204 patch
 - Added ALC233 layout-id 33 for ASUS VIVOBOOK S451LA by MacPeet
 
