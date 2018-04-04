@@ -13,13 +13,25 @@
 				<key>Count</key>
 				<integer>6</integer>
 				<key>Find</key>
-				<data>cKE=</data>
+				<data>cKEAAA==</data>
 				<key>MinKernel</key>
 				<integer>16</integer>
 				<key>Name</key>
 				<string>AppleHDAController</string>
 				<key>Replace</key>
-				<data>8KI=</data>
+				<data>8KIAAA==</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Find</key>
+				<data>hoBwoQ==</data>
+				<key>MinKernel</key>
+				<integer>16</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>hoDwog==</data>
 			</dict>
 		</array>
 		<key>Vendor</key>
@@ -36,13 +48,25 @@
 				<key>Count</key>
 				<integer>6</integer>
 				<key>Find</key>
-				<data>cKE=</data>
+				<data>cKEAAA==</data>
 				<key>MinKernel</key>
 				<integer>16</integer>
 				<key>Name</key>
 				<string>AppleHDAController</string>
 				<key>Replace</key>
-				<data>caE=</data>
+				<data>caEAAA==</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Find</key>
+				<data>hoBwoQ==</data>
+				<key>MinKernel</key>
+				<integer>16</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>hoBxoQ==</data>
 			</dict>
 		</array>
 		<key>Vendor</key>
@@ -59,13 +83,25 @@
 				<key>Count</key>
 				<integer>4</integer>
 				<key>Find</key>
-				<data>oIw=</data>
+				<data>oIwAAA==</data>
 				<key>MinKernel</key>
 				<integer>13</integer>
 				<key>Name</key>
 				<string>AppleHDAController</string>
 				<key>Replace</key>
-				<data>IY0=</data>
+				<data>IY0AAA==</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Find</key>
+				<data>hoCgjA==</data>
+				<key>MinKernel</key>
+				<integer>13</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>hoAhjQ==</data>
 			</dict>
 		</array>
 		<key>Vendor</key>
@@ -82,13 +118,25 @@
 				<key>Count</key>
 				<integer>4</integer>
 				<key>Find</key>
-				<data>oIw=</data>
+				<data>oIwAAA==</data>
 				<key>MinKernel</key>
 				<integer>13</integer>
 				<key>Name</key>
 				<string>AppleHDAController</string>
 				<key>Replace</key>
-				<data>II0=</data>
+				<data>II0AAA==</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Find</key>
+				<data>hoCgjA==</data>
+				<key>MinKernel</key>
+				<integer>13</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>hoAgjQ==</data>
 			</dict>
 		</array>
 		<key>Vendor</key>
@@ -105,13 +153,25 @@
 				<key>Count</key>
 				<integer>4</integer>
 				<key>Find</key>
-				<data>DAw=</data>
+				<data>DAwAAA==</data>
 				<key>MinKernel</key>
 				<integer>13</integer>
 				<key>Name</key>
 				<string>AppleHDAController</string>
 				<key>Replace</key>
-				<data>BA8=</data>
+				<data>BA8AAA==</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Find</key>
+				<data>hoAMDA==</data>
+				<key>MinKernel</key>
+				<integer>13</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>hoAEDw==</data>
 			</dict>
 		</array>
 		<key>Vendor</key>
@@ -128,7 +188,7 @@
 				<key>Count</key>
 				<integer>4</integer>
 				<key>Find</key>
-				<data>IIw=</data>
+				<data>IIwAAA==</data>
 				<key>MaxKernel</key>
 				<integer>13</integer>
 				<key>MinKernel</key>
@@ -136,7 +196,21 @@
 				<key>Name</key>
 				<string>AppleHDAController</string>
 				<key>Replace</key>
-				<data>oIw=</data>
+				<data>oIwAAA==</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Find</key>
+				<data>hoAgjA==</data>
+				<key>MaxKernel</key>
+				<integer>13</integer>
+				<key>MinKernel</key>
+				<integer>13</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>hoCgjA==</data>
 			</dict>
 		</array>
 		<key>Vendor</key>
@@ -232,13 +306,25 @@
 				<key>Count</key>
 				<integer>4</integer>
 				<key>Find</key>
-				<data>IIw=</data>
+				<data>IIwAAA==</data>
 				<key>MinKernel</key>
 				<integer>13</integer>
 				<key>Name</key>
 				<string>AppleHDAController</string>
 				<key>Replace</key>
-				<data>II0=</data>
+				<data>II0AAA==</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Find</key>
+				<data>hoAgjA==</data>
+				<key>MinKernel</key>
+				<integer>13</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>hoAgjQ==</data>
 			</dict>
 		</array>
 		<key>Vendor</key>
@@ -323,13 +409,19 @@
 				<key>Count</key>
 				<integer>3</integer>
 				<key>Find</key>
-				<data>AQULAAAEAAAHBQAAAgQLAAAEAAAHBQAA</data>
+				<data>
+				AAAIAAIAAAAwAgAAAQULAAAEAAAHBQAAAgQLAAAEAAAH
+				BQAA
+				</data>
 				<key>MinKernel</key>
 				<integer>15</integer>
 				<key>Name</key>
 				<string>AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Replace</key>
-				<data>AQULAAAIAACCAAAAAgQLAAAIAACCAAAA</data>
+				<data>
+				AAAIAAIAAAAwAgAAAQULAAAIAAAHBQAAAgQLAAAIAAAH
+				BQAA
+				</data>
 			</dict>
 		</array>
 		<key>Platform</key>
@@ -350,13 +442,19 @@
 				<key>Count</key>
 				<integer>3</integer>
 				<key>Find</key>
-				<data>AQULAAAEAAAHBQAAAgQLAAAEAAAHBQAA</data>
+				<data>
+				AAAIAAIAAAAwAgAAAQULAAAEAAAHBQAAAgQLAAAEAAAH
+				BQAA
+				</data>
 				<key>MinKernel</key>
 				<integer>15</integer>
 				<key>Name</key>
 				<string>AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Replace</key>
-				<data>AQULAAAIAACCAAAAAgQLAAAIAACCAAAA</data>
+				<data>
+				AAAIAAIAAAAwAgAAAQULAAAIAAAHBQAAAgQLAAAIAAAH
+				BQAA
+				</data>
 			</dict>
 		</array>
 		<key>Platform</key>
@@ -373,15 +471,21 @@
 		<array>
 			<dict>
 				<key>Count</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>Find</key>
-				<data>AQUJAAAEAAAHBQAAAgQKAAAEAAAHBQAA</data>
+				<data>
+				AAAIAAIAAAARAgAAAQUJAAAEAAAHBQAAAgQKAAAEAAAH
+				BQAA
+				</data>
 				<key>MinKernel</key>
 				<integer>15</integer>
 				<key>Name</key>
 				<string>AppleIntelBDWGraphicsFramebuffer</string>
 				<key>Replace</key>
-				<data>AQUJAAAIAACCAAAAAgQKAAAIAACCAAAA</data>
+				<data>
+				AAAIAAIAAAARAgAAAQUJAAAIAAAHBQAAAgQKAAAIAAAH
+				BQAA
+				</data>
 			</dict>
 		</array>
 		<key>Platform</key>
@@ -400,15 +504,21 @@
 		<array>
 			<dict>
 				<key>Count</key>
-				<integer>6</integer>
+				<integer>5</integer>
 				<key>Find</key>
-				<data>AQUJAAAEAACHAQAAAgQKAAAEAACHAQAA</data>
+				<data>
+				AAAIAAIAAACYAAAAAQUJAAAEAACHAQAAAgQKAAAEAACH
+				AQAA
+				</data>
 				<key>MinKernel</key>
 				<integer>15</integer>
 				<key>Name</key>
 				<string>AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Replace</key>
-				<data>AQUJAAAIAACHAQAAAgQKAAAIAACHAQAA</data>
+				<data>
+				AAAIAAIAAACYAAAAAQUJAAAIAACHAQAAAgQKAAAIAACH
+				AQAA
+				</data>
 			</dict>
 		</array>
 		<key>Platform</key>
@@ -427,15 +537,21 @@
 		<array>
 			<dict>
 				<key>Count</key>
-				<integer>6</integer>
+				<integer>5</integer>
 				<key>Find</key>
-				<data>AQUJAAAEAACHAQAAAgQKAAAEAACHAQAA</data>
+				<data>
+				AAAIAAIAAACYAAAAAQUJAAAEAACHAQAAAgQKAAAEAACH
+				AQAA
+				</data>
 				<key>MinKernel</key>
 				<integer>15</integer>
 				<key>Name</key>
 				<string>AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Replace</key>
-				<data>AQUJAAAIAACHAQAAAgQKAAAIAACHAQAA</data>
+				<data>
+				AAAIAAIAAACYAAAAAQUJAAAIAACHAQAAAgQKAAAIAACH
+				AQAA
+				</data>
 			</dict>
 		</array>
 		<key>Platform</key>
@@ -454,15 +570,21 @@
 		<array>
 			<dict>
 				<key>Count</key>
-				<integer>6</integer>
+				<integer>5</integer>
 				<key>Find</key>
-				<data>AQUJAAAEAACHAQAAAgQKAAAEAACHAQAA</data>
+				<data>
+				AAAIAAIAAACYAAAAAQUJAAAEAACHAQAAAgQKAAAEAACH
+				AQAA
+				</data>
 				<key>MinKernel</key>
 				<integer>15</integer>
 				<key>Name</key>
 				<string>AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Replace</key>
-				<data>AQUJAAAIAACHAQAAAgQKAAAIAACHAQAA</data>
+				<data>
+				AAAIAAIAAACYAAAAAQUJAAAIAACHAQAAAgQKAAAIAACH
+				AQAA
+				</data>
 			</dict>
 		</array>
 		<key>Platform</key>
@@ -481,15 +603,21 @@
 		<array>
 			<dict>
 				<key>Count</key>
-				<integer>6</integer>
+				<integer>5</integer>
 				<key>Find</key>
-				<data>AQUJAAAEAACHAQAAAgQKAAAEAACHAQAA</data>
+				<data>
+				AAAIAAIAAACYAAAAAQUJAAAEAACHAQAAAgQKAAAEAACH
+				AQAA
+				</data>
 				<key>MinKernel</key>
 				<integer>15</integer>
 				<key>Name</key>
 				<string>AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Replace</key>
-				<data>AQUJAAAIAACHAQAAAgQKAAAIAACHAQAA</data>
+				<data>
+				AAAIAAIAAACYAAAAAQUJAAAIAACHAQAAAgQKAAAIAACH
+				AQAA
+				</data>
 			</dict>
 		</array>
 		<key>Platform</key>
