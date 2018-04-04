@@ -359,7 +359,7 @@
 			</dict>
 		</array>
 		<key>Platform</key>
-		<integer>220332035</integer>
+		<integer>220</integer>
 		<key>Vendor</key>
 		<string>Intel</string>
 	</dict>
@@ -787,6 +787,72 @@
 		</array>
 		<key>Platform</key>
 		<integer>23461898</integer>
+		<key>Vendor</key>
+		<string>Intel</string>
+	</dict>
+	<dict>
+		<key>Device</key>
+		<integer>294</integer>
+		<key>Model</key>
+		<string>Desktop</string>
+		<key>Name</key>
+		<string>Desktop Intel HD3000 HDMI (snb-platform-id 0x00030010)</string>
+		<key>Patches</key>
+		<array>
+			<dict>
+				<key>Count</key>
+				<integer>2</integer>
+				<key>Find</key>
+				<data>
+				AgUAAAAEAAAHAAAAAwQAAAAEAAAJAAAABAYAAAAIAAAG
+				AAAA
+				</data>
+				<key>MinKernel</key>
+				<integer>13</integer>
+				<key>Name</key>
+				<string>AppleIntelSNBGraphicsFB</string>
+				<key>Replace</key>
+				<data>
+				AgUAAAAIAAAHAAAAAwQAAAAIAAAJAAAABAYAAAAIAAAG
+				AAAA
+				</data>
+			</dict>
+		</array>
+		<key>Platform</key>
+		<integer>196624</integer>
+		<key>Vendor</key>
+		<string>Intel</string>
+	</dict>
+	<dict>
+		<key>Device</key>
+		<integer>278</integer>
+		<key>Model</key>
+		<string>Laptop</string>
+		<key>Name</key>
+		<string>Laptop Intel HD3000 HDMI (snb-platform-id 0x00010000)</string>
+		<key>Patches</key>
+		<array>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Find</key>
+				<data>
+				AgUAAAAEAAAHAAAAAwQAAAAEAAAJAAAABAYAAAAEAAAJ
+				AAAA
+				</data>
+				<key>MinKernel</key>
+				<integer>13</integer>
+				<key>Name</key>
+				<string>AppleIntelSNBGraphicsFB</string>
+				<key>Replace</key>
+				<data>
+				AgUAAAAIAAAHAAAAAwQAAAAIAAAJAAAABAYAAAAIAAAJ
+				AAAA
+				</data>
+			</dict>
+		</array>
+		<key>Platform</key>
+		<integer>65536</integer>
 		<key>Vendor</key>
 		<string>Intel</string>
 	</dict>
