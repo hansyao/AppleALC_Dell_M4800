@@ -69,14 +69,20 @@ IOService *AppleALCAudio::probe(IOService *hdaService, SInt32 *score) {
 	// They are probably related to the current volume of the boot bell sound.
 	if (!hdaService->getProperty("MaximumBootBeepVolume")) {
 		DBGLOG("audio", "fixing MaximumBootBeepVolume in hdef");
-		uint8_t bootBeepBytes[] { 0x4D };
+		uint8_t bootBeepBytes[] { 0xEE };
 		hdaService->setProperty("MaximumBootBeepVolume", bootBeepBytes, sizeof(bootBeepBytes));
 	}
 
 	if (!hdaService->getProperty("MaximumBootBeepVolumeAlt")) {
 		DBGLOG("audio", "fixing MaximumBootBeepVolumeAlt in hdef");
-		uint8_t bootBeepBytes[] { 0x00 };
+		uint8_t bootBeepBytes[] { 0xEE };
 		hdaService->setProperty("MaximumBootBeepVolumeAlt", bootBeepBytes, sizeof(bootBeepBytes));
+	}
+
+	if (!hdaService->getProperty("PinConfigurations")) {
+		DBGLOG("audio", "fixing PinConfigurations in hdef");
+		uint8_t pinBytes[] { 0x00 };
+		hdaService->setProperty("PinConfigurations", pinBytes, sizeof(pinBytes));
 	}
 
 	return nullptr;

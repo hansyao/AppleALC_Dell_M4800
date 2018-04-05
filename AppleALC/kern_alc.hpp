@@ -75,6 +75,11 @@ private:
 	};
 
 	/**
+	 *  Checks whether this driver is attached to HDEF
+	 */
+	static bool isAnalogAudio(IOService *hdaDriver);
+
+	/**
 	 *  Hooked performPowerChange method triggering a verb sequence on wake
 	 */
 	static IOReturn performPowerChange(IOService *hdaDriver, ALCAudioDevicePowerState from, ALCAudioDevicePowerState to, unsigned int *timer);

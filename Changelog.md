@@ -6,6 +6,7 @@ AppleALC Changelog
 - Implemented custom verbs for wake  (via `WakeConfigData` in PinConfigs), `ConfigData` is used by default
 - Merged PinConfigs into AppleALC main binary by default for compatibility reasons
 - Hardened solved symbol verification to avoid panics with broken kext cache
+- Added PinConfigurations injection, since they provide useful debugging info
 - Added NVIDIA HDMI patch for GM204 for 10.13.4+
 - Added ALC233 layout-id 33 for ASUS VIVOBOOK S451LA by MacPeet
 - Added HD3000 desktop and laptop HDMI patches

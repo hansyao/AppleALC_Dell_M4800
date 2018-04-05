@@ -73,22 +73,27 @@ void AlcEnabler::platformLoadCallback(uint32_t requestTag, kern_return_t result,
 	}
 }
 
+bool AlcEnabler::isAnalogAudio(IOService *hdaDriver) {
+	auto parent = hdaDriver->getParentEntry(gIOServicePlane);
+	bool valid = false;
+	while (parent) {
+		auto name = parent->getName();
+		if (name) {
+			valid = !strcmp(name, "HDEF");
+			if (valid || !strcmp(name, "HDAU"))
+				break;
+		}
+		parent = parent->getParentEntry(gIOServicePlane);
+	}
+	return valid;
+}
+
 IOReturn AlcEnabler::performPowerChange(IOService *hdaDriver, ALCAudioDevicePowerState from, ALCAudioDevicePowerState to, unsigned int *timer) {
 	IOReturn ret = kIOReturnError;
 	if (callbackAlc && callbackAlc->orgPerformPowerChange && callbackAlc->orgInitializePinConfig) {
-		auto parent = hdaDriver->getParentEntry(gIOServicePlane);
-		bool valid = false;
-		while (parent) {
-			auto name = parent->getName();
-			if (name) {
-				valid = !strcmp(name, "HDEF");
-				if (valid || !strcmp(name, "HDAU"))
-					break;
-			}
-			parent = parent->getParentEntry(gIOServicePlane);
-		}
-		DBGLOG("alc", "performPowerChange %s from %d to %d in from sleep %d hdef %d",
-			safeString(hdaDriver->getName()), from, to, callbackAlc->receivedSleepEvent, valid);
+		bool valid = isAnalogAudio(hdaDriver);
+		DBGLOG("alc", "performPowerChange %s from %d to %d in from sleep %d hdef %d detect %d",
+			safeString(hdaDriver->getName()), from, to, callbackAlc->receivedSleepEvent, valid, callbackAlc->hasHDAConfigDefault);
 		ret = callbackAlc->orgPerformPowerChange(hdaDriver, from, to, timer);
 		if (valid && callbackAlc->hasHDAConfigDefault == WakeVerbMode::Enable && callbackAlc->hdaCodecInstance) {
 			if (to == ALCAudioDeviceSleep) {
@@ -109,9 +114,16 @@ IOReturn AlcEnabler::performPowerChange(IOService *hdaDriver, ALCAudioDevicePowe
 IOReturn AlcEnabler::initializePinConfig(IOService *hdaCodec, IOService *configDevice) {
 	IOReturn ret = kIOReturnError;
 	if (callbackAlc && callbackAlc->orgInitializePinConfig && configDevice) {
-		DBGLOG("alc", "initializePinConfig received hda " PRIKADDR ", config " PRIKADDR " config name %s", CASTKADDR(hdaCodec),
-			CASTKADDR(configDevice), configDevice ? safeString(configDevice->getName()) : "(null config)");
-		if (callbackAlc->hasHDAConfigDefault == WakeVerbMode::Detect) {
+		bool valid = isAnalogAudio(hdaCodec);
+		if (valid) {
+			// Preserve codec instance for sleep invocations
+			callbackAlc->hdaCodecInstance = hdaCodec;
+		}
+
+		DBGLOG("alc", "initializePinConfig received hda " PRIKADDR ", config " PRIKADDR " config name %s, detect %d valid %d", CASTKADDR(hdaCodec),
+			CASTKADDR(configDevice), configDevice ? safeString(configDevice->getName()) : "(null config)", callbackAlc->hasHDAConfigDefault, valid);
+
+		if (valid && callbackAlc->hasHDAConfigDefault == WakeVerbMode::Detect) {
 			uint32_t analogCodec = 0;
 			uint32_t analogLayout = 0;
 			for (size_t i = 0, s = callbackAlc->codecs.size(); i < s; i++) {
@@ -139,7 +151,7 @@ IOReturn AlcEnabler::initializePinConfig(IOService *hdaCodec, IOService *configD
 								auto configData = OSDynamicCast(OSData, config->getObject("ConfigData"));
 								auto wakeConfigData = OSDynamicCast(OSData, config->getObject("WakeConfigData"));
 								auto reinit = OSDynamicCast(OSBoolean, config->getObject("WakeVerbReinit"));
-								DBGLOG("alc", "current config entr has boot %d, wake %d, reinit %d", configData != nullptr,
+								DBGLOG("alc", "current config entry has boot %d, wake %d, reinit %d", configData != nullptr,
 									   wakeConfigData != nullptr, reinit ? reinit->getValue() : -1);
 								if (reinit && reinit->getValue()) {
 									auto newConfig = OSDynamicCast(OSDictionary, config->copyCollection());
@@ -173,8 +185,6 @@ IOReturn AlcEnabler::initializePinConfig(IOService *hdaCodec, IOService *configD
 				SYSLOG("alc", "invalid HDAConfigDefault, pinconfigs are broken");
 			}
 		}
-		// Preserve codec instance for sleep invocations
-		callbackAlc->hdaCodecInstance = hdaCodec;
 		ret = callbackAlc->orgInitializePinConfig(hdaCodec, configDevice);
 	} else {
 		SYSLOG("alc", "initializePinConfig arrived at nowhere");
