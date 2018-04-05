@@ -1385,6 +1385,8 @@
 					<integer>18</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Asus Vivobook S300CA - Realtek ALC269VB</string>
 					<key>CodecID</key>
@@ -2215,7 +2217,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>AQAAAA==</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Mirone - Realtek ALC288</string>
 					<key>CodecID</key>
@@ -3347,6 +3349,8 @@
 					<integer>99</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904136</integer>
 					<key>Comment</key>
@@ -3367,6 +3371,8 @@
 					<integer>1</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904136</integer>
 					<key>Comment</key>
@@ -3387,6 +3393,8 @@
 					<integer>2</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904136</integer>
 					<key>Comment</key>
@@ -3525,6 +3533,8 @@
 					<integer>29</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904137</integer>
 					<key>Comment</key>
@@ -3545,6 +3555,8 @@
 					<integer>1</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904137</integer>
 					<key>Comment</key>
@@ -3562,6 +3574,8 @@
 					<integer>11</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904137</integer>
 					<key>Comment</key>
@@ -3621,6 +3635,8 @@
 					<integer>13</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904146</integer>
 					<key>Comment</key>
@@ -3641,6 +3657,8 @@
 					<integer>1</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904146</integer>
 					<key>Comment</key>
@@ -3661,6 +3679,8 @@
 					<integer>2</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904146</integer>
 					<key>Comment</key>
@@ -3701,6 +3721,8 @@
 					<integer>4</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904146</integer>
 					<key>Comment</key>
@@ -3718,6 +3740,8 @@
 					<integer>5</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904146</integer>
 					<key>Comment</key>
@@ -3737,6 +3761,8 @@
 					<integer>7</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904146</integer>
 					<key>Comment</key>
@@ -3755,6 +3781,8 @@
 					<integer>28</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904146</integer>
 					<key>Comment</key>
@@ -3777,6 +3805,8 @@
 					<integer>31</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904146</integer>
 					<key>Comment</key>
@@ -3798,6 +3828,8 @@
 					<integer>92</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904146</integer>
 					<key>Comment</key>
@@ -3815,6 +3847,8 @@
 					<integer>98</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904146</integer>
 					<key>Comment</key>
@@ -3832,6 +3866,8 @@
 					<integer>99</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904153</integer>
 					<key>Comment</key>
@@ -3852,6 +3888,8 @@
 					<integer>1</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904153</integer>
 					<key>Comment</key>
@@ -3872,6 +3910,8 @@
 					<integer>2</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904153</integer>
 					<key>Comment</key>
@@ -3932,6 +3972,8 @@
 					<integer>7</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904153</integer>
 					<key>Comment</key>
@@ -3972,6 +4014,8 @@
 					<integer>13</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904153</integer>
 					<key>Comment</key>
@@ -4036,6 +4080,8 @@
 					<integer>99</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283904153</integer>
 					<key>Comment</key>
@@ -4226,7 +4272,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>MDMwMDAwMDA=</data>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283906592</integer>
 					<key>CodecName</key>
@@ -4245,7 +4291,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>MDMwMDAwMDA=</data>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283906592</integer>
 					<key>CodecName</key>
@@ -4330,7 +4376,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>MDMwMDAwMDA=</data>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283906408</integer>
 					<key>CodecName</key>
@@ -4349,7 +4395,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>MDMwMDAwMDA=</data>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283906408</integer>
 					<key>CodecName</key>
@@ -4405,6 +4451,8 @@
 					<integer>3</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Conexant CX20561</string>
 					<key>CodecID</key>
@@ -4523,7 +4571,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>AQAAAA==</data>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>351359086</integer>
 					<key>Comment</key>
@@ -4634,7 +4682,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>AQAAAA==</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Mirone - Conexant CX20722</string>
 					<key>CodecID</key>
@@ -5031,6 +5079,8 @@
 					<integer>12</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Custom IDT 92HD81B1X5 by Sergey_Galan for HP ProBook 4520s</string>
 					<key>CodecID</key>
@@ -5050,6 +5100,8 @@
 					<integer>20</integer>
 				</dict>
 				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Custom IDT 92HD81B1X5 by Sergey_Galan for HP DV6-6169er</string>
 					<key>CodecID</key>
