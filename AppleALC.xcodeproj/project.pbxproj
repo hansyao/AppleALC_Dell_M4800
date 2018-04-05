@@ -255,6 +255,7 @@
 				1C748C241C21952C0024EED2 /* Headers */,
 				1C748C251C21952C0024EED2 /* Resources */,
 				1C642F521C8F157A006B4C51 /* CopyFiles */,
+				CEBAEC1E20764C0B00CE3744 /* Merge Pinconfigs */,
 				CE131D6B1FB72A9D0036C3A0 /* Archive */,
 			);
 			buildRules = (
@@ -358,6 +359,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
 			shellScript = "cd \"${TARGET_BUILD_DIR}\"\n\ndist=(\"$FULL_PRODUCT_NAME\")\nif [ -d \"$DWARF_DSYM_FILE_NAME\" ]; then dist+=(\"$DWARF_DSYM_FILE_NAME\"); fi\n\narchive=\"${MODULE_VERSION} ($(echo $CONFIGURATION | tr /a-z/ /A-Z/)).zip\"\nrm -rf *.zip\nzip -qry \"${archive}\" \"${dist[@]}\"";
+		};
+		CEBAEC1E20764C0B00CE3744 /* Merge Pinconfigs */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Merge Pinconfigs";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${TARGET_BUILD_DIR}\"\n\n/bin/bash -e \"${PROJECT_DIR}/Tools/merge_pinconfigs.sh\" 1";
 		};
 /* End PBXShellScriptBuildPhase section */
 

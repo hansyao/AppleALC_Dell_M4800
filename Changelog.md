@@ -2,10 +2,16 @@ AppleALC Changelog
 ==================
 
 #### v1.2.5
+- Implemented verb execution after wake (via `WakeVerbReinit` in PinConfigs), obsoletes CodecCommander in fixed resources
+- Implemented custom verbs for wake  (via `WakeConfigData` in PinConfigs), `ConfigData` is used by default
+- Merged PinConfigs into AppleALC main binary by default for compatibility reasons
 - Hardened solved symbol verification to avoid panics with broken kext cache
-- Added GM204 patch
+- Added NVIDIA HDMI patch for GM204 for 10.13.4+
 - Added ALC233 layout-id 33 for ASUS VIVOBOOK S451LA by MacPeet
 - Added HD3000 desktop and laptop HDMI patches
+- Added wake verbs for ALCS1220A layout-id 1, 2, 5, 7 to avoid the need of CodecCommander
+- Fixed broken AFGLowPowerState, LayouID and other fields in several PinConfigs info.plist
+- Fixed kernel rare kernel panics due to short incompatible HDEF controller patches affecting other code
 
 #### v1.2.4
 - Added ALC269 layout-id 10 (toleda) for Brix by ttimasdf

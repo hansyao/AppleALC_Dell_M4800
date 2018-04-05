@@ -1255,7 +1255,7 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>CodecID</key>
-					<string>283902569</string>
+					<integer>283902569</integer>
 					<key>Comment</key>
 					<string>Toleda ALC269 patch for Brix</string>
 					<key>ConfigData</key>
@@ -1268,9 +1268,9 @@
 					YSHnHksh5x8B
 					</data>
 					<key>FuncGroup</key>
-					<string>1</string>
+					<integer>1</integer>
 					<key>LayoutID</key>
-					<string>10</string>
+					<integer>10</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -2103,7 +2103,7 @@
 					<key>Codec</key>
 					<string>Toleda NUC/BRIX patch ALC283</string>
 					<key>CodecID</key>
-					<string>283902595</string>
+					<integer>283902595</integer>
 					<key>ConfigData</key>
 					<data>
 					AScc8AEnHQABJx4AAScfQAFHHPABRx0AAUce
@@ -2115,9 +2115,9 @@
 					DAICFwwC
 					</data>
 					<key>FuncGroup</key>
-					<string>1</string>
+					<integer>1</integer>
 					<key>LayoutID</key>
-					<string>1</string>
+					<integer>1</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -4351,6 +4351,10 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>1</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -4373,6 +4377,10 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>2</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -4392,6 +4400,10 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>5</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -4413,6 +4425,10 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>7</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
