@@ -11,6 +11,8 @@ AppleALC Changelog
 - Added ALC233 layout-id 33 for ASUS VIVOBOOK S451LA by MacPeet
 - Added HD3000 desktop and laptop HDMI patches
 - Added wake verbs for ALCS1220A layout-id 1, 2, 5, 7 to avoid the need of CodecCommander
+- Added EAPD wake verbs to all ALC 221, 225, 233, 235, 236, 255, 256, 270, 271, 272, 284, 286, 288, 290, 293, 295 by Vandroiy
+- Added EAPD wake verbs to some ALC 269, 275, 280, 282, 283, 292, 294, 298, 662, 663, 668, 887, 888, 889, 892, 898, 1150 by Vandroiy
 - Fixed broken AFGLowPowerState, LayouID and other fields in several PinConfigs info.plist
 - Fixed kernel rare kernel panics due to short incompatible HDEF controller patches affecting other code
 
