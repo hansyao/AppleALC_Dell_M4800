@@ -1,8 +1,5 @@
 AppleALC Changelog
 ==================
-#### v1.2.6
-
-
 #### v1.2.5
 - Implemented verb execution after wake (via `WakeVerbReinit` in PinConfigs), obsoletes CodecCommander in fixed resources
 - Implemented custom verbs for wake  (via `WakeConfigData` in PinConfigs), `ConfigData` is used by default
