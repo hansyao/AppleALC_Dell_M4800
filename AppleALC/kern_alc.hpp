@@ -268,11 +268,6 @@ private:
 	 *  Marks HDAConfigDefault availability in AppleALC
 	 */
 	WakeVerbMode hasHDAConfigDefault {WakeVerbMode::Detect};
-
-	/**
-	 *  AppleHDACodecGeneric instance
-	 */
-	IOService *hdaCodecInstance {nullptr};
 };
 
 #endif /* kern_alc_hpp */

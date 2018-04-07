@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.2.6
+- Fixed a rare kernel panic due to use-after-free in verb code at waking from sleep
+
 #### v1.2.5
 - Implemented verb execution after wake (via `WakeVerbReinit` in PinConfigs), obsoletes CodecCommander in fixed resources
 - Implemented custom verbs for wake  (via `WakeConfigData` in PinConfigs), `ConfigData` is used by default
@@ -13,7 +16,7 @@ AppleALC Changelog
 - Added EAPD wake verbs to all ALC 221, 225, 233, 235, 236, 255, 256, 270, 271, 272, 284, 286, 288, 290, 293, 295 by Vandroiy
 - Added EAPD wake verbs to some ALC 269, 275, 280, 282, 283, 292, 294, 298, 662, 663, 668, 887, 888, 889, 892, 898, 1150 by Vandroiy
 - Fixed broken AFGLowPowerState, LayouID and other fields in several PinConfigs info.plist
-- Fixed kernel rare kernel panics due to short incompatible HDEF controller patches affecting other code
+- Fixed rare kernel panics due to short incompatible HDEF controller patches affecting other code
 
 #### v1.2.4
 - Added ALC269 layout-id 10 (toleda) for Brix by ttimasdf

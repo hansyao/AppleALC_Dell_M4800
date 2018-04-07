@@ -95,13 +95,19 @@ IOReturn AlcEnabler::performPowerChange(IOService *hdaDriver, ALCAudioDevicePowe
 		DBGLOG("alc", "performPowerChange %s from %d to %d in from sleep %d hdef %d detect %d",
 			safeString(hdaDriver->getName()), from, to, callbackAlc->receivedSleepEvent, valid, callbackAlc->hasHDAConfigDefault);
 		ret = callbackAlc->orgPerformPowerChange(hdaDriver, from, to, timer);
-		if (valid && callbackAlc->hasHDAConfigDefault == WakeVerbMode::Enable && callbackAlc->hdaCodecInstance) {
+		if (valid && callbackAlc->hasHDAConfigDefault == WakeVerbMode::Enable) {
 			if (to == ALCAudioDeviceSleep) {
 				callbackAlc->receivedSleepEvent = true;
 			} else if (callbackAlc->receivedSleepEvent &&
 				(to == ALCAudioDeviceIdle || to == ALCAudioDeviceActive)) {
-				auto forceRet = callbackAlc->orgInitializePinConfig(callbackAlc->hdaCodecInstance, ADDPR(selfInstance));
-				SYSLOG_COND(forceRet != kIOReturnSuccess, "alc", "force config reinitialize returned %08X", forceRet);
+				auto parent = OSDynamicCast(IOService, hdaDriver->getParentEntry(gIOServicePlane));
+				if (parent) {
+					DBGLOG("alc", "performPowerChange %s forcing wake verbs on %s", safeString(hdaDriver->getName()), safeString(parent->getName()));
+					auto forceRet = callbackAlc->orgInitializePinConfig(parent, ADDPR(selfInstance));
+					SYSLOG_COND(forceRet != kIOReturnSuccess, "alc", "force config reinitialize returned %08X", forceRet);
+				} else {
+					SYSLOG("alc", "cannot get hda driver parent for wake");
+				}
 				callbackAlc->receivedSleepEvent = false;
 			}
 		}
@@ -115,13 +121,8 @@ IOReturn AlcEnabler::initializePinConfig(IOService *hdaCodec, IOService *configD
 	IOReturn ret = kIOReturnError;
 	if (callbackAlc && callbackAlc->orgInitializePinConfig && configDevice) {
 		bool valid = isAnalogAudio(hdaCodec);
-		if (valid) {
-			// Preserve codec instance for sleep invocations
-			callbackAlc->hdaCodecInstance = hdaCodec;
-		}
-
-		DBGLOG("alc", "initializePinConfig received hda " PRIKADDR ", config " PRIKADDR " config name %s, detect %d valid %d", CASTKADDR(hdaCodec),
-			CASTKADDR(configDevice), configDevice ? safeString(configDevice->getName()) : "(null config)", callbackAlc->hasHDAConfigDefault, valid);
+		DBGLOG("alc", "initializePinConfig %s received hda " PRIKADDR ", config " PRIKADDR " config name %s, detect %d valid %d", safeString(hdaCodec->getName()),
+			CASTKADDR(hdaCodec), CASTKADDR(configDevice), configDevice ? safeString(configDevice->getName()) : "(null config)", callbackAlc->hasHDAConfigDefault, valid);
 
 		if (valid && callbackAlc->hasHDAConfigDefault == WakeVerbMode::Detect) {
 			uint32_t analogCodec = 0;
@@ -273,7 +274,7 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 			}
 			
 			if (info->platformNum > 0 || info->layoutNum > 0) {
-				DBGLOG("alc", "will route callbacks resource loading callbacks");
+				DBGLOG("alc", "will route resource loading callbacks");
 				progressState |= ProcessingState::CallbacksWantRouting;
 			}
 			
