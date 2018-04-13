@@ -2,6 +2,7 @@ AppleALC Changelog
 ==================
 #### v1.2.7
 - Added NVIDIA HDMI patch for GP107 and GP108 for 10.13.4+
+- Added NVIDIA HDMI patch for GP104 for 10.13.4+
 
 #### v1.2.6
 - Fixed a rare kernel panic due to use-after-free in verb code at waking from sleep
