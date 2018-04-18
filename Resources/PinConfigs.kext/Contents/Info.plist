@@ -4487,6 +4487,30 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Realtek ALC898 for MSI GE62 7RE Apache Pro by spectra</string>
+					<key>CodecID</key>
+					<integer>283904153</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccEAEnHQEBJx6gAScfmQGHHCABhx0QAYce
+					gQGHHwIBVxwwAVcdAQFXHhMBVx+ZAaccMQGn
+					HQEBpx4TAacfmQG3HDIBtx0BAbceEwG3H5kB
+					twwCAUccQAFHHRABRx4hAUcfAgFHDAIB5xxQ
+					AecdEQHnHkUB5x8C
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>98</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Realtek ALC898 for MSI GP62-6QG Leopard Pro</string>
 					<key>CodecID</key>
 					<integer>283904153</integer>
