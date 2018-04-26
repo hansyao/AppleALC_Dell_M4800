@@ -4826,6 +4826,25 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>CodecID</key>
+					<integer>283906592</integer>
+					<key>CodecName</key>
+					<string>MacPeet - ALC1220 for Clevo P950HR</string>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHRABRx4hAUcfAQFHDAIBJxwwAScd
+					AAEnHqYBJx+ZAYccQAGHHRABhx6BAYcfAQG3
+					HGABtx0AAbceFwG3H5kBtwwCAecccAHnHRAB
+					5x5EAecfAQ==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
 					<integer>283906408</integer>
 					<key>CodecName</key>
 					<string>Toleda -  Realtek ALC S1220A</string>
