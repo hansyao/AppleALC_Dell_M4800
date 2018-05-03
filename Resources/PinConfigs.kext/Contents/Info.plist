@@ -3889,6 +3889,25 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>ALC888 for Acer Aspire 7738G by MacPeet</string>
+					<key>CodecID</key>
+					<integer>283904136</integer>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHQABRx4TAUcfkAFHDAIBJxxAAScd
+					AAEnHqMBJx+QAVccUAFXHRABVx4hAVcfAAFX
+					DAIBpxxgAacdMAGnHoEBpx8AAecccAHnHRAB
+					5x5FAecfAA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>27</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>ALC888S-VD Version2 for MedionE7216 by MacPeet</string>
 					<key>CodecID</key>
 					<integer>283904136</integer>
