@@ -2785,24 +2785,22 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-						<data>
-						AwAAAA==
-						</data>
-						<key>Codec</key>
-						<string>Rover - Realtek ALC294 for Asus FL8000U</string>
-						<key>CodecID</key>
-						<integer>283902612</integer>
-						<key>ConfigData</key>
-						<data>
-						AbccEAG3HQEBtx6nAbcfkAFHHCABRx0BAUce
-						FwFHH5ACFxwwAhcdEAIXHiECFx8BAUcMAgG3
-						DAICFwwC
-						</data>
-						<key>FuncGroup</key>
-						<integer>1</integer>
-						<key>LayoutID</key>
-						<integer>11</integer>
-					</dict>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Rover - Realtek ALC294 for Asus FL8000U</string>
+					<key>CodecID</key>
+					<integer>283902612</integer>
+					<key>ConfigData</key>
+					<data>
+					AbccEAG3HQEBtx6nAbcfkAFHHCABRx0BAUce
+					FwFHH5ACFxwwAhcdEAIXHiECFx8BAUcMAgG3
+					DAICFwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>

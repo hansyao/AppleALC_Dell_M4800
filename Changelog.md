@@ -7,6 +7,9 @@ AppleALC Changelog
 - Added ALC1220 layout-id 13 for Clevo P950HR by MacPeet
 - Added ALC888 layout-id 27 for Acer Aspire 7738G by MacPeet
 - Added 300 Series PCH HD Audio Controller patch by chrome
+- Added ALC269 layout-id 66 for Clevo N155RD by DalianSky
+- Added ALC285 layout-id 11 for Lenovo ThinkPad X1C6th by Rover
+- Added ALC294 layout-id 11 for Asus FL8000U by Rover
 
 #### v1.2.6
 - Fixed a rare kernel panic due to use-after-free in verb code at waking from sleep
