@@ -222,6 +222,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>HASEE Z6-i78154S2 ALC269 by lianny </string>
+				<key>Id</key>
+				<integer>58</integer>
+				<key>Path</key>
+				<string>layout58.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>ALC269VC for Clevo N155RD by DalianSky</string>
 				<key>Id</key>
 				<integer>66</integer>
@@ -259,14 +267,6 @@
 				<integer>127</integer>
 				<key>Path</key>
 				<string>layout127.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HASEE Z6-i78154S2 ALC269 by lianny </string>
-				<key>Id</key>
-				<integer>58</integer>
-				<key>Path</key>
-				<string>layout58.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
@@ -481,6 +481,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>HASEE Z6-i78154S2 ALC269 by lianny </string>
+				<key>Id</key>
+				<integer>58</integer>
+				<key>Path</key>
+				<string>Platforms58.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>ALC269VC for Clevo N155RD by DalianSky</string>
 				<key>Id</key>
 				<integer>66</integer>
@@ -518,14 +526,6 @@
 				<integer>127</integer>
 				<key>Path</key>
 				<string>Platforms127.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HASEE Z6-i78154S2 ALC269 by lianny </string>
-				<key>Id</key>
-				<integer>58</integer>
-				<key>Path</key>
-				<string>Platforms58.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>

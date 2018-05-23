@@ -1724,6 +1724,28 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>HASEE Z6-i78154S2 ALC269 by lianny  </string>
+					<key>CodecID</key>
+					<integer>283902569</integer>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHQABRx4TAUcfkAGHHDABhx0QAYce
+					gQGHHwABJxxAAScdAAEnHqABJx+QAVccIAFX
+					HRABVx4hAVcfAAF3HPABdx0AAXceAAF3H0AB
+					lxzwAZcdAAGXHgABlx9AAacc8AGnHQABpx4A
+					AacfQAG3HPABtx0AAbceAAG3H0AB1xzwAdcd
+					AAHXHgAB1x9AAeccYAHnHRAB5x5EAecfAgFH
+					DAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>58</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>ALC269VC for Clevo N155RD by DalianSky</string>
 					<key>CodecID</key>
 					<integer>283902569</integer>
@@ -6105,28 +6127,6 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>9</integer>
-				</dict>
-				<dict>
-					<key>AFGLowPowerState</key>
-					<data>AwAAAA==</data>
-					<key>Codec</key>
-					<string>HASEE Z6-i78154S2 ALC269 by lianny  </string>
-					<key>CodecID</key>
-					<integer>283902569</integer>
-					<key>ConfigData</key>
-					<data>
-					AUccEAFHHQABRx4TAUcfkAGHHDABhx0QAYce
-					gQGHHwABJxxAAScdAAEnHqABJx+QAVccIAFX
-					HRABVx4hAVcfAAF3HPABdx0AAXceAAF3H0AB
-					lxzwAZcdAAGXHgABlx9AAacc8AGnHQABpx4A
-					AacfQAG3HPABtx0AAbceAAG3H0AB1xzwAdcd
-					AAHXHgAB1x9AAeccYAHnHRAB5x5EAecfAgFH
-					DAI=
-					</data>
-					<key>FuncGroup</key>
-					<integer>1</integer>
-					<key>LayoutID</key>
-					<integer>58</integer>
 				</dict>
 			</array>
 			<key>IOClass</key>
