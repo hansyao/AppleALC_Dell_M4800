@@ -11,6 +11,7 @@ AppleALC Changelog
 - Added ALC285 layout-id 11 for Lenovo ThinkPad X1C6th by Rover
 - Added ALC294 layout-id 11 for Asus FL8000U by Rover
 - Added ALC269 layout-id 58 for HASEE Z6-i78154S2 by lianny
+- Added ALC233 layout-id 32 for ASUS VIVOBOOK S301LA by MacPeet
 
 #### v1.2.6
 - Fixed a rare kernel panic due to use-after-free in verb code at waking from sleep
