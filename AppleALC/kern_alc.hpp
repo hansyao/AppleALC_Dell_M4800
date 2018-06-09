@@ -16,7 +16,7 @@ class AlcEnabler {
 public:
 	bool init();
 	void deinit();
-	
+
 private:
 	/**
 	 *  Remove log spam from AppleHDAController and AppleHDA.
@@ -35,19 +35,12 @@ private:
 	 *  @param size    kinfo memory size
 	 */
 	void processKext(KernelPatcher &patcher, size_t index, mach_vm_address_t address, size_t size);
-	
-	/**
-	 *  Enable audio host entitlements for all processes
-	 *
-	 *  @param patcher KernelPatcher instance
-	 */
-	void hookEntitlementVerification(KernelPatcher &patcher);
-	
+
 	/**
 	 *  ResourceLoad callback type
 	 */
 	using t_callback = void (*)(uint32_t, kern_return_t, const void *, uint32_t, void *);
-	
+
 	/**
 	 *  Hooked ResourceLoad callbacks returning correct layout/platform
 	 */
@@ -115,20 +108,10 @@ private:
 	t_initializePinConfig orgInitializePinConfig {nullptr};
 
 	/**
-	 *  Copy client entitlement type (see IOUserClient)
-	 */
-	using t_copyClientEntitlement = OSObject *(*)(task_t, const char *);
-	
-	/**
 	 *  Hooked entitlement copying method
 	 */
-	static OSObject *copyClientEntitlement(task_t task, const char *entitlement);
-	
-	/**
-	 *  Trampoline for original entitlement copying method
-	 */
-	t_copyClientEntitlement orgCopyClientEntitlement {nullptr};
-	
+	static void handleAudioClientEntitlement(task_t task, const char *entitlement, OSObject *&original);
+
 	/**
 	 *  Detects audio controllers
 	 */
