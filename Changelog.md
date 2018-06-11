@@ -5,6 +5,7 @@ AppleALC Changelog
 - AppleALC selected `layout-id` is now shown as `alc-layout-id` in ioreg
 - Overriden `layout-id` can be passed as`apple-layout-id` (`alcaaplid=X`)
 - Added ALC298 layout-id 66 for MECHREVO S1 by lgs3137
+- Added ALC298 revision-id 0x100101 support
 
 #### v1.2.7
 - Added NVIDIA HDMI patch for GP107 and GP108 for 10.13.4+
