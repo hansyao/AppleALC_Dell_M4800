@@ -37,11 +37,6 @@ private:
 	void processKext(KernelPatcher &patcher, size_t index, mach_vm_address_t address, size_t size);
 
 	/**
-	 *  ResourceLoad callback type
-	 */
-	using t_callback = void (*)(uint32_t, kern_return_t, const void *, uint32_t, void *);
-
-	/**
 	 *  Hooked ResourceLoad callbacks returning correct layout/platform
 	 */
 	static void layoutLoadCallback(uint32_t requestTag, kern_return_t result, const void *resourceData, uint32_t resourceDataLength, void *context);
@@ -50,8 +45,8 @@ private:
 	/**
 	 *  Trampolines for original method invocations
 	 */
-	t_callback orgLayoutLoadCallback {nullptr};
-	t_callback orgPlatformLoadCallback {nullptr};
+	mach_vm_address_t orgLayoutLoadCallback {0};
+	mach_vm_address_t orgPlatformLoadCallback {0};
 
 	/**
 	 *  @enum IOAudioDevicePowerState
@@ -88,24 +83,14 @@ private:
 	static IOReturn initializePinConfig(IOService *hdaCodec, IOService *configDevice);
 
 	/**
-	 *  AppleHDADriver::performPowerStateChange type
-	 */
-	using t_performPowerChange = IOReturn (*)(IOService *hdaDriver, uint32_t from, uint32_t to, unsigned int *timer);
-
-	/**
-	 *  AppleHDACodecGeneric::initializePinConfigDefaultFromOverride type
-	 */
-	using t_initializePinConfig = IOReturn (*)(IOService *hdaCodec, IOService *configDevice);
-
-	/**
 	 *  AppleHDADriver::performPowerStateChange original method
 	 */
-	t_performPowerChange orgPerformPowerChange {nullptr};
+	mach_vm_address_t orgPerformPowerChange {0};
 
 	/**
 	 *  AppleHDACodecGeneric::initializePinConfigDefaultFromOverride original method
 	 */
-	t_initializePinConfig orgInitializePinConfig {nullptr};
+	mach_vm_address_t orgInitializePinConfig {0};
 
 	/**
 	 *  Hooked entitlement copying method

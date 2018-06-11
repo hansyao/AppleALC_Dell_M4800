@@ -59,7 +59,7 @@ void AlcEnabler::layoutLoadCallback(uint32_t requestTag, kern_return_t result, c
 		DBGLOG("alc", "layoutLoadCallback %d %d %d %d %d", requestTag, result, resourceData != nullptr, resourceDataLength, context != nullptr);
 		callbackAlc->updateResource(*callbackPatcher, Resource::Layout, result, resourceData, resourceDataLength);
 		DBGLOG("alc", "layoutLoadCallback done %d %d %d %d %d", requestTag, result, resourceData != nullptr, resourceDataLength, context != nullptr);
-		callbackAlc->orgLayoutLoadCallback(requestTag, result, resourceData, resourceDataLength, context);
+		FunctionCast(layoutLoadCallback, callbackAlc->orgLayoutLoadCallback)(requestTag, result, resourceData, resourceDataLength, context);
 	} else {
 		SYSLOG("alc", "layout callback arrived at nowhere");
 	}
@@ -70,7 +70,7 @@ void AlcEnabler::platformLoadCallback(uint32_t requestTag, kern_return_t result,
 		DBGLOG("alc", "platformLoadCallback %d %d %d %d %d", requestTag, result, resourceData != nullptr, resourceDataLength, context != nullptr);
 		callbackAlc->updateResource(*callbackPatcher, Resource::Platform, result, resourceData, resourceDataLength);
 		DBGLOG("alc", "platformLoadCallback done %d %d %d %d %d", requestTag, result, resourceData != nullptr, resourceDataLength, context != nullptr);
-		callbackAlc->orgPlatformLoadCallback(requestTag, result, resourceData, resourceDataLength, context);
+		FunctionCast(platformLoadCallback, callbackAlc->orgPlatformLoadCallback)(requestTag, result, resourceData, resourceDataLength, context);
 	} else {
 		SYSLOG("alc", "platform callback arrived at nowhere");
 	}
@@ -106,7 +106,7 @@ IOReturn AlcEnabler::performPowerChange(IOService *hdaDriver, uint32_t from, uin
 		bool valid = isAnalogAudio(hdaDriver);
 		DBGLOG("alc", "performPowerChange %s from %d to %d in from sleep %d hdef %d detect %d",
 			safeString(hdaDriver->getName()), from, to, callbackAlc->receivedSleepEvent, valid, callbackAlc->hasHDAConfigDefault);
-		ret = callbackAlc->orgPerformPowerChange(hdaDriver, from, to, timer);
+		ret = FunctionCast(performPowerChange, callbackAlc->orgPerformPowerChange)(hdaDriver, from, to, timer);
 		if (valid && callbackAlc->hasHDAConfigDefault == WakeVerbMode::Enable) {
 			if (to == ALCAudioDeviceSleep) {
 				callbackAlc->receivedSleepEvent = true;
@@ -115,7 +115,7 @@ IOReturn AlcEnabler::performPowerChange(IOService *hdaDriver, uint32_t from, uin
 				auto parent = OSDynamicCast(IOService, hdaDriver->getParentEntry(gIOServicePlane));
 				if (parent) {
 					DBGLOG("alc", "performPowerChange %s forcing wake verbs on %s", safeString(hdaDriver->getName()), safeString(parent->getName()));
-					auto forceRet = callbackAlc->orgInitializePinConfig(parent, ADDPR(selfInstance));
+					auto forceRet = FunctionCast(initializePinConfig, callbackAlc->orgInitializePinConfig)(parent, ADDPR(selfInstance));
 					SYSLOG_COND(forceRet != kIOReturnSuccess, "alc", "force config reinitialize returned %08X", forceRet);
 				} else {
 					SYSLOG("alc", "cannot get hda driver parent for wake");
@@ -210,7 +210,7 @@ IOReturn AlcEnabler::initializePinConfig(IOService *hdaCodec, IOService *configD
 				SYSLOG("alc", "invalid HDAConfigDefault, pinconfigs are broken");
 			}
 		}
-		ret = callbackAlc->orgInitializePinConfig(hdaCodec, configDevice);
+		ret = FunctionCast(initializePinConfig, callbackAlc->orgInitializePinConfig)(hdaCodec, configDevice);
 	} else {
 		SYSLOG("alc", "initializePinConfig arrived at nowhere");
 	}
@@ -300,42 +300,14 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 	}
 	
 	if ((progressState & ProcessingState::CallbacksWantRouting) && kextIndex == KextIdAppleHDA) {
-		auto layout = patcher.solveSymbol(index, "__ZN14AppleHDADriver18layoutLoadCallbackEjiPKvjPv", address, size);
-		auto platform = patcher.solveSymbol(index, "__ZN14AppleHDADriver20platformLoadCallbackEjiPKvjPv", address, size);
+		KernelPatcher::RouteRequest requests[] {
+			KernelPatcher::RouteRequest("__ZN14AppleHDADriver18layoutLoadCallbackEjiPKvjPv", layoutLoadCallback, orgLayoutLoadCallback),
+			KernelPatcher::RouteRequest("__ZN14AppleHDADriver20platformLoadCallbackEjiPKvjPv", platformLoadCallback, orgPlatformLoadCallback),
+			KernelPatcher::RouteRequest("__ZN14AppleHDADriver23performPowerStateChangeE24_IOAudioDevicePowerStateS0_Pj", performPowerChange, orgPerformPowerChange),
+			KernelPatcher::RouteRequest("__ZN20AppleHDACodecGeneric38initializePinConfigDefaultFromOverrideEP9IOService", initializePinConfig, orgInitializePinConfig),
+		};
 
-		if (layout && platform) {
-			DBGLOG("alc", "layout call %X %X %X %X %X %X %X %X %X %X %X %X %X %X %X %X", ((uint8_t *)layout)[0], ((uint8_t *)layout)[1], ((uint8_t *)layout)[2], ((uint8_t *)layout)[3],
-				   ((uint8_t *)layout)[4], ((uint8_t *)layout)[5], ((uint8_t *)layout)[6], ((uint8_t *)layout)[7], ((uint8_t *)layout)[8], ((uint8_t *)layout)[9], ((uint8_t *)layout)[10],
-				   ((uint8_t *)layout)[11], ((uint8_t *)layout)[12], ((uint8_t *)layout)[13], ((uint8_t *)layout)[14], ((uint8_t *)layout)[15]);
-			DBGLOG("alc", "platform call %X %X %X %X %X %X %X %X %X %X %X %X %X %X %X %X", ((uint8_t *)platform)[0], ((uint8_t *)platform)[1], ((uint8_t *)platform)[2], ((uint8_t *)platform)[3],
-				   ((uint8_t *)platform)[4], ((uint8_t *)platform)[5], ((uint8_t *)platform)[6], ((uint8_t *)platform)[7], ((uint8_t *)platform)[8], ((uint8_t *)platform)[9], ((uint8_t *)platform)[10],
-				   ((uint8_t *)platform)[11], ((uint8_t *)platform)[12], ((uint8_t *)platform)[13], ((uint8_t *)platform)[14], ((uint8_t *)platform)[15]);
-		}
-		
-		if (!layout || !platform) {
-			SYSLOG("alc", "failed to find AppleHDA layout or platform callback symbols (" PRIKADDR ", " PRIKADDR ")",
-				CASTKADDR(layout), CASTKADDR(platform));
-		} else if (static_cast<void>(orgLayoutLoadCallback = reinterpret_cast<t_callback>(patcher.routeFunction(layout, reinterpret_cast<mach_vm_address_t>(layoutLoadCallback), true))),
-				   patcher.getError() != KernelPatcher::Error::NoError) {
-			SYSLOG("alc", "failed to hook layout callback");
-		} else if (static_cast<void>(orgPlatformLoadCallback = reinterpret_cast<t_callback>(patcher.routeFunction(platform, reinterpret_cast<mach_vm_address_t>(platformLoadCallback), true))),
-				   patcher.getError() != KernelPatcher::Error::NoError) {
-			SYSLOG("alc", "failed to hook platform callback");
-		}
-
-		auto powerChange = patcher.solveSymbol(index, "__ZN14AppleHDADriver23performPowerStateChangeE24_IOAudioDevicePowerStateS0_Pj", address, size);
-		auto pinConfig = patcher.solveSymbol(index, "__ZN20AppleHDACodecGeneric38initializePinConfigDefaultFromOverrideEP9IOService", address, size);
-
-		if (!powerChange || !pinConfig) {
-			SYSLOG("alc", "failed to find AppleHDA setPowerState or initializePinConfig symbols (" PRIKADDR ", " PRIKADDR ")",
-				CASTKADDR(powerChange), CASTKADDR(pinConfig));
-		} else if (static_cast<void>(orgPerformPowerChange = reinterpret_cast<t_performPowerChange>(patcher.routeFunction(powerChange, reinterpret_cast<mach_vm_address_t>(performPowerChange), true))),
-				   patcher.getError() != KernelPatcher::Error::NoError) {
-			SYSLOG("alc", "failed to hook setPowerState");
-		} else if (static_cast<void>(orgInitializePinConfig = reinterpret_cast<t_initializePinConfig>(patcher.routeFunction(pinConfig, reinterpret_cast<mach_vm_address_t>(initializePinConfig), true))),
-				   patcher.getError() != KernelPatcher::Error::NoError) {
-			SYSLOG("alc", "failed to hook initializePinConfig");
-		}
+		patcher.routeMultiple(index, requests, address, size);
 
 		// patch AppleHDA to remove redundant logs
 		if (!ADDPR(debugEnabled))
