@@ -4321,6 +4321,24 @@
 					<key>CodecID</key>
 					<integer>283904146</integer>
 					<key>Comment</key>
+					<string>MSI GP70/CR70 by Slava77</string>
+					<key>ConfigData</key>
+					<data>AbceEQGXHqABlx+RAYcegQFHDAI=</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283904146</integer>
+					<key>Comment</key>
 					<string>ALC892 for Clevo P751DMG by Cryse Hillmes</string>
 					<key>ConfigData</key>
 					<data>
