@@ -13,6 +13,8 @@ matrix:
       - src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/acidanthera/Lilu/master/Lilu/Scripts/bootstrap.sh) && eval "$src" || exit 1
       - xcodebuild -configuration Debug
       - xcodebuild -configuration Release
+      - xcodebuild analyze -configuration Debug CLANG_ANALYZER_OUTPUT=plist-html CLANG_ANALYZER_OUTPUT_DIR="$(pwd)/clang-analyze" && [ "$(find clang-analyze -name "*.html")" != "" ] && echo "Clang Static Analyser failure." && exit 1
+      - xcodebuild analyze -configuration Release CLANG_ANALYZER_OUTPUT=plist-html CLANG_ANALYZER_OUTPUT_DIR="$(pwd)/clang-analyze" && [ "$(find clang-analyze -name "*.html")" != "" ] && echo "Clang Static Analyser failure." && exit 1
 
     deploy:
       provider: releases
@@ -34,8 +36,8 @@ matrix:
     addons:
       coverity_scan:
         project:
-          name: "acidanthera/Lilu"
-          description: "Lilu"
+          name: "acidanthera/AppleALC"
+          description: "AppleALC"
         notification_email: $NOTIFICATION_EMAIL
         build_command_prepend: "src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/acidanthera/Lilu/master/Lilu/Scripts/bootstrap.sh) && eval \"$src\" || exit 1"
         build_command: "xcodebuild -configuration Release"
