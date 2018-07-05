@@ -6,11 +6,10 @@
 //
 
 #include <Headers/kern_api.hpp>
+#include <Headers/kern_devinfo.hpp>
 #include <Headers/plugin_start.hpp>
 #include <Library/LegacyIOService.h>
-
 #include <mach/vm_map.h>
-#include <IOKit/IORegistryEntry.h>
 
 #include "kern_alc.hpp"
 #include "kern_resources.hpp"
@@ -20,38 +19,193 @@ static AlcEnabler *callbackAlc = nullptr;
 static KernelPatcher *callbackPatcher = nullptr;
 
 bool AlcEnabler::init() {
-	LiluAPI::Error error = lilu.onKextLoad(ADDPR(kextList), ADDPR(kextListSize),
-	[](void *user, KernelPatcher &patcher, size_t index, mach_vm_address_t address, size_t size) {
-		callbackAlc = static_cast<AlcEnabler *>(user);
-		callbackPatcher = &patcher;
-		callbackAlc->processKext(patcher, index, address, size);
+	LiluAPI::Error error = lilu.onPatcherLoad(
+	[](void *user, KernelPatcher &pathcer) {
+		static_cast<AlcEnabler *>(user)->updateProperties();
 	}, this);
-	
+
+	if (error != LiluAPI::Error::NoError) {
+		SYSLOG("alc", "failed to register onPatcherLoad method %d", error);
+		return false;
+	}
+
+	error = lilu.onKextLoad(ADDPR(kextList), ADDPR(kextListSize),
+	[](void *user, KernelPatcher &patcher, size_t index, mach_vm_address_t address, size_t size) {
+		static_cast<AlcEnabler *>(user)->processKext(patcher, index, address, size);
+	}, this);
+
 	if (error != LiluAPI::Error::NoError) {
 		SYSLOG("alc", "failed to register onKextLoad method %d", error);
 		return false;
 	}
-	
+
 	if (getKernelVersion() >= KernelVersion::Sierra) {
-		char tmp[16];
 		// Unlock custom audio engines by disabling Apple private entitlement verification
-		if (PE_parse_boot_argn("-alcdhost", tmp, sizeof(tmp))) {
+		if (checkKernelArgument("-alcdhost")) {
 			error = lilu.onEntitlementRequest([](void *user, task_t task, const char *entitlement, OSObject *&original) {
-				callbackAlc = static_cast<AlcEnabler *>(user);
-				callbackAlc->handleAudioClientEntitlement(task, entitlement, original);
+				static_cast<AlcEnabler *>(user)->handleAudioClientEntitlement(task, entitlement, original);
 			}, this);
 			if (error != LiluAPI::Error::NoError)
 				DBGLOG("alc", "failed to register onEntitlementRequest method %d", error);
 		}
 	}
-	
-	
+
 	return true;
 }
 
 void AlcEnabler::deinit() {
 	controllers.deinit();
 	codecs.deinit();
+}
+
+void AlcEnabler::updateProperties() {
+	auto devInfo = DeviceInfo::create();
+	if (devInfo) {
+		// Assume that IGPU with connections means built-in digital audio.
+		bool hasBuiltinDigitalAudio = !devInfo->reportedFramebufferIsConnectorLess && devInfo->videoBuiltin;
+
+		// Firstly, update Haswell or Broadwell HDAU device for built-in digital audio.
+		if (devInfo->audioBuiltinDigital) {
+			if (hasBuiltinDigitalAudio) {
+				// This is a normal HDAU device for an IGPU with connectors.
+				updateDeviceProperties(devInfo->audioBuiltinDigital, devInfo, "onboard-1", false);
+			} else {
+				// Terminate built-in HDAU audio, as we are using no connectors!
+				auto hda = OSDynamicCast(IOService, devInfo->audioBuiltinAnalog);
+				auto pci = OSDynamicCast(IOService, devInfo->audioBuiltinAnalog->getParentEntry(gIOServicePlane));
+				if (hda && pci) {
+					hda->stop(pci);
+					bool success = hda->terminate();
+					if (!success)
+						SYSLOG("alc", "failed to terminate built-in digital audio");
+				} else {
+					SYSLOG("alc", "incompatible built-in hdau discovered");
+				}
+			}
+		}
+
+		// Secondly, update HDEF device and make it support digital audio
+		if (devInfo->audioBuiltinAnalog) {
+			const char *hdaGfx = nullptr;
+			if (hasBuiltinDigitalAudio && !devInfo->audioBuiltinDigital)
+				hdaGfx = "onboard-1";
+			updateDeviceProperties(devInfo->audioBuiltinAnalog, devInfo, hdaGfx, true);
+		}
+
+		// Thirdly, update IGPU device in case we have digital audio
+		if (hasBuiltinDigitalAudio)
+			devInfo->videoBuiltin->setProperty("hda-gfx", OSData::withBytes("onboard-1", sizeof("onboard-1")));
+
+		uint32_t hdaGfxCounter = hasBuiltinDigitalAudio ? 2 : 1;
+
+		// Fourthly, update all the GPU devices if any
+		for (size_t gpu = 0; gpu < devInfo->videoExternal.size(); gpu++) {
+			auto hdaSevice = devInfo->videoExternal[gpu].audio;
+			auto gpuService = devInfo->videoExternal[gpu].video;
+
+			if (!hdaSevice)
+				continue;
+
+			// Refresh the main properties including hda-gfx.
+			char hdaGfx[16];
+			snprintf(hdaGfx, sizeof(hdaGfx), "onboard-%d", hdaGfxCounter++);
+			updateDeviceProperties(hdaSevice, devInfo, hdaGfx, false);
+			gpuService->setProperty("hda-gfx", OSData::withBytes(hdaGfx, static_cast<uint32_t>(strlen(hdaGfx)+1)));
+
+			// Refresh connector types on NVIDIA, since they are required for HDMI audio to function.
+			// Abort if preexisting connector-types or no-audio-fixconn property is found.
+			if (devInfo->videoExternal[gpu].vendor == WIOKit::VendorID::NVIDIA &&
+				!gpuService->getProperty("no-audio-fixconn")) {
+				uint8_t builtBytes[] { 0x00, 0x08, 0x00, 0x00 };
+				char connector_type[] { "@0,connector-type" };
+				for (size_t i = 0; i < MaxConnectorCount; i++) {
+					connector_type[1] = '0' + i;
+					if (!gpuService->getProperty(connector_type)) {
+						DBGLOG("alc", "fixing %s in gpu", connector_type);
+						gpuService->setProperty(connector_type, OSData::withBytes(builtBytes, sizeof(builtBytes)));
+					} else {
+						DBGLOG("alc", "found existing %s in gpu", connector_type);
+						break;
+					}
+				}
+			}
+		}
+
+		DeviceInfo::deleter(devInfo);
+	}
+}
+
+void AlcEnabler::updateDeviceProperties(IORegistryEntry *hdaService, DeviceInfo *info, const char *hdaGfx, bool isAnalog) {
+	auto hdaPlaneName = hdaService->getName();
+
+	// AppleHDAController only recognises HDEF and HDAU.
+	if (isAnalog && (!hdaPlaneName || strcmp(hdaPlaneName, "HDEF"))) {
+		DBGLOG("alc", "fixing audio plane name to HDEF");
+		WIOKit::renameDevice(hdaService, "HDEF");
+	} else if (!isAnalog && (!hdaPlaneName || strcmp(hdaPlaneName, "HDAU"))) {
+		DBGLOG("alc", "fixing audio plane name to HDAU");
+		WIOKit::renameDevice(hdaService, "HDAU");
+	}
+
+	if (isAnalog) {
+		// Refresh our own layout-id named alc-layout-id as follows:
+		// alcid=X has highest priority and overrides any other value.
+		// alc-layout-id has normal priority and is expected to be used.
+		// layout-id will be used if both alcid and alc-layout-id are not set on non-Apple platforms.
+		uint32_t layout = 0;
+		if (PE_parse_boot_argn("alcid", &layout, sizeof(layout))) {
+			DBGLOG("alc", "found alc-layout-id override %d", layout);
+			hdaService->setProperty("alc-layout-id", &layout, sizeof(layout));
+		} else {
+			uint32_t alcId;
+			if (WIOKit::getOSDataValue(hdaService, "alc-layout-id", alcId)) {
+				DBGLOG("alc", "found normal alc-layout-id %d", alcId);
+			} else if (info->firmwareVendor != DeviceInfo::FirmwareVendor::Apple) {
+				uint32_t legacyId;
+				if (WIOKit::getOSDataValue(hdaService, "layout-id", legacyId)) {
+					DBGLOG("audio", "found legacy alc-layout-id (from layout-id) %d", legacyId);
+					hdaService->setProperty("alc-layout-id", &legacyId, sizeof(legacyId));
+				}
+			}
+		}
+
+		// These seem to fix AppleHDA warnings, perhaps research them later.
+		// They are probably related to the current volume of the boot bell sound.
+		if (!hdaService->getProperty("MaximumBootBeepVolume")) {
+			DBGLOG("alc", "fixing MaximumBootBeepVolume in hdef");
+			uint8_t bootBeepBytes[] { 0xEE };
+			hdaService->setProperty("MaximumBootBeepVolume", bootBeepBytes, sizeof(bootBeepBytes));
+		}
+
+		if (!hdaService->getProperty("MaximumBootBeepVolumeAlt")) {
+			DBGLOG("alc", "fixing MaximumBootBeepVolumeAlt in hdef");
+			uint8_t bootBeepBytes[] { 0xEE };
+			hdaService->setProperty("MaximumBootBeepVolumeAlt", bootBeepBytes, sizeof(bootBeepBytes));
+		}
+
+		if (!hdaService->getProperty("PinConfigurations")) {
+			DBGLOG("alc", "fixing PinConfigurations in hdef");
+			uint8_t pinBytes[] { 0x00 };
+			hdaService->setProperty("PinConfigurations", pinBytes, sizeof(pinBytes));
+		}
+	}
+
+	// For every client only set layout-id itself.
+	if (info->firmwareVendor != DeviceInfo::FirmwareVendor::Apple)
+		hdaService->setProperty("layout-id", &info->reportedLayoutId, sizeof(info->reportedLayoutId));
+
+	// Pass onboard-X if requested.
+	if (hdaGfx)
+		hdaService->setProperty("hda-gfx", OSData::withBytes(hdaGfx, static_cast<uint32_t>(strlen(hdaGfx)+1)));
+
+	// Ensure built-in.
+	if (!hdaService->getProperty("built-in")) {
+		DBGLOG("alc", "fixing built-in");
+		uint8_t builtBytes[] { 0x00 };
+		hdaService->setProperty("built-in", builtBytes, sizeof(builtBytes));
+	} else {
+		DBGLOG("alc", "found existing built-in");
+	}
 }
 
 void AlcEnabler::layoutLoadCallback(uint32_t requestTag, kern_return_t result, const void *resourceData, uint32_t resourceDataLength, void *context) {
@@ -300,6 +454,9 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 	}
 	
 	if ((progressState & ProcessingState::CallbacksWantRouting) && kextIndex == KextIdAppleHDA) {
+		callbackAlc = this;
+		callbackPatcher = &patcher;
+
 		KernelPatcher::RouteRequest requests[] {
 			KernelPatcher::RouteRequest("__ZN14AppleHDADriver18layoutLoadCallbackEjiPKvjPv", layoutLoadCallback, orgLayoutLoadCallback),
 			KernelPatcher::RouteRequest("__ZN14AppleHDADriver20platformLoadCallbackEjiPKvjPv", platformLoadCallback, orgPlatformLoadCallback),

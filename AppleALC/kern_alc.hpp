@@ -9,6 +9,7 @@
 #define kern_alc_hpp
 
 #include <Headers/kern_patcher.hpp>
+#include <Headers/kern_devinfo.hpp>
 
 #include "kern_resources.hpp"
 
@@ -19,7 +20,27 @@ public:
 
 private:
 	/**
-	 *  Remove log spam from AppleHDAController and AppleHDA.
+	 *  Update device properties for digital and analog audio support
+	 */
+	void updateProperties();
+
+	/**
+	 *  Update audio device properties
+	 *
+	 *  hdaService  audio device
+	 *  info        device info
+	 *  hdaGfx      hda-gfx property string or null
+	 *  isAnalog    digital or analog audio device
+	 */
+	void updateDeviceProperties(IORegistryEntry *hdaService, DeviceInfo *info, const char *hdaGfx, bool isAnalog);
+
+	/**
+	 *  Maximum available connector count assumed on NVIDIA GPUs
+	 */
+	static constexpr size_t MaxConnectorCount = 6;
+
+	/**
+	 *  Remove log spam from AppleHDAController and AppleHDA
 	 *
 	 *  @param patcher KernelPatcher instance
 	 *  @oaram index  kinfo handle
