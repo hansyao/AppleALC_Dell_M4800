@@ -15,8 +15,7 @@
 #include "kern_resources.hpp"
 
 // Only used in apple-driven callbacks
-static AlcEnabler *callbackAlc = nullptr;
-static KernelPatcher *callbackPatcher = nullptr;
+static AlcEnabler *callbackAlc;
 
 bool AlcEnabler::init() {
 	LiluAPI::Error error = lilu.onPatcherLoad(
@@ -209,9 +208,9 @@ void AlcEnabler::updateDeviceProperties(IORegistryEntry *hdaService, DeviceInfo 
 }
 
 void AlcEnabler::layoutLoadCallback(uint32_t requestTag, kern_return_t result, const void *resourceData, uint32_t resourceDataLength, void *context) {
-	if (callbackAlc && callbackPatcher && callbackAlc->orgLayoutLoadCallback) {
+	if (callbackAlc && callbackAlc->orgLayoutLoadCallback) {
 		DBGLOG("alc", "layoutLoadCallback %d %d %d %d %d", requestTag, result, resourceData != nullptr, resourceDataLength, context != nullptr);
-		callbackAlc->updateResource(*callbackPatcher, Resource::Layout, result, resourceData, resourceDataLength);
+		callbackAlc->updateResource(Resource::Layout, result, resourceData, resourceDataLength);
 		DBGLOG("alc", "layoutLoadCallback done %d %d %d %d %d", requestTag, result, resourceData != nullptr, resourceDataLength, context != nullptr);
 		FunctionCast(layoutLoadCallback, callbackAlc->orgLayoutLoadCallback)(requestTag, result, resourceData, resourceDataLength, context);
 	} else {
@@ -220,9 +219,9 @@ void AlcEnabler::layoutLoadCallback(uint32_t requestTag, kern_return_t result, c
 }
 
 void AlcEnabler::platformLoadCallback(uint32_t requestTag, kern_return_t result, const void *resourceData, uint32_t resourceDataLength, void *context) {
-	if (callbackAlc && callbackPatcher && callbackAlc->orgPlatformLoadCallback) {
+	if (callbackAlc && callbackAlc->orgPlatformLoadCallback) {
 		DBGLOG("alc", "platformLoadCallback %d %d %d %d %d", requestTag, result, resourceData != nullptr, resourceDataLength, context != nullptr);
-		callbackAlc->updateResource(*callbackPatcher, Resource::Platform, result, resourceData, resourceDataLength);
+		callbackAlc->updateResource(Resource::Platform, result, resourceData, resourceDataLength);
 		DBGLOG("alc", "platformLoadCallback done %d %d %d %d %d", requestTag, result, resourceData != nullptr, resourceDataLength, context != nullptr);
 		FunctionCast(platformLoadCallback, callbackAlc->orgPlatformLoadCallback)(requestTag, result, resourceData, resourceDataLength, context);
 	} else {
@@ -455,7 +454,6 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 	
 	if ((progressState & ProcessingState::CallbacksWantRouting) && kextIndex == KextIdAppleHDA) {
 		callbackAlc = this;
-		callbackPatcher = &patcher;
 
 		KernelPatcher::RouteRequest requests[] {
 			KernelPatcher::RouteRequest("__ZN14AppleHDADriver18layoutLoadCallbackEjiPKvjPv", layoutLoadCallback, orgLayoutLoadCallback),
@@ -475,7 +473,7 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 	patcher.clearError();
 }
 
-void AlcEnabler::updateResource(KernelPatcher &patcher, Resource type, kern_return_t &result, const void * &resourceData, uint32_t &resourceDataLength) {
+void AlcEnabler::updateResource(Resource type, kern_return_t &result, const void * &resourceData, uint32_t &resourceDataLength) {
 	DBGLOG("alc", "resource-request arrived %s", type == Resource::Platform ? "platform" : "layout");
 	
 	for (size_t i = 0, s = codecs.size(); i < s; i++) {
@@ -493,7 +491,7 @@ void AlcEnabler::updateResource(KernelPatcher &patcher, Resource type, kern_retu
 			for (size_t f = 0; f < num; f++) {
 				auto &fi = (type == Resource::Platform ? info->platforms : info->layouts)[f];
 				DBGLOG("alc", "comparing %lu layout %X/%X", f, fi.layout, controllers[codecs[i]->controller]->layout);
-				if (controllers[codecs[i]->controller]->layout == fi.layout && patcher.compatibleKernel(fi.minKernel, fi.maxKernel)) {
+				if (controllers[codecs[i]->controller]->layout == fi.layout && KernelPatcher::compatibleKernel(fi.minKernel, fi.maxKernel)) {
 					DBGLOG("alc", "found %s at %lu index", type == Resource::Platform ? "platform" : "layout", f);
 					resourceData = fi.data;
 					resourceDataLength = fi.dataLength;

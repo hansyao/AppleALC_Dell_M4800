@@ -40,8 +40,3 @@ PluginConfiguration ADDPR(config) {
 		alc.init();
 	}
 };
-
-
-
-
-
