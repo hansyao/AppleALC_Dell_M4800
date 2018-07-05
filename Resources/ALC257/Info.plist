@@ -3,65 +3,33 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>insanelydeepak</string>
+	<string>MacPeet</string>
 	<key>CodecID</key>
-	<integer>660</integer>
+	<integer>599</integer>
 	<key>CodecName</key>
-	<string>ALC294</string>
+	<string>ALC257</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Custom by Rover - Realtek ALC294 for Asus FL8000U</string>
+				<string>MacPeet - Realtek ALC257 for Lenovo T480</string>
 				<key>Id</key>
 				<integer>11</integer>
 				<key>Path</key>
 				<string>layout11.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>MacPeet - Realtek ALC294 for Lenovo M710Q</string>
-				<key>Id</key>
-				<integer>12</integer>
-				<key>Path</key>
-				<string>layout12.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>insanelydeepak - Realtek ALC294</string>
-				<key>Id</key>
-				<integer>13</integer>
-				<key>Path</key>
-				<string>layout13.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Custom by Rover - Realtek ALC294 for Asus FL8000U</string>
+				<string>MacPeet - Realtek ALC257 for Lenovo T480</string>
 				<key>Id</key>
 				<integer>11</integer>
 				<key>Path</key>
 				<string>Platforms11.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>MacPeet - Realtek ALC294 for Lenovo M710Q</string>
-				<key>Id</key>
-				<integer>12</integer>
-				<key>Path</key>
-				<string>Platforms12.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>insanelydeepak - Realtek ALC294</string>
-				<key>Id</key>
-				<integer>13</integer>
-				<key>Path</key>
-				<string>PlatformsID.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -109,19 +77,19 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>hBnUEQ==</data>
+			<data>YQLsEA==</data>
 			<key>MinKernel</key>
 			<integer>13</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>lALsEA==</data>
+			<data>AAAAAA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>hAjsEA==</data>
+			<data>YgLsEA==</data>
 			<key>MinKernel</key>
 			<integer>13</integer>
 			<key>Name</key>
@@ -155,6 +123,22 @@
 			<key>Replace</key>
 			<data>AAAAAA==</data>
 		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>ixnUEQ==</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>VwLsEA==</data>
+		</dict>
+	</array>
+	<key>Revisions</key>
+	<array>
+		<integer>1048577</integer>
 	</array>
 	<key>Vendor</key>
 	<string>Realtek</string>

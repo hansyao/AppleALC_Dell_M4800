@@ -7,6 +7,9 @@ AppleALC Changelog
 - Added ALC298 layout-id 66 for MECHREVO S1 by lgs3137
 - Added ALC298 revision-id 0x100101 support
 - Added ALC892 layout-id 12 for MSI GP70/CR70 by Slava77
+- Added ALC257 layout-id 11 for Lenovo T480 by MacPeet
+- Added ALC294 layout-id 12 for Lenovo M710Q by MacPeet
+- Added ALC298 layout-id 30 for Xiaomi Mi Notebook Air 13.3 by Constanta
 
 #### v1.2.7
 - Added NVIDIA HDMI patch for GP107 and GP108 for 10.13.4+

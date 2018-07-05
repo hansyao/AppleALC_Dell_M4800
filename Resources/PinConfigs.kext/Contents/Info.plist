@@ -1089,6 +1089,28 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>MacPeet - Realtek ALC257 for Lenovo T480</string>
+					<key>CodecID</key>
+					<integer>283902551</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccIAEnHQABJx6mAScfkAGXHDABlx0QAZce
+					gQGXHwABRxxQAUcdAAFHHhcBRx+QAUcMAgIX
+					HGACFx0QAhceIQIXHwA=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>MacPeet ALC260 for Fujitsu Celsius M 450</string>
 					<key>CodecID</key>
 					<integer>283902560</integer>
@@ -2849,6 +2871,24 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>MacPeet - Realtek ALC294 for Lenovo M710Q</string>
+					<key>CodecID</key>
+					<integer>283902612</integer>
+					<key>ConfigData</key>
+					<data>
+					AhccIAIXHRACFx4hAhcfAAGXHDABlx0QAZce
+					gQGXHwABpxxAAacdkAGnHoEBpx8AAUccUAFH
+					HQABRx4XAUcfkAFHDAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>InsanelyDeepak - Realtek ALC294</string>
 					<key>CodecID</key>
 					<integer>283902612</integer>
@@ -3041,6 +3081,28 @@
 					<integer>29</integer>
 					<key>WakeConfigData</key>
 					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Constanta - Realtek ALC298 for Xiaomi Mi Notebook Air 13.3 Fingerprint 2018</string>
+					<key>CodecID</key>
+					<integer>283902616</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccMAEnHQABJx6gAScfkAF3HEABdx0AAXce
+					FwF3H5ABdwwCAYcccAGHHRABhx6BAYcfAAIX
+					HCACFx0QAhceIQIXHwA=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>30</integer>
+					<key>WakeConfigData</key>
+					<data>AXcMAg==</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
