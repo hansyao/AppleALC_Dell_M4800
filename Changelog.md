@@ -3,6 +3,7 @@ AppleALC Changelog
 #### v1.3.0
 - Added digital audio property injection for AMD, Intel, NVIDIA
 - Requires Lilu 1.2.8 and higher
+- Added ALC269VC layout-id 30 for Hasee Z6SL7R3 by HF
 
 #### v1.2.8
 - Added basic 10.14 compatibility via masking real `layout-id`

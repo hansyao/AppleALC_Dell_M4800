@@ -182,6 +182,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>ALC269VC for Hasee Z6SL7R3 by HF</string>
+				<key>Id</key>
+				<integer>30</integer>
+				<key>Path</key>
+				<string>layout30.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Custom ALC271x Acer Aspire s3-951</string>
 				<key>Id</key>
 				<integer>31</integer>
@@ -438,6 +446,14 @@
 				<integer>29</integer>
 				<key>Path</key>
 				<string>Platforms29.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ALC269VC for Hasee Z6SL7R3 by HF</string>
+				<key>Id</key>
+				<integer>30</integer>
+				<key>Path</key>
+				<string>Platforms30.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
