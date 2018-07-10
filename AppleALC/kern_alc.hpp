@@ -122,7 +122,17 @@ private:
 	 *  Detects audio controllers
 	 */
 	void grabControllers();
-	
+
+	/**
+	 *  Appends registered codec
+	 *
+	 *  @param user  AlcEnabler instance
+	 *  @param e     found codec
+	 *
+	 *  @return true on success and false to continue bruting
+	 */
+	static bool appendCodec(void *user, IORegistryEntry *e);
+
 	/**
 	 *  Detects audio codecs
 	 *

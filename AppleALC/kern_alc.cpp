@@ -558,10 +558,42 @@ void AlcEnabler::grabControllers() {
 	}
 }
 
+bool AlcEnabler::appendCodec(void *user, IORegistryEntry *e) {
+	auto alc = static_cast<AlcEnabler *>(user);
+
+	auto ven = e->getProperty("IOHDACodecVendorID");
+	auto rev = e->getProperty("IOHDACodecRevisionID");
+
+	if (!ven || !rev) {
+		DBGLOG("alc", "codec entry misses properties, skipping");
+		return false;
+	}
+
+	auto venNum = OSDynamicCast(OSNumber, ven);
+	auto revNum = OSDynamicCast(OSNumber, rev);
+
+	if (!venNum || !revNum) {
+		SYSLOG("alc", "codec entry contains invalid properties, skipping");
+		return true;
+	}
+
+	auto ci = AlcEnabler::CodecInfo::create(alc->currentController, venNum->unsigned32BitValue(), revNum->unsigned32BitValue());
+	if (ci) {
+		if (!alc->codecs.push_back(ci)) {
+			SYSLOG("alc", "failed to store codec info for %X:%X:%X", ci->vendor, ci->codec, ci->revision);
+			AlcEnabler::CodecInfo::deleter(ci);
+		}
+	} else {
+		SYSLOG("alc", "failed to create codec info for %X %X:%X", ci->vendor, ci->codec, ci->revision);
+	}
+
+	return true;
+}
+
 bool AlcEnabler::grabCodecs() {
 	for (currentController = 0; currentController < controllers.size(); currentController++) {
 		auto ctlr = controllers[currentController];
-		
+
 		// Digital controllers normally have no detectible codecs
 		if (!ctlr->detect)
 			continue;
@@ -571,39 +603,7 @@ bool AlcEnabler::grabCodecs() {
 		for (size_t i = 0; sect && i < ctlr->lookup->treeSize; i++) {
 			bool last = i+1 == ctlr->lookup->treeSize;
 			sect = WIOKit::findEntryByPrefix(sect, ctlr->lookup->tree[i], gIOServicePlane,
-											 last ? [](void *user, IORegistryEntry *e) {
-	
-				auto alc = static_cast<AlcEnabler *>(user);
-												 
-				auto ven = e->getProperty("IOHDACodecVendorID");
-				auto rev = e->getProperty("IOHDACodecRevisionID");
-
-				if (!ven || !rev) {
-					DBGLOG("alc", "codec entry misses properties, skipping");
-					return false;
-				}
-				
-				auto venNum = OSDynamicCast(OSNumber, ven);
-				auto revNum = OSDynamicCast(OSNumber, rev);
-				
-				if (!venNum || !revNum) {
-					SYSLOG("alc", "codec entry contains invalid properties, skipping");
-					return true;
-				}
-
-				auto ci = AlcEnabler::CodecInfo::create(alc->currentController, venNum->unsigned32BitValue(), revNum->unsigned32BitValue());
-				if (ci) {
-					if (!alc->codecs.push_back(ci)) {
-						SYSLOG("alc", "failed to store codec info for %X:%X:%X", ci->vendor, ci->codec, ci->revision);
-						AlcEnabler::CodecInfo::deleter(ci);
-					}
-				} else {
-					SYSLOG("alc", "failed to create codec info for %X %X:%X", ci->vendor, ci->codec, ci->revision);
-				}
-				
-				return true;
-			
-			} : nullptr, last, this);
+											 last ? appendCodec : nullptr, last, this);
 		}
 	}
 
