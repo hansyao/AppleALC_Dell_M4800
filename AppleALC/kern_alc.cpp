@@ -70,8 +70,8 @@ void AlcEnabler::updateProperties() {
 				updateDeviceProperties(devInfo->audioBuiltinDigital, devInfo, "onboard-1", false);
 			} else {
 				// Terminate built-in HDAU audio, as we are using no connectors!
-				auto hda = OSDynamicCast(IOService, devInfo->audioBuiltinAnalog);
-				auto pci = OSDynamicCast(IOService, devInfo->audioBuiltinAnalog->getParentEntry(gIOServicePlane));
+				auto hda = OSDynamicCast(IOService, devInfo->audioBuiltinDigital);
+				auto pci = OSDynamicCast(IOService, devInfo->audioBuiltinDigital->getParentEntry(gIOServicePlane));
 				if (hda && pci) {
 					hda->stop(pci);
 					bool success = hda->terminate();
@@ -86,7 +86,7 @@ void AlcEnabler::updateProperties() {
 		// Secondly, update HDEF device and make it support digital audio
 		if (devInfo->audioBuiltinAnalog) {
 			const char *hdaGfx = nullptr;
-			if (hasBuiltinDigitalAudio && !devInfo->audioBuiltinDigital)
+			if (hasBuiltinDigitalAudio && !devInfo->audioBuiltinAnalog)
 				hdaGfx = "onboard-1";
 			updateDeviceProperties(devInfo->audioBuiltinAnalog, devInfo, hdaGfx, true);
 		}

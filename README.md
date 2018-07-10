@@ -6,14 +6,14 @@ AppleALC
 An open source kernel extension enabling native macOS HD audio for not officially supported codecs without any filesystem modifications.
 
 #### Features
-- Audio support starting from the OS installation
+- Digital and analog audio support starting from the OS installation
 - Recovery HD/macOS Installer audio support
 - Automated codec detection
-- Unsupported audio controller enabling
+- Unsupported audio controller enabling (internal and external)
 - Arbitrary kext patching
 - Custom platform/layout injection
 - Works with SIP / El Capitan
-- Currently compatible with 10.8-10.13
+- Currently compatible with 10.8-10.14
 
 #### Credits
 - [Apple](https://www.apple.com) for macOS  
