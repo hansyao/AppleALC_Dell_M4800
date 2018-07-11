@@ -86,7 +86,7 @@ void AlcEnabler::updateProperties() {
 		// Secondly, update HDEF device and make it support digital audio
 		if (devInfo->audioBuiltinAnalog) {
 			const char *hdaGfx = nullptr;
-			if (hasBuiltinDigitalAudio && !devInfo->audioBuiltinAnalog)
+			if (hasBuiltinDigitalAudio && !devInfo->audioBuiltinDigital)
 				hdaGfx = "onboard-1";
 			updateDeviceProperties(devInfo->audioBuiltinAnalog, devInfo, hdaGfx, true);
 		}
