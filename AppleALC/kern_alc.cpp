@@ -427,7 +427,7 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 				for (size_t j = 0; j < info->patchNum; j++) {
 					auto &p = info->patches[j].patch;
 					auto f = const_cast<uint32_t *>(reinterpret_cast<const uint32_t *>(p.find));
-					if (p.count == sizeof(uint32_t) && *f == NvidiaSpecialFind) {
+					if (p.size == sizeof(uint32_t) && *f == NvidiaSpecialFind) {
 						while (currentFreeNvidiaDeviceId < MaxNvidiaDeviceIds) {
 							if (!nvidiaDeviceIdUsage[currentFreeNvidiaDeviceId]) {
 								*f = nvidiaDeviceIdList[currentFreeNvidiaDeviceId];
