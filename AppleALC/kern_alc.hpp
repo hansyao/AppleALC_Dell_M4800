@@ -15,7 +15,7 @@
 
 class AlcEnabler {
 public:
-	bool init();
+	void init();
 	void deinit();
 
 private:
@@ -271,6 +271,48 @@ private:
 	 *  Marks HDAConfigDefault availability in AppleALC
 	 */
 	WakeVerbMode hasHDAConfigDefault {WakeVerbMode::Detect};
+
+	/**
+	 *  Total available NVIDIA HDAU device-ids in 10.13 and newer
+	 */
+	static constexpr size_t MaxNvidiaDeviceIds = 16;
+
+	/**
+	 *  Magic NVIDIA HDAU id find to update the one from the list below
+	 */
+	static constexpr uint32_t NvidiaSpecialFind = 0x4144564E; // NVDA
+
+	/**
+	 *  NVIDIA HDAU device-ids available for replacement
+	 */
+	uint32_t nvidiaDeviceIdList[MaxNvidiaDeviceIds] {
+		0x0E0A10DE, // GK104
+		0x0E0B10DE, // GK106
+		0x0E1B10DE, // GK107
+		0x0E1A10DE, // GK110
+		0x0BE510DE, // GF100
+		0x0BEB10DE, // GF104
+		0x0BE910DE, // GF106
+		0x0BEA10DE, // GF108
+		0x0E0910DE, // GF110
+		0x0BEE10DE, // GF116
+		0x0E0810DE, // GF119
+		0x0BE310DE, // GF210
+		0x0AC010DE, // MCP79
+		0x0D9410DE, // MCP89
+		0x0BE210DE, // GT216
+		0x0BE410DE, // GTS 250M
+	};
+
+	/**
+	 *  NVIDIA HDAU device-ids usage status
+	 */
+	bool nvidiaDeviceIdUsage[MaxNvidiaDeviceIds] = {};
+
+	/**
+	 *  Current NVIDIA device-id patch to use
+	 */
+	size_t currentFreeNvidiaDeviceId = 0;
 };
 
 #endif /* kern_alc_hpp */

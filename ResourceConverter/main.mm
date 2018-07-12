@@ -244,7 +244,7 @@ static NSString *generatePatches(NSString *file, NSArray *patches, NSDictionary 
 				size_t patchLen = [f[i] length];
 				
 				if (!lookupPatchBufIndex(patchBuf, patchLen, patchBufIndexes[i])) {
-					[pbStr appendString:[[[NSString alloc] initWithFormat:@"static const uint8_t patchBuf%zu[] { ", patchBufIndex] autorelease]];
+					[pbStr appendString:[[[NSString alloc] initWithFormat:@"static /* const */ uint8_t patchBuf%zu[] { ", patchBufIndex] autorelease]];
 					
 					for (size_t b = 0; b < patchLen; b++) {
 						[pbStr appendString:[[[NSString alloc] initWithFormat:@"0x%0.2X, ", patchBuf[b]] autorelease]];

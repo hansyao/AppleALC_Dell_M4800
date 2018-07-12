@@ -3,6 +3,7 @@ AppleALC Changelog
 #### v1.3.0
 - Requires Lilu 1.2.5 and higher and enabled on 10.14 by default
 - Added digital audio property injection for AMD, Intel, NVIDIA
+- Added NVIDIA multi-gpu NVIDIA HDAU patch support
 - Added ALC269VC layout-id 30 for Hasee Z6SL7R3 by HF
 
 #### v1.2.8

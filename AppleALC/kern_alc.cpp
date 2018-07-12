@@ -17,39 +17,25 @@
 // Only used in apple-driven callbacks
 static AlcEnabler *callbackAlc;
 
-bool AlcEnabler::init() {
-	LiluAPI::Error error = lilu.onPatcherLoad(
+void AlcEnabler::init() {
+	lilu.onPatcherLoadForce(
 	[](void *user, KernelPatcher &pathcer) {
 		static_cast<AlcEnabler *>(user)->updateProperties();
 	}, this);
 
-	if (error != LiluAPI::Error::NoError) {
-		SYSLOG("alc", "failed to register onPatcherLoad method %d", error);
-		return false;
-	}
-
-	error = lilu.onKextLoad(ADDPR(kextList), ADDPR(kextListSize),
+	lilu.onKextLoadForce(ADDPR(kextList), ADDPR(kextListSize),
 	[](void *user, KernelPatcher &patcher, size_t index, mach_vm_address_t address, size_t size) {
 		static_cast<AlcEnabler *>(user)->processKext(patcher, index, address, size);
 	}, this);
 
-	if (error != LiluAPI::Error::NoError) {
-		SYSLOG("alc", "failed to register onKextLoad method %d", error);
-		return false;
-	}
-
 	if (getKernelVersion() >= KernelVersion::Sierra) {
 		// Unlock custom audio engines by disabling Apple private entitlement verification
 		if (checkKernelArgument("-alcdhost")) {
-			error = lilu.onEntitlementRequest([](void *user, task_t task, const char *entitlement, OSObject *&original) {
+			lilu.onEntitlementRequestForce([](void *user, task_t task, const char *entitlement, OSObject *&original) {
 				static_cast<AlcEnabler *>(user)->handleAudioClientEntitlement(task, entitlement, original);
 			}, this);
-			if (error != LiluAPI::Error::NoError)
-				DBGLOG("alc", "failed to register onEntitlementRequest method %d", error);
 		}
 	}
-
-	return true;
 }
 
 void AlcEnabler::deinit() {
@@ -105,6 +91,16 @@ void AlcEnabler::updateProperties() {
 			if (!hdaSevice)
 				continue;
 
+			auto vendor = devInfo->videoExternal[gpu].vendor;
+			uint32_t device = 0;
+			// Disable the id in the list if any
+			if (vendor == WIOKit::VendorID::NVIDIA && WIOKit::getOSDataValue(hdaSevice, "device-id", device)) {
+				device = (device << 16) | WIOKit::VendorID::NVIDIA;
+				for (size_t i = 0; i < MaxNvidiaDeviceIds; i++)
+					if (nvidiaDeviceIdList[i] == device)
+						nvidiaDeviceIdUsage[i] = true;
+			}
+
 			// Refresh the main properties including hda-gfx.
 			char hdaGfx[16];
 			snprintf(hdaGfx, sizeof(hdaGfx), "onboard-%d", hdaGfxCounter++);
@@ -113,8 +109,7 @@ void AlcEnabler::updateProperties() {
 
 			// Refresh connector types on NVIDIA, since they are required for HDMI audio to function.
 			// Abort if preexisting connector-types or no-audio-fixconn property is found.
-			if (devInfo->videoExternal[gpu].vendor == WIOKit::VendorID::NVIDIA &&
-				!gpuService->getProperty("no-audio-fixconn")) {
+			if (vendor == WIOKit::VendorID::NVIDIA && !gpuService->getProperty("no-audio-fixconn")) {
 				uint8_t builtBytes[] { 0x00, 0x08, 0x00, 0x00 };
 				char connector_type[] { "@0,connector-type" };
 				for (size_t i = 0; i < MaxConnectorCount; i++) {
@@ -425,6 +420,25 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 			if (!info) {
 				DBGLOG("alc", "missing ControllerModInfo for %lu controller", i);
 				continue;
+			}
+
+			// Choose a free device-id for NVIDIA HDAU to support multigpu setups
+			if (info->vendor == WIOKit::VendorID::NVIDIA) {
+				for (size_t j = 0; j < info->patchNum; j++) {
+					auto &p = info->patches[j].patch;
+					auto f = const_cast<uint32_t *>(reinterpret_cast<const uint32_t *>(p.find));
+					if (p.count == sizeof(uint32_t) && *f == NvidiaSpecialFind) {
+						while (currentFreeNvidiaDeviceId < MaxNvidiaDeviceIds) {
+							if (!nvidiaDeviceIdUsage[currentFreeNvidiaDeviceId]) {
+								*f = nvidiaDeviceIdList[currentFreeNvidiaDeviceId];
+								nvidiaDeviceIdUsage[currentFreeNvidiaDeviceId] = true;
+								currentFreeNvidiaDeviceId++;
+								break;
+							}
+							currentFreeNvidiaDeviceId++;
+						}
+					}
+				}
 			}
 			
 			applyPatches(patcher, index, info->patches, info->patchNum);
