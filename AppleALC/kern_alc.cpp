@@ -54,6 +54,10 @@ void AlcEnabler::updateProperties() {
 			if (hasBuiltinDigitalAudio) {
 				// This is a normal HDAU device for an IGPU with connectors.
 				updateDeviceProperties(devInfo->audioBuiltinDigital, devInfo, "onboard-1", false);
+				uint32_t dev = 0, rev = 0;
+				if (WIOKit::getOSDataValue(devInfo->audioBuiltinDigital, "device-id", dev) &&
+					WIOKit::getOSDataValue(devInfo->audioBuiltinDigital, "revision-id", rev))
+					insertController(WIOKit::VendorID::Intel, dev, rev, devInfo->reportedFramebufferId);
 			} else {
 				// Terminate built-in HDAU audio, as we are using no connectors!
 				auto hda = OSDynamicCast(IOService, devInfo->audioBuiltinDigital);
@@ -78,8 +82,15 @@ void AlcEnabler::updateProperties() {
 		}
 
 		// Thirdly, update IGPU device in case we have digital audio
-		if (hasBuiltinDigitalAudio)
+		if (hasBuiltinDigitalAudio) {
 			devInfo->videoBuiltin->setProperty("hda-gfx", OSData::withBytes("onboard-1", sizeof("onboard-1")));
+			if (!devInfo->audioBuiltinDigital) {
+				uint32_t dev = 0, rev = 0;
+				if (WIOKit::getOSDataValue(devInfo->videoBuiltin, "device-id", dev) &&
+					WIOKit::getOSDataValue(devInfo->videoBuiltin, "revision-id", rev))
+					insertController(WIOKit::VendorID::Intel, dev, rev, devInfo->reportedFramebufferId);
+			}
+		}
 
 		uint32_t hdaGfxCounter = hasBuiltinDigitalAudio ? 2 : 1;
 
@@ -91,14 +102,19 @@ void AlcEnabler::updateProperties() {
 			if (!hdaSevice)
 				continue;
 
-			auto vendor = devInfo->videoExternal[gpu].vendor;
-			uint32_t device = 0;
-			// Disable the id in the list if any
-			if (vendor == WIOKit::VendorID::NVIDIA && WIOKit::getOSDataValue(hdaSevice, "device-id", device)) {
-				device = (device << 16) | WIOKit::VendorID::NVIDIA;
-				for (size_t i = 0; i < MaxNvidiaDeviceIds; i++)
-					if (nvidiaDeviceIdList[i] == device)
-						nvidiaDeviceIdUsage[i] = true;
+			uint32_t ven = devInfo->videoExternal[gpu].vendor;
+			uint32_t dev = 0, rev = 0;
+			if (WIOKit::getOSDataValue(hdaSevice, "device-id", dev) &&
+				WIOKit::getOSDataValue(hdaSevice, "revision-id", rev)) {
+				// Register the controller
+				insertController(ven, dev, rev);
+				// Disable the id in the list if any
+				if (ven == WIOKit::VendorID::NVIDIA) {
+					uint32_t device = (dev << 16) | WIOKit::VendorID::NVIDIA;
+					for (size_t i = 0; i < MaxNvidiaDeviceIds; i++)
+						if (nvidiaDeviceIdList[i] == device)
+							nvidiaDeviceIdUsage[i] = true;
+				}
 			}
 
 			// Refresh the main properties including hda-gfx.
@@ -109,7 +125,7 @@ void AlcEnabler::updateProperties() {
 
 			// Refresh connector types on NVIDIA, since they are required for HDMI audio to function.
 			// Abort if preexisting connector-types or no-audio-fixconn property is found.
-			if (vendor == WIOKit::VendorID::NVIDIA && !gpuService->getProperty("no-audio-fixconn")) {
+			if (ven == WIOKit::VendorID::NVIDIA && !gpuService->getProperty("no-audio-fixconn")) {
 				uint8_t builtBytes[] { 0x00, 0x08, 0x00, 0x00 };
 				char connector_type[] { "@0,connector-type" };
 				for (size_t i = 0; i < MaxConnectorCount; i++) {
@@ -521,9 +537,7 @@ void AlcEnabler::updateResource(Resource type, kern_return_t &result, const void
 
 void AlcEnabler::grabControllers() {
 	computerModel = WIOKit::getComputerModel();
-	
-	bool found {false};
-	
+
 	for (size_t lookup = 0; lookup < ADDPR(codecLookupSize); lookup++) {
 		auto sect = WIOKit::findEntryByPrefix("/AppleACPIPlatformExpert", "PCI", gIOServicePlane);
 		
@@ -551,24 +565,13 @@ void AlcEnabler::grabControllers() {
 				} else if (WIOKit::getOSDataValue(sect, "AAPL,snb-platform-id", platform)) {
 					DBGLOG("alc", "AAPL,snb-platform-id %X was found in controller at %s", platform, ADDPR(codecLookup)[lookup].tree[i]);
 				}
-				
-				auto controller = ControllerInfo::create(ven, dev, rev, platform, lid, ADDPR(codecLookup)[lookup].detect);
-				if (controller) {
-					if (controllers.push_back(controller)) {
-						controller->lookup = &ADDPR(codecLookup)[lookup];
-						found = true;
-					} else {
-						SYSLOG("alc", "failed to store controller info for %X:%X:%X", ven, dev, rev);
-						ControllerInfo::deleter(controller);
-					}
-				} else {
-					SYSLOG("alc", "failed to create controller info for %X:%X:%X", ven, dev, rev);
-				}
+
+				insertController(ven, dev, rev, platform, lid, ADDPR(codecLookup)[lookup].detect, &ADDPR(codecLookup)[lookup]);
 			}
 		}
 	}
 	
-	if (found) {
+	if (controllers.size() > 0) {
 		DBGLOG("alc", "found %lu audio controllers", controllers.size());
 		validateControllers();
 	}
@@ -611,7 +614,7 @@ bool AlcEnabler::grabCodecs() {
 		auto ctlr = controllers[currentController];
 
 		// Digital controllers normally have no detectible codecs
-		if (!ctlr->detect)
+		if (!ctlr->detect || !ctlr->lookup)
 			continue;
 
 		auto sect = WIOKit::findEntryByPrefix("/AppleACPIPlatformExpert", "PCI", gIOServicePlane);

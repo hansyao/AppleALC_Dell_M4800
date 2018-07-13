@@ -202,12 +202,29 @@ private:
 		uint32_t const layout;
 		bool const detect;
 	};
-	
+
 	/**
 	 *  Detected controllers
 	 */
 	evector<ControllerInfo *, ControllerInfo::deleter> controllers;
 	size_t currentController {0};
+
+	/**
+	 *  Insert a controller with given parameters
+	 */
+	void insertController(uint32_t ven, uint32_t dev, uint32_t rev, uint32_t p=ControllerModInfo::PlatformAny, uint32_t lid=0, bool d=false, const CodecLookupInfo *lookup = nullptr) {
+		auto controller = ControllerInfo::create(ven, dev, rev, p, lid, d);
+		if (controller) {
+			if (controllers.push_back(controller)) {
+				controller->lookup = lookup;
+			} else {
+				SYSLOG("alc", "failed to store controller info for %X:%X:%X", ven, dev, rev);
+				ControllerInfo::deleter(controller);
+			}
+		} else {
+			SYSLOG("alc", "failed to create controller info for %X:%X:%X", ven, dev, rev);
+		}
+	}
 
 	/**
 	 *  Codec identification and modification info
