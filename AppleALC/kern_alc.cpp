@@ -422,15 +422,17 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 				continue;
 			}
 
+			DBGLOG("alc", "handling %lu controller vendor %08X with %lu patches", i, info->vendor, info->patchNum);
 			// Choose a free device-id for NVIDIA HDAU to support multigpu setups
 			if (info->vendor == WIOKit::VendorID::NVIDIA) {
 				for (size_t j = 0; j < info->patchNum; j++) {
 					auto &p = info->patches[j].patch;
-					auto f = const_cast<uint32_t *>(reinterpret_cast<const uint32_t *>(p.find));
-					if (p.size == sizeof(uint32_t) && *f == NvidiaSpecialFind) {
+					if (p.size == sizeof(uint32_t) && *reinterpret_cast<const uint32_t *>(p.find) == NvidiaSpecialFind) {
+						DBGLOG("alc", "finding %08X repl at %lu curr %lu", *reinterpret_cast<const uint32_t *>(p.replace), i, currentFreeNvidiaDeviceId);
 						while (currentFreeNvidiaDeviceId < MaxNvidiaDeviceIds) {
 							if (!nvidiaDeviceIdUsage[currentFreeNvidiaDeviceId]) {
-								*f = nvidiaDeviceIdList[currentFreeNvidiaDeviceId];
+								p.find = reinterpret_cast<const uint8_t *>(&nvidiaDeviceIdList[currentFreeNvidiaDeviceId]);
+								DBGLOG("alc", "assigned %08X find %08X repl at %lu curr %lu", *reinterpret_cast<const uint32_t *>(p.find), *reinterpret_cast<const uint32_t *>(p.replace), i, currentFreeNvidiaDeviceId);
 								nvidiaDeviceIdUsage[currentFreeNvidiaDeviceId] = true;
 								currentFreeNvidiaDeviceId++;
 								break;

@@ -44,7 +44,7 @@ struct ControllerModInfo {
 	size_t revisionNum;
 	uint32_t platform;
 	int computerModel;
-	const KextPatch *patches;
+	KextPatch *patches;
 	size_t patchNum;
 };
 
