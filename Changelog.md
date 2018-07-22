@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.3.1
+- Fixed incorrect unused HDAU termination
+
 #### v1.3.0
 - Requires Lilu 1.2.5 and higher and enabled on 10.14 by default
 - Added digital audio property injection for AMD, Intel, NVIDIA
