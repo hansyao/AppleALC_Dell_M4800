@@ -14,7 +14,7 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Goldfish64 - ALC221 for HP Compaq Pro 4300/Pro 6300/Elite 8300</string>
+				<string>Goldfish64 - ALC221 for HP Compaq Pro 4300/Pro 6300/Elite 8300/EliteDesk 800 G2 TWR</string>
 				<key>Id</key>
 				<integer>11</integer>
 				<key>Path</key>
@@ -25,7 +25,7 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Goldfish64 - ALC221 for HP Compaq Pro 4300/Pro 6300/Elite 8300</string>
+				<string>Goldfish64 - ALC221 for HP Compaq Pro 4300/Pro 6300/Elite 8300/EliteDesk 800 G2 TWR</string>
 				<key>Id</key>
 				<integer>11</integer>
 				<key>Path</key>
@@ -151,6 +151,7 @@
 	<key>Revisions</key>
 	<array>
 		<integer>1048579</integer>
+		<integer>1048835</integer>
 	</array>
 	<key>Vendor</key>
 	<string>Realtek</string>
