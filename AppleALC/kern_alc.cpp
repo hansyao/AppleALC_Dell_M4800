@@ -305,7 +305,7 @@ IOReturn AlcEnabler::initializePinConfig(IOService *hdaCodec, IOService *configD
 		hdaCodec->setProperty("alc-sleep-status", OSBoolean::withBoolean(false));
 
 		if (appleLayout && analogCodec && analogLayout) {
-			auto configList = analogCodec > 0 ? OSDynamicCast(OSArray, configDevice->getProperty("HDAConfigDefault")) : nullptr;
+			auto configList = OSDynamicCast(OSArray, configDevice->getProperty("HDAConfigDefault"));
 			if (configList) {
 				unsigned int total = configList->getCount();
 				DBGLOG("alc", "discovered HDAConfigDefault with %u entries", total);
