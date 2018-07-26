@@ -219,103 +219,92 @@ void AlcEnabler::updateDeviceProperties(IORegistryEntry *hdaService, DeviceInfo 
 }
 
 void AlcEnabler::layoutLoadCallback(uint32_t requestTag, kern_return_t result, const void *resourceData, uint32_t resourceDataLength, void *context) {
-	if (callbackAlc && callbackAlc->orgLayoutLoadCallback) {
-		DBGLOG("alc", "layoutLoadCallback %u %d %d %u %d", requestTag, result, resourceData != nullptr, resourceDataLength, context != nullptr);
-		callbackAlc->updateResource(Resource::Layout, result, resourceData, resourceDataLength);
-		DBGLOG("alc", "layoutLoadCallback done %u %d %d %u %d", requestTag, result, resourceData != nullptr, resourceDataLength, context != nullptr);
-		FunctionCast(layoutLoadCallback, callbackAlc->orgLayoutLoadCallback)(requestTag, result, resourceData, resourceDataLength, context);
-	} else {
-		SYSLOG("alc", "layout callback arrived at nowhere");
-	}
+	DBGLOG("alc", "layoutLoadCallback %u %d %d %u %d", requestTag, result, resourceData != nullptr, resourceDataLength, context != nullptr);
+	callbackAlc->updateResource(Resource::Layout, result, resourceData, resourceDataLength);
+	DBGLOG("alc", "layoutLoadCallback done %u %d %d %u %d", requestTag, result, resourceData != nullptr, resourceDataLength, context != nullptr);
+	FunctionCast(layoutLoadCallback, callbackAlc->orgLayoutLoadCallback)(requestTag, result, resourceData, resourceDataLength, context);
 }
 
 void AlcEnabler::platformLoadCallback(uint32_t requestTag, kern_return_t result, const void *resourceData, uint32_t resourceDataLength, void *context) {
-	if (callbackAlc && callbackAlc->orgPlatformLoadCallback) {
-		DBGLOG("alc", "platformLoadCallback %u %d %d %u %d", requestTag, result, resourceData != nullptr, resourceDataLength, context != nullptr);
-		callbackAlc->updateResource(Resource::Platform, result, resourceData, resourceDataLength);
-		DBGLOG("alc", "platformLoadCallback done %u %d %d %u %d", requestTag, result, resourceData != nullptr, resourceDataLength, context != nullptr);
-		FunctionCast(platformLoadCallback, callbackAlc->orgPlatformLoadCallback)(requestTag, result, resourceData, resourceDataLength, context);
-	} else {
-		SYSLOG("alc", "platform callback arrived at nowhere");
-	}
+	DBGLOG("alc", "platformLoadCallback %u %d %d %u %d", requestTag, result, resourceData != nullptr, resourceDataLength, context != nullptr);
+	callbackAlc->updateResource(Resource::Platform, result, resourceData, resourceDataLength);
+	DBGLOG("alc", "platformLoadCallback done %u %d %d %u %d", requestTag, result, resourceData != nullptr, resourceDataLength, context != nullptr);
+	FunctionCast(platformLoadCallback, callbackAlc->orgPlatformLoadCallback)(requestTag, result, resourceData, resourceDataLength, context);
 }
 
-bool AlcEnabler::isAnalogAudio(IOService *hdaDriver, uint32_t *layout) {
+uint32_t AlcEnabler::getAudioLayout(IOService *hdaDriver) {
 	auto parent = hdaDriver->getParentEntry(gIOServicePlane);
-	bool valid = false;
+	uint32_t layout = 0;
 	while (parent) {
 		auto name = parent->getName();
-		if (name) {
-			valid = !strcmp(name, "HDEF");
-			if (valid && layout) {
-				auto p = OSDynamicCast(OSData, parent->getProperty("layout-id"));
-				if (p && p->getLength() == sizeof(uint32_t)) {
-					*layout = *static_cast<const uint32_t *>(p->getBytesNoCopy());
-					DBGLOG("alc", "isAnalogAudio found %u represented layout", *layout);
-				} else {
-					SYSLOG("alc", "isAnalogAudio found invalid represented layout in HDEF");
-				}
-			}
-			if (valid || !strcmp(name, "HDAU"))
-				break;
+		if (name && (!strcmp(name, "HDEF") || !strcmp(name, "HDAU"))) {
+			if (!WIOKit::getOSDataValue(parent, "layout-id", layout))
+				SYSLOG("alc", "failed to obtain layout-id from %s", name);
+			break;
 		}
 		parent = parent->getParentEntry(gIOServicePlane);
 	}
-	return valid;
+	return layout;
 }
 
 IOReturn AlcEnabler::performPowerChange(IOService *hdaDriver, uint32_t from, uint32_t to, unsigned int *timer) {
-	IOReturn ret = kIOReturnError;
-	if (callbackAlc && callbackAlc->orgPerformPowerChange && callbackAlc->orgInitializePinConfig) {
-		bool valid = isAnalogAudio(hdaDriver);
-		DBGLOG("alc", "performPowerChange %s from %u to %u in from sleep %d hdef %d detect %d",
-			safeString(hdaDriver->getName()), from, to, callbackAlc->receivedSleepEvent, valid, callbackAlc->hasHDAConfigDefault);
-		ret = FunctionCast(performPowerChange, callbackAlc->orgPerformPowerChange)(hdaDriver, from, to, timer);
-		if (valid && callbackAlc->hasHDAConfigDefault == WakeVerbMode::Enable) {
-			if (to == ALCAudioDeviceSleep) {
-				callbackAlc->receivedSleepEvent = true;
-			} else if (callbackAlc->receivedSleepEvent &&
-				(to == ALCAudioDeviceIdle || to == ALCAudioDeviceActive)) {
-				auto parent = OSDynamicCast(IOService, hdaDriver->getParentEntry(gIOServicePlane));
-				if (parent) {
-					DBGLOG("alc", "performPowerChange %s forcing wake verbs on %s", safeString(hdaDriver->getName()), safeString(parent->getName()));
-					auto forceRet = FunctionCast(initializePinConfig, callbackAlc->orgInitializePinConfig)(parent, ADDPR(selfInstance));
-					SYSLOG_COND(forceRet != kIOReturnSuccess, "alc", "force config reinitialize returned %08X", forceRet);
-				} else {
-					SYSLOG("alc", "cannot get hda driver parent for wake");
+	IOReturn ret = FunctionCast(performPowerChange, callbackAlc->orgPerformPowerChange)(hdaDriver, from, to, timer);
+
+	auto hdaCodec = hdaDriver ? OSDynamicCast(IOService, hdaDriver->getParentEntry(gIOServicePlane)) : nullptr;
+	if (hdaCodec) {
+		auto pinStatus = OSDynamicCast(OSBoolean, hdaCodec->getProperty("alc-pinconfig-status"));
+		auto sleepStatus = OSDynamicCast(OSBoolean, hdaCodec->getProperty("alc-sleep-status"));
+
+		if (pinStatus && sleepStatus) {
+			bool pin = pinStatus->getValue();
+			bool sleep = pinStatus->getValue();
+			DBGLOG("alc", "power change %s at %s from %u to %u in from pin %d sleep %d",
+				   safeString(hdaDriver->getName()), safeString(hdaCodec->getName()), from, to, pin, sleep);
+
+			if (pin) {
+				if (to == ALCAudioDeviceSleep) {
+					hdaCodec->setProperty("alc-sleep-status", OSBoolean::withBoolean(true));
+				} else if (sleep && (to == ALCAudioDeviceIdle || to == ALCAudioDeviceActive)) {
+					DBGLOG("alc", "power change %s at %s forcing wake verbs", safeString(hdaDriver->getName()), safeString(hdaCodec->getName()));
+					auto forceRet = FunctionCast(initializePinConfig, callbackAlc->orgInitializePinConfig)(hdaCodec, hdaCodec);
+					SYSLOG_COND(forceRet != kIOReturnSuccess, "alc", "power change %s at %s forcing wake returned %08X",
+								safeString(hdaDriver->getName()), safeString(hdaCodec->getName()), forceRet);
+					hdaCodec->setProperty("alc-sleep-status", OSBoolean::withBoolean(false));
 				}
-				callbackAlc->receivedSleepEvent = false;
 			}
+
+		} else {
+			SYSLOG("alc", "power change failed to get pin %d sleep %d", pinStatus != nullptr, sleepStatus != nullptr);
 		}
+
 	} else {
-		SYSLOG("alc", "performPowerChange arrived at nowhere");
+		SYSLOG("alc", "power change failed to obtain hda codec");
 	}
+
 	return ret;
 }
 
 IOReturn AlcEnabler::initializePinConfig(IOService *hdaCodec, IOService *configDevice) {
-	IOReturn ret = kIOReturnError;
-	if (callbackAlc && callbackAlc->orgInitializePinConfig && configDevice) {
-		uint32_t appleLayout = 0;
-		bool valid = isAnalogAudio(hdaCodec, &appleLayout);
-		DBGLOG("alc", "initializePinConfig %s received hda " PRIKADDR ", config " PRIKADDR " config name %s, detect %d valid %d apple layout %u",
-			   safeString(hdaCodec->getName()), CASTKADDR(hdaCodec), CASTKADDR(configDevice),
-			   configDevice ? safeString(configDevice->getName()) : "(null config)",
-			   callbackAlc->hasHDAConfigDefault, valid, appleLayout);
-
-		if (valid && callbackAlc->hasHDAConfigDefault == WakeVerbMode::Detect) {
-			uint32_t analogCodec = 0;
-			uint32_t analogLayout = 0;
-			for (size_t i = 0, s = callbackAlc->codecs.size(); i < s; i++) {
-				if (callbackAlc->controllers[callbackAlc->codecs[i]->controller]->layout > 0) {
-					analogCodec = static_cast<uint32_t>(callbackAlc->codecs[i]->vendor) << 16 | callbackAlc->codecs[i]->codec;
-					analogLayout = callbackAlc->controllers[callbackAlc->codecs[i]->controller]->layout;
-					DBGLOG("alc", "discovered analog codec %08X and layout %u", analogCodec, analogLayout);
-					break;
-				}
+	if (hdaCodec && configDevice && !hdaCodec->getProperty("alc-pinconfig-status")) {
+		uint32_t appleLayout = getAudioLayout(hdaCodec);
+		uint32_t analogCodec = 0;
+		uint32_t analogLayout = 0;
+		for (size_t i = 0, s = callbackAlc->codecs.size(); i < s; i++) {
+			if (callbackAlc->controllers[callbackAlc->codecs[i]->controller]->layout > 0) {
+				analogCodec = static_cast<uint32_t>(callbackAlc->codecs[i]->vendor) << 16 | callbackAlc->codecs[i]->codec;
+				analogLayout = callbackAlc->controllers[callbackAlc->codecs[i]->controller]->layout;
+				break;
 			}
+		}
 
-			callbackAlc->hasHDAConfigDefault = WakeVerbMode::Disable;
+		DBGLOG("alc", "initializePinConfig %s received hda " PRIKADDR ", config " PRIKADDR " config name %s apple layout %u codec %08X layout %u",
+			   safeString(hdaCodec->getName()), CASTKADDR(hdaCodec), CASTKADDR(configDevice),
+			   configDevice ? safeString(configDevice->getName()) : "(null config)", appleLayout, analogCodec, analogLayout);
+
+		hdaCodec->setProperty("alc-pinconfig-status", OSBoolean::withBoolean(false));
+		hdaCodec->setProperty("alc-sleep-status", OSBoolean::withBoolean(false));
+
+		if (appleLayout && analogCodec && analogLayout) {
 			auto configList = analogCodec > 0 ? OSDynamicCast(OSArray, configDevice->getProperty("HDAConfigDefault")) : nullptr;
 			if (configList) {
 				unsigned int total = configList->getCount();
@@ -351,8 +340,9 @@ IOReturn AlcEnabler::initializePinConfig(IOService *hdaCodec, IOService *configD
 												newConfig->setObject("ConfigData", wakeConfigData);
 												newConfig->removeObject("WakeConfigData");
 											}
-											ADDPR(selfInstance)->setProperty("HDAConfigDefault", OSArray::withObjects(&obj, 1));
-											callbackAlc->hasHDAConfigDefault = WakeVerbMode::Enable;
+											// These will be same
+											hdaCodec->setProperty("HDAConfigDefault", OSArray::withObjects(&obj, 1));
+											hdaCodec->setProperty("alc-pinconfig-status", OSBoolean::withBoolean(true));
 										} else {
 											SYSLOG("alc", "failed to copy new HDAConfigDefault collection");
 										}
@@ -365,7 +355,7 @@ IOReturn AlcEnabler::initializePinConfig(IOService *hdaCodec, IOService *configD
 							}
 						} else {
 							SYSLOG("alc", "invalid CodecID %d or LayoutID %d at entry %u, pinconfigs are broken",
-								currCodec != nullptr, currLayout != nullptr, i);
+								   currCodec != nullptr, currLayout != nullptr, i);
 						}
 					} else {
 						SYSLOG("alc", "invalid HDAConfigDefault entry at %u, pinconfigs are broken", i);
@@ -374,12 +364,11 @@ IOReturn AlcEnabler::initializePinConfig(IOService *hdaCodec, IOService *configD
 			} else {
 				SYSLOG("alc", "invalid HDAConfigDefault, pinconfigs are broken");
 			}
+
 		}
-		ret = FunctionCast(initializePinConfig, callbackAlc->orgInitializePinConfig)(hdaCodec, configDevice);
-	} else {
-		SYSLOG("alc", "initializePinConfig arrived at nowhere");
 	}
-	return ret;
+
+	return FunctionCast(initializePinConfig, callbackAlc->orgInitializePinConfig)(hdaCodec, configDevice);
 }
 
 void AlcEnabler::handleAudioClientEntitlement(task_t task, const char *entitlement, OSObject *&original) {

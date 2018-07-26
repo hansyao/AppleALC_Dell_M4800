@@ -84,14 +84,13 @@ private:
 	};
 
 	/**
-	 *  Checks whether this driver is attached to HDEF
+	 *  Obtain HDEF and HDAU layout-id
 	 *
 	 *  @param hdaDriver  ioreg driver instance
-	 *  @param layout     layout-id value in HDEF parent
 	 *
-	 *  @return true on successful find
+	 *  @return layout-id on successful find or 0
 	 */
-	static bool isAnalogAudio(IOService *hdaDriver, uint32_t *layout=nullptr);
+	static uint32_t getAudioLayout(IOService *hdaDriver);
 
 	/**
 	 *  Hooked performPowerChange method triggering a verb sequence on wake
@@ -271,11 +270,6 @@ private:
 	int computerModel {WIOKit::ComputerModel::ComputerInvalid};
 
 	/**
-	 *  Set when we do not want to perform verb reinitialisation
-	 */
-	bool receivedSleepEvent {false};
-
-	/**
 	 *  HDAConfigDefault availability in AppleALC
 	 */
 	enum class WakeVerbMode {
@@ -283,11 +277,6 @@ private:
 		Enable,
 		Disable
 	};
-
-	/**
-	 *  Marks HDAConfigDefault availability in AppleALC
-	 */
-	WakeVerbMode hasHDAConfigDefault {WakeVerbMode::Detect};
 
 	/**
 	 *  Total available NVIDIA HDAU device-ids in 10.13 and newer
