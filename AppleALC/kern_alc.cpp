@@ -170,12 +170,10 @@ void AlcEnabler::updateDeviceProperties(IORegistryEntry *hdaService, DeviceInfo 
 			uint32_t alcId;
 			if (WIOKit::getOSDataValue(hdaService, "alc-layout-id", alcId)) {
 				DBGLOG("alc", "found normal alc-layout-id %u", alcId);
-			} else if (info->firmwareVendor != DeviceInfo::FirmwareVendor::Apple) {
-				uint32_t legacyId;
-				if (WIOKit::getOSDataValue(hdaService, "layout-id", legacyId)) {
-					DBGLOG("audio", "found legacy alc-layout-id (from layout-id) %u", legacyId);
-					hdaService->setProperty("alc-layout-id", &legacyId, sizeof(legacyId));
-				}
+			} else if (info->firmwareVendor != DeviceInfo::FirmwareVendor::Apple &&
+					   WIOKit::getOSDataValue(hdaService, "layout-id", alcId)) {
+				DBGLOG("audio", "found legacy alc-layout-id (from layout-id) %u", alcId);
+				hdaService->setProperty("alc-layout-id", &alcId, sizeof(alcId));
 			}
 		}
 
@@ -257,7 +255,7 @@ IOReturn AlcEnabler::performPowerChange(IOService *hdaDriver, uint32_t from, uin
 
 		if (pinStatus && sleepStatus) {
 			bool pin = pinStatus->getValue();
-			bool sleep = pinStatus->getValue();
+			bool sleep = sleepStatus->getValue();
 			DBGLOG("alc", "power change %s at %s from %u to %u in from pin %d sleep %d",
 				   safeString(hdaDriver->getName()), safeString(hdaCodec->getName()), from, to, pin, sleep);
 
