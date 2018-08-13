@@ -1040,9 +1040,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Rockjesus - Realtek ALC256 (3246) - dell 7559</string>
 					<key>CodecID</key>
@@ -1057,9 +1055,7 @@
 					<key>LayoutID</key>
 					<integer>11</integer>
 					<key>WakeConfigData</key>
-					<data>
-					AUcMAg==
-					</data>
+					<data>AUcMAg==</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
@@ -2971,6 +2967,33 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>13</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Damon - Realtek ALC 295 for HP Envy x360 15-bp107tx</string>
+					<key>CodecID</key>
+					<integer>283902613</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccMAEnHQEBJx6mAScfkAE3HPABNx0AATce
+					AAE3H0ABRxzwAUcdAAFHHgABRx9AAUcMAgFn
+					HPABZx0AAWceAAFnH0ABdxwQAXcdAQF3HhcB
+					dx+QAYcc8AGHHQABhx4BAYcfQAGXHEABlx0Q
+					AZcegQGXHwIBpxzwAacdAAGnHgABpx9AAbcc
+					8AG3HQABtx4AAbcfQAG3DAIB1xzwAdcdAAHX
+					HgAB1x9AAecc8AHnHQAB5x4BAecfQAIXHCAC
+					Fx0QAhceIQIXHwICFwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>1</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>

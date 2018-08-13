@@ -14,6 +14,14 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>Damon - Realtek ALC 295 for HP Envy x360 15-bp107tx</string>
+				<key>Id</key>
+				<integer>1</integer>
+				<key>Path</key>
+				<string>layout1.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Mirone - Realtek ALC295/ALC3254</string>
 				<key>Id</key>
 				<integer>3</integer>
@@ -47,6 +55,14 @@
 		</array>
 		<key>Platforms</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Damon - Realtek ALC 295 for HP Envy x360 15-bp107tx</string>
+				<key>Id</key>
+				<integer>1</integer>
+				<key>Path</key>
+				<string>Platforms1.xml.zlib</string>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Mirone - Realtek ALC295/ALC3254</string>
