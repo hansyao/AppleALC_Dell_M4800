@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.3.2
+- Added ALC269 layout-id 45 for Asus A45A and K45 by maiconjs (Wolfield)
+
 #### v1.3.1
 - Fixed incorrect unused HDAU termination
 - Fixed pinconfig refresh causing random init failures

@@ -1834,6 +1834,24 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>maiconjs (Wolfield) - Asus A45A 269VB1</string>
+					<key>CodecID</key>
+					<integer>283902569</integer>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHQABRx4XAUcfmQGHHCABhx0QAYce
+					gQGHHwEBJxwwAScdAAEnHqYBJx+ZAhccUAIX
+					HRACFx4hAhcfAQ==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>45</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>HASEE Z6-i78154S2 ALC269 by lianny  </string>
 					<key>CodecID</key>
 					<integer>283902569</integer>
