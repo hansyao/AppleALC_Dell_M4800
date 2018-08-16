@@ -1841,12 +1841,16 @@
 					<data>
 					AUccEAFHHQABRx4XAUcfmQGHHCABhx0QAYce
 					gQGHHwEBJxwwAScdAAEnHqYBJx+ZAhccUAIX
-					HRACFx4hAhcfAQ==
+					HRACFx4hAhcfAQFHDAI=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>45</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
