@@ -46,6 +46,22 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>InsanelyDeepak - Realtek ALC295 v2 Asus UX430UA</string>
+				<key>Id</key>
+				<integer>14</integer>
+				<key>Path</key>
+				<string>layout14.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>InsanelyDeepak - Realtek ALC295/3254</string>
+				<key>Id</key>
+				<integer>15</integer>
+				<key>Path</key>
+				<string>layout15.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>vusun123 - ALC 295 for Skylake HP Pavilion</string>
 				<key>Id</key>
 				<integer>28</integer>
@@ -84,6 +100,22 @@
 				<string>DalianSky - Realtek ALC295/ALC3254 Dell7570</string>
 				<key>Id</key>
 				<integer>13</integer>
+				<key>Path</key>
+				<string>PlatformsID.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>InsanelyDeepak - Realtek ALC295 v2 Asus UX430UA</string>
+				<key>Id</key>
+				<integer>14</integer>
+				<key>Path</key>
+				<string>PlatformsID.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>InsanelyDeepak - Realtek ALC295/3254</string>
+				<key>Id</key>
+				<integer>15</integer>
 				<key>Path</key>
 				<string>PlatformsID.xml.zlib</string>
 			</dict>
