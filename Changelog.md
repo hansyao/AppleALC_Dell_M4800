@@ -5,6 +5,7 @@ AppleALC Changelog
 - Added WakeConfigData for ALC892 layout-id 1 by FredWst
 - Added ALC295 layout-id 14 for Asus UX430UA by InsanelyDeepak
 - Added ALC295 layout-id 15 for ALC295/ALC3254 by InsanelyDeepak
+- Remove duplicate resources for ALC295 layout-id 12 on Asus UX430
 
 #### v1.3.1
 - Fixed incorrect unused HDAU termination
