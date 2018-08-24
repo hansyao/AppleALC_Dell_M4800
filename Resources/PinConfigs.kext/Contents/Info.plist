@@ -522,6 +522,25 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Andres Laptop Patch ALC230 Lenovo 310-14ISK</string>
+					<key>CodecID</key>
+					<integer>283902512</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccEAEnHQABJx6gAScfkAFHHCABRx0AAUce
+					FwFHH5ABlxwwAZcdEAGXHosBlx8EAhccQAIX
+					HRACFx4rAhcfBAE3HFABNx0AATceAAE3H0AB
+					1xxgAdcdsAHXHmYB1x9AAUcMAgGXDAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - Realtek ALC233</string>
 					<key>CodecID</key>
 					<integer>283902515</integer>
