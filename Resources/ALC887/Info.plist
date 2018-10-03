@@ -14,6 +14,22 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>Realtek 887-VD for Asus B85-ME by maiconjs</string>
+				<key>Id</key>
+				<integer>40</integer>
+				<key>Path</key>
+				<string>layout40.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Realtek 887-VD AD0 for Asus Z97M-PLUS/BR by maiconjs</string>
+				<key>Id</key>
+				<integer>20</integer>
+				<key>Path</key>
+				<string>layout20.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Toleda ALC887</string>
 				<key>Id</key>
 				<integer>1</integer>
@@ -111,6 +127,22 @@
 		</array>
 		<key>Platforms</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Realtek 887-VD for Asus B85-ME by maiconjs</string>
+				<key>Id</key>
+				<integer>40</integer>
+				<key>Path</key>
+				<string>Platforms40.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Realtek 887-VD AD0 for Asus Z97M-PLUS/BR by maiconjs</string>
+				<key>Id</key>
+				<integer>20</integer>
+				<key>Path</key>
+				<string>Platforms20.xml.zlib</string>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Toleda</string>

@@ -14,6 +14,14 @@
 		<array>
 			<dict>
 				<key>Comment</key>
+				<string>ALC 230 for Lenovo Ideapad 320 by maiconjs</string>
+				<key>Id</key>
+				<integer>20</integer>
+				<key>Path</key>
+				<string>layout20.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Andres Laptop Patch ALC230 Lenovo 310-14ISK</string>
 				<key>Id</key>
 				<integer>13</integer>
@@ -23,6 +31,14 @@
 		</array>
 		<key>Platforms</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>ALC 230 for Lenovo Ideapad 320 by maiconjs</string>
+				<key>Id</key>
+				<integer>20</integer>
+				<key>Path</key>
+				<string>Platforms20.xml.zlib</string>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Andres Laptop Patch ALC230 Lenovo 310-14ISK</string>
