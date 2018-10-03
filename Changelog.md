@@ -7,6 +7,7 @@ AppleALC Changelog
 - Added ALC295 layout-id 15 for ALC295/ALC3254 by InsanelyDeepak
 - Remove duplicate resources for ALC295 layout-id 12 on Asus UX430
 - Added ALC230 layout-id 13 for Lenovo 310-14ISK by Andres
+- Added ALC235 layout-id 14 for Lenovo Y520/Y720 series by the-braveknight
 
 #### v1.3.1
 - Fixed incorrect unused HDAU termination
