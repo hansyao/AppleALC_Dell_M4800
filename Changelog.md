@@ -1,5 +1,11 @@
 AppleALC Changelog
 ==================
+#### v1.3.3
+- Added ALC235 layout-id 14 for Lenovo Y520/Y720 series by the-braveknight
+- Added ALC230 layout-id 20 for Lenovo Ideapad 320 by maiconjs
+- Added ALC887-VD AD0 layout-id 20 for Asus Z97M-PLUS/BR by maiconjs
+- Added ALC887-VD layout-id 40 for Asus B85-ME by maiconjs
+
 #### v1.3.2
 - Added ALC269 layout-id 45 for Asus A45A and K45 by maiconjs (Wolfield)
 - Added WakeConfigData for ALC892 layout-id 1 by FredWst
@@ -7,10 +13,6 @@ AppleALC Changelog
 - Added ALC295 layout-id 15 for ALC295/ALC3254 by InsanelyDeepak
 - Remove duplicate resources for ALC295 layout-id 12 on Asus UX430
 - Added ALC230 layout-id 13 for Lenovo 310-14ISK by Andres
-- Added ALC235 layout-id 14 for Lenovo Y520/Y720 series by the-braveknight
-- Added ALC230 layout-id 20 for Lenovo Ideapad 320 by maiconjs
-- Added ALC887-VD AD0 layout-id 20 for Asus Z97M-PLUS/BR by maiconjs
-- Added ALC887-VD layout-id 40 for Asus B85-ME by maiconjs
 
 #### v1.3.1
 - Fixed incorrect unused HDAU termination
