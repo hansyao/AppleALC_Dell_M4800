@@ -5,6 +5,7 @@ AppleALC Changelog
 - Added ALC230 layout-id 20 for Lenovo Ideapad 320 by maiconjs
 - Added ALC887-VD AD0 layout-id 20 for Asus Z97M-PLUS/BR by maiconjs
 - Added ALC887-VD layout-id 40 for Asus B85-ME by maiconjs
+- Added ALC236 layout-id 16 for Lenovo Ideapad 320s 14ikb by RodionS
 
 #### v1.3.2
 - Added ALC269 layout-id 45 for Asus A45A and K45 by maiconjs (Wolfield)
