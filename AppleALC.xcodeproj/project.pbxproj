@@ -333,6 +333,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Resources/PinConfigs.kext/Contents/Info.plist",
 			);
 			name = "Convert Resources";
 			outputPaths = (
