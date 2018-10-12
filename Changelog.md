@@ -10,6 +10,7 @@ AppleALC Changelog
 - Added ALC662 layout-id 15 for Acer Aspire A7600U All in One by MacPeet
 - Added ALC255 layout-id 30 for XiaoMi Notebook Air by HongyuS
 - Added CX20590 layout-id 13 and 14 for Lenovo T420 by tluck
+- Added ALC283 layout-id 44 for ThinkCentre M93z 10AF ALC283 by giesteira
 
 #### v1.3.2
 - Added ALC269 layout-id 45 for Asus A45A and K45 by maiconjs (Wolfield)
