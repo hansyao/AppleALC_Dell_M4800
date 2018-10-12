@@ -32,6 +32,95 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Realtek ALC283 for ThinkCentre M93z 10AF ALC283 by giesteira </string>
+					<key>CodecID</key>
+					<integer>283902595</integer>
+					<key>ConfigData</key>
+					<data>
+					AbccQAG3HQABtx4XAbcfmQEnHBABJx0AASce
+					pgEnH5kBlxwgAZcdkAGXHoEBlx8BAaccMAGn
+					HZABpx6BAacfAQIXHAACFx1AAhceIQIXHwEB
+					RwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>44</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Realtek ALC887-VD for Asus B85-ME by maiconjs</string>
+					<key>CodecID</key>
+					<integer>283904135</integer>
+					<key>ConfigData</key>
+					<data>
+					AUccAAFHHUABRx4BAUcfAQG3HBABtx1AAbce
+					IQG3HwIBhxwgAYcdkAGHHqABhx+QAaccMAGn
+					HTABpx6BAacfAQGXHEABlx2QAZcegQGXHwIB
+					RwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>40</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Realtek 887-VD AD0 for Asus Z97M-PLUS/BR by maiconjs</string>
+					<key>CodecID</key>
+					<integer>283904135</integer>
+					<key>ConfigData</key>
+					<data>
+					AUccAAFHHUABRx4BAUcfAQFnHBABZx1gAWce
+					AQFnHwEBVxwgAVcdEAFXHgEBVx8BAXccMAF3
+					HSABdx4BAXcfAQG3HEABtx1AAbceIQG3HwIB
+					FxxQARcdAQEXHkYBFx+ZAYccYAGHHZABhx6g
+					AYcfkAGnHHABpx0wAacegQGnHwEBlxyAAZcd
+					kAGXHoEBlx8CAUcMAg==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>20</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>ALC 230 for Lenovo Ideapad 320 by maiconjs</string>
+					<key>CodecID</key>
+					<integer>283902512</integer>
+					<key>ConfigData</key>
+					<data>
+					AhccEAIXHRACFx4rAhcfBAFHHCABRx0BAUce
+					FwFHH5ABJxwwAScdAQEnHqABJx+QAZccQAGX
+					HRABlx6LAZcfBA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>20</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Creative CA0132, default</string>
 					<key>CodecID</key>
 					<integer>285343761</integer>
