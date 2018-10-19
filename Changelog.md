@@ -1,6 +1,9 @@
 AppleALC Changelog
 ==================
 #### v1.3.3
+- Added ability to disable controller patching by injecting property 'no-controller-patch' (for use of FakePCIID_Intel_HDMI_Audio)
+- Fixed volume control for CX8200 with Wern Apfel patch from CX20724
+- Fixed patches for IDT92HD872_4 (IDT 76d9)
 - Added ALC235 layout-id 14 for Lenovo Y520/Y720 series by the-braveknight
 - Added ALC230 layout-id 20 for Lenovo Ideapad 320 by maiconjs
 - Added ALC887-VD AD0 layout-id 20 for Asus Z97M-PLUS/BR by maiconjs
