@@ -38,6 +38,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Custom ALC282 lenovo y430p by loverto</string>
+				<key>Id</key>
+				<integer>22</integer>
+				<key>Path</key>
+				<string>layout22.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Skvo ALC282 Acer Aspire on IvyBridge by Andrey1970</string>
 				<key>Id</key>
 				<integer>27</integer>
@@ -84,14 +92,6 @@
 				<key>Path</key>
 				<string>layout127.xml.zlib</string>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Custom ALC282 lenovo y430p by loverto</string>
-				<key>Id</key>
-				<integer>22</integer>
-				<key>Path</key>
-				<string>layout22.xml.zlib</string>
-			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
@@ -118,6 +118,14 @@
 				<integer>13</integer>
 				<key>Path</key>
 				<string>PlatformsID.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Custom ALC282 lenovo y430p by loverto</string>
+				<key>Id</key>
+				<integer>22</integer>
+				<key>Path</key>
+				<string>Platforms22.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -166,14 +174,6 @@
 				<integer>127</integer>
 				<key>Path</key>
 				<string>Platforms127.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Custom ALC282 lenovo y430p by loverto</string>
-				<key>Id</key>
-				<integer>22</integer>
-				<key>Path</key>
-				<string>Platforms22.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
