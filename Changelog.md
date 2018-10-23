@@ -17,6 +17,7 @@ AppleALC Changelog
 - Added ALC662v3 layout-id 16 for Lenovo ThinkCentre M92P SFF by phucnguyen.2411
 - Added ALC282 layout-id 22 for Lenovo Y430P  by lovert
 - Fixed CX20756 layout-id 13
+- Added ALC892 layout-id 15 for MSi Z97S SLI Krait Edition by MacPeet
 
 #### v1.3.2
 - Added ALC269 layout-id 45 for Asus A45A and K45 by maiconjs (Wolfield)
