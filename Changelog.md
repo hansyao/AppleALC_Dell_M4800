@@ -1,6 +1,9 @@
 AppleALC Changelog
 ==================
+
+
 #### v1.3.3
+- Added ALC282 layout-id 22 for Lenovo Y430P  by lovert
 - Added ability to disable controller patching by injecting property 'no-controller-patch' (for use of FakePCIID_Intel_HDMI_Audio)
 - Fixed volume control for CX8200 with Wern Apfel patch from CX20724
 - Fixed patches for IDT92HD872_4 (IDT 76d9)
