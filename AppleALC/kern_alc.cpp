@@ -18,6 +18,8 @@
 static AlcEnabler *callbackAlc;
 
 void AlcEnabler::init() {
+	callbackAlc = this;
+
 	lilu.onPatcherLoadForce(
 	[](void *user, KernelPatcher &pathcer) {
 		static_cast<AlcEnabler *>(user)->updateProperties();
@@ -441,7 +443,7 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 
 	if (kextIndex == KextIdAppleGFXHDA) {
 		KernelPatcher::RouteRequest request("__ZN21AppleGFXHDAController5probeEP9IOServicePi", gfxProbe, orgGfxProbe);
-		patcher.routeMultiple(index, &request, 1);
+		patcher.routeMultiple(index, &request, 1, address, size);
 		return;
 	}
 	
@@ -516,8 +518,6 @@ void AlcEnabler::processKext(KernelPatcher &patcher, size_t index, mach_vm_addre
 	}
 	
 	if ((progressState & ProcessingState::CallbacksWantRouting) && kextIndex == KextIdAppleHDA) {
-		callbackAlc = this;
-
 		KernelPatcher::RouteRequest requests[] {
 			KernelPatcher::RouteRequest("__ZN14AppleHDADriver18layoutLoadCallbackEjiPKvjPv", layoutLoadCallback, orgLayoutLoadCallback),
 			KernelPatcher::RouteRequest("__ZN14AppleHDADriver20platformLoadCallbackEjiPKvjPv", platformLoadCallback, orgPlatformLoadCallback),
