@@ -106,6 +106,12 @@ void AlcEnabler::updateProperties() {
 
 			if (!hdaSevice)
 				continue;
+			
+			// If a no-alc-controller property is set, ignore.
+			uint32_t noAlcController = 0;
+			WIOKit::getOSDataValue(hdaSevice, "no-alc-controller", noAlcController);
+			if (noAlcController)
+				continue;
 
 			uint32_t ven = devInfo->videoExternal[gpu].vendor;
 			uint32_t dev = 0, rev = 0;
