@@ -55,7 +55,7 @@ void AlcEnabler::updateProperties() {
 		bool hasBuiltinDigitalAudio = !devInfo->reportedFramebufferIsConnectorLess && devInfo->videoBuiltin;
 
 		// Firstly, update Haswell or Broadwell HDAU device for built-in digital audio.
-		if (devInfo->audioBuiltinDigital) {
+		if (devInfo->audioBuiltinDigital && validateInjection(devInfo->audioBuiltinDigital)) {
 			if (hasBuiltinDigitalAudio) {
 				// This is a normal HDAU device for an IGPU with connectors.
 				updateDeviceProperties(devInfo->audioBuiltinDigital, devInfo, "onboard-1", false);
@@ -79,7 +79,7 @@ void AlcEnabler::updateProperties() {
 		}
 
 		// Secondly, update HDEF device and make it support digital audio
-		if (devInfo->audioBuiltinAnalog) {
+		if (devInfo->audioBuiltinAnalog && validateInjection(devInfo->audioBuiltinAnalog)) {
 			const char *hdaGfx = nullptr;
 			if (hasBuiltinDigitalAudio && !devInfo->audioBuiltinDigital)
 				hdaGfx = "onboard-1";
@@ -87,7 +87,7 @@ void AlcEnabler::updateProperties() {
 		}
 
 		// Thirdly, update IGPU device in case we have digital audio
-		if (hasBuiltinDigitalAudio) {
+		if (hasBuiltinDigitalAudio && validateInjection(devInfo->videoBuiltin)) {
 			devInfo->videoBuiltin->setProperty("hda-gfx", const_cast<char *>("onboard-1"), sizeof("onboard-1"));
 			if (!devInfo->audioBuiltinDigital) {
 				uint32_t dev = 0, rev = 0;
@@ -104,13 +104,7 @@ void AlcEnabler::updateProperties() {
 			auto hdaSevice = devInfo->videoExternal[gpu].audio;
 			auto gpuService = devInfo->videoExternal[gpu].video;
 
-			if (!hdaSevice)
-				continue;
-			
-			// If a no-alc-controller property is set, ignore.
-			uint32_t noAlcController = 0;
-			WIOKit::getOSDataValue(hdaSevice, "no-alc-controller", noAlcController);
-			if (noAlcController)
+			if (!hdaSevice || !validateInjection(hdaSevice))
 				continue;
 
 			uint32_t ven = devInfo->videoExternal[gpu].vendor;
@@ -758,6 +752,16 @@ bool AlcEnabler::validateCodecs() {
 	return codecs.size() > 0;
 }
 
+bool AlcEnabler::validateInjection(IORegistryEntry *hdaService) {
+	// Check for no-controller-inject. If set, ignore the controller.
+	uint32_t noControllerInject = 0;
+	auto name = hdaService->getName();
+	
+	WIOKit::getOSDataValue(hdaService, "no-controller-inject", noControllerInject);
+	DBGLOG("alc", "%sinjecting %s", noControllerInject ? "not " : "", name);
+	return noControllerInject == 0;
+}
+
 void AlcEnabler::applyPatches(KernelPatcher &patcher, size_t index, const KextPatch *patches, size_t patchNum) {
 	DBGLOG("alc", "applying patches for %lu kext", index);
 	for (size_t p = 0; p < patchNum; p++) {
@@ -772,3 +776,5 @@ void AlcEnabler::applyPatches(KernelPatcher &patcher, size_t index, const KextPa
 		}
 	}
 }
+
+
