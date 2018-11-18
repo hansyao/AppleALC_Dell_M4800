@@ -755,10 +755,13 @@ bool AlcEnabler::validateCodecs() {
 bool AlcEnabler::validateInjection(IORegistryEntry *hdaService) {
 	// Check for no-controller-inject. If set, ignore the controller.
 	uint32_t noControllerInject = 0;
-	auto name = hdaService->getName();
-	
 	WIOKit::getOSDataValue(hdaService, "no-controller-inject", noControllerInject);
-	DBGLOG("alc", "%sinjecting %s", noControllerInject ? "not " : "", name);
+	
+	if (noControllerInject) {
+		auto name = hdaService->getName();
+		SYSLOG("alc", "not injecting %s", name);
+	}
+	
 	return noControllerInject == 0;
 }
 
