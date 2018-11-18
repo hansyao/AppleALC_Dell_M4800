@@ -101,18 +101,18 @@ void AlcEnabler::updateProperties() {
 
 		// Fourthly, update all the GPU devices if any
 		for (size_t gpu = 0; gpu < devInfo->videoExternal.size(); gpu++) {
-			auto hdaSevice = devInfo->videoExternal[gpu].audio;
+			auto hdaService = devInfo->videoExternal[gpu].audio;
 			auto gpuService = devInfo->videoExternal[gpu].video;
 
-			if (!hdaSevice || !validateInjection(hdaSevice))
+			if (!hdaService || !validateInjection(hdaService))
 				continue;
 
 			uint32_t ven = devInfo->videoExternal[gpu].vendor;
 			uint32_t dev = 0, rev = 0;
-			if (WIOKit::getOSDataValue(hdaSevice, "device-id", dev) &&
-				WIOKit::getOSDataValue(hdaSevice, "revision-id", rev)) {
+			if (WIOKit::getOSDataValue(hdaService, "device-id", dev) &&
+				WIOKit::getOSDataValue(hdaService, "revision-id", rev)) {
 				// Register the controller
-				insertController(ven, dev, rev, nullptr != hdaSevice->getProperty("no-controller-patch"));
+				insertController(ven, dev, rev, nullptr != hdaService->getProperty("no-controller-patch"));
 				// Disable the id in the list if any
 				if (ven == WIOKit::VendorID::NVIDIA) {
 					uint32_t device = (dev << 16) | WIOKit::VendorID::NVIDIA;
@@ -125,7 +125,7 @@ void AlcEnabler::updateProperties() {
 			// Refresh the main properties including hda-gfx.
 			char hdaGfx[16];
 			snprintf(hdaGfx, sizeof(hdaGfx), "onboard-%u", hdaGfxCounter++);
-			updateDeviceProperties(hdaSevice, devInfo, hdaGfx, false);
+			updateDeviceProperties(hdaService, devInfo, hdaGfx, false);
 			gpuService->setProperty("hda-gfx", hdaGfx, static_cast<uint32_t>(strlen(hdaGfx)+1));
 
 			// Refresh connector types on NVIDIA, since they are required for HDMI audio to function.
