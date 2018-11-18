@@ -754,15 +754,11 @@ bool AlcEnabler::validateCodecs() {
 
 bool AlcEnabler::validateInjection(IORegistryEntry *hdaService) {
 	// Check for no-controller-inject. If set, ignore the controller.
-	uint32_t noControllerInject = 0;
-	WIOKit::getOSDataValue(hdaService, "no-controller-inject", noControllerInject);
+	bool noControllerInject = nullptr != hdaService->getProperty("no-controller-inject");
+	if (noControllerInject)
+		SYSLOG("alc", "not injecting %s", safeString(hdaService->getName()));
 	
-	if (noControllerInject) {
-		auto name = hdaService->getName();
-		SYSLOG("alc", "not injecting %s", name);
-	}
-	
-	return noControllerInject == 0;
+	return !noControllerInject;
 }
 
 void AlcEnabler::applyPatches(KernelPatcher &patcher, size_t index, const KextPatch *patches, size_t patchNum) {
@@ -779,5 +775,3 @@ void AlcEnabler::applyPatches(KernelPatcher &patcher, size_t index, const KextPa
 		}
 	}
 }
-
-
