@@ -9,6 +9,7 @@ AppleALC Changelog
 - Added SigmaTel STAC9200 layout-id 11 for Dell Precision 390 by Goldfish64
 - Added support for HDMI Audio of Alienware Alpha GTX860M
 - Added ALC1220 layout-id 15 for MSI WT75 Laptop by fleaplus.
+- Fix ConfigData in  ALC256 (3246) for Dell Series by Insanelydeepak
 
 #### v1.3.3
 - Added ability to disable controller patching by injecting property 'no-controller-patch' (for use of FakePCIID_Intel_HDMI_Audio)
