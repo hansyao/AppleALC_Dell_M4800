@@ -12,6 +12,7 @@ AppleALC Changelog
 - Fix ConfigData in  ALC256 (3246) for Dell Series by Insanelydeepak
 - Added ALC298 layout-id 21 for Lenovo 720S-15IKB by Andres ZeroCross
 - Added ALC236 layout-id 99 for Lenovo Air 13 IWL by DalianSky
+- Fix speaker volume slider CX8050
 
 #### v1.3.3
 - Added ability to disable controller patching by injecting property 'no-controller-patch' (for use of FakePCIID_Intel_HDMI_Audio)
