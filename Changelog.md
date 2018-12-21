@@ -19,6 +19,7 @@ AppleALC Changelog
 - Added VIA VT1705 layout-id 21 for ECS H81H3-M4 (1.0A) by Andres ZeroCross
 - Added ALC269 layoutid=88 for MECHREVO X8Ti Plus by DalianSky
 - Added ALC662 layout-id 17 for HP Compaq Elite 8000 SFF by aloha_cn
+- Added ALC288 layout-id 23 for Dell XPS 9343 by yyfn
 
 #### v1.3.3
 - Added ability to disable controller patching by injecting property 'no-controller-patch' (for use of FakePCIID_Intel_HDMI_Audio)
