@@ -18,6 +18,7 @@ AppleALC Changelog
 - Added ALC295 layout-id 21 for Acer Nitro 5 Spin (NP515-51) by Andres ZeroCross
 - Added VIA VT1705 layout-id 21 for ECS H81H3-M4 (1.0A) by Andres ZeroCross
 - Added ALC269 layoutid=88 for MECHREVO X8Ti Plus by DalianSky
+- Added ALC662 layout-id 17 for HP Compaq Elite 8000 SFF by aloha_cn
 
 #### v1.3.3
 - Added ability to disable controller patching by injecting property 'no-controller-patch' (for use of FakePCIID_Intel_HDMI_Audio)
@@ -34,7 +35,6 @@ AppleALC Changelog
 - Added CX20590 layout-id 13 and 14 for Lenovo T420 by tluck
 - Added ALC283 layout-id 44 for ThinkCentre M93z 10AF ALC283 by giesteira
 - Added ALC662v3 layout-id 16 for Lenovo ThinkCentre M92P SFF by phucnguyen.2411
-- Added ALC662 layout-id 17 for HP Compaq Elite 8000 SFF by aloha_cn
 - Added ALC282 layout-id 22 for Lenovo Y430P  by lovert
 - Fixed CX20756 layout-id 13
 - Added ALC892 layout-id 15 for MSi Z97S SLI Krait Edition by MacPeet
