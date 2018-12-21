@@ -230,6 +230,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Laptop patch ALC269VC Samsung _NP350V5C - Giesteira</string>
+				<key>Id</key>
+				<integer>44</integer>
+				<key>Path</key>
+				<string>layout44.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>maiconjs (Wolfield) - Asus A45A 269VB1</string>
 				<key>Id</key>
 				<integer>45</integer>
@@ -510,6 +518,14 @@
 				<integer>40</integer>
 				<key>Path</key>
 				<string>Platforms40.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Laptop patch ALC269VC Samsung _NP350V5C - Giesteira</string>
+				<key>Id</key>
+				<integer>44</integer>
+				<key>Path</key>
+				<string>Platforms44.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
