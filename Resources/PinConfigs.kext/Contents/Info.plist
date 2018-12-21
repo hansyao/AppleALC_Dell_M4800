@@ -2506,7 +2506,7 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>Dell Precision T7610 Workstation﻿ ALC280 by Andres ZeroCross</string>
+					<string>Dell Precision T7610 Workstation ALC280 by Andres ZeroCross</string>
 					<key>CodecID</key>
 					<integer>283902592</integer>
 					<key>ConfigData</key>
@@ -4557,6 +4557,24 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>50</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283904135</integer>
+					<key>Comment</key>
+					<string>ctich ALC887 for Asus PRIME Z270-P</string>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHUABRx4QAUcfkAG3HCABtx1AAbce
+					IAG3HwIBhxxAAYcdkAGHHqABhx+RAZccMAGX
+					HZEBlx6AAZcfAgEXHFABFx3gARceRQEXHwE=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>52</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
