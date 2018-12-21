@@ -5885,6 +5885,31 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>CodecID</key>
+					<integer>283906592</integer>
+					<key>CodecName</key>
+					<string>MacPeet - ALC1220 for Gigabyte Z390</string>
+					<key>ConfigData</key>
+					<data>
+					AeccMAHnHSAB5x5FAecfAQGHHEABhx2QAYce
+					oQGHH5EBlxxQAZcdkAGXHoEBlx8CAUccYAFH
+					HUABRx4hAUcfAgFHDAIBVxxwAVcdEAFXHgEB
+					Vx8BAWccgAFnHWABZx4BAWcfAQGnHJABpx0w
+					AacegQGnHwEBtxygAbcdQAG3HhEBtx+RAbcM
+					Ag==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>16</integer>
+					<key>WakeConfigData</key>
+					<data>AbcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
 					<integer>283906408</integer>
 					<key>CodecName</key>
 					<string>Toleda -  Realtek ALC S1220A</string>
