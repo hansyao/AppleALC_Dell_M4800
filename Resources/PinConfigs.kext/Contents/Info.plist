@@ -325,6 +325,26 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>AD1984A - giesteira</string>
+					<key>CodecID</key>
+					<integer>299112778</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccAAEnHUABJx4BAScfAQHHHBABxx0wAcce
+					gQHHHwEBdxwgAXcdEAF3HqYBdx+5ARccMAEX
+					HUABFx4hARcfAQFnHEABZx1AAWceFwFnH5EB
+					pxxQAacdEAGnHvcBpx9RAbccYAG3HWABtx5E
+					AbcfAQE3HPABNx0QATceHwE3H1E=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>44</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - ADI-1988B</string>
 					<key>CodecID</key>
 					<integer>299112843</integer>

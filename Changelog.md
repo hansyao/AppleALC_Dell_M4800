@@ -23,6 +23,7 @@ AppleALC Changelog
 - Added ALC892 layout-id 16 for MSI GL73-8RD by MacPeet
 - Change CX20585 layout-id 13 resources
 - Added ALC887 layout-id 52 for Asus PRIME Z270-P by ctich
+- Added AD1984A layout-id 44 by giesteira
 
 #### v1.3.3
 - Added ability to disable controller patching by injecting property 'no-controller-patch' (for use of FakePCIID_Intel_HDMI_Audio)
