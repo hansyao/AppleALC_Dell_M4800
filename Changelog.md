@@ -17,6 +17,7 @@ AppleALC Changelog
 - Added ALC280 layout-id 21 for Dell Precision ﻿T7610 ﻿Workstation by Andres ZeroCross
 - Added ALC295 layout-id 21 for Acer Nitro 5 Spin (NP515-51) by Andres ZeroCross
 - Added VIA VT1705 layout-id 21 for ECS H81H3-M4 (1.0A) by Andres ZeroCross
+- Added ALC269 layoutid=88 for MECHREVO X8Ti Plus by DalianSky
 
 #### v1.3.3
 - Added ability to disable controller patching by injecting property 'no-controller-patch' (for use of FakePCIID_Intel_HDMI_Audio)
