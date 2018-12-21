@@ -134,6 +134,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>MacPeet - Latte Panda</string>
+				<key>Id</key>
+				<integer>17</integer>
+				<key>Path</key>
+				<string>layout17.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Hypereitan - ALC269VC for Thinkpad X230 i7</string>
 				<key>Id</key>
 				<integer>18</integer>
@@ -422,6 +430,14 @@
 				<integer>16</integer>
 				<key>Path</key>
 				<string>Platforms16.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>MacPeet - Latte Panda</string>
+				<key>Id</key>
+				<integer>17</integer>
+				<key>Path</key>
+				<string>Platforms17.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>

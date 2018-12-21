@@ -25,6 +25,7 @@ AppleALC Changelog
 - Added ALC887 layout-id 52 for Asus PRIME Z270-P by ctich
 - Added AD1984A layout-id 44 by Giesteira
 - Added ALC269 layout-id 44 for Samsung _NP350V5C by Giesteira
+- Added ALC269 layout-id 17 by MacPeet
 
 #### v1.3.3
 - Added ability to disable controller patching by injecting property 'no-controller-patch' (for use of FakePCIID_Intel_HDMI_Audio)
