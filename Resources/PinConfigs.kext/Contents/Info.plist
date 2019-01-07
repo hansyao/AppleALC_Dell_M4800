@@ -28,33 +28,33 @@
 			<string>com.apple.driver.AppleHDAHardwareConfigDriver</string>
 			<key>HDAConfigDefault</key>
 			<array>
-                <dict>
-                    <key>AFGLowPowerState</key>
-                    <data>AwAAAA==</data>
-                    <key>CodecID</key>
-                    <integer>283906408</integer>
-                    <key>CodecName</key>
-                    <string>Toleda -  Realtek ALC S1220A</string>
-                    <key>ConfigData</key>
-                    <data>
-                        AUccEAFHHUABRx4RAUcfkAFHDAIBVxzwAVcd
-                        AAFXHgABVx9AAWcc8AFnHQABZx4AAWcfQAF3
-                        HPABdx0AAXceAAF3H0ABhxxAAYcdkAGHHqAB
-                        hx+QAZccYAGXHZABlx6BAZcfAgGnHFABpx0w
-                        AacegQGnHwEBtxxwAbcdQAG3HiEBtx8CAbcM
-                        AgHnHJAB5x1hAeceSwHnHwEB9xzwAfcdAAH3
-                        HgAB9x9AARcc8AEXHQABFx4AARcfQA==
-                    </data>
-                    <key>FuncGroup</key>
-                    <integer>1</integer>
-                    <key>LayoutID</key>
-                    <integer>3</integer>
-                    <key>WakeConfigData</key>
-                    <data>AUcMAg==</data>
-                    <key>WakeVerbReinit</key>
-                    <true/>
-                </dict>
-                <dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283906408</integer>
+					<key>CodecName</key>
+					<string>Toleda -  Realtek ALC S1220A</string>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHUABRx4RAUcfkAFHDAIBVxzwAVcd
+					AAFXHgABVx9AAWcc8AFnHQABZx4AAWcfQAF3
+					HPABdx0AAXceAAF3H0ABhxxAAYcdkAGHHqAB
+					hx+QAZccYAGXHZABlx6BAZcfAgGnHFABpx0w
+					AacegQGnHwEBtxxwAbcdQAG3HiEBtx8CAbcM
+					AgHnHJAB5x1hAeceSwHnHwEB9xzwAfcdAAH3
+					HgAB9x9AARcc8AEXHQABFx4AARcfQA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>3</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>CodecID</key>
