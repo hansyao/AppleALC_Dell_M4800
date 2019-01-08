@@ -30,7 +30,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Toleda - Realtek ALC1220</string>
+				<string>Toleda - Realtek ALC1220, 3 audio ports, native: 2 inputs, 1 output+front panel+SPDIF/Optical</string>
 				<key>Id</key>
 				<integer>3</integer>
 				<key>Path</key>

@@ -71,15 +71,15 @@
 				<key>Path</key>
 				<string>PlatformsT.xml.zlib</string>
 			</dict>
-            <dict>
-                <key>Comment</key>
-                <string>Toleda - Realtek ALC S1220A</string>
-                <key>Id</key>
-                <integer>3</integer>
-                <key>Path</key>
-                <string>PlatformsT.xml.zlib</string>
-            </dict>
-            <dict>
+			<dict>
+				<key>Comment</key>
+				<string>Toleda - Realtek ALC S1220A</string>
+				<key>Id</key>
+				<integer>3</integer>
+				<key>Path</key>
+				<string>PlatformsT.xml.zlib</string>
+			</dict>
+			<dict>
 				<key>Comment</key>
 				<string>Mirone - Realtek ALC S1220A</string>
 				<key>Id</key>
