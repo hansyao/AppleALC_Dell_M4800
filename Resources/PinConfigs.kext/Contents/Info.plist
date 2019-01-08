@@ -5701,26 +5701,28 @@
 					<true/>
 				</dict>
 				<dict>
-					<key>AFGLowPowerState</key>
-					<data>AwAAAA==</data>
-					<key>CodecID</key>
-					<integer>283904256</integer>
-					<key>Comment</key>
-					<string>toleda - ALC1150 </string>
-					<key>ConfigData</key>
-					<data>
-					AUccEAFHHUABRx4RAUcfkAFXHCABVx0QAVce
-					AQFXHwEBZxzwAWcdAAFnHgABZx9AAXcc8AF3
-					HQABdx4AAXcfQAGHHEABhx2QAYceoAGHH5AB
-					lxxgAZcdkAGXHoEBlx8CAaccUAGnHTABpx6B
-					AacfAQG3HHABtx1AAbceIQG3HwIB5xyQAecd
-					YQHnHksB5x8BAfcc8AH3HQAB9x4AAfcfQAEX
-					HPABFx0AARceAAEXH0A=
-					</data>
-					<key>FuncGroup</key>
-					<integer>1</integer>
-					<key>LayoutID</key>
-					<integer>3</integer>
+                    <key>AFGLowPowerState</key>
+                    <data>AwAAAA==</data>
+                    <key>CodecID</key>
+                    <integer>283904256</integer>
+                    <key>Comment</key>
+                    <string>toleda - ALC1150 </string>
+                    <key>ConfigData</key>
+                    <data>
+                    AUccEAFHHUABRx4RAUcfkAFHDAIBVxzwAVcdAAFXHgABVx9AAWcc
+                    8AFnHQABZx4AAWcfQAF3HPABdx0AAXceAAF3H0ABhxxAAYcdkAGH
+                    HqABhx+QAZccYAGXHZABlx6BAZcfAgGnHFABpx0wAacegQGnHwEB
+                    txxwAbcdQAG3HiEBtx8CAbcMAgHnHJAB5x1hAeceSwHnHwEB9xzw
+                    AfcdAAH3HgAB9x9AARcc8AEXHQABFx4AARcfQA==
+                    </data>
+                    <key>FuncGroup</key>
+                    <integer>1</integer>
+                    <key>LayoutID</key>
+                    <integer>3</integer>
+                    <key>WakeConfigData</key>
+                    <data>AUcMAg==</data>
+                    <key>WakeVerbReinit</key>
+                    <true/>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
