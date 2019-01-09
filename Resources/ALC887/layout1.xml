@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>LayoutID</key>
-	<integer>887</integer>
+	<integer>1</integer>
 	<key>PathMapRef</key>
 	<array>
 		<dict>
@@ -468,7 +468,7 @@
 				<string>SPDIFOut</string>
 			</array>
 			<key>PathMapID</key>
-			<integer>887</integer>
+			<integer>100</integer>
 			<key>SPDIFOut</key>
 			<dict/>
 		</dict>
