@@ -7,6 +7,7 @@ AppleALC Changelog
 - Added ALC269VC layout-id 55 for Thinkpad X230 with Dock4338
 - Added ALC235 layout-id 15 for ASUS FX53VD by qiuchenly
 - Added Chinese readme
+- Added ALC255 layout-id 31 for ASUS UX360CA by cowpod
 
 #### v1.3.4
 - Disabled AppleGFXHDA matching onto HDEF to force AppleHDA usage
