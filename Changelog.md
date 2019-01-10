@@ -9,6 +9,7 @@ AppleALC Changelog
 - Added Chinese readme
 - Added ALC255 layout-id 31 for ASUS UX360CA by cowpod
 - Added ALC269VC layout-id 188 for Lenovo Y500 by BaoStorm
+- Update audio layouts with fixes ALC887, ALC892, ALC1220, ALCS1220A and ALC1150 by toleda
 
 #### v1.3.4
 - Disabled AppleGFXHDA matching onto HDEF to force AppleHDA usage
