@@ -2,6 +2,14 @@ AppleALC Changelog
 ==================
 #### v1.3.5
 - Added AD1988A layout-id 12 by chrome
+- Added ALC282 layout-id 41/43/51 for Lenovo Y410P/Y430P/Y510P by yunsur
+- Added CX8400 layout-id 12 for Elitebook 1050 G1 by tyufhl & kuque
+- Added ALC269VC layout-id 55 for Thinkpad X230 with Dock4338
+- Added ALC235 layout-id 15 for ASUS FX53VD by qiuchenly
+- Added Chinese readme
+- Added ALC255 layout-id 31 for ASUS UX360CA by cowpod
+- Added ALC269VC layout-id 188 for Lenovo Y500 by BaoStorm
+- Update audio layouts with fixes ALC887, ALC892, ALC1220, ALCS1220A and ALC1150 by toleda
 
 #### v1.3.4
 - Disabled AppleGFXHDA matching onto HDEF to force AppleHDA usage
