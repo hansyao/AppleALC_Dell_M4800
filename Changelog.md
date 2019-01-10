@@ -5,6 +5,8 @@ AppleALC Changelog
 - Added ALC282 layout-id 41/43/51 for Lenovo Y410P/Y430P/Y510P by yunsur
 - Added CX8400 layout-id 12 for Elitebook 1050 G1 by tyufhl & kuque
 - Added ALC269VC layout-id 55 for Thinkpad X230 with Dock4338
+- Added ALC235 layout-id 15 for ASUS FX53VD by qiuchenly
+- Added Chinese readme
 
 #### v1.3.4
 - Disabled AppleGFXHDA matching onto HDEF to force AppleHDA usage
