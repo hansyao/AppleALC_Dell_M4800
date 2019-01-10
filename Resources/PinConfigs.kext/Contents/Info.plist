@@ -6219,6 +6219,75 @@
 					<true/>
 				</dict>
 				<dict>
+					<key>CodecID</key>
+					<integer>283904768</integer>
+					<key>CodecName</key>
+					<string>toleda -  Realtek ALCS1200A</string>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHUABRx4RAUcfkAFXHCABVx0QAVce
+					AQFXHwEBZxwwAWcdYAFnHgEBZx8BAXcc8AF3
+					HQABdx4AAXcfQAGHHEABhx2QAYceoAGHH5AB
+					lxxgAZcdkAGXHoEBlx8CAaccUAGnHTABpx6B
+					AacfAQG3HHABtx1AAbceIQG3HwIB5xyQAecd
+					YQHnHksB5x8BARcc8AEXHQABFx4AARcfQA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>1</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAgG3DAI=</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>CodecID</key>
+					<integer>283904768</integer>
+					<key>CodecName</key>
+					<string>toleda -  Realtek ALCS1200A</string>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHUABRx4RAUcfkAFXHPABVx0AAVce
+					AAFXH0ABZxzwAWcdAAFnHgABZx9AAXcc8AF3
+					HQABdx4AAXcfQAGHHEABhx1gAYceAQGHHwEB
+					lxxgAZcdkAGXHqABlx+QAaccUAGnHRABpx4B
+					AacfAQG3HHABtx1AAbceIQG3HwIB5xyQAecd
+					YQHnHksB5x8BARcc8AEXHQABFx4AARcfQA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>2</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAgG3DAI=</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>CodecID</key>
+					<integer>283904768</integer>
+					<key>CodecName</key>
+					<string>toleda -  Realtek ALCS1200A</string>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHUABRx4RAUcfkAFXHPABVx0AAVce
+					AAFXH0ABZxzwAWcdAAFnHgABZx9AAXcc8AF3
+					HQABdx4AAXcfQAGHHEABhx2QAYceoAGHH5AB
+					lxxgAZcdkAGXHoEBlx8CAaccUAGnHTABpx6B
+					AacfAQG3HHABtx1AAbceIQG3HwIB5xyQAecd
+					YQHnHksB5x8BARcc8AEXHQABFx4AARcfQA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>3</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAgG3DAI=</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>CodecID</key>
