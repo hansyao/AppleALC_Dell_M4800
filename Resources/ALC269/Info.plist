@@ -254,6 +254,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>ALC269VC for Thinkpad X230 with dock4338</string>
+				<key>Id</key>
+				<integer>55</integer>
+				<key>Path</key>
+				<string>layout55.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>HASEE Z6-i78154S2 ALC269 by lianny </string>
 				<key>Id</key>
 				<integer>58</integer>
@@ -307,14 +315,6 @@
 				<integer>127</integer>
 				<key>Path</key>
 				<string>layout127.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>ALC269VC for Thinkpad X230 with dock4338</string>
-				<key>Id</key>
-				<integer>55</integer>
-				<key>Path</key>
-				<string>layout55.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
@@ -561,6 +561,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>ALC269VC for Thinkpad X230 with dock4338</string>
+				<key>Id</key>
+				<integer>55</integer>
+				<key>Path</key>
+				<string>Platforms55.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>HASEE Z6-i78154S2 ALC269 by lianny </string>
 				<key>Id</key>
 				<integer>58</integer>
@@ -614,14 +622,6 @@
 				<integer>127</integer>
 				<key>Path</key>
 				<string>Platforms127.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>ALC269VC for Thinkpad X230 with dock4338</string>
-				<key>Id</key>
-				<integer>55</integer>
-				<key>Path</key>
-				<string>Platforms55.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
