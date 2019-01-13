@@ -35,7 +35,10 @@ void AlcEnabler::init() {
 
 	if (getKernelVersion() >= KernelVersion::Sierra) {
 		// Unlock custom audio engines by disabling Apple private entitlement verification
+		// Recent macOS versions (e.g. 10.13.6) support legacy_hda_tools_support=1 boot argument, which works similarly.
 		if (checkKernelArgument("-alcdhost")) {
+			if (getKernelVersion() >= KernelVersion::HighSierra)
+				SYSLOG("alc", "consider replacing -alcdhost with legacy_hda_tools_support=1 boot-arg!");
 			lilu.onEntitlementRequestForce([](void *user, task_t task, const char *entitlement, OSObject *&original) {
 				static_cast<AlcEnabler *>(user)->handleAudioClientEntitlement(task, entitlement, original);
 			}, this);
