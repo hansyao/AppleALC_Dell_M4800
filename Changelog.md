@@ -13,6 +13,7 @@ AppleALC Changelog
 - Added ALC889 layout-id 2, 3 by toleda
 - Added ALCS1200A layout-id 1, 2, 3 by toleda
 - Added ALC256 layout-id 5  by chrome
+- Fix headphone input in ALC255 layout-id 99 for XiaoMI Air by ourfor
 
 #### v1.3.4
 - Disabled AppleGFXHDA matching onto HDEF to force AppleHDA usage
