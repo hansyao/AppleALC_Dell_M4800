@@ -706,9 +706,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Andres ZeroCross - Realtek ALC233 for Asus A451LB-WX076D</string>
 					<key>CodecID</key>
@@ -724,9 +722,7 @@
 					<key>LayoutID</key>
 					<integer>21</integer>
 					<key>WakeConfigData</key>
-					<data>
-					AUcMAgG3DAICFwwC
-					</data>
+					<data>AUcMAgG3DAICFwwC</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
@@ -1432,9 +1428,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Andres ZeroCross for Dell 5570</string>
 					<key>CodecID</key>
@@ -1450,9 +1444,7 @@
 					<key>LayoutID</key>
 					<integer>21</integer>
 					<key>WakeConfigData</key>
-					<data>
-					AUcMAgIXDAIBlwclAhcIgw==
-					</data>
+					<data>AUcMAgIXDAIBlwclAhcIgw==</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
@@ -3300,12 +3292,9 @@
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
-				
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283902597</integer>
 					<key>CodecName</key>
@@ -3321,9 +3310,7 @@
 					<key>LayoutID</key>
 					<integer>21</integer>
 					<key>WakeConfigData</key>
-					<data>
-					AUcMAg==
-					</data>
+					<data>AUcMAg==</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
@@ -3707,9 +3694,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Andres ZeroCross - ALC294 ASUS ZenBook Flip 14 UX461UA</string>
 					<key>CodecID</key>
@@ -3725,9 +3710,7 @@
 					<key>LayoutID</key>
 					<integer>21</integer>
 					<key>WakeConfigData</key>
-					<data>
-					AXcMAgIXDAI=
-					</data>
+					<data>AXcMAgIXDAI=</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
@@ -3978,9 +3961,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Razer Blade 14 2017 by Andres ZeroCross</string>
 					<key>CodecID</key>
@@ -4000,9 +3981,7 @@
 					<key>LayoutID</key>
 					<integer>22</integer>
 					<key>WakeConfigData</key>
-					<data>
-					AUcMAg==
-					</data>
+					<data>AUcMAg==</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
@@ -4168,9 +4147,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Andres - ALC299 Acer Helios 500</string>
 					<key>CodecID</key>
@@ -4186,9 +4163,7 @@
 					<key>LayoutID</key>
 					<integer>21</integer>
 					<key>WakeConfigData</key>
-					<data>
-					AUcMAgIXDAI=
-					</data>
+					<data>AUcMAgIXDAI=</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
@@ -6708,9 +6683,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Andres ZeroCross - HP Spectre 13-V130NG</string>
 					<key>CodecID</key>
@@ -6726,9 +6699,7 @@
 					<key>LayoutID</key>
 					<integer>21</integer>
 					<key>WakeConfigData</key>
-					<data>
-					AWcMAgF3DAI=
-					</data>
+					<data>AWcMAgF3DAI=</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
@@ -7122,9 +7093,7 @@
 					<key>LayoutID</key>
 					<integer>21</integer>
 					<key>WakeConfigData</key>
-					<data>
-					AZcHJAGnByQ=
-					</data>
+					<data>AZcHJAGnByQ=</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
@@ -7164,9 +7133,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Andres ZeroCross - LG gram 15ZD960-GX5BK</string>
 					<key>CodecID</key>
@@ -7379,9 +7346,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Andres ZeroCross - IDT 92HD73C1X5 for Alienware M17X R2</string>
 					<key>CodecID</key>
