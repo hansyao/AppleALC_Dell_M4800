@@ -27,6 +27,7 @@ AppleALC Changelog
 - Added ALC286 layout-id 11 for Lenovo Yoga3 pro by gdllzkusi
 - Added ALC236 layout-id 18 for LEGION Y7000/Y530 by xiaoMGitHub
 - Fixed ALC256 layout-id 56 by daliansky
+- Added 10.14.4 compatible anticlick patch by chrome
 
 #### v1.3.4
 - Disabled AppleGFXHDA matching onto HDEF to force AppleHDA usage

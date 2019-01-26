@@ -55,15 +55,25 @@
 			<key>Count</key>
 			<integer>1</integer>
 			<key>Find</key>
-			<data>QcYGAEmLvCQ=</data>
-			<key>MaxKernel</key>
-			<integer>13</integer>
+			<data>xgYASIu/aAE=</data>
 			<key>MinKernel</key>
-			<integer>13</integer>
+			<integer>18</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>QcYGAUmLvCQ=</data>
+			<data>xgYBSIu/aAE=</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>1</integer>
+			<key>Find</key>
+			<data>QcYGAEiLu2g=</data>
+			<key>MinKernel</key>
+			<integer>15</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>QcYGAUiLu2g=</data>
 		</dict>
 		<dict>
 			<key>Count</key>
@@ -105,9 +115,7 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			gxnUEQ==
-			</data>
+			<data>gxnUEQ==</data>
 			<key>MaxKernel</key>
 			<integer>15</integer>
 			<key>MinKernel</key>
@@ -115,9 +123,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			AAAAAA==
-			</data>
+			<data>AAAAAA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>
@@ -135,9 +141,7 @@
 			<key>Count</key>
 			<integer>1</integer>
 			<key>Find</key>
-			<data>
-			a3Bzaes=
-			</data>
+			<data>a3Bzaes=</data>
 			<key>MinKernel</key>
 			<integer>14</integer>
 			<key>Name</key>
@@ -145,9 +149,7 @@
 			<key>Provider</key>
 			<string>Wern Apfel</string>
 			<key>Replace</key>
-			<data>
-			Y2ltaes=
-			</data>
+			<data>Y2ltaes=</data>
 		</dict>
 	</array>
 	<key>Vendor</key>
