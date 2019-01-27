@@ -571,43 +571,28 @@ void AlcEnabler::updateResource(Resource type, kern_return_t &result, const void
 
 void AlcEnabler::grabControllers() {
 	computerModel = WIOKit::getComputerModel();
-	auto sectPCI = WIOKit::findEntryByPrefix("/AppleACPIPlatformExpert", "PCI", gIOServicePlane);
 
-	for (size_t lookup = 0; lookup < ADDPR(codecLookupSize); lookup++) {
-		auto sect = sectPCI;
-		
-		for (size_t i = 0; sect && i <= ADDPR(codecLookup)[lookup].controllerNum; i++) {
-			sect = WIOKit::findEntryByPrefix(sect, ADDPR(codecLookup)[lookup].tree[i], gIOServicePlane);
-			
-			if (sect && i == ADDPR(codecLookup)[lookup].controllerNum) {
+	auto devInfo = DeviceInfo::create();
+	if (devInfo) {
+		// Nice, we found some controller, add it
+		uint32_t ven {0}, dev {0}, rev {0}, lid {0};
+		auto sect = devInfo->audioBuiltinAnalog;
+		if (sect &&
+			WIOKit::getOSDataValue(sect, "vendor-id", ven) &&
+			WIOKit::getOSDataValue(sect, "device-id", dev) &&
+			WIOKit::getOSDataValue(sect, "revision-id", rev) &&
+			WIOKit::getOSDataValue(sect, "alc-layout-id", lid)) {
 
-				// Nice, we found some controller, add it
-				uint32_t ven {0}, dev {0}, rev {0}, platform {ControllerModInfo::PlatformAny}, lid {0};
-				
-				if (!WIOKit::getOSDataValue(sect, "vendor-id", ven) ||
-					!WIOKit::getOSDataValue(sect, "device-id", dev) ||
-					!WIOKit::getOSDataValue(sect, "revision-id", rev)) {
-					SYSLOG("alc", "found an incorrect controller at %s", ADDPR(codecLookup)[lookup].tree[i]);
-					break;
-				}
-				
-				if (ADDPR(codecLookup)[lookup].detect && !WIOKit::getOSDataValue(sect, "alc-layout-id", lid)) {
-					SYSLOG("alc", "alc-layout-id was not provided by controller at %s", ADDPR(codecLookup)[lookup].tree[i]);
-					break;
-				}
-				
-				if (WIOKit::getOSDataValue(sect, "AAPL,ig-platform-id", platform)) {
-					DBGLOG("alc", "AAPL,ig-platform-id %X was found in controller at %s", platform, ADDPR(codecLookup)[lookup].tree[i]);
-				} else if (WIOKit::getOSDataValue(sect, "AAPL,snb-platform-id", platform)) {
-					DBGLOG("alc", "AAPL,snb-platform-id %X was found in controller at %s", platform, ADDPR(codecLookup)[lookup].tree[i]);
-				}
-
-				insertController(ven, dev, rev, platform, nullptr != sect->getProperty("no-controller-patch"), lid, ADDPR(codecLookup)[lookup].detect, &ADDPR(codecLookup)[lookup]);
-				break;
-			}
+			insertController(ven, dev, rev, ControllerModInfo::PlatformAny, nullptr != sect->getProperty("no-controller-patch"), lid, sect);
+		} else {
+			SYSLOG("alc", "failed to obtain device info for analog controller (%d)", devInfo->audioBuiltinAnalog != nullptr);
 		}
+
+		DeviceInfo::deleter(devInfo);
+	} else {
+		SYSLOG("alc", "failed to obtain device info for analog controller");
 	}
-	
+
 	if (controllers.size() > 0) {
 		DBGLOG("alc", "found %lu audio controllers", controllers.size());
 		validateControllers();
@@ -635,6 +620,7 @@ bool AlcEnabler::appendCodec(void *user, IORegistryEntry *e) {
 
 	auto ci = AlcEnabler::CodecInfo::create(alc->currentController, venNum->unsigned32BitValue(), revNum->unsigned32BitValue());
 	if (ci) {
+		DBGLOG("alc", "storing codec info for %X:%X:%X", ci->vendor, ci->codec, ci->revision);
 		if (!alc->codecs.push_back(ci)) {
 			SYSLOG("alc", "failed to store codec info for %X:%X:%X", ci->vendor, ci->codec, ci->revision);
 			AlcEnabler::CodecInfo::deleter(ci);
@@ -651,15 +637,21 @@ bool AlcEnabler::grabCodecs() {
 		auto ctlr = controllers[currentController];
 
 		// Digital controllers normally have no detectible codecs
-		if (!ctlr->detect || !ctlr->lookup)
+		if (!ctlr->detect)
 			continue;
 
-		auto sect = WIOKit::findEntryByPrefix("/AppleACPIPlatformExpert", "PCI", gIOServicePlane);
+		auto iterator = IORegistryIterator::iterateOver(ctlr->detect, gIOServicePlane, kIORegistryIterateRecursively);
+		if (iterator) {
+			IORegistryEntry *codec = nullptr;
+			while ((codec = OSDynamicCast(IORegistryEntry, iterator->getNextObject())) != nullptr) {
+				if (codec->getProperty("IOHDACodecVendorID")) {
+					DBGLOG("alc", "found analog codec %s", safeString(codec->getName()));
+					appendCodec(this, codec);
+					break;
+				}
+			}
 
-		for (size_t i = 0; sect && i < ctlr->lookup->treeSize; i++) {
-			bool last = i+1 == ctlr->lookup->treeSize;
-			sect = WIOKit::findEntryByPrefix(sect, ctlr->lookup->tree[i], gIOServicePlane,
-											 last ? appendCodec : nullptr, last, this);
+			iterator->release();
 		}
 	}
 

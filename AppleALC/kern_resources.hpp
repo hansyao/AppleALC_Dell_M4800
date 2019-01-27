@@ -15,17 +15,6 @@
 #include <sys/types.h>
 #include <stdint.h>
 
-/**
- *  IORegistry path sequence for finding IOHDACodec info and layout number
- *  correspounds to CodecLookup.plist resource file
- */
-struct CodecLookupInfo {
-	const char **tree;
-	size_t treeSize;
-	size_t controllerNum;
-	bool detect;
-};
-
 struct KextPatch {
 	KernelPatcher::LookupPatch patch;
 	uint32_t minKernel;
@@ -87,9 +76,6 @@ struct VendorModInfo {
 /**
  *  Generated resource data
  */
-extern CodecLookupInfo ADDPR(codecLookup)[];
-extern const size_t ADDPR(codecLookupSize);
-
 extern KernelPatcher::KextInfo ADDPR(kextList)[];
 extern const size_t ADDPR(kextListSize);
 

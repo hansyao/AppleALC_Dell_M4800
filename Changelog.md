@@ -29,6 +29,7 @@ AppleALC Changelog
 - Fixed ALC256 layout-id 56 by daliansky
 - Added 10.14.4 compatible anticlick patch by chrome
 - Added CX20757 layout-id 28 for Lenovo G510 by Z39
+- Simplified analog codec code to permit special locations like VMware or AMD
 
 #### v1.3.4
 - Disabled AppleGFXHDA matching onto HDEF to force AppleHDA usage
