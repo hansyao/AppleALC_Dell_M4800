@@ -14,6 +14,22 @@ AppleALC Changelog
 - Added ALCS1200A layout-id 1, 2, 3 by toleda
 - Added ALC256 layout-id 5  by chrome
 - Fix headphone input in ALC255 layout-id 99 for XiaoMI Air by ourfor
+- Added ALC285 layout-id 21 by andreszerocross
+- Added ALC298 layout-id 22 by andreszerocross
+- Added ALC299 layout-id 21 by andreszerocross
+- Added CX20753 layout-id 21 by andreszerocross
+- Added ALC233 layout-id 21 by andreszerocross
+- Added IDT 92HD73C1X5 layout-id 21 by andreszerocross
+- Added ALC294 layout-id 21 by andreszerocross
+- Added ALC256 layout-id 21 by andreszerocross
+- Added CX8200 layout-id 21 by andreszerocross
+- Added CX20751/2 layout-id 21 by andreszerocross
+- Added ALC286 layout-id 11 for Lenovo Yoga3 pro by gdllzkusi
+- Added ALC236 layout-id 18 for LEGION Y7000/Y530 by xiaoMGitHub
+- Fixed ALC256 layout-id 56 by daliansky
+- Added 10.14.4 compatible anticlick patch by chrome
+- Added CX20757 layout-id 28 for Lenovo G510 by Z39
+- Simplified analog codec code to permit special locations like VMware or AMD
 
 #### v1.3.4
 - Disabled AppleGFXHDA matching onto HDEF to force AppleHDA usage

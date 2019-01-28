@@ -375,59 +375,29 @@ static void generateVendors(NSString *file, NSDictionary *vendors, NSString *pat
 	appendFile(file, vendorSection);
 }
 
-static void generateLookup(NSString *file, NSArray *lookup) {
-	appendFile(file, @"\n// Lookup section\n\n");
-
-	auto trees = [[NSMutableString alloc] init];
-	auto lookups = [[NSMutableString alloc] init];
-	size_t treeIndex {0};
-	
-	for (NSDictionary *set in lookup) {
-		// Build tree
-		NSArray *treeArr = [set objectForKey:@"Tree"];
-		[trees appendString:makeStringList(@"tree", treeIndex, treeArr)];
-		
-		// Build lookup
-		[lookups appendFormat:@"\t{ tree%zu, %lu, %@, %@ },\n",
-			treeIndex, [treeArr count],
-			[set objectForKey:@"controllerNum"],
-			[set objectForKey:@"Detect"] ? @"true" : @"false"];
-		
-		treeIndex++;
-	}
-	appendFile(file, trees);
-	appendFile(file, @"CodecLookupInfo ADDPR(codecLookup)[] {\n");
-	appendFile(file, lookups);
-	appendFile(file, @"};\n");
-	appendFile(file, [[NSString alloc] initWithFormat:@"const size_t ADDPR(codecLookupSize) {%zu};\n", treeIndex]);
-}
-
 int main(int argc, const char * argv[]) {
 	if (argc != 3)
 		ERROR("Invalid usage");
 
 	auto basePath = [[NSString alloc] initWithUTF8String:argv[1]];
-	auto lookupCfg = [[NSString alloc] initWithFormat:@"%@/CodecLookup.plist", basePath];
 	auto vendorsCfg = [[NSString alloc] initWithFormat:@"%@/Vendors.plist", basePath];
 	auto kextsCfg = [[NSString alloc] initWithFormat:@"%@/Kexts.plist",basePath];
 	auto ctrlsCfg = [[NSString alloc] initWithFormat:@"%@/Controllers.plist",basePath];
 	//auto userCfg = [[NSString alloc] initWithFormat:@"%@/UserPatches.plist",basePath];
 	auto outputCpp = [[NSString alloc] initWithUTF8String:argv[2]];
 
-	auto lookup = [NSArray arrayWithContentsOfFile:lookupCfg];
 	auto vendors = [NSDictionary dictionaryWithContentsOfFile:vendorsCfg];
 	auto kexts = [NSDictionary dictionaryWithContentsOfFile:kextsCfg];
 	auto ctrls = [NSArray arrayWithContentsOfFile:ctrlsCfg];
 	//auto userp = [NSArray arrayWithContentsOfFile:userCfg];
 
-	if (!lookup || !vendors || !kexts || !ctrls)
-		ERROR("Missing resource data (lookup:%p, vendors:%p, kexts:%p, ctrls:%p)", lookup, vendors, kexts, ctrls);
+	if (!vendors || !kexts || !ctrls)
+		ERROR("Missing resource data (vendors:%p, kexts:%p, ctrls:%p)", vendors, kexts, ctrls);
 
 	// Create a file
 	[[NSFileManager defaultManager] createFileAtPath:outputCpp contents:nil attributes:nil];
 
 	appendFile(outputCpp, ResourceHeader);
-	generateLookup(outputCpp, lookup);
 	auto kextIndexes = generateKexts(outputCpp, kexts);
 	generateVendors(outputCpp, vendors, basePath, kextIndexes);
 	generateControllers(outputCpp, ctrls, vendors, kextIndexes);
