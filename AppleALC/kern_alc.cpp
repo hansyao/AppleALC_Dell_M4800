@@ -640,18 +640,24 @@ bool AlcEnabler::grabCodecs() {
 		if (!ctlr->detect)
 			continue;
 
-		auto iterator = IORegistryIterator::iterateOver(ctlr->detect, gIOServicePlane, kIORegistryIterateRecursively);
-		if (iterator) {
-			IORegistryEntry *codec = nullptr;
-			while ((codec = OSDynamicCast(IORegistryEntry, iterator->getNextObject())) != nullptr) {
-				if (codec->getProperty("IOHDACodecVendorID")) {
-					DBGLOG("alc", "found analog codec %s", safeString(codec->getName()));
-					appendCodec(this, codec);
-					break;
+		bool found = false;
+		for (size_t brute = 0; !found && brute < WIOKit::bruteMax; brute++) {
+			auto iterator = IORegistryIterator::iterateOver(ctlr->detect, gIOServicePlane, kIORegistryIterateRecursively);
+			if (iterator) {
+				IORegistryEntry *codec = nullptr;
+				while ((codec = OSDynamicCast(IORegistryEntry, iterator->getNextObject())) != nullptr) {
+					if (codec->getProperty("IOHDACodecVendorID")) {
+						DBGLOG("alc", "found analog codec %s", safeString(codec->getName()));
+						appendCodec(this, codec);
+						found = true;
+						break;
+					}
 				}
+
+				iterator->release();
 			}
 
-			iterator->release();
+			SYSLOG_COND(ADDPR(debugEnabled), "alc", "failed to find IOHDACodecVendorID, retrying %lu", brute);
 		}
 	}
 
