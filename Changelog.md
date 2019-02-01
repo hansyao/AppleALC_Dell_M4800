@@ -30,6 +30,7 @@ AppleALC Changelog
 - Added 10.14.4 compatible anticlick patch by chrome
 - Added CX20757 layout-id 28 for Lenovo G510 by Z39
 - Simplified analog codec code to permit special locations like VMware or AMD
+- Added patches for AMD Zen controllers (0x1457, 0x15E3) thx Ydeng and AlGreyy
 
 #### v1.3.4
 - Disabled AppleGFXHDA matching onto HDEF to force AppleHDA usage

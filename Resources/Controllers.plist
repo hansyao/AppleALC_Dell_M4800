@@ -660,5 +660,87 @@
 		<key>Vendor</key>
 		<string>NVIDIA</string>
 	</dict>
+	<dict>
+		<key>Device</key>
+		<integer>5207</integer>
+		<key>Name</key>
+		<string>AMD Zen Audio Controller 0x1457</string>
+		<key>Patches</key>
+		<array>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Find</key>
+				<data>hoA+Og==</data>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>IhBXFA==</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Find</key>
+				<data>PQIQAAB0</data>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>PSIQAAB+</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Find</key>
+				<data>SYsHTIn//5AYCgAA</data>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>DCBmNSIQdAQxwP/I</data>
+			</dict>
+		</array>
+		<key>Vendor</key>
+		<string>AMDZEN</string>
+	</dict>
+	<dict>
+		<key>Device</key>
+		<integer>5603</integer>
+		<key>Name</key>
+		<string>AMD Zen Audio Controller 0x15E3</string>
+		<key>Patches</key>
+		<array>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Find</key>
+				<data>hoA+Og==</data>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>IhDjFQ==</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Find</key>
+				<data>PQIQAAB0</data>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>PSIQAAB+</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Find</key>
+				<data>SYsHTIn//5AYCgAA</data>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>DCBmNSIQdAQxwP/I</data>
+			</dict>
+		</array>
+		<key>Vendor</key>
+		<string>AMDZEN</string>
+	</dict>
 </array>
 </plist>
