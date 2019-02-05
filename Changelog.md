@@ -31,6 +31,10 @@ AppleALC Changelog
 - Added CX20757 layout-id 28 for Lenovo G510 by Z39
 - Simplified analog codec code to permit special locations like VMware or AMD
 - Added patches for AMD Zen controllers (0x1457, 0x15E3) thx Ydeng and AlGreyy
+- Added ALC898 layout-id 66 for Clevo P750DM2-G by chrome
+- Added ALC283 layout-id 15 for LENOVO IDEAPAD 14 by MacPeet
+- Added ALC671 layout-id 15 for Fujitsu  Esprimo C720 by MacPeet
+- Added ALC221 layout-id 15 for HP ELITE DESK 800 G1 by MacPeet
 
 #### v1.3.4
 - Disabled AppleGFXHDA matching onto HDEF to force AppleHDA usage
