@@ -35,6 +35,7 @@ AppleALC Changelog
 - Added ALC283 layout-id 15 for LENOVO IDEAPAD 14 by MacPeet
 - Added ALC671 layout-id 15 for Fujitsu  Esprimo C720 by MacPeet
 - Added ALC221 layout-id 15 for HP ELITE DESK 800 G1 by MacPeet
+- Added ALC269 layout-id 21 for Dell OptiPlex 7010 by Goldfish64
 
 #### v1.3.4
 - Disabled AppleGFXHDA matching onto HDEF to force AppleHDA usage
