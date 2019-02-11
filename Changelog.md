@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.3.6
+- Update Revision 0x100001 for CX20751/2 (Toshiba Kira 107)
+
 #### v1.3.5
 - Added AD1988A layout-id 12 by chrome
 - Added ALC282 layout-id 41/43/51 for Lenovo Y410P/Y430P/Y510P by yunsur
