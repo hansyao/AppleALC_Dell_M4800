@@ -14,22 +14,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Realtek 887-VD for Asus B85-ME by maiconjs</string>
-				<key>Id</key>
-				<integer>40</integer>
-				<key>Path</key>
-				<string>layout40.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Realtek 887-VD AD0 for Asus Z97M-PLUS/BR by maiconjs</string>
-				<key>Id</key>
-				<integer>20</integer>
-				<key>Path</key>
-				<string>layout20.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Toleda ALC887, 5/6 audio ports, native: 2 inputs, 3/4 outputs+front panel+SPDIF/Optical</string>
 				<key>Id</key>
 				<integer>1</integer>
@@ -102,11 +86,27 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Realtek 887-VD AD0 for Asus Z97M-PLUS/BR by maiconjs</string>
+				<key>Id</key>
+				<integer>20</integer>
+				<key>Path</key>
+				<string>layout20.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Custom by klblk for GA-Q87TN</string>
 				<key>Id</key>
 				<integer>33</integer>
 				<key>Path</key>
 				<string>layout33.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Realtek 887-VD for Asus B85-ME by maiconjs</string>
+				<key>Id</key>
+				<integer>40</integer>
+				<key>Path</key>
+				<string>layout40.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -135,22 +135,6 @@
 		</array>
 		<key>Platforms</key>
 		<array>
-			<dict>
-				<key>Comment</key>
-				<string>Realtek 887-VD for Asus B85-ME by maiconjs</string>
-				<key>Id</key>
-				<integer>40</integer>
-				<key>Path</key>
-				<string>Platforms40.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Realtek 887-VD AD0 for Asus Z97M-PLUS/BR by maiconjs</string>
-				<key>Id</key>
-				<integer>20</integer>
-				<key>Path</key>
-				<string>Platforms20.xml.zlib</string>
-			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Toleda</string>
@@ -225,11 +209,27 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Realtek 887-VD AD0 for Asus Z97M-PLUS/BR by maiconjs</string>
+				<key>Id</key>
+				<integer>20</integer>
+				<key>Path</key>
+				<string>Platforms20.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Custom by klblk for GA-Q87TN</string>
 				<key>Id</key>
 				<integer>33</integer>
 				<key>Path</key>
 				<string>Platforms33.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Realtek 887-VD for Asus B85-ME by maiconjs</string>
+				<key>Id</key>
+				<integer>40</integer>
+				<key>Path</key>
+				<string>Platforms40.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
