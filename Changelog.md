@@ -3,6 +3,7 @@ AppleALC Changelog
 #### v1.3.6
 - Update Revision 0x100001 for CX20751/2 (Toshiba Kira 107)
 - Added ALC 255 layout-id 15 for Gigabyte Brix BRi5(H), BRi7(H)] by najdanovicivan
+- Added ALC295/ALC3254 for Dell Latitude 5290 by Unbelievable9
 
 #### v1.3.5
 - Added AD1988A layout-id 12 by chrome
