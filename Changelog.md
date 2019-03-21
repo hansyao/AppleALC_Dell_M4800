@@ -8,6 +8,7 @@ AppleALC Changelog
 - Added ALC1220 layout-id 27 for Gigabyte-Z370-HD3P by lostwolf
 - Added ALC299 layout-id 22 for Dell XPS 13 by andreszerocross
 - Added ALC887-VD layout-id 87 for GA-Z97-HD3 ver2.1 by varrtix
+- Update resources for ALC236 layout-id 18 by xiaoMGitHub
 
 #### v1.3.5
 - Added AD1988A layout-id 12 by chrome
