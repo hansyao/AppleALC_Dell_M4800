@@ -2,8 +2,12 @@ AppleALC Changelog
 ==================
 #### v1.3.6
 - Update Revision 0x100001 for CX20751/2 (Toshiba Kira 107)
-- Added ALC 255 layout-id 15 for Gigabyte Brix BRi5(H), BRi7(H)] by najdanovicivan
+- Added ALC255 layout-id 15 for Gigabyte Brix BRi5(H), BRi7(H)] by najdanovicivan
 - Added ALC295/ALC3254 for Dell Latitude 5290 by Unbelievable9
+- Fix ALC1220 audio after sleep
+- Added ALC1220 layout-id 27 for Gigabyte-Z370-HD3P by lostwolf
+- Added ALC299 layout-id 22 for Dell XPS 13 by andreszerocross
+- Added ALC887-VD layout-id 87 for GA-Z97-HD3 ver2.1 by varrtix
 
 #### v1.3.5
 - Added AD1988A layout-id 12 by chrome
