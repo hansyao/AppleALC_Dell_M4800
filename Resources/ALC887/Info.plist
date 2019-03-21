@@ -118,11 +118,19 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>ctich ALC887 for Asus PRIME Z270-P</string>
+				<string>ALC887 for Asus PRIME Z270-P (full Rear and Front, non auto-switch) by ctich</string>
 				<key>Id</key>
 				<integer>52</integer>
 				<key>Path</key>
 				<string>layout52.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ALC887 for Asus PRIME Z270-P (Rear LineOut1, Mic - LineOut2, LineIn - LineOut3 - 5.1 and Front, non auto-switch) by ctich</string>
+				<key>Id</key>
+				<integer>53</integer>
+				<key>Path</key>
+				<string>layout53.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -249,9 +257,17 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>ctich ALC887 for Asus PRIME Z270-P</string>
+				<string>ALC887 for Asus PRIME Z270-P (full Rear and Front, non auto-switch) by ctich</string>
 				<key>Id</key>
 				<integer>52</integer>
+				<key>Path</key>
+				<string>Platforms52.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ALC887 for Asus PRIME Z270-P (Rear LineOut1, Mic - LineOut2, LineIn - LineOut3 - 5.1 and Front, non auto-switch) by ctich</string>
+				<key>Id</key>
+				<integer>53</integer>
 				<key>Path</key>
 				<string>Platforms52.xml.zlib</string>
 			</dict>

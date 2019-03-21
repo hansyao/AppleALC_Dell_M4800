@@ -5206,17 +5206,45 @@
 					<key>CodecID</key>
 					<integer>283904135</integer>
 					<key>Comment</key>
-					<string>ctich ALC887 for Asus PRIME Z270-P</string>
+					<string>ALC887 for Asus PRIME Z270-P (full Rear and Front, non auto-switch) by ctich</string>
 					<key>ConfigData</key>
 					<data>
-					AUccEAFHHUABRx4QAUcfkAG3HCABtx1AAbce
-					IAG3HwIBhxxAAYcdkAGHHqABhx+RAZccMAGX
-					HZEBlx6AAZcfAgEXHFABFx3gARceRQEXHwE=
+					AUccEAFHHUABRx4BAUcfAQFHDAIBtxwgAbcd
+					QAG3HiEBtx8CAbcMAgEXHDABFx0BARceRgEX
+					H5ABhxxAAYcdkAGHHqABhx+RAaccTwGnHTAB
+					px6BAacfAQGXHFABlx2RAZcegQGXHwI=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>52</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAgG3DAI=</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283904135</integer>
+					<key>Comment</key>
+					<string>ALC887 for Asus PRIME Z270-P (Rear LineOut1, Mic - LineOut2, LineIn - LineOut3 - 5.1 and Front, non auto-switch) by ctich</string>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHUABRx4BAUcfAQFHDAIBhxwQAYcd
+					YAGHHgEBhx8BAaccEAGnHRABpx4BAacfAQG3
+					HCABtx1AAbceIQG3HwIBtwwCARccMAEXHQEB
+					Fx5GARcfkAGXHFABlx2RAZcegQGXHwI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>53</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAgG3DAI=</data>
+					<key>WakeVerbReinit</key>
+					<true/>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -7337,6 +7365,42 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>3</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>InsanelyDeepak - Conexant CX20753/4</string>
+					<key>CodecID</key>
+					<integer>351359249</integer>
+					<key>ConfigData</key>
+					<data>
+					AXccEAF3HQEBdx4XAXcfkAFnHBMBZx0QAWce
+					IQFnHwMBlxwwAZcdEAGXHoEBlx8DAaccQAGn
+					HQEBpx6gAacfkA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>14</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>MacPeet - CX20753/4 for Lenovo Thinkpad E580</string>
+					<key>CodecID</key>
+					<integer>351359249</integer>
+					<key>ConfigData</key>
+					<data>
+					AXccEAF3HQABdx4XAXcfkAGnHCABpx0AAace
+					pgGnH5ABlxwwAZcdEAGXHoEBlx8AAWccQAFn
+					HRABZx4hAWcfAA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>15</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>

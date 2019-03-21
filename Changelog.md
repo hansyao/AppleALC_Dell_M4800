@@ -9,6 +9,10 @@ AppleALC Changelog
 - Added ALC299 layout-id 22 for Dell XPS 13 by andreszerocross
 - Added ALC887-VD layout-id 87 for GA-Z97-HD3 ver2.1 by varrtix
 - Update resources for ALC236 layout-id 18 by xiaoMGitHub
+- Added CX20753/4 layout-id 15 for Lenovo Thinkpad E580 by MacPeet
+- Added CX20753/4 layout-id 14 by InsanelyDeepak
+- Change ALC887 layout-id 52 for Asus PRIME Z270-P by ctich
+- Added ALC887 layout-id 53 for Asus PRIME Z270-P by ctich
 
 #### v1.3.5
 - Added AD1988A layout-id 12 by chrome

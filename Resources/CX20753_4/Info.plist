@@ -22,6 +22,22 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>InsanelyDeepak - Conexant 20753_4</string>
+				<key>Id</key>
+				<integer>14</integer>
+				<key>Path</key>
+				<string>layout14.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>MacPeet - CX20753/4 for Lenovo Thinkpad E580</string>
+				<key>Id</key>
+				<integer>15</integer>
+				<key>Path</key>
+				<string>layout15.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Andres ZeroCross - LG gram 15ZD960-GX5BK</string>
 				<key>Id</key>
 				<integer>21</integer>
@@ -38,6 +54,22 @@
 				<integer>3</integer>
 				<key>Path</key>
 				<string>PlatformsM.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>InsanelyDeepak - Conexant 20753_4</string>
+				<key>Id</key>
+				<integer>14</integer>
+				<key>Path</key>
+				<string>PlatformsID.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>MacPeet - CX20753/4 for Lenovo Thinkpad E580</string>
+				<key>Id</key>
+				<integer>15</integer>
+				<key>Path</key>
+				<string>Platforms15.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
