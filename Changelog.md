@@ -1,5 +1,17 @@
 AppleALC Changelog
 ==================
+#### v.1.3.7
+- VT2020_2021 anticlick patches by chrome
+- VT1802 anticlick patches by chrome
+- VT1705 anticlick patches by chrome
+- AD2000B anticlick patches by chrome
+- AD1988B anticlick patches by chrome
+- CA0132 added sоme anticlick patches by chrome
+- STAC9200 10.14.4 compatible anticlick patch by chrome
+- ALCS1200A 10.14.4 compatible anticlick patch by chrome
+- ALC891 10.14.4 compatible anticlick patch by chrome
+- ALC1150 10.14.4 compatible anticlick patch by chrome
+
 #### v1.3.6
 - Update Revision 0x100001 for CX20751/2 (Toshiba Kira 107)
 - Added ALC255 layout-id 15 for Gigabyte Brix BRi5(H), BRi7(H)] by najdanovicivan
