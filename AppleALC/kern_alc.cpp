@@ -626,7 +626,7 @@ bool AlcEnabler::appendCodec(void *user, IORegistryEntry *e) {
 			AlcEnabler::CodecInfo::deleter(ci);
 		}
 	} else {
-		SYSLOG("alc", "failed to create codec info for %X %X:%X", ci->vendor, ci->codec, ci->revision);
+		SYSLOG("alc", "failed to create codec info for %X:%X", venNum->unsigned32BitValue(), revNum->unsigned32BitValue());
 	}
 
 	return true;
