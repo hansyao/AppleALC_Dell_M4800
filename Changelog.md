@@ -11,6 +11,7 @@ AppleALC Changelog
 - ALCS1200A 10.14.4 compatible anticlick patch by chrome
 - ALC891 10.14.4 compatible anticlick patch by chrome
 - ALC1150 10.14.4 compatible anticlick patch by chrome
+- Update resources for ALC298 layout-id 99 for XiaoMi Pro by stevezhengshiqi
 
 #### v1.3.6
 - Update Revision 0x100001 for CX20751/2 (Toshiba Kira 107)
