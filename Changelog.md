@@ -12,6 +12,7 @@ AppleALC Changelog
 - ALC891 10.14.4 compatible anticlick patch by chrome
 - ALC1150 10.14.4 compatible anticlick patch by chrome
 - Update resources for ALC298 layout-id 99 for XiaoMi Pro by stevezhengshiqi
+- Added ALC235 layout-id 16 for ASUS GL553VD by MacPeet  
 
 #### v1.3.6
 - Update Revision 0x100001 for CX20751/2 (Toshiba Kira 107)

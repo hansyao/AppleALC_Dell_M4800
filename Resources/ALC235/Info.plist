@@ -30,14 +30,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>vusun123 - Realtek ALC235 for Lenovo Legion Y520</string>
-				<key>Id</key>
-				<integer>28</integer>
-				<key>Path</key>
-				<string>layout28.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>the-braveknight - Realtek ALC235 for Lenovo Legion Y520</string>
 				<key>Id</key>
 				<integer>14</integer>
@@ -51,6 +43,22 @@
 				<integer>15</integer>
 				<key>Path</key>
 				<string>layout15.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>MacPeet - Realtek ALC235 for ASUS GL553VD</string>
+				<key>Id</key>
+				<integer>16</integer>
+				<key>Path</key>
+				<string>layout16.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>vusun123 - Realtek ALC235 for Lenovo Legion Y520</string>
+				<key>Id</key>
+				<integer>28</integer>
+				<key>Path</key>
+				<string>layout28.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
@@ -73,14 +81,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>vusun123 - Realtek ALC235 for Lenovo Legion Y520</string>
-				<key>Id</key>
-				<integer>28</integer>
-				<key>Path</key>
-				<string>Platforms28.xml.zlib</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>the-braveknight - Realtek ALC235 for Lenovo Legion Y520</string>
 				<key>Id</key>
 				<integer>14</integer>
@@ -94,6 +94,22 @@
 				<integer>15</integer>
 				<key>Path</key>
 				<string>Platforms15.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>MacPeet - Realtek ALC235 for ASUS GL553VD</string>
+				<key>Id</key>
+				<integer>16</integer>
+				<key>Path</key>
+				<string>Platforms16.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>vusun123 - Realtek ALC235 for Lenovo Legion Y520</string>
+				<key>Id</key>
+				<integer>28</integer>
+				<key>Path</key>
+				<string>Platforms28.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
