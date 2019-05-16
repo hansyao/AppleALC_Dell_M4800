@@ -1,5 +1,9 @@
 AppleALC Changelog
 ==================
+
+#### v1.3.8
+- Fixed rare random audio init failure on 10.14
+
 #### v.1.3.7
 - VT2020_2021 anticlick patches by chrome
 - VT1802 anticlick patches by chrome
