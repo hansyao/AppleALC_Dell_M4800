@@ -6087,6 +6087,30 @@
 					<key>CodecID</key>
 					<integer>283904146</integer>
 					<key>Comment</key>
+					<string>Custom ALC892 for HASEE K770e i7 D1 by gitawake</string>
+					<key>ConfigData</key>
+					<data>
+					ARcc8AEXHQABFx4AARcfQAEnHGABJx0BASce
+					pgEnH5ABRxwQAUcdAQFHHhcBRx+QAUcMAgFX
+					HPABVx0AAVceAAFXH0ABZxzwAWcdAAFnHgAB
+					Zx9AAXccIAF3HRABdx4BAXcfAQGHHFABhx0Q
+					AYcegQGHHwEBlxzwAZcdAAGXHgABlx9AAacc
+					UAGnHRABpx6BAacfAQG3HDABtx0QAbceIQG3
+					HwEBtwwCAccc8AHHHQABxx4AAccfQAHXHPAB
+					1x0AAdceAAHXH0AB5xxAAecdEQHnHkUB5x8B
+					Afcc8AH3HQAB9x4AAfcfQA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>97</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283904146</integer>
+					<key>Comment</key>
 					<string>ALC892 with working SPDIF</string>
 					<key>ConfigData</key>
 					<data>
