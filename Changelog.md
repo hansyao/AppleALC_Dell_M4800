@@ -10,6 +10,7 @@ AppleALC Changelog
 - Added ALC1220 layout-id 34 for MSI P65 Creator Laptop by CleverCoder
 - Added ALC892 layout-id 97 for Hasee K770e i7 D1 (P170sm-a) by gitawake
 - Fix Typo/Update Pinconfig ALC294 layout21 by Andres and Add HDAController patch for WhiskeyLake Notebook
+- Update PathMap for ALC298 layout-id 99 for XiaoMi-Pro
 
 #### v.1.3.7
 - VT2020_2021 anticlick patches by chrome
