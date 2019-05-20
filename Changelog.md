@@ -14,6 +14,7 @@ AppleALC Changelog
 - Added ALC892 layout-id 17 for MSI B150M MORTAR - SwitchMode by MacPeet
 - Added ALC892 layout-id 18 for MSI B150M MORTAR - ManualMode by MacPeet
 - Added ALC1220 layout-id 28 for Z390 Aorus Ultra - Output SP/HP Manualmode by MacPeet
+- Added VT1802 layout-id 65 for hasee K650D by ivothgle
 
 #### v.1.3.7
 - VT2020_2021 anticlick patches by chrome
