@@ -6819,7 +6819,11 @@
 					<key>CodecName</key>
 					<string>Custom ALC1220 for MSI P65 Creator by CleverCoder</string>
 					<key>ConfigData</key>
-					<data>AUccEAFHHRABRx4RAUcfAAFHDAIBtxwgAbcdAAG3HhcBtx+QAbcMAgGXHDABlx0QAZcegQGXHwABJxxAAScdAAEnHqYBJx+Q</data>
+					<data>
+					AUccEAFHHRABRx4RAUcfAAFHDAIBtxwgAbcd
+					AAG3HhcBtx+QAbcMAgGXHDABlx0QAZcegQGX
+					HwABJxxAAScdAAEnHqYBJx+Q
+					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
