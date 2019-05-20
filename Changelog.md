@@ -8,6 +8,7 @@ AppleALC Changelog
 - Added ALC236 layout-id 54 for DELL-5488 by Daggeryu
 - Added ALC280 layout-id 16 for Optiplex 9020SFF by cowpod
 - Added ALC1220 layout-id 34 for MSI P65 Creator Laptop by CleverCoder
+- Added ALC892 layout-id 97 for Hasee K770e i7 D1 (P170sm-a) by gitawake
 
 #### v.1.3.7
 - VT2020_2021 anticlick patches by chrome
