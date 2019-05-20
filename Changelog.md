@@ -6,6 +6,7 @@ AppleALC Changelog
 - Added ALC255 (3246) layout-id 100 for alienware alpha r2 by DalianSky
 - Added ALC262 layout-id 7 for MS-7480N1 by DalianSky
 - Added ALC236 layout-id 54 for DELL-5488 by Daggeryu
+- Added ALC280 layout-id 16 for Optiplex 9020SFF by cowpod
 
 #### v.1.3.7
 - VT2020_2021 anticlick patches by chrome
