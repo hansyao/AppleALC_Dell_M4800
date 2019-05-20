@@ -13,6 +13,7 @@ AppleALC Changelog
 - Update PathMap for ALC298 layout-id 99 for XiaoMi-Pro
 - Added ALC892 layout-id 17 for MSI B150M MORTAR - SwitchMode by MacPeet
 - Added ALC892 layout-id 18 for MSI B150M MORTAR - ManualMode by MacPeet
+- Added ALC1220 layout-id 28 for Z390 Aorus Ultra - Output SP/HP Manualmode by MacPeet
 
 #### v.1.3.7
 - VT2020_2021 anticlick patches by chrome
