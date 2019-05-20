@@ -1124,6 +1124,32 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>ALC236 for DELL-5488 by Daggeryu</string>
+					<key>CodecID</key>
+					<integer>283902518</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccMAEnHQEBJx6mAScfkAE3HPABNx0AATce
+					AAE3H0ABRxwQAUcdAQFHHhcBRx+QAUcMAgGH
+					HPABhx0AAYceAAGHH0ABlxxAAZcdEAGXHoEB
+					lx8CAacc8AGnHQABpx4AAacfQAG3HPABtx0A
+					AbceAAG3H0AB1xzwAdcdAAHXHgAB1x9AAecc
+					8AHnHQAB5x4AAecfQAIXHCACFx0QAhceIQIX
+					HwICFwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>54</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>ALC236 for Lenovo Air 13 IWL by DalianSky</string>
 					<key>CodecID</key>
 					<integer>283902518</integer>
