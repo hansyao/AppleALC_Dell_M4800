@@ -7129,7 +7129,7 @@
 					<key>CodecID</key>
 					<integer>283906408</integer>
 					<key>CodecName</key>
-					<string>Realtek ALC S1220A RodionS, Nacho 2.0 outputs(green)+2 inputs+front panel+SPDIF/Optical</string>
+					<string>Realtek ALC S1220A RodionS, Nacho 2.0 outputs(green), 2 inputs (blue)+front panel (mic fr.panel), mic (pink), headphones(lime), SPDIF/Optical </string>
 					<key>ConfigData</key>
 					<data>AUceEAGHHqABhx+RAZcegQFHDAI=</data>
 					<key>FuncGroup</key>
@@ -7147,7 +7147,7 @@
 					<key>CodecID</key>
 					<integer>283906408</integer>
 					<key>CodecName</key>
-					<string>Realtek ALC S1220A RodionS, Nacho 5.1 outputs(green, black, orange)+2 inputs+front panel+SPDIF/Optical </string>
+					<string>Realtek ALC S1220A RodionS, Nacho 5.1 outputs(green, black, orange), 2 inputs (blue)+front panel (mic fr.panel), mic (pink), headphones(lime), SPDIF/Optical </string>
 					<key>ConfigData</key>
 					<data>AUceEAGHHqABhx+RAZcegQFHDAI=</data>
 					<key>FuncGroup</key>
