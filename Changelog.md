@@ -16,6 +16,7 @@ AppleALC Changelog
 - Added ALC1220 layout-id 28 for Z390 Aorus Ultra - Output SP/HP Manualmode by MacPeet
 - Added VT1802 layout-id 65 for hasee K650D by ivothgle
 - Added ALCS1220A layout-id 20 and 21 for Asus ROG STRIX Z370-F Gaming by RodionS & Nacho
+- Added ALC270 layout-id 21 for Asus A46CB-WX024D Laptop by Andres ZeroCross
 
 #### v.1.3.7
 - VT2020_2021 anticlick patches by chrome
