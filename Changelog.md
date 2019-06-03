@@ -1,6 +1,7 @@
 AppleALC Changelog
 ==================
 #### v1.3.9
+- Allow loading on 10.15 without `-lilubetaall`
 
 
 #### v1.3.8
