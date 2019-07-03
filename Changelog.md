@@ -10,6 +10,7 @@ AppleALC Changelog
 - Added ALC663 layout-id 15 for Fujitsu Celsius r670 by MacPeet
 - Added ALC700 layout-id 11 for NUC HC
 - Added AMD Vega-M HDMI
+- Added ALC235 layout-id 12 for Lenovo Rescuer 15ISK by Z39
 
 
 #### v1.3.8
