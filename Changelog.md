@@ -17,6 +17,7 @@ AppleALC Changelog
 - Added ALC256 layout-id 14 for Dell Series with Subwoofer courtesy of @insanelydeepak
 - Update ALC892 layout-id 97 by gitawake
 - Update ALC298 layout-id 66 for MECHREVO S1 by lgs3137
+- Added ALCS1220A layout-id 11 for Asus Z270-G (based on Mirone's layout 7) by Kushamot 
 
 #### v1.3.8
 - Fixed rare random audio init failure on 10.14
