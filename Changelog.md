@@ -15,6 +15,7 @@ AppleALC Changelog
 - Added ALC256 layout-id 22 for Asus VivoBook Pro 17 N705UDR by Andres ZeroCross
 - Added ALC255(3234) layout-id 11 for dell optiplex by Heporis
 - Added ALC256 layout-id 14 for Dell Series with Subwoofer courtesy of @insanelydeepak
+- Update ALC892 layout-id 97 by gitawake
 
 #### v1.3.8
 - Fixed rare random audio init failure on 10.14
