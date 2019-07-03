@@ -3,6 +3,11 @@ AppleALC Changelog
 #### v1.3.9
 - Allow loading on 10.15 without `-lilubetaall`
 - Added ALC272 layout-id 18 for Lenovo B570 and B570e by Sniki
+- Added Conexant CX8070 (CX11880) layout-id 15 for Lenovo ThinkPad E590 by MacPeet
+- Added ALC1220 layout-id 29 for Z390 Aorus Ultra - Output SP/HP SwitchMode by MacPeet
+- Added Conexant CX8200 layout-id 15 for HP ZbooK 15UG4 by MacPeet
+- Update AD1984 layout-id 11 by MacPeet
+- Added ALC663 layout-id 15 for Fujitsu Celsius r670 by MacPeet
 
 
 #### v1.3.8

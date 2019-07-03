@@ -5,31 +5,31 @@
 	<key>Author</key>
 	<string>MacPeet</string>
 	<key>CodecID</key>
-	<integer>6532</integer>
+	<integer>8070</integer>
 	<key>CodecName</key>
-	<string>AD1984</string>
+	<string>CX8070</string>
 	<key>Files</key>
 	<dict>
 		<key>Layouts</key>
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>MacPeet - AD1984 - for_IBM_Lenovo_ThinkPad_T61_T61p</string>
+				<string>MacPeet - Conexant CX8070 (CX11880) for Lenovo ThinkPad E590</string>
 				<key>Id</key>
-				<integer>11</integer>
+				<integer>15</integer>
 				<key>Path</key>
-				<string>layout11.xml.zlib</string>
+				<string>layout15.xml.zlib</string>
 			</dict>
 		</array>
 		<key>Platforms</key>
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>MacPeet - AD1984 - for_IBM_Lenovo_ThinkPad_T61_T61p</string>
+				<string>MacPeet - Conexant CX8070 (CX11880) for Lenovo ThinkPad E590</string>
 				<key>Id</key>
-				<integer>11</integer>
+				<integer>15</integer>
 				<key>Path</key>
-				<string>Platforms11.xml.zlib</string>
+				<string>Platforms15.xml.zlib</string>
 			</dict>
 		</array>
 	</dict>
@@ -91,25 +91,11 @@
 			<key>Find</key>
 			<data>ixnUEQ==</data>
 			<key>MinKernel</key>
-			<integer>13</integer>
+			<integer>16</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>hBnUEQ==</data>
-		</dict>
-		<dict>
-			<key>Count</key>
-			<integer>2</integer>
-			<key>Find</key>
-			<data>gxnUEQ==</data>
-			<key>MaxKernel</key>
-			<integer>15</integer>
-			<key>MinKernel</key>
-			<integer>15</integer>
-			<key>Name</key>
-			<string>AppleHDA</string>
-			<key>Replace</key>
-			<data>AAAAAA==</data>
+			<data>hh/xFA==</data>
 		</dict>
 		<dict>
 			<key>Count</key>
@@ -123,12 +109,22 @@
 			<key>Replace</key>
 			<data>AAAAAA==</data>
 		</dict>
-	</array>
-	<key>Revisions</key>
-	<array>
-		<integer>1049600</integer>
+		<dict>
+			<key>Count</key>
+			<integer>1</integer>
+			<key>Find</key>
+			<data>a3Bzaes=</data>
+			<key>MinKernel</key>
+			<string>14</string>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Provider</key>
+			<string>Wern Apfel</string>
+			<key>Replace</key>
+			<data>Y2ltaes=</data>
+		</dict>
 	</array>
 	<key>Vendor</key>
-	<string>AnalogDevices</string>
+	<string>Conexant</string>
 </dict>
 </plist>
