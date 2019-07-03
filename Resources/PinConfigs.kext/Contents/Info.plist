@@ -7323,6 +7323,33 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>CodecID</key>
+					<integer>283906408</integer>
+					<key>CodecName</key>
+					<string>Realtek ALC S1220A Kushamot for Asus Z270G mb (based on Mirone's layout 7)</string>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHUABRx4RAUcfAQFXHFABVx0QAVce
+					AQFXHwEBZxwwAWcdYAFnHgEBZx8BAYccYAGH
+					HZABhx6gAYcfkAGXHHABlx2QAZcegQGXHwEB
+					txwgAbcdQAG3HiEBtx8BAUcMAg==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283906408</integer>
