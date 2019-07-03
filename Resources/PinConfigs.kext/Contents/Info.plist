@@ -960,23 +960,31 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>AwAAAA==</data>
+					<data>
+					AwAAAA==
+					</data>
 					<key>Codec</key>
-					<string>MacPeet - Realtek ALC235 for ASUS GL553VD</string>
+					<string>ALC235 for Lenovo C530 Desktop PC by Andres ZeroCross</string>
 					<key>CodecID</key>
 					<integer>283902517</integer>
 					<key>ConfigData</key>
 					<data>
-					AhccIAIXHRACFx4rAhcfAAG3HDABtx0AAbce
-					pwG3H5ABlxwwAZcdEAGXHosBlx8BAUccQAFH
-					HQABRx4XAUcfkAFHDAI=
+					AScc8AEnHQABJx4AAScfQAFHHPABRx0AAUce
+					AAFHH0ABdxzwAXcdAAF3HgABdx9AAYcc8AGH
+					HQABhx4AAYcfQAGXHDABlx0QAZceiwGXHwIB
+					pxwQAacdAQGnHqABpx+QAbccIAG3HQEBtx4X
+					AbcfkAHXHPAB1x0AAdceAAHXH0AB5xzwAecd
+					AAHnHgAB5x9AAhccQAIXHRACFx4rAhcfAgG3
+					DAICFwwC
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
-					<integer>16</integer>
+					<integer>21</integer>
 					<key>WakeConfigData</key>
-					<data>AUcMAg==</data>
+					<data>
+					AbcMAgIXDAI=
+					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
@@ -1566,6 +1574,31 @@
 					<integer>21</integer>
 					<key>WakeConfigData</key>
 					<data>AUcMAgIXDAIBlwclAhcIgw==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>CodecID</key>
+					<integer>283902550</integer>
+					<key>Comment</key>
+					<string>Andres ZeroCross for Asus VivoBook Pro 17  N705UDR</string>
+					<key>ConfigData</key>
+					<data>
+					AbccUAG3HQEBtx4XAbcfkAGnHDABpx0BAace
+					oAGnH5ACFxwgAhcdEAIXHiECFx8DAbcMAg==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>22</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAg==
+					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
