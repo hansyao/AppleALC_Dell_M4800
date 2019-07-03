@@ -16,6 +16,7 @@ AppleALC Changelog
 - Added ALC255(3234) layout-id 11 for dell optiplex by Heporis
 - Added ALC256 layout-id 14 for Dell Series with Subwoofer courtesy of @insanelydeepak
 - Update ALC892 layout-id 97 by gitawake
+- Update ALC298 layout-id 66 for MECHREVO S1 by lgs3137
 
 #### v1.3.8
 - Fixed rare random audio init failure on 10.14
