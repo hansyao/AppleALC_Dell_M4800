@@ -8,6 +8,8 @@ AppleALC Changelog
 - Added Conexant CX8200 layout-id 15 for HP ZbooK 15UG4 by MacPeet
 - Update AD1984 layout-id 11 by MacPeet
 - Added ALC663 layout-id 15 for Fujitsu Celsius r670 by MacPeet
+- Added ALC700 layout-id 11 for NUC HC
+- Added AMD Vega-M HDMI
 
 
 #### v1.3.8
