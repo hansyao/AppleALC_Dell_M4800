@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.4.0
+- Unified release archive names
+
 #### v1.3.9
 - Allow loading on 10.15 without `-lilubetaall`
 - Added ALC272 layout-id 18 for Lenovo B570 and B570e by Sniki
