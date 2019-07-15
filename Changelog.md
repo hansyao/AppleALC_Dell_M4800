@@ -2,6 +2,7 @@ AppleALC Changelog
 ==================
 #### v1.4.0
 - Unified release archive names
+- Added AMD Zen 2 controller patches by camielverdult
 
 #### v1.3.9
 - Allow loading on 10.15 without `-lilubetaall`
