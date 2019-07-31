@@ -1743,9 +1743,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Realtek ALC257 for Lenovo Legion Y540 and Y7000-2019</string>
 					<key>CodecID</key>
@@ -1765,9 +1763,7 @@
 					<key>LayoutID</key>
 					<integer>18</integer>
 					<key>WakeConfigData</key>
-					<data>
-					AUcMAg==
-					</data>
+					<data>AUcMAg==</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
