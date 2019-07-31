@@ -3,6 +3,7 @@ AppleALC Changelog
 #### v1.4.0
 - Unified release archive names
 - Added AMD Zen 2 controller patches by camielverdult
+- Added ALC274 layout-id 21 for Dell Inspiron 27-7777 AIO Series by Andres ZeroCross
 
 #### v1.3.9
 - Allow loading on 10.15 without `-lilubetaall`
