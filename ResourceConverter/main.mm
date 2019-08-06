@@ -350,14 +350,6 @@ static void generateControllers(NSString *file, NSArray *ctrls, NSDictionary *ve
 	appendFile(file, ctrlModSection);
 }
 
-/*static void generateUserPatches(NSString *file, NSArray *userp, NSDictionary *kextIndexes) {
-	appendFile(file, @"\n// UserPatches section\n\n");
-	
-	long count;
-	generatePatches(file, userp, kextIndexes, &count, @"KextPatch userPatch[] {\n");
-	appendFile(file, [[[NSMutableString alloc] initWithFormat:@"\nconst size_t userPatchSize {%lu};\n", count] autorelease]);
-}*/
-
 static void generateVendors(NSString *file, NSDictionary *vendors, NSString *path, NSDictionary *kextIndexes) {
 	auto vendorSection = [[NSMutableString alloc] initWithUTF8String:"\n// Vendor section\n\n"];
 	
@@ -397,9 +389,12 @@ int main(int argc, const char * argv[]) {
 	// Create a file
 	[[NSFileManager defaultManager] createFileAtPath:outputCpp contents:nil attributes:nil];
 
-	appendFile(outputCpp, ResourceHeader);
-	auto kextIndexes = generateKexts(outputCpp, kexts);
-	generateVendors(outputCpp, vendors, basePath, kextIndexes);
-	generateControllers(outputCpp, ctrls, vendors, kextIndexes);
-	//generateUserPatches(outputCpp, userp, kextIndexes);
+	try {
+		appendFile(outputCpp, ResourceHeader);
+		auto kextIndexes = generateKexts(outputCpp, kexts);
+		generateVendors(outputCpp, vendors, basePath, kextIndexes);
+		generateControllers(outputCpp, ctrls, vendors, kextIndexes);
+	} catch (...) {
+		ERROR("Fatal error during generation");
+	}
 }

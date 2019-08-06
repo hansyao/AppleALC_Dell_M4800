@@ -7,4 +7,5 @@ project.xcworkspace
 *.zlib
 AppleALC/kern_resources.cpp
 build
-
+.svace-dir
+cov-int
