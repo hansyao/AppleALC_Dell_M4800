@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.4.1
+- Fixed memory leaks
+
 #### v1.4.0
 - Unified release archive names
 - Added AMD Zen 2 controller patches by camielverdult
