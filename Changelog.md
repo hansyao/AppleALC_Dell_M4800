@@ -6,6 +6,7 @@ AppleALC Changelog
 - Added ALC274 layout-id 21 for Dell Inspiron 27-7777 AIO Series by Andres ZeroCross
 - Added ALC257 layout-id 18 for Lenovo Legion Y540 and Y7000-2019 by xiaoMGitHub
 - Added ALC289 layout-id 23 for Acer PT515-51 By Bugprogrammer and Rover
+- Added ALC285 layout 31 for Thinkpad X1E 8750H version by Flymin
 
 #### v1.3.9
 - Allow loading on 10.15 without `-lilubetaall`
