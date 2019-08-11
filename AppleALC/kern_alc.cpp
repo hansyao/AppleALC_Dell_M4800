@@ -342,14 +342,9 @@ IOReturn AlcEnabler::initializePinConfig(IOService *hdaCodec, IOService *configD
 					}
 					auto currCodec = OSDynamicCast(OSNumber, config->getObject("CodecID"));
 					auto currLayout = OSDynamicCast(OSNumber, config->getObject("LayoutID"));
-					if (currCodec == nullptr || currLayout == nullptr) {
-						// This is not an analog codec
-						continue;
-					}
-
-					if (currCodec->unsigned32BitValue() != analogCodec || currLayout->unsigned32BitValue() != analogLayout) {
-						SYSLOG("alc", "invalid CodecID %u/%u or LayoutID %u/%u at entry %u, pinconfigs are broken",
-								currCodec->unsigned32BitValue(), analogCodec, currLayout->unsigned32BitValue(), analogLayout, i);
+					if (currCodec == nullptr || currLayout == nullptr ||
+					    currCodec->unsigned32BitValue() != analogCodec || currLayout->unsigned32BitValue() != analogLayout) {
+						// Not analog or wrong entry.
 						continue;
 					}
 
