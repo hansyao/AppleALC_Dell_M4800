@@ -437,6 +437,71 @@
 	</dict>
 	<dict>
 		<key>Device</key>
+		<real>43752</real>
+		<key>Model</key>
+		<string>Desktop</string>
+		<key>Name</key>
+		<string>AMD R9 Fury HDMI Audio</string>
+		<key>Patches</key>
+		<array>
+			<dict>
+				<key>Count</key>
+				<integer>2</integer>
+				<key>Find</key>
+				<data>AhDYqg==</data>
+				<key>MinKernel</key>
+				<integer>15</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>AhDoqg==</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>2</integer>
+				<key>Find</key>
+				<data>2KoAAA==</data>
+				<key>MinKernel</key>
+				<integer>15</integer>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>6KoAAA==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Lowers the if condition to let the patch above work (older os)</string>
+				<key>Count</key>
+				<integer>2</integer>
+				<key>Find</key>
+				<data>16oAAA==</data>
+				<key>MinKernel</key>
+				<integer>15</integer>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>56oAAA==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Lowers the if condition to let the patch above work (10.13.4 17E182a+)</string>
+				<key>Count</key>
+				<integer>2</integer>
+				<key>Find</key>
+				<data>eFX//w==</data>
+				<key>MinKernel</key>
+				<integer>16</integer>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>uFX//w==</data>
+			</dict>
+		</array>
+		<key>Vendor</key>
+		<string>AMD</string>
+	</dict>
+	<dict>
+		<key>Device</key>
 		<integer>43720</integer>
 		<key>Model</key>
 		<string>Desktop</string>
