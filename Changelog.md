@@ -3,6 +3,7 @@ AppleALC Changelog
 #### v1.4.1
 - Fixed memory leaks
 - Added AMD Radeon R9 Fury/R9 Fury X HDMI audio support
+- Added ALC256 layout-id 66 for ASUS Y5000U X507UBR by lgs3137
 
 #### v1.4.0
 - Unified release archive names
