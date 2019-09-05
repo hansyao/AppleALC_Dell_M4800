@@ -8,6 +8,9 @@ AppleALC Changelog
 - Added ALC892 layout-id 90 for GIGABYTE B360M M AORUS PRO by xunyard
 - Added ALC298 layout-id 32 for XPS 9570 8750H version by smallssnow
 - Added ALC292 layout-id 55 for Dell Latitude E6440/E6540 with docking station linein/lineout support by baesar0
+- Added ALC256 layout-id 97 for MateBook X Pro 2019 by DalianSky
+- Added ALC269 layout-id 100 for GPD P2 Max by DalianSky
+- Merged Lenovo Air13 IWL with WhiskeyLake Mobile PCH HD Audio
 
 #### v1.4.0
 - Unified release archive names
