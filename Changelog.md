@@ -4,6 +4,7 @@ AppleALC Changelog
 - Fixed memory leaks
 - Added AMD Radeon R9 Fury/R9 Fury X HDMI audio support
 - Added ALC256 layout-id 66 for ASUS Y5000U X507UBR by lgs3137
+- Added ALC235 layout-id 22 for Asus ROG GL553VD-FY380 by Andres ZeroCross
 
 #### v1.4.0
 - Unified release archive names
