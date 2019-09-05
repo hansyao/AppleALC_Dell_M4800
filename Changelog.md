@@ -6,6 +6,7 @@ AppleALC Changelog
 - Added ALC256 layout-id 66 for ASUS Y5000U X507UBR by lgs3137
 - Added ALC235 layout-id 22 for Asus ROG GL553VD-FY380 by Andres ZeroCross
 - Added ALC892 layout-id 90 for GIGABYTE B360M M AORUS PRO by xunyard
+- Added ALC298 layout-id 32 for XPS 9570 8750H version by smallssnow
 
 #### v1.4.0
 - Unified release archive names
