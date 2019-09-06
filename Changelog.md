@@ -11,6 +11,7 @@ AppleALC Changelog
 - Added ALC256 layout-id 97 for MateBook X Pro 2019 by DalianSky
 - Added ALC269 layout-id 100 for GPD P2 Max by DalianSky
 - Merged Lenovo Air13 IWL with WhiskeyLake Mobile PCH HD Audio
+- Added CX8200 layout-id 23 for HP Probook 440 G5 by frankiezdh
 
 #### v1.4.0
 - Unified release archive names
