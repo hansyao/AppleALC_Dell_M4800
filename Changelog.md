@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.4.2
+- Added Conexant CX20632 layout-id 28 for HP EliteDesk by Halelluja12
+
 #### v1.4.1
 - Fixed memory leaks
 - Added AMD Radeon R9 Fury/R9 Fury X HDMI audio support
