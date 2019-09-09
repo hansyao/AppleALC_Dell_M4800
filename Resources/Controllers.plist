@@ -461,7 +461,7 @@
 	</dict>
 	<dict>
 		<key>Device</key>
-		<real>43752</real>
+		<integer>43752</integer>
 		<key>Model</key>
 		<string>Desktop</string>
 		<key>Name</key>
