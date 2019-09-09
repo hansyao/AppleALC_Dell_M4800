@@ -443,7 +443,7 @@
 		<key>Device</key>
 		<integer>36128</integer>
 		<key>Name</key>
-		<string>X99 HDEF controller r1</string>
+		<string>X99 HDEF controller 0x8D20</string>
 		<key>Patches</key>
 		<array>
 			<dict>
@@ -502,7 +502,7 @@
 		<key>Device</key>
 		<integer>36129</integer>
 		<key>Name</key>
-		<string>X99 HDEF controller r2</string>
+		<string>X99 HDEF controller 0x8D21</string>
 		<key>Patches</key>
 		<array>
 			<dict>
