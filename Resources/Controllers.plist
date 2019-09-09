@@ -232,6 +232,30 @@
 				<key>Replace</key>
 				<data>hoAgjQ==</data>
 			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>4</integer>
+				<key>Find</key>
+				<data>IIwAAA==</data>
+				<key>MinKernel</key>
+				<integer>13</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>II0AAA==</data>
+			</dict>
+			<dict>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Find</key>
+				<data>hoAgjA==</data>
+				<key>MinKernel</key>
+				<integer>13</integer>
+				<key>Name</key>
+				<string>AppleHDAController</string>
+				<key>Replace</key>
+				<data>hoAgjQ==</data>
+			</dict>
 		</array>
 		<key>Vendor</key>
 		<string>Intel</string>
@@ -384,41 +408,6 @@
 				<string>AppleHDAController</string>
 				<key>Replace</key>
 				<data>PQwMAAA=</data>
-			</dict>
-		</array>
-		<key>Vendor</key>
-		<string>Intel</string>
-	</dict>
-	<dict>
-		<key>Device</key>
-		<integer>36128</integer>
-		<key>Name</key>
-		<string>X99 HDEF controller</string>
-		<key>Patches</key>
-		<array>
-			<dict>
-				<key>Count</key>
-				<integer>4</integer>
-				<key>Find</key>
-				<data>IIwAAA==</data>
-				<key>MinKernel</key>
-				<integer>13</integer>
-				<key>Name</key>
-				<string>AppleHDAController</string>
-				<key>Replace</key>
-				<data>II0AAA==</data>
-			</dict>
-			<dict>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Find</key>
-				<data>hoAgjA==</data>
-				<key>MinKernel</key>
-				<integer>13</integer>
-				<key>Name</key>
-				<string>AppleHDAController</string>
-				<key>Replace</key>
-				<data>hoAgjQ==</data>
 			</dict>
 		</array>
 		<key>Vendor</key>
