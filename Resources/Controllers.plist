@@ -273,7 +273,7 @@
 	</dict>
 	<dict>
 		<key>Device</key>
-		<integer>36</integer>
+		<integer>36000</integer>
 		<key>Name</key>
 		<string>Z97 HDEF controller</string>
 		<key>Patches</key>
