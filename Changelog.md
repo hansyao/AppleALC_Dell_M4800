@@ -2,6 +2,7 @@ AppleALC Changelog
 ==================
 #### v1.4.2
 - Added Conexant CX20632 layout-id 28 for HP EliteDesk by Halelluja12
+- Added wake verb for ALC1220 layout-id 34 for MSI P65 Creator / MSI GS65
 
 #### v1.4.1
 - Fixed memory leaks
