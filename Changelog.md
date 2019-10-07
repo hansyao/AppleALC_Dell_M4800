@@ -7,6 +7,7 @@ AppleALC Changelog
 - Fix headphone and speaker switch not working for CX8200 HP Probook 440 G5
 - Added ALC1220 layout-id 21 for MSI GE63 Raider RGB 8RF by Andres ZeroCross
 - Added ALC292 layout-id 32 for Lenovo T450s by EchoEsprit
+- Fixed string Platforms97.xml.zlib Realtek ALC256 layout-id 97 by DalianSky
 
 #### v1.4.1
 - Fixed memory leaks
