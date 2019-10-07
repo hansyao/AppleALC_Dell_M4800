@@ -6,6 +6,7 @@ AppleALC Changelog
 - Added Conexant CX20632 layout 23 for  HP ProDesk 480 G4 by frankiezdh
 - Fix headphone and speaker switch not working for CX8200 HP Probook 440 G5
 - Added ALC1220 layout-id 21 for MSI GE63 Raider RGB 8RF by Andres ZeroCross
+- Added ALC292 layout-id 32 for Lenovo T450s by EchoEsprit
 
 #### v1.4.1
 - Fixed memory leaks
