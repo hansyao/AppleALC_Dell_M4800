@@ -7772,6 +7772,28 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Conexant CX8050 for ASUS S410U/X411U by cowpod</string>
+					<key>CodecID</key>
+					<integer>351346546</integer>
+					<key>ConfigData</key>
+					<data>
+					AXccEAF3HQABdx4XAXcfkAGnHCABpx0AAace
+					oAGnH5ABlxwwAZcdEAGXHosBlx8BAWccQAFn
+					HRABZx4rAWcfAQF3DAIBZwwCAZcHJAGnByQ=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
+					<key>WakeConfigData</key>
+					<data>AXcMAgFnDAI=</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - Conexant CX8050</string>
 					<key>CodecID</key>
 					<integer>351346546</integer>
