@@ -3,6 +3,7 @@ AppleALC Changelog
 #### v1.4.3
 - Added support for `No-hda-gfx` HDEF property disabling IGPU digital audio
 - Added CX8050 layout-id 13 for ASUS S410U/X411U by cowpod
+- Fix layout 13 CX8050 microphone after sleep by cowpod
 
 #### v1.4.2
 - Added Conexant CX20632 layout-id 28 for HP EliteDesk by Halelluja12
