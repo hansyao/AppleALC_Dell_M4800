@@ -187,6 +187,8 @@ void AlcEnabler::updateDeviceProperties(IORegistryEntry *hdaService, DeviceInfo 
 					   WIOKit::getOSDataValue(hdaService, "layout-id", alcId)) {
 				DBGLOG("audio", "found legacy alc-layout-id (from layout-id) %u", alcId);
 				hdaService->setProperty("alc-layout-id", &alcId, sizeof(alcId));
+			} else {
+				SYSLOG("audio", "ERROR: Neither alc-layout-id nor layout-id is found in configuration");
 			}
 		}
 
