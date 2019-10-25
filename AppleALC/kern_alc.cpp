@@ -183,12 +183,13 @@ void AlcEnabler::updateDeviceProperties(IORegistryEntry *hdaService, DeviceInfo 
 			uint32_t alcId;
 			if (WIOKit::getOSDataValue(hdaService, "alc-layout-id", alcId)) {
 				DBGLOG("alc", "found normal alc-layout-id %u", alcId);
-			} else if (info->firmwareVendor != DeviceInfo::FirmwareVendor::Apple &&
-					   WIOKit::getOSDataValue(hdaService, "layout-id", alcId)) {
-				DBGLOG("audio", "found legacy alc-layout-id (from layout-id) %u", alcId);
-				hdaService->setProperty("alc-layout-id", &alcId, sizeof(alcId));
-			} else {
-				SYSLOG("audio", "ERROR: Neither alc-layout-id nor layout-id is found in configuration");
+			} else if (info->firmwareVendor != DeviceInfo::FirmwareVendor::Apple) {
+				if (WIOKit::getOSDataValue(hdaService, "layout-id", alcId)) {
+					DBGLOG("alc", "found legacy alc-layout-id (from layout-id) %u", alcId);
+					hdaService->setProperty("alc-layout-id", &alcId, sizeof(alcId));
+				} else {
+					SYSLOG("alc", "error: neither alc-layout-id nor layout-id is found in configuration");
+				}
 			}
 		}
 
