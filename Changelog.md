@@ -7,6 +7,7 @@ AppleALC Changelog
 - Added STAC9872AK layout-id 12 for Sony VGN-FZ11MR by ctich
 - Added support for intel NUC7 HDMI audio device-id 719d by Sevift
 - Update configdata for dell-5488 by daggeryu
+- Fixed ALC292 layout-id 55 with linein (dock mic) boost issue by baesar0
 
 #### v1.4.2
 - Added Conexant CX20632 layout-id 28 for HP EliteDesk by Halelluja12
