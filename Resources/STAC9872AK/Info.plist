@@ -39,25 +39,19 @@
 			<key>Count</key>
 			<integer>1</integer>
 			<key>Find</key>
-			<data>
-			xgYASIu/aAE=
-			</data>
+			<data>xgYASIu/aAE=</data>
 			<key>MinKernel</key>
 			<integer>18</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			xgYBSIu/aAE=
-			</data>
+			<data>xgYBSIu/aAE=</data>
 		</dict>
 		<dict>
 			<key>Count</key>
 			<integer>1</integer>
 			<key>Find</key>
-			<data>
-			QcYGAEmLvCQ=
-			</data>
+			<data>QcYGAEmLvCQ=</data>
 			<key>MaxKernel</key>
 			<integer>13</integer>
 			<key>MinKernel</key>
@@ -65,41 +59,31 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			QcYGAUmLvCQ=
-			</data>
+			<data>QcYGAUmLvCQ=</data>
 		</dict>
 		<dict>
 			<key>Count</key>
 			<integer>1</integer>
 			<key>Find</key>
-			<data>
-			QcYGAEiLu2g=
-			</data>
+			<data>QcYGAEiLu2g=</data>
 			<key>MinKernel</key>
 			<integer>14</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			QcYGAUiLu2g=
-			</data>
+			<data>QcYGAUiLu2g=</data>
 		</dict>
 		<dict>
 			<key>Count</key>
 			<integer>1</integer>
 			<key>Find</key>
-			<data>
-			QcaGQwEAAAA=
-			</data>
+			<data>QcaGQwEAAAA=</data>
 			<key>MinKernel</key>
 			<integer>12</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			QcaGQwEAAAE=
-			</data>
+			<data>QcaGQwEAAAE=</data>
 		</dict>
 		<dict>
 			<key>Comment</key>
@@ -107,9 +91,7 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			f3aEgw==
-			</data>
+			<data>f3aEgw==</data>
 			<key>MaxKernel</key>
 			<integer>12</integer>
 			<key>MinKernel</key>
@@ -117,9 +99,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			AAAAgA==
-			</data>
+			<data>AAAAgA==</data>
 		</dict>
 		<dict>
 			<key>Comment</key>
@@ -127,9 +107,7 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			AKoCEA==
-			</data>
+			<data>AKoCEA==</data>
 			<key>MaxKernel</key>
 			<integer>15</integer>
 			<key>MinKernel</key>
@@ -137,9 +115,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			AAAAgA==
-			</data>
+			<data>AAAAgA==</data>
 		</dict>
 		<dict>
 			<key>Comment</key>
@@ -147,9 +123,7 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			BUITEA==
-			</data>
+			<data>BUITEA==</data>
 			<key>MaxKernel</key>
 			<integer>14</integer>
 			<key>MinKernel</key>
@@ -157,9 +131,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			AAAAgA==
-			</data>
+			<data>AAAAgA==</data>
 		</dict>
 		<dict>
 			<key>Comment</key>
@@ -167,9 +139,7 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			BgDeEA==
-			</data>
+			<data>BgDeEA==</data>
 			<key>MaxKernel</key>
 			<integer>15</integer>
 			<key>MinKernel</key>
@@ -177,9 +147,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			AAAAgA==
-			</data>
+			<data>AAAAgA==</data>
 		</dict>
 		<dict>
 			<key>Comment</key>
@@ -187,9 +155,7 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			YQLsEA==
-			</data>
+			<data>YQLsEA==</data>
 			<key>MaxKernel</key>
 			<integer>15</integer>
 			<key>MinKernel</key>
@@ -197,9 +163,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			AAAAgA==
-			</data>
+			<data>AAAAgA==</data>
 		</dict>
 		<dict>
 			<key>Comment</key>
@@ -207,9 +171,7 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			hAjsEA==
-			</data>
+			<data>hAjsEA==</data>
 			<key>MaxKernel</key>
 			<integer>14</integer>
 			<key>MinKernel</key>
@@ -217,9 +179,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			AAAAgA==
-			</data>
+			<data>AAAAgA==</data>
 		</dict>
 		<dict>
 			<key>Comment</key>
@@ -227,17 +187,13 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			hBnUEQ==
-			</data>
+			<data>hBnUEQ==</data>
 			<key>MinKernel</key>
 			<integer>12</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			YnaEgw==
-			</data>
+			<data>YnaEgw==</data>
 		</dict>
 		<dict>
 			<key>Comment</key>
@@ -245,9 +201,7 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			f3aEgw==
-			</data>
+			<data>f3aEgw==</data>
 			<key>MaxKernel</key>
 			<integer>13</integer>
 			<key>MinKernel</key>
@@ -255,9 +209,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			/////w==
-			</data>
+			<data>/////w==</data>
 		</dict>
 		<dict>
 			<key>Comment</key>
@@ -265,9 +217,7 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			BCiGgA==
-			</data>
+			<data>BCiGgA==</data>
 			<key>MaxKernel</key>
 			<integer>13</integer>
 			<key>MinKernel</key>
@@ -275,9 +225,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			/////w==
-			</data>
+			<data>/////w==</data>
 		</dict>
 		<dict>
 			<key>Comment</key>
@@ -285,9 +233,7 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			/4fsGg==
-			</data>
+			<data>/4fsGg==</data>
 			<key>MaxKernel</key>
 			<integer>13</integer>
 			<key>MinKernel</key>
@@ -295,9 +241,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			/////w==
-			</data>
+			<data>/////w==</data>
 		</dict>
 		<dict>
 			<key>Comment</key>
@@ -305,9 +249,7 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			dBmtFQ==
-			</data>
+			<data>dBmtFQ==</data>
 			<key>MaxKernel</key>
 			<integer>13</integer>
 			<key>MinKernel</key>
@@ -315,9 +257,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			/////w==
-			</data>
+			<data>/////w==</data>
 		</dict>
 		<dict>
 			<key>Comment</key>
@@ -325,9 +265,7 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			f3aEgw==
-			</data>
+			<data>f3aEgw==</data>
 			<key>MaxKernel</key>
 			<integer>15</integer>
 			<key>MinKernel</key>
@@ -335,9 +273,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			AAAAgA==
-			</data>
+			<data>AAAAgA==</data>
 		</dict>
 		<dict>
 			<key>Comment</key>
@@ -345,9 +281,7 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			CIQTEA==
-			</data>
+			<data>CIQTEA==</data>
 			<key>MaxKernel</key>
 			<integer>14</integer>
 			<key>MinKernel</key>
@@ -355,9 +289,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			AAAAgA==
-			</data>
+			<data>AAAAgA==</data>
 		</dict>
 		<dict>
 			<key>Comment</key>
@@ -365,9 +297,7 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			gxnUEQ==
-			</data>
+			<data>gxnUEQ==</data>
 			<key>MaxKernel</key>
 			<integer>15</integer>
 			<key>MinKernel</key>
@@ -375,9 +305,7 @@
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			AAAAgA==
-			</data>
+			<data>AAAAgA==</data>
 		</dict>
 		<dict>
 			<key>Comment</key>
@@ -385,17 +313,13 @@
 			<key>Count</key>
 			<integer>2</integer>
 			<key>Find</key>
-			<data>
-			PwDeEA==
-			</data>
+			<data>PwDeEA==</data>
 			<key>MinKernel</key>
 			<integer>16</integer>
 			<key>Name</key>
 			<string>AppleHDA</string>
 			<key>Replace</key>
-			<data>
-			AAAAgA==
-			</data>
+			<data>AAAAgA==</data>
 		</dict>
 	</array>
 	<key>Revisions</key>
