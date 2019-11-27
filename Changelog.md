@@ -5,6 +5,7 @@ AppleALC Changelog
 - Update ALC269 layout-id 19 for Asus Vivobook S300CA by chunnann
 - Update ALC230 layout-id 20 to fix sleep after wake by ameenjuz
 - Added CX8150 layout-id 22 for ASUS VivoBook S405UA-EB906T by Andres ZeroCross
+- Added ALC285 layout-id 31 for Thinkpad X1E 8750H version by Flymin
 
 #### v1.4.3
 - Added support for `No-hda-gfx` HDEF property disabling IGPU digital audio
