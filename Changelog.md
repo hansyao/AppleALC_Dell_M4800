@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.4.5
+
+
 #### v1.4.4
 - Added ALC269 layout-id 12 for Asus Vivobook S200CE by chunnann
 - Update ALC269 layout-id 19 for Asus Vivobook S300CA by chunnann
