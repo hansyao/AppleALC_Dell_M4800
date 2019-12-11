@@ -3,6 +3,7 @@ AppleALC Changelog
 #### v1.4.5
 - Update MuteGPIO and AMP Values ALC255 layout-id 21 by Andres ZeroCross
 - Added ALC272 layout-id 21 for  Lenovo All In One PC C440 by Andres ZeroCross
+- Conflict patches for NUC7 HDMI audio are deleted.
 
 #### v1.4.4
 - Added ALC269 layout-id 12 for Asus Vivobook S200CE by chunnann
