@@ -2989,8 +2989,8 @@
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
-                                        <key>Codec</key>
-	                                <string>ALC269VC for Hasee K790s</string>
+					<key>Codec</key>
+					<string>ALC269VC for Hasee K790s</string>
 					<key>CodecID</key>
 					<integer>283902569</integer>
 					<key>ConfigData</key>

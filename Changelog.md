@@ -7,6 +7,9 @@ AppleALC Changelog
 - Added ALC285 layout-id 52 for Thinkpad P52 by liuyishengalan
 - Added  Intel 400 series controller (Comet Lake) by fewtarius
 - Added 4 channel support and fixed mute button to ALC256 layout 97
+- Added ALC1220 layout-id 99 for MiBook 2019 by Dynamix1997
+- Added ALC262 layout-id 66 for MS-7847 by Dynamix1997
+- Added ALC269VC layout-id 47 for Hasee K790s by Dynamix1997
 
 #### v1.4.4
 - Added ALC269 layout-id 12 for Asus Vivobook S200CE by chunnann
