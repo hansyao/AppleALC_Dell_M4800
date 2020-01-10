@@ -5,6 +5,7 @@ AppleALC Changelog
 - Added ALC272 layout-id 21 for  Lenovo All In One PC C440 by Andres ZeroCross
 - Conflict patches for NUC7 HDMI audio are deleted.
 - Added ALC285 layout-id 52 for Thinkpad P52 by liuyishengalan
+- Added  Intel 400 series controller (Comet Lake) by fewtarius
 
 #### v1.4.4
 - Added ALC269 layout-id 12 for Asus Vivobook S200CE by chunnann
