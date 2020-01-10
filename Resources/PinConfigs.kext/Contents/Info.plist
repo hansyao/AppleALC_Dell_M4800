@@ -2048,6 +2048,24 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>ALC262 for MS-7847</string>
+					<key>CodecID</key>
+					<integer>283902562</integer>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHUABRx4hAUcfAgFXHB8BVx0QAVce
+					AQFXHwEBZxwgAWcdAQFnHhMBZx+ZAYccMAGH
+					HTABhx6BAYcfAQGnHD8Bpx2QAaceoQGnHwI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>66</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - Realtek ALC268</string>
 					<key>CodecID</key>
 					<integer>283902568</integer>
@@ -2967,6 +2985,28 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>188</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+                                        <key>Codec</key>
+	                                <string>ALC269VC for Hasee K790s</string>
+					<key>CodecID</key>
+					<integer>283902569</integer>
+					<key>ConfigData</key>
+					<data>
+					AScc8AEnHQABJx4AAScfQAFHHPABRx0AAUce
+					AAFHH0ABdxzwAXcdAAF3HgABdx9AAYccEAGH
+					HRABhx6AAYcfkAGXHBABlx0AAZceoAGXH5AB
+					pxyQAacdAQGnHhcBpx+QAbcc8AG3HQABtx4A
+					AbcfQAHXHPAB1x0AAdceAAHXH0AB5xxwAecd
+					EQHnHkQB5x8EAhccoAIXHRACFx4hAhcfBAFH
+					DAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>47</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -7559,6 +7599,28 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>34</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283906592</integer>
+					<key>CodecName</key>
+					<string>MiBook 2019 by Dynamix1997</string>
+					<key>ConfigData</key>
+					<data>
+					AaccEAGnHQEBpx4QAacfkAFHHCABRx0QAUce
+					IQFHHwMBRwwCASccMAEnHQEBJx6mAScfkAGH
+					HEABhx0QAYcegQGHHwM=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>99</integer>
 					<key>WakeConfigData</key>
 					<data>AUcMAg==</data>
 					<key>WakeVerbReinit</key>
