@@ -2,6 +2,7 @@ AppleALC Changelog
 ==================
 #### v1.4.6
 - Add missing pinconfig ALC235 layout-id 16
+- Fixed speaker/headphone priority ALC700 layout-id 11
 
 #### v1.4.5
 - Update MuteGPIO and AMP Values ALC255 layout-id 21 by Andres ZeroCross
