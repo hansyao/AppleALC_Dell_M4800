@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.4.6
+- Add missing pinconfig ALC235 layout-id 16
+
 #### v1.4.5
 - Update MuteGPIO and AMP Values ALC255 layout-id 21 by Andres ZeroCross
 - Added ALC272 layout-id 21 for  Lenovo All In One PC C440 by Andres ZeroCross
