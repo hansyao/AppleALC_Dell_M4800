@@ -676,6 +676,8 @@
 				<data>cKEAAA==</data>
 				<key>MinKernel</key>
 				<integer>16</integer>
+				<key>MaxKernel</key>
+				<integer>17</integer>
 				<key>Name</key>
 				<string>AppleHDAController</string>
 				<key>Replace</key>
@@ -688,6 +690,8 @@
 				<data>hoBwoQ==</data>
 				<key>MinKernel</key>
 				<integer>16</integer>
+				<key>MaxKernel</key>
+				<integer>17</integer>
 				<key>Name</key>
 				<string>AppleHDAController</string>
 				<key>Replace</key>
