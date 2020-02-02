@@ -91,7 +91,7 @@ void AlcEnabler::updateProperties() {
 		if (devInfo->audioBuiltinAnalog && validateInjection(devInfo->audioBuiltinAnalog)) {
 
 			uint32_t ven = 0;
-			if (WIOKit::getOSDataValue(devInfo->audioBuiltinDigital, "vendor-id", ven) && ven == WIOKit::VendorID::Intel) {
+			if (WIOKit::getOSDataValue(devInfo->audioBuiltinAnalog, "vendor-id", ven) && ven == WIOKit::VendorID::Intel) {
 				// Intentionally using static cast to avoid PCI imports.
 				auto hdef = static_cast<IOPCIDevice *>(devInfo->audioBuiltinAnalog);
 				// Update Traffic Class Select Register to TC0.
