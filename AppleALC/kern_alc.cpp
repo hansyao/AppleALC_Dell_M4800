@@ -9,6 +9,7 @@
 #include <Headers/kern_devinfo.hpp>
 #include <Headers/plugin_start.hpp>
 #include <Library/LegacyIOService.h>
+#include <IOKit/pci/IOPCIDevice.h>
 #include <mach/vm_map.h>
 
 #include "kern_alc.hpp"
@@ -88,6 +89,20 @@ void AlcEnabler::updateProperties() {
 
 		// Secondly, update HDEF device and make it support digital audio
 		if (devInfo->audioBuiltinAnalog && validateInjection(devInfo->audioBuiltinAnalog)) {
+
+			uint32_t ven = 0;
+			if (WIOKit::getOSDataValue(devInfo->audioBuiltinDigital, "vendor-id", ven) && ven == WIOKit::VendorID::Intel) {
+				// Intentionally using static cast to avoid PCI imports.
+				auto hdef = static_cast<IOPCIDevice *>(devInfo->audioBuiltinAnalog);
+				// Update Traffic Class Select Register to TC0.
+				// This is required for AppleHDA to output audio on some machines.
+				// See Intel I/O Controller Hub 9 (ICH9) Family Datasheet for more details.
+				static constexpr size_t RegTCSEL = 0x44;
+				auto value = hdef->configRead8(RegTCSEL);
+				DBGLOG("alc", "updating TCSEL register %X", value);
+				hdef->configWrite8(RegTCSEL, getBitField<uint8_t>(value, 7, 3));
+			}
+
 			const char *hdaGfx = nullptr;
 			if (hasBuiltinDigitalAudio && !devInfo->audioBuiltinDigital)
 				hdaGfx = "onboard-1";

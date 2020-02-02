@@ -5,6 +5,7 @@ AppleALC Changelog
 - Fixed speaker/headphone priority ALC700 layout-id 11
 - 300 Series PCH HD Audio is native in 10.14+
 - Added ALC215 layout-id 18 for HP 830 G6 by 965987400abc
+- Added TCSEL change to TC0 for Intel codecs
 
 #### v1.4.5
 - Update MuteGPIO and AMP Values ALC255 layout-id 21 by Andres ZeroCross
