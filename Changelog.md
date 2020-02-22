@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.4.7
+- Added support for Intel C620 series PCH Audio
+
 #### v1.4.6
 - Add missing pinconfig ALC235 layout-id 16
 - Fixed speaker/headphone priority ALC700 layout-id 11
