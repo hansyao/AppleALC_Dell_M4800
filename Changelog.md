@@ -2,6 +2,7 @@ AppleALC Changelog
 ==================
 #### v1.4.7
 - Added support for Intel C620 series PCH Audio
+- Fixed injected MaximumBootBeepVolume
 
 #### v1.4.6
 - Add missing pinconfig ALC235 layout-id 16
