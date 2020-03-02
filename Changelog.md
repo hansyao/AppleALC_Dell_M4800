@@ -7,7 +7,8 @@ AppleALC Changelog
 - Added mute button to ALC230 layout 20
 - Added ALC295 layout-id 23 for HP OMEN 15-AX000 by Lancet-z
 - Added ALC256 layout-id 16 for Dell 7000 Series with 2.1Ch by vicjl
-- Added  ALC294 layout-id 66 for ASUS X542UQR by KKKIIINNN
+- Added ALC294 layout-id 66 for ASUS X542UQR by KKKIIINNN
+- Added ALC236 layout-id 12 for Lenovo Xiaoxin Air 14IKBR by AlexanderLake
 
 #### v1.4.6
 - Add missing pinconfig ALC235 layout-id 16
