@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.4.8
+- MaxKernel HS for GM/GP
+
 #### v1.4.7
 - Added support for Intel C620 series PCH Audio
 - Fixed injected MaximumBootBeepVolume
