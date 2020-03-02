@@ -3,6 +3,7 @@ AppleALC Changelog
 #### v1.4.7
 - Added support for Intel C620 series PCH Audio
 - Fixed injected MaximumBootBeepVolume
+- Added ALC256 layout-id 23 by Andres ZeroCross for Razer Blade 15 RZ09-02705E75
 
 #### v1.4.6
 - Add missing pinconfig ALC235 layout-id 16
