@@ -11,6 +11,7 @@ AppleALC Changelog
 - Added ALC236 layout-id 12 for Lenovo Xiaoxin Air 14IKBR by AlexanderLake
 - Added ALC292 layout-id 15 for LENOVO THINKPAD T450_T450s_X240 - Manual by ModeMacPeet
 - Added ALC1220 layout-id 30 for Z370 AORUS Gaming 7 - Output SP/HP SwitchMode by MacPeet
+- Added ALC294 layout-id 28 for Asus ROG G531GD by ayatkyo
 
 #### v1.4.6
 - Add missing pinconfig ALC235 layout-id 16
