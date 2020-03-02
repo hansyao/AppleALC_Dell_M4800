@@ -46,6 +46,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Ayat Kyo - Realtek ALC294 for Asus ROG G531GD</string>
+				<key>Id</key>
+				<integer>28</integer>
+				<key>Path</key>
+				<string>layout28.xml.zlib</string>
+      </dict>
+      <dict>
+        <key>Comment</key>
 				<string>KKKIIINNN - Realtek ALC294 for ASUS X542UQR</string>
 				<key>Id</key>
 				<integer>66</integer>
@@ -89,6 +97,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Ayat Kyo - Realtek ALC294 for Asus ROG G531GD</string>
+				<key>Id</key>
+				<integer>28</integer>
+				<key>Path</key>
+				<string>Platforms28.xml.zlib</string>
+      </dict>
+      <dict>
+        <key>Comment</key>
 				<string>KKKIIINNN - Realtek ALC294 for ASUS X542UQR</string>
 				<key>Id</key>
 				<integer>66</integer>
