@@ -1978,6 +1978,32 @@
 					AwAAAA==
 					</data>
 					<key>Codec</key>
+					<string>VicQ - Realtek ALC256 (3246) for Dell 7000 Series with 2.1Ch</string>
+					<key>CodecID</key>
+					<integer>283902550</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccYAEnHAEBJxymAScckAE3HPABNx0AATce
+					AAE3H0ABRxxAAUcdAQFHHhABRx+QAUcMAgGH
+					HPABhx0AAYceAAGHH0ABlxwgAZcdEAGXHosB
+					lx8BAacccAGnHQABpx6hAacfAQG3HEEBtx0B
+					AbceEAG3H5ABtwwCAdcc8AHXHQAB1x4AAdcf
+					QAHnHPAB5x0AAeceAAHnH0ACFxxQAhcdEAIX
+					HisCFx8BAhcMAg==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>16</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAgG3DAI=</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Andres ZeroCross for Dell 5570</string>
 					<key>CodecID</key>
 					<integer>283902550</integer>
