@@ -1053,9 +1053,7 @@
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>Codec</key>
 					<string>Realtek ALC235 for Lenovo ThinkCentre Tiny M720q by marian</string>
 					<key>CodecID</key>
@@ -1071,9 +1069,7 @@
 					<key>LayoutID</key>
 					<integer>17</integer>
 					<key>WakeConfigData</key>
-					<data>
-					AUcMAgIXDAIBlwwAAacMAA==
-					</data>
+					<data>AUcMAgIXDAIBlwwAAacMAA==</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
