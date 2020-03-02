@@ -6,7 +6,8 @@ AppleALC Changelog
 - Added ALC256 layout-id 23 by Andres ZeroCross for Razer Blade 15 RZ09-02705E75
 - Added mute button to ALC230 layout 20
 - Added ALC295 layout-id 23 for HP OMEN 15-AX000 by Lancet-z
-- Added ALC256 Layout-id 16 for Dell 7000 Series with 2.1Ch by vicjl
+- Added ALC256 layout-id 16 for Dell 7000 Series with 2.1Ch by vicjl
+- Added  ALC294 layout-id 66 for ASUS X542UQR by KKKIIINNN
 
 #### v1.4.6
 - Add missing pinconfig ALC235 layout-id 16
