@@ -67,13 +67,29 @@ private:
 	 *  Hooked AppleGFXHDA probe
 	 */
 	static IOService *gfxProbe(IOService *ctrl, IOService *provider, SInt32 *score);
-
+	
+	/**
+	 *  Hooked AppleHDAController start
+	 */
+	static bool AppleHDAController_start(IOService* service, IOService* provider);
+	
+	/**
+	 *  Hooked IOHDACodecDevice executeVerb
+	 */
+#ifdef DEBUG
+	static IOReturn IOHDACodecDevice_executeVerb(void *that, uint16_t a1, uint16_t a2, uint16_t a3, unsigned int *a4, bool a5);
+#endif
+		
 	/**
 	 *  Trampolines for original method invocations
 	 */
 	mach_vm_address_t orgLayoutLoadCallback {0};
 	mach_vm_address_t orgPlatformLoadCallback {0};
 	mach_vm_address_t orgGfxProbe {0};
+	mach_vm_address_t orgAppleHDAController_start {0};
+#ifdef DEBUG
+	mach_vm_address_t orgIOHDACodecDevice_executeVerb {0};
+#endif
 
 	/**
 	 *  @enum IOAudioDevicePowerState
@@ -271,7 +287,9 @@ private:
 			NotReady = 0,
 			ControllersLoaded = 1,
 			CodecsLoaded = 2,
-			CallbacksWantRouting = 4
+			CallbacksWantRouting = 4,
+			PatchHDAFamily = 8,
+			PatchHDAController = 16
 		};
 	};
 	int progressState {ProcessingState::NotReady};

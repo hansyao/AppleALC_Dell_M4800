@@ -88,5 +88,8 @@ extern const size_t ADDPR(vendorModSize);
 extern const size_t KextIdAppleHDAController;
 extern const size_t KextIdAppleHDA;
 extern const size_t KextIdAppleGFXHDA;
+#ifdef DEBUG
+extern const size_t KextIdIOHDAFamily;
+#endif
 
 #endif /* kern_resource_hpp */
