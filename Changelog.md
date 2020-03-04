@@ -2,7 +2,7 @@ AppleALC Changelog
 ==================
 #### v1.4.8
 - MaxKernel HS for GM/GP
-- Support optional configurable delay before start of AppleHDAController::start 
+- Support startup delay for AppleHDAController via `alc-delay` property or `alcdelay` boot-arg (in ms)
 
 #### v1.4.7
 - Added support for Intel C620 series PCH Audio
