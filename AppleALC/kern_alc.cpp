@@ -92,8 +92,10 @@ void AlcEnabler::updateProperties() {
 			uint32_t ven = 0;
 			if (WIOKit::getOSDataValue(devInfo->audioBuiltinAnalog, "vendor-id", ven) && ven == WIOKit::VendorID::Intel) {
 				uint32_t updateTcsel = 0;
-				WIOKit::getOSDataValue(devInfo->audioBuiltinAnalog, "alctcsel", updateTcsel);
-				PE_parse_boot_argn("alctcsel", &updateTcsel, sizeof(updateTcsel));
+				if (!PE_parse_boot_argn("alctcsel", &updateTcsel, sizeof(updateTcsel)) &&
+					!WIOKit::getOSDataValue(devInfo->audioBuiltinAnalog, "alctcsel", updateTcsel)) {
+					updateTcsel = 0;
+				}
 				if (updateTcsel != 0) {
 					// Intentionally using static cast to avoid PCI imports.
 					auto hdef = static_cast<IOPCIDevice *>(devInfo->audioBuiltinAnalog->metaCast("IOPCIDevice"));
