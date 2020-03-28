@@ -9,7 +9,10 @@
 #include <Headers/kern_devinfo.hpp>
 #include <Headers/plugin_start.hpp>
 #include <Library/LegacyIOService.h>
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winconsistent-missing-override"
 #include <IOKit/pci/IOPCIDevice.h>
+#pragma clang diagnostic pop
 #include <mach/vm_map.h>
 
 #include "kern_alc.hpp"
@@ -669,7 +672,7 @@ void AlcEnabler::updateResource(Resource type, kern_return_t &result, const void
 }
 
 void AlcEnabler::grabControllers() {
-	computerModel = WIOKit::getComputerModel();
+	computerModel = BaseDeviceInfo::get().modelType;
 
 	auto devInfo = DeviceInfo::create();
 	if (devInfo) {

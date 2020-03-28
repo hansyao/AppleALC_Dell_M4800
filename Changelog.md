@@ -4,6 +4,7 @@ AppleALC Changelog
 - MaxKernel HS for GM/GP
 - Support startup delay for AppleHDAController via `alc-delay` property or `alcdelay` boot-arg (in ms)
 - Guarded TCSEL change to TC0 with `alctsel=<01 00 00 00>` property or `alctsel=1` boot-arg
+- Improved performance with Lilu 1.4.3 APIs
 
 #### v1.4.7
 - Added support for Intel C620 series PCH Audio
