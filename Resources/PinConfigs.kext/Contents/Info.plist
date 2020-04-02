@@ -542,22 +542,22 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>Goldfish64 - ALC221 for HP Compaq Pro 4300/Pro 6300/Elite 8300</string>
+					<string>Goldfish64 - ALC221 for HP Compaq Pro 4300/Pro 6300/Elite 8300 (All Form Factors)</string>
 					<key>CodecID</key>
 					<integer>283902497</integer>
 					<key>ConfigData</key>
 					<data>
 					AUccIAFHHUABRx4BAUcfAQFHDAIBdxwQAXcd
 					AQF3HhcBdx+QAXcMAgGnHEABpx0QAacegQGn
-					HwIBtxwwAbcdMAG3HoEBtx8BAhccUAIXHRAC
-					Fx4hAhcfAgIXDAI=
+					HwIBpwckAbccMAG3HTABtx6BAbcfAQIXHFAC
+					Fx0QAhceIQIXHwICFwwC
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>11</integer>
 					<key>WakeConfigData</key>
-					<data>AUcMAg==</data>
+					<data>AUcMAgF3DAIBpwckAhcMAg==</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
@@ -8802,13 +8802,17 @@
 					<key>ConfigData</key>
 					<data>
 					AWccQAFnHRABZx4hAWcfBAF3HBABdx0BAXce
-					FwF3H5ABlxwwAZcdEAGXHoEBlx8EAaccIAGn
-					HQEBpx6gAacfkA==
+					FwF3H5ABlxwwAZcdEAGXHoEBlx8EAZcHJAGn
+					HCABpx0BAaceoAGnH5ABpwck
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>28</integer>
+					<key>WakeConfigData</key>
+					<data>AZcHJAGnByQ=</data>
+					<key>WakeVerbReinit</key>
+					<true/>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
