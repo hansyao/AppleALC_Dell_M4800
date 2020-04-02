@@ -10,6 +10,8 @@ AppleALC Changelog
 - Add mute button to ALC230 layout 13 by Ab2774
 - Update for Better Input Range ALC 235 by Andres ZeroCross
 - Added ALC269VC layout-id 22 for Acer Veriton Z4640G by Andres ZeroCross
+- Updated ConfigData & Added WakeConfigData to fix CodecCommander dependency CX20751/2 layout-id 28 LineIn Sniki
+- Updated ConfigData & Updated WakeConfigData to fix CodecCommander dependency ALC221 layout-id 11 LineIn(s) by Sniki
 
 #### v1.4.7
 - Added support for Intel C620 series PCH Audio
