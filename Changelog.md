@@ -5,6 +5,8 @@ AppleALC Changelog
 - Support startup delay for AppleHDAController via `alc-delay` property or `alcdelay` boot-arg (in ms)
 - Guarded TCSEL change to TC0 with `alctsel=<01 00 00 00>` property or `alctsel=1` boot-arg
 - Improved performance with Lilu 1.4.3 APIs
+- Added ALC257 layout-id 99 and100 for Lenovo XiaoXin Pro 2019 by DalianSky
+- Added ALC283 layout-id 88 for DELL R14 3437 by Zoran
 
 #### v1.4.7
 - Added support for Intel C620 series PCH Audio
