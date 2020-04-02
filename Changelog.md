@@ -8,6 +8,8 @@ AppleALC Changelog
 - Added ALC257 layout-id 99 and100 for Lenovo XiaoXin Pro 2019 by DalianSky
 - Added ALC283 layout-id 88 for DELL R14 3437 by Zoran
 - Add mute button to ALC230 layout 13 by Ab2774
+- Update for Better Input Range ALC 235 by Andres ZeroCross
+- Added ALC269VC layout-id 22 for Acer Veriton Z4640G by Andres ZeroCross
 
 #### v1.4.7
 - Added support for Intel C620 series PCH Audio
