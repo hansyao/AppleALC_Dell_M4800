@@ -7,6 +7,7 @@ AppleALC Changelog
 - Improved performance with Lilu 1.4.3 APIs
 - Added ALC257 layout-id 99 and100 for Lenovo XiaoXin Pro 2019 by DalianSky
 - Added ALC283 layout-id 88 for DELL R14 3437 by Zoran
+- Add mute button to ALC230 layout 13 by Ab2774
 
 #### v1.4.7
 - Added support for Intel C620 series PCH Audio
