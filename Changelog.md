@@ -13,6 +13,7 @@ AppleALC Changelog
 - Updated ConfigData & Added WakeConfigData to fix CodecCommander dependency CX20751/2 layout-id 28 LineIn Sniki
 - Updated ConfigData & Updated WakeConfigData to fix CodecCommander dependency ALC221 layout-id 11 LineIn(s) by Sniki
 - Added ALC255/ALC3234 layout-id 7 for Dell 7348 by armenio
+- Fix Conexant CX8050 LineIn for headsets with combo jack
 
 #### v1.4.7
 - Added support for Intel C620 series PCH Audio
