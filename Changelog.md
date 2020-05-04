@@ -6,6 +6,7 @@ AppleALC Changelog
 - Added ALC255 layout-id 29 for Acer Predator G3-571 by dhinakg
 - Added ALC256 layout-id 17 for Magicbook with 4CH by hjmmc
 - Updated ConfigData & Added WakeConfigData for ALC295 layout-id 14 by hieplpvip
+- Added ALC671 layout-id 88 for HP 280 Pro G4 by lcp6668
 
 #### v1.4.8
 - MaxKernel HS for GM/GP
