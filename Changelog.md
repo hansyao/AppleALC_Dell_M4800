@@ -14,6 +14,7 @@ AppleALC Changelog
 - Added ALC892 layout-id 20 for GIGABYTE Z390M GAMING by bokeylee
 - Added ALC298 layout-id 16 for Dell Precision 5520 by Pingren
 - Added ALC269 layout-id 77 for Thunderobot-G7000S by Phoenix-Liang
+- Rename 400 series LP controller, add 400 series PCH-H controller
 
 #### v1.4.8
 - MaxKernel HS for GM/GP
