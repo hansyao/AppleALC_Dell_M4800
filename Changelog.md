@@ -2,6 +2,7 @@ AppleALC Changelog
 ==================
 #### v1.4.9
 - Added IDT92HD73E1X5 layout-id 15 for HP Envy h8 1425eg by MacPeet
+- Fix Headphone NodeID ALC269VC layout-id 22 Veritron Z4640G by Andres ZeroCross
 
 #### v1.4.8
 - MaxKernel HS for GM/GP
