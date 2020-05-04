@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.4.9
+- Added IDT92HD73E1X5 layout-id 15 for HP Envy h8 1425eg by MacPeet
+
 #### v1.4.8
 - MaxKernel HS for GM/GP
 - Support startup delay for AppleHDAController via `alc-delay` property or `alcdelay` boot-arg (in ms)
