@@ -1585,6 +1585,28 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>dhinakg - Realtek ALC255 for Acer Predator G3-571</string>
+					<key>CodecID</key>
+					<integer>283902549</integer>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHQEBRx4XAUcfkAGXHCABlx0QAZce
+					gQGXHwQCFxwgAhcdEAIXHiECFx8EAbccMAG3
+					HQEBtx6gAbcfkAFHDAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>29</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>HongyuS - Realtek ALC255 for XiaoMiAir 13.3</string>
 					<key>CodecID</key>
 					<integer>283902549</integer>
