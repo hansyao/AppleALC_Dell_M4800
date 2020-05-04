@@ -7,6 +7,7 @@ AppleALC Changelog
 - Added ALC256 layout-id 17 for Magicbook with 4CH by hjmmc
 - Updated ConfigData & Added WakeConfigData for ALC295 layout-id 14 by hieplpvip
 - Added ALC671 layout-id 88 for HP 280 Pro G4 by lcp6668
+- Added ALC294 layout-id 22 for ASUS ROG GL504GW by cowpod
 
 #### v1.4.8
 - MaxKernel HS for GM/GP
