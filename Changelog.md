@@ -5,6 +5,7 @@ AppleALC Changelog
 - Fix Headphone NodeID ALC269VC layout-id 22 Veritron Z4640G by Andres ZeroCross
 - Added ALC255 layout-id 29 for Acer Predator G3-571 by dhinakg
 - Added ALC256 layout-id 17 for Magicbook with 4CH by hjmmc
+- Updated ConfigData & Added WakeConfigData for ALC295 layout-id 14 by hieplpvip
 
 #### v1.4.8
 - MaxKernel HS for GM/GP
