@@ -13,6 +13,7 @@ AppleALC Changelog
 - Added ALC235 layout-id 24 for ASUS TUF FX705GM by therealgudv1n
 - Added ALC892 layout-id 20 for GIGABYTE Z390M GAMING by bokeylee
 - Added ALC298 layout-id 16 for Dell Precision 5520 by Pingren
+- Added ALC269 layout-id 77 for Thunderobot-G7000S by Phoenix-Liang
 
 #### v1.4.8
 - MaxKernel HS for GM/GP
