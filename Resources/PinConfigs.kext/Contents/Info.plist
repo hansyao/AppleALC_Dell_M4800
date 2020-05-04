@@ -9990,6 +9990,27 @@
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>ALC269</string>
+					<key>CodecID</key>
+					<integer>283902569</integer>
+					<key>Comment</key>
+					<string>ALC269 for Thunderobot-G7000S-9300H by Phoenix-L</string>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHUEBRx4XAUcfmQFHDAIBVxwgAVcd
+					QAFXHiEBVx8CAVcMAgGHHDABhx2QAYcegQGH
+					HwIBlxw/AZcdkAGXHoEBlx8CASccQAEnHZEB
+					Jx6mAScfmQ==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>77</integer>
+				</dict>
 			</array>
 			<key>IOClass</key>
 			<string>AppleHDAHardwareConfigDriver</string>
