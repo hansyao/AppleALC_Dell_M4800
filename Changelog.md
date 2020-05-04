@@ -10,6 +10,7 @@ AppleALC Changelog
 - Added ALC294 layout-id 22 for ASUS ROG GL504GW by cowpod
 - Added ALC892 layout-id 22 for ASRock Z390m-ITX/ac by imEgo
 - Added wakeconfigdata for ALC230 layout-id 20 by ameenjuz
+- Added ALC235 layout-id 24 for ASUS TUF FX705GM by therealgudv1n
 
 #### v1.4.8
 - MaxKernel HS for GM/GP
