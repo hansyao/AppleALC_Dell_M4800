@@ -4,6 +4,7 @@ AppleALC Changelog
 - Added IDT92HD73E1X5 layout-id 15 for HP Envy h8 1425eg by MacPeet
 - Fix Headphone NodeID ALC269VC layout-id 22 Veritron Z4640G by Andres ZeroCross
 - Added ALC255 layout-id 29 for Acer Predator G3-571 by dhinakg
+- Added ALC256 layout-id 17 for Magicbook with 4CH by hjmmc
 
 #### v1.4.8
 - MaxKernel HS for GM/GP
