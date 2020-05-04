@@ -9,6 +9,7 @@ AppleALC Changelog
 - Added ALC671 layout-id 88 for HP 280 Pro G4 by lcp6668
 - Added ALC294 layout-id 22 for ASUS ROG GL504GW by cowpod
 - Added ALC892 layout-id 22 for ASRock Z390m-ITX/ac by imEgo
+- Added wakeconfigdata for ALC230 layout-id 20 by ameenjuz
 
 #### v1.4.8
 - MaxKernel HS for GM/GP
