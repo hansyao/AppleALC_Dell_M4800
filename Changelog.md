@@ -1,7 +1,7 @@
 AppleALC Changelog
 ==================
 #### v1.5.0
-
+- Update ALC283 layout-id 88 by xiaoleGun
 
 #### v1.4.9
 - Added IDT92HD73E1X5 layout-id 15 for HP Envy h8 1425eg by MacPeet
