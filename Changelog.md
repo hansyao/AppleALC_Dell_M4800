@@ -4,6 +4,8 @@ AppleALC Changelog
 - Update ALC283 layout-id 88 by xiaoleGun
 - Fixed accidental reading of `alc-layout-id` on non-Apple firmwares
 - Add patch to fix internal mic gain adjustment Conexant CX8050
+- Move ALC255 layout-id 7 to layout-id 86
+- Added ALC257 layout-id 86 for Lenovo T480 by armenio
 
 #### v1.4.9
 - Added IDT92HD73E1X5 layout-id 15 for HP Envy h8 1425eg by MacPeet
