@@ -9,6 +9,8 @@ AppleALC Changelog
 - Fixed can't activate mute problem Conexant CX8070 layout-id 15 by lietxia
 - Added ALC255 layout-id 20 for DELL 7447 by was3912734. Add Subwoofer drive.
 - Added ALC662 layout-id 18 for MP67-DI/ESPRIMO Q900 by ryahpalma
+- Added ALC256 layout-id 19 for Matebook X Pro 2019 by Durian-Life
+- Added ALC256 layout-id 76 (4CH) for Matebook X Pro 2019 by Durian-Life
 
 #### v1.4.9
 - Added IDT92HD73E1X5 layout-id 15 for HP Envy h8 1425eg by MacPeet
