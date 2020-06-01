@@ -7,6 +7,7 @@ AppleALC Changelog
 - Move ALC255 layout-id 7 to layout-id 86
 - Added ALC257 layout-id 86 for Lenovo T480 by armenio
 - Fixed can't activate mute problem Conexant CX8070 layout-id 15 by lietxia
+- Added ALC255 layout-id 20 for DELL 7447 by was3912734. Add Subwoofer drive.
 
 #### v1.4.9
 - Added IDT92HD73E1X5 layout-id 15 for HP Envy h8 1425eg by MacPeet
