@@ -2,6 +2,7 @@ AppleALC Changelog
 ==================
 #### v1.5.1
 - Set MinKernel Catalina for 400 Series
+- Added constants for 11.0 support
 
 #### v1.5.0
 - Update ALC283 layout-id 88 by xiaoleGun
