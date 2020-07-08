@@ -77,6 +77,7 @@ void AlcEnabler::updateProperties() {
 					insertController(WIOKit::VendorID::Intel, dev, rev, nullptr != devInfo->audioBuiltinDigital->getProperty("no-controller-patch"), devInfo->reportedFramebufferId);
 			} else {
 				// Terminate built-in HDAU audio, as we are using no connectors!
+				WIOKit::awaitPublishing(devInfo->audioBuiltinDigital);
 				auto hda = OSDynamicCast(IOService, devInfo->audioBuiltinDigital);
 				auto pci = OSDynamicCast(IOService, devInfo->audioBuiltinDigital->getParentEntry(gIOServicePlane));
 				if (hda && pci) {
@@ -101,6 +102,7 @@ void AlcEnabler::updateProperties() {
 				}
 				if (updateTcsel != 0) {
 					// Intentionally using static cast to avoid PCI imports.
+					WIOKit::awaitPublishing(devInfo->audioBuiltinAnalog);
 					auto hdef = static_cast<IOPCIDevice *>(devInfo->audioBuiltinAnalog->metaCast("IOPCIDevice"));
 					if (hdef != nullptr) {
 						// Update Traffic Class Select Register to TC0.
