@@ -8,6 +8,7 @@ AppleALC Changelog
 - Update CA0132 layout-id 7, 4, 2, 1 by wern-apfel
 - Added IDT92HD95 layout-id 11 by wern-apfel
 - Added Icelake Smart Sound Technology Audio Controller
+- Fix Headphone NodeID，Add SPDIFOut NodeID，ALC255 layout-id 20 for DELL 7447 by was3912734
 
 #### v1.5.0
 - Update ALC283 layout-id 88 by xiaoleGun
