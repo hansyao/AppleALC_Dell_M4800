@@ -7,6 +7,7 @@ AppleALC Changelog
 - Added ALC295 layout-id 24 for HP Pavilion / OMEN-2 by zty199
 - Update CA0132 layout-id 7, 4, 2, 1 by wern-apfel
 - Added IDT92HD95 layout-id 11 by wern-apfel
+- Added Icelake Smart Sound Technology Audio Controller
 
 #### v1.5.0
 - Update ALC283 layout-id 88 by xiaoleGun
