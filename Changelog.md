@@ -4,6 +4,7 @@ AppleALC Changelog
 - Set MinKernel Catalina for 400 Series
 - Added constants for 11.0 support
 - Added 400 series 0x6c8 and 0x2c8 controller patch (thanks @lvs1974)
+- Added ALC295 layout-id 24 for HP Pavilion / OMEN-2 by zty199
 
 #### v1.5.0
 - Update ALC283 layout-id 88 by xiaoleGun
