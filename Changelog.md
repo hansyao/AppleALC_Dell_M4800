@@ -11,6 +11,7 @@ AppleALC Changelog
 - Fix Headphone NodeID，Add SPDIFOut NodeID，ALC255 layout-id 20 for DELL 7447 by was3912734
 - Added ALC290 layout-id 15 for HP m6 n015dx by MacPeet
 - Added ALC285 layout-61 for Lenovo Yoga C740 by fewtarius
+- Added CA0132 LayoutID 99 - 5.1 channel for Alienware-M17X-R4 by DalianSky
 
 #### v1.5.0
 - Update ALC283 layout-id 88 by xiaoleGun
