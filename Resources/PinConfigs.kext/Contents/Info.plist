@@ -32,6 +32,26 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>CodecID</key>
+					<integer>287143573</integer>
+					<key>Comment</key>
+					<string>Toshiba Satellite Pro C50</string>
+					<key>ConfigData</key>
+					<data>
+					AKccQACnHRAApx4hAKcfAQC3HCAAtx0QALce
+					gQC3HwEAxxzwAMcdAADHHgAAxx9AANccMADX
+					HQEA1x4QANcfkADnHBAA5x0BAOceoADnH5AA
+					9xzwAPcdAAD3HgAA9x9AAYcc8AGHHQABhx4A
+					AYcfQA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
 					<integer>351359128</integer>
 					<key>Comment</key>
 					<string>frankiezdh - Conexant CX20632 for HP ProDesk 480 G4</string>
@@ -99,14 +119,16 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>Creative CA0132, Alienware 15 R2</string>
+					<string>Creative CA0132: Alienware 15 R2</string>
 					<key>CodecID</key>
 					<integer>285343761</integer>
 					<key>ConfigData</key>
 					<data>
-					AVcKAQFnAwAAtxwQALcdQQC3HhAAtx+QANcc
-					8ADXHQAA1x4AANcfQAD3HCABFxxAARcegQEn
-					HDABJx+Q
+					AVcKAQFXDwEAFxceABcWHwAXFRABVxcNAVcY
+					IAC3HhAAtx+QANcc8ADXHQAA1x4AANcfQADn
+					HPAA5x0AAOceAADnH0AA9xwgAPcfAQEHHPAB
+					Bx0AAQceAAEHH0ABFxxAARcegQEXHwEBJxwA
+					AScfkAE3HPABNx0AATceAAE3H0A=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -117,14 +139,16 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>Creative CA0132, 2.0 + front HP</string>
+					<string>Creative CA0132: Alienware 17, Desktop 2xIn 3xOut</string>
 					<key>CodecID</key>
 					<integer>285343761</integer>
 					<key>ConfigData</key>
 					<data>
-					ABcXHgAXFRABVwoBAScIgQFnCIABVxcNAVcY
-					JADXHPAA1x0AANceAADXH0ABBx4hAScfkAE3
-					HPABNx0AATceAAE3H0A=
+					AVcKAQFXDwEAFxceABcWHwAXFRABVxcNAVcY
+					JAC3HhAAtx+QANcc8ADXHQAA1x4AANcfQADn
+					HPAA5x0AAOceAADnH0AA9xwgAPcfAQEHHDAB
+					Bx4hAQcfAQEXHEABFx6BARcfAQEnHAABJx+Q
+					ATcc8AE3HQABNx4AATcfQA==
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -153,15 +177,17 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
-					<string>Creative CA0132, 5.1 with C/Sub</string>
+					<string>Creative CA0132: R3Di default</string>
 					<key>CodecID</key>
 					<integer>285343761</integer>
 					<key>ConfigData</key>
 					<data>
-					ABcWHwAXFx4AFxUUAVcKAQEnCIEBZwiAAVcX
-					DQFXGCQA1xzwANcdAADXHgAA1x9AAOcc8ADn
-					HQAA5x4AAOcfQAEHHgEBJx+QATcc8AE3HQAB
-					Nx4AATcfQAGHHPABhx0AAYceAAGHH0A=
+					AVcKAQFXDwEAFxceABcWHwAXFRQBVxcNAVcY
+					JAC3HUEA1xzwANcdAADXHgAA1x9AAOcc8ADn
+					HQAA5x4AAOcfQAD3HCAA9x8BAQccMAEHHgEB
+					Bx8BARccQAEXHgEBFx8BASccAAEnH5ABNxzw
+					ATcdAAE3HgABNx9AAYcc8AGHHQABhx4AAYcf
+					QA==
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -202,6 +228,28 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>6</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Creative CA0132: ZxRi</string>
+					<key>CodecID</key>
+					<integer>285343761</integer>
+					<key>ConfigData</key>
+					<data>
+					AVcKAQFXDwEAF5AzABcXDwAXFg8AFxUNAVcX
+					GAFXGBQBVxcaAVcYkQFQoCABUQAYAV8BAAFT
+					AIMBVAAAAVcXDQFXGCQAtx1BANcc8ADXHQAA
+					1x4AANcfQADnHPAA5x0AAOceAADnH0AA9xwg
+					APcfAQEHHDABBx4BAQcfAQEXHEABFx4BARcf
+					AQEnH5ABNxzwATcdAAE3HgABNx9AAYcc8AGH
+					HQABhx4AAYcfQA==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>7</integer>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
