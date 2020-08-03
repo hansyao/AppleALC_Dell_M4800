@@ -12,6 +12,7 @@ AppleALC Changelog
 - Added ALC290 layout-id 15 for HP m6 n015dx by MacPeet
 - Added ALC285 layout-61 for Lenovo Yoga C740 by fewtarius
 - Added CA0132 LayoutID 99 - 5.1 channel for Alienware-M17X-R4 by DalianSky
+- Added ALC289 layout-id 11 for alienware m17r2 by leeoem
 
 #### v1.5.0
 - Update ALC283 layout-id 88 by xiaoleGun
