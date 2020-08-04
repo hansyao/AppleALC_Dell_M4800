@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.5.2
+- Added missing layout7.xml for CA0132
+
 #### v1.5.1
 - Set MinKernel Catalina for 400 Series
 - Added constants for 11.0 support
