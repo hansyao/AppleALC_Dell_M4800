@@ -11,6 +11,9 @@ AppleALC Changelog
 - Added ALC887 layout-id 12 for ASUS H81M-D by VanXNF
 - Added ALCS1200A layout-id 49 for Asrock Z490M-ITX by VanXNF
 - Added ALC269 layout-id 23 for Thinkpad T430 with fixed micophone inputlevel by haotiangood
+- Added ALC245 layout-is 11 and 12 for Lenovo by soto2080
+- Added ALC245 layout-id 13 for HP Omen 15 2020 by lunjielee
+- Added ALC287 layout-id 11 for HP Omen 15 2020 by lunjielee
 
 #### v1.5.1
 - Set MinKernel Catalina for 400 Series

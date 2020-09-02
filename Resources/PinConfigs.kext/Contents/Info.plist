@@ -1505,6 +1505,71 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>Realtek ALC245 for Ienovo by soto2080</string>
+					<key>CodecID</key>
+					<integer>283902533</integer>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHQEBRx4XAUcfkAFHDAICFxwgAhcd
+					EAIXHiECFx8EAhcMAgGXHEABlx0QAZcegQGX
+					HwQ=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAgIXDAI=</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Realtek ALC245 for Ienovo by soto2080</string>
+					<key>CodecID</key>
+					<integer>283902533</integer>
+					<key>ConfigData</key>
+					<data>
+					AXccEAF3HQEBdx4XAXcfkAF3DAICFxwgAhcd
+					EAIXHiECFx8EAhcMAgGXHEABlx0QAZcegQGX
+					HwQ=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>12</integer>
+					<key>WakeConfigData</key>
+					<data>AXcMAgIXDAI=</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>lunjielee - Realtek ALC245 for HP Omen 2020</string>
+					<key>CodecID</key>
+					<integer>283902533</integer>
+					<key>ConfigData</key>
+					<data>
+					AXccEAF3HQEBdx4XAXcfkAGXHDABlx0QAZce
+					gQGXHwMCFxwgAhcdEAIXHiECFx8DAhcMAg==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
+					<key>WakeConfigData</key>
+					<data>AhcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>Mirone - Realtek ALC255</string>
 					<key>CodecID</key>
 					<integer>283902549</integer>
@@ -4645,6 +4710,27 @@
 					<integer>11</integer>
 					<key>WakeConfigData</key>
 					<data>AUcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Realtek ALC287</string>
+					<key>CodecID</key>
+					<integer>283902599</integer>
+					<key>ConfigData</key>
+					<data>
+					AXccEAF3HQEBdx4XAXcfkAIXHCACFx0QAhce
+					IQIXHwMCFwwCAZccMAGXHRABlx6BAZcfAw==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+					<key>WakeConfigData</key>
+					<data>AhcMAg==</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
