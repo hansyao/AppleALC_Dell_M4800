@@ -10,6 +10,7 @@ AppleALC Changelog
 - Added ALC236 layout-id 14 for Lenovo 330S by erinviegas
 - Added ALC887 layout-id 12 for ASUS H81M-D by VanXNF
 - Added ALCS1200A layout-id 49 for Asrock Z490M-ITX by VanXNF
+- Added ALC269 layout-id 23 for Thinkpad T430 with fixed micophone inputlevel by haotiangood
 
 #### v1.5.1
 - Set MinKernel Catalina for 400 Series

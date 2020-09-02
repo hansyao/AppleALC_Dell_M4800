@@ -30,9 +30,7 @@
 			<array>
 				<dict>
 					<key>AFGLowPowerState</key>
-					<data>
-					AwAAAA==
-					</data>
+					<data>AwAAAA==</data>
 					<key>CodecID</key>
 					<integer>283902569</integer>
 					<key>Comment</key>
@@ -52,9 +50,7 @@
 					<key>LayoutID</key>
 					<integer>23</integer>
 					<key>WakeConfigData</key>
-					<data>
-					AUcMAg==
-					</data>
+					<data>AUcMAg==</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
