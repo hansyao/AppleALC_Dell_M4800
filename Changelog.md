@@ -5,6 +5,7 @@ AppleALC Changelog
 - Added 400 series 0xA3F0 controller patch by goomadao
 - Added ALCS1200A layout-id 11 for MAG-Z490-TOMAHAWK by owen0o0
 - Added ALC269 layout-id 128 for Laptop NS4SL01 by ryahpalma
+- Added ALCS1200A layout-id 50 for Gigabyte B460M Aorus Pro by VanXNF
 
 #### v1.5.1
 - Set MinKernel Catalina for 400 Series
