@@ -3,6 +3,7 @@ AppleALC Changelog
 #### v1.5.2
 - Added missing layout7.xml for CA0132
 - Added 400 series 0xA3F0 controller patch by goomadao
+- Added ALCS1200A layout-id 11 for MAG-Z490-TOMAHAWK by owen0o0
 
 #### v1.5.1
 - Set MinKernel Catalina for 400 Series
