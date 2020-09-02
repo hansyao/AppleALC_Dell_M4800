@@ -7,6 +7,7 @@ AppleALC Changelog
 - Added ALC269 layout-id 128 for Laptop NS4SL01 by ryahpalma
 - Added ALCS1200A layout-id 50 for Gigabyte B460M Aorus Pro by VanXNF
 - Added ALC280 layout-id 17 for Dell Optiplex 9020 SFF by pkendall64
+- Added ALC236 layout-id 14 for Lenovo 330S by erinviegas
 
 #### v1.5.1
 - Set MinKernel Catalina for 400 Series
