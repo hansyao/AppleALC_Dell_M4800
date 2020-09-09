@@ -8715,6 +8715,30 @@
 					<key>CodecID</key>
 					<integer>283904768</integer>
 					<key>CodecName</key>
+					<string>owen0o0 -  Realtek ALCS1200A</string>
+					<key>ConfigData</key>
+					<data>
+					AUccQAFHHVABRx4RAUcfkAFHDAIBZxxhAWcd
+					EAFnHgEBZx8BAVccYgFXHRABVx4BAVcfAQG3
+					HFABtx1AAbceIQG3HwIBtwwCAecccAHnHREB
+					5x5FAecfAQGHHBABhx0QAYceoQGHH5ABpxwg
+					AacdEAGnHoEBpx8BAZccgAGXHZABlx6hAZcf
+					AgF3HPABdx0AAXceAAF3H0ABFxzwARcdAAEX
+					HgABFx9A
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>11</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAgG3DAI=</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>CodecID</key>
+					<integer>283904768</integer>
+					<key>CodecName</key>
 					<string>VictorXu -  Realtek ALCS1200A for Asrock Z490M-ITX</string>
 					<key>ConfigData</key>
 					<data>
@@ -10532,30 +10556,6 @@
 					<integer>24</integer>
 					<key>WakeConfigData</key>
 					<data>AUcMAgIXDAI=</data>
-					<key>WakeVerbReinit</key>
-					<true/>
-				</dict>
-				<dict>
-					<key>CodecID</key>
-					<integer>283904768</integer>
-					<key>CodecName</key>
-					<string>owen0o0 -  Realtek ALCS1200A</string>
-					<key>ConfigData</key>
-					<data>
-					AUccQAFHHVABRx4RAUcfkAFHDAIBZxxhAWcd
-					EAFnHgEBZx8BAVccYgFXHRABVx4BAVcfAQG3
-					HFABtx1AAbceIQG3HwIBtwwCAecccAHnHREB
-					5x5FAecfAQGHHBABhx0QAYceoQGHH5ABpxwg
-					AacdEAGnHoEBpx8BAZccgAGXHZABlx6hAZcf
-					AgF3HPABdx0AAXceAAF3H0ABFxzwARcdAAEX
-					HgABFx9A
-					</data>
-					<key>FuncGroup</key>
-					<integer>1</integer>
-					<key>LayoutID</key>
-					<integer>11</integer>
-					<key>WakeConfigData</key>
-					<data>AUcMAgG3DAI=</data>
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>

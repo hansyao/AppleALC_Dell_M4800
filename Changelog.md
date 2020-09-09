@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.5.3
+- Fix ALCS1200A lost ID 11 by owen0o0
+
 #### v1.5.2
 - Added missing layout7.xml for CA0132
 - Added 400 series 0xA3F0 controller patch by goomadao
