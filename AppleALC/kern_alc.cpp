@@ -8,11 +8,8 @@
 #include <Headers/kern_api.hpp>
 #include <Headers/kern_devinfo.hpp>
 #include <Headers/plugin_start.hpp>
-#include <Library/LegacyIOService.h>
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winconsistent-missing-override"
+#include <IOKit/IOService.h>
 #include <IOKit/pci/IOPCIDevice.h>
-#pragma clang diagnostic pop
 #include <mach/vm_map.h>
 
 #include "kern_alc.hpp"
