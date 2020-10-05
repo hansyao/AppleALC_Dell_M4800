@@ -103,6 +103,28 @@
 					<key>CodecID</key>
 					<integer>351359128</integer>
 					<key>Comment</key>
+					<string>phucnguyen2411 - HP Elitedesk 800 G5 mini</string>
+					<key>ConfigData</key>
+					<data>
+					AcccIAHHHREBxx4BAccfAQH3HFEB9x0BAfce
+					HwH3H5EBlxxAAZcdEAGXHiEBlx8BAaccMAGn
+					HRABpx6LAacfAQHXHBEB1x0RAdceoQHXHwE=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>20</integer>
+					<key>WakeConfigData</key>
+					<data>AccMAAH3DAABlwwAAacMAAHXDAA=</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>351359128</integer>
+					<key>Comment</key>
 					<string>CX20632 by Daniel</string>
 					<key>ConfigData</key>
 					<data>
