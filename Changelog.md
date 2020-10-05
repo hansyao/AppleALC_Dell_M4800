@@ -8,6 +8,7 @@ AppleALC Changelog
 - Added ALC283 layout-id 45 for NUC7 by micsell
 - Added ALC235 layout-id 99 for Lenovo TianYi 510s Mini by DalianSky
 - Added ALC1150 layout-id 99 for Gigabyte GA-Z97X-UD5H by DalianSky
+- Correct layout 13 for IDT92HD87B2/4
 
 #### v1.5.2
 - Added missing layout7.xml for CA0132
