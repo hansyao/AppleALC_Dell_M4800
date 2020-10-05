@@ -6,6 +6,8 @@ AppleALC Changelog
 - Added CX20632 layout-id 20 for HP Elitedesk 800 G5 Mini by phucnguyen2411
 - Added ALC269VC layout-id 24 for Hasee U45S1 by zero816
 - Added ALC283 layout-id 45 for NUC7 by micsell
+- Added ALC235 layout-id 99 for Lenovo TianYi 510s Mini by DalianSky
+- Added ALC1150 layout-id 99 for Gigabyte GA-Z97X-UD5H by DalianSky
 
 #### v1.5.2
 - Added missing layout7.xml for CA0132
