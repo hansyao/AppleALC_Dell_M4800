@@ -3,6 +3,7 @@ AppleALC Changelog
 #### v1.5.3
 - Fix ALCS1200A lost ID 11 by owen0o0
 - Added MacKernelSDK with Xcode 12 compatibility
+- Added CX20632 layout-id 20 for HP Elitedesk 800 G5 Mini by phucnguyen2411
 
 #### v1.5.2
 - Added missing layout7.xml for CA0132
