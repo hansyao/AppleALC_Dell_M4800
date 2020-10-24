@@ -2,6 +2,7 @@ AppleALC Changelog
 ==================
 #### v1.5.4
 - Improved Ice Lake controller patches by fewtarius
+- Added verb sending functionality from userspace by black-dragon74
 
 #### v1.5.3
 - Fix ALCS1200A lost ID 11 by owen0o0
