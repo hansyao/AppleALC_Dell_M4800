@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.5.4
+- Improved Ice Lake controller patches by fewtarius
+
 #### v1.5.3
 - Fix ALCS1200A lost ID 11 by owen0o0
 - Added MacKernelSDK with Xcode 12 compatibility
