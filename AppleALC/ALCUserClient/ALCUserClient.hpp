@@ -21,7 +21,7 @@ class ALCUserClient : public IOUserClient {
 	
 private:
 	ALCUserClientProvider* mProvider { nullptr };
-	task_t mTask;
+	task_t mTask {nullptr};
 	static const IOExternalMethodDispatch sMethods[kNumberOfMethods];
 	
 public:
