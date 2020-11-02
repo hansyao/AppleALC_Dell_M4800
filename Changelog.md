@@ -11,6 +11,7 @@ AppleALC Changelog
 - Added ALC272 layout-id 12 for Lenovo Y470 by amu_1680c
 - Added patch CX20751/2 by vasishath to fix internal mic gain adjustment (this fix microphone volume slider in system preferences)
 - Added ALC230 layout 13 & 20 Jack Sense and EAPD support and add WakeConfigData to layout 13
+- Added ALC290 layout-id 10 for HP Envy 15t-k200 w/ Beats Audio 2.1 by temp1122-sys
 
 #### v1.5.3
 - Fix ALCS1200A lost ID 11 by owen0o0
