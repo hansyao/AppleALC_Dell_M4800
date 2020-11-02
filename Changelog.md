@@ -9,6 +9,7 @@ AppleALC Changelog
 - Added ALC662 layout-id 66 for Lenovo Qitian M415-D339 by static-host
 - Fixed ALC285 layout-Id 21 for X1C6 (by @fewtarius)
 - Added ALC272 layout-id 12 for Lenovo Y470 by amu_1680c
+- Added patch CX20751/2 by vasishath to fix internal mic gain adjustment (this fix microphone volume slider in system preferences)
 
 #### v1.5.3
 - Fix ALCS1200A lost ID 11 by owen0o0
