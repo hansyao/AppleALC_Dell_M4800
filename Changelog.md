@@ -4,6 +4,8 @@ AppleALC Changelog
 - Improved Ice Lake controller patches by fewtarius
 - Added verb sending functionality from userspace by black-dragon74
 - Added ALC235 (display as ALC233) layout-id 35 for Lenovo Qitian M420-D046(C) by crysehillmes
+- Added ALC892 layout-id 100 for MSI Z370-A PRO by GeorgeWan
+- Added ALCS1200A layout-id 51 for for ASROCK Z490 Steel Legend by GeorgeWan
 
 #### v1.5.3
 - Fix ALCS1200A lost ID 11 by owen0o0
