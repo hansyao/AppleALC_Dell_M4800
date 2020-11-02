@@ -7,6 +7,7 @@ AppleALC Changelog
 - Added ALC892 layout-id 100 for MSI Z370-A PRO by GeorgeWan
 - Added ALCS1200A layout-id 51 for for ASROCK Z490 Steel Legend by GeorgeWan
 - Added ALC662 layout-id 66 for Lenovo Qitian M415-D339 by static-host
+- Fixed ALC285 layout-Id 21 for X1C6 (by @fewtarius)
 
 #### v1.5.3
 - Fix ALCS1200A lost ID 11 by owen0o0
