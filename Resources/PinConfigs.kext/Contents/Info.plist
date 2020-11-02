@@ -10763,10 +10763,11 @@
 					<key>CodecID</key>
 					<integer>283903586</integer>
 					<key>ConfigData</key>
-					<data>AUccEAFHHUABRx4RAUcfAQFHDAIBtxw
-					gAbcdEAG3HiEBtx8CAbcMAgGHHDABhx2QAYce
-					gAGHHwEBlxxAAZcdEAGXHoABlx8CAaccXwGnH
-					TABpx6BAacfAQ==
+					<data>
+					AUccEAFHHUABRx4RAUcfAQFHDAIBtxwgAbcd
+					EAG3HiEBtx8CAbcMAgGHHDABhx2QAYcegAGH
+					HwEBlxxAAZcdEAGXHoABlx8CAaccXwGnHTAB
+					px6BAacfAQ==
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
