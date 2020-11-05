@@ -7,6 +7,7 @@
 //
 
 #include "ALCUserClientProvider.hpp"
+#include <Headers/kern_iokit.hpp>
 
 OSDefineMetaClassAndStructors(ALCUserClientProvider, IOService);
 
@@ -27,7 +28,27 @@ bool ALCUserClientProvider::start(IOService* provider) {
 		DBGLOG("client", "timeout in waiting for IOHDACodecDevice, will retry");
 		return false;
 	}
-	
+
+	auto hdaController = mHDACodecDevice->getParentEntry(gIOServicePlane);
+	if (!hdaController) {
+		DBGLOG("client", "codec is missing AppleHDAController");
+		return false;
+	}
+
+	auto hdefDevice = hdaController->getParentEntry(gIOServicePlane);
+	if (!hdefDevice) {
+		DBGLOG("client", "controller is missing HDEF device");
+		return false;
+	}
+
+	uint32_t enableHdaVerbs = 0;
+	WIOKit::getOSDataValue(hdefDevice, "alc-verbs", enableHdaVerbs);
+	PE_parse_boot_argn("alcverbs", &enableHdaVerbs, sizeof(enableHdaVerbs));
+	DBGLOG("client", "device %s to send custom verbs", enableHdaVerbs != 0 ? "allows" : "disallows");
+	if (enableHdaVerbs == 0) {
+		return false;
+	}
+
 	// We are ready for verbs
 	DBGLOG("client", "ALCUserClient is ready for hda-verbs");
 	setProperty("ReadyForALCVerbs", kOSBooleanTrue);
