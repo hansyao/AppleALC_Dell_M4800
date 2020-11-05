@@ -16,16 +16,15 @@ bool ALCUserClientProvider::start(IOService* provider) {
 	
 	auto matchingDict = IOService::nameMatching(kIOHDACodecDevice);
 	if (!matchingDict) {
-		DBGLOG("client", "Failed to allocate matching dictionary");
+		DBGLOG("client", "failed to allocate matching dictionary");
 		return false;
 	}
 	
 	mHDACodecDevice = IOService::waitForMatchingService(matchingDict, 100000000); // Wait for 0.1s
 	matchingDict->release();
 	
-	if (!mHDACodecDevice)
-	{
-		DBGLOG("client", "Timeout in waiting for IOHDACodecDevice, will retry");
+	if (!mHDACodecDevice) {
+		DBGLOG("client", "timeout in waiting for IOHDACodecDevice, will retry");
 		return false;
 	}
 	
@@ -47,22 +46,21 @@ void ALCUserClientProvider::stop(IOService* provider) {
 }
 
 uint64_t ALCUserClientProvider::sendHdaCommand(uint16_t nid, uint16_t verb, uint16_t param) {
-	if (!readyForVerbs)
-	{
-		DBGLOG("client", "Provider not ready to accept hda-verb commands");
+	if (!readyForVerbs) {
+		DBGLOG("client", "provider not ready to accept hda-verb commands");
 		return kIOReturnError;
 	}
 	
 	auto sharedAlc = AlcEnabler::getShared();
 	
 	if (!sharedAlc) {
-		DBGLOG("client", "Unable to get shared AlcEnabler instance");
+		DBGLOG("client", "unable to get shared AlcEnabler instance");
 		return kIOReturnError;
 	}
 	
-	UInt ret = 0;
+	unsigned ret = 0;
 	sharedAlc->IOHDACodecDevice_executeVerb(reinterpret_cast<void*>(mHDACodecDevice), nid, verb, param, &ret, true);
-	DBGLOG("client", "Send HDA command nid=0x%X, verb=0x%X, param=0x%X, result=0x%08x", nid, verb, param, ret);
+	DBGLOG("client", "send HDA command nid=0x%X, verb=0x%X, param=0x%X, result=0x%08x", nid, verb, param, ret);
 	
 	return ret;
 }

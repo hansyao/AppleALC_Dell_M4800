@@ -14,16 +14,15 @@
 #include<IOKit/IOService.h>
 #include <IOKit/IOUserClient.h>
 
-#include "../kern_alc.hpp"
+#include "kern_alc.hpp"
 
-class ALCUserClientProvider : public IOService {
-	typedef IOService super;
+class EXPORT ALCUserClientProvider : public IOService {
+	using super = IOService;
 	OSDeclareDefaultStructors(ALCUserClientProvider);
-	
-private:
+
 	IOService* 	mHDACodecDevice { nullptr };
 	bool		readyForVerbs	{ false	};
-	
+
 public:
 	virtual bool start(IOService* provider) override;
 	virtual void stop(IOService* provider) override;

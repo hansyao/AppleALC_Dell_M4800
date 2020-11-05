@@ -12,14 +12,13 @@
 #include <IOKit/IOService.h>
 #include <IOKit/IOUserClient.h>
 
-#include "../UserKernelShared.h"
-#include "../ALCUserClientProvider/ALCUserClientProvider.hpp"
+#include "UserKernelShared.h"
+#include "ALCUserClientProvider.hpp"
 
-class ALCUserClient : public IOUserClient {
-	typedef IOUserClient super;
+class EXPORT ALCUserClient : public IOUserClient {
+	using super = IOUserClient;
 	OSDeclareDefaultStructors(ALCUserClient);
-	
-private:
+
 	ALCUserClientProvider* mProvider { nullptr };
 	task_t mTask {nullptr};
 	static const IOExternalMethodDispatch sMethods[kNumberOfMethods];

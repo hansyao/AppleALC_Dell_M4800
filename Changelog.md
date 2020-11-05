@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.5.5
+- Fixed kext loading issues on 10.8 and similar operating system
+
 #### v1.5.4
 - Improved Ice Lake controller patches by fewtarius
 - Added verb sending functionality from userspace by black-dragon74
