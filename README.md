@@ -5,9 +5,8 @@ AppleALC
 
 An open source kernel extension enabling native macOS HD audio for not officially supported codecs without any filesystem modifications.
 
-#### Translate Language
-- [简体中文](https://github.com/acidanthera/AppleALC/blob/master/README_CN.md)
-- English ( Current )
+English (Current)  
+[简体中文](https://github.com/acidanthera/AppleALC/blob/master/README_CN.md)  
 
 #### Features
 - Digital and analog audio support starting from the OS installation
