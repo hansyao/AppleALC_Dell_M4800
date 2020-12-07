@@ -15,7 +15,7 @@ AppleALC Changelog
 - Added ALC269 layout-id 91 for Chuwi CoreBox by Luca1991
 - Modify CX20632 layout-id 20 - Added Mic support and outputs mute controls - HP EliteDesk 800 G4/G5 mini by sisumara
 - Added ALC671 layout-id 16 for Fujitsu Q558 by sisumara
-- Added `-dev` option to alc-verb to support sending commands to all codes
+- Added `-dev` option to alc-verb to support sending commands to all codecs
 
 #### v1.5.4
 - Improved Ice Lake controller patches by fewtarius
