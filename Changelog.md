@@ -2,7 +2,7 @@ AppleALC Changelog
 ==================
 #### v1.5.5
 - Fixed kext loading issues on 10.8 and similar operating system
-- Added a requirement to inject `alc-verbs` or use `alc-verbs=1` argument for custom verbs
+- Added a requirement to inject `alc-verbs` or use `alcverbs=1` argument for custom verbs
 - Added ALC255 layout-id 66 for Dell Optiplex7060/7070MT(Separate LineOut) by Dynamix1997
 - Fixed Jack Sense and EAPD on ALC 236 layout ID 14 by erinviegas
 - Added VIA VT2021 layout-id 13 support for all 3 analog lineOUTs on Gigabyte GA-Z77X-D3H (rev. 1.0) by enrysan0
