@@ -9,6 +9,7 @@ AppleALC Changelog
 - Added ALC283 layout-id 13 for (Alldo)Cube Mix Plus by Aldo97
 - Fix PinConfigs ALC662v3 for Lenovo M415-D339
 - Added ALC295 layout-id 22 for HP Spectre x360 by aleixjf
+- Added ALC285 layout-id 71 for Spectre x360 ap0xxx by jpuxdev
 
 #### v1.5.4
 - Improved Ice Lake controller patches by fewtarius
