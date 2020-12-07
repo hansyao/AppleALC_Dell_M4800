@@ -12,6 +12,7 @@ AppleALC Changelog
 - Added ALC285 layout-id 71 for Spectre x360 ap0xxx by jpuxdev
 - Added ALC221 layout-id 88 for HP ProDesk 400 G2 Desktop Mini PC by dragonbbc
 - Added CX8200 layout-id 80 for LG Gram 17 17z990 by rdmitry0911
+- Added ALC269 layout-id 91 for Chuwi CoreBox by Luca1991
 
 #### v1.5.4
 - Improved Ice Lake controller patches by fewtarius
