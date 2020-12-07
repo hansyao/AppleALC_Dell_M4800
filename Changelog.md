@@ -8,6 +8,7 @@ AppleALC Changelog
 - Added VIA VT2021 layout-id 13 support for all 3 analog lineOUTs on Gigabyte GA-Z77X-D3H (rev. 1.0) by enrysan0
 - Added ALC283 layout-id 13 for (Alldo)Cube Mix Plus by Aldo97
 - Fix PinConfigs ALC662v3 for Lenovo M415-D339
+- Added ALC295 layout-id 22 for HP Spectre x360 by aleixjf
 
 #### v1.5.4
 - Improved Ice Lake controller patches by fewtarius
