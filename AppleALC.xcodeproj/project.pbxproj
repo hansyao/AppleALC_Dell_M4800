@@ -394,7 +394,7 @@
 		1C748C1E1C21952C0024EED2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = vit9696;
 				TargetAttributes = {
 					0135B2EB2536401B005DDE7F = {

@@ -29,30 +29,40 @@
 #include "UserKernelShared.h"
 #include "hdaverb.h"
 
-static unsigned execute_command(uint16_t nid, uint16_t verb, uint16_t param)
+static unsigned execute_command(int dev, uint16_t nid, uint16_t verb, uint16_t param)
 {
-	io_connect_t dataPort;
-	
 	CFMutableDictionaryRef dict = IOServiceMatching(kALCUserClientProvider);
-	
-	io_service_t service = IOServiceGetMatchingService(kIOMasterPortDefault, dict);
-	
-	if (!service)
+
+	io_iterator_t iterator;
+	kern_return_t kr = IOServiceGetMatchingServices(kIOMasterPortDefault, dict, &iterator);
+	if (kr != KERN_SUCCESS)
 	{
-		printf("Could not locate ALCUserClientProvider. Abort.\n");
+		printf("Failed to iterate over ALC services: %08x.\n", kr);
 		return kIOReturnError;
 	}
-	
-	kern_return_t kr = IOServiceOpen(service, mach_task_self(), 0, &dataPort);
-	
-	IOObjectRelease(service);
-	
+
+	io_service_t service;
+	do {
+		service = IOIteratorNext(iterator);
+		if (!service)
+		{
+			printf("Could not locate ALCUserClientProvider. Abort.\n");
+			IOObjectRelease(iterator);
+			return kIOReturnError;
+		}
+		--dev;
+	} while (dev >= 0);
+
+	IOObjectRelease(iterator);
+
+	io_connect_t dataPort;
+	kr = IOServiceOpen(service, mach_task_self(), 0, &dataPort);
 	if (kr != kIOReturnSuccess)
 	{
 		printf("Failed to open ALCUserClientProvider service: %08x.\n", kr);
 		return kIOReturnError;
 	}
-	
+
 	uint32_t inputCount = 3;	// Must match the declaration in ALCUserClient::sMethods
 	uint64_t input[inputCount];
 	input[0]	= nid;
@@ -61,7 +71,7 @@ static unsigned execute_command(uint16_t nid, uint16_t verb, uint16_t param)
 	
 	uint64_t output;
 	uint32_t outputCount = 1;
-	
+
 	kr = IOConnectCallScalarMethod(dataPort, kMethodExecuteVerb, input, inputCount, &output, &outputCount);
 	
 	if (kr != kIOReturnSuccess)
@@ -140,8 +150,10 @@ static void usage(void)
 {
 	fprintf(stderr, "alc-verb for AppleALC (based on alsa-tools hda-verb)\n");
 	fprintf(stderr, "usage: alc-verb [option] nid verb param\n");
-	fprintf(stderr, "   -l      List known verbs and parameters\n");
-	fprintf(stderr, "   -L      List known verbs and parameters (one per line)\n");
+	fprintf(stderr, "   -d <int>  Specify device index\n");
+	fprintf(stderr, "   -l        List known verbs and parameters\n");
+	fprintf(stderr, "   -q        Only print errors when executing verbs\n");
+	fprintf(stderr, "   -L        List known verbs and parameters (one per line)\n");
 }
 
 static void list_verbs(int one_per_line)
@@ -158,11 +170,15 @@ int main(int argc, char **argv)
 	int c;
 	char **p;
 	bool quiet = false;
+	int dev = 0;
 	
-	while ((c = getopt(argc, argv, "qlL")) >= 0)
+	while ((c = getopt(argc, argv, "d:qlL")) >= 0)
 	{
 		switch (c)
 		{
+			case 'd':
+				dev = atoi(optarg);
+				break;
 			case 'l':
 				list_verbs(0);
 				return 0;
@@ -234,7 +250,7 @@ int main(int argc, char **argv)
 		printf("nid = 0x%lx, verb = 0x%lx, param = 0x%lx\n", nid, verb, params);
 	
 	// Execute command
-	uint32_t result = execute_command(nid, verb, params);
+	uint32_t result = execute_command(dev, nid, verb, params);
 
 	// Print result
 	printf("0x%08x\n", result);

@@ -20,7 +20,7 @@ class EXPORT ALCUserClientProvider : public IOService {
 	using super = IOService;
 	OSDeclareDefaultStructors(ALCUserClientProvider);
 
-	IOService* 	mHDACodecDevice { nullptr };
+	IOService* 	hdaCodecDevice { nullptr };
 	bool		readyForVerbs	{ false	};
 
 public:

@@ -33,9 +33,7 @@
 			<key>IOProbeScore</key>
 			<integer>1000</integer>
 			<key>IOProviderClass</key>
-			<string>IOResources</string>
-			<key>IOResourceMatch</key>
-			<string>IOKit</string>
+			<string>IOHDACodecDevice</string>
 			<key>IOUserClientClass</key>
 			<string>ALCUserClient</string>
 		</dict>

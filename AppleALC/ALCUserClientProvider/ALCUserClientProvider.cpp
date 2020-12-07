@@ -15,21 +15,13 @@ bool ALCUserClientProvider::start(IOService* provider) {
 	if (!super::start(provider))
 		return false;
 	
-	auto matchingDict = IOService::nameMatching(kIOHDACodecDevice);
-	if (!matchingDict) {
-		DBGLOG("client", "failed to allocate matching dictionary");
-		return false;
-	}
-	
-	mHDACodecDevice = IOService::waitForMatchingService(matchingDict, 100000000); // Wait for 0.1s
-	matchingDict->release();
-	
-	if (!mHDACodecDevice) {
+	hdaCodecDevice = provider;
+	if (!hdaCodecDevice) {
 		DBGLOG("client", "timeout in waiting for IOHDACodecDevice, will retry");
 		return false;
 	}
 
-	auto hdaController = mHDACodecDevice->getParentEntry(gIOServicePlane);
+	auto hdaController = hdaCodecDevice->getParentEntry(gIOServicePlane);
 	if (!hdaController) {
 		DBGLOG("client", "codec is missing AppleHDAController");
 		return false;
@@ -62,8 +54,6 @@ bool ALCUserClientProvider::start(IOService* provider) {
 
 void ALCUserClientProvider::stop(IOService* provider) {
 	super::stop(provider);
-	
-	OSSafeReleaseNULL(mHDACodecDevice);
 }
 
 uint64_t ALCUserClientProvider::sendHdaCommand(uint16_t nid, uint16_t verb, uint16_t param) {
@@ -80,7 +70,7 @@ uint64_t ALCUserClientProvider::sendHdaCommand(uint16_t nid, uint16_t verb, uint
 	}
 	
 	unsigned ret = 0;
-	sharedAlc->IOHDACodecDevice_executeVerb(reinterpret_cast<void*>(mHDACodecDevice), nid, verb, param, &ret, true);
+	sharedAlc->IOHDACodecDevice_executeVerb(reinterpret_cast<void*>(hdaCodecDevice), nid, verb, param, &ret, true);
 	DBGLOG("client", "send HDA command nid=0x%X, verb=0x%X, param=0x%X, result=0x%08x", nid, verb, param, ret);
 	
 	return ret;
