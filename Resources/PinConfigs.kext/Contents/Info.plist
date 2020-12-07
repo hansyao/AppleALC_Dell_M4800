@@ -4599,6 +4599,24 @@
 					<key>AFGLowPowerState</key>
 					<data>AwAAAA==</data>
 					<key>Codec</key>
+					<string>ALC283 for AlldoCube/Cube Mix Plus by Aldo97</string>
+					<key>CodecID</key>
+					<integer>283902595</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccEAEnHQEBJx6gAScfkAFHHCABRx0BAUce
+					FwFHH5ABlxwwAZcdAAGXHosBlx8AAhccQAIX
+					HRACFx4rAhcfAQFHDAICFwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
 					<string>MacPeet - alc283 for LENOVO IDEAPAD 14</string>
 					<key>CodecID</key>
 					<integer>283902595</integer>
