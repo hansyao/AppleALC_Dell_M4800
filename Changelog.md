@@ -14,6 +14,7 @@ AppleALC Changelog
 - Added CX8200 layout-id 80 for LG Gram 17 17z990 by rdmitry0911
 - Added ALC269 layout-id 91 for Chuwi CoreBox by Luca1991
 - Modify CX20632 layout-id 20 - Added Mic support and outputs mute controls - HP EliteDesk 800 G4/G5 mini by sisumara
+- Added ALC671 layout-id 16 for Fujitsu Q558 by sisumara
 
 #### v1.5.4
 - Improved Ice Lake controller patches by fewtarius

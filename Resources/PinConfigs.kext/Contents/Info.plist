@@ -6686,6 +6686,28 @@
 					<key>CodecID</key>
 					<integer>283903601</integer>
 					<key>Comment</key>
+					<string>Sisumara - ALC671 for Fujitsu Q558</string>
+					<key>ConfigData</key>
+					<data>
+					AXccEAF3HQEBdx4TAXcfmQF3DAIBRxwgAUcd
+					EAFHHiEBRx8CAUcMAgIXHDACFx0QAhceAQIX
+					HwECFwwCAZccUAGXHRABlx6BAZcfAg==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>16</integer>
+					<key>WakeConfigData</key>
+					<data>IhcMAg==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>CodecID</key>
+					<integer>283903601</integer>
+					<key>Comment</key>
 					<string> alc671 for HP 280 Pro G4  by Lcp</string>
 					<key>ConfigData</key>
 					<data>
