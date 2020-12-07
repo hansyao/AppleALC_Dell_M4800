@@ -21,12 +21,12 @@
 				<string>layout3.xml.zlib</string>
 			</dict>
 			<dict>
-				<key>comment</key>
-				<string>ALC255 for Dell Optiplex7060/7070MT(Separate LineOut)</string>
 				<key>Id</key>
 				<integer>66</integer>
 				<key>Path</key>
 				<string>layout66.xml.zlib</string>
+				<key>comment</key>
+				<string>ALC255 for Dell Optiplex7060/7070MT(Separate LineOut)</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -168,12 +168,12 @@
 				<string>PlatformsM.xml.zlib</string>
 			</dict>
 			<dict>
-				<key>comment</key>
-				<string>ALC255 for Dell Optiplex7060/7070MT(Separate LineOut)</string>
 				<key>Id</key>
 				<integer>66</integer>
 				<key>Path</key>
 				<string>Platforms66.xml.zlib</string>
+				<key>comment</key>
+				<string>ALC255 for Dell Optiplex7060/7070MT(Separate LineOut)</string>
 			</dict>
 			<dict>
 				<key>Comment</key>

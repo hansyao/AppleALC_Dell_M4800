@@ -1663,7 +1663,7 @@
 					<true/>
 				</dict>
 				<dict>
-		                        <key>Codec</key>
+					<key>Codec</key>
 					<string>ALC255 for Dell Optiplex7060/7070MT(Separate LineOut)</string>
 					<key>CodecID</key>
 					<integer>283902549</integer>
