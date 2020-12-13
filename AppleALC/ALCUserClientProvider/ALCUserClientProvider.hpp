@@ -24,6 +24,7 @@ class EXPORT ALCUserClientProvider : public IOService {
 	bool		readyForVerbs	{ false	};
 
 public:
+	virtual IOService* probe(IOService *provider, SInt32 *score) override;
 	virtual bool start(IOService* provider) override;
 	virtual void stop(IOService* provider) override;
 	

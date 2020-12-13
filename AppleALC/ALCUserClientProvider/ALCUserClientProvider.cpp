@@ -11,26 +11,19 @@
 
 OSDefineMetaClassAndStructors(ALCUserClientProvider, IOService);
 
-bool ALCUserClientProvider::start(IOService* provider) {
-	if (!super::start(provider))
-		return false;
-	
+IOService *ALCUserClientProvider::probe(IOService *provider, SInt32 *score) {
 	hdaCodecDevice = provider;
-	if (!hdaCodecDevice) {
-		DBGLOG("client", "timeout in waiting for IOHDACodecDevice, will retry");
-		return false;
-	}
 
 	auto hdaController = hdaCodecDevice->getParentEntry(gIOServicePlane);
 	if (!hdaController) {
 		DBGLOG("client", "codec is missing AppleHDAController");
-		return false;
+		return nullptr;
 	}
 
 	auto hdefDevice = hdaController->getParentEntry(gIOServicePlane);
 	if (!hdefDevice) {
 		DBGLOG("client", "controller is missing HDEF device");
-		return false;
+		return nullptr;
 	}
 
 	uint32_t enableHdaVerbs = 0;
@@ -38,8 +31,15 @@ bool ALCUserClientProvider::start(IOService* provider) {
 	PE_parse_boot_argn("alcverbs", &enableHdaVerbs, sizeof(enableHdaVerbs));
 	DBGLOG("client", "device %s to send custom verbs", enableHdaVerbs != 0 ? "allows" : "disallows");
 	if (enableHdaVerbs == 0) {
-		return false;
+		return nullptr;
 	}
+
+	return this;
+}
+
+bool ALCUserClientProvider::start(IOService* provider) {
+	if (!super::start(provider))
+		return false;
 
 	// We are ready for verbs
 	DBGLOG("client", "ALCUserClient is ready for hda-verbs");
@@ -48,7 +48,7 @@ bool ALCUserClientProvider::start(IOService* provider) {
 	
 	// Publish the service
 	registerService();
-	
+
 	return true;
 }
 

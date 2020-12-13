@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.5.6
+- Improved `alc-verbs` availability checking
+
 #### v1.5.5
 - Fixed kext loading issues on 10.8 and similar operating system
 - Added a requirement to inject `alc-verbs` or use `alcverbs=1` argument for custom verbs
