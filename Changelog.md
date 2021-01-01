@@ -2,7 +2,8 @@ AppleALC Changelog
 ==================
 #### v1.5.6
 - Improved `alc-verbs` availability checking
-- Add Realtek ALC256 Layout-id 67 for Dell OptiPlex 7080
+- Add Realtek ALC256 layout-id 67 for Dell OptiPlex 7080
+- Add ALC222 layout-id 11 for HP EliteDesk 800 G6 Mini
 
 #### v1.5.5
 - Fixed kext loading issues on 10.8 and similar operating system
