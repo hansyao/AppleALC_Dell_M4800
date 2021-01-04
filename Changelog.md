@@ -6,6 +6,7 @@ AppleALC Changelog
 - Add ALC222 layout-id 11 for HP EliteDesk 800 G6 Mini
 - Add ALC256 layout-id 69 for Xiaomi Pro Enhanced 2019
 - Add ALC235 layout-id 37 for Lenovo IdeaCentre Mini 5
+- CX20751_2 fixed mic gain slider in Big Sur
 
 #### v1.5.5
 - Fixed kext loading issues on 10.8 and similar operating system
