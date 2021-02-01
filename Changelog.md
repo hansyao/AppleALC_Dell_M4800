@@ -3,6 +3,7 @@ AppleALC Changelog
 #### v1.5.7
 - Add support for legacy Macs
 - Added ALC289 layout-id 99 for Dell XPS 13 9300 by DalianSky
+- Added ALC225 layout-id 90 for Dell Inspiron 5379 by fast900
 
 #### v1.5.6
 - Improved `alc-verbs` availability checking
