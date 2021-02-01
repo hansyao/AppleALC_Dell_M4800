@@ -1,5 +1,8 @@
 AppleALC Changelog
 ==================
+#### v1.5.7
+- Add support for legacy Macs
+
 #### v1.5.6
 - Improved `alc-verbs` availability checking
 - Add ALC256 layout-id 67 for Dell OptiPlex 7080
