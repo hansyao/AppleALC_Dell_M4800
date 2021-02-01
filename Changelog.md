@@ -8,6 +8,7 @@ AppleALC Changelog
 - Added ALC256 layout-id 77 for Asus x430_s4300FN by fangf2018
 - Added ALC256 layout-id 88 for Asus x430_s4300FN by fangf2018
 - Fix Mic for ALC221 layout-id 88 HP ProDesk 400 G2 Desktop Mini PC
+- Added ALC897 layout-id 66 for ASUS_PRIME_B460M-K by Dynamix1997
 
 #### v1.5.6
 - Improved `alc-verbs` availability checking
