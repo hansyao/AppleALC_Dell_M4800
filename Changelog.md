@@ -7,6 +7,7 @@ AppleALC Changelog
 - Added ALC274 layout-id 28 working speakers/mic Maingear Element 3 (TongFang 17 Barebone) by 343iChurch
 - Added ALC256 layout-id 77 for Asus x430_s4300FN by fangf2018
 - Added ALC256 layout-id 88 for Asus x430_s4300FN by fangf2018
+- Fix Mic for ALC221 layout-id 88 HP ProDesk 400 G2 Desktop Mini PC
 
 #### v1.5.6
 - Improved `alc-verbs` availability checking
