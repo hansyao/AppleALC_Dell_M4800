@@ -4175,7 +4175,7 @@
 					<key>Codec</key>
 					<string>jackjack1-su Realtek ALC274 for Microsoft Surface Pro 7</string>
 					<key>CodecID</key>
-					<real>283902580</real>
+					<integer>283902580</integer>
 					<key>ConfigData</key>
 					<data>
 					ASccMAEnHQEBJx6mAScfkAE3HPABNx0AATce
