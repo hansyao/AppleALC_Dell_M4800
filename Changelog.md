@@ -3,6 +3,7 @@ AppleALC Changelog
 #### v1.5.8
 - Improved resource packaging by stripping optional tags
 - General enhancement & improvement for ALC230 by Ab2774
+- Added ALC274 layout-id 35 by jackjack1-su
 
 #### v1.5.7
 - Add support for legacy Macs
