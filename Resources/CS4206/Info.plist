@@ -134,6 +134,14 @@
 			</dict>
 			<dict>
 				<key>Id</key>
+				<integer>60</integer>
+				<key>Path</key>
+				<string>layout60.xml.zlib</string>
+				<key>comment</key>
+				<string>Khronokernel - Cirrus Logic CS4206 - iMac8,1</string>
+			</dict>
+			<dict>
+				<key>Id</key>
 				<integer>67</integer>
 				<key>Path</key>
 				<string>layout67.xml.zlib</string>
@@ -171,6 +179,14 @@
 				<string>layout18.xml.zlib</string>
 				<key>comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac11,2</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>24</integer>
+				<key>Path</key>
+				<string>layout24.xml.zlib</string>
+				<key>comment</key>
+				<string>Khronokernel - Cirrus Logic CS4206 - iMac11,3</string>
 			</dict>
 			<dict>
 				<key>Id</key>
@@ -329,6 +345,14 @@
 			</dict>
 			<dict>
 				<key>Id</key>
+				<integer>60</integer>
+				<key>Path</key>
+				<string>PlatformApple.xml.zlib</string>
+				<key>comment</key>
+				<string>Khronokernel - Cirrus Logic CS4206 - iMac8,1</string>
+			</dict>
+			<dict>
+				<key>Id</key>
 				<integer>67</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
@@ -369,6 +393,14 @@
 			</dict>
 			<dict>
 				<key>Id</key>
+				<integer>24</integer>
+				<key>Path</key>
+				<string>PlatformApple.xml.zlib</string>
+				<key>comment</key>
+				<string>Khronokernel - Cirrus Logic CS4206 - iMac11,3</string>
+			</dict>
+			<dict>
+				<key>Id</key>
 				<integer>9</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
@@ -402,7 +434,82 @@
 		</array>
 	</dict>
 	<key>Patches</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Count</key>
+			<integer>1</integer>
+			<key>Find</key>
+			<data>xgYASIu/aAE=</data>
+			<key>MinKernel</key>
+			<integer>18</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>xgYBSIu/aAE=</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>1</integer>
+			<key>Find</key>
+			<data>QcYGAEmLvCQ=</data>
+			<key>MaxKernel</key>
+			<integer>13</integer>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>QcYGAUmLvCQ=</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>1</integer>
+			<key>Find</key>
+			<data>QcYGAEiLu2g=</data>
+			<key>MinKernel</key>
+			<integer>14</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>QcYGAUiLu2g=</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>1</integer>
+			<key>Find</key>
+			<data>QcaGQwEAAAA=</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>QcaGQwEAAAE=</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>hBnUEQ==</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>EEITEA==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>gxnUEQ==</data>
+			<key>MinKernel</key>
+			<integer>15</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>AAAAAA==</data>
+		</dict>
+	</array>
 	<key>Revisions</key>
 	<array>
 		<integer>1048835</integer>
