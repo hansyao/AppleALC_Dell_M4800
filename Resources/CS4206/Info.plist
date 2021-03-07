@@ -17,7 +17,7 @@
 				<integer>1</integer>
 				<key>Path</key>
 				<string>layout1.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBook6,1</string>
 			</dict>
 			<dict>
@@ -25,7 +25,7 @@
 				<integer>31</integer>
 				<key>Path</key>
 				<string>layout31.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBook7,1</string>
 			</dict>
 			<dict>
@@ -33,7 +33,7 @@
 				<integer>99</integer>
 				<key>Path</key>
 				<string>layout99.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookAir3,1</string>
 			</dict>
 			<dict>
@@ -41,7 +41,7 @@
 				<integer>61</integer>
 				<key>Path</key>
 				<string>layout61.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookAir3,2</string>
 			</dict>
 			<dict>
@@ -49,7 +49,7 @@
 				<integer>98</integer>
 				<key>Path</key>
 				<string>layout98.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookAir4,1</string>
 			</dict>
 			<dict>
@@ -57,7 +57,7 @@
 				<integer>91</integer>
 				<key>Path</key>
 				<string>layout91.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookAir4,2</string>
 			</dict>
 			<dict>
@@ -65,7 +65,7 @@
 				<integer>75</integer>
 				<key>Path</key>
 				<string>layout75.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookPro5,3</string>
 			</dict>
 			<dict>
@@ -73,7 +73,7 @@
 				<integer>76</integer>
 				<key>Path</key>
 				<string>layout76.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookPro5,4</string>
 			</dict>
 			<dict>
@@ -81,7 +81,7 @@
 				<integer>77</integer>
 				<key>Path</key>
 				<string>layout77.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookPro5,5</string>
 			</dict>
 			<dict>
@@ -89,7 +89,7 @@
 				<integer>71</integer>
 				<key>Path</key>
 				<string>layout71.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookPro6,1</string>
 			</dict>
 			<dict>
@@ -97,7 +97,7 @@
 				<integer>11</integer>
 				<key>Path</key>
 				<string>layout11.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookPro6,2</string>
 			</dict>
 			<dict>
@@ -105,7 +105,7 @@
 				<integer>13</integer>
 				<key>Path</key>
 				<string>layout13.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookPro7,1</string>
 			</dict>
 			<dict>
@@ -113,7 +113,7 @@
 				<integer>28</integer>
 				<key>Path</key>
 				<string>layout28.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookPro8,1</string>
 			</dict>
 			<dict>
@@ -121,7 +121,7 @@
 				<integer>29</integer>
 				<key>Path</key>
 				<string>layout29.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookPro8,2</string>
 			</dict>
 			<dict>
@@ -129,7 +129,7 @@
 				<integer>39</integer>
 				<key>Path</key>
 				<string>layout39.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookPro8,3</string>
 			</dict>
 			<dict>
@@ -137,7 +137,7 @@
 				<integer>60</integer>
 				<key>Path</key>
 				<string>layout60.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac8,1</string>
 			</dict>
 			<dict>
@@ -145,7 +145,7 @@
 				<integer>67</integer>
 				<key>Path</key>
 				<string>layout67.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac9,1 20</string>
 			</dict>
 			<dict>
@@ -153,7 +153,7 @@
 				<integer>78</integer>
 				<key>Path</key>
 				<string>layout78.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac10,1 21.5</string>
 			</dict>
 			<dict>
@@ -161,7 +161,7 @@
 				<integer>79</integer>
 				<key>Path</key>
 				<string>layout79.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac10,1 27</string>
 			</dict>
 			<dict>
@@ -169,7 +169,7 @@
 				<integer>81</integer>
 				<key>Path</key>
 				<string>layout81.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac11,1</string>
 			</dict>
 			<dict>
@@ -177,7 +177,7 @@
 				<integer>18</integer>
 				<key>Path</key>
 				<string>layout18.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac11,2</string>
 			</dict>
 			<dict>
@@ -185,7 +185,7 @@
 				<integer>24</integer>
 				<key>Path</key>
 				<string>layout24.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac11,3</string>
 			</dict>
 			<dict>
@@ -193,7 +193,7 @@
 				<integer>9</integer>
 				<key>Path</key>
 				<string>layout9.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac12,1</string>
 			</dict>
 			<dict>
@@ -201,7 +201,7 @@
 				<integer>32</integer>
 				<key>Path</key>
 				<string>layout32.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac12,2</string>
 			</dict>
 			<dict>
@@ -209,7 +209,7 @@
 				<integer>33</integer>
 				<key>Path</key>
 				<string>layout33.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - Macmini5,1</string>
 			</dict>
 			<dict>
@@ -217,7 +217,7 @@
 				<integer>35</integer>
 				<key>Path</key>
 				<string>layout35.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - Macmini5,2</string>
 			</dict>
 		</array>
@@ -228,7 +228,7 @@
 				<integer>1</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBook6,1</string>
 			</dict>
 			<dict>
@@ -236,7 +236,7 @@
 				<integer>31</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBook7,1</string>
 			</dict>
 			<dict>
@@ -244,7 +244,7 @@
 				<integer>99</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookAir3,1</string>
 			</dict>
 			<dict>
@@ -252,7 +252,7 @@
 				<integer>61</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookAir3,2</string>
 			</dict>
 			<dict>
@@ -260,7 +260,7 @@
 				<integer>98</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookAir4,1</string>
 			</dict>
 			<dict>
@@ -268,7 +268,7 @@
 				<integer>91</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookAir4,2</string>
 			</dict>
 			<dict>
@@ -276,7 +276,7 @@
 				<integer>75</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookPro5,3</string>
 			</dict>
 			<dict>
@@ -284,7 +284,7 @@
 				<integer>76</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookPro5,4</string>
 			</dict>
 			<dict>
@@ -292,7 +292,7 @@
 				<integer>77</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookPro5,5</string>
 			</dict>
 			<dict>
@@ -300,7 +300,7 @@
 				<integer>71</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookPro6,1</string>
 			</dict>
 			<dict>
@@ -308,7 +308,7 @@
 				<integer>11</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookPro6,2</string>
 			</dict>
 			<dict>
@@ -316,7 +316,7 @@
 				<integer>13</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookPro7,1</string>
 			</dict>
 			<dict>
@@ -324,7 +324,7 @@
 				<integer>28</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookPro8,1</string>
 			</dict>
 			<dict>
@@ -332,7 +332,7 @@
 				<integer>29</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookPro8,2</string>
 			</dict>
 			<dict>
@@ -340,7 +340,7 @@
 				<integer>39</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - MacBookPro8,3</string>
 			</dict>
 			<dict>
@@ -348,7 +348,7 @@
 				<integer>60</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac8,1</string>
 			</dict>
 			<dict>
@@ -356,7 +356,7 @@
 				<integer>67</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac9,1 20</string>
 			</dict>
 			<dict>
@@ -364,7 +364,7 @@
 				<integer>78</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac10,1 21.5</string>
 			</dict>
 			<dict>
@@ -372,7 +372,7 @@
 				<integer>79</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac10,1 27</string>
 			</dict>
 			<dict>
@@ -380,7 +380,7 @@
 				<integer>81</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac11,1</string>
 			</dict>
 			<dict>
@@ -388,7 +388,7 @@
 				<integer>18</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac11,2</string>
 			</dict>
 			<dict>
@@ -396,7 +396,7 @@
 				<integer>24</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac11,3</string>
 			</dict>
 			<dict>
@@ -404,7 +404,7 @@
 				<integer>9</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac12,1</string>
 			</dict>
 			<dict>
@@ -412,7 +412,7 @@
 				<integer>32</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - iMac12,2</string>
 			</dict>
 			<dict>
@@ -420,7 +420,7 @@
 				<integer>33</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - Macmini5,1</string>
 			</dict>
 			<dict>
@@ -428,7 +428,7 @@
 				<integer>35</integer>
 				<key>Path</key>
 				<string>PlatformApple.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>Khronokernel - Cirrus Logic CS4206 - Macmini5,2</string>
 			</dict>
 		</array>

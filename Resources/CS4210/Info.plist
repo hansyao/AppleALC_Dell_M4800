@@ -17,7 +17,7 @@
 				<integer>13</integer>
 				<key>Path</key>
 				<string>layout13.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>InsanelyDeepak - Cirrus Logic CS4210</string>
 			</dict>
 		</array>
@@ -28,7 +28,7 @@
 				<integer>13</integer>
 				<key>Path</key>
 				<string>PlatformsID.xml.zlib</string>
-				<key>comment</key>
+				<key>Comment</key>
 				<string>InsanelyDeepak - Cirrus Logic CS4210</string>
 			</dict>
 		</array>
