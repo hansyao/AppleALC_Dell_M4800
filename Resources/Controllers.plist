@@ -154,7 +154,7 @@
 		<key>Device</key>
 		<integer>4028</integer>
 		<key>Name</key>
-		<string>NVIDIA HDMI for Alienware Alpha GTX860M</string>
+		<string>NVIDIA HDMI for GM107 in 10.13.4 - 10.13.6</string>
 		<key>Patches</key>
 		<array>
 			<dict>
