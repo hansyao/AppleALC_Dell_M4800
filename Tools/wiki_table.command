@@ -6,7 +6,7 @@
 #  
 
 outfile=~/Desktop/SupportedСodecs.md
-printf '#### Currently supported codecs\n' > $outfile
+printf '#### Currently supported codecs '$(date '+%Y-%m-%d')'\n' > $outfile
 #printf '*The table not full, watch all supported layout-id in [Resources](https://github.com/acidanthera/AppleALC/tree/master/Resources).* \n'
 printf '| Vendor | Codec | Revisions and layouts | MinKernel | MaxKernel |\n' >> $outfile
 printf '|--------|-------|-----------------------|-----------|-----------|\n' >> $outfile
