@@ -9,6 +9,7 @@ AppleALC Changelog
 - Added ALC897 layout-id 69 for MSI-Z490-A Pro by mathcampbell
 - Added IDT 92HD95 layout-id 14 for LenovoG710 by Svilen88
 - Added ALC235 layout-id 18 for asrock 310 bb by viorel78
+- Added controller patch for 100 Series (8086:A170) by dhinakg
 
 #### v1.5.8
 - Improved resource packaging by stripping optional tags
