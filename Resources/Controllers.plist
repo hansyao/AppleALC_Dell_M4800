@@ -538,7 +538,7 @@
 		<key>Device</key>
 		<integer>3084</integer>
 		<key>Name</key>
-		<string>HD4600 controller</string>
+		<string>HD4600 HDMI Audio</string>
 		<key>Patches</key>
 		<array>
 			<dict>
@@ -652,7 +652,7 @@
 		<key>Device</key>
 		<integer>36000</integer>
 		<key>Name</key>
-		<string>Z97 HDEF controller</string>
+		<string>Z97 HDEF controller in 10.9</string>
 		<key>Patches</key>
 		<array>
 			<dict>
@@ -939,7 +939,7 @@
 		<key>Device</key>
 		<integer>41800</integer>
 		<key>Name</key>
-		<string>300 Series PCH HD Audio</string>
+		<string>300 Series PCH HD Audio in 10.12 - 10.13</string>
 		<key>Patches</key>
 		<array>
 			<dict>
