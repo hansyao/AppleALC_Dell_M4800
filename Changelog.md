@@ -3,6 +3,7 @@ AppleALC Changelog
 #### v1.6.0
 - Added `use-layout-id` property to use `layout-id` as is on Macs
 - Added `use-apple-layout-id` property to use `apple-layout-id` as `layout-id` on Macs
+- Fixed CS4206 and ALC885 support for legacy Macs
 
 #### v1.5.9
 - Added CS4206 layout-id 24 and 60
