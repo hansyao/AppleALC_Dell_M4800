@@ -224,7 +224,8 @@ void AlcEnabler::updateDeviceProperties(IORegistryEntry *hdaService, DeviceInfo 
 			if (info->firmwareVendor == DeviceInfo::FirmwareVendor::Apple &&
 				WIOKit::getOSDataValue(hdaService, "alc-layout-id", alcId)) {
 				DBGLOG("alc", "found apple alc-layout-id %u property", alcId);
-			} else if (info->firmwareVendor != DeviceInfo::FirmwareVendor::Apple) {
+			} else if (info->firmwareVendor != DeviceInfo::FirmwareVendor::Apple
+					   || hdaService->getProperty("use-layout-id") != nullptr) {
 				if (WIOKit::getOSDataValue(hdaService, "layout-id", alcId)) {
 					DBGLOG("alc", "found legacy layout-id %u property", alcId);
 					hdaService->setProperty("alc-layout-id", &alcId, sizeof(alcId));
@@ -256,7 +257,7 @@ void AlcEnabler::updateDeviceProperties(IORegistryEntry *hdaService, DeviceInfo 
 	}
 
 	// For every client only set layout-id itself.
-	if (info->firmwareVendor != DeviceInfo::FirmwareVendor::Apple)
+	if (info->firmwareVendor != DeviceInfo::FirmwareVendor::Apple || hdaService->getProperty("use-apple-layout-id") != nullptr)
 		hdaService->setProperty("layout-id", &info->reportedLayoutId, sizeof(info->reportedLayoutId));
 
 	// Pass onboard-X if requested.

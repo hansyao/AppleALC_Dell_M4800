@@ -1,5 +1,9 @@
 AppleALC Changelog
 ==================
+#### v1.6.0
+- Added `use-layout-id` property to use `layout-id` as is on Macs
+- Added `use-apple-layout-id` property to use `apple-layout-id` as `layout-id` on Macs
+
 #### v1.5.9
 - Added CS4206 layout-id 24 and 60
 - Added 500 Series (0xF0C8 Z590 + Intel 10 Gen) PCH HD Audio Controller
