@@ -1,4 +1,4 @@
-<dict>    
+<dict>
     <key>LayoutID</key>
     <integer>70</integer>
     <key>PathMapRef</key>
@@ -10,7 +10,7 @@
             </array>
             <key>ExtMic</key>
             <dict>
-                <key>HeadsetMic_dBV</key>			
+                <key>HeadsetMic_dBV</key>
                 <integer>3214514586</integer>
                 <key>MuteGPIO</key>
                 <integer>262144</integer>
@@ -18,11 +18,11 @@
             <key>Headphone</key>
             <dict>
             	<key>DefaultVolume</key>
-            	<integer>4292870144</integer>		
+            	<integer>4292870144</integer>
                 <key>AmpPreDelay</key>
                 <integer>50</integer>
-				<key>Headset_dBV</key> 			
-                <integer>3239051264</integer>   
+				<key>Headset_dBV</key>
+                <integer>3239051264</integer>
                 <key>MuteGPIO</key>
                 <integer>0</integer>
             </dict>
@@ -36,7 +36,7 @@
             <key>IntSpeaker</key>
             <dict>
             	<key>DefaultVolume</key>
-            	<integer>4293656576</integer>		
+            	<integer>4293656576</integer>
                 <key>AmpPostDelay</key>
                 <integer>100</integer>
                 <key>AmpPreDelay</key>
@@ -2911,8 +2911,8 @@
             <dict>
                 <key>MuteGPIO</key>
                 <integer>1677787161</integer>
-				
-				
+
+
 				<key>SignalProcessing</key>
 				<dict>
 					<key>SoftwareDSP</key>
@@ -3672,9 +3672,9 @@
             <key>PathMapID</key>
             <integer>29</integer>
             <key>SPDIFIn</key>
-            <dict></dict>
+            </dict>
             <key>SPDIFOut</key>
-            <dict></dict>
+            </dict>
         </dict>
     </array>
 </dict>

@@ -1,4 +1,4 @@
-<dict>    
+<dict>
     <key>LayoutID</key>
     <integer>53</integer>
     <key>PathMapRef</key>
@@ -22,7 +22,7 @@
             <key>IntSpeaker</key>
             <dict>
             	<key>DefaultVolume</key>
-            	<integer>4294377472</integer>		
+            	<integer>4294377472</integer>
                 <key>AmpPostDelay</key>
                 <integer>100</integer>
                 <key>AmpPreDelay</key>

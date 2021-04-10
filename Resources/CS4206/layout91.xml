@@ -18,7 +18,7 @@
             <key>Headphone</key>
             <dict>
             	<key>DefaultVolume</key>
-            	<integer>4292870144</integer>		
+            	<integer>4292870144</integer>
                 <key>Headset_dBV</key>
                 <integer>-1055916032</integer>
             </dict>
@@ -30,7 +30,7 @@
             <key>IntSpeaker</key>
             <dict>
             	<key>DefaultVolume</key>
-            	<integer>4294180864</integer>		
+            	<integer>4294180864</integer>
                 <key>AmpPostDelay</key>
                 <integer>100</integer>
                 <key>AmpPreDelay</key>
@@ -2220,7 +2220,7 @@
 								<key>DspFuncProcessingIndex</key>
 								<integer>3</integer>
 							</dict>
-							<key>ParameterInfo</key>				
+							<key>ParameterInfo</key>
 							<dict>
                                 <key>3</key>
                                 <integer>1088421888</integer>
@@ -2233,7 +2233,7 @@
 								<key>5</key>
 								<integer>1</integer>
 								<key>6</key>
-								<integer>1090519040</integer>		
+								<integer>1090519040</integer>
 								<key>7</key>
 								<integer>3</integer>
 								<key>8</key>

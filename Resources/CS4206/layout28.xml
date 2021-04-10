@@ -18,7 +18,7 @@
             <key>Headphone</key>
             <dict>
             	<key>DefaultVolume</key>
-            	<integer>4292870144</integer>		
+            	<integer>4292870144</integer>
                 <key>AmpPostDelay</key>
                 <integer>50</integer>
                 <key>AmpPreDelay</key>
@@ -39,7 +39,7 @@
             <key>IntSpeaker</key>
             <dict>
             	<key>DefaultVolume</key>
-            	<integer>4294180864</integer>		
+            	<integer>4294180864</integer>
                 <key>AmpPostDelay</key>
                 <integer>100</integer>
                 <key>AmpPreDelay</key>
@@ -2467,13 +2467,13 @@
 				</dict>
             </dict>
             <key>LineIn</key>
-            <dict></dict>
+            </dict>
             <key>Mic</key>
             <dict>
                 <key>MuteGPIO</key>
                 <integer>1342242829</integer>
-				
-				
+
+
 				<key>SignalProcessing</key>
 				<dict>
 					<key>SoftwareDSP</key>
@@ -3041,7 +3041,7 @@
             <key>PathMapID</key>
             <integer>14</integer>
             <key>SPDIFOut</key>
-            <dict></dict>
+            </dict>
         </dict>
     </array>
 </dict>
