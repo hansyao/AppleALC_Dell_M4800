@@ -86,11 +86,19 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Khronokernel - ALC885 - iMac7,1</string>
+				<string>Khronokernel - ALC885 - iMac7,1 20"</string>
 				<key>Id</key>
 				<integer>48</integer>
 				<key>Path</key>
 				<string>layout48.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Khronokernel - ALC885 - iMac7,1 24"</string>
+				<key>Id</key>
+				<integer>50</integer>
+				<key>Path</key>
+				<string>layout50.xml.zlib</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -193,9 +201,17 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Khronokernel - ALC885 - iMac7,1</string>
+				<string>Khronokernel - ALC885 - iMac7,1 20"</string>
 				<key>Id</key>
 				<integer>48</integer>
+				<key>Path</key>
+				<string>PlatformsApple.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Khronokernel - ALC885 - iMac7,1 24"</string>
+				<key>Id</key>
+				<integer>50</integer>
 				<key>Path</key>
 				<string>PlatformsApple.xml.zlib</string>
 			</dict>
