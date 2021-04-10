@@ -62,6 +62,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Khronokernel - ALC885 - MacBookPro4,1</string>
+				<key>Id</key>
+				<integer>56</integer>
+				<key>Path</key>
+				<string>layout56.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Khronokernel - ALC885 - MacBookPro5,1</string>
 				<key>Id</key>
 				<integer>64</integer>
@@ -172,6 +180,14 @@
 				<string>Khronokernel - ALC885 - MacBookAir2,1</string>
 				<key>Id</key>
 				<integer>53</integer>
+				<key>Path</key>
+				<string>PlatformsApple.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Khronokernel - ALC885 - MacBookPro4,1</string>
+				<key>Id</key>
+				<integer>56</integer>
 				<key>Path</key>
 				<string>PlatformsApple.xml.zlib</string>
 			</dict>
