@@ -634,8 +634,6 @@
             <dict>
                 <key>MuteGPIO</key>
                 <integer>1677787160</integer>
-
-
 				<key>SignalProcessing</key>
 				<dict>
 					<key>SoftwareDSP</key>
