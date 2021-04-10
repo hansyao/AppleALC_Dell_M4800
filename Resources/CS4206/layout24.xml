@@ -1,12 +1,12 @@
-<dict>
+<dict>    <!--    layout24.xml    -->
     <key>LayoutID</key>
-    <integer>24</integer>
+    <integer>24</integer>	<!--	K75F	-->
     <key>PathMapRef</key>
     <array>
 		<dict>
 			<key>CodecID</key>
 			<array>
-				<integer>269697542</integer>
+				<integer>269697542</integer>	<!--	0x10134206 CS4206	-->
 			</array>
 			<key>ExtMic</key>
 			<dict>
@@ -18,7 +18,7 @@
 			<key>Headphone</key>
             <dict>
 				<key>DefaultVolume</key>
-				<integer>4293001216</integer>
+				<integer>4293001216</integer>		<!-- = 30.0 dB  -->
 				<key>Headset_dBV</key>
                 <integer>3239051264</integer>
             </dict>
@@ -32,7 +32,7 @@
 			<key>IntSpeaker</key>
 			<dict>
 				<key>DefaultVolume</key>
-				<integer>4294311936</integer>
+				<integer>4294311936</integer>		<!-- = 10.0 dB  -->
 				<key>MaximumBootBeepValue</key>
 				<integer>83</integer>
 				<key>MuteGPIO</key>
@@ -1386,11 +1386,11 @@
 				</dict>
 			</dict>
 			<key>LineIn</key>
-			</dict>
+			<dict/>
 			<key>Mic</key>
 			<dict>
                 <key>MuteGPIO</key>
-                <integer>1342242829</integer>
+                <integer>1342242829</integer>		<!-- 0x5001000D	-->
 				<key>SignalProcessing</key>
 				<dict>
 					<key>SoftwareDSP</key>
@@ -1750,9 +1750,9 @@
 			<key>PathMapID</key>
             <integer>44</integer>
 			<key>SPDIFIn</key>
-			</dict>
+			<dict/>
 			<key>SPDIFOut</key>
-			</dict>
+			<dict/>
 		</dict>
 	</array>
 </dict>

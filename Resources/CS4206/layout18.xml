@@ -1,26 +1,26 @@
-<dict>
+<dict>    <!--    layout18.xml    -->
     <key>LayoutID</key>
-    <integer>18</integer>
+    <integer>18</integer>	<!--	K22	(REMOVE THIS COMMENT AFTER DATABASE ENTRY IS AVAILABLE)	-->
     <key>PathMapRef</key>
     <array>
 		<dict>
 			<key>CodecID</key>
 			<array>
-				<integer>269697542</integer>
+				<integer>269697542</integer>	<!--	0x10134206 CS4206	-->
 			</array>
 			<key>ExtMic</key>
 			<dict>
-				<key>HeadsetMic_dBV</key>
-                <integer>1088421888</integer>
+				<key>HeadsetMic_dBV</key> 		<!--	<rdar://6741509>	-->
+                <integer>1088421888</integer>   <!--	<rdar://6741509>	equivalent to +7.0dB -->
                 <key>MuteGPIO</key>
                 <integer>262144</integer>
 			</dict>
 			<key>Headphone</key>
             <dict>
 				<key>DefaultVolume</key>
-				<integer>4293001216</integer>
-				<key>Headset_dBV</key>
-                <integer>3239051264</integer>
+				<integer>4293001216</integer>		<!-- = 30.0 dB  -->
+				<key>Headset_dBV</key> 			<!--	<rdar://6739398> supersedes <rdar://5872008>	-->
+                <integer>3239051264</integer>   <!--	<rdar://6739398> supersedes <rdar://5872008>	equivalent to -9.0dB -->
             </dict>
 			<key>Inputs</key>
 			<array>
@@ -32,11 +32,11 @@
 			<key>IntSpeaker</key>
 			<dict>
 				<key>DefaultVolume</key>
-				<integer>4294311936</integer>
+				<integer>4294311936</integer>		<!-- = 10.0 dB  -->
 				<key>MaximumBootBeepValue</key>
 				<integer>85</integer>
 				<key>MuteGPIO</key>
-                <integer>3</integer>
+                <integer>3</integer>			<!--	<rdar://6564990,6702081>	-->
 				<key>SignalProcessing</key>
 				<dict>
 					<key>SoftwareDSP</key>
@@ -1274,12 +1274,12 @@
 				</dict>
 			</dict>
 			<key>LineIn</key>
-			</dict>
+			<dict/>
 			<key>Mic</key>
 			<dict>
                 <key>MuteGPIO</key>
-                <integer>1342242829</integer>
-				<key>SignalProcessing</key>
+                <integer>1342242829</integer>		<!-- 0x5001000D	-->
+				<key>SignalProcessing</key>			<!-- <rdar://6476733> -->
 				<dict>
 					<key>SoftwareDSP</key>
 					<dict>
@@ -1686,9 +1686,9 @@
 			<key>PathMapID</key>
             <integer>44</integer>
 			<key>SPDIFIn</key>
-			</dict>
+			<dict/>
 			<key>SPDIFOut</key>
-			</dict>
+			<dict/>
 		</dict>
 	</array>
 </dict>

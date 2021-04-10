@@ -18,7 +18,7 @@
             <key>Headphone</key>
             <dict>
             	<key>DefaultVolume</key>
-            	<integer>4293001216</integer>
+            	<integer>4293001216</integer>		<!-- = 30.0 dB  -->
                 <key>Headset_dBV</key>
                 <integer>-1055916032</integer>
             </dict>
@@ -32,7 +32,7 @@
             <key>IntSpeaker</key>
             <dict>
             	<key>DefaultVolume</key>
-            	<integer>4294311936</integer>
+            	<integer>4294311936</integer>		<!-- = 10.0 dB  -->
                 <key>MaximumBootBeepValue</key>
                 <integer>83</integer>
                 <key>MuteGPIO</key>
@@ -1386,7 +1386,7 @@
 				</dict>
             </dict>
             <key>LineIn</key>
-            </dict>
+            <dict/>
             <key>Mic</key>
             <dict>
                 <key>MuteGPIO</key>
@@ -1750,9 +1750,9 @@
             <key>PathMapID</key>
             <integer>44</integer>
             <key>SPDIFIn</key>
-            </dict>
+            <dict/>
             <key>SPDIFOut</key>
-            </dict>
+            <dict/>
         </dict>
     </array>
 </dict>

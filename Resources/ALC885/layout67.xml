@@ -1,4 +1,4 @@
-<dict>
+<dict>    <!--    <rdar://5817502> layout67.xml    -->
     <key>LayoutID</key>
     <integer>67</integer>
     <key>PathMapRef</key>
@@ -8,7 +8,7 @@
             <array>
                 <integer>283904133</integer>
             </array>
-			<key>ExtMic</key>
+			<key>ExtMic</key>					<!--	<rdar://5852925>	-->
 			<dict>
                 <key>MuteGPIO</key>
                 <integer>262144</integer>
@@ -16,17 +16,17 @@
             <key>Headphone</key>
             <dict>
             	<key>DefaultVolume</key>
-            	<integer>4293591040</integer>
+            	<integer>4293591040</integer>		<!-- = 21.0 dB  -->
                 <key>AmpPreDelay</key>
-                <integer>300</integer>
-                <key>Headset_dBV</key>
-                <integer>3239051264</integer>
+                <integer>300</integer>			<!--	<rdar://6647590>	-->
+                <key>Headset_dBV</key> 			<!--	<rdar://5872008>	-->
+                <integer>3239051264</integer>   <!--	<rdar://5872008>	equivalent to -9.0dB -->
                 <key>MuteGPIO</key>
                 <integer>0</integer>
             </dict>
             <key>Inputs</key>
             <array>
-                <string>ExtMic</string>
+                <string>ExtMic</string>			<!--	<rdar://5852925>	-->
                 <string>LineIn</string>
                 <string>Mic</string>
                 <string>SPDIFIn</string>
@@ -34,7 +34,7 @@
             <key>IntSpeaker</key>
             <dict>
             	<key>DefaultVolume</key>
-            	<integer>4293984256</integer>
+            	<integer>4293984256</integer>		<!-- = 15.0 dB  -->
                 <key>MaximumBootBeepValue</key>
                 <integer>38</integer>
                 <key>MuteGPIO</key>
@@ -1840,14 +1840,14 @@
             <key>PathMapID</key>
             <integer>41</integer>
             <key>SPDIFIn</key>
-            </dict>
+            <dict/>
             <key>SPDIFOut</key>
-            </dict>
+            <dict/>
         </dict>
 		<dict>
 			<key>CodecID</key>
 			<array>
-				<integer>269697542</integer>
+				<integer>269697542</integer>	<!--	0x10134206 CS4206	-->
 			</array>
 			<key>ExtMic</key>
 			<dict>
@@ -1855,7 +1855,7 @@
                 <integer>262144</integer>
 			</dict>
 			<key>Headphone</key>
-			</dict>
+			<dict/>
 			<key>Inputs</key>
 			<array>
                 <string>ExtMic</string>
@@ -1866,7 +1866,7 @@
 			<key>IntSpeaker</key>
 			<dict>
 				<key>DefaultVolume</key>
-				<integer>4293984256</integer>
+				<integer>4293984256</integer>		<!-- = 15.0 dB  -->
 				<key>MaximumBootBeepValue</key>
 				<integer>127</integer>
 				<key>MuteGPIO</key>
@@ -2089,11 +2089,11 @@
 				</dict>
 			</dict>
 			<key>LineIn</key>
-			</dict>
+			<dict/>
 			<key>Mic</key>
 			<dict>
                 <key>MuteGPIO</key>
-                <integer>1342242829</integer>
+                <integer>1342242829</integer>		<!-- 0x5001000D	-->
 			</dict>
 			<key>Outputs</key>
 			<array>
@@ -2104,14 +2104,14 @@
 			<key>PathMapID</key>
             <integer>4206</integer>
 			<key>SPDIFIn</key>
-			</dict>
+			<dict/>
 			<key>SPDIFOut</key>
-			</dict>
-		</dict>
+			<dict/>
+		</dict>		
 		<dict>
 			<key>CodecID</key>
 			<array>
-				<integer>451708928</integer>
+				<integer>451708928</integer>	<!--	0x1AEC8800 Wolfson WM8800	-->
 			</array>
 			<key>ExtMic</key>
 			<dict>
@@ -2119,7 +2119,7 @@
                 <integer>262144</integer>
 			</dict>
 			<key>Headphone</key>
-            </dict>
+            <dict/>
 			<key>Inputs</key>
 			<array>
                 <string>ExtMic</string>
@@ -2130,7 +2130,7 @@
 			<key>IntSpeaker</key>
 			<dict>
 				<key>DefaultVolume</key>
-				<integer>4293984256</integer>
+				<integer>4293984256</integer>		<!-- = 15.0 dB  -->
                 <key>AmpPostDelay</key>
                 <integer>100</integer>
                 <key>AmpPreDelay</key>
@@ -2948,11 +2948,11 @@
 				</dict>
 			</dict>
 			<key>LineIn</key>
-			</dict>
+			<dict/>
 			<key>Mic</key>
 			<dict>
                 <key>MuteGPIO</key>
-                <integer>1342242829</integer>
+                <integer>1342242829</integer>		<!-- 0x5001000D	-->
 			</dict>
 			<key>Outputs</key>
 			<array>
@@ -2963,9 +2963,9 @@
 			<key>PathMapID</key>
             <integer>8800</integer>
 			<key>SPDIFIn</key>
-			</dict>
+			<dict/>
 			<key>SPDIFOut</key>
-			</dict>
+			<dict/>
 		</dict>
     </array>
 </dict>

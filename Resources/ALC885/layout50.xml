@@ -1,4 +1,4 @@
-<dict>
+<dict>    <!--    <rdar://4826065> layout50.xml    -->
     <key>LayoutID</key>
     <integer>50</integer>
     <key>PathMapRef</key>
@@ -22,7 +22,7 @@
             <key>IntSpeaker</key>
             <dict>
             	<key>DefaultVolume</key>
-            	<integer>4293787648</integer>
+            	<integer>4293787648</integer>		<!-- = 18.0 dB  -->
                 <key>MaximumBootBeepValue</key>
                 <integer>48</integer>
                 <key>MuteGPIO</key>
@@ -886,6 +886,8 @@
             <dict>
                 <key>MuteGPIO</key>
                 <integer>1342242840</integer>
+				<!-- Created with DGB version: 1.9.3 by tester On: 05/09/2012 12:38PM -->
+				<!-- <rdar://problem/11219269> -->
 				<key>SignalProcessing</key>
 				<dict>
 					<key>SoftwareDSP</key>
@@ -1269,9 +1271,9 @@
             <key>PathMapID</key>
             <integer>17</integer>
             <key>SPDIFIn</key>
-            </dict>
+            <dict/>
             <key>SPDIFOut</key>
-            </dict>
+            <dict/>
         </dict>
     </array>
 </dict>
