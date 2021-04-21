@@ -1187,7 +1187,7 @@
 		<key>Device</key>
 		<integer>3611</integer>
 		<key>Name</key>
-		<string>NVIDIA HDMI for GK107 in 10.13.4+</string>
+		<string>NVIDIA HDMI for GK107 in 10.13+</string>
 		<key>Patches</key>
 		<array>
 			<dict>
