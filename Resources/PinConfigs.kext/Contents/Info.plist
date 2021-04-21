@@ -11393,6 +11393,34 @@
 					<key>WakeVerbReinit</key>
 					<true/>
 				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>AwAAAA==</data>
+					<key>Codec</key>
+					<string>Hans - ALC 292 for Dell M4800 with Dock</string>
+					<key>CodecID</key>
+					<integer>283902610</integer>
+					<key>Comment</key>
+					<string>Hans - ALC 292 for Dell M4800 with Dock</string>
+					<key>ConfigData</key>
+					<data>
+					ASccEAEnHQEBJx6mAScfkAE3HPABNx0AATce
+					AAE3H0ABRxxAAUcdAQFHHhcBRx+QAUcMAgFX
+					HFABVx1AAVceKwFXHwIBVwwCAWccgAFnHUAB
+					Zx4BAWcfAQFnDAIBhxwgAYcdIAGHHoEBhx8C
+					AZccIAGXHZABlx6BAZcfAQGnHCABpx0QAace
+					+wGnHwIBtxzwAbcdAAG3HgABtx9AAdcc8AHX
+					HQAB1x4AAdcfQAHnHPAB5x0AAeceAAHnH0A=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>59</integer>
+					<key>WakeConfigData</key>
+					<data>AUcMAgFXDAIBZwwCAacHJA==</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
 			</array>
 			<key>IOClass</key>
 			<string>AppleHDAHardwareConfigDriver</string>
