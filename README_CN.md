@@ -1,9 +1,15 @@
 AppleALC
 ========
 
-[![Build Status](https://github.com/acidanthera/AppleALC/workflows/CI/badge.svg?branch=master)](https://github.com/acidanthera/AppleALC/actions) [![Scan Status](https://scan.coverity.com/projects/16166/badge.svg?flat=1)](https://scan.coverity.com/projects/16166)
+[![Build Status](https://github.com/badfellow/AppleALC_Dell_M4800/workflows/CI/badge.svg?branch=master)](https://github.com/badfellow/AppleALC_Dell_M4800/actions) [![Scan Status](https://scan.coverity.com/projects/16166/badge.svg?flat=1)](https://scan.coverity.com/projects/16166)
 
 一个开源的内核扩展,为非官方的声卡提供支持的Codec,无需修改任何系统文件,来启用原生macOS高清音频.
+
+根据[acidanthera's repo](https://github.com/acidanthera/AppleALC)针对ALC292 (3226) 特别优化
+
+优势:
+- kext大小从2m缩减为136kB
+- 缩短开机加载时间
 
 #### 特性
 - 在系统安装阶段即可使用数字或模拟音频.

@@ -1,12 +1,18 @@
 AppleALC
 ========
 
-[![Build Status](https://github.com/acidanthera/AppleALC/workflows/CI/badge.svg?branch=master)](https://github.com/acidanthera/AppleALC/actions) [![Scan Status](https://scan.coverity.com/projects/16166/badge.svg?flat=1)](https://scan.coverity.com/projects/16166)
+[![Build Status](https://github.com/badfellow/AppleALC_Dell_M4800/workflows/CI/badge.svg?branch=master)](https://github.com/badfellow/AppleALC_Dell_M4800/actions) [![Scan Status](https://scan.coverity.com/projects/16166/badge.svg?flat=1)](https://scan.coverity.com/projects/16166)
 
 An open source kernel extension enabling native macOS HD audio for not officially supported codecs without any filesystem modifications.
 
+It's specifically optimized for ALC292 (3226) based upon [acidanthera's repo](https://github.com/acidanthera/AppleALC).
+
+Advantage:
+- reduced AppleALC.kext size from 2M to 136kB
+- shorten the loading time during boot up
+
 English (Current)  
-[简体中文](https://github.com/acidanthera/AppleALC/blob/master/README_CN.md)  
+[简体中文](https://github.com/badfellow/AppleALC_Dell_M4800/blob/master/README_CN.md)  
 
 #### Features
 - Digital and analog audio support starting from the OS installation
