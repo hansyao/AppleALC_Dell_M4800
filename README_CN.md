@@ -7,7 +7,9 @@ AppleALC
 
 根据[acidanthera's repo](https://github.com/acidanthera/AppleALC)针对ALC292 (3226) 特别优化
 
-优势:
+备注：由于仅仅保留了ALC292驱动编码，所以不要作死安装到其他非ALC292（3226）的机型上。
+
+与原版优势:
 - kext大小从2m缩减为136kB
 - 缩短开机加载时间
 

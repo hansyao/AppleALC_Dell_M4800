@@ -7,6 +7,8 @@ An open source kernel extension enabling native macOS HD audio for not officiall
 
 It's specifically optimized for ALC292 (3226) based upon [acidanthera's repo](https://github.com/acidanthera/AppleALC).
 
+NOTE: only keep ALC292 codes, please do not use for non-ALC292 codes.
+
 Advantage:
 - reduced AppleALC.kext size from 2M to 136kB
 - shorten the loading time during boot up
