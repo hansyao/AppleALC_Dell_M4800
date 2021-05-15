@@ -13,7 +13,7 @@ Advantage:
 - reduced AppleALC.kext size from 2M to 136kB
 - shorten the loading time during boot up
 
-*Codes Support:*
+*Codes/layout-id Support:*
 
 | layout-ID|Model Name|Comments|
 | :-------: | :---- | :----- |
@@ -22,7 +22,7 @@ Advantage:
 | 18 | Dell Precision M4800 | without dock station support|
 | 28 | Lenovo T440 | |
 | 32 | Lenovo T450s | |
-| 55 | Dell E6540 | with dock station support |
+| 55 | Dell Latitude E6540 | with dock station support |
 | 59 | Dell Precision M4800 | with dock station support | 
 
 <br />

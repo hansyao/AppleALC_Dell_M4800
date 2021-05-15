@@ -13,16 +13,16 @@ AppleALC
 - kext大小从2m缩减为136kB
 - 缩短开机加载时间
 
-*驱动编码支持:*
+*驱动编码/机型支持:*
 
 | layout-ID|机型|备注|
 | :-------: | :---- | :----- |
 | 12 | 通用 | ALC292 通用机型 |
-| 15 | LENOVO THINKPAD T450_T450s_X240 | |
+| 15 | LENOVO THINKPAD T450_T450s_X240 | 联想 |
 | 18 | Dell Precision M4800 | 不支持戴尔底座|
 | 28 | Lenovo T440 | 联想 |
 | 32 | Lenovo T450s | 联想 |
-| 55 | Dell E6540 | 支持戴尔底座 |
+| 55 | Dell Latitude E6540 | 支持戴尔底座 |
 | 59 | Dell Precision M4800 | 支持戴尔底座 | 
 
 <br />
