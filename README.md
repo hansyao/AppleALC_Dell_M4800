@@ -13,6 +13,21 @@ Advantage:
 - reduced AppleALC.kext size from 2M to 136kB
 - shorten the loading time during boot up
 
+*Codes Support:*
+
+| layout-ID|Model Name|Comments|
+| :-------: | :---- | :----- |
+| 12 | common | for general model |
+| 15 | LENOVO THINKPAD T450_T450s_X240 | |
+| 18 | Dell Precision M4800 | without dock station support|
+| 28 | Lenovo T440 | |
+| 32 | Lenovo T450s | |
+| 55 | Dell E6540 | with dock station support |
+| 59 | Dell Precision M4800 | with dock station support | 
+
+<br />
+
+
 English (Current)  
 [简体中文](https://github.com/badfellow/AppleALC_Dell_M4800/blob/master/README_CN.md)  
 
