@@ -151,7 +151,7 @@
 
 6. **定制PinConfig**
    
-   Excel模板工作表`PinConfig生成模板`的以下几列，按照每个物理接口的实际情况，通过下拉菜单选择合适的类型(如下)， 此Excel模板就会自动生成符合苹果设计规范的`Fina ConfigData`和`WakeConfigData`两个参数。具体操作参见[pinconfigs.xlsx](https://github.com/badfellow/AppleALC_Dell_M4800/raw/master/pinconfigs.xlsx)。
+   Excel模板工作表`PinConfig生成模板`的以下几列，按照每个物理接口的实际情况，通过下拉菜单选择合适的类型(如下)， 此Excel模板就会自动生成符合苹果设计规范的`Final ConfigData`和`WakeConfigData`两个参数。具体操作参见[pinconfigs.xlsx](https://github.com/badfellow/AppleALC_Dell_M4800/raw/master/pinconfigs.xlsx)。
    
     | 节点 | 说明 | 默认关联 |	序列	| 插孔颜色	| 插孔侦测	| 设备类型	| 连接类型	| 端口	| 端口位置 |
     | --- | --- | --- | --- | --- | --- | --- |  --- | --- | --- |
@@ -169,9 +169,9 @@
 
 &nbsp;
 
-至此，我们得到`Fina ConfigData`和`WakeConfigData`如下:
+至此，我们得到`Final ConfigData`和`WakeConfigData`如下:
 ```
-Fina ConfigData      <01271C10 01271D01 01271EA6 01271F90 01371CF0 01371D00 01371E00 01371F40 01471C40 01471D01 01471E17 01471F90 01470C02 01571C50 01571D40 01571E2B 01571F02 01570C02 01671C80 01671D40 01671E01 01671F01 01670C02 01871C20 01871D20 01871E81 01871F02 01971C20 01971D90 01971E81 01971F01 01A71C20 01A71D10 01A71EFB 01A71F02 01B71CF0 01B71D00 01B71E00 01B71F40 01D71CF0 01D71D00 01D71E00 01D71F40 01E71CF0 01E71D00 01E71E00 01E71F40>
+Final ConfigData      <01271C10 01271D01 01271EA6 01271F90 01371CF0 01371D00 01371E00 01371F40 01471C40 01471D01 01471E17 01471F90 01470C02 01571C50 01571D40 01571E2B 01571F02 01570C02 01671C80 01671D40 01671E01 01671F01 01670C02 01871C20 01871D20 01871E81 01871F02 01971C20 01971D90 01971E81 01971F01 01A71C20 01A71D10 01A71EFB 01A71F02 01B71CF0 01B71D00 01B71E00 01B71F40 01D71CF0 01D71D00 01D71E00 01D71F40 01E71CF0 01E71D00 01E71E00 01E71F40>
 
 WakeConfigData    <01470C02 01570C02 01670C02>
 ```
@@ -184,7 +184,7 @@ Linux上能干的活儿我们都干完了，只待进入Mac改写AppleALC了， 
 
 &nbsp;
 
-由于我们已经成功得到了`Fina ConfigData`和`WakeConfigData`，在Mac上操作就很简单了，唯一能做的事情就是改写AppleALC并编译。
+由于我们已经成功得到了`Final ConfigData`和`WakeConfigData`，在Mac上操作就很简单了，唯一能做的事情就是改写AppleALC并编译。
 
 1. 同步AppleALC源码
    ```
