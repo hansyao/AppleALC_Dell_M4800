@@ -12,7 +12,7 @@
 
 ## 准备工作
 
-首先根据Apple的PinConfig规范自己用Excel（WPS兼容）做了个PinConfigData配置模板工具[pinconfigs.xlsx](https://github.com/badfellow/AppleALC_Dell_M4800/raw/master/pinconfigs.xlsx)以备用。
+首先根据Apple的PinConfig规范自己用Excel（WPS兼容）做了个PinConfigData配置模板工具[pinconfigs.xlsx](pinconfigs.xlsx)以备用。
 
 &nbsp;
 
@@ -122,7 +122,7 @@
 5. **整理有效路径**    (此步骤也可以在Mac下执行）
    
    执行命令`codecgraph codec\#0`， 生成`codec#0.svg`，直接可以用浏览器打开，也可导入Excel。下图是我的Dell Precision M4800的路径图。
-   ![我的Dell Precision M4800声音路径图](https://raw.githubusercontent.com/badfellow/AppleALC_Dell_M4800/master/codec%230.svg)
+   ![我的Dell Precision M4800声音路径图](codec%230.svg)
    为了方便我们导入Excel，新建一个工作表`HDA Map`，插入图片，将刚才生成的`codec#0.svg`插入到工作表`HDA Map`。
 
    现在可以看到`codec#0.svg`节点都是十六进制，由于路径需要10进制，先将所有16进制记录到 `PinConfig生成模板` Excel工作表的`进制转换`单元格，Excel公式`HEX2DEC`会一次性批量计算出对应的十进制数字备用。
@@ -151,7 +151,7 @@
 
 6. **定制PinConfig**
    
-   Excel模板工作表`PinConfig生成模板`的以下几列，按照每个物理接口的实际情况，通过下拉菜单选择合适的类型(如下)， 此Excel模板就会自动生成符合苹果设计规范的`Final ConfigData`和`WakeConfigData`两个参数。具体操作参见[pinconfigs.xlsx](https://github.com/badfellow/AppleALC_Dell_M4800/raw/master/pinconfigs.xlsx)。
+   Excel模板工作表`PinConfig生成模板`的以下几列，按照每个物理接口的实际情况，通过下拉菜单选择合适的类型(如下)， 此Excel模板就会自动生成符合苹果设计规范的`Final ConfigData`和`WakeConfigData`两个参数。具体操作参见[pinconfigs.xlsx](pinconfigs.xlsx)。
    
     | 节点 | 说明 | 默认关联 |	序列	| 插孔颜色	| 插孔侦测	| 设备类型	| 连接类型	| 端口	| 端口位置 |
     | --- | --- | --- | --- | --- | --- | --- |  --- | --- | --- |
